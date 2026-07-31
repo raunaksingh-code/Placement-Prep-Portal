@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       { path: 'question-bank', element: <QuestionBankPage /> },
     ],
   },
-])
+], { basename: '/Placement-Prep-Portal' })
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
