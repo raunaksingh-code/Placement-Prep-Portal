@@ -1,0 +1,121 @@
+PERMUTATIONS AND COMBINATIONS
+CONCEPTS
+• Fundamental Principal of Multiplication:
+In general if some procedure can be performed in n1
+different ways, and if, following this procedure, a
+second procedure can be performed in n2 different
+ways, and if, following this second procedure, a third
+procedure can be performed in n3 different ways, and
+so fourth then the number of ways the procedure can
+be performed in the order indicated is the product  of
+n1 . n2 . n3..….......
+e.g.: A letter lock consists of 5 rings each marked with
+10 different letters. What is the maximum number of
+unsuccessful attempts to open the lock.
+Explanation: Each ring is marked with 10 different
+letters. Hence each ring has 10 positions.
+Thus, the total number of attempts that can be made to
+open the lock is 10 x 10 × 10 × 10 × 10 = 105.
+Out of these, there must be one attempt in which the
+lock will open.
+∴ Total number of unsuccessful attempts = 105 – 1. 
+•Fundamental Principle of Addition:
+If there are two operations such that they can be
+performed independently in m and n ways respectively,
+then either of the two operations can be performed in
+(m+n) ways.
+•Factorial: The product of first 'n' natural numbers is
+called the 'n'-factorial and is denoted by n!
+n! = 1.2.3.4 .…................ (n–2).(n–1).n
+Example: 4! = 1.2.3.4 = 24, 
+5! = 1.2.3.4.5 = 120, 
+                  5! = 5.4! = 5.24 = 120, 6! = 6.5! =  6.120 = 720.
+Note: 1) 0! = 1 
+2) The product of  'r' consecutive positive integers is
+divisible by r!
+3) (kn)! Is divisible by (n!)k for all k is a positive
+constant.
+4) The product of 2n! consecutive positive integers is
+equal to 2(n!).
+PERMUTATIONS
+•Permutation: An arrangement of any r ≤ n of these
+objects in a given order is called an r–permutation or a
+permutation of the 'n' objects taken 'r' at a time.
+Example: Consider the set of letters a, b, c, and d. Then 
+(i) bdca, dcba and acdb are permutations of the 4 letters
+taken all at time.
+(ii) bad, adb, cbd and bca are permutations of the 4 letters
+taken 3 at a time.
+(iii) ad, cb, da and bd are permutations of the 4 letters
+taken 2 at a time.
+The number of permutations of 'n' objects taken 'r' at a
+time will be denoted by P(n, r).
+Before we derive the general formula for P(n, r) we
+consider a special case. Find the number of
+permutations of 7 objects, say a, b, c, d, e, f, g  taken
+three at a time. In other words, find the number of
+'three letter words' with distinct letters that can be
+formed from the above seven letters. 
+Let the general three letters word be represented by
+three boxes.
+Now the first letter can be chosen in 7 different ways;
+following this, the second letter can be chosen in 6
+different ways; and, the last letter can be chosen in 5
+different ways. Write each number in its appropriate
+box as follows:
+Thus by the fundamental principle of counting there
+are 7.6.5=210 possible three letter words without
+repetitions from the seven letters. (or) There are 210
+permutations of 7 objects taken 3 at a time. 
+i.e. P(7, 3) = 210.
+The derivation of the formula for P(n, r) follows the
+procedure in the preceding example:
+The first element in an r-permutation of n-objects can
+be chosen in 'n' different ways; following this, the
+second element in the permutation can be chosen in (n–
+1) ways; and, the third element in the permutation can
+be chosen in (n–2) ways. Continuing in this manner, we
+have that the rth (last) element in the r–permutation can
+be chosen in n–(r–1) = n–r+1 ways. 
+Thus P(n, r) = n(n–1) (n–2) . . . (n–r+1) =
+n!
+(n−r)!
+The second part of the formula follows from the fact
+that n(n–1)(n–2) . . . . . . .(n–r+1) =
+ n(n−1)(n−2)⋯⋯(n−r+ 1)⋅(n−r)!
+(n−r!)
+= 
+n!
+(n−r)!
+ 
+∴ A formula for the number of possible permutations
+of 'r' objects from a set of 'n' is P(n, r) or n p r =
+n!
+(n−r)!
+In the special case that r = n, we have  P(n, n) = n(n–1)
+(n–2). . . . . . 3.2.1 = n! (in other words there are n!
+permutations of 'n' objects taken all at a time).
+1.94
+Praxis Groups
+7
+6
+5
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

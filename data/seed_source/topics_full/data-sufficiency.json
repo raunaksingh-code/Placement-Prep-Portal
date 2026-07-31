@@ -1,0 +1,72 @@
+{
+  "study_material": {
+    "title": "Data Sufficiency - Complete Study Notes",
+    "introduction": "Data sufficiency questions give a question plus two statements and ask whether the statements contain ENOUGH information to answer - you never compute the final answer. Judge each statement alone first, then together if needed.",
+    "learning_objectives": [
+      "Apply the standard evaluation procedure (I alone, II alone, together)",
+      "Recognise when a statement narrows to a unique answer",
+      "Avoid actually solving when sufficiency is all that matters",
+      "Handle yes/no versus value questions correctly"
+    ],
+    "concepts": [
+      {"heading": "1. The Standard Options", "body": "A) Statement I alone is sufficient. B) Statement II alone is sufficient. C) Either alone is sufficient. D) Both together are needed. E) Even together they are not sufficient. Read the option scheme given in the paper - orders vary."},
+      {"heading": "2. The Procedure", "body": "Test I alone (ignore II completely). Test II alone (ignore I). Only if both fail alone, combine them. Discipline about 'ignoring the other statement' is the whole skill - leakage between statements is the classic error."},
+      {"heading": "3. Value vs Yes/No Questions", "body": "For 'What is x?' the statement must pin down ONE value; x^2 = 16 alone is insufficient (x could be 4 or -4). For 'Is x even?' a statement is sufficient if it forces a definite yes OR a definite no - a definite no is still sufficient."},
+      {"heading": "4. Sufficient does not mean True", "body": "You are judging information adequacy, not truth. Do not compute the answer - the moment you know it CAN be determined uniquely, stop."}
+    ],
+    "formulas": [
+      "I alone -> II alone -> combine (only if both fail)",
+      "Unique value = sufficient; multiple candidates = not",
+      "Definite yes OR definite no = sufficient for yes/no questions"
+    ],
+    "shortcut_methods": [
+      "Cover statement II with your hand while testing I",
+      "Hunt for counterexamples: two different answers consistent with a statement kill it",
+      "Watch for sign traps: squares, ratios and inequalities often hide two cases"
+    ],
+    "common_mistakes": [
+      "Letting statement II's information leak while testing I",
+      "Marking 'insufficient' because the answer is 'no' (a definite no IS sufficient)",
+      "Solving the problem fully and wasting time"
+    ],
+    "summary": "Evaluate each statement in isolation, combine only as a last resort, and remember that pinning down any definite answer - including 'no' - is sufficiency.",
+    "quick_revision_notes": [
+      "Test I alone, II alone, then together",
+      "x^2 = 16 does not fix x",
+      "Definite no = sufficient",
+      "Never fully solve"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "medium", "question": "What is the value of x? I: x^2 = 16. II: x > 0.", "options": ["Both together are needed", "I alone is sufficient", "II alone is sufficient", "Even together not sufficient"], "correct_answer": "Both together are needed", "step_by_step": "I alone gives x = 4 or -4. II alone gives nothing specific. Together: x = 4.", "shortcut": "Squares hide a sign."},
+    {"difficulty": "medium", "question": "What is A's age? I: A is 5 years older than B. II: B is 20 years old.", "options": ["Both together are needed", "I alone is sufficient", "II alone is sufficient", "Either alone is sufficient"], "correct_answer": "Both together are needed", "step_by_step": "I relates A to B without numbers; II gives B only. Together A = 25.", "shortcut": "A relation plus an anchor value."},
+    {"difficulty": "hard", "question": "Is n even? I: n^2 is even. II: n + 1 is odd.", "options": ["Either alone is sufficient", "I alone only", "II alone only", "Both together needed"], "correct_answer": "Either alone is sufficient", "step_by_step": "I: n^2 even forces n even. II: n + 1 odd forces n even. Each alone answers the question.", "shortcut": "Two independent proofs of the same fact."},
+    {"difficulty": "medium", "question": "What is the average of 5 numbers? I: Their sum is 200. II: The largest is 60.", "options": ["I alone is sufficient", "II alone is sufficient", "Both together are needed", "Even together not sufficient"], "correct_answer": "I alone is sufficient", "step_by_step": "Average = 200/5 = 40 from I alone. II adds nothing needed.", "shortcut": "Average needs only sum and count."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 50, "tags": ["data-sufficiency", "value"], "question": "What is the cost of one apple? I: 12 apples cost Rs. 96. II: Apples are cheaper than mangoes.", "options": ["I alone is sufficient", "II alone is sufficient", "Both needed", "Even together not sufficient"], "correct_answer": "I alone is sufficient", "explanation": "96/12 = 8 from I. II is irrelevant."},
+    {"difficulty": "easy", "estimated_time_sec": 50, "tags": ["data-sufficiency", "relation"], "question": "How old is Ramesh? I: Ramesh is twice as old as Suresh. II: Suresh is 15.", "options": ["Both needed", "I alone", "II alone", "Either alone"], "correct_answer": "Both needed", "explanation": "The relation and the anchor are both required: 30."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["data-sufficiency", "yesno"], "question": "Is x positive? I: x^3 > 0. II: |x| = x.", "options": ["I alone only", "II alone only", "Either alone is sufficient", "Both needed"], "correct_answer": "I alone only", "explanation": "I: cube positive forces x > 0 - sufficient. II: |x| = x also holds at x = 0, so 'positive' is not settled - insufficient."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["data-sufficiency", "geometry"], "question": "What is the area of the rectangle? I: Its perimeter is 28. II: Its length is 8.", "options": ["Both needed", "I alone", "II alone", "Even together not sufficient"], "correct_answer": "Both needed", "explanation": "Together: l = 8, b = 6, area 48. Neither alone fixes both dimensions."},
+    {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["data-sufficiency", "counterexample"], "question": "Is m greater than n? I: m - n > 0. II: m/n > 1.", "options": ["I alone only", "II alone only", "Either alone", "Both needed"], "correct_answer": "I alone only", "explanation": "I directly says m > n. II fails for negatives: m = -4, n = -2 gives m/n = 2 > 1 but m < n."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["data-sufficiency", "two-vars"], "question": "What is x + y? I: 2x + 2y = 20. II: x = 3y.", "options": ["I alone is sufficient", "II alone is sufficient", "Both needed", "Even together not sufficient"], "correct_answer": "I alone is sufficient", "explanation": "I gives x + y = 10 directly - the individual values are not needed."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["data-sufficiency", "insufficient"], "question": "What is the two-digit number? I: The sum of its digits is 9. II: The number is divisible by 9.", "options": ["Even together not sufficient", "I alone", "II alone", "Both together sufficient"], "correct_answer": "Even together not sufficient", "explanation": "18, 27, 36 ... 90 all satisfy both statements."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["data-sufficiency", "speed"], "question": "What is the train's speed? I: It covers 240 km. II: The journey takes 4 hours.", "options": ["Both needed", "I alone", "II alone", "Either alone"], "correct_answer": "Both needed", "explanation": "Speed needs distance AND time: 60 km/h."}
+  ],
+  "topic_test": {
+    "title": "Data Sufficiency - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Judge each statement alone before combining; never fully solve."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 55, "tags": ["data-sufficiency"], "question": "What is b? I: a + b = 10. II: a = 4.", "options": ["Both needed", "I alone", "II alone", "Either alone"], "correct_answer": "Both needed", "explanation": "Together b = 6; neither alone suffices."},
+      {"difficulty": "easy", "estimated_time_sec": 55, "tags": ["data-sufficiency"], "question": "What is the perimeter of the square? I: Its side is 6 cm. II: Its area is 36 sq cm.", "options": ["Either alone is sufficient", "I alone only", "II alone only", "Both needed"], "correct_answer": "Either alone is sufficient", "explanation": "Side comes from either statement (side lengths are positive), giving perimeter 24."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["data-sufficiency"], "question": "Is k divisible by 6? I: k is divisible by 3. II: k is divisible by 2.", "options": ["Both together are sufficient", "I alone", "II alone", "Even together not sufficient"], "correct_answer": "Both together are sufficient", "explanation": "Divisible by both 2 and 3 = divisible by 6. Neither alone settles it."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["data-sufficiency"], "question": "What is the ratio of boys to girls in the class? I: There are 20 boys. II: Girls are 40% of the class.", "options": ["II alone is sufficient", "I alone is sufficient", "Both needed", "Even together not sufficient"], "correct_answer": "II alone is sufficient", "explanation": "Girls 40% means boys 60%: ratio 3:2 from II alone. I alone gives no total."},
+      {"difficulty": "medium", "estimated_time_sec": 70, "tags": ["data-sufficiency"], "question": "What is x? I: x is a prime number between 20 and 28. II: x is odd.", "options": ["I alone is sufficient", "II alone is sufficient", "Both needed", "Even together not sufficient"], "correct_answer": "I alone is sufficient", "explanation": "The only prime between 20 and 28 is 23."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["data-sufficiency"], "question": "Is the integer n a perfect square? I: n ends in 7. II: n > 100.", "options": ["I alone is sufficient", "II alone is sufficient", "Both needed", "Even together not sufficient"], "correct_answer": "I alone is sufficient", "explanation": "No perfect square ends in 2, 3, 7 or 8 - so the answer is definitely no, which IS sufficient."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["data-sufficiency"], "question": "What is the profit percent? I: The article was sold for Rs. 600. II: The cost price was Rs. 500.", "options": ["Both needed", "I alone", "II alone", "Either alone"], "correct_answer": "Both needed", "explanation": "Profit% needs both SP and CP: 20%."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["data-sufficiency"], "question": "How many children does Mr. Rao have? I: He has more than 2 children. II: He has fewer than 5 children.", "options": ["Even together not sufficient", "I alone", "II alone", "Both together sufficient"], "correct_answer": "Even together not sufficient", "explanation": "Together they allow 3 or 4 - not unique."}
+    ]
+  }
+}

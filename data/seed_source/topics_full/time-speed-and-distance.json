@@ -1,0 +1,82 @@
+{
+  "study_material": {
+    "title": "Time, Speed and Distance - Complete Study Notes",
+    "introduction": "Distance = Speed x Time is the whole chapter; trains, boats and races are just costumes. Master unit conversion (km/h to m/s), relative speed, and the harmonic-mean average speed, and every variant falls quickly.",
+    "learning_objectives": [
+      "Convert km/h to m/s and back instantly",
+      "Solve train problems (crossing poles, platforms, other trains)",
+      "Use relative speed for same/opposite direction motion",
+      "Handle boats and streams (upstream/downstream)",
+      "Compute average speed correctly"
+    ],
+    "concepts": [
+      {"heading": "1. The Master Formula", "body": "D = S x T. Keep units consistent: km/h to m/s multiply by 5/18; m/s to km/h multiply by 18/5. 72 km/h = 20 m/s. If speed ratio is a:b over the same distance, time ratio is b:a."},
+      {"heading": "2. Trains", "body": "A train crossing a pole covers its own length; crossing a platform or bridge covers train length + platform length. Crossing another train: total distance = sum of lengths, at relative speed (difference if same direction, sum if opposite)."},
+      {"heading": "3. Relative Speed", "body": "Opposite directions: speeds add. Same direction: speeds subtract. Catch-up time = initial gap / relative speed. A thief with a 20 km head start against a 10 km/h faster pursuer is caught in 2 hours."},
+      {"heading": "4. Boats and Streams", "body": "Downstream speed = boat + stream; upstream = boat - stream. Boat speed = (down + up)/2, stream speed = (down - up)/2. Given distances and times each way, compute the two speeds first."},
+      {"heading": "5. Average Speed", "body": "Average speed = total distance / total time. For equal distances at speeds a and b it is 2ab/(a+b) - never the arithmetic mean. The average always sits closer to the slower speed."}
+    ],
+    "formulas": [
+      "D = S x T; km/h x 5/18 = m/s",
+      "Train crossing platform: (L_train + L_platform)/speed",
+      "Relative speed: sum (opposite), difference (same)",
+      "Boat = (down + up)/2; Stream = (down - up)/2",
+      "Equal distances: avg = 2ab/(a+b)"
+    ],
+    "shortcut_methods": [
+      "Memorise 36 km/h = 10 m/s, 72 = 20, 90 = 25, 54 = 15",
+      "Speed ratio a:b means time ratio b:a over equal distance",
+      "Trains: always ask 'what total distance must be covered, and at what relative speed?'"
+    ],
+    "common_mistakes": [
+      "Averaging speeds arithmetically over equal distances",
+      "Forgetting the platform length in crossing problems",
+      "Using the wrong relative speed direction",
+      "Mixing m/s and km/h in one equation"
+    ],
+    "summary": "Fix units, identify the true distance to cover, choose the right (relative) speed, and apply D = ST.",
+    "quick_revision_notes": [
+      "km/h to m/s: x 5/18",
+      "Crossing = sum of lengths at relative speed",
+      "Boat = mean of down and up speeds",
+      "Avg speed (equal D) = 2ab/(a+b)"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Convert 72 km/h into m/s.", "options": ["20 m/s", "18 m/s", "25 m/s", "22 m/s"], "correct_answer": "20 m/s", "step_by_step": "72 x 5/18 = 20 m/s.", "shortcut": "Divide by 3.6."},
+    {"difficulty": "easy", "question": "A 150 m train travelling at 54 km/h passes a pole in:", "options": ["10 s", "12 s", "9 s", "15 s"], "correct_answer": "10 s", "step_by_step": "54 km/h = 15 m/s. Time = 150/15 = 10 s.", "shortcut": "Only the train's own length matters for a pole."},
+    {"difficulty": "medium", "question": "A 200 m train crosses a 300 m platform in 25 seconds. Its speed is:", "options": ["72 km/h", "60 km/h", "80 km/h", "54 km/h"], "correct_answer": "72 km/h", "step_by_step": "Distance = 500 m in 25 s = 20 m/s = 72 km/h.", "shortcut": "Train + platform lengths, then convert."},
+    {"difficulty": "medium", "question": "A boat goes 20 km downstream in 2 hours and 12 km upstream in 3 hours. Find the boat's speed in still water.", "options": ["7 km/h", "6 km/h", "8 km/h", "5 km/h"], "correct_answer": "7 km/h", "step_by_step": "Down = 10 km/h, Up = 4 km/h. Boat = (10+4)/2 = 7 km/h.", "shortcut": "Stream = (10-4)/2 = 3 km/h as a bonus."},
+    {"difficulty": "hard", "question": "Two trains of lengths 150 m and 250 m run towards each other at 60 km/h and 40 km/h. Time to cross each other:", "options": ["14.4 s", "12 s", "15 s", "18 s"], "correct_answer": "14.4 s", "step_by_step": "Relative speed = 100 km/h = 250/9 m/s. Distance = 400 m. Time = 400 x 9/250 = 14.4 s.", "shortcut": "Sum lengths over summed speeds."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["tsd", "basics"], "question": "A car covers 90 km in 1.5 hours. Its speed is:", "options": ["60 km/h", "55 km/h", "65 km/h", "70 km/h"], "correct_answer": "60 km/h", "explanation": "90/1.5 = 60 km/h."},
+    {"difficulty": "easy", "estimated_time_sec": 25, "tags": ["tsd", "conversion"], "question": "36 km/h expressed in m/s is:", "options": ["10 m/s", "12 m/s", "9 m/s", "15 m/s"], "correct_answer": "10 m/s", "explanation": "36 x 5/18 = 10."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["tsd", "trains"], "question": "A 120 m train moving at 15 m/s passes a signal pole in:", "options": ["8 s", "10 s", "6 s", "12 s"], "correct_answer": "8 s", "explanation": "120/15 = 8 s."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["tsd", "walking"], "question": "Walking at 4 km/h for 45 minutes covers:", "options": ["3 km", "4 km", "2.5 km", "3.5 km"], "correct_answer": "3 km", "explanation": "4 x 0.75 = 3 km."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["tsd", "average-speed"], "question": "A car travels a distance at 40 km/h and returns at 60 km/h. Average speed for the round trip:", "options": ["48 km/h", "50 km/h", "45 km/h", "52 km/h"], "correct_answer": "48 km/h", "explanation": "2 x 40 x 60/100 = 48 km/h."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["tsd", "trains"], "question": "A 240 m train at 30 m/s crosses a 360 m bridge in:", "options": ["20 s", "18 s", "22 s", "16 s"], "correct_answer": "20 s", "explanation": "(240+360)/30 = 20 s."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["tsd", "ratio"], "question": "Two runners' speeds are in ratio 3:4. Over the same distance, their times are in ratio:", "options": ["4:3", "3:4", "9:16", "16:9"], "correct_answer": "4:3", "explanation": "Time is inversely proportional to speed."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["tsd", "boats"], "question": "A boat travels downstream at 12 km/h and upstream at 8 km/h. The stream's speed is:", "options": ["2 km/h", "3 km/h", "4 km/h", "1.5 km/h"], "correct_answer": "2 km/h", "explanation": "(12-8)/2 = 2 km/h."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["tsd", "opposite-trains"], "question": "Two trains with total length 300 m run in opposite directions at 54 km/h and 36 km/h. They cross each other in:", "options": ["12 s", "10 s", "15 s", "18 s"], "correct_answer": "12 s", "explanation": "Relative speed 90 km/h = 25 m/s. 300/25 = 12 s."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["tsd", "chase"], "question": "A thief drives at 40 km/h with a 30-minute head start. Police pursue at 50 km/h. Time to catch the thief:", "options": ["2 hours", "1.5 hours", "2.5 hours", "3 hours"], "correct_answer": "2 hours", "explanation": "Head start gap = 20 km; relative speed 10 km/h: 20/10 = 2 hours."}
+  ],
+  "topic_test": {
+    "title": "Time, Speed and Distance - Topic Test",
+    "duration_minutes": 20,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 20 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Convert all speeds to consistent units before computing."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["tsd"], "question": "A bus covers 300 km in 5 hours. Its average speed is:", "options": ["60 km/h", "55 km/h", "65 km/h", "50 km/h"], "correct_answer": "60 km/h", "explanation": "300/5 = 60."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["tsd"], "question": "25 m/s equals:", "options": ["90 km/h", "80 km/h", "75 km/h", "100 km/h"], "correct_answer": "90 km/h", "explanation": "25 x 18/5 = 90."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["tsd"], "question": "A 180 m train at 20 m/s passes a pole in:", "options": ["9 s", "8 s", "10 s", "12 s"], "correct_answer": "9 s", "explanation": "180/20 = 9 s."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["tsd"], "question": "A man walking at 5 km/h crosses a 1.25 km bridge in:", "options": ["15 min", "12 min", "18 min", "20 min"], "correct_answer": "15 min", "explanation": "1.25/5 h = 0.25 h = 15 min."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["tsd"], "question": "A 150 m train crosses a 250 m platform in 20 s. Its speed is:", "options": ["72 km/h", "60 km/h", "80 km/h", "90 km/h"], "correct_answer": "72 km/h", "explanation": "400/20 = 20 m/s = 72 km/h."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["tsd"], "question": "Two trains of lengths 100 m and 150 m run in the same direction at 60 km/h and 40 km/h. The faster train passes the slower in:", "options": ["45 s", "40 s", "50 s", "36 s"], "correct_answer": "45 s", "explanation": "Relative speed 20 km/h = 50/9 m/s; 250 x 9/50 = 45 s."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["tsd"], "question": "A boat's still-water speed is 15 km/h in a 3 km/h stream. Time to go 30 km downstream:", "options": ["1 h 40 min", "2 h", "1 h 30 min", "1 h 20 min"], "correct_answer": "1 h 40 min", "explanation": "Downstream 18 km/h; 30/18 h = 5/3 h = 1 h 40 min."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["tsd"], "question": "A car goes out at 30 km/h and returns over the same road at 60 km/h. Average speed:", "options": ["40 km/h", "45 km/h", "42 km/h", "48 km/h"], "correct_answer": "40 km/h", "explanation": "2 x 30 x 60/90 = 40 km/h."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["tsd"], "question": "Walking at 3/4 of his usual speed, a man is 10 minutes late to office. His usual time is:", "options": ["30 min", "40 min", "25 min", "45 min"], "correct_answer": "30 min", "explanation": "At 3/4 speed, time becomes 4/3 of usual; the extra 1/3 of usual time = 10 min, so usual = 30 min."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["tsd"], "question": "A train overtakes a man walking at 6 km/h (same direction) in 18 seconds. The train is 150 m long. The train's speed is:", "options": ["36 km/h", "30 km/h", "42 km/h", "39 km/h"], "correct_answer": "36 km/h", "explanation": "Relative speed = 150/18 m/s = 25/3 m/s = 30 km/h. Train = 30 + 6 = 36 km/h."}
+    ]
+  }
+}

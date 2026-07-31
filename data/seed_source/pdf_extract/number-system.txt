@@ -1,0 +1,1383 @@
+NUMBER SYSTEM
+CONCEPTS
+In Hindu–Arabic system we use ten symbols 0, 1, 2, 3,
+4, 5, 6, 7, 8, 9 called digits to represent any number.
+This is the decimal system where we use the digits 0 to
+9. Here 0 is called insignificant digit where as 1, . . . . . . . ,
+9 are called significant digits. 
+• Classification of Numbers:
+Natural Numbers: The numbers 1, 2, 3, 4, 5, 6, . . . . . .
+which we use in counting are known as natural
+numbers. The set of all natural numbers can be
+represented by N = {1, 2, 3, 4, 5, . . . . . . . . . .}
+Whole Numbers: If we include 0 among the natural
+numbers then the numbers 0, 1, 2, 3, 4, 5, . . . . are called
+whole numbers. Hence, every natural number is a whole
+number. The set of whole numbers is represented by W.
+Integers: All counting numbers and their negatives
+including zero are known as integers. 
+The set of integers can be represented by Z or I.
+Z = {. . . . . .  –4, –3, –2, –1, 0, 1, 2, 3, 4, . . . . .}
+Every natural number is an integer but every integer is
+not natural number.
+Positive Integers: The set I+ = {1, 2, 3, 4, . . . . .} is the set
+of all positive integers. Positive integers and Natural
+numbers are synonyms.
+Negative Integers: The set I– = {. . . , –3, –2, –1} is the set
+of all negative integers. 
+0 (zero) is neither positive nor negative.
+Non Negative Integers: The set {0, 1, 2, 3, . . . } is the set
+of all non negative integers.
+Rational Numbers: The numbers of the form p
+q
+, where
+p and q are integers, p is not divisible by q and 
+q ≠ 0, are known as rational numbers.
+(or)  Any number that can be written in fraction form is
+a rational number. This includes integers, terminating
+decimals, and repeating decimals as well as fractions. 
+e.g.: 3
+7
+, 5
+2
+,−5
+9
+, 1
+2
+,−3
+5
+etc
+The set of rational numbers is denoted by Q.
+Irrational Numbers: Any real number that cannot be
+written in fraction form is an irrational number.
+Numbers which are both non-terminating as well as non-
+repeating decimals are called irrational numbers.
+e.g.: Absolute value of 10
+3
+, 22
+7
+,√2 ,√3 ,√10...
+Note: A terminating decimal will have a finite number of
+digits after the decimal point. 
+e.g.: 3
+4
+=0.75 , 5
+4
+=1.25, 25
+16
+=1.5625.
+Repeating Decimals: A decimal number that has digits
+that repeat forever.
+e.g.: 1
+3
+=0.333 ....(here, 3 repeats forever.) 
+Non–Repeating Decimal: A decimal that neither
+terminates nor repeats.
+e.g.: √2=1.4142135623.... 
+ 
+Real Numbers: The rational and  irrational numbers
+together are called real numbers.
+e.g.: 13
+21
+, 2
+5
+,−3
+7
+,+ 4
+2
+etc are real numbers.
+The set of real numbers is denoted by R.
+Even Numbers: Any integer that can be divided
+exactly by 2. 
+e.g.: 2, 6, 0, -8, -10, . . . . are even numbers.
+Odd Numbers: An integer that cannot be divided
+exactly  by 2 is an Odd number. 
+e.g.: 1, 3, -5, -7, . . . . are odd numbers.
+Prime Numbers: A Prime Number can be divided
+evenly only by 1, or itself. And it must be a whole
+number greater than 1.
+e.g.: Numbers 2, 3, 5, 7, 11, 13, 17, . . . . are prime.
+All primes which are greater than 3 are of the form
+(6n+1) or (6n–1).
+Note: • 1 is not a prime number.
+• 2 is the least and only even prime number.
+• 3 is the least odd prime number.
+• Prime numbers up to 100 are
+2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59,
+61, 67, 71, 73, 79,83, 89, 97.
+There are 25 prime numbers up to 100.
+Composite Number: Natural numbers greater than 1
+which are not prime, are known as composite numbers.
+The number 1 is neither prime nor composite.
+Co-Prime Numbers: Two numbers which have only 1
+as the common factor are called co–primes (or)
+relatively prime to each other.
+e.g.: 3 and 5 are co primes.
+Note: 
+Natural Numbers = 1 + Prime + Composite Numbers. 
+Whole Numbers = 0 (Zero) + Natural Numbers.
+Integers = Negative Integers + 0 + Positive Integers.
+Real Numbers = Rational + Irrational Numbers.
+Login to your online account to ask doubts.
+1.1
+
+Any two digit number is represented as (10a + b),
+where a is the first digit, and b is the second.
+e.g.: 63 is represented as 10(6)+3;
+• The sum of its digits = (a+b).
+• The difference of the digits = (a–b).
+Similarly, any three digit number is represented as 
+(100a + 10b + c) etc.
+• Test of Divisibility:
+Divisibility by 2: A number is divisible by 2 if the
+unit's digit is either zero or divisible by 2.
+e.g.: Units digit of 76 is 6 which is divisible by 2 hence
+76 is divisible by 2. 
+Units digit of 330 is 0 so it is divisible by 2.
+Divisibility by 3: A number is divisible by 3 if sum of
+all digits in it is divisible by 3. 
+e.g.: The number 273 is divisible by 3 since 2 + 7 + 3 = 12
+which is divisible by 3. 
+Divisibility by 4: A number is divisible by 4, if the
+number formed by the last two digits in it is divisible
+by 4, or last two digits are zeros.
+e.g.: The number 5004 is divisible by 4 since last two
+digits 04 is divisible by 4.
+Divisibility by 5: A number is divisible by 5 if the units
+digit in the number is either 0 or 5.
+e.g.: 375 is divisible by 5 as 5 is in the units place.
+Divisibility by 6: A number is divisible by 6 if it is
+even and sum of all digits is divisible by 3.
+e.g.: The number 6492 is divisible by 6 as it is even and
+sum of its digits 6 + 4 + 9 + 2 = 21 is divisible by 3.
+Divisibility by 7: 
+Step-1: Remove unit's digit. And double it.
+Step-2: Subtract it from the rest of the number.
+Step-3: Check whether the resulted number is divisible
+by 7 or not.
+Step-4: Repeat the above steps until the resulted
+number is either 0 (zero) or divisible by 7.
+e.g.: Consider the number 10717.
+Step-1: Removing the unit's digit i.e. 7. Double of 7 =14.
+Step-2: 1071 – 14 = 1057.
+Step-3: Now remove 7 from 1057 and double it i.e. 14.
+Step-4: 105 – 14 = 91.
+Step-5: Now remove 1 and double it i.e. 2.
+Step-6: 9 – 2 = 7
+The final result 7 is divisible by 7. So the given number
+i.e. 10717 is also divisible by 7.
+Divisibility by 8: A number is divisible by 8, if the
+number formed by last 3 digits is divisible by 8.
+e.g.: The number 6573392 is divisible by 8 as the last 3
+digits '392' is divisible by 8. 
+Divisibility by 9: A number is divisible by 9 if the sum
+of its digit is divisible by 9.
+e.g.: The number 15606 is divisible by 9 as the sum of
+the digits 1 + 5 + 6 + 0 + 6 = 18 is divisible by 9.
+Divisibility by 10: Last digit should be zero.
+e.g.: Last digit of 4470 is zero. So, it is divisible by 10.
+Divisibility by 11: A number is divisible by 11 if the
+difference of the sum of the digits at odd places and sum
+of the digits at the even places is either zero or divisible
+by 11. (or) Subtract the first digit from a number made
+by the other digits. If that number is divisible by 11
+then the original number is also divisible by 11. 
+e.g.: In the number 9823, the sum of the digits at odd
+places is 9+2=11 and the sum of the digits at even
+places is 8+3=11. Difference between them is 11 – 11 = 0.
+Hence, the given number is divisible by 11.
+e.g.: 14641
+1464 − 1 is 1463;
+146 − 3 is 143;
+        14 − 3 = 11,
+which is divisible by 11, so 14641 is also divisible by 11.
+• If a number 'N' is divisible by two numbers 'a' and
+'b', where a, b are co primes, then 'N' is divisible by 'ab'.
+Divisibility by 12: A number is divisible by 12 if it is
+divisible by 3 and 4.
+e.g.: The number 1644 is divisible by 12 as it is divisible
+by 3 and 4. Here 3 and 4 because they are co-prime to
+each other. 
+Divisibility by 13: Repeatedly add 4 times the last
+digit to the rest until you get a number divisible by 13 .
+e.g.: 7462  746 + (2
+⇒
+×4) = 754  75+ (4×4) = 91 
+⇒
+91 is divisible by 13. So, 7462 is also divisible by 13.
+Divisibility by 14: The number is divisible by 7 and 2.
+Divisibility by 15: The number is divisible by 3 and 5.
+Divisibility by 16: 
+With a 3 digit number: Multiply hundreds digit by 4,
+then add the last two digits.
+e.g.: 352  (3
+⇒
+×4)+52 = 12 + 52 = 64
+64 is divisible by 16. So, 352 is also divisible by 16.
+With a more than 3 digit number: The last four digits
+form a number is divisible by 16.
+e.g.: 38512  Here is 8512 is divisible by 16. So, 38512 is
+⇒
+also divisible by 16.
+Divisibility by 17: 
+Subtract 5 times the last digit from the rest.
+e.g.: 3961  396 – (1
+⇒
+×5) = 391  39 – (1
+⇒
+×5) = 34
+34 is divisible by 17. So, 3961 is also divisible by 17.
+Divisibility by 18: An even number satisfying the
+divisibility test by 9 is also divisible by 18.
+e.g.: The number 80388 is divisible by 18 as it satisfies
+the divisibility test of 9.
+1.2
+Praxis Groups
+
+Divisibility by 19: Add twice the last digit to the rest.
+e.g.: 10944  1094 + (4 
+⇒
+× 2) = 1102 
+                    110 + (2
+⇒
+×2) = 114  11 + (4 
+⇒
+× 2) = 11 + 8 = 19.
+Divisibility by 20: Last digit is zero & tens digit is even.
+e.g.: 980;  Last digit is zero. And tens digit is even.
+Divisibility by 25: A number is divisible by 25 if the
+number formed by the last two digits is divisible by 25
+or the last two digits are zero.
+e.g.: The number 7975 is divisible by 25 as the last two
+digits are divisible by 25.
+• Common Factors:
+A common factor of two or more numbers is a number
+which divides each of them exactly.
+e.g.: 3 is a common factor of 6 and 15.
+▪ Highest Common Factor (HCF):
+Highest common factor of two or more numbers is the
+greatest number that divides each of them exactly.
+e.g.: 3, 4, 6, 12 are the factors of 12 and 36. Among them
+the greatest is 12. Hence the HCF of 12, 36 is 12.
+HCF is also called as Greatest common divisor (GCD)
+or Greatest Common measure (GCM).
+Method of Finding HCF: Method of division
+▪ HCF of Two Numbers:
+Step 1: Greater no. is divided by the smaller number.
+Step 2: Divisor of step - 1 is divided by its remainder. 
+Step 3: Divisor of step - 2 is divided by its remainder. 
+This could be continued until the remainder is 0.
+Then HCF = Divisor of the last step.
+e.g.: Find the HCF of 96 and 348.
+Explanation: Here the divisor of the last step is 12.
+So, HCF of 96 and 348 is 12.
+▪ HCF of More than Two Numbers:
+Step 1: Take any two numbers and find their HCF.
+Step 2: Now find the HCF of third number and HCF
+obtained for the previous two numbers. 
+Step 3: Now find the HCF of fourth number and HCF
+obtained in the previous step. Continue the same
+process till the last number. The final HCF is
+concluded to be the HCF of all the given numbers.
+e.g.: Find the HCF of 120, 246, 100.
+6 is HCF of 120, 246. Now take 3rd number (i.e. 100) and
+HCF obtained in the above step (i.e. 6) and find  HCF.
+▪ HCF of Decimals:  e.g.: Find HCF of 3.2, 4.12, 1.3, 7.
+Explanation: First eliminate the influence of decimals
+by multiplying it either by 10 or 100 or 1000 etc. Here
+multiply the numbers with 100 to make all the
+numbers decimal free. i.e. 320, 412, 130, 700.
+Now, find the HCF of above numbers. We get it as 2.
+Did you remember we multiplied all the numbers by
+100 to eliminate the influence of decimals. Hence, now
+we divide the answer by 100 to get HCF of the original
+numbers. The HCF is
+2
+100
+=0.02
+▪ LCM (Least Common Multiple):
+Least common multiple of two or more given numbers
+is the 'least or lowest number' which is divisible by each
+of them exactly. In the sense without a non zero
+remainder.
+Method of Finding LCM:
+Step-1: Write numbers in a line separated by  comma.
+Step 2: Divide any two of the given numbers exactly
+with a least possible prime number then the quotients
+and the undivided numbers are written in the next line.
+Step 3: Repeat the same process till all the numbers in
+the line are prime to each other i.e. no more  common
+factors exist.
+Conclusion: The product of all divisors and the
+numbers in the last line is the LCM of the numbers.
+e.g.: Find the LCM of 14, 18, 24, 30. 
+2
+14, 18, 24, 
+30
+3
+  7,   9, 12, 
+15 
+ 7,   3,   4,   5
+The LCM of 14, 18, 24, 30 = 2×3×7×3×4×5 = 2520.
+Login to your online account to ask doubts.
+1.3
+96)348(3
+     288
+       60)96(1
+            60
+            36)60(1
+                  36 
+                  24)36(1
+                        24
+                        12)24(2
+                              24
+                               0 
+120) 246 (2
+         240  
+         6) 120 (20
+              120
+                0
+6)100(16
+     96
+      4)6(1
+         4
+         2)4(2
+            4
+            0
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+
+Observe another example below.
+Square Root of 119716 is 346.
+Step 1: Group two digits as pairs. 11, 97, 16.
+Step 2: Largest number whose square is near to the 11
+is 3. Hence, 3 is the divisor and also quotient.
+Step 3: Now 297 is the new dividend.
+Step 4: Double the quotient 3 i.e. 3×2=6 and put a blank
+for a number beside 6 i.e. 6[?]. Now think of a largest
+number (for e.g., 4) to fill in the blank in such a way
+that the product of a new divisor (i.e. 64) and this digit
+(i.e. 4) is less than or equal to new dividend (i.e. 297).
+Step 5:
+For this type of questions, it is better to check from
+options in the exam.
+• Key Points on Finding Square Root:
+1. A number ending with 2, 3, 7, 8 cannot be a perfect
+square. The last digit of any perfect square must be any
+one among 0, 1, 4, 5, 6, 9.
+2. A number ending with odd number of zeros can
+never be a perfect square. e.g.: 1000, 2000 etc.
+3. The difference between squares of two consecutive
+numbers is always an odd number.
+e.g.: 42–32 = 16–9 = 7 (odd).
+Finding square root of a decimal fraction: 
+First eliminate the decimal point by dividing and
+multiplying with even powers of 10 then find the
+square root of both numerator and denominator
+separately and then you can conclude the square root.
+e.g.: Find the square root of 1190.25.
+√1190.25=√
+1190.25
+102
+×10
+2=√119025
+102
+=345
+10
+=34.5
+• Simplification: In simplification we are supposed
+to follow the order which is essentially demanded by
+Mathematics and given by a common note of
+remembrance as VBODMAS.
+V – Vinculum (bar̄ x ), B – Bracket ( ) { },
+O – of
+D – Division (÷),
+M – Multiplication (×),
+A – Addition (+),
+S  – Subtraction (–).
+Use of Algebraic Identities: The following algebraic
+identities will be useful in simplification.
+ 1. (a + b)2 = a2 + 2ab + b2
+2. (a – b)2 = a2 – 2ab + b2 
+3. (a + b)2 + (a – b)2 = 2(a2 + b2 )
+4. (a + b)2 – (a – b)2 = 4ab
+5. a2 – b2 = (a + b) (a – b)
+6. (a + b)3 = a3 + 3a2b +3ab2 + b3 = a3 + b3 + 3ab(a + b) 
+7. (a – b)3 = a3 – 3a2 b + 3ab2 – b3 = a3 – b3 – 3ab(a – b) 
+8. a3 + b3 = (a + b) (a2 – ab + b2)
+9. a3 – b3 = (a – b) (a2 + ab + b2)
+8. (a + b + c)2 = a2 + b2 + c2 + 2ab + 2bc + 2ca
+10. a3+b3+c3– 3abc = (a + b + c)(a2 + b2 + c2 – ab – bc – ca)
+11. a4 – b4 = (a2 + b2)(a2 – b2)
+• Number of Divisors of a Composite Number
+If N is a composite number of the form N= a p  b q c r. . . .
+where a, b, c are primes, then the number of divisors of
+N is given by (p+1) (q+1) (r+1) . . . . .
+e.g.: Let the number be 600.
+          600 = 23 × 31 × 52 
+  
+∴Number of divisors of 600 = (3+1)(1+1)(2+1) = 24.
+In these 24 divisors 1 and the number itself are also
+included. So, number of divisors of 600 excluding 1
+and its self  is  24 – 2 = 22.
+• Sum of Divisors of a Composite Number :
+If  N is a composite number of the form a p b q c r . . . .
+Where a, b, c are primes, then the sum of the divisors,
+SN 
+is given by SN=(a
+p+ 1−1)(b
+q+ 1−1)(c
+r+ 1−1)
+(a−1)(b−1)(c−1)
+ 
+e.g.: Let the number be 600.         600 = 23 × 31 × 52
+Sum of the divisors SN=(2
+3+ 1−1)(3
+1+ 1−1)(5
+2+ 1−1)
+(2−1)(3−1)(5−1)
+⇒(16−1)(9−1)(125−1)
+(1)(2)(4)
+⇒(15)×(8)×(124)
+(1)×(2)×(4)
+=1860
+1.6
+Praxis Groups
+ 3) 11 97 16  (3
+       9          
+       
+3) 11 97 16  (3
+      9          
+      2 97
+2
+300
+600
+150
+75
+25
+5
+2
+2
+5
+3
+    3) 11 97 16    ( 3 4   6
+         9          
+  6 4) 297
+         256      
+68 6) 4116
+         4116    
+             0
+3×2 = 6
+34×2 = 68
+
+• Important Key Points:
+1) Sum of natural numbers from 1 to n =
+n(n+ 1)
+2
+.
+2) Sum of squares of first n natural numbers =
+n(n+ 1)(2n+ 1)
+6
+.
+3) Sum of cubes of first n natural numbers =  [
+n(n+ 1)
+2 ]
+2
+4) Number of odd numbers from 1 to n
+= Last Odd Number+ 1
+2
+.
+5) Number of even numbers from 1 to n
+= Last Even Number
+2
+.
+6) Sum of even numbers from 1 to n is k(k+1), where k
+indicates number of even numbers from 1 to n.
+e.g.: Sum of even no from 1 to 80 = 40(40+1) = 1640.
+Here from 1 to 80 there exists 40 even numbers.
+7) Sum of odd numbers from 1 to n = k2, where k is
+equal to number of odd numbers from 1 to n.
+e.g.: Sum of odd numbers from 1 to 60 is (30)2 = 900.
+30 odd natural numbers exist from 1 to 60.
+8) Sum of the squares of first 'n' even natural numbers =
+2
+3
+(n)(n+ 1)(2n+ 1).
+9) Sum of squares of first 'n' odd natural numbers is
+n(2n+ 1)(2n−1)
+3
+.
+10) Sum of any 5 consecutive whole numbers will
+always be divisible by 5.
+e.g.: (3 + 4 + 5 + 6 + 7) = 25 is divisible by 5.
+11) XY – YX; The difference between a two digit
+number and its reverse is divisible 9.
+e.g.: Let the two numbers be 95 and 59. Here 59 is
+reverse of 95. Now 95 – 59 = 36 (which is divisible by 9).
+12) Products: odd  × odd  = odd;     
+                        odd  × even = even;
+                        even × even = even;
+13) n! = n(n–1)(n–2)(n–3). . . . . . . (3)(2)(1).
+e.g.: 6! = 6 × 5 × 4 × 3 × 2 × 1 = 720.
+Product of 'r' consecutive integers is divisible by (r!)
+14) Finding the units digit of the numbers like (252)54.
+Here the units digit of 252 is 2 and the index is 54. We
+know that 21 = 2, 22 = 4, 23 = 8, 24 = 16, 25 = 32. Here units
+digit is repeated after each 4 indices. So divide 54 by 4
+to get the remainder. Here the remainder is 2.  
+Hence the last digit in (252)54 is same as 22  i.e.  4.
+CONCEPTUAL EXAMPLES
+1) The smallest number which when added to 4, the
+sum is exactly divisible by 24, 36, 48 and 60 is:
+a) 700           b) 716              c) 720            d) 730   
+Explanation:
+2
+24
+36
+48
+60
+2
+12
+18
+24
+30
+3
+6
+9
+12
+15
+2
+2
+3
+4
+5
+1
+3
+2
+5
+ 
+∴LCM of 24, 36, 48, 60 = 2 × 2 × 3 × 2 × 3 × 2 × 5 = 720.
+ 
+∴Required number = 716 
+Ask doubt with Question Id: 1648
+2) Number of integral divisors of 22050 except 1 and
+itself is.
+a) 24             b) 28               c) 36            d) 52
+Explanation:
+2
+22050
+3
+11025
+3
+3675
+5
+1225
+5
+245
+7
+49
+7
+ 22050 = 21 × 32 × 52 × 72
+Using the formula discussed earlier,
+ 
+∴Number of divisors = (1+1) (2+1) (2+1) (2+1) = 54
+ 
+∴Number of divisors except 1 and itself = 54 –2 = 52. 
+Ask doubt with Question Id: 1650
+3) Find the sum of first 20 multiples of 12. 
+a) 1830          b) 2520           c) 3494          d) None
+Explanation: Sum of first 20 multiples of 12 are
+ = (12×1) + (12×2) + (12×3) + … + (12×19) + (12×20).
+ = 12 (1 + 2 + 3 + … + 20) 
+Use the formula for “Sum of first 'n' natural numbers”.
+∑n=n(n+ 1)
+2
+⇒12×∑n= 12×(20×21)
+2
+=2520
+Ask doubt with Question Id: 1647
+4) Mr. Srinivas saves one coin of ₹5 on first day of the
+week, three coins of ₹5 on the second day of the week.
+Five coins of ₹5 on third day and so on. How much
+money will he has at the end of the week?
+a) 78             b) 125             c) 245          d) 289
+Explanation: Number of ₹5 coins with him at the end
+of week = 5 × (1 + 3 + 5 + 7 + 9 + 11 + 13)
+          = 5 × (sum of first 7 odd numbers)
+(By using the formula discussed earlier).
+ 
+∴Sum of all numbers = 5 × 72 = 245.
+Ask doubt with Question Id: 1649
+Login to your online account to ask doubts.
+1.7
+
+5) √12+ √12+ √12+ ....... ∞ terms=?
+a) 2                b) 3                  c) 4                 d) 5 
+Explanation: Let the given expression = x
+Then, we can write √12+ x=x⇒12+ x=x2
+ 
+∴x2 – x – 12 = 0 ⇒(x–4)(x+3) = 0
+So, x = +4         (x cannot be negative since √12=3.46).
+Ask doubt with Question Id: 1651
+6) A Mango seller saves two coins of ₹2 on first day of
+the week, four coins of ₹2 on the second day of the
+week. Six coins of ₹2 on third day and so on. The total
+amount saved by him at the end of the week is
+a) 246              b) 112             c) 88             d) None
+Explanation: Number of ₹2 coins saved by him at the
+end of the week = 2×(2+4+6+8+10+12+14) 
+Sum of first seven even numbers = k(k +1) = 7×8 = 56
+where k = number of even numbers.
+Sum of the money with him = 56×2 = ₹112.
+Ask doubt with Question Id: 1652
+7) The sum of all the odd numbers starting from 1 and
+ending at the greatest number of three digits is.
+a) 500              b) 5000           c) 2500         d) 250000
+Explanation: Greatest number of three digits = 999.
+There are 500 odd numbers from 1 to 999.
+ 
+∴Sum of first 500 odd numbers = (500)2 = 250000.
+Ask doubt with Question Id: 1653
+8) What is the number whose eleventh part multiplied
+by its fifth part gives 2695.
+a) 385               b) 434             c) 560             d) 583
+Explanation: 
+Let x be the required number. Then x
+11
+× x
+5
+=2695
+x2 = 11×5×2695  x2 = 11×5×5×7×7×11  x = 5×7×11 = 385
+Alternate Method: To solve by options.
+Ask doubt with Question Id: 1655
+9) What least number must be added to the least
+number of six digits so that the resulting number may
+be a perfect square.
+a) 283             b) 344              c) 489           d) 523
+Explanation: The least number of six digits = 100000
+3 10 00 00
+317
+9
+61 100
+61
+627 3900
+4389
+– 489
+Least number to be added = 489.
+Alternative method is to solve by options.
+Ask doubt with Question Id: 1654
+10) What is the least number of cut pieces of equal
+length that can be cut out of two lengths 10 meters 857
+millimeters and 15 meters 87 millimeters.
+a) 78             b) 184             c) 232             d) None
+Explanation: Here, you need to find the HCF. Because,
+to get least number of equal cut pieces you should cut
+as big as possible. So, HCF of 10857 and 15087 = 141.
+(This is the size of each cut piece). Then the number of
+cut pieces = (10857 + 15087) ÷ 141 = 184. 
+Ask doubt with Question Id: 1656
+11) A certain number when successively divided by 3, 4
+and 5 leaves remainders 1, 2 and 3 respectively. What is
+the remainder when the same number be divided by 4?
+a) 3               b) 4                 c) 5                 d) 6
+Explanation: Let p be the certain number and q, r, s be
+successive quotients upon successive division. Given,
+p
+3
+=q , Remainder 1;  ⇒   p = 3q+1 …....... (I)
+q
+4
+=r , remainder 2;     
+⇒q = 4r+2 …....... (II)
+r
+5
+=s , Remainder 3;    
+⇒r = 5s+3 …....... (III)
+From (I) and (II),     p = 3(4r+2)+1   
+⇒p = 12r+7 …....... (IV)
+From (IV) and (III), p = 12(5s+3)+7 
+⇒p = 60s+43.
+Now question asked for remainder if p is divided by 4.
+i.e. 60 s+ 43
+4
+. When 60s leaves no remainder, but while
+43 is divided by 4 it leaves remainder 3. 
+So when 60s+43 is divided by 4 it leaves remainder 3.
+Alternate Method-1:   So, a number when successfully
+divided by 3, 4, 5 leaves remainder 1, 2, 3 would be of
+the form = 3[4(5n+3)+2]+1 = 60n+43. 
+Now, if 60n+43 is divided by 4, the remainder is 3.
+• Alternate Method-2: Formula Approach.
+As discussed earlier, when there are three divisors d1,
+d2, d3 and three remainders r1, r2, r3 the complete
+remainder is given by d1 d2 r3 + d1 r2 + r1.
+By applying above formula, we get,
+(3)(4)(3) + (3)(2) + (1) = 36 + 6 + 1 = 43.
+When 43 is divided by 4 the remainder is 3.
+Ask doubt with Question Id: 1657
+12) Find the greatest number of four digits which is
+perfectly divisible by 3 and when divided by 5, 7 and 9
+leaves a remainder 3 in each case. 
+a) 9985           b) 9960             c) 9768          d) 9660
+Explanation: LCM of 3, 5, 7, 9 = 315.
+Greatest number of four digits which is divisible by 315
+is 9765.  The required number = 9765 + 3 = 9768. 
+Ask doubt with Question Id: 1658
+1.8
+Praxis Groups
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+
+13) Find greatest number of four digits which when
+increased by 3568 is exactly divisible by 6, 8, 12, 20.
+a) 9992           b) 9785             c) 9840         d) None
+Explanation: Greatest number of 4 digits = 9999.
+9999 + 3568 = 13567.         LCM of 6, 8, 12 and 20 is 120.
+ 
+∴Required number of 4 digits = 9999 – 7 = 9992 
+ Ask doubt with Question Id: 1659
+14) Find the greatest number which when divided by
+794, 858 and 1351, the remainders are all same.
+a) 35               b) 21                 c) 14             d) 1
+Explanation: Given, the remainders are same i.e.
+differences of that numbers are exactly divisible.
+Hence, you have to find HCF (x–y, y–z, z–x).
+858–794 = 64;        1351–794 = 557;      1351–858 = 493.
+HCF of (64, 557, 493) = 1.
+Ask doubt with Question Id: 1660
+15) Find the greatest five digit number to which if 7143
+is added, the final number becomes exactly divisible by
+18, 24, 30, 32 and 36. 
+a) 99846         b) 99682           c) 99417         d) None 
+Explanation: LCM of 18, 24, 30, 32 and 36 is 1440.
+99999 + 7143 = 107142.
+Dividing 107142 by 1440, the remainder is 582.
+ 
+∴Required number = 99999 – 582 = 99417
+Alternate Method: Cross check with options.
+Ask doubt with Question Id: 1662
+16) Two numbers are in the ratio of 11:13. If the HCF of
+these numbers is 19, determine those numbers. 
+a) 304, 369     b) 209, 247      c) 182, 199      d) None
+Explanation: Let the numbers be 11x and 13x.
+Since the HCF of given numbers is 19 which indicates
+that 19 is the common factor of these two numbers.
+Hence, it is obvious that value of x is 19.
+ 
+∴The numbers are 209 and 247 respectively.
+Ask doubt with Question Id: 1665
+17) Find the least number which when divided by 6, 9,
+14, 21 and 24 leaves 1, 4, 9, 16 and 19 as respective
+remainders, but is divisible by 17. 
+a) 2425             b) 1895             c) 1003             d) 944
+Explanation:  LCM of 6, 9, 14, 21 and 24 is 504. 
+Required number = (504 k–5) which is divisible by 17
+for the least value of k. 
+(504 k – 5) = (493k + 11k – 5) = (17×29)k + (11k–5) 
+Let k = 1  (11×1 – 5) = 7    (not divisible by 17)
+⇒
+Let k = 2  (11×2 – 5) = 17  (divisible by 17)
+⇒
+ 
+∴(17×29)k + (11k–5) is exactly divisible by 17 for k = 2.  
+ 
+∴Required Number = (504)k – 5 = (504×2) – 5 = 1003.
+Ask doubt with Question Id: 1663
+18) I collected some money by raising subscription for
+opening a society. If the whole amount collected by 720
+currency notes of ₹1000 denomination and each person
+subscribed as many rupees as twice the number of
+subscribers. Then find the number of subscribers.
+a) 500               b) 550               c) 600               d) 650
+Explanation:
+ Total amount collected =720×1000
+=720000.
+Let there be x subscribers so that each paid ₹ 2x.
+Total amount collected = (Number of subscribers) ×
+(Amount paid by each subscriber).
+x×2x = 720000  2(
+⇒
+x2) = 720000  
+⇒x2 = 360000  
+⇒x = 600
+Ask doubt with Question Id: 1664
+19) 3 bells commence tolling together and toll at
+intervals of 4, 7 and 14 seconds respectively. At which
+of the following time they might toll together?
+a) 30 sec          b) 78 sec            c) 84 sec           d) 92 sec
+Explanation: Calculate LCM for time of tolling
+together. LCM of 4, 7, 14 = 28 sec.
+These 3 balls toll together after every 28 sec.
+ By checking with options, 84 is divisible by 28. 
+∴
+∴ They will toll together at  84th sec.
+Ask doubt with Question Id: 7699
+20) What is the HCF of the fractions 6
+10
+, 9
+24
+, 15
+20
+.
+a)
+1
+120
+        b)
+4
+120
+        c) 120
+3
+        d)
+3
+120
+Explanation: HCF of fraction =
+HCF of numerator
+LCMof denominator
+ 
+                        =
+HCF(6, 9,15)
+LCM(10, 24,20)
+= 3
+120
+Ask doubt with Question Id: 7700
+21) The sum of two numbers is 100 and their difference
+is 40. The difference of their squares is.
+a) 2000          b) 2500           c) 3500           d) 4000 
+Explanation: x + y = 100 and x – y = 40 
+x2 – y2 ⇒ (x + y) (x – y)  
+⇒100×40 = 4000
+Ask doubt with Question Id: 1488
+22) A positive number when decreased by 4 is equal to
+12 times the reciprocal of the number. Find the number.
+a) 2                b) 6                 c) 4                d) 3
+Explanation: Let x be the number, then
+x−4=12
+x
+⇒x
+2−4 x−12=0⇒(x−6)(x+ 2)=0
+i.e. x = 6 (or) –2, since x ≠ –2, so x = 6.
+Ask doubt with Question Id: 1489
+Login to your online account to ask doubts.
+1.9
+120)13567(113
+        13560
+            7
+The remainder is 7.
+
+23) There is a number of two digits the sum of whose
+digits is 5, and if 10 times the digit in the place of tens
+be added to 4 times the digit in the place of units, the
+number will be inverted. Then the number is.
+a) 32              b) 41               c) 50             d) 23
+Explanation: Let the two digit number be (x y)
+such that
+x + y
+= 5
+… (1)          
+and
+10x + 4y= 10y+x
+… (2)
+⇒ 9x = 6y 
+(or) 3x = 2y
+From equation-(1), 2x+2y = 10 ( 3
+∵x = 2y)
+⇒ 5x = 10
+i.e., x = 2 and y = 3
+ The n
+∴
+umber is 23.
+Ask doubt with Question Id:  1491
+24) The radius of a circle is of two digits and is 4 times
+the sum of the digits. When 18 be added to the radius,
+the digits in the radius are reversed. Then area of the
+circle is.
+a) 1810.29         b) 2439.44       c) 3890.63       d) 5544
+Explanation: 10x + y = 4 (x+y) and (10x+ y)+18 = 10y + x
+Solving for x and y, we get x = 2, y = 4.
+ 
+∴Radius of the circle is (xy) = 24,
+Area of the circle is πr2 = 1810.29 sq. units.
+Ask doubt with Question Id: 1492
+25) If + means –, – means ×, × means ÷, ÷  means + then
+4 ÷8 + 2 × 3 – 6 = ?
+Explanation: After interchanging the operators, we get 
+  
+⇒4 + 8 – 2 ÷ 3 × 6
+(Applying VBODMAS Rule)
+ ⇒4+ 8−2
+3
+×6 = 4 + 8 – 4 = 8.
+Ask doubt with Question Id: 8247
+EXERCISE
+1) Find the greatest number of five digits which is a
+perfect square.
+a) 99225           b) 99856           c) Both a,b    d) None 
+2) Simplify 17
+2
+−[
+16
+5
+÷9
+2
+of 16
+3
++{
+11−(3−(
+5
+4
+−5
+8))}]
+a) −11
+120     b) −21
+120     c) −31
+120   d) None
+3) Find the LCM of the fractions 108
+375
+, 42
+25
+, 54
+55
+.
+a) 756
+5
+        b) 326
+5
+        c) 434
+5
+      d) 282
+5
+4) Sum of three numbers is 132. First number is twice
+the second and third number is 1
+3 of the first. Find the
+second number.
+a) 12                 b) 24                 c) 36               d) 42
+5) If √1+ x=13
+12
+then the value of x is.
+a)
+9
+144        b) 16
+144         c) 25
+144     d) 36
+144
+6) Five bells begin to toll together and they toll at an
+interval of 36, 45, 72, 81 and 108 seconds. After what
+interval of time they will keep on tolling together?
+a) 3240 sec       b) 3080 sec       c) 3140 sec      d) 3200 sec
+7) The least perfect square number which is exactly
+divisible by 4, 6, 8, 10 or 12 is
+a) 9260             b) 7921             c) 5625           d) 3600
+8) Each student in a class contributed as many paise as
+the number of students in the class, the teacher
+contributed ₹13, the total collection is of 
+ 
+₹ 49. How
+many students were there in the class?
+a) 48                 b) 60                 c) 72               d) None 
+9) Sum of square of two numbers is 80 and square of
+their difference is 36. Product of the two numbers is
+a) 22                 b) 34                 c) 42               d) 51
+10) Find the greatest number that will divide 148, 246
+and 623 leaving remainders 4, 6 and 11 respectively.
+a) 11                 b) 12                 c) 13               d) 14 
+11) The least number which when divided by 36, 48 &
+64 leaves the remainders 25, 37 and 53 respectively is
+a) 656               b) 563               c) 565             d) 657
+12) √3√3√3√3√3=?
+a) 3
+31
+64          b) 3
+31
+32         c) 3
+1
+64       d) None
+13) The HCF of two numbers is 16 and their LCM is
+160. If one number is 32, then other number is.
+a) 48               b) 80             c) 96           d) 112 
+14) Find the size of the largest square slabs which can
+be paved on the floor of a room 5 meters 44 cm long
+and 3 meters 74 cm broad.
+a) 56               b) 42             c) 38           d) 34
+15) Least number that must be added to 8492 such that
+the resulting number may be divisible by 72 is.
+a) 68               b) 25             c) 11           d) 4
+16) The LCM of two numbers is 1950 and their HCF is
+65. If one of the number is 195, find the other number.
+a) 398             b) 650           c) 792         d) None 
+17) Find the greatest number that will divide 532, 894
+and 1003 leaving remainders 22, 44 and 68 respectively.
+a) 85               b) 105           c) 90           d) 95
+18) A biscuit dealer has 378 kgs, 434 kgs and 582 kgs of
+three different qualities of biscuits. He wants it all to be
+packed into boxes of equal size without mixing. Find
+the capacity of the largest possible box.
+a) 5 kg            b) 3 kg         c) 2 kg        d) 1 kg
+1.10
+Praxis Groups
+
+19) Find the least number which when divided by 35
+leaves remainder 25, when divided by 25 leaves
+remainder 15, when divided by 15 leaves remainder 5. 
+a) 420             b) 515           c) 435         d) 518
+20) Find the least number which when increased by 4 is
+divisible by 21, 25, 27 and 35.
+a) 4721           b) 4725         c) 4758       d) 2418 
+21) The product of two numbers is 211428 and their
+LCM is 3356. Find their GCM?
+a) 72               b) 48             c) 36           d) 63 
+22) Find the least number for which when 5046 is
+divided or multiplied, becomes a perfect square.
+a) 25               b) 15             c) 10           d) 6 
+23) Find the smallest number between 450 to 550 which
+is exactly divisible by 7, 8 and 14.
+a) 454             b) 482           c) 504         d) 546 
+24) Three bells ring at an interval of 10, 12 and 14
+seconds respectively. They ring together at 11:00 then at
+what time they ring together again.
+a) 12 hours 12 min 12 sec         b) 11 hours 7 min
+c) 11 hours 35 min                     d) 10 hours 45 min
+25) Sum of 4 consecutive natural numbers each
+divisible by 5 is 130. What is the greatest number?
+a) 35               b) 40             c) 45           d) 50  
+26) Two numbers 2035 and 2880 when divided by a
+certain number of three digits, leaves the same
+remainder. Find the number.
+ a) 271            b) 293          c) 169         d) 421
+27) A boy saves  1 on day-1, 2 on day-2, 3 on day-3
+₹
+₹
+₹
+and so on. Then in how many days will he have 36?
+₹
+a) 5
+         b) 6  
+ c) 7  
+       d) 8
+28) The last digit of a number 49825# is missing. It is
+also given that the number is divisible by 8. Find the
+digit at unit's place.
+a) 4                 b) 6              c) 8             d) 0
+29) Difference of squares of two numbers is 1160 and
+their sum is 116. What is their difference?
+a) 5                  b) 9            c) 10           d) 13 
+30) The sum of two numbers is 24 such that 7 times the
+first number added to 5 times the second number is
+146. Find the second number
+a) 11                b) 13         c) 12           d) None
+31) A number consists of two digits whose sum is 9,
+when 27 is added to this number, the digits interchange
+their places. The number is.
+a) 54               b) 36         c) 27           d) 12
+32) In a field there are birds less than 100 in number.
+Another field has the number of birds in reversal of
+this number and less than 100. Then, the difference of
+the two sets of the birds is
+a) 9                  b) 27         c) both (a) and (b)  d) None
+33) A positive number when decreased by 9, is equal to
+10 times the reciprocal of the number. Find the number.
+a) 9           b) 10               c) 11                d) 12
+34) Sum of square of two consecutive natural odd
+numbers is 202. Find the smallest number.
+a) 5
+      b) 7
+  c) 9
+           d) 11
+35) If the digits of a 2 digit number are interchanged,
+the summation of these two numbers will be 55, then
+which one of the following might be a number?
+a) 14
+      b) 24
+ c) 33
+           d) None
+36) If + means –, – means ×, × means ÷ and ÷ means +. 
+Then  (256 × 16 ÷ 49 × 7 + 125 × 5 – 2 ÷ 289 × 17) = ?
+a) 10            b) –15            c) –10              d) –17
+37) Interchanging signs + and –, numbers 1 and 2.
+Based on this information,  which of the following is
+correct? 
+a) 12 + 21 – 12 = 21              b) 21 + 21 + 12 = 21
+c) 12 + 12 – 21 = 12              d) 21 – 21 – 21 = 33
+EXPLANATIONS
+1) The greatest number of 5 digits = 99999.
+3 9 99 99
+3 1 6
+9
+61 0 99
+61
+626
+3899
+3756
+143
+ 
+∴Required number = 99999 – 143 = 99856.
+Ask doubt with Question Id: 1667
+2) Applying VBODMAS rule,
+= 17
+2
+−[
+16
+5
+÷9
+2
+of 16
+3
++{11−(3−5
+8)}]
+= 17
+2
+−[
+16
+5
+÷ 9
+2
+of 16
+3
++{11−19
+8 }]
+= 17
+2
+−[
+16
+5
+÷9
+2
+of 16
+3
++ 69
+8 ] = 17
+2
+−[
+16
+5
+÷ 9
+2
+× 16
+3
++ 69
+8 ]
+= 17
+2
+−[
+16
+5
+÷24
+1
++ 69
+8 ] = 17
+2
+−[
+16
+120
++ 69
+8 ]
+= 17
+2
+−[
+16+ 1035
+120 ] = 17
+2
+−1051
+120
+=1020−1051
+120
+=−31
+120
+Ask doubt with Question Id: 1668
+Login to your online account to ask doubts.
+1.11
+
+3) 108
+375 can be minimized to 36
+125
+.
+LCM = LCM of 36, 42,54
+HCF of125,25, 55
+=756
+5
+.
+Ask doubt with Question Id: 1669
+4) Let the second number be 3x, so that the first
+number is 6x and the third number is 2x.
+ 
+∴6x + 3x + 2x = 132
+ 
+⇒x = 12.
+Second number = 3x = 3×12 = 36.
+Ask doubt with Question Id: 1670
+5) 1+ x=169
+144 ⇒x=169
+144
+−1 = 25
+144
+Ask doubt with Question Id: 1671
+6) The interval of time is the LCM of the numbers.
+2 36, 45, 72, 81, 108
+2 18, 45, 36, 81, 54
+3 9,  45, 18, 81, 27
+3 3,  15,  6, 27,   9
+3 1,    5,  2,  9,    3
+ 1,    5,  2 , 3,    1
+Ask doubt with Question Id: 1672
+7) LCM of 4, 6, 8, 10, 12 = 120.
+    120 can be written as 2×2×2×3×5
+To make it a perfect square, you have to multiply by
+2×3×5. If you can see in the factors that 2×2×2×3×5 = 120
+can not make a perfect square until we multiply it by 2
+to make 2×2×2×2 and by 3 to make 3×3 and by 5 to
+make 5×5. Now all the numbers are squares.
+i.e. 42 × 32 × 52 = (4×3×5)2 = 602 = 3600.
+Ask doubt with Question Id: 1673
+8) Let x be the number of students so that each
+contributed x paise. Contribution of the students
+= 49–13 = ₹36 = 3600 paise.
+ x2 = 3600  x = 60.
+ 
+∴Number of students in the class is 60.
+Ask doubt with Question Id: 1674
+9) Let the number be x and y, it is required to find x × y.
+x2 + y2 = 80 and (x – y)2 = 36
+Now (x – y)2 = (x2 + y2) – 2xy
+           2xy = (x2 + y2 ) – (x – y)2 = 80 – 36 = 44 then xy = 22.
+Ask doubt with Question Id: 1675
+10) Required number = HCF (148–4), (246–6), (623 – 11)
+                                       = HCF of 144, 240 and 612 = 12.
+Ask doubt with Question Id: 1676
+11) Since (36 – 25) = (48 – 37) = (64 – 53) = 11
+ 
+∴Required smallest number = (LCM of 36, 48, 64)–11
+                                                   = 576 – 11
+= 565. 
+Ask doubt with Question Id: 1677
+12) √3√3√3√3√3 =√3√3√3√3.3
+1
+2
+=√3√3√3√3
+3
+2
+    = √3√3√3.3
+3
+2
+× 1
+2
+= √3√3√3.3
+3
+4
+    = √3√3√3
+7
+4
+= √3√3.3
+7
+8
+= √3√3
+15
+8
+    = √3.3
+15
+16
+= √3
+31
+16
+= 3
+31
+32
+Ask doubt with Question Id: 1678
+13) Product of numbers = HCF × LCM 
+                               32 × K = 16 × 160
+ 
+⇒K = 80.
+Ask doubt with Question Id: 1679
+14) 5 meters 44 cm = 544 cm;        
+      3 meters 74 cm = 374 cm
+The side of the square slab = HCF of 544, 374 = 34.
+Ask doubt with Question Id: 1680
+15) Divide 8492 by 72, the remainder is 68.
+ 
+∴Least number to be added = 72 – 68 = 4.
+Ask doubt with Question Id: 1681
+16)
+HCF×LCM
+Given number
+= 65×1950
+195
+=650
+Ask doubt with Question Id: 1682
+17) 532–22 = 510;
+894–44 = 850;
+1003–68 = 935;
+HCF of 510 and 850 is 170.      HCF of 170 and 935 is 85.
+Ask doubt with Question Id: 1683
+18) The capacity of the largest possible box = 
+HCF (378, 434, 582) = 2. 
+Ask doubt with Question Id: 1684
+19) Here 35–25 = 25–15 = 15–5 = 10
+Required number = (LCM of 35, 25, 15) – 10.
+                                = 525 – 10 = 515.
+Ask doubt with Question Id: 1685
+20) LCM of 21, 25, 27, 35 = 4725
+ 
+∴Required number = 4725 – 4 = 4721.
+Ask doubt with Question Id: 1686
+21) GCM × LCM = Product of the two numbers
+                GCM=211428
+3356
+=63
+Ask doubt with Question Id: 1687
+22) 5046 = 6 × 29 × 29.
+Hence 5046 must be multiplied or divided by 6 to make
+it a perfect square. If you multiply by 6 it becomes
+(6×29)2 which is a perfect square (or) if you divide by 6
+it becomes (29)2 which is also a perfect square. 
+Ask doubt with Question Id: 1688
+1.12
+Praxis Groups
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

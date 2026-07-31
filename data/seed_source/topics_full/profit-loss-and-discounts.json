@@ -1,0 +1,83 @@
+{
+  "study_material": {
+    "title": "Profit, Loss and Discounts - Complete Study Notes",
+    "introduction": "Every transaction question runs on three anchors: Cost Price (CP), Selling Price (SP) and Marked Price (MP). Profit and loss are always reckoned on CP; discount is always reckoned on MP. Keep those two bases straight and the whole chapter becomes multiplication by factors.",
+    "learning_objectives": [
+      "Compute profit%, loss% and discount% with the correct bases",
+      "Chain markup and discount factors multiplicatively",
+      "Handle equal-selling-price trap questions",
+      "Solve false-weight and successive-discount problems",
+      "Relate CP-of-m = SP-of-n statements to profit percentage"
+    ],
+    "concepts": [
+      {"heading": "1. The Three Prices", "body": "CP = price the article is bought for; MP (list price) = price marked; SP = price actually sold at. Profit = SP - CP (if positive), Loss = CP - SP (if positive). Profit% = Profit/CP x 100 and Discount% = Discount/MP x 100. Note the different bases - this is the most tested trap."},
+      {"heading": "2. Factor Arithmetic", "body": "A gain of g% means SP = CP x (1 + g/100); a discount of d% means SP = MP x (1 - d/100). Chains multiply: mark up 40% then discount 15% and 10% gives overall factor 1.40 x 0.85 x 0.90. Whether the net is profit or loss just depends on whether the product exceeds 1."},
+      {"heading": "3. Equal Selling Prices Trap", "body": "If two articles sell at the same SP, one at x% profit and the other at x% loss, the trader ALWAYS loses overall, with net loss% = x^2/100. For x = 10, loss = 1%."},
+      {"heading": "4. False Weights", "body": "A dealer selling at cost price but using a weight of w grams instead of 1000 grams gains (1000 - w)/w x 100 percent. Example: 900 g weight gives 100/900 = 11.11% profit."},
+      {"heading": "5. CP of m = SP of n", "body": "If the cost price of m articles equals the selling price of n articles (m > n), profit% = (m - n)/n x 100. If m < n it is a loss. Example: CP of 12 = SP of 10 gives profit of 2/10 = 20%."}
+    ],
+    "formulas": [
+      "Profit% = (SP - CP)/CP x 100",
+      "Discount% = (MP - SP)/MP x 100",
+      "SP = CP(1 + g/100) = MP(1 - d/100)",
+      "Equal-SP trap: net loss% = x^2/100",
+      "False weight gain% = (true - false)/false x 100",
+      "CP of m = SP of n: profit% = (m-n)/n x 100"
+    ],
+    "shortcut_methods": [
+      "Work with multiplying factors (1.2, 0.85) instead of percentages",
+      "Successive discounts a% and b% = a + b - ab/100 overall",
+      "To find MP: MP = SP / (1 - d/100); to find CP: CP = SP / (1 + g/100)"
+    ],
+    "common_mistakes": [
+      "Calculating profit% on SP instead of CP",
+      "Calculating discount% on CP instead of MP",
+      "Adding successive discounts instead of combining them multiplicatively",
+      "Assuming equal profit/loss percentages at equal SP cancel out - they never do"
+    ],
+    "summary": "Convert every percentage into a factor, multiply the chain from CP to SP, and remember: profit sits on CP, discount sits on MP.",
+    "quick_revision_notes": [
+      "Profit on CP, discount on MP",
+      "Successive changes multiply",
+      "Equal SP with +x% and -x% = x^2/100 loss",
+      "SP of n = CP of m: profit = (m-n)/n x 100"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "An article bought for Rs. 500 is sold for Rs. 600. Find the profit percent.", "options": ["20%", "16.67%", "25%", "10%"], "correct_answer": "20%", "step_by_step": "Profit = 100. Profit% = 100/500 x 100 = 20%.", "shortcut": "100 on 500 is 1/5 = 20%."},
+    {"difficulty": "easy", "question": "A trader sells an item for Rs. 480 at a loss of 20%. Find the cost price.", "options": ["Rs. 600", "Rs. 576", "Rs. 560", "Rs. 500"], "correct_answer": "Rs. 600", "step_by_step": "SP = 0.80 x CP, so CP = 480/0.80 = 600.", "shortcut": "Divide by the loss factor 0.8."},
+    {"difficulty": "medium", "question": "A shopkeeper marks goods 25% above cost and allows a 10% discount. Find his profit percent.", "options": ["12.5%", "15%", "10%", "13.5%"], "correct_answer": "12.5%", "step_by_step": "Overall factor = 1.25 x 0.90 = 1.125, i.e. 12.5% profit.", "shortcut": "25 - 10 - 250/100 = 12.5 using a + b + ab/100 with signs."},
+    {"difficulty": "medium", "question": "A dealer sells goods at cost price but uses a 900 g weight for 1 kg. Find his gain percent.", "options": ["11.11%", "10%", "12.5%", "9.09%"], "correct_answer": "11.11%", "step_by_step": "He charges for 1000 g but delivers 900 g. Gain% = 100/900 x 100 = 11.11%.", "shortcut": "Gain = (excess/actual delivered) x 100."},
+    {"difficulty": "hard", "question": "Two articles are each sold at Rs. 990 - one at 10% profit, the other at 10% loss. Find the overall result.", "options": ["1% loss", "No profit no loss", "1% profit", "2% loss"], "correct_answer": "1% loss", "step_by_step": "CPs are 900 and 1100, total 2000. Total SP = 1980. Loss = 20 on 2000 = 1%.", "shortcut": "Equal-SP trap: loss = x^2/100 = 1%."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["profit-loss", "basics"], "question": "Cost price Rs. 250, selling price Rs. 300. The profit percent is:", "options": ["20%", "25%", "15%", "18%"], "correct_answer": "20%", "explanation": "Profit 50 on CP 250 = 20%."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["profit-loss", "loss"], "question": "An article costing Rs. 400 is sold at a 15% loss. The selling price is:", "options": ["Rs. 340", "Rs. 360", "Rs. 350", "Rs. 320"], "correct_answer": "Rs. 340", "explanation": "SP = 400 x 0.85 = 340."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["profit-loss", "reverse"], "question": "An item sold at Rs. 552 gives a 15% profit. Its cost price is:", "options": ["Rs. 480", "Rs. 470", "Rs. 460", "Rs. 500"], "correct_answer": "Rs. 480", "explanation": "CP = 552/1.15 = 480."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["profit-loss", "discount"], "question": "A 20% discount on a marked price of Rs. 750 gives selling price:", "options": ["Rs. 600", "Rs. 620", "Rs. 630", "Rs. 580"], "correct_answer": "Rs. 600", "explanation": "SP = 750 x 0.80 = 600."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["profit-loss", "successive-discount"], "question": "Two successive discounts of 20% and 10% are equivalent to a single discount of:", "options": ["28%", "30%", "27%", "25%"], "correct_answer": "28%", "explanation": "Retention 0.8 x 0.9 = 0.72, so 28% off."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["profit-loss", "cp-sp-count"], "question": "If the cost price of 12 articles equals the selling price of 10 articles, the profit percent is:", "options": ["20%", "16.67%", "25%", "10%"], "correct_answer": "20%", "explanation": "Profit% = (12-10)/10 x 100 = 20%."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["profit-loss", "two-scenarios"], "question": "Selling an article at a 5% loss versus selling it for Rs. 60 more (which gives 10% profit) - find the cost price.", "options": ["Rs. 400", "Rs. 450", "Rs. 350", "Rs. 500"], "correct_answer": "Rs. 400", "explanation": "The Rs. 60 gap covers 15% of CP: CP = 60/0.15 = 400."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["profit-loss", "marked-price"], "question": "An article costs Rs. 440. At what price should it be marked so that after a 12% discount there is a 10% profit?", "options": ["Rs. 550", "Rs. 540", "Rs. 560", "Rs. 530"], "correct_answer": "Rs. 550", "explanation": "SP = 440 x 1.10 = 484 = 0.88 x MP, so MP = 550."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["profit-loss", "false-weight"], "question": "A grocer sells at cost price but gives only 950 g per kg. His gain percent is about:", "options": ["5.26%", "5%", "4.76%", "6.25%"], "correct_answer": "5.26%", "explanation": "Gain = 50/950 x 100 = 5.26%."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["profit-loss", "bulk"], "question": "A vendor buys 20 mangoes for Rs. 60 and sells them at 5 for Rs. 20. His profit percent is:", "options": ["33.33%", "25%", "30%", "20%"], "correct_answer": "33.33%", "explanation": "CP each = 3, SP each = 4. Profit = 1/3 = 33.33%."}
+  ],
+  "topic_test": {
+    "title": "Profit, Loss and Discounts - Topic Test",
+    "duration_minutes": 20,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 20 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Use multiplying factors; remember profit sits on CP and discount on MP."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["profit-loss"], "question": "Bought at Rs. 800, sold at Rs. 920. Profit percent:", "options": ["15%", "12%", "18%", "20%"], "correct_answer": "15%", "explanation": "120/800 = 15%."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["profit-loss"], "question": "Sold at Rs. 1,080 with a 10% loss. Cost price:", "options": ["Rs. 1,200", "Rs. 1,188", "Rs. 1,100", "Rs. 1,150"], "correct_answer": "Rs. 1,200", "explanation": "CP = 1080/0.9 = 1,200."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["profit-loss"], "question": "Successive discounts of 10% and 20% equal a single discount of:", "options": ["28%", "30%", "26%", "32%"], "correct_answer": "28%", "explanation": "0.9 x 0.8 = 0.72 retention = 28% off."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["profit-loss"], "question": "An article sold for Rs. 720 yields 20% profit. Its cost price is:", "options": ["Rs. 600", "Rs. 620", "Rs. 576", "Rs. 640"], "correct_answer": "Rs. 600", "explanation": "CP = 720/1.2 = 600."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["profit-loss"], "question": "Goods marked 40% above cost are sold at 20% discount. The profit percent is:", "options": ["12%", "20%", "16%", "8%"], "correct_answer": "12%", "explanation": "1.40 x 0.80 = 1.12."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["profit-loss"], "question": "Two watches are each sold at Rs. 1,200, one at 20% gain and the other at 20% loss. Overall the trader has:", "options": ["4% loss", "No gain no loss", "4% gain", "2% loss"], "correct_answer": "4% loss", "explanation": "Equal-SP trap: loss = 20^2/100 = 4%."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["profit-loss"], "question": "If the cost price of 15 articles equals the selling price of 12, the gain percent is:", "options": ["25%", "20%", "15%", "30%"], "correct_answer": "25%", "explanation": "(15-12)/12 x 100 = 25%."},
+      {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["profit-loss"], "question": "The difference between selling an article at 12% gain and at 8% loss is Rs. 100. The cost price is:", "options": ["Rs. 500", "Rs. 450", "Rs. 550", "Rs. 600"], "correct_answer": "Rs. 500", "explanation": "The gap is 20% of CP: CP = 100/0.20 = 500."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["profit-loss"], "question": "After allowing a 10% discount a trader still gains 26%. By what percent is the marked price above the cost price?", "options": ["40%", "36%", "30%", "42%"], "correct_answer": "40%", "explanation": "0.9 x MP = 1.26 x CP, so MP = 1.4 x CP: 40% above."},
+      {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["profit-loss"], "question": "A man buys oranges at 4 for Rs. 10 and sells at 5 for Rs. 15. His gain percent is:", "options": ["20%", "25%", "16.67%", "12.5%"], "correct_answer": "20%", "explanation": "CP each = 2.50, SP each = 3. Gain = 0.5/2.5 = 20%."}
+    ]
+  }
+}

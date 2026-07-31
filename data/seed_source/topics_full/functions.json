@@ -1,0 +1,77 @@
+{
+  "study_material": {
+    "title": "Functions - Complete Study Notes",
+    "introduction": "A function maps each input to exactly one output. Placement questions test evaluation, composition (f of g), inverses, domain/range, and even-odd symmetry - all mechanical once the definitions are second nature.",
+    "learning_objectives": [
+      "Evaluate functions and composite functions",
+      "Find domains and ranges of simple functions",
+      "Compute inverse functions",
+      "Identify even and odd functions",
+      "Work with piecewise-defined functions"
+    ],
+    "concepts": [
+      {"heading": "1. Definition and Evaluation", "body": "f(x) = 2x + 3 means: whatever goes in, double it and add 3. f(4) = 11. Domain = allowed inputs; Range = achieved outputs. A mapping is a function only if every input has exactly one output."},
+      {"heading": "2. Composition", "body": "(f o g)(x) = f(g(x)) - apply g first, then f. Order matters: with f(x) = x^2 and g(x) = x + 1, f(g(2)) = f(3) = 9 but g(f(2)) = g(4) = 5."},
+      {"heading": "3. Inverse Functions", "body": "f^-1 undoes f. To find it: set y = f(x), solve for x in terms of y, swap letters. For f(x) = 3x - 2: y = 3x - 2 gives x = (y+2)/3, so f^-1(x) = (x+2)/3. Only one-to-one functions have inverses."},
+      {"heading": "4. Domain Restrictions", "body": "Denominators cannot be zero: 1/(x-2) needs x != 2. Square roots need non-negative arguments: sqrt(x-3) needs x >= 3. Combine restrictions when both appear."},
+      {"heading": "5. Even and Odd", "body": "Even: f(-x) = f(x), symmetric about the y-axis (x^2, cos x). Odd: f(-x) = -f(x), symmetric about the origin (x^3, sin x). Most functions are neither."}
+    ],
+    "formulas": [
+      "(f o g)(x) = f(g(x))",
+      "Inverse: swap x and y, solve",
+      "Even: f(-x) = f(x); Odd: f(-x) = -f(x)",
+      "Domain excludes zero denominators and negative radicands"
+    ],
+    "shortcut_methods": [
+      "Evaluate composites from the inside out",
+      "Check even/odd by plugging in -x literally",
+      "For linear f(x) = ax + b, inverse = (x - b)/a"
+    ],
+    "common_mistakes": [
+      "Computing g(f(x)) when f(g(x)) is asked",
+      "Forgetting domain restrictions after simplifying",
+      "Assuming every function has an inverse"
+    ],
+    "summary": "Master evaluation, inside-out composition, the swap-and-solve inverse recipe, and domain restrictions - that is the whole placement syllabus for functions.",
+    "quick_revision_notes": [
+      "f o g means g first",
+      "Linear inverse: (x-b)/a",
+      "x^2 even, x^3 odd",
+      "Exclude division by zero and negative square roots"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "If f(x) = 2x + 3, find f(4).", "options": ["11", "10", "8", "14"], "correct_answer": "11", "step_by_step": "f(4) = 2(4) + 3 = 11.", "shortcut": "Direct substitution."},
+    {"difficulty": "medium", "question": "If f(x) = x^2 and g(x) = x + 1, find f(g(2)).", "options": ["9", "5", "4", "6"], "correct_answer": "9", "step_by_step": "g(2) = 3, then f(3) = 9.", "shortcut": "Inside out: g first."},
+    {"difficulty": "medium", "question": "Find the inverse of f(x) = 3x - 2.", "options": ["(x + 2)/3", "(x - 2)/3", "3x + 2", "2 - 3x"], "correct_answer": "(x + 2)/3", "step_by_step": "y = 3x - 2 gives x = (y + 2)/3; swap to get f^-1(x) = (x + 2)/3.", "shortcut": "Reverse the operations: add 2, divide by 3."},
+    {"difficulty": "hard", "question": "Which of the following is an odd function?", "options": ["x^3", "x^2", "x^2 + 1", "|x|"], "correct_answer": "x^3", "step_by_step": "(-x)^3 = -x^3 = -f(x), satisfying the odd condition. The others satisfy f(-x) = f(x) (even).", "shortcut": "Odd powers of x are odd functions."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["functions", "evaluation"], "question": "If f(x) = x^2 - 3x, find f(5).", "options": ["10", "15", "8", "12"], "correct_answer": "10", "explanation": "25 - 15 = 10."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["functions", "domain"], "question": "The domain of f(x) = 1/(x - 2) is:", "options": ["All real x except 2", "All real x", "x > 2", "x < 2"], "correct_answer": "All real x except 2", "explanation": "The denominator cannot be zero."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["functions", "range"], "question": "The range of f(x) = x^2 for real x is:", "options": ["y >= 0", "all real y", "y > 0", "y <= 0"], "correct_answer": "y >= 0", "explanation": "Squares are never negative and 0 is achieved."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["functions", "composition"], "question": "If f(x) = x + 5 and g(x) = 2x, find g(f(3)).", "options": ["16", "11", "13", "10"], "correct_answer": "16", "explanation": "f(3) = 8, g(8) = 16."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["functions", "composition"], "question": "With f(x) = x^2 and g(x) = x - 2, f(g(5)) equals:", "options": ["9", "23", "3", "49"], "correct_answer": "9", "explanation": "g(5) = 3, f(3) = 9."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["functions", "domain"], "question": "The domain of f(x) = sqrt(x - 3) is:", "options": ["x >= 3", "x > 3", "x <= 3", "all real x"], "correct_answer": "x >= 3", "explanation": "The radicand must be non-negative."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["functions", "even-odd"], "question": "f(x) = x^2 + 1 is:", "options": ["even", "odd", "both", "neither"], "correct_answer": "even", "explanation": "f(-x) = x^2 + 1 = f(x)."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["functions", "inverse"], "question": "If f(x) = (x + 4)/2, then f^-1(6) equals:", "options": ["8", "5", "10", "16"], "correct_answer": "8", "explanation": "f(x) = 6 means x + 4 = 12, x = 8."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["functions", "functional-equation"], "question": "If f(x + 1) = x^2 + 2x + 3, then f(x) equals:", "options": ["x^2 + 2", "x^2 + 1", "x^2 + 2x + 2", "x^2 - 2"], "correct_answer": "x^2 + 2", "explanation": "x^2+2x+3 = (x+1)^2 + 2, so f(t) = t^2 + 2."},
+    {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["functions", "composition"], "question": "If f(x) = 2x - 1, find f(f(3)).", "options": ["9", "7", "11", "5"], "correct_answer": "9", "explanation": "f(3) = 5, f(5) = 9."}
+  ],
+  "topic_test": {
+    "title": "Functions - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Evaluate composites inside-out."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["functions"], "question": "If f(x) = 3x + 1, f(2) = ?", "options": ["7", "6", "8", "5"], "correct_answer": "7", "explanation": "3(2) + 1 = 7."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["functions"], "question": "If f(x) = x^2 + x, f(-2) = ?", "options": ["2", "-2", "6", "0"], "correct_answer": "2", "explanation": "4 - 2 = 2."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["functions"], "question": "The domain of f(x) = 1/(x^2 - 9) excludes:", "options": ["x = 3 and x = -3", "x = 9", "x = 3 only", "x = 0"], "correct_answer": "x = 3 and x = -3", "explanation": "x^2 - 9 = 0 at x = plus or minus 3."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["functions"], "question": "f(x) = x + 3, g(x) = x^2. Then (g o f)(1) = ?", "options": ["16", "4", "10", "8"], "correct_answer": "16", "explanation": "f(1) = 4, g(4) = 16."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["functions"], "question": "The inverse of f(x) = 5x + 10 is:", "options": ["(x - 10)/5", "(x + 10)/5", "5x - 10", "x/5 + 10"], "correct_answer": "(x - 10)/5", "explanation": "Undo: subtract 10, divide by 5."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["functions"], "question": "Which function is even?", "options": ["|x|", "x^3", "x + 1", "x^3 + x"], "correct_answer": "|x|", "explanation": "|-x| = |x|."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["functions"], "question": "If f(x) = x/(x - 1) for x != 1, then f(f(2)) = ?", "options": ["2", "1", "0", "4"], "correct_answer": "2", "explanation": "f(2) = 2, and f(2) again = 2. This function is its own inverse."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["functions"], "question": "If f(2x + 1) = 4x + 5, then f(x) = ?", "options": ["2x + 3", "2x + 5", "4x + 3", "x + 3"], "correct_answer": "2x + 3", "explanation": "Let t = 2x+1, so x = (t-1)/2 and f(t) = 4(t-1)/2 + 5 = 2t + 3."}
+    ]
+  }
+}

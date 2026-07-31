@@ -1,0 +1,48 @@
+{
+  "slug": "guesstimates",
+  "title": "Guesstimates",
+  "category": "Problem Solving",
+  "order": 4,
+  "question_category": "Guesstimate",
+  "icon": "🔢",
+  "summary": "Estimating a number nobody knows, out loud, without a calculator. The structure interviewers score, worked examples, and the benchmarks to memorise.",
+  "source": "Written for this portal, worked against the real guesstimates recorded in the placement tracker",
+  "introduction": "A guesstimate asks you to estimate a quantity - laptops sold in India in a year, coffee cups sold in Bangalore in a day - with no data. Nobody knows the answer, including the interviewer. You are scored on structure, stated assumptions and arithmetic discipline, not on the final number. A well-reasoned answer that lands 30% off beats a lucky guess with no working.",
+  "sections": [
+    {
+      "heading": "The method",
+      "body": "1. Clarify the question. What exactly is being counted, over what period, in what geography? 'Laptops sold in India' - new only, or including refurbished? Consumer and enterprise both?\n\n2. Choose an approach and say which you are using:\n   • Top-down: start from population and filter down. Best for consumer products.\n   • Bottom-up: start from one unit of supply and scale up. Best when you can anchor on a shop, a machine or a store.\n   • Demand-side vs supply-side: sometimes both, then sanity-check one against the other.\n\n3. Break the problem into a tree. Write it out. Each branch should be something you can estimate or reason about.\n\n4. State every assumption aloud as you make it. This is the part being marked.\n\n5. Do the arithmetic in round numbers. Use 1.4 billion, not 1,428,627,663.\n\n6. Sanity-check the answer, then state it as a range. If it implies every household buys nine laptops a year, say so and revisit.\n\n7. Offer what would change your answer most - it shows you know which assumption is load-bearing."
+    },
+    {
+      "heading": "Worked example: laptops sold in India per year",
+      "body": "This was asked at Preferred Square. Top-down:\n\n• Population: 1.4 billion.\n• Households: average size ~4.5, so ~310 million households. Round to 300 million.\n• Laptop-owning households: laptops skew urban and middle-income. Say 35% of households can plausibly own one - about 105 million households.\n• Laptops per owning household: 1.3 average - some have two. So ~135 million laptops in use.\n• Replacement cycle: about 5 years. Annual replacement demand = 135/5 = 27 million.\n• New adopters: the base grows maybe 5% a year, adding ~5 million.\n• Enterprise and education: add roughly 20% on top of consumer - about 6 million.\n\nTotal ≈ 27 + 5 + 6 = 38 million, call it 35-40 million a year.\n\nSanity check: India's population is ~17% of the world's, and global laptop sales run around 200 million a year. 38 million is ~19% of that - too high given lower penetration in India. So revise down: perhaps 20-25 million is more defensible. Saying this out loud is worth more than the original number."
+    },
+    {
+      "heading": "Worked example: coffee cups sold in Bangalore in a day",
+      "body": "This was asked at C5i. Bottom-up is cleaner here:\n\n• Bangalore population: ~13 million.\n• Coffee drinkers: coffee is culturally strong in the region - say 60% drink it, so ~8 million.\n• Cups per drinker per day: average 1.5 - many have two. So ~12 million cups.\n• But most are made at home. Assume 25% are bought outside: ~3 million cups sold per day.\n\nCross-check from the supply side: Bangalore might have ~15,000 outlets selling coffee (cafes, darshinis, kiosks, offices). At an average 200 cups a day, that is 3 million. The two approaches agree, which is the strongest thing you can say in a guesstimate.\n\nAnswer: roughly 3 million cups a day."
+    },
+    {
+      "heading": "Benchmarks worth memorising",
+      "body": "These anchor most India guesstimates:\n\n• Population: 1.4 billion. Urban ~35%, rural ~65%.\n• Households: ~300 million, average size 4-5.\n• Age split: roughly 25% under 15, 65% working age, 10% over 60.\n• Smartphone users: ~750 million. Internet users: ~900 million.\n• Metro populations: Delhi NCR ~32m, Mumbai ~21m, Bangalore ~13m, Hyderabad ~10m, Chennai ~11m, Kolkata ~15m.\n• Tier-1 cities: ~8. Tier-2: ~100.\n• A working year: ~250 days. A retail year: 350 days.\n\nRound aggressively. Precision you did not earn is worse than a clean approximation."
+    },
+    {
+      "heading": "How to handle cross-questions",
+      "body": "Interviewers will push on your assumptions - this is expected, not a sign you are wrong. At Alvarez & Marsal a candidate was cross-questioned on an EV guesstimate; at Delhivery, on fleet costs for about eight minutes.\n\nWhen challenged: do not defend a weak assumption out of pride. Say what you assumed and why, accept a better figure if offered, and recompute. Recomputing cleanly under pressure is the actual test.\n\nIf you realise mid-way that your structure is wrong, say so and restart the branch. That reads as rigour, not failure."
+    }
+  ],
+  "checklist": [
+    "Can state the difference between a top-down and bottom-up approach",
+    "Memorised the India population and household benchmarks",
+    "Practised writing the estimation tree on paper before speaking",
+    "Comfortable doing 3-digit arithmetic aloud without a calculator",
+    "Always finish with a sanity check and a range"
+  ],
+  "common_mistakes": [
+    "Jumping straight to arithmetic without laying out a structure",
+    "Not stating assumptions, so the interviewer cannot follow the logic",
+    "Using precise-looking numbers that imply false accuracy",
+    "Never sanity-checking a final answer that is obviously implausible",
+    "Defending a bad assumption instead of revising it when challenged",
+    "Going silent while thinking - narrate, or the interviewer sees nothing"
+  ]
+}

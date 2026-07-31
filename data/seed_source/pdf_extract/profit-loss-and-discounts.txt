@@ -1,0 +1,187 @@
+PROFIT, LOSS AND DISCOUNTS
+CONCEPTS
+Cost Price (CP) is the price at which article is bought. 
+Selling Price (SP) is the price at which article is sold.
+Marked Price (MP) or List Price is the price marked on
+the article.   For example, a vendor buys 1kg of
+mangoes for ₹50. He labeled the price as 80. But sold
+₹
+for  70.  
+₹
+Here CP = ₹50,   MP = 80,
+₹
+   SP = ₹70.
+The expenses incurred on transportation, maintenance,
+packaging, advertisement etc. are considered as
+overhead. These overheads and the profit when added to
+the cost price determine the selling price.
+Profit or Gain: Profit is made when the selling price is
+greater than the cost price. 
+Profit = SP – CP ; 
+Profit % =
+Profit
+Cost Price
+×100
+Considering the same example given above, 
+Profit = 70–50 = 20. 
+₹
+Profit % = 20
+50
+×100=40% 
+Loss: Loss is made when the cost price is greater than
+the selling price.
+Loss = CP – SP ;
+ Loss % =
+Loss
+Cost Price
+×100
+• Profit or Loss is calculated on cost price only.
+Discount is always calculated on the marked price.
+Discount = MP–SP;        Discount%= Discount
+MP
+×100
+Consider the same example given above, 
+Discount = 80–70 =10;    Discount% = 10
+80
+×100=12.5%
+• To calculate Gain, Loss, Selling Price and Cost Price
+directly use the formula, 
+SP=(100Gain or Loss)×CP
+100
+Use + sign for profit and – sign for loss.
+Example: Cost Price of an article is 70. At what price it
+₹
+should be sold in order to gain 20%?
+SP=(100+ 20)×70
+100
+=120×70
+100
+=12×7=84
+• If a man purchased m articles for ₹p and sold n
+articles for  
+₹ q. Then how much profit or loss does he
+make?
+Profit or Loss % = mq – np
+np
+×100
+Example: A merchant purchased 7 watches for 500
+₹
+and sold 5 watches for 400. What is loss/gain percent? 
+₹
+Explanation:
+7×400 – 5×500
+5×500
+×100= 2800−2500
+2500
+×100= 300
+25
+=12 
+• By selling an article for  ₹ P, a merchant would gain or
+loss x%. The price at which he sell it to gain or loss y%
+is SP=P(
+100y
+100x). (+ sign for gain; - sign for loss)
+Example: By selling a furniture for 180 a merchant
+₹
+will loss 10%.  At what price must he sell to gain 20%.
+Explanation: SP=180×(
+100+ 20
+100−10) = 240.
+• When a man buys two things on equal price each and
+in those things one is sold at a profit of x% and another
+is sold at a loss of x%, then there will be no loss or no
+gain percent.
+Example: A merchant purchased a watch and a bag for
+100 each. But he sold the watch at a profit of 20% and
+₹
+bag at a loss of 20%. What is his loss/gain percentage?
+Explanation:        CP
+         SP
+            Watch - 
+100  + 20% Profit = 120
+₹
+₹
+             Bag    -
+100 
+₹
+ – 20% Loss   =  80  
+₹
+ 200 
+₹
+        200
+₹
+Cost price = Selling Price. Hence, no gain or no loss.
+• By selling two articles at the same price a merchant
+incurs x% loss on the first article and x% gain on the
+second article. In such a case there is always a loss. 
+Loss =
+2×SP
+(
+100
+x )
+2
+−1
+Example: By selling a watch and a bag at 100 each a
+₹
+merchant incurred a loss of 20% on watch and gain of
+20% on bag. What is his loss or gain percentage?
+Explanation:
+   SP
+  CP
+Watch
+ 100 (20% Loss on CP)   =
+₹
+ 125
+₹
+Bag
+ 100 
+₹
+ (20% Profit on CP) =
+ 83.33 
+₹
+ 200 
+₹
+ 208.33
+₹
+Here, CP > SP.  Hence, Loss =
+8.33
+208.33
+×100=3.9%
+(or) Using Formula: Loss =
+2×100
+(
+100
+20 )
+2
+−1
+= 200
+24 = 8.33.
+Then Cost Price = 200 + 8.33 = 208.33
+And Loss Percentage =
+8.33
+208.33
+×100=3.9%
+Login to your online account to ask doubts.
+1.47
+m
+     ₹ p
+n                ₹ q
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

@@ -1,0 +1,82 @@
+{
+  "study_material": {
+    "title": "Algebra - Complete Study Notes",
+    "introduction": "Placement algebra covers linear and quadratic equations, algebraic identities, polynomials and simple inequalities. The identities (a+b)^2, a^2-b^2, a^3+b^3 and the sum/product of quadratic roots do most of the heavy lifting.",
+    "learning_objectives": [
+      "Solve linear equations and 2-variable systems",
+      "Factor and solve quadratic equations",
+      "Use sum and product of roots without solving",
+      "Apply standard identities including x + 1/x forms",
+      "Handle simple inequalities and the remainder theorem"
+    ],
+    "concepts": [
+      {"heading": "1. Linear Equations", "body": "Isolate the variable step by step. Two-variable systems: eliminate one variable by adding/subtracting scaled equations, or substitute. x + y = 10 and x - y = 4 give x = 7, y = 3 by adding then halving."},
+      {"heading": "2. Quadratic Equations", "body": "ax^2 + bx + c = 0 solves by factoring, completing the square, or x = (-b +- sqrt(b^2-4ac))/2a. Discriminant D = b^2 - 4ac: D > 0 two real roots, D = 0 equal roots, D < 0 no real roots."},
+      {"heading": "3. Sum and Product of Roots", "body": "For ax^2 + bx + c = 0: sum of roots = -b/a, product = c/a. Many questions need only these - never solve if sum/product suffice. x^2 - 7x + 10 = 0 has sum 7, product 10 (roots 2 and 5)."},
+      {"heading": "4. Identities", "body": "(a+b)^2 = a^2 + 2ab + b^2; a^2 - b^2 = (a-b)(a+b); a^3 + b^3 = (a+b)(a^2 - ab + b^2) = (a+b)^3 - 3ab(a+b). The x + 1/x family: if x + 1/x = k, then x^2 + 1/x^2 = k^2 - 2 and x^3 + 1/x^3 = k^3 - 3k."},
+      {"heading": "5. Remainder Theorem and Inequalities", "body": "Dividing polynomial f(x) by (x - a) leaves remainder f(a). For inequalities, flip the sign when multiplying or dividing by a negative number; otherwise solve like equations."}
+    ],
+    "formulas": [
+      "Roots: x = (-b +- sqrt(b^2 - 4ac))/2a",
+      "Sum = -b/a, Product = c/a",
+      "x^2 + 1/x^2 = (x + 1/x)^2 - 2",
+      "x^3 + 1/x^3 = k^3 - 3k where k = x + 1/x",
+      "Remainder of f(x)/(x-a) = f(a)"
+    ],
+    "shortcut_methods": [
+      "Check options by substitution when equations look messy",
+      "Use sum/product of roots to skip the quadratic formula",
+      "a^2 - b^2 factors instantly - look for difference of squares"
+    ],
+    "common_mistakes": [
+      "Sign errors when moving terms across the equals sign",
+      "Forgetting to flip inequality signs with negative multipliers",
+      "Using c/a for sum of roots instead of -b/a",
+      "Expanding (a+b)^2 as a^2 + b^2"
+    ],
+    "summary": "Identities plus sum/product of roots solve most questions without grinding; keep signs disciplined and the chapter is safe marks.",
+    "quick_revision_notes": [
+      "Sum of roots -b/a, product c/a",
+      "x+1/x = k gives x^2+1/x^2 = k^2 - 2",
+      "D = b^2 - 4ac decides root nature",
+      "Remainder = f(a)"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Solve: 2x + 5 = 15.", "options": ["5", "10", "4", "7.5"], "correct_answer": "5", "step_by_step": "2x = 10, x = 5.", "shortcut": "Move 5, halve."},
+    {"difficulty": "easy", "question": "The roots of x^2 - 5x + 6 = 0 are:", "options": ["2 and 3", "1 and 6", "-2 and -3", "2 and -3"], "correct_answer": "2 and 3", "step_by_step": "Factor: (x-2)(x-3) = 0.", "shortcut": "Two numbers with sum 5, product 6."},
+    {"difficulty": "medium", "question": "If x + 1/x = 3, find x^2 + 1/x^2.", "options": ["7", "9", "11", "6"], "correct_answer": "7", "step_by_step": "Square: x^2 + 2 + 1/x^2 = 9, so x^2 + 1/x^2 = 7.", "shortcut": "k^2 - 2."},
+    {"difficulty": "medium", "question": "If a + b = 7 and ab = 12, find a^2 + b^2.", "options": ["25", "37", "49", "24"], "correct_answer": "25", "step_by_step": "a^2 + b^2 = (a+b)^2 - 2ab = 49 - 24 = 25.", "shortcut": "Identity, not solving for a and b."},
+    {"difficulty": "hard", "question": "If a + b = 5 and ab = 6, find a^3 + b^3.", "options": ["35", "91", "125", "65"], "correct_answer": "35", "step_by_step": "a^3 + b^3 = (a+b)^3 - 3ab(a+b) = 125 - 90 = 35.", "shortcut": "Cube identity with substitution."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["algebra", "linear"], "question": "Solve: 3x - 7 = 2x + 5.", "options": ["12", "10", "6", "-12"], "correct_answer": "12", "explanation": "x = 12 after moving terms."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["algebra", "factoring"], "question": "x^2 - 9 factors as:", "options": ["(x-3)(x+3)", "(x-3)^2", "(x+3)^2", "(x-9)(x+1)"], "correct_answer": "(x-3)(x+3)", "explanation": "Difference of squares."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["algebra", "system"], "question": "If x + y = 10 and x - y = 4, then x equals:", "options": ["7", "6", "3", "8"], "correct_answer": "7", "explanation": "Add: 2x = 14."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["algebra", "roots"], "question": "For x^2 - 7x + 10 = 0, the sum and product of roots are:", "options": ["7 and 10", "-7 and 10", "7 and -10", "10 and 7"], "correct_answer": "7 and 10", "explanation": "Sum = -(-7)/1 = 7; product = 10."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["algebra", "inequality"], "question": "Solve: 2x - 3 < 7.", "options": ["x < 5", "x > 5", "x < 2", "x > 2"], "correct_answer": "x < 5", "explanation": "2x < 10."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["algebra", "double-root"], "question": "The equation x^2 - 4x + 4 = 0 has:", "options": ["equal roots, both 2", "roots 2 and -2", "roots 1 and 4", "no real roots"], "correct_answer": "equal roots, both 2", "explanation": "(x-2)^2 = 0; D = 0."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["algebra", "remainder"], "question": "The remainder when f(x) = x^3 - 2x^2 + x - 1 is divided by (x - 1) is:", "options": ["-1", "0", "1", "2"], "correct_answer": "-1", "explanation": "f(1) = 1 - 2 + 1 - 1 = -1."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["algebra", "x-plus-1x"], "question": "If x + 1/x = 4, find x^3 + 1/x^3.", "options": ["52", "64", "76", "47"], "correct_answer": "52", "explanation": "k^3 - 3k = 64 - 12 = 52."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["algebra", "equal-roots"], "question": "For what values of k does x^2 + kx + 9 = 0 have equal roots?", "options": ["k = 6 or -6", "k = 3 or -3", "k = 9 or -9", "k = 6 only"], "correct_answer": "k = 6 or -6", "explanation": "D = k^2 - 36 = 0."},
+    {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["algebra", "expansion"], "question": "(x + 2)(x - 5) expands to:", "options": ["x^2 - 3x - 10", "x^2 + 3x - 10", "x^2 - 3x + 10", "x^2 - 7x - 10"], "correct_answer": "x^2 - 3x - 10", "explanation": "Middle term 2 - 5 = -3; product -10."}
+  ],
+  "topic_test": {
+    "title": "Algebra - Topic Test",
+    "duration_minutes": 20,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 20 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Prefer identities and sum/product of roots over brute-force solving."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["algebra"], "question": "Solve: 5x + 3 = 28.", "options": ["5", "6", "4", "7"], "correct_answer": "5", "explanation": "5x = 25."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["algebra"], "question": "(a + b)^2 equals:", "options": ["a^2 + 2ab + b^2", "a^2 + b^2", "a^2 - 2ab + b^2", "a^2 + ab + b^2"], "correct_answer": "a^2 + 2ab + b^2", "explanation": "Standard identity."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["algebra"], "question": "The roots of x^2 - x - 6 = 0 are:", "options": ["3 and -2", "-3 and 2", "6 and -1", "3 and 2"], "correct_answer": "3 and -2", "explanation": "(x-3)(x+2) = 0."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["algebra"], "question": "If x - 1/x = 2, then x^2 + 1/x^2 equals:", "options": ["6", "4", "8", "2"], "correct_answer": "6", "explanation": "Square: x^2 - 2 + 1/x^2 = 4, so x^2 + 1/x^2 = 6."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["algebra"], "question": "The discriminant of 2x^2 - 4x + 5 = 0 is:", "options": ["-24", "24", "56", "-16"], "correct_answer": "-24", "explanation": "16 - 40 = -24: no real roots."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["algebra"], "question": "If 2x + 3y = 12 and x = 3, then y equals:", "options": ["2", "3", "1", "4"], "correct_answer": "2", "explanation": "6 + 3y = 12."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["algebra"], "question": "97 x 103 computed via identity equals:", "options": ["9991", "9989", "10009", "9999"], "correct_answer": "9991", "explanation": "(100-3)(100+3) = 10000 - 9 = 9991."},
+      {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["algebra"], "question": "One root of x^2 - kx + 8 = 0 is 2. Then k and the other root are:", "options": ["k = 6, root 4", "k = 4, root 6", "k = 8, root 4", "k = 6, root 8"], "correct_answer": "k = 6, root 4", "explanation": "Product = 8 so other root = 4; sum = 6 = k."},
+      {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["algebra"], "question": "If a - b = 3 and ab = 10, then a^2 + b^2 equals:", "options": ["29", "19", "49", "31"], "correct_answer": "29", "explanation": "(a-b)^2 + 2ab = 9 + 20 = 29."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["algebra"], "question": "Solve the inequality: -3x + 6 >= 0.", "options": ["x <= 2", "x >= 2", "x <= -2", "x >= -2"], "correct_answer": "x <= 2", "explanation": "-3x >= -6; dividing by -3 flips the sign: x <= 2."}
+    ]
+  }
+}

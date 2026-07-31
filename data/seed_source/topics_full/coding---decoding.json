@@ -1,0 +1,72 @@
+{
+  "study_material": {
+    "title": "Coding - Decoding - Complete Study Notes",
+    "introduction": "Coding-decoding questions give a word and its code, and ask you to apply the same rule elsewhere. The rules are almost always letter shifts, reversals, positional values or substitution - find the rule, apply it mechanically.",
+    "learning_objectives": [
+      "Spot forward/backward letter shifts quickly",
+      "Use alphabetical position numbers (A=1 ... Z=26)",
+      "Handle reversal and opposite-letter (A-Z pairing) codes",
+      "Decode number and symbol substitution ciphers"
+    ],
+    "concepts": [
+      {"heading": "1. Letter Shifts", "body": "Each letter moves a fixed number of steps: CAT to DBU is +1, TIGER to QFDBO is -3. Write the alphabet positions above the letters and compare. Check two or three letters before trusting the rule."},
+      {"heading": "2. Position Values", "body": "A=1, B=2 ... Z=26. Codes may sum positions (CAB = 3+1+2 = 6), multiply, or use reverse positions (A=26 ... Z=1, i.e. reverse of letter x = 27 - x). Memorise EJOTY: E=5, J=10, O=15, T=20, Y=25 as anchors."},
+      {"heading": "3. Reversal and Opposites", "body": "Reversal codes write the word backwards. Opposite-letter codes map A to Z, B to Y (positions summing to 27). Mixed rules exist: reverse then shift. Test the simplest rule first."},
+      {"heading": "4. Substitution Codes", "body": "Words or symbols stand for other words ('sky is called sea, sea is called water...'). Follow the chain literally - the answer is what the coded language calls the real-world item, not the real name."}
+    ],
+    "formulas": [
+      "Shift k: letter -> letter + k (wrap around after Z)",
+      "Reverse letter of x = 27 - x position",
+      "EJOTY anchors: 5, 10, 15, 20, 25"
+    ],
+    "shortcut_methods": [
+      "Verify the rule on at least two letters",
+      "For long words, decode only the letters needed to pick an option",
+      "Write positions under letters - errors vanish when you compute on paper"
+    ],
+    "common_mistakes": [
+      "Assuming a +k shift after checking only one letter",
+      "Forgetting the wrap-around from Z to A",
+      "Answering the real name instead of the coded name in substitution puzzles"
+    ],
+    "summary": "Compare letter positions, deduce the rule, verify twice, apply once - and in substitution chains answer within the coded language.",
+    "quick_revision_notes": [
+      "A=1 ... Z=26; opposite = 27 - x",
+      "EJOTY = 5,10,15,20,25",
+      "Check the rule on 2+ letters",
+      "Substitution: answer in the coded vocabulary"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "If CAT is coded as DBU, how is DOG coded?", "options": ["EPH", "EQH", "DPH", "FQI"], "correct_answer": "EPH", "step_by_step": "Each letter shifts +1: D->E, O->P, G->H.", "shortcut": "Same shift for every letter."},
+    {"difficulty": "medium", "question": "If TIGER is written as QFDBO, how is LION written?", "options": ["IFLK", "KHNM", "ILFK", "JGML"], "correct_answer": "IFLK", "step_by_step": "The rule is -3: L->I, I->F, O->L, N->K.", "shortcut": "T->Q reveals -3 immediately."},
+    {"difficulty": "medium", "question": "If A=1, B=2 ... Z=26, what is the code value of the word BEAD (sum of positions)?", "options": ["12", "11", "13", "14"], "correct_answer": "12", "step_by_step": "2 + 5 + 1 + 4 = 12.", "shortcut": "Add small position numbers directly."},
+    {"difficulty": "hard", "question": "In a code, 'sky is called sea, sea is called water, water is called air'. Where do fish live (answer in the code)?", "options": ["water", "sea", "air", "sky"], "correct_answer": "water", "step_by_step": "Fish live in sea (real). The code calls sea 'water'.", "shortcut": "Trace exactly one link of the chain."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["coding", "shift"], "question": "If PEN is coded as QFO, how is INK coded?", "options": ["JOL", "JOK", "HOL", "JNL"], "correct_answer": "JOL", "explanation": "+1 shift: I->J, N->O, K->L."},
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["coding", "reverse"], "question": "If a code simply reverses each word, MOON becomes:", "options": ["NOOM", "MOON", "NMOO", "OONM"], "correct_answer": "NOOM", "explanation": "Write the letters backwards."},
+    {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["coding", "position"], "question": "With A=1 ... Z=26, the sum-code of the word CAB is:", "options": ["6", "5", "7", "8"], "correct_answer": "6", "explanation": "3+1+2 = 6."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["coding", "shift-2"], "question": "If HOUSE is coded as JQWUG, the shift used is:", "options": ["+2", "+1", "-2", "+3"], "correct_answer": "+2", "explanation": "H->J, O->Q, U->W, S->U, E->G: each +2."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["coding", "opposite"], "question": "In the opposite-letter code (A=Z, B=Y, ...), CAT becomes:", "options": ["XZG", "XAG", "ZXG", "YZG"], "correct_answer": "XZG", "explanation": "C->X, A->Z, T->G (positions summing to 27)."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["coding", "number"], "question": "In a number code, A=2, B=4, C=6 (double the alphabetical position). The code of E is:", "options": ["10", "5", "8", "12"], "correct_answer": "10", "explanation": "E is the 5th letter, doubled = 10."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["coding", "mixed"], "question": "If ROAD is coded as URDG, then SWAN is coded as:", "options": ["VZDQ", "VZCQ", "UZDQ", "VYDQ"], "correct_answer": "VZDQ", "explanation": "+3 shift: S->V, W->Z, A->D, N->Q."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["coding", "substitution"], "question": "If 'pen is called book, book is called eraser, eraser is called pencil', what do you write with (answer in the code)?", "options": ["book", "pen", "eraser", "pencil"], "correct_answer": "book", "explanation": "You write with a pen (real), which the code calls 'book'."}
+  ],
+  "topic_test": {
+    "title": "Coding - Decoding - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Verify the rule on at least two letters before applying it."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["coding"], "question": "If SUN is coded as TVO, MOON is coded as:", "options": ["NPPO", "NPQO", "NOPO", "OPPN"], "correct_answer": "NPPO", "explanation": "+1: M->N, O->P, O->P, N->O."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["coding"], "question": "With A=1 ... Z=26, the sum-code of DEAF is:", "options": ["16", "15", "17", "14"], "correct_answer": "16", "explanation": "4+5+1+6 = 16."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["coding"], "question": "A code reverses words. The code of STAR is:", "options": ["RATS", "TARS", "SRAT", "ARST"], "correct_answer": "RATS", "explanation": "Simple reversal."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["coding"], "question": "If FLOWER is coded as EKNVDQ, the rule is:", "options": ["-1 shift", "+1 shift", "reversal", "-2 shift"], "correct_answer": "-1 shift", "explanation": "F->E, L->K, O->N, W->V, E->D, R->Q."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["coding"], "question": "In the opposite-letter code (positions summing to 27), the code of BED is:", "options": ["YVW", "YWV", "XVW", "YUW"], "correct_answer": "YVW", "explanation": "B->Y, E->V, D->W."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["coding"], "question": "If KING is coded as 11-9-14-7 (positions), then QUEEN is coded as:", "options": ["17-21-5-5-14", "17-20-5-5-14", "16-21-5-5-14", "17-21-4-5-14"], "correct_answer": "17-21-5-5-14", "explanation": "Q=17, U=21, E=5, E=5, N=14."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["coding"], "question": "If GARDEN is coded as ICTFGP, then FOREST is coded as:", "options": ["HQTGUV", "HQTGUW", "GPTGUV", "HQUGUV"], "correct_answer": "HQTGUV", "explanation": "+2 shift throughout: F->H, O->Q, R->T, E->G, S->U, T->V."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["coding"], "question": "'Red is called blue, blue is called green, green is called yellow.' What is the colour of grass (answer in the code)?", "options": ["yellow", "green", "blue", "red"], "correct_answer": "yellow", "explanation": "Grass is green (real); the code calls green 'yellow'."}
+    ]
+  }
+}

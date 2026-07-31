@@ -1,0 +1,43 @@
+{
+  "slug": "technical-interview",
+  "title": "Technical Round",
+  "category": "Interview Rounds",
+  "order": 6,
+  "question_category": "Technical",
+  "icon": "⚙️",
+  "summary": "Fundamentals of your specialisation, tested through your own projects. What gets asked of management candidates and how to prepare for it.",
+  "source": "Guidance from Campus Recruitment Book p85. The book's own technical question set is C programming and computer science, which does not fit this cohort - the linked questions below are the real ones asked of candidates in this portal.",
+  "introduction": "Most companies run a technical round to filter for people who understand the fundamentals of their stream. Students often assume it is the hardest round; usually it is not. It focuses on basics, and on whatever you claimed on your resume. For management candidates that means finance, analytics tools, and the domain of the role - not programming puzzles.",
+  "sections": [
+    {
+      "heading": "What is actually being tested",
+      "body": "The round is designed to check that you understand the fundamentals of your specialisation and can apply them. It is rarely about obscure knowledge.\n\nIn practice, for candidates in this portal, questions cluster into four groups:\n\n• Finance fundamentals - the three financial statements and how they link, valuation methods, DCF, IRR, MOIC, working capital, bonds, ratio analysis.\n• Analytics and tools - SQL, Excel and advanced Excel, Power BI vs Tableau, dashboards, regression, forecasting.\n• Process and domain - Lean, Six Sigma, 5S, P2P, O2C, R2R, risk assessment, IT controls.\n• Your own projects - the tools you used, why you chose them, and what you concluded.\n\nBe clear-headed about your basics. Depth on a few things you genuinely know beats shallow familiarity with many."
+    },
+    {
+      "heading": "Preparing your specialisation",
+      "body": "Work backwards from your resume and the JD. If your CV says 'financial modelling', expect to be asked which model, what drove it, and how you tested the assumptions.\n\nFinance candidates: be fluent in how the three statements connect, what changes cash versus profit, and at least one valuation method end to end. Candidates here were asked to explain financial-statement impact, distribution waterfalls, clawback clauses and how to test whether a zero-coupon bond is in the money.\n\nAnalytics candidates: be able to write a join and a group-by in SQL, explain a lookup and a pivot in Excel, and describe when you would use regression - and what its assumptions are. 'Explain linear and logistic regression' was asked directly.\n\nOperations candidates: know Lean, Six Sigma and the difference between them; know 5S; be able to walk a process end to end.\n\nUse the JD section of this portal - each role's page lists the skills detected in the actual job description, which is a reliable guide to what the technical round will cover."
+    },
+    {
+      "heading": "Answering technical questions well",
+      "body": "Define the term first, then apply it. 'IRR is the discount rate at which NPV is zero - in the deal I worked on, we used it to compare two investments with different horizons.' Definition alone is thin; application alone sounds unanchored.\n\nIf you do not know something, say so quickly and offer what you do know that is adjacent. Interviewers respond far better to that than to bluffing, and the book's guidance is blunt about this: never lie about your skills, show instead that you are eager to learn where your knowledge is limited.\n\nExpect follow-ups to go one level deeper than your answer. Prepare for the second and third question, not just the first.\n\nWhen given a numerical technical question, narrate your working. Same rule as a case - silent arithmetic earns nothing."
+    },
+    {
+      "heading": "A note on this portal's source material",
+      "body": "The campus recruitment handbook this portal draws on includes a technical question bank, but it is Computer Science and C programming - loops, pointers, type casting, output-prediction puzzles. That is aimed at engineering campuses and is not relevant to a PGDM cohort heading into consulting, analytics, finance and sales roles.\n\nSo it has been deliberately left out. The questions linked at the bottom of this guide are the real technical questions candidates in your batch were asked, taken from the placement tracker - SQL, Excel, financial statements, Power BI, regression, Lean and Six Sigma. Those are the ones worth preparing."
+    }
+  ],
+  "checklist": [
+    "Can define and apply every technical term on my resume",
+    "Fluent in the fundamentals of my specialisation, not just familiar",
+    "Reviewed the skills listed on the JD for the role I am interviewing for",
+    "Prepared for two levels of follow-up on my main project",
+    "Have a clean way of saying 'I don't know, but here is what I do know'"
+  ],
+  "common_mistakes": [
+    "Bluffing on a term you cannot define",
+    "Giving a textbook definition with no application",
+    "Listing a tool on your CV you have only used once in a course",
+    "Preparing only the first-level answer and collapsing on the follow-up",
+    "Doing numerical work silently"
+  ]
+}

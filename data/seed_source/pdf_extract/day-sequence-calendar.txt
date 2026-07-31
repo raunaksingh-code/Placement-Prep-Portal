@@ -1,0 +1,126 @@
+DAY SEQUENCE / CALENDAR
+CONCEPTS
+In day sequence, questions will be asked on calendars
+to find a particular day of the week (or) a particular
+day of the given date. In order to solve these problems
+easily, you should have knowledge on calendar 
+i.e. leap year, odd days etc.
+• Leap year: If the last two digits of a given year is
+perfectly divisible by 4 then that year is a leap year.
+Example: 2016 is a leap year because last 2 digits
+ i.e. 16 is perfectly divisible by 4.
+But a century year is not a leap year i.e. 100, 200, 300,.... 
+But every 4th century year is a leap year. 
+i.e. 400, 800, 1200, 1600, 2000 etc.
+A leap year has 366 days.
+Examples:
+(i) Each of the years 1764, 1028, 1948, 1676, 2004 etc is a
+leap year.
+(ii) Each of the years 400, 800, 1200, 1600, 2000, 2400 etc
+is a leap year.
+(iii) The years 2001, 2002, 2003, 2005, 1900, 2100 are not
+leap years.
+• Ordinary year: The year that is not a leap year is
+called an ordinary year. An ordinary year has 365 days.
+In order to solve the questions on calendars, we use a
+concept called 'odd days'.
+• Odd day: The number of days more than a complete
+week are called odd days in a given period.
+Lets discuss how to count the odd days in a given
+period.
+• Counting of odd days:
+To find the number of odd days in a given period, we
+divide the total number of days with 7. The remainder
+obtained is the total number of odd days.
+Examples:
+1) How many odd days are there in 10 days.
+Explanation: 
+7) 10 (1
+       
+  
+      7 
+               
+     3 = Remainder → 3 odd days.
+2) How many odd days are there in 100 days.
+Explanation:      7) 100 (14
+                 
+       98 
+                   
+        2  → odd days
+3) How many odd days are there in an ordinary year?
+Explanation: An ordinary year has 365 days. So,
+              
+7) 365 (52
+                 
+    364 
+                   
+      1 → odd day
+• Hence, in an ordinary year there are 52 perfect weeks
+and 1 odd day. [365 days = 52 weeks + 1 day]
+4) How many odd days are there in a leap year?
+Explanation: As we know, a leap year has 366 days. So,
+         
+7) 366 (52
+            
+     364
+               
+       2  → odd days
+• Hence, in a leap year, there are 52 perfect week and 
+2 odd days. [366 days = 52 weeks + 2 days]
+Note: Total number of odd days can be from 0 to 6 only.
+• Counting odd days for century years:
+1) 100 years = 76 ordinary years + 24 leap years.
+        = (76×1 + 24×2) odd days = 124 odd days
+(Here 1 and 2 indicates number of odd days in an
+ordinary year and a leap year respectively)
+124 odd days = 17 weeks + 5 days = 5 odd days.
+  
+∴Number of odd days in 100 years = 5.
+2) Number of odd days in 200 years = (5×2) = 3.
+3) Number of odd days in 300 years = (5×3) = 1.
+4) Number of odd days in 400 years = (5×4+1) = 0.
+Similarly, each set of 800, 1200, 1600, 2000 year etc has 0
+(zero) odd days as they are multiples of 400.
+• Some Important points to remember:
+1) In every normal / ordinary year the first day (1st
+January) and the last day (31st December) are always
+same. For example, if January 1st is Monday then
+December 31st is also Monday.
+2) In every leap year if the first day (January 1st) is
+Sunday, then last day (December 31st) will be it's next
+day i.e. Monday.
+3) In every year, the calendar for the months April and
+July are always same.
+4) For every 400 years, the day repeats.
+For example, if 14-April-1604 is Saturday, then 14-April-
+2004 will also be Saturday.
+5) The last day of a century cannot be either Tuesday or
+Thursday or Saturday.
+Questions on day sequence / calendar are mainly 5
+types. 
+1) Problems based on Total Day–Particular Day.
+2) Problems based on Leap Year.
+3) Problems based on Particular Date–Day.
+4) Problems based on Same Calendar Year.
+5) Problems based on Same Day–Date of the Month.
+Login to your online account to ask doubts.
+2.12
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

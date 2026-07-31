@@ -1,0 +1,81 @@
+{
+  "study_material": {
+    "title": "Ratio and Proportion - Complete Study Notes",
+    "introduction": "A ratio compares two quantities of the same kind (a : b); a proportion states that two ratios are equal (a : b :: c : d). Ratios underpin partnership, mixture, age and income-expenditure problems, so fluency here pays off across the whole quant section.",
+    "learning_objectives": [
+      "Combine two linked ratios into a single chain (a:b, b:c to a:b:c)",
+      "Divide a quantity in a given ratio",
+      "Use product of means = product of extremes in proportions",
+      "Find third, fourth and mean proportionals",
+      "Solve age, income-savings and coin problems with ratio variables"
+    ],
+    "concepts": [
+      {"heading": "1. Ratio Basics", "body": "In a : b, a is the antecedent and b the consequent. A ratio is a pure number - no units. Multiplying or dividing both terms by the same non-zero number leaves it unchanged, which is why we can introduce a common multiplier x and write the actual values as ax and bx."},
+      {"heading": "2. Combining Ratios", "body": "Given a:b = 2:3 and b:c = 4:5, make the b terms equal: LCM(3,4) = 12, so a:b = 8:12 and b:c = 12:15, giving a:b:c = 8:12:15. Chain as many ratios as needed this way."},
+      {"heading": "3. Proportion", "body": "a : b :: c : d means a/b = c/d, and then ad = bc (product of extremes = product of means). Fourth proportional to a, b, c is the x with a:b = c:x. Third proportional to a, b is the x with a:b = b:x, i.e. x = b^2/a. Mean proportional between a and b is sqrt(ab)."},
+      {"heading": "4. Dividing in a Ratio", "body": "To divide T in the ratio p : q : r, the parts are T x p/(p+q+r), etc. If quantities are in ratio p:q and both are changed by the same addition, set up (px + k)/(qx + k) = new ratio and solve for x."},
+      {"heading": "5. Special Ratio Forms", "body": "Duplicate ratio of a:b is a^2:b^2; sub-duplicate is sqrt(a):sqrt(b); triplicate is a^3:b^3; inverse is 1/a : 1/b = b : a. If 2A = 3B = 4C, then A:B:C = (1/2):(1/3):(1/4) = 6:4:3 (take reciprocals of the coefficients)."}
+    ],
+    "formulas": [
+      "a:b :: c:d means ad = bc",
+      "Third proportional to a, b = b^2/a",
+      "Mean proportional between a and b = sqrt(ab)",
+      "Fourth proportional to a, b, c = bc/a",
+      "Part of T in ratio p:(p+q+r) = T x p/(p+q+r)"
+    ],
+    "shortcut_methods": [
+      "Introduce a multiplier x immediately: values ax, bx",
+      "kA = lB = mC gives A:B:C = (1/k):(1/l):(1/m)",
+      "To merge a:b and b:c, scale both to LCM of the b values"
+    ],
+    "common_mistakes": [
+      "Adding ratios term-wise (2:3 plus 1:2 is NOT 3:5)",
+      "Comparing ratios of quantities in different units",
+      "Forgetting that equal additions to both terms change the ratio"
+    ],
+    "summary": "Write actual values with a multiplier, merge chained ratios via the common term, and use cross-multiplication for proportions. Most problems then reduce to one linear equation.",
+    "quick_revision_notes": [
+      "ad = bc for a:b :: c:d",
+      "Mean proportional = sqrt(ab)",
+      "2A = 3B = 4C gives A:B:C = 6:4:3",
+      "Divide T in p:q:r by multiplying T by each share over the total"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "If a:b = 2:3 and b:c = 4:5, find a:b:c.", "options": ["8:12:15", "2:3:5", "8:12:20", "6:12:15"], "correct_answer": "8:12:15", "step_by_step": "Make b equal: a:b = 8:12, b:c = 12:15. So a:b:c = 8:12:15.", "shortcut": "Multiply first ratio by 4 and second by 3 (LCM of 3 and 4 is 12)."},
+    {"difficulty": "easy", "question": "Divide Rs. 600 among A, B, C in the ratio 2:3:5.", "options": ["120, 180, 300", "100, 200, 300", "150, 200, 250", "120, 200, 280"], "correct_answer": "120, 180, 300", "step_by_step": "Total parts = 10. A = 600 x 2/10 = 120, B = 180, C = 300.", "shortcut": "Each part is worth 600/10 = 60."},
+    {"difficulty": "easy", "question": "Find the mean proportional between 4 and 25.", "options": ["10", "14.5", "12", "20"], "correct_answer": "10", "step_by_step": "Mean proportional = sqrt(4 x 25) = sqrt(100) = 10.", "shortcut": "Square root of the product."},
+    {"difficulty": "medium", "question": "The incomes of A and B are in ratio 3:4 and their expenditures in ratio 2:3. If each saves Rs. 200, find A's income.", "options": ["Rs. 600", "Rs. 800", "Rs. 400", "Rs. 1000"], "correct_answer": "Rs. 600", "step_by_step": "Let incomes be 3x, 4x and expenditures 2y, 3y. Then 3x - 2y = 200 and 4x - 3y = 200. Solving: x = 200, so A's income = 600.", "shortcut": "Subtract the equations: x - y = 0, so y = x; then 3x - 2x = 200."},
+    {"difficulty": "hard", "question": "Two numbers are in ratio 4:5. If 8 is added to each, the ratio becomes 6:7. Find the numbers.", "options": ["16 and 20", "20 and 25", "12 and 15", "24 and 30"], "correct_answer": "16 and 20", "step_by_step": "(4x+8)/(5x+8) = 6/7 gives 28x + 56 = 30x + 48, so x = 4. Numbers are 16 and 20.", "shortcut": "Cross-multiply and collect terms."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["ratio", "basics"], "question": "The duplicate ratio of 2:3 is:", "options": ["4:9", "2:3", "8:27", "3:2"], "correct_answer": "4:9", "explanation": "Duplicate ratio of a:b is a^2:b^2 = 4:9."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["ratio", "division"], "question": "Divide Rs. 1200 between P and Q in the ratio 5:7.", "options": ["Rs. 500 and Rs. 700", "Rs. 600 and Rs. 600", "Rs. 450 and Rs. 750", "Rs. 550 and Rs. 650"], "correct_answer": "Rs. 500 and Rs. 700", "explanation": "12 parts; each part = 100. P = 500, Q = 700."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["ratio", "proportion"], "question": "Find the fourth proportional to 3, 6 and 10.", "options": ["20", "15", "18", "12"], "correct_answer": "20", "explanation": "3:6 = 10:x gives x = 6 x 10/3 = 20."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["ratio", "proportion"], "question": "Find the third proportional to 9 and 12.", "options": ["16", "15", "18", "24"], "correct_answer": "16", "explanation": "Third proportional = b^2/a = 144/9 = 16."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["ratio", "chained"], "question": "If a:b = 7:9 and b:c = 3:5, then a:b:c is:", "options": ["7:9:15", "7:9:5", "21:27:15", "7:3:5"], "correct_answer": "7:9:15", "explanation": "b:c = 3:5 = 9:15, so a:b:c = 7:9:15."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["ratio", "equal-products"], "question": "If 2A = 3B = 4C, then A:B:C is:", "options": ["6:4:3", "2:3:4", "4:3:2", "3:4:6"], "correct_answer": "6:4:3", "explanation": "A:B:C = 1/2 : 1/3 : 1/4 = 6:4:3 (multiply by 12)."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["ratio", "algebra"], "question": "If x:y = 3:4, find the value of (2x + y) : (x + 2y).", "options": ["10:11", "6:8", "5:6", "11:10"], "correct_answer": "10:11", "explanation": "Put x = 3, y = 4: (6+4):(3+8) = 10:11."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["ratio", "mixtures"], "question": "A 40-litre mixture has milk and water in ratio 3:1. How much water must be added to make the ratio 3:2?", "options": ["10 litres", "8 litres", "12 litres", "15 litres"], "correct_answer": "10 litres", "explanation": "Milk = 30, water = 10. For 3:2 with milk 30, water must be 20, so add 10 litres."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["ratio", "ages"], "question": "The present ages of two friends are in ratio 4:5. Eight years from now the ratio will be 5:6. Find their present ages.", "options": ["32 and 40", "24 and 30", "28 and 35", "36 and 45"], "correct_answer": "32 and 40", "explanation": "(4x+8)/(5x+8) = 5/6 gives 24x + 48 = 25x + 40, so x = 8: ages 32 and 40."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["ratio", "algebra"], "question": "If x:y = 5:2, find (x^2 - y^2) : (x^2 + y^2).", "options": ["21:29", "25:4", "21:25", "29:21"], "correct_answer": "21:29", "explanation": "Put x = 5, y = 2: (25-4):(25+4) = 21:29."}
+  ],
+  "topic_test": {
+    "title": "Ratio and Proportion - Topic Test",
+    "duration_minutes": 20,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 20 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Introduce a multiplier x for actual values and cross-multiply proportions."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["ratio"], "question": "Express the ratio 45 minutes to 2 hours in simplest form.", "options": ["3:8", "45:2", "3:4", "8:3"], "correct_answer": "3:8", "explanation": "45 min : 120 min = 3 : 8."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["ratio"], "question": "The mean proportional between 9 and 16 is:", "options": ["12", "12.5", "13", "11"], "correct_answer": "12", "explanation": "sqrt(9 x 16) = 12."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["ratio"], "question": "If 3 pens cost as much as 5 pencils, the cost ratio of a pen to a pencil is:", "options": ["5:3", "3:5", "8:5", "5:8"], "correct_answer": "5:3", "explanation": "3 pen = 5 pencil means pen/pencil = 5/3."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["ratio"], "question": "A sum is divided among A, B, C in ratio 2:3:7. If B gets Rs. 270, find the total.", "options": ["Rs. 1,080", "Rs. 900", "Rs. 1,200", "Rs. 960"], "correct_answer": "Rs. 1,080", "explanation": "3 parts = 270, so 1 part = 90 and 12 parts = 1,080."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["ratio"], "question": "The ratio of boys to girls in a class of 40 is 5:3. How many boys are there?", "options": ["25", "24", "15", "20"], "correct_answer": "25", "explanation": "8 parts = 40, so 1 part = 5; boys = 25."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["ratio"], "question": "A bag has 25p, 50p and Re 1 coins in ratio 8:5:3 amounting to Rs. 30. Find the number of 25p coins.", "options": ["32", "20", "12", "40"], "correct_answer": "32", "explanation": "Value = 8x(0.25) + 5x(0.50) + 3x(1) = 7.5x = 30, so x = 4; 25p coins = 32."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["ratio"], "question": "If a/3 = b/4 = c/7, then (a + b + c)/c equals:", "options": ["2", "3", "7/3", "14/11"], "correct_answer": "2", "explanation": "Let a=3k, b=4k, c=7k: (3+4+7)k/7k = 14/7 = 2."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["ratio"], "question": "Two numbers are in ratio 3:5. If 9 is subtracted from each, the ratio becomes 12:23. Find the smaller number.", "options": ["33", "55", "30", "36"], "correct_answer": "33", "explanation": "(3x-9)/(5x-9) = 12/23 gives 69x - 207 = 60x - 108, so 9x = 99, x = 11; smaller = 33."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["ratio"], "question": "Rs. 782 is divided in the ratio 1/2 : 2/3 : 3/4. The smallest share is:", "options": ["Rs. 204", "Rs. 272", "Rs. 306", "Rs. 234"], "correct_answer": "Rs. 204", "explanation": "Multiply by 12: 6:8:9, total 23 parts. Each part = 34. Smallest = 6 x 34 = 204."},
+      {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["ratio"], "question": "The sides of a triangle are in ratio 3:4:5 and its perimeter is 96 cm. The longest side is:", "options": ["40 cm", "36 cm", "32 cm", "48 cm"], "correct_answer": "40 cm", "explanation": "12 parts = 96, part = 8; longest = 5 x 8 = 40 cm."}
+    ]
+  }
+}

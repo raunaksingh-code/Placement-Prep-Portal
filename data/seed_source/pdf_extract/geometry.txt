@@ -1,0 +1,126 @@
+BASIC GEOMETRY
+CONCEPTS
+Angle: When two non-parallel and co-planar lines
+(lines in the same plane) intersect, at the point of
+intersection the measure of rotational displacement is
+called an angle.
+Types of Angles: If θ is an angle such that 
+1) If θ = 0o then θ is zero angle.
+2) If 0o < θ < 90o then θ is called an acute angle.
+3) If θ = 90o then θ is right angle.
+4) If θ > 900 then θ is obtuse angle.
+5) If θ = 180o then θ is called a straight angle.
+6) If 180o < θ < 360o then θ  is called reflex angle.
+7) If θ = 360o  then θ is called complete angle.
+Parallel and Non-Parallel lines:
+1) Two lines are said to be parallel lines if they are co-
+planar (in the same plane) and non intersecting. 
+The point of intersection of parallel lines is at infinite
+places which is not real.
+2) The angle between parallel lines is undefined, or it
+can be either 0o or 180o or any multiple of 180o. 
+3) Two lines are said to be non parallel (inclined lines)
+if they are co-planar and intersect at a real point.
+The point of intersection of inclined lines is real. 
+Transversal: A line that intersects two parallel lines is
+called a transversal. Suppose l1 , l2 are two parallel lines
+and 't' is a transversal, then we will have eight angles as
+shown in figure.
+•Vertical Opposite Angles: The angles 14, 23,
+58, 67 pair wise are called pairs of vertical
+angles. The corresponding pairs of vertical angles are
+always equal i.e. 1=4, 2=3, 5=8, 6=7.
+•Corresponding Angles: The angles 15, 26,
+37, 48 pair wise are called corresponding angles.
+The pairs of corresponding angles are always equal. i.e.
+1=5, 2=6, 3=7, 4=8.
+•Alternate Interior Angles: The angles 36, 45
+are called pairs of alternate interior angles. 
+The corresponding pairs of alternate angles are equal. 
+i.e. 3=6, 4=5
+•Alternate Exterior Angles: The angles 18, 27
+are called pairs of alternate exterior angles. 1=8,
+2=7.
+•Complementary Angles: Two angles whose sum is
+90o are called complementary angles. 
+•Supplementary Angles: Two angles whose sum is
+180o are called supplementary angles. 
+POLYGONS
+•A closed plane figure made up of several line
+segments that are joined together is called a Polygon.
+•If all the sides of a polygon are equal then it is called
+Regular Polygon.
+Regular polygons are both equiangular and equilateral.
+Equiangular = all angles are equal.
+Equilateral = all sides are the same length.
+Exterior angle: The angle subtended by a side of the
+regular polygon at the vertex outside.
+Sum of the exterior angles of any polygon = 360o.
+Each exterior angle (regular polygon) = 360
+n
+.
+(where 'n' is the number of sides in a polygon).
+Interior angle:
+Sum of the interior angles of a polygon = (n–2)×180°. 
+Each interior angle of a regular polygon = 180(n−2)
+n
+.
+• The number of diagonals in a polygon = n(n– 3)
+2
+.
+• The number of triangles (when you draw all the
+diagonals from one vertex) in a polygon = (n–2).
+Polygon Names:
+Sides
+Name
+3
+Triangle
+4
+Quadrilateral
+5
+Pentagon
+6
+Hexagon
+7
+Heptagon
+8
+Octagon
+10
+Decagon
+Special Triangles:
+Equilateral, Isosceles, Scalene, Right Angled, Acute,
+Obtuse.
+Special Quadrilateral: 
+Square, Rhombus, Parallelogram, Rectangle, Trapezoid.
+Login to your online account to ask doubts.
+1.113
+2
+1
+3
+4
+5
+6
+7
+8
+l1
+l2
+t
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

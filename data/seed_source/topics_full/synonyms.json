@@ -1,0 +1,79 @@
+{
+  "study_material": {
+    "title": "Synonyms - Complete Study Notes",
+    "introduction": "A synonym is a word with the same or nearly the same meaning as another. Placement tests use synonyms to measure vocabulary depth. Since rote memorisation is slow, combine high-frequency word lists with root-word logic and context reasoning.",
+    "learning_objectives": [
+      "Recall high-frequency placement vocabulary",
+      "Use Latin and Greek roots to decode unfamiliar words",
+      "Apply prefix logic to narrow meaning",
+      "Eliminate options using connotation and part of speech"
+    ],
+    "concepts": [
+      {"heading": "1. Root Words", "body": "Roots unlock hundreds of words. BENE (good): benevolent, benefactor, beneficial. MAL (bad): malevolent, malice, malfunction. CRED (believe): credible, incredulous, credentials. VOC/VOKE (call): vocation, evoke, revoke. LOQU/LOC (speak): loquacious, eloquent, colloquial. PHIL (love): philanthropy, bibliophile. FID (faith): fidelity, confide, perfidy."},
+      {"heading": "2. Prefixes", "body": "Negative prefixes flip meaning: un-, in-, im-, ir-, il-, dis-, non-, a-. Direction/degree: sub- (under), super-/supra- (above), inter- (between), intra- (within), ante- (before), post- (after), circum- (around), trans- (across). Spotting 'ab-' in 'abhor' or 'anti-' in 'antipathy' points to a negative sense."},
+      {"heading": "3. Connotation", "body": "Near-synonyms differ in tone. 'Thrifty' is positive; 'stingy' is negative; both relate to spending little. 'Confident' vs 'arrogant'. When two options share a denotation, pick the one whose tone matches the question word."},
+      {"heading": "4. Part of Speech Matching", "body": "The answer must match the question word's part of speech. If the given word is an adjective, eliminate noun options immediately - this alone often halves the choices."},
+      {"heading": "5. High-Frequency List", "body": "Abundant = plentiful. Candid = frank. Diligent = hardworking. Eloquent = articulate. Frugal = thrifty. Gregarious = sociable. Hostile = unfriendly. Imminent = impending. Lucid = clear. Meticulous = careful. Novice = beginner. Obsolete = outdated. Prudent = wise. Reluctant = unwilling. Scrutinise = examine. Tenacious = persistent. Vivid = bright. Zealous = enthusiastic."}
+    ],
+    "formulas": [
+      "BENE = good, MAL = bad, CRED = believe, LOQU = speak",
+      "Negative prefixes: un-, in-, im-, ir-, il-, dis-, non-, a-",
+      "Match part of speech before meaning",
+      "Tone must match: positive word needs a positive synonym"
+    ],
+    "shortcut_methods": [
+      "Break the word into prefix + root + suffix",
+      "Place the word in a sentence you know, then test each option in that sentence",
+      "Eliminate by part of speech first, then by tone"
+    ],
+    "common_mistakes": [
+      "Choosing an antonym under time pressure - read the instruction carefully",
+      "Ignoring connotation and picking a technically close but tonally wrong word",
+      "Confusing similar-sounding words (eminent/imminent, principal/principle)"
+    ],
+    "summary": "Learn roots and prefixes to decode unknown words, then filter options by part of speech and tone.",
+    "quick_revision_notes": [
+      "Candid = frank; Frugal = thrifty",
+      "Gregarious = sociable; Obsolete = outdated",
+      "BENE good, MAL bad",
+      "Tone matters: thrifty (+) vs stingy (-)"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Choose the synonym of ABUNDANT.", "options": ["Plentiful", "Scarce", "Empty", "Limited"], "correct_answer": "Plentiful", "step_by_step": "Abundant means existing in large quantity - plentiful. The others are antonyms.", "shortcut": "Three options are all near-synonyms of each other (scarce/empty/limited) - the odd one out is the answer."},
+    {"difficulty": "easy", "question": "Choose the synonym of CANDID.", "options": ["Frank", "Secretive", "Dishonest", "Reserved"], "correct_answer": "Frank", "step_by_step": "Candid means openly honest and straightforward - frank.", "shortcut": "Think of a 'candid photo' - unposed, natural, honest."},
+    {"difficulty": "medium", "question": "Choose the synonym of BENEVOLENT.", "options": ["Kind", "Cruel", "Indifferent", "Jealous"], "correct_answer": "Kind", "step_by_step": "The root BENE means 'good', so benevolent means well-wishing or kind.", "shortcut": "BENE = good, VOL = wish."},
+    {"difficulty": "medium", "question": "Choose the synonym of METICULOUS.", "options": ["Careful", "Careless", "Hasty", "Vague"], "correct_answer": "Careful", "step_by_step": "Meticulous means showing great attention to detail - careful and precise.", "shortcut": "Associate with 'meticulous notes' - painstakingly detailed."},
+    {"difficulty": "hard", "question": "Choose the synonym of LOQUACIOUS.", "options": ["Talkative", "Silent", "Rude", "Thoughtful"], "correct_answer": "Talkative", "step_by_step": "The root LOQU means 'to speak', so loquacious describes someone who talks a great deal.", "shortcut": "LOQU/LOC = speak (eloquent, colloquial, soliloquy)."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 25, "tags": ["synonyms", "common"], "question": "Choose the synonym of DILIGENT.", "options": ["Hardworking", "Lazy", "Careless", "Slow"], "correct_answer": "Hardworking", "explanation": "Diligent means showing persistent, careful effort."},
+    {"difficulty": "easy", "estimated_time_sec": 25, "tags": ["synonyms", "common"], "question": "Choose the synonym of VIVID.", "options": ["Bright", "Dull", "Faint", "Pale"], "correct_answer": "Bright", "explanation": "Vivid means intensely bright or clear."},
+    {"difficulty": "easy", "estimated_time_sec": 25, "tags": ["synonyms", "common"], "question": "Choose the synonym of NOVICE.", "options": ["Beginner", "Expert", "Master", "Veteran"], "correct_answer": "Beginner", "explanation": "A novice is new to an activity."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["synonyms", "common"], "question": "Choose the synonym of HOSTILE.", "options": ["Unfriendly", "Warm", "Welcoming", "Generous"], "correct_answer": "Unfriendly", "explanation": "Hostile means showing opposition or dislike."},
+    {"difficulty": "medium", "estimated_time_sec": 40, "tags": ["synonyms", "roots"], "question": "Choose the synonym of FRUGAL.", "options": ["Thrifty", "Wasteful", "Lavish", "Generous"], "correct_answer": "Thrifty", "explanation": "Frugal means economical with money or resources."},
+    {"difficulty": "medium", "estimated_time_sec": 40, "tags": ["synonyms", "roots"], "question": "Choose the synonym of GREGARIOUS.", "options": ["Sociable", "Shy", "Withdrawn", "Hostile"], "correct_answer": "Sociable", "explanation": "Gregarious describes someone who enjoys company."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["synonyms", "roots"], "question": "Choose the synonym of OBSOLETE.", "options": ["Outdated", "Modern", "Current", "Popular"], "correct_answer": "Outdated", "explanation": "Obsolete means no longer in use."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["synonyms", "roots"], "question": "Choose the synonym of TENACIOUS.", "options": ["Persistent", "Weak", "Yielding", "Fickle"], "correct_answer": "Persistent", "explanation": "Tenacious means holding firmly and not giving up."},
+    {"difficulty": "hard", "estimated_time_sec": 55, "tags": ["synonyms", "advanced"], "question": "Choose the synonym of EPHEMERAL.", "options": ["Short-lived", "Permanent", "Eternal", "Lasting"], "correct_answer": "Short-lived", "explanation": "Ephemeral means lasting a very short time."},
+    {"difficulty": "hard", "estimated_time_sec": 55, "tags": ["synonyms", "advanced"], "question": "Choose the synonym of PRAGMATIC.", "options": ["Practical", "Idealistic", "Theoretical", "Emotional"], "correct_answer": "Practical", "explanation": "Pragmatic means dealing with things sensibly and realistically."}
+  ],
+  "topic_test": {
+    "title": "Synonyms - Topic Test",
+    "duration_minutes": 12,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 12 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Read carefully - these ask for SYNONYMS, not antonyms."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["synonyms"], "question": "Choose the synonym of LUCID.", "options": ["Clear", "Confusing", "Dark", "Complex"], "correct_answer": "Clear", "explanation": "Lucid means easily understood."},
+      {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["synonyms"], "question": "Choose the synonym of RELUCTANT.", "options": ["Unwilling", "Eager", "Ready", "Keen"], "correct_answer": "Unwilling", "explanation": "Reluctant means hesitant to do something."},
+      {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["synonyms"], "question": "Choose the synonym of IMMINENT.", "options": ["Impending", "Distant", "Unlikely", "Past"], "correct_answer": "Impending", "explanation": "Imminent means about to happen."},
+      {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["synonyms"], "question": "Choose the synonym of ELOQUENT.", "options": ["Articulate", "Silent", "Clumsy", "Dull"], "correct_answer": "Articulate", "explanation": "Eloquent means fluent and persuasive in speech."},
+      {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["synonyms"], "question": "Choose the synonym of SCRUTINISE.", "options": ["Examine", "Ignore", "Glance", "Skip"], "correct_answer": "Examine", "explanation": "To scrutinise is to inspect closely."},
+      {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["synonyms"], "question": "Choose the synonym of PRUDENT.", "options": ["Wise", "Reckless", "Foolish", "Hasty"], "correct_answer": "Wise", "explanation": "Prudent means showing care and good judgement."},
+      {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["synonyms"], "question": "Choose the synonym of ZEALOUS.", "options": ["Enthusiastic", "Apathetic", "Bored", "Reluctant"], "correct_answer": "Enthusiastic", "explanation": "Zealous means showing great energy for a cause."},
+      {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["synonyms"], "question": "Choose the synonym of AMBIGUOUS.", "options": ["Unclear", "Definite", "Precise", "Obvious"], "correct_answer": "Unclear", "explanation": "Ambiguous means open to more than one interpretation."},
+      {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["synonyms"], "question": "Choose the synonym of ALLEVIATE.", "options": ["Relieve", "Worsen", "Intensify", "Aggravate"], "correct_answer": "Relieve", "explanation": "To alleviate is to make suffering less severe."},
+      {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["synonyms"], "question": "Choose the synonym of INDIGENOUS.", "options": ["Native", "Foreign", "Imported", "Alien"], "correct_answer": "Native", "explanation": "Indigenous means originating naturally in a place."}
+    ]
+  }
+}

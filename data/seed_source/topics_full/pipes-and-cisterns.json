@@ -1,0 +1,73 @@
+{
+  "study_material": {
+    "title": "Pipes and Cisterns - Complete Study Notes",
+    "introduction": "Pipes and cisterns is time-and-work with a twist: inlet pipes do positive work (filling) and outlet/leak pipes do negative work (emptying). Add the signed rates and invert to get the filling time.",
+    "learning_objectives": [
+      "Combine inlet and outlet rates with correct signs",
+      "Find leak rates from slowed filling times",
+      "Handle pipes opened or closed at different times",
+      "Work with partially filled tanks"
+    ],
+    "concepts": [
+      {"heading": "1. Signed Rates", "body": "An inlet filling in x hours contributes +1/x per hour; an outlet emptying in y hours contributes -1/y. Net rate = sum. If the net is positive the tank fills in 1/net hours; if negative, it empties."},
+      {"heading": "2. Leak Problems", "body": "If a pipe alone fills in x hours but takes x' hours with a leak, the leak's rate = 1/x - 1/x'. The leak alone empties a full tank in the reciprocal of that. Example: fill 8 h alone, 10 h with leak: leak rate = 1/8 - 1/10 = 1/40, leak empties in 40 h."},
+      {"heading": "3. Staggered Opening", "body": "When pipes open or close at different times, split the timeline into phases. Compute the work (tank fraction) in each phase, track the cumulative total, and solve the final phase for the unknown time."},
+      {"heading": "4. Partial Tanks", "body": "A tank already 2/5 full that must be emptied or filled needs only that fraction of work. Time = fraction / net rate. Sign of the net rate tells you whether it fills or drains."}
+    ],
+    "formulas": [
+      "Net rate = sum of 1/fill times - sum of 1/empty times",
+      "Leak rate = 1/normal time - 1/slowed time",
+      "Time for fraction f of tank = f / net rate"
+    ],
+    "shortcut_methods": [
+      "Use LCM of the given times as tank capacity in units",
+      "Keep emptying rates negative from the start - never juggle signs later",
+      "Phase problems: litres (units) filled so far is the only state you need"
+    ],
+    "common_mistakes": [
+      "Adding an outlet's rate with a positive sign",
+      "Inverting before summing the rates",
+      "Ignoring the already-filled fraction in partial-tank problems"
+    ],
+    "summary": "Treat filling as positive work and emptying as negative, sum rates, and divide the remaining fraction by the net rate.",
+    "quick_revision_notes": [
+      "Inlet +1/x, outlet -1/y",
+      "Leak = normal rate - slowed rate",
+      "LCM units make phase problems clean"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Pipe A fills a tank in 6 hours and pipe B in 8 hours. Together they fill it in:", "options": ["3 3/7 hours", "3 hours", "4 hours", "3 1/2 hours"], "correct_answer": "3 3/7 hours", "step_by_step": "Rate = 1/6 + 1/8 = 7/24, time = 24/7 = 3 3/7 hours.", "shortcut": "xy/(x+y) = 48/14 = 24/7."},
+    {"difficulty": "easy", "question": "A pipe fills a tank in 4 hours while an outlet empties it in 6 hours. With both open, the tank fills in:", "options": ["12 hours", "10 hours", "8 hours", "24 hours"], "correct_answer": "12 hours", "step_by_step": "Net rate = 1/4 - 1/6 = 1/12, so 12 hours.", "shortcut": "LCM 12 units: +3 -2 = 1 unit/hour."},
+    {"difficulty": "medium", "question": "A pipe can fill a tank in 8 hours, but with a leak it takes 10 hours. The leak alone empties the full tank in:", "options": ["40 hours", "30 hours", "45 hours", "36 hours"], "correct_answer": "40 hours", "step_by_step": "Leak rate = 1/8 - 1/10 = 1/40, so 40 hours to empty.", "shortcut": "Difference of rates."},
+    {"difficulty": "hard", "question": "Pipes A (4 h), B (5 h) fill and pipe C empties in 20 h. All three open: time to fill?", "options": ["2.5 hours", "3 hours", "2 hours", "4 hours"], "correct_answer": "2.5 hours", "step_by_step": "Rate = 1/4 + 1/5 - 1/20 = (5+4-1)/20 = 8/20 = 2/5, so 2.5 hours.", "shortcut": "LCM 20 units: 5+4-1 = 8/hour; 20/8 = 2.5."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["pipes", "together"], "question": "Two pipes fill a tank in 20 and 30 hours. Together they take:", "options": ["12 hours", "25 hours", "10 hours", "15 hours"], "correct_answer": "12 hours", "explanation": "1/20 + 1/30 = 1/12."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["pipes", "leak"], "question": "A pipe fills in 5 hours; a leak empties in 10 hours. Both together fill in:", "options": ["10 hours", "15 hours", "8 hours", "12 hours"], "correct_answer": "10 hours", "explanation": "1/5 - 1/10 = 1/10."},
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["pipes", "subtract"], "question": "A and B together fill a tank in 6 hours; A alone takes 10 hours. B alone takes:", "options": ["15 hours", "12 hours", "16 hours", "18 hours"], "correct_answer": "15 hours", "explanation": "1/6 - 1/10 = 1/15."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["pipes", "three"], "question": "Pipes filling in 3 h and 6 h are opened with an outlet emptying in 9 h. The tank fills in:", "options": ["18/7 hours", "3 hours", "2 hours", "9/4 hours"], "correct_answer": "18/7 hours", "explanation": "1/3 + 1/6 - 1/9 = (6+3-2)/18 = 7/18: time 18/7 hours."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["pipes", "faster"], "question": "Pipe A fills in 12 hours, B in 16 hours. Together they need about:", "options": ["6 6/7 hours", "7 1/2 hours", "6 hours", "8 hours"], "correct_answer": "6 6/7 hours", "explanation": "1/12 + 1/16 = 7/48: 48/7 = 6 6/7 hours."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["pipes", "phase"], "question": "Pipe A (12 h) runs alone for 3 hours, then is closed and B (15 h) finishes the job. B runs for:", "options": ["11.25 hours", "10 hours", "12 hours", "11 hours"], "correct_answer": "11.25 hours", "explanation": "A fills 3/12 = 1/4. Remaining 3/4 x 15 = 11.25 hours."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["pipes", "strong-outlet"], "question": "A tank is 2/5 full. An inlet fills in 10 hours and an outlet empties in 6 hours. With both open, the tank empties in:", "options": ["6 hours", "5 hours", "4 hours", "8 hours"], "correct_answer": "6 hours", "explanation": "Net = 1/10 - 1/6 = -1/15 (emptying). Time = (2/5)/(1/15) = 6 hours."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["pipes", "closed-midway"], "question": "Pipes A (6 h) and B (9 h) are opened together; after 2 hours B is closed. A finishes the rest in:", "options": ["8/3 hours", "3 hours", "2 hours", "7/3 hours"], "correct_answer": "8/3 hours", "explanation": "2 hours give 2(1/6+1/9) = 5/9. Remaining 4/9 at A's rate: (4/9) x 6 = 8/3 hours."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["pipes", "strong-combo"], "question": "Inlets filling in 4 h and 5 h are opened with an outlet that empties in 20 h. Time to fill the tank:", "options": ["2.5 hours", "3 hours", "2 hours", "3.5 hours"], "correct_answer": "2.5 hours", "explanation": "1/4 + 1/5 - 1/20 = 8/20 = 2/5: 2.5 hours."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["pipes", "leak-find"], "question": "A pump fills a tank in 16 hours; with an added inlet pipe both together fill it in 12 hours. The inlet alone fills in:", "options": ["48 hours", "40 hours", "36 hours", "28 hours"], "correct_answer": "48 hours", "explanation": "1/12 - 1/16 = 1/48."}
+  ],
+  "topic_test": {
+    "title": "Pipes and Cisterns - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Keep outlet rates negative and use LCM units."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["pipes"], "question": "Pipes filling in 10 h and 15 h together fill the tank in:", "options": ["6 hours", "12.5 hours", "5 hours", "8 hours"], "correct_answer": "6 hours", "explanation": "1/10 + 1/15 = 1/6."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["pipes"], "question": "An inlet fills in 6 h; an outlet empties in 8 h. Together the tank fills in:", "options": ["24 hours", "14 hours", "20 hours", "48 hours"], "correct_answer": "24 hours", "explanation": "1/6 - 1/8 = 1/24."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["pipes"], "question": "Pipes A (5 h) and B (10 h) together fill the tank in:", "options": ["3 h 20 min", "3 h", "4 h", "2 h 30 min"], "correct_answer": "3 h 20 min", "explanation": "1/5 + 1/10 = 3/10: 10/3 h = 3 h 20 min."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["pipes"], "question": "Three identical pipes each fill a tank in 8 hours. All three together take:", "options": ["8/3 hours", "3 hours", "2 hours", "4 hours"], "correct_answer": "8/3 hours", "explanation": "Rate 3/8 per hour: 8/3 hours."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["pipes"], "question": "A tank normally fills in 8 hours but takes 2 hours longer due to a leak. The leak alone empties the full tank in:", "options": ["40 hours", "36 hours", "32 hours", "45 hours"], "correct_answer": "40 hours", "explanation": "1/8 - 1/10 = 1/40."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["pipes"], "question": "A tank is one-quarter full. An inlet filling in 12 hours is opened. Time to fill the tank completely:", "options": ["9 hours", "12 hours", "8 hours", "10 hours"], "correct_answer": "9 hours", "explanation": "Remaining 3/4 x 12 = 9 hours."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["pipes"], "question": "Pipes A (4 h) and B (6 h) start together, but A is closed after 1 hour. Total time to fill the tank:", "options": ["4.5 hours", "4 hours", "5 hours", "3.5 hours"], "correct_answer": "4.5 hours", "explanation": "Hour 1: 1/4 + 1/6 = 5/12. Remaining 7/12 by B: (7/12) x 6 = 3.5 h. Total = 4.5 hours."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["pipes"], "question": "Two inlets fill a 216-litre tank in 12 and 18 minutes. With a waste pipe also open, the tank fills in 216/21 minutes. How many litres per minute does the waste pipe remove?", "options": ["9 litres", "6 litres", "12 litres", "21 litres"], "correct_answer": "9 litres", "explanation": "Inlet rates: 216/12 = 18 and 216/18 = 12 L/min, total 30. Net rate = 216 divided by 216/21 = 21 L/min, so the waste pipe removes 30 - 21 = 9 L/min."}
+    ]
+  }
+}

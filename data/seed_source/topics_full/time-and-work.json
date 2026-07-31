@@ -1,0 +1,79 @@
+{
+  "study_material": {
+    "title": "Time and Work - Complete Study Notes",
+    "introduction": "If A finishes a job in x days, A does 1/x of it per day. Add daily rates to combine workers, invert to get days. Every time-and-work puzzle - joint work, leaving mid-way, wages, efficiency - reduces to rate arithmetic.",
+    "learning_objectives": [
+      "Convert between days-to-finish and work-per-day",
+      "Combine and subtract work rates",
+      "Handle workers joining or leaving mid-job",
+      "Split wages in proportion to work done",
+      "Use man-days for group problems and efficiency scaling"
+    ],
+    "concepts": [
+      {"heading": "1. Rates Add", "body": "A in x days means rate 1/x per day. A and B together: rate = 1/x + 1/y, days = xy/(x+y). Three or more workers: keep adding rates. To find one worker from a pair: subtract rates, e.g. B = (A+B rate) - (A rate)."},
+      {"heading": "2. LCM Method", "body": "Take the LCM of the given day-counts as total work units. If A does 12-day work and B 24-day work, set work = 24 units: A does 2/day, B does 1/day, together 3/day - finish in 8 days. Integer units avoid fraction errors."},
+      {"heading": "3. Partial Work and Departures", "body": "Compute work done in the joint phase, subtract from 1 (or from total units), then divide the remainder by the remaining workers' rate. For alternate-day problems, compute one full cycle's work and count cycles."},
+      {"heading": "4. Efficiency", "body": "'A is twice as good as B' means A's rate is double, so A's time is half. If A is k times as efficient, times are in ratio 1:k (inverted). A 20% more efficient worker needs time/1.2."},
+      {"heading": "5. Wages", "body": "Wages are shared in proportion to work done, i.e. in proportion to rates when time worked is equal. A doing 1/6 per day and B doing 1/9 per day share wages 3:2 (invert the day counts and simplify)."}
+    ],
+    "formulas": [
+      "Together: xy/(x+y) days",
+      "Work left = 1 - (joint rate x joint days)",
+      "Efficiency k times means time divided by k",
+      "Wages ratio = rate ratio (for equal duration)"
+    ],
+    "shortcut_methods": [
+      "Use LCM units instead of fractions",
+      "For pairs given as A+B, B+C, C+A: sum all three to get 2(A+B+C)",
+      "Alternate-day problems: work per 2-day cycle first"
+    ],
+    "common_mistakes": [
+      "Adding days instead of rates",
+      "Forgetting to subtract the completed fraction before the second phase",
+      "Mapping 'twice as efficient' to twice the time instead of half"
+    ],
+    "summary": "Work with per-day rates (or LCM units), add them for teamwork, subtract for departures, and invert at the end for days.",
+    "quick_revision_notes": [
+      "Rate = 1/days; rates add",
+      "Together = xy/(x+y)",
+      "Wages follow work done",
+      "2(A+B+C) = sum of the three pair rates"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "A can do a job in 10 days and B in 15 days. How long together?", "options": ["6 days", "12.5 days", "5 days", "8 days"], "correct_answer": "6 days", "step_by_step": "Rate = 1/10 + 1/15 = 1/6, so 6 days.", "shortcut": "xy/(x+y) = 150/25 = 6."},
+    {"difficulty": "medium", "question": "A and B together finish a work in 12 days; A alone takes 20 days. How long does B alone take?", "options": ["30 days", "25 days", "32 days", "28 days"], "correct_answer": "30 days", "step_by_step": "B's rate = 1/12 - 1/20 = (5-3)/60 = 1/30, so 30 days.", "shortcut": "Subtract rates, invert."},
+    {"difficulty": "medium", "question": "A is twice as fast as B, and together they finish a job in 12 days. How long would A alone take?", "options": ["18 days", "24 days", "16 days", "20 days"], "correct_answer": "18 days", "step_by_step": "Let A take x days, B takes 2x. 1/x + 1/2x = 3/2x = 1/12, so x = 18.", "shortcut": "A does 2 of every 3 units; total time x = 12 x 3/2."},
+    {"difficulty": "hard", "question": "A, B and C can do a job in 10, 12 and 15 days respectively. Working together, they need:", "options": ["4 days", "5 days", "6 days", "3 days"], "correct_answer": "4 days", "step_by_step": "Rate = 1/10 + 1/12 + 1/15 = (6+5+4)/60 = 1/4, so 4 days.", "shortcut": "LCM 60 units: 6+5+4 = 15 units/day; 60/15 = 4."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["time-work", "together"], "question": "A does a job in 12 days, B in 24 days. Together they take:", "options": ["8 days", "9 days", "10 days", "6 days"], "correct_answer": "8 days", "explanation": "1/12 + 1/24 = 3/24 = 1/8: 8 days."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["time-work", "subtract"], "question": "A and B together take 6 days; B alone takes 9 days. A alone takes:", "options": ["18 days", "15 days", "12 days", "20 days"], "correct_answer": "18 days", "explanation": "1/6 - 1/9 = 1/18: 18 days."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["time-work", "fraction"], "question": "A can finish a task in 8 days. After working 2 days, what fraction is complete?", "options": ["1/4", "1/8", "1/2", "3/8"], "correct_answer": "1/4", "explanation": "2 days x 1/8 per day = 1/4."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["time-work", "partial"], "question": "A takes 15 days, B takes 20 days. They work together for 4 days. The fraction of work left is:", "options": ["8/15", "7/15", "2/5", "1/2"], "correct_answer": "8/15", "explanation": "Joint rate 7/60; in 4 days 7/15 done, leaving 8/15."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["time-work", "wages"], "question": "A finishes a job in 6 days, B in 9 days. They complete it together and earn Rs. 1,500. A's share is:", "options": ["Rs. 900", "Rs. 750", "Rs. 1,000", "Rs. 600"], "correct_answer": "Rs. 900", "explanation": "Rate ratio 1/6 : 1/9 = 3:2. A = 1500 x 3/5 = 900."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["time-work", "half-work"], "question": "A does half a job in 10 days. With B, the whole job takes 12 days. B alone would take:", "options": ["30 days", "24 days", "36 days", "20 days"], "correct_answer": "30 days", "explanation": "A alone = 20 days. B rate = 1/12 - 1/20 = 1/30."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["time-work", "man-days"], "question": "10 men can finish a job in 8 days. After 2 days, 5 more men join. The remaining work takes:", "options": ["4 days", "5 days", "3 days", "6 days"], "correct_answer": "4 days", "explanation": "Total 80 man-days; 20 used. Remaining 60 by 15 men = 4 days."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["time-work", "pairs"], "question": "A and B take 10 days, B and C take 15 days, C and A take 12 days. All three together take:", "options": ["8 days", "6 days", "9 days", "10 days"], "correct_answer": "8 days", "explanation": "Sum of pair rates = 1/10+1/15+1/12 = 15/60 = 1/4 = 2(A+B+C). So A+B+C = 1/8: 8 days."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["time-work", "hours"], "question": "A can finish a task in 4 hours and B in 6 hours. Working together they need:", "options": ["2.4 hours", "2 hours", "3 hours", "2.5 hours"], "correct_answer": "2.4 hours", "explanation": "1/4 + 1/6 = 5/12: 12/5 = 2.4 hours."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["time-work", "alternate"], "question": "A takes 6 days and B takes 12 days. Working on alternate days starting with A, the job finishes in:", "options": ["8 days", "9 days", "7 days", "10 days"], "correct_answer": "8 days", "explanation": "Each 2-day cycle does 1/6 + 1/12 = 1/4. Four cycles (8 days) complete the job exactly."}
+  ],
+  "topic_test": {
+    "title": "Time and Work - Topic Test",
+    "duration_minutes": 20,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 20 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Use LCM units to avoid fractions."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["time-work"], "question": "A takes 5 days, B takes 20 days. Together they need:", "options": ["4 days", "5 days", "6 days", "3 days"], "correct_answer": "4 days", "explanation": "1/5 + 1/20 = 1/4."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["time-work"], "question": "A and B together take 8 days; A alone takes 12. B alone takes:", "options": ["24 days", "20 days", "16 days", "28 days"], "correct_answer": "24 days", "explanation": "1/8 - 1/12 = 1/24."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["time-work"], "question": "12 men finish a job in 10 days. 20 men would take:", "options": ["6 days", "8 days", "5 days", "7 days"], "correct_answer": "6 days", "explanation": "120 man-days / 20 men = 6 days."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["time-work"], "question": "A finishes a job in 9 days. After 3 days of work, the fraction done is:", "options": ["1/3", "1/9", "2/9", "1/4"], "correct_answer": "1/3", "explanation": "3/9 = 1/3."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["time-work"], "question": "A is 20% more efficient than B. If B takes 10 days, A takes:", "options": ["8 1/3 days", "8 days", "12 days", "9 days"], "correct_answer": "8 1/3 days", "explanation": "Time = 10/1.2 = 25/3 = 8 1/3 days."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["time-work"], "question": "A and B finish a job together and are paid Rs. 2,500. A alone takes 10 days, B alone 15 days. A's share:", "options": ["Rs. 1,500", "Rs. 1,250", "Rs. 1,000", "Rs. 1,600"], "correct_answer": "Rs. 1,500", "explanation": "Rates 1/10:1/15 = 3:2; A = 2500 x 3/5 = 1,500."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["time-work"], "question": "A is thrice as good a worker as B and takes 60 days less to finish a job. Together they take:", "options": ["22.5 days", "20 days", "25 days", "24 days"], "correct_answer": "22.5 days", "explanation": "A takes t, B takes 3t; 3t - t = 60 so t = 30. Rate = 1/30 + 1/90 = 4/90: 22.5 days."},
+      {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["time-work"], "question": "A, B and C together earn Rs. 4,500 for a job. Their individual times are 6, 8 and 12 days. C's share is:", "options": ["Rs. 1,000", "Rs. 1,200", "Rs. 900", "Rs. 1,500"], "correct_answer": "Rs. 1,000", "explanation": "Rates 1/6:1/8:1/12 = 4:3:2. C = 4500 x 2/9 = 1,000."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["time-work"], "question": "A can do a job in 15 days, B in 10 days. B works alone for 4 days and leaves. A finishes the rest in:", "options": ["9 days", "8 days", "10 days", "12 days"], "correct_answer": "9 days", "explanation": "B does 4/10 = 2/5; remaining 3/5 by A: (3/5) x 15 = 9 days."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["time-work"], "question": "4 men and 6 women finish a job in 8 days; 3 men and 7 women finish it in 10 days. One woman alone would take:", "options": ["400 days", "200 days", "100 days", "600 days"], "correct_answer": "400 days", "explanation": "8(4m+6w) = 10(3m+7w) gives 32m+48w = 30m+70w, so 2m = 22w, m = 11w. Total work = 8(44w+6w) = 400 woman-days."}
+    ]
+  }
+}

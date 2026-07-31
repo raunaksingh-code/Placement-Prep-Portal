@@ -1,0 +1,49 @@
+{
+  "slug": "resume-and-experience",
+  "title": "Resume & Experience Round",
+  "category": "Interview Rounds",
+  "order": 2,
+  "question_category": "Resume & Experience",
+  "icon": "📄",
+  "summary": "Your resume sets the questions. How to write one that invites the right follow-ups, and how to defend every line of it.",
+  "source": "Campus Recruitment Book p97, plus frameworks written for this portal",
+  "introduction": "This is the largest single category in the question bank - candidates were asked about their resume, internships and projects more often than anything else. Every line you write is a question you have agreed to answer. Write accordingly.",
+  "sections": [
+    {
+      "heading": "Writing the resume",
+      "body": "• Pick a clean format and a readable font - Arial, Verdana or Times New Roman at 10-12pt.\n• Divide it into clear sections: work experience, academics, skills, personal profile.\n• Put the most important thing first, and follow that rule inside each section too. Most recent experience comes first.\n• Use bullet points and short sentences. Depth belongs in the interview, not the document.\n• Use effective, specific titles. 'Software development' is a weak line; 'Developing Java APIs' is a strong one. For a management CV: not 'Marketing internship' but 'Ran competitor pricing analysis across 40 SKUs'.\n• Put contact details - address, phone, email - somewhere obvious.\n• Mention dates in order, and name the companies you worked or interned for.\n• Keep it short and to the point. Do not pad it.\n• Restructure it for each role you apply to. A single generic resume sent everywhere is visibly generic.\n• Spell-check and grammar-check before sending. Then update it periodically."
+    },
+    {
+      "heading": "What not to do",
+      "body": "• Do not lie about experience, qualifications or tools. This round exists to test exactly that.\n• Do not commit spelling or grammatical errors - it is the cheapest possible reason to reject you.\n• Do not make it colourful. Design is not the point.\n• Do not include too much information.\n• Do not use heavy vocabulary or unnecessary jargon.\n• Do not copy a resume from elsewhere. Take reference from samples, then write your own.\n• Do not include your age unless specifically asked."
+    },
+    {
+      "heading": "Defending every line",
+      "body": "Assume the interviewer will pick the single line you are least prepared for. For each bullet on your resume, be able to answer:\n\n• What exactly was the problem?\n• What did you personally do - not the team?\n• What tools or methods did you use, and why those?\n• What was the outcome, in numbers if possible?\n• What would you do differently now?\n\nCandidates in this bank were asked to explain their Power BI dashboards, how they forecast revenue, which valuation method they used, and how they derived a growth rate - all follow-ups to a single resume line. If a tool is on your CV, you should survive two minutes of questioning on it."
+    },
+    {
+      "heading": "Talking about internships and projects",
+      "body": "Structure each one the same way: context, your role, what you did, what came of it.\n\nLead with the business problem, not the activity. 'I analysed competitor pricing' is weaker than 'The brand was losing share in one segment, so I analysed competitor pricing across it and found we were 12% above the market.'\n\nKnow your internship company's business model. Candidates were asked this directly - being unable to explain what the company you worked at actually does is a bad look.\n\nIf a project failed or the recommendation was never implemented, say so honestly and explain what you learnt. Interviewers respond better to that than to inflated outcomes they can see through."
+    },
+    {
+      "heading": "Explaining transitions and gaps",
+      "body": "Career switches, gap years and low scores all appear in this question bank. The pattern that works is the same: a short factual reason, no defensiveness, then what you did about it.\n\n'Why the shift from HR to marketing?' - answer with what pulled you toward the new field, not what pushed you from the old one.\n\n'Why did you leave X, and would you go back?' - stay professional. A candid, non-bitter answer signals maturity."
+    }
+  ],
+  "checklist": [
+    "Every bullet is specific and, where possible, quantified",
+    "I can talk for two minutes about every tool listed on my CV",
+    "I know my internship company's business model",
+    "Resume tailored to this specific role, not generic",
+    "Spelling and grammar checked",
+    "An honest, short answer prepared for every gap or weak score"
+  ],
+  "common_mistakes": [
+    "Listing a tool you cannot discuss in any depth",
+    "Describing activities rather than problems and outcomes",
+    "Saying 'we' so it is never clear what you contributed",
+    "One generic resume sent to every company",
+    "Inflating a project outcome that collapses under two follow-up questions",
+    "Not knowing what the company you interned at actually does"
+  ]
+}

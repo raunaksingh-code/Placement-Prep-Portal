@@ -1,0 +1,72 @@
+{
+  "study_material": {
+    "title": "Character Puzzle - Complete Study Notes",
+    "introduction": "Character puzzles show a grid, triangle or wheel of numbers/letters with one missing, and ask you to find it from the hidden rule. The rules are arithmetic on rows, columns, diagonals or around a centre.",
+    "learning_objectives": [
+      "Test row-wise, column-wise and diagonal rules systematically",
+      "Spot centre-equals-operation-on-outer patterns",
+      "Handle letter grids via alphabet positions",
+      "Verify a candidate rule on every complete row before applying"
+    ],
+    "concepts": [
+      {"heading": "1. Row and Column Rules", "body": "Try: third = first op second (add, subtract, multiply, divide); third = combination like a x b - c. Example rows (2, 3, 6), (4, 5, 20): third = product. Apply the confirmed rule to the incomplete row."},
+      {"heading": "2. Centre Rules", "body": "In figures with a centre cell: centre = sum, product or difference of outer values, sometimes divided by a constant. Example: corners 3, 4, 5 with centre 12 = sum; next figure 6, 7, 8 gives centre 21."},
+      {"heading": "3. Power Patterns", "body": "Squares and cubes hide in pairs: (5, 25), (7, 49), (9, 81). Sequences like 8, 27, 64 are consecutive cubes. When numbers grow fast, test powers before products."},
+      {"heading": "4. Letter Grids", "body": "Convert letters to positions (A=1..Z=26) and hunt the same arithmetic rules. Rules may run clockwise around a wheel - check both directions."},
+      {"heading": "5. Verification Discipline", "body": "A rule must fit EVERY complete row/figure, not just one. If two rules fit, prefer the simpler; placement answers are single-step arithmetic far more often than exotic combinations."}
+    ],
+    "formulas": [
+      "Test op order: +, -, x, /, then powers",
+      "Centre = f(outer values)",
+      "Letters = positions 1-26"
+    ],
+    "shortcut_methods": [
+      "Confirm the rule on all given rows before computing the answer",
+      "Fast growth = suspect squares/cubes",
+      "Check both clockwise and anticlockwise on wheels"
+    ],
+    "common_mistakes": [
+      "Fitting a rule to only one row",
+      "Ignoring position order (a op b vs b op a)",
+      "Missing that the rule may involve all three cells, not two"
+    ],
+    "summary": "Enumerate simple arithmetic rules, verify on every complete figure, then fill the blank.",
+    "quick_revision_notes": [
+      "Rows first, then columns, then diagonals",
+      "Centre often = sum or product of outer",
+      "Squares/cubes for fast-growing numbers",
+      "Simplest fitting rule wins"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Rows: (2, 3, 6), (4, 5, 20), (6, 7, ?). Find the missing number.", "options": ["42", "13", "36", "48"], "correct_answer": "42", "step_by_step": "Third = product of first two: 6 x 7 = 42.", "shortcut": "Check the rule on both complete rows first."},
+    {"difficulty": "easy", "question": "Pairs: (5, 25), (7, 49), (9, ?).", "options": ["81", "63", "72", "90"], "correct_answer": "81", "step_by_step": "Second = square of first: 9^2 = 81.", "shortcut": "Square pattern."},
+    {"difficulty": "medium", "question": "In each triangle, the centre equals the sum of the three corners. Corners 6, 7, 8 give centre:", "options": ["21", "20", "22", "336"], "correct_answer": "21", "step_by_step": "6 + 7 + 8 = 21.", "shortcut": "Stated rule, direct sum."},
+    {"difficulty": "hard", "question": "Sequence in a grid: 8, 27, 64, ?", "options": ["125", "100", "81", "216"], "correct_answer": "125", "step_by_step": "Consecutive cubes: 2^3, 3^3, 4^3, 5^3 = 125.", "shortcut": "Fast growth suggests cubes."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["puzzle", "row-rule"], "question": "Rows: (3, 4, 7), (8, 5, 13), (9, 6, ?).", "options": ["15", "14", "54", "12"], "correct_answer": "15", "explanation": "Third = sum: 9 + 6 = 15."},
+    {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["puzzle", "difference"], "question": "Rows: (9, 4, 5), (12, 7, 5), (15, 6, ?).", "options": ["9", "10", "8", "21"], "correct_answer": "9", "explanation": "Third = difference: 15 - 6 = 9."},
+    {"difficulty": "easy", "estimated_time_sec": 50, "tags": ["puzzle", "letters"], "question": "Letter pairs: (A, C), (D, F), (G, I), (J, ?).", "options": ["L", "K", "M", "N"], "correct_answer": "L", "explanation": "Second letter = first + 2 positions: J(10) + 2 = L(12)."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["puzzle", "centre"], "question": "In each circle, the centre equals the product of the two outer numbers divided by 2. Outer 8 and 6 give centre:", "options": ["24", "48", "14", "12"], "correct_answer": "24", "explanation": "8 x 6/2 = 24."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["puzzle", "square-plus"], "question": "Pairs: (2, 5), (3, 10), (4, 17), (5, ?).", "options": ["26", "25", "24", "30"], "correct_answer": "26", "explanation": "Second = square + 1: 25 + 1 = 26."},
+    {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["puzzle", "mixed"], "question": "Rows: (4, 5, 41), (2, 3, 13), (6, 1, ?). (Rule: a^2 + b^2)", "options": ["37", "36", "49", "35"], "correct_answer": "37", "explanation": "36 + 1 = 37; checks: 16+25=41, 4+9=13."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["puzzle", "wheel"], "question": "Around a wheel: 3, 6, 12, 24, ?, with each number double the previous (clockwise).", "options": ["48", "36", "30", "96"], "correct_answer": "48", "explanation": "24 x 2 = 48."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["puzzle", "two-step"], "question": "Rows: (1, 2, 9), (2, 3, 25), (3, 4, ?). Find the missing number.", "options": ["49", "36", "25", "64"], "correct_answer": "49", "explanation": "Third = (a+b)^2: (1+2)^2 = 9, (2+3)^2 = 25, (3+4)^2 = 49."}
+  ],
+  "topic_test": {
+    "title": "Character Puzzle - Topic Test",
+    "duration_minutes": 12,
+    "negative_mark": 0.25,
+    "instructions": ["7 questions, 12 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Verify your rule on every complete row before answering."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 50, "tags": ["puzzle"], "question": "Rows: (5, 3, 15), (7, 2, 14), (9, 4, ?).", "options": ["36", "13", "32", "45"], "correct_answer": "36", "explanation": "Product rule: 9 x 4."},
+      {"difficulty": "easy", "estimated_time_sec": 50, "tags": ["puzzle"], "question": "Pairs: (1, 1), (2, 8), (3, 27), (4, ?).", "options": ["64", "16", "32", "81"], "correct_answer": "64", "explanation": "Cubes."},
+      {"difficulty": "easy", "estimated_time_sec": 50, "tags": ["puzzle"], "question": "Letter triples: (A, B, C), (D, E, F), (G, H, ?).", "options": ["I", "J", "K", "H"], "correct_answer": "I", "explanation": "Consecutive letters."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["puzzle"], "question": "Centre = half the sum of four corners. Corners 6, 8, 10, 16 give centre:", "options": ["20", "40", "18", "24"], "correct_answer": "20", "explanation": "40/2 = 20."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["puzzle"], "question": "Rows: (2, 5, 12), (3, 6, 21), (4, 7, ?). Find the missing number.", "options": ["32", "30", "28", "34"], "correct_answer": "32", "explanation": "Third = a x b + a: 2x5+2 = 12, 3x6+3 = 21, 4x7+4 = 32."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["puzzle"], "question": "Pairs: (11, 121), (13, 169), (15, ?).", "options": ["225", "215", "255", "235"], "correct_answer": "225", "explanation": "Squares: 15^2."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["puzzle"], "question": "Rows: (6, 3, 3), (12, 4, 8), (20, 5, ?).", "options": ["15", "16", "12", "25"], "correct_answer": "15", "explanation": "Third = first - second: 20 - 5 = 15."}
+    ]
+  }
+}

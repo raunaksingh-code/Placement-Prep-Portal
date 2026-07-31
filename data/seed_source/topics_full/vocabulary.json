@@ -1,0 +1,79 @@
+{
+  "study_material": {
+    "title": "Vocabulary - Complete Study Notes",
+    "introduction": "Vocabulary questions test word meaning in context: fill in the blanks, one-word substitution, and commonly confused word pairs. Building vocabulary through roots and confusable pairs beats memorising isolated definitions.",
+    "learning_objectives": [
+      "Choose words that fit both meaning and context",
+      "Distinguish commonly confused word pairs",
+      "Apply one-word substitutions",
+      "Use roots, prefixes and suffixes to infer unknown meanings"
+    ],
+    "concepts": [
+      {"heading": "1. Commonly Confused Pairs", "body": "Accept (receive) / Except (excluding). Affect (verb: influence) / Effect (noun: result). Principal (head, main) / Principle (rule). Stationary (not moving) / Stationery (writing material). Complement (completes) / Compliment (praise). Eminent (famous) / Imminent (about to happen). Advice (noun) / Advise (verb). Lose (misplace) / Loose (not tight)."},
+      {"heading": "2. One-Word Substitution", "body": "A person who loves books = bibliophile. One who eats everything = omnivore. Study of birds = ornithology. A speech to oneself = soliloquy. Fear of water = hydrophobia. One who knows everything = omniscient. Government by the people = democracy. A cure for all diseases = panacea. One who is new to a field = novice. Words that read the same backwards = palindrome."},
+      {"heading": "3. Suffixes Signal Part of Speech", "body": "-tion, -ment, -ness, -ity make nouns. -ous, -ful, -ive, -able make adjectives. -ly usually makes adverbs. -ise/-ize, -ify, -en make verbs. In fill-in-the-blank questions, the required part of speech eliminates half the options immediately."},
+      {"heading": "4. Context Clues", "body": "Contrast clues follow 'but', 'however', 'although' - the blank opposes the earlier idea. Cause-effect clues follow 'because', 'therefore', 'so'. Example clues follow 'such as', 'for instance'. Read the FULL sentence before choosing; the clue often sits after the blank."},
+      {"heading": "5. Collocations", "body": "Certain words habitually pair: 'heavy rain' (not strong rain), 'strong coffee' (not powerful coffee), 'make a decision', 'do homework', 'take a risk', 'pay attention', 'keen interest', 'bitter cold'. Placement papers often test these natural pairings."}
+    ],
+    "formulas": [
+      "Affect = verb, Effect = noun (usually)",
+      "Principal = main/head, Principle = rule",
+      "Stationary = still, Stationery = paper",
+      "Contrast words (but, however) signal an opposite in the blank"
+    ],
+    "shortcut_methods": [
+      "Identify the needed part of speech from the sentence frame first",
+      "Look for the signal word (but/because/therefore) to fix direction",
+      "Test each option by reading the complete sentence aloud mentally"
+    ],
+    "common_mistakes": [
+      "Confusing affect and effect",
+      "Ignoring the signal word and choosing a word of the wrong polarity",
+      "Picking a word with correct meaning but wrong collocation"
+    ],
+    "summary": "Fix the part of speech, read the signal word for direction, then choose the option with the right meaning AND the natural collocation.",
+    "quick_revision_notes": [
+      "Affect (v) / Effect (n)",
+      "Bibliophile = book lover; Panacea = cure-all",
+      "'But/however' flips the direction of the blank",
+      "Heavy rain, strong coffee - collocations matter"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Fill in the blank: 'The new policy will ___ all employees.'", "options": ["affect", "effect", "affects", "effects"], "correct_answer": "affect", "step_by_step": "A verb is needed after 'will'. 'Affect' is the verb meaning to influence; 'effect' is normally a noun.", "shortcut": "A for Action (verb) = Affect."},
+    {"difficulty": "easy", "question": "One word for 'a person who loves books':", "options": ["Bibliophile", "Bibliography", "Librarian", "Scholar"], "correct_answer": "Bibliophile", "step_by_step": "BIBLIO (book) + PHILE (lover) = bibliophile.", "shortcut": "PHIL = love (philanthropy, philosophy)."},
+    {"difficulty": "medium", "question": "Fill in the blank: 'He is the ___ of the school and a man of high ___.'", "options": ["principal, principles", "principle, principals", "principal, principals", "principle, principles"], "correct_answer": "principal, principles", "step_by_step": "The head of a school is the 'principal'; moral rules are 'principles'.", "shortcut": "The principAL is your PAL; a principLE is a ruLE."},
+    {"difficulty": "medium", "question": "Fill in the blank: 'Although the task seemed simple, it proved surprisingly ___.'", "options": ["complex", "easy", "quick", "straightforward"], "correct_answer": "complex", "step_by_step": "'Although' signals contrast with 'simple', so the blank needs an opposite - complex.", "shortcut": "Contrast signal words demand opposite-direction answers."},
+    {"difficulty": "hard", "question": "One word for 'a remedy for all diseases':", "options": ["Panacea", "Antidote", "Vaccine", "Placebo"], "correct_answer": "Panacea", "step_by_step": "PAN (all) + ACEA (cure) = a universal remedy. An antidote counters one poison; a placebo has no active effect.", "shortcut": "PAN = all (pandemic, panorama)."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["vocabulary", "confused-pairs"], "question": "Fill in the blank: 'Please ___ my apology.'", "options": ["accept", "except", "expect", "access"], "correct_answer": "accept", "explanation": "Accept means to receive willingly."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["vocabulary", "confused-pairs"], "question": "Fill in the blank: 'The car remained ___ at the signal.'", "options": ["stationary", "stationery", "stationaries", "stationeries"], "correct_answer": "stationary", "explanation": "Stationary means not moving; stationery means writing materials."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["vocabulary", "one-word"], "question": "One word for 'the study of birds':", "options": ["Ornithology", "Biology", "Zoology", "Geology"], "correct_answer": "Ornithology", "explanation": "ORNITHO means bird."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["vocabulary", "collocation"], "question": "Choose the natural collocation: '___ rain forced the match to be abandoned.'", "options": ["Heavy", "Strong", "Big", "Thick"], "correct_answer": "Heavy", "explanation": "'Heavy rain' is the standard English collocation."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["vocabulary", "confused-pairs"], "question": "Fill in the blank: 'The medicine had no ___ on his fever.'", "options": ["effect", "affect", "affects", "effecting"], "correct_answer": "effect", "explanation": "A noun is needed after 'no' - effect is the noun meaning result."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["vocabulary", "context"], "question": "Fill in the blank: 'Because he had prepared thoroughly, he felt ___ before the interview.'", "options": ["confident", "anxious", "unprepared", "doubtful"], "correct_answer": "confident", "explanation": "'Because' signals a consistent cause-effect direction - preparation leads to confidence."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["vocabulary", "one-word"], "question": "One word for 'a speech made to oneself':", "options": ["Soliloquy", "Dialogue", "Monologue", "Debate"], "correct_answer": "Soliloquy", "explanation": "SOLI (alone) + LOQU (speak). A monologue has an audience; a soliloquy does not."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["vocabulary", "confused-pairs"], "question": "Fill in the blank: 'She gave me valuable ___ about my career.'", "options": ["advice", "advise", "advices", "advising"], "correct_answer": "advice", "explanation": "Advice is the noun; advise is the verb. Advice is uncountable."},
+    {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["vocabulary", "one-word"], "question": "One word for 'one who knows everything':", "options": ["Omniscient", "Omnipotent", "Omnipresent", "Omnivorous"], "correct_answer": "Omniscient", "explanation": "OMNI (all) + SCIENT (knowing). Omnipotent is all-powerful; omnipresent is everywhere."},
+    {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["vocabulary", "context"], "question": "Fill in the blank: 'The witness gave a ___ account, omitting no relevant detail.'", "options": ["comprehensive", "brief", "vague", "partial"], "correct_answer": "comprehensive", "explanation": "'Omitting no relevant detail' defines the blank as complete and thorough."}
+  ],
+  "topic_test": {
+    "title": "Vocabulary - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Identify the required part of speech and the signal word before choosing."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["vocabulary"], "question": "Fill in the blank: 'Everyone attended ___ Ramesh, who was ill.'", "options": ["except", "accept", "expect", "aspect"], "correct_answer": "except", "explanation": "'Except' means excluding."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["vocabulary"], "question": "One word for 'a person who eats both plants and meat':", "options": ["Omnivore", "Herbivore", "Carnivore", "Insectivore"], "correct_answer": "Omnivore", "explanation": "OMNI (all) + VORE (eat)."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["vocabulary"], "question": "Fill in the blank: 'Don't ___ your keys again.'", "options": ["lose", "loose", "loss", "losing"], "correct_answer": "lose", "explanation": "'Lose' is the verb; 'loose' means not tight."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["vocabulary"], "question": "Fill in the blank: 'The scientist is an ___ authority in genetics, respected worldwide.'", "options": ["eminent", "imminent", "immanent", "emanant"], "correct_answer": "eminent", "explanation": "Eminent means distinguished; imminent means about to happen."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["vocabulary"], "question": "One word for 'fear of water':", "options": ["Hydrophobia", "Claustrophobia", "Acrophobia", "Xenophobia"], "correct_answer": "Hydrophobia", "explanation": "HYDRO (water) + PHOBIA (fear)."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["vocabulary"], "question": "Fill in the blank: 'The two colours ___ each other beautifully in the design.'", "options": ["complement", "compliment", "complimentary", "complementing"], "correct_answer": "complement", "explanation": "Complement means to complete or go well together; compliment is praise."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["vocabulary"], "question": "Fill in the blank: 'Despite his wealth, he lived a remarkably ___ life.'", "options": ["austere", "lavish", "extravagant", "opulent"], "correct_answer": "austere", "explanation": "'Despite his wealth' signals contrast, so the blank must mean simple or plain."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["vocabulary"], "question": "One word for 'a word or phrase that reads the same backwards':", "options": ["Palindrome", "Homonym", "Synonym", "Acronym"], "correct_answer": "Palindrome", "explanation": "Examples: level, madam, racecar."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["vocabulary"], "question": "Fill in the blank: 'His argument was so ___ that even his critics were persuaded.'", "options": ["cogent", "feeble", "muddled", "trivial"], "correct_answer": "cogent", "explanation": "Cogent means clear, logical and convincing - matching the persuasive effect described."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["vocabulary"], "question": "One word for 'government by the wealthy':", "options": ["Plutocracy", "Democracy", "Autocracy", "Bureaucracy"], "correct_answer": "Plutocracy", "explanation": "PLUTO (wealth) + CRACY (rule)."}
+    ]
+  }
+}

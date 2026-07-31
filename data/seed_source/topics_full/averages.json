@@ -1,0 +1,81 @@
+{
+  "study_material": {
+    "title": "Averages - Complete Study Notes",
+    "introduction": "Average (arithmetic mean) = Sum of observations / Number of observations. Placement papers love averages because a single insight - total = average x count - solves almost every question, from cricket scores to teacher-joins-the-class puzzles.",
+    "learning_objectives": [
+      "Convert between averages and totals fluently",
+      "Handle a member joining or leaving a group",
+      "Use deviations from an assumed mean for fast calculation",
+      "Solve weighted average and average speed problems",
+      "Work with averages of consecutive numbers"
+    ],
+    "concepts": [
+      {"heading": "1. The Core Identity", "body": "Average = Total / Count, so Total = Average x Count. Most questions give you two of these three quantities in disguise. Always convert to totals first - averages themselves cannot be added, but totals can."},
+      {"heading": "2. Joining and Leaving", "body": "When a new member joins and the average changes, the newcomer's value = new average + old count x (change in average). When a member leaves: removed value = old total - new total. Example: average of 5 numbers is 27; removing one makes it 25; removed number = 5x27 - 4x25 = 35."},
+      {"heading": "3. Weighted Average", "body": "If group 1 has n1 members with average a1 and group 2 has n2 with average a2, combined average = (n1a1 + n2a2)/(n1 + n2). The combined average always lies between a1 and a2, closer to the bigger group."},
+      {"heading": "4. Average Speed", "body": "Average speed = Total distance / Total time, NOT the mean of the speeds. For equal distances at speeds a and b, average speed = 2ab/(a+b) (harmonic mean). For equal times, it is (a+b)/2."},
+      {"heading": "5. Consecutive Numbers", "body": "The average of consecutive (or evenly spaced) numbers is the middle term, or the mean of the first and last. Average of 1 to n = (n+1)/2. Average of first n even numbers = n+1; of first n odd numbers = n."}
+    ],
+    "formulas": [
+      "Average = Sum / Count",
+      "New member's value = new avg + old count x (rise in avg)",
+      "Combined average = (n1a1 + n2a2)/(n1 + n2)",
+      "Average speed over equal distances = 2ab/(a+b)",
+      "Average of 1 to n = (n+1)/2"
+    ],
+    "shortcut_methods": [
+      "Work with deviations from a convenient base instead of full values",
+      "For evenly spaced series, the average is simply the middle value",
+      "When average rises by r after adding one member to n members, the newcomer exceeds the old average by (n+1)r"
+    ],
+    "common_mistakes": [
+      "Averaging two speeds arithmetically when distances are equal",
+      "Adding averages of different-sized groups directly",
+      "Forgetting to count the new member in the divisor after joining"
+    ],
+    "summary": "Convert everything to totals, keep track of how many values are in play, and use the harmonic mean for equal-distance speed problems.",
+    "quick_revision_notes": [
+      "Total = Average x Count - the master identity",
+      "Removed value = old total - new total",
+      "Equal distances: avg speed = 2ab/(a+b)",
+      "Evenly spaced series: average = middle term"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Find the average of the first 25 natural numbers.", "options": ["13", "12.5", "12", "13.5"], "correct_answer": "13", "step_by_step": "Average of 1 to n = (n+1)/2 = 26/2 = 13.", "shortcut": "For consecutive numbers, average = middle term = 13th term."},
+    {"difficulty": "medium", "question": "The average of 5 numbers is 27. If one number is removed, the average becomes 25. Find the removed number.", "options": ["35", "30", "32", "27"], "correct_answer": "35", "step_by_step": "Old total = 5 x 27 = 135. New total = 4 x 25 = 100. Removed = 135 - 100 = 35.", "shortcut": "Removed = new avg + old count x (drop in avg) = 25 + 5x2 = 35."},
+    {"difficulty": "medium", "question": "A batsman has scored an average of 40 runs in 9 innings. How many runs must he score in the 10th innings to raise his average to 41?", "options": ["50", "45", "borderline 49", "51"], "correct_answer": "50", "step_by_step": "Required total = 41 x 10 = 410. Runs so far = 360. Needed = 410 - 360 = 50.", "shortcut": "New score = new avg + old innings x rise = 41 + 9x1 = 50."},
+    {"difficulty": "medium", "question": "A car travels from A to B at 60 km/h and returns at 40 km/h. Find its average speed for the whole journey.", "options": ["48 km/h", "50 km/h", "45 km/h", "52 km/h"], "correct_answer": "48 km/h", "step_by_step": "Equal distances: average speed = 2ab/(a+b) = 2x60x40/100 = 48 km/h.", "shortcut": "Harmonic mean, never (60+40)/2."},
+    {"difficulty": "hard", "question": "The average age of a team is 24 years. When the 49-year-old coach is included, the average becomes 25. How many players are in the team?", "options": ["24", "22", "20", "25"], "correct_answer": "24", "step_by_step": "Let n players: (24n + 49)/(n+1) = 25 gives 24n + 49 = 25n + 25, so n = 24.", "shortcut": "Coach exceeds new average by 24; that surplus covers a 1-year rise for all n+1 people: 49 - 25 = 24 = n x 1."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 25, "tags": ["averages", "basics"], "question": "Find the average of 10, 20, 30, 40 and 50.", "options": ["30", "25", "35", "28"], "correct_answer": "30", "explanation": "Sum = 150, count = 5, average = 30. For evenly spaced values, average = middle term."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["averages", "consecutive"], "question": "The average of 5 consecutive odd numbers is 27. Find the largest of them.", "options": ["31", "29", "33", "35"], "correct_answer": "31", "explanation": "Middle (3rd) number = 27, so numbers are 23, 25, 27, 29, 31."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["averages", "basics"], "question": "The average of the first 10 even numbers is:", "options": ["11", "10", "12", "10.5"], "correct_answer": "11", "explanation": "First 10 even numbers sum to 110; 110/10 = 11. In general, average of first n even numbers = n + 1."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["averages", "join-leave"], "question": "The average weight of 40 students is 35 kg. When the teacher is included, the average rises to 35.5 kg. Find the teacher's weight.", "options": ["55.5 kg", "50 kg", "52.5 kg", "56 kg"], "correct_answer": "55.5 kg", "explanation": "Teacher = 35.5 x 41 - 35 x 40 = 1455.5 - 1400 = 55.5 kg."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["averages", "weighted"], "question": "30 students have an average score of 60 and another 20 students average 75. Find the combined average.", "options": ["66", "67.5", "65", "68"], "correct_answer": "66", "explanation": "(30x60 + 20x75)/50 = (1800 + 1500)/50 = 66."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["averages", "partial-groups"], "question": "The mean of 7 numbers is 81. The mean of the first 3 is 79 and of the last 3 is 84. Find the 4th number.", "options": ["78", "80", "76", "82"], "correct_answer": "78", "explanation": "4th = 7x81 - 3x79 - 3x84 = 567 - 237 - 252 = 78."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["averages", "ages"], "question": "Five children were born at 3-year intervals. If the sum of their ages is 50, how old is the youngest?", "options": ["4", "5", "6", "3"], "correct_answer": "4", "explanation": "Ages x, x+3, x+6, x+9, x+12 sum to 5x + 30 = 50, so x = 4."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["averages", "join-leave"], "question": "The average marks in 4 subjects is 75. After a 5th subject is added, the average becomes 78. Find the marks in the 5th subject.", "options": ["90", "85", "88", "93"], "correct_answer": "90", "explanation": "5th subject = 78 x 5 - 75 x 4 = 390 - 300 = 90."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["averages", "overlapping"], "question": "The average of 11 results is 50. The average of the first 6 is 49 and of the last 6 is 52. Find the 6th result.", "options": ["56", "50", "54", "58"], "correct_answer": "56", "explanation": "The 6th result is counted twice: 6x49 + 6x52 - 11x50 = 294 + 312 - 550 = 56."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["averages", "temperature"], "question": "The average temperature of Monday, Tuesday and Wednesday is 37 deg C, and of Tuesday, Wednesday and Thursday is 34 deg C. If Monday was 36 deg C, find Thursday's temperature.", "options": ["27", "30", "33", "25"], "correct_answer": "27", "explanation": "Subtracting the two totals: Thu - Mon = 102 - 111 = -9, so Thu = 36 - 9 = 27."}
+  ],
+  "topic_test": {
+    "title": "Averages - Topic Test",
+    "duration_minutes": 20,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 20 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Convert averages to totals before manipulating."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["averages"], "question": "The average of 8, 12, 16, 20, 24 is:", "options": ["16", "15", "18", "17"], "correct_answer": "16", "explanation": "Evenly spaced values: average = middle term = 16."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["averages"], "question": "The average of the first 9 consecutive integers starting from 11 is:", "options": ["15", "14", "16", "15.5"], "correct_answer": "15", "explanation": "Numbers 11 to 19; average = middle term = 15."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["averages"], "question": "The average of 6 numbers is 30. If each number is doubled, the new average is:", "options": ["60", "30", "36", "90"], "correct_answer": "60", "explanation": "Scaling every value by k scales the average by k: 30 x 2 = 60."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["averages"], "question": "A cricketer's average after 10 innings is 32. How many runs in the 11th innings raise his average to 34?", "options": ["54", "50", "44", "56"], "correct_answer": "54", "explanation": "Needed = 34 x 11 - 32 x 10 = 374 - 320 = 54."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["averages"], "question": "The average salary of 20 workers is Rs. 15,000. Including the manager, the average becomes Rs. 15,500. The manager's salary is:", "options": ["Rs. 25,500", "Rs. 26,000", "Rs. 24,500", "Rs. 25,000"], "correct_answer": "Rs. 25,500", "explanation": "Manager = 15500 x 21 - 15000 x 20 = 325500 - 300000 = 25,500."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["averages"], "question": "A student walks to school at 5 km/h and returns at 3 km/h. The average speed for the round trip is:", "options": ["3.75 km/h", "4 km/h", "4.25 km/h", "3.5 km/h"], "correct_answer": "3.75 km/h", "explanation": "2ab/(a+b) = 2x5x3/8 = 3.75 km/h."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["averages"], "question": "The average of 30 numbers is 12. The average of the first 20 is 11. Find the average of the remaining 10.", "options": ["14", "13", "15", "12.5"], "correct_answer": "14", "explanation": "Remaining total = 360 - 220 = 140; 140/10 = 14."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["averages"], "question": "The average age of a family of 6 is 22. The youngest is 7. What was the average age of the family just before the youngest was born?", "options": ["18", "15", "17", "20"], "correct_answer": "18", "explanation": "7 years ago total = 132 - 6x7 = 90 for 5 members: 90/5 = 18."},
+      {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["averages"], "question": "The average of 20 numbers is zero. At most how many of them can be positive?", "options": ["19", "10", "20", "1"], "correct_answer": "19", "explanation": "19 can be positive if the 20th is negative enough to cancel their sum."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["averages"], "question": "Average of a, b, c is 20. Average of a and b is 17. Find c.", "options": ["26", "23", "24", "28"], "correct_answer": "26", "explanation": "c = 3x20 - 2x17 = 60 - 34 = 26."}
+    ]
+  }
+}

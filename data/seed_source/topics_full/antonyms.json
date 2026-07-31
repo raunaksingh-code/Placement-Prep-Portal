@@ -1,0 +1,79 @@
+{
+  "study_material": {
+    "title": "Antonyms - Complete Study Notes",
+    "introduction": "An antonym is a word opposite in meaning to another. Antonym questions punish careless reading, because synonym options are always planted among the choices. Slow down on the instruction word, then use prefix and root logic.",
+    "learning_objectives": [
+      "Identify true opposites rather than merely different words",
+      "Use negative prefixes to construct and recognise antonyms",
+      "Distinguish gradable from complementary opposites",
+      "Avoid the planted-synonym trap"
+    ],
+    "concepts": [
+      {"heading": "1. Types of Opposites", "body": "Complementary (absolute) pairs admit no middle: alive/dead, present/absent. Gradable pairs sit on a scale: hot/cold, rich/poor - things can be in between. Relational pairs mirror each other: buy/sell, teacher/student, parent/child. Identify the type, because gradable words often have several valid opposites of differing intensity."},
+      {"heading": "2. Prefix-Formed Antonyms", "body": "Many antonyms are made by adding a negative prefix: happy/unhappy, possible/impossible, regular/irregular, legal/illegal, agree/disagree, sense/nonsense. Note the spelling rules - 'im-' before m/p (impossible, immature), 'ir-' before r (irregular), 'il-' before l (illegal), 'in-' elsewhere (inactive)."},
+      {"heading": "3. Root-Based Opposites", "body": "Roots with opposite senses pair naturally: BENE (good) vs MAL (bad) - benevolent/malevolent. PRO (for) vs ANTI (against) - protagonist/antagonist. EU (good) vs DYS (bad) - euphoria/dysphoria. MICRO vs MACRO, HYPER vs HYPO."},
+      {"heading": "4. Intensity Matching", "body": "The best antonym matches the intensity of the given word. The opposite of 'furious' is better served by 'calm' than by 'slightly annoyed'. Likewise, extreme words need extreme opposites: 'adore' pairs with 'detest', not merely 'dislike'."},
+      {"heading": "5. High-Frequency Antonym Pairs", "body": "Abundant/scarce. Benevolent/malevolent. Candid/evasive. Concise/verbose. Diligent/lazy. Frugal/extravagant. Gregarious/reclusive. Humble/arrogant. Lucid/obscure. Novice/expert. Optimistic/pessimistic. Praise/criticise. Rigid/flexible. Transparent/opaque. Vibrant/dull."}
+    ],
+    "formulas": [
+      "im- before m/p, ir- before r, il- before l, in- elsewhere",
+      "BENE vs MAL, PRO vs ANTI, EU vs DYS",
+      "Match intensity: extreme word needs extreme opposite",
+      "Complementary vs gradable vs relational opposites"
+    ],
+    "shortcut_methods": [
+      "Underline the word ANTONYM in the instruction before reading options",
+      "If one option is an obvious synonym, it is the planted trap - eliminate it",
+      "Build the opposite yourself first, then find the closest option"
+    ],
+    "common_mistakes": [
+      "Selecting a synonym because it 'feels related'",
+      "Ignoring intensity and choosing a weak opposite",
+      "Assuming every word forms its antonym with 'un-'"
+    ],
+    "summary": "Confirm you need the opposite, form it mentally using prefixes and roots, then match intensity against the options.",
+    "quick_revision_notes": [
+      "Concise/verbose, Frugal/extravagant",
+      "Gregarious/reclusive, Transparent/opaque",
+      "im-/ir-/il-/in- spelling rule",
+      "Beware the planted synonym"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Choose the antonym of ABUNDANT.", "options": ["Scarce", "Plentiful", "Ample", "Copious"], "correct_answer": "Scarce", "step_by_step": "Abundant means plentiful; its opposite is scarce. The other three options are all synonyms - classic traps.", "shortcut": "Three synonyms clustered together means the odd one is the answer."},
+    {"difficulty": "easy", "question": "Choose the antonym of HUMBLE.", "options": ["Arrogant", "Modest", "Meek", "Simple"], "correct_answer": "Arrogant", "step_by_step": "Humble means modest; arrogant is the opposite. Modest, meek and simple are all synonyms.", "shortcut": "Spot the synonym cluster and pick the outsider."},
+    {"difficulty": "medium", "question": "Choose the antonym of CONCISE.", "options": ["Verbose", "Brief", "Succinct", "Terse"], "correct_answer": "Verbose", "step_by_step": "Concise means expressed in few words. Verbose means using too many words - the true opposite.", "shortcut": "Brief, succinct and terse all mean short; verbose stands alone."},
+    {"difficulty": "medium", "question": "Choose the antonym of TRANSPARENT.", "options": ["Opaque", "Clear", "Translucent", "Obvious"], "correct_answer": "Opaque", "step_by_step": "Transparent lets light through completely; opaque blocks it entirely. Translucent is only partial, so opaque is the stronger and correct opposite.", "shortcut": "Match the full intensity of the given word."},
+    {"difficulty": "hard", "question": "Choose the antonym of GREGARIOUS.", "options": ["Reclusive", "Sociable", "Outgoing", "Friendly"], "correct_answer": "Reclusive", "step_by_step": "Gregarious means fond of company. Reclusive means preferring solitude - the opposite. The other three are synonyms.", "shortcut": "Recluse = one who withdraws from society."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 25, "tags": ["antonyms", "common"], "question": "Choose the antonym of ANCIENT.", "options": ["Modern", "Old", "Antique", "Aged"], "correct_answer": "Modern", "explanation": "Ancient means very old; modern is its opposite."},
+    {"difficulty": "easy", "estimated_time_sec": 25, "tags": ["antonyms", "common"], "question": "Choose the antonym of VICTORY.", "options": ["Defeat", "Triumph", "Success", "Win"], "correct_answer": "Defeat", "explanation": "The other three all mean victory."},
+    {"difficulty": "easy", "estimated_time_sec": 25, "tags": ["antonyms", "common"], "question": "Choose the antonym of EXPAND.", "options": ["Contract", "Enlarge", "Grow", "Increase"], "correct_answer": "Contract", "explanation": "Contract means to become smaller."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["antonyms", "prefix"], "question": "Choose the antonym of PERMANENT.", "options": ["Temporary", "Lasting", "Enduring", "Fixed"], "correct_answer": "Temporary", "explanation": "Permanent means lasting indefinitely; temporary is limited in time."},
+    {"difficulty": "medium", "estimated_time_sec": 40, "tags": ["antonyms", "roots"], "question": "Choose the antonym of BENEVOLENT.", "options": ["Malevolent", "Kind", "Generous", "Charitable"], "correct_answer": "Malevolent", "explanation": "BENE (good) versus MAL (bad)."},
+    {"difficulty": "medium", "estimated_time_sec": 40, "tags": ["antonyms", "intensity"], "question": "Choose the antonym of FRUGAL.", "options": ["Extravagant", "Thrifty", "Economical", "Prudent"], "correct_answer": "Extravagant", "explanation": "Frugal means sparing; extravagant means spending excessively."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["antonyms", "common"], "question": "Choose the antonym of RIGID.", "options": ["Flexible", "Stiff", "Firm", "Inflexible"], "correct_answer": "Flexible", "explanation": "Rigid means unbending; flexible bends easily."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["antonyms", "common"], "question": "Choose the antonym of OPTIMISTIC.", "options": ["Pessimistic", "Hopeful", "Positive", "Cheerful"], "correct_answer": "Pessimistic", "explanation": "The other three are synonyms of optimistic."},
+    {"difficulty": "hard", "estimated_time_sec": 55, "tags": ["antonyms", "advanced"], "question": "Choose the antonym of AUTHENTIC.", "options": ["Counterfeit", "Genuine", "Real", "Original"], "correct_answer": "Counterfeit", "explanation": "Authentic means genuine; counterfeit means fake."},
+    {"difficulty": "hard", "estimated_time_sec": 55, "tags": ["antonyms", "advanced"], "question": "Choose the antonym of CONDEMN.", "options": ["Praise", "Blame", "Criticise", "Denounce"], "correct_answer": "Praise", "explanation": "Condemn means to express strong disapproval; praise is the opposite."}
+  ],
+  "topic_test": {
+    "title": "Antonyms - Topic Test",
+    "duration_minutes": 12,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 12 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "These ask for OPPOSITES - synonyms are planted as traps."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["antonyms"], "question": "Choose the antonym of ACCEPT.", "options": ["Reject", "Receive", "Take", "Admit"], "correct_answer": "Reject", "explanation": "Reject is the direct opposite of accept."},
+      {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["antonyms"], "question": "Choose the antonym of ARTIFICIAL.", "options": ["Natural", "Synthetic", "Fake", "Man-made"], "correct_answer": "Natural", "explanation": "The other three are synonyms of artificial."},
+      {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["antonyms"], "question": "Choose the antonym of DILIGENT.", "options": ["Lazy", "Industrious", "Hardworking", "Careful"], "correct_answer": "Lazy", "explanation": "Diligent means hardworking; lazy is the opposite."},
+      {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["antonyms"], "question": "Choose the antonym of LUCID.", "options": ["Obscure", "Clear", "Plain", "Evident"], "correct_answer": "Obscure", "explanation": "Lucid means clear; obscure means hard to understand."},
+      {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["antonyms"], "question": "Choose the antonym of NOVICE.", "options": ["Expert", "Beginner", "Learner", "Trainee"], "correct_answer": "Expert", "explanation": "The other three all describe a newcomer."},
+      {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["antonyms"], "question": "Choose the antonym of TEMPORARY.", "options": ["Permanent", "Brief", "Short", "Passing"], "correct_answer": "Permanent", "explanation": "Temporary is short-lived; permanent lasts indefinitely."},
+      {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["antonyms"], "question": "Choose the antonym of ASCEND.", "options": ["Descend", "Climb", "Rise", "Mount"], "correct_answer": "Descend", "explanation": "Ascend is to go up; descend is to go down."},
+      {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["antonyms"], "question": "Choose the antonym of VERBOSE.", "options": ["Concise", "Wordy", "Rambling", "Lengthy"], "correct_answer": "Concise", "explanation": "Verbose means using too many words; concise means brief and clear."},
+      {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["antonyms"], "question": "Choose the antonym of AGGRAVATE.", "options": ["Alleviate", "Worsen", "Intensify", "Inflame"], "correct_answer": "Alleviate", "explanation": "Aggravate makes worse; alleviate makes better."},
+      {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["antonyms"], "question": "Choose the antonym of PROLOGUE.", "options": ["Epilogue", "Preface", "Introduction", "Foreword"], "correct_answer": "Epilogue", "explanation": "A prologue opens a work; an epilogue closes it. The other options are all opening sections."}
+    ]
+  }
+}

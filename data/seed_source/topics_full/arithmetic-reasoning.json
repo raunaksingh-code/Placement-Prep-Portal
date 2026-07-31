@@ -1,0 +1,76 @@
+{
+  "study_material": {
+    "title": "Arithmetic Reasoning - Complete Study Notes",
+    "introduction": "Arithmetic reasoning wraps simple equations inside word puzzles: heads and legs, ages, coins, strikes of a clock. Translate the words into equations, and the arithmetic itself stays easy.",
+    "learning_objectives": [
+      "Convert word puzzles into linear equations",
+      "Solve heads-and-legs and coin problems",
+      "Handle age relationship problems",
+      "Reason about consecutive integers, gaps and intervals"
+    ],
+    "concepts": [
+      {"heading": "1. Translate to Equations", "body": "Assign a variable to the unknown, write the relationships, solve. 'A number tripled plus 5 gives 20' becomes 3x + 5 = 20, x = 5. Most puzzles are one or two linear equations."},
+      {"heading": "2. Heads and Legs", "body": "With cows (4 legs) and hens (2 legs): if heads = H and legs = L, cows = (L - 2H)/2. Example: 48 heads, 140 legs gives cows = (140-96)/2 = 22. Check: 22x4 + 26x2 = 140."},
+      {"heading": "3. Ages", "body": "Father is 3 times son now; total 60 gives 45 and 15. For 'in k years' statements, add k to BOTH ages. Set the youngest as x to keep signs positive."},
+      {"heading": "4. Consecutive Numbers", "body": "Consecutive integers: x, x+1, x+2 - their sum is 3x+3, so sum/3 gives the middle one. Consecutive odd/even numbers step by 2."},
+      {"heading": "5. Gaps and Intervals", "body": "A clock striking 6 times has 5 gaps between strikes; n strikes = n-1 gaps. Poles, trees and cuts follow the same off-by-one logic: 10 cuts produce 11 pieces."}
+    ],
+    "formulas": [
+      "Cows = (Legs - 2 x Heads)/2",
+      "Sum of 3 consecutive integers = 3 x middle",
+      "n strikes/objects = n - 1 gaps",
+      "Age in k years = present + k for everyone"
+    ],
+    "shortcut_methods": [
+      "Middle value = sum/count for evenly spaced numbers",
+      "Guess-and-check against options is legitimate and fast",
+      "Draw a timeline for age problems with multiple time references"
+    ],
+    "common_mistakes": [
+      "Forgetting that both people age in 'after k years' statements",
+      "Confusing gaps with objects (fencepost errors)",
+      "Assigning the variable to the wrong person and getting negatives"
+    ],
+    "summary": "Name the unknown, write the sentence as an equation, watch for off-by-one gap traps.",
+    "quick_revision_notes": [
+      "Heads-legs: cows = (L-2H)/2",
+      "n strikes = n-1 gaps",
+      "Everyone ages together",
+      "Middle = sum/3 for consecutive triples"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "A number multiplied by 3 and increased by 5 gives 20. Find the number.", "options": ["5", "6", "4", "7"], "correct_answer": "5", "step_by_step": "3x + 5 = 20, so x = 5.", "shortcut": "Reverse the operations: (20-5)/3."},
+    {"difficulty": "medium", "question": "A farm has cows and hens with 48 heads and 140 legs. How many cows are there?", "options": ["22", "26", "20", "24"], "correct_answer": "22", "step_by_step": "Cows = (140 - 2x48)/2 = 44/2 = 22.", "shortcut": "Every cow adds 2 legs over a hen."},
+    {"difficulty": "medium", "question": "A father is three times as old as his son, and their ages total 60. The son's age is:", "options": ["15", "20", "12", "18"], "correct_answer": "15", "step_by_step": "x + 3x = 60, x = 15.", "shortcut": "Son owns 1 of 4 equal parts."},
+    {"difficulty": "hard", "question": "A clock takes 5 seconds to strike 6 o'clock (6 strikes). How long to strike 12?", "options": ["11 seconds", "10 seconds", "12 seconds", "9 seconds"], "correct_answer": "11 seconds", "step_by_step": "6 strikes = 5 gaps, so each gap = 1 s. 12 strikes = 11 gaps = 11 s.", "shortcut": "Count gaps, not strikes."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["arithmetic-reasoning", "consecutive"], "question": "Three consecutive integers sum to 51. The largest is:", "options": ["18", "17", "19", "16"], "correct_answer": "18", "explanation": "Middle = 17, so 16, 17, 18."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["arithmetic-reasoning", "equation"], "question": "Half of a number exceeds its third by 5. The number is:", "options": ["30", "20", "24", "36"], "correct_answer": "30", "explanation": "x/2 - x/3 = x/6 = 5, x = 30."},
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["arithmetic-reasoning", "cuts"], "question": "A log is cut into pieces with 10 cuts. How many pieces result?", "options": ["11", "10", "9", "12"], "correct_answer": "11", "explanation": "Cuts + 1 = pieces."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["arithmetic-reasoning", "ages"], "question": "Five years ago a mother was 4 times her daughter's age. Now the daughter is 10. The mother's present age is:", "options": ["25", "30", "35", "40"], "correct_answer": "25", "explanation": "Daughter was 5, mother was 20; now 25."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["arithmetic-reasoning", "coins"], "question": "A purse has equal numbers of Re 1, Rs 2 and Rs 5 coins totalling Rs 96. How many coins in all?", "options": ["36", "24", "30", "42"], "correct_answer": "36", "explanation": "Each triple is worth 8; 96/8 = 12 triples = 36 coins."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["arithmetic-reasoning", "handshakes"], "question": "At a meeting of 6 people, everyone shakes hands with everyone else once. Total handshakes:", "options": ["15", "12", "30", "20"], "correct_answer": "15", "explanation": "6x5/2 = 15."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["arithmetic-reasoning", "socks"], "question": "A drawer holds socks of 3 colours. Minimum socks to draw (in the dark) to guarantee a matching pair:", "options": ["4", "3", "5", "6"], "correct_answer": "4", "explanation": "Worst case: one of each colour (3), the 4th must match one."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["arithmetic-reasoning", "two-digit"], "question": "A two-digit number's digits sum to 9. Reversing the digits decreases the number by 27. The number is:", "options": ["63", "54", "72", "81"], "correct_answer": "63", "explanation": "10a+b with a+b=9 and 9(a-b)=27 gives a-b=3: a=6, b=3."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["arithmetic-reasoning", "ages-future"], "question": "A is 24 and twice as old as B was when A was as old as B is now. B's present age is:", "options": ["18", "16", "20", "12"], "correct_answer": "18", "explanation": "Let B = x now. When A was x, that was 24-x years ago; B was x-(24-x) = 2x-24. Given 24 = 2(2x-24): x = 18."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["arithmetic-reasoning", "poles"], "question": "Poles are placed 10 m apart along a straight 200 m road, with a pole at each end. How many poles are needed?", "options": ["21", "20", "19", "22"], "correct_answer": "21", "explanation": "200/10 = 20 gaps, so 21 poles."}
+  ],
+  "topic_test": {
+    "title": "Arithmetic Reasoning - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Translate each sentence into an equation before computing."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["arithmetic-reasoning"], "question": "A number decreased by 12 gives 25. The number is:", "options": ["37", "13", "35", "38"], "correct_answer": "37", "explanation": "x = 25 + 12."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["arithmetic-reasoning"], "question": "Four consecutive even numbers sum to 92. The smallest is:", "options": ["20", "22", "18", "24"], "correct_answer": "20", "explanation": "x + x+2 + x+4 + x+6 = 92: x = 20."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["arithmetic-reasoning"], "question": "In a class, every student plants as many trees as there are students. If 144 trees were planted, the class strength is:", "options": ["12", "14", "16", "18"], "correct_answer": "12", "explanation": "n^2 = 144."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["arithmetic-reasoning"], "question": "A father's age is 4 times his son's. In 20 years it will be double. The son's present age is:", "options": ["10", "12", "8", "15"], "correct_answer": "10", "explanation": "4x + 20 = 2(x + 20) gives x = 10."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["arithmetic-reasoning"], "question": "Spiders (8 legs) and beetles (6 legs) total 10 creatures with 68 legs. How many spiders?", "options": ["4", "5", "6", "3"], "correct_answer": "4", "explanation": "8s + 6(10-s) = 68 gives 2s = 8, s = 4."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["arithmetic-reasoning"], "question": "A clock strikes 4 in 3 seconds. Time to strike 8:", "options": ["7 seconds", "6 seconds", "8 seconds", "9 seconds"], "correct_answer": "7 seconds", "explanation": "3 gaps in 3 s = 1 s each; 8 strikes = 7 gaps."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["arithmetic-reasoning"], "question": "In an exam of 30 questions, +4 for correct and -1 for wrong, a student attempted all and scored 100. Correct answers:", "options": ["26", "25", "24", "28"], "correct_answer": "26", "explanation": "4c - (30-c) = 100 gives 5c = 130, c = 26."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["arithmetic-reasoning"], "question": "The sum of a number and its reciprocal is 26/5. The number is:", "options": ["5", "4", "6", "10"], "correct_answer": "5", "explanation": "x + 1/x = 26/5 is satisfied by x = 5 (5 + 1/5 = 26/5)."}
+    ]
+  }
+}

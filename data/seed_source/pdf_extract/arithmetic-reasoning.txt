@@ -1,0 +1,125 @@
+ARITHMETIC REASONING
+CONCEPTS
+Arithmetic Reasoning involves logical calculation,
+Venn–diagram and data–based problems. In this type
+of problems, some information is given, which makes
+us get confused. You need to analyze that information
+carefully and answer the question accordingly.
+CONCEPTUAL EXAMPLES
+1) Kiran, an eight years old boy has 27 toys. He gave 19
+toys to his brother Gourav, while Gourav playing all
+but 6 got destroyed. While Kiran playing all but 3 got
+destroyed. Finally how many toys left with both of
+them?
+a) 10          b) 18         c) 9         d) 8        e) none of these
+Explanation: While Gourav playing 'All but 6 got
+destroyed' means 'All except 6 got destroyed'. 
+i.e., 13 toys got  destroyed. It means now Gourav has 6
+toys. While Kiran is playing 'All but 3 got destroyed'
+means 'except 3 all are not working i.e; 3 toys are good
+working so total toys at both of them is 6 + 3 = 9.
+Ask doubt with Question Id: 8282
+2) Rohith,who works in a parcel service, has a certain
+number of small plastic boxes to pack into parcels. If he
+packs 3,4,5 or 6 in a parcel, he is left with one over; if he
+packs 7 in a parcel, none is left over. What is the
+number of boxes, he may have to pack?
+a) 300        b) 500       c) 301     d) 200      e) 201
+Explanation: The required number of boxes is such
+that it leaves a remainder of 1 when divided by 3, 4, 5
+or 6 and no remainder of 1 when divided by 3, 4, 5 or 6
+and no remainder when divided by 7. Such a number is
+301.
+Ask doubt with Question Id: 8283
+3) If man pays 20 for each Km which he travels by taxi
+₹
+and 10 for each Km which he travels by bus. If in one
+₹
+week he payed 800 for traveling 60 Km. How many
+₹
+kilometers did he travel by taxi ?
+a) 10           b) 15        c) 25       d) 20        e) 50
+Explanation: Let the distance covered by the taxi be 'x'
+Km. Then, distance covered by bus = (60 – x) Km.
+20x + 10 (60 – x)⇒20x + 600 – 10x = 800
+10x = 200  
+⇒x = 20 Km.   
+He traveled 20 Km by taxi.
+Ask doubt with Question Id: 8284
+4) In a group of dogs and peacocks, the number of legs
+are 18 less than four times the number of heads How
+many peacocks are there in that group?
+a) 9             b) 16        c) 8         d) 12        e) 13
+Explanation: Let the number of dogs be 'x' and the
+number of peacocks by 'y'.
+Then, number of legs in the group = 4x + 2y.
+Number of heads in the group = x+y
+So, 4x+2y = 4(x+y) – 18  
+⇒ 2y = 18  
+⇒y = 9
+Number of peacocks in that group = 9.
+Ask doubt with Question Id: 8285
+5) In a group of 15 people, 8 read English, 7 read
+French while 3 of them read none of these two. How
+many of them read French and English both?
+a) 6            b) 3            c) 5           d) 4            e) 2
+Explanation: In the Venn diagram, F and E represent
+people who read French and English respectively.
+Now, [F+({F ∩ E}) + E] = 15-3  (or) F+E+(F ∩ E) = 12 ......(1)
+Also, F+(F ∩ E) = 7;   E+(F ∩ E) = 8.
+By adding, F+E+2(F ∩ E) = 15 ---------- (2)
+By subtracting (1) from (2), we get (F ∩ E) = 3.
+ 3 of them read both French and English.
+∴
+Ask doubt with Question Id: 8286
+EXERCISE
+1) The number of girls in a class is 5 times the number
+of boys. Which one of the following numbers cannot
+represent the total number of children in the class.
+a) 36          b) 41            c) 42           d) 48            e) 72
+2) In a class, there are 21 boys who are over 160 cm tall.
+If these constitute three–fourth of the boys and the total
+number of boys is one–fourth of the total number of
+students in the class. What is the total number of girls
+in the class?
+a) 84      
+b) 68      
+c) 74      
+d) 64   
+e) cannot be determined
+3) In a BCCI meeting there are ten people. All shake
+hands with each other once. How many handshakes
+will be there altogether?
+a) 10          b) 100          c) 45          d) 95             e) 15
+4) A certain number of donkeys and an equal number
+of men are going to a village. Half of the men are on
+their donkey's back while the remaining are walking
+along leading their donkeys. If the number of legs
+walking on the ground is 70. How many donkeys are
+there?
+a) 16          b) 18            c) 17          d) 14             e) 28
+1.178
+Praxis Groups
+   F 
+    E
+3
+F∩ E
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

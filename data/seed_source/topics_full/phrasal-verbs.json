@@ -1,0 +1,80 @@
+{
+  "study_material": {
+    "title": "Phrasal Verbs - Complete Study Notes",
+    "introduction": "A phrasal verb combines a verb with a preposition or adverb to create a meaning you cannot guess from the parts: 'give up' means quit, not donate upward. Placement papers test the most common ones in fill-in-the-blank and substitution formats.",
+    "learning_objectives": [
+      "Recognise phrasal verbs and their idiomatic meanings",
+      "Handle multiple meanings of the same phrasal verb",
+      "Use separable and inseparable phrasal verbs correctly",
+      "Choose the right particle for the intended meaning"
+    ],
+    "concepts": [
+      {"heading": "1. Why They Are Tricky", "body": "The meaning is idiomatic: 'look up' can mean improve ('things are looking up') or search ('look up a word'). The same verb changes completely with different particles: run into (meet), run out of (exhaust), run over (hit with a vehicle), run through (rehearse)."},
+      {"heading": "2. Separable vs Inseparable", "body": "Separable phrasal verbs allow the object between the parts: 'turn the light off' or 'turn off the light'. If the object is a pronoun, separation is COMPULSORY: 'turn it off' - never 'turn off it'. Inseparable verbs keep the parts together: 'look after the baby', never 'look the baby after'."},
+      {"heading": "3. High-Frequency List (Part 1)", "body": "Break down = stop functioning / lose emotional control. Bring up = raise a child or raise a topic. Call off = cancel. Carry out = perform. Come across = find by chance. Cut down on = reduce. Do away with = abolish. Fall back on = rely on as a reserve. Get along with = have a good relationship."},
+      {"heading": "4. High-Frequency List (Part 2)", "body": "Give in = surrender. Give up = quit. Hold on = wait. Look after = take care of. Look forward to = anticipate happily. Look into = investigate. Put off = postpone. Put up with = tolerate. Run out of = exhaust supply. Take after = resemble a relative. Turn down = reject or reduce volume. Turn up = arrive unexpectedly. Work out = exercise or find a solution."},
+      {"heading": "5. Particle Logic", "body": "Particles carry loose patterns that aid memory. UP often means completion or increase (finish up, speed up, use up). DOWN suggests reduction (cut down, calm down). OFF suggests separation or cancellation (call off, take off). OUT suggests exhaustion or emergence (run out, find out). ON suggests continuation (carry on, hold on)."}
+    ],
+    "formulas": [
+      "Pronoun objects force separation: 'turn it off'",
+      "Look after = care for; Look into = investigate; Look for = search",
+      "UP = completion/increase; DOWN = reduction; OFF = cancellation",
+      "Put off = postpone; Put up with = tolerate"
+    ],
+    "shortcut_methods": [
+      "Learn phrasal verbs in sentences, never as isolated pairs",
+      "Group them by shared verb (get, take, put) or shared particle (off, up)",
+      "Substitute a single-word synonym to test whether an option fits"
+    ],
+    "common_mistakes": [
+      "Placing a pronoun after the particle ('turn off it')",
+      "Confusing look after / look into / look for",
+      "Mixing up put off (postpone) with put up with (tolerate)",
+      "Guessing the meaning literally from the two words"
+    ],
+    "summary": "Memorise the high-frequency set in context, respect separability rules for pronouns, and use particle patterns as memory aids.",
+    "quick_revision_notes": [
+      "Call off = cancel; Put off = postpone",
+      "Take after = resemble; Look after = care for",
+      "Run out of = exhaust; Come across = find by chance",
+      "'Turn it off' never 'turn off it'"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Choose the meaning of 'give up': 'He decided to give up smoking.'", "options": ["Quit", "Donate", "Raise", "Surrender a seat"], "correct_answer": "Quit", "step_by_step": "'Give up' followed by an activity means to stop doing it permanently.", "shortcut": "Give up + habit = quit."},
+    {"difficulty": "easy", "question": "Choose the correct phrasal verb: 'The match was ___ due to rain.'", "options": ["called off", "called on", "called up", "called for"], "correct_answer": "called off", "step_by_step": "'Call off' means to cancel - the standard verb for cancelled matches.", "shortcut": "OFF often signals cancellation."},
+    {"difficulty": "medium", "question": "Choose the meaning of 'take after': 'She takes after her mother.'", "options": ["Resembles", "Follows behind", "Cares for", "Argues with"], "correct_answer": "Resembles", "step_by_step": "'Take after' means to resemble an older family member in looks or character.", "shortcut": "Take after = family resemblance."},
+    {"difficulty": "medium", "question": "Choose the correct sentence.", "options": ["Please turn it off.", "Please turn off it.", "Please turn off them.", "Please turn them off it."], "correct_answer": "Please turn it off.", "step_by_step": "With separable phrasal verbs, a pronoun object must sit between the verb and the particle.", "shortcut": "Pronoun always goes in the middle."},
+    {"difficulty": "hard", "question": "Choose the correct phrasal verb: 'I cannot ___ his constant complaining any longer.'", "options": ["put up with", "put off", "put down", "put across"], "correct_answer": "put up with", "step_by_step": "'Put up with' means to tolerate. 'Put off' is postpone, 'put down' is criticise or set down, 'put across' is communicate.", "shortcut": "Three-word phrasal verbs are inseparable: put up with something."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["phrasal-verbs", "common"], "question": "'Look after' means:", "options": ["Take care of", "Search for", "Investigate", "Admire"], "correct_answer": "Take care of", "explanation": "Look after = care for someone or something."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["phrasal-verbs", "common"], "question": "'Put off' means:", "options": ["Postpone", "Tolerate", "Wear", "Extinguish"], "correct_answer": "Postpone", "explanation": "Put off = delay to a later time."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["phrasal-verbs", "common"], "question": "'Hold on' means:", "options": ["Wait", "Grasp tightly only", "Give up", "Continue forever"], "correct_answer": "Wait", "explanation": "Especially on the phone, 'hold on' means wait a moment."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["phrasal-verbs", "fill-blank"], "question": "Fill in the blank: 'The car ___ on the highway and we had to call a mechanic.'", "options": ["broke down", "broke up", "broke in", "broke out"], "correct_answer": "broke down", "explanation": "Break down = stop functioning."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["phrasal-verbs", "look-family"], "question": "Fill in the blank: 'The police are ___ the matter thoroughly.'", "options": ["looking into", "looking after", "looking for", "looking up to"], "correct_answer": "looking into", "explanation": "Look into = investigate."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["phrasal-verbs", "run-family"], "question": "Fill in the blank: 'We have ___ milk; please buy some.'", "options": ["run out of", "run into", "run over", "run through"], "correct_answer": "run out of", "explanation": "Run out of = exhaust the supply."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["phrasal-verbs", "common"], "question": "'Come across' means:", "options": ["Find by chance", "Cross a road", "Understand fully", "Arrive late"], "correct_answer": "Find by chance", "explanation": "Come across = encounter unexpectedly."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["phrasal-verbs", "fill-blank"], "question": "Fill in the blank: 'The doctor advised him to ___ his sugar intake.'", "options": ["cut down on", "cut off", "cut in", "cut out of"], "correct_answer": "cut down on", "explanation": "Cut down on = reduce consumption."},
+    {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["phrasal-verbs", "multiple-meaning"], "question": "In 'Things are looking up after a difficult year', 'looking up' means:", "options": ["Improving", "Searching a dictionary", "Admiring someone", "Raising the eyes"], "correct_answer": "Improving", "explanation": "'Look up' can mean improve when the subject is a situation."},
+    {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["phrasal-verbs", "formal"], "question": "Fill in the blank: 'The committee decided to ___ the outdated regulation.'", "options": ["do away with", "do up", "do over", "do in"], "correct_answer": "do away with", "explanation": "Do away with = abolish or get rid of."}
+  ],
+  "topic_test": {
+    "title": "Phrasal Verbs - Topic Test",
+    "duration_minutes": 12,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 12 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Substitute a single-word synonym to test each option."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["phrasal-verbs"], "question": "'Call off' means:", "options": ["Cancel", "Telephone", "Shout", "Visit"], "correct_answer": "Cancel", "explanation": "Call off = cancel an event."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["phrasal-verbs"], "question": "'Give in' means:", "options": ["Surrender", "Donate", "Enter", "Submit a form only"], "correct_answer": "Surrender", "explanation": "Give in = yield or stop resisting."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["phrasal-verbs"], "question": "Fill in the blank: 'I am ___ meeting you next week.'", "options": ["looking forward to", "looking after", "looking into", "looking out"], "correct_answer": "looking forward to", "explanation": "Look forward to = anticipate with pleasure."},
+      {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["phrasal-verbs"], "question": "Fill in the blank: 'She was ___ by her grandparents in Kerala.'", "options": ["brought up", "brought about", "brought out", "brought down"], "correct_answer": "brought up", "explanation": "Bring up = raise a child."},
+      {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["phrasal-verbs"], "question": "Fill in the blank: 'The company ___ his proposal without discussion.'", "options": ["turned down", "turned up", "turned over", "turned in"], "correct_answer": "turned down", "explanation": "Turn down = reject."},
+      {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["phrasal-verbs"], "question": "'Carry out' means:", "options": ["Perform", "Transport outside", "Continue", "Support"], "correct_answer": "Perform", "explanation": "Carry out an order or experiment = execute it."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["phrasal-verbs"], "question": "Fill in the blank: 'He ___ at the party without an invitation.'", "options": ["turned up", "turned down", "turned off", "turned into"], "correct_answer": "turned up", "explanation": "Turn up = arrive, often unexpectedly."},
+      {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["phrasal-verbs"], "question": "Fill in the blank: 'If the plan fails, we can always ___ our savings.'", "options": ["fall back on", "fall out with", "fall through", "fall behind"], "correct_answer": "fall back on", "explanation": "Fall back on = rely on as a reserve option."},
+      {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["phrasal-verbs"], "question": "Fill in the blank: 'The two colleagues ___ very well despite their differences.'", "options": ["get along", "get over", "get through", "get around"], "correct_answer": "get along", "explanation": "Get along (with) = have a harmonious relationship."},
+      {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["phrasal-verbs"], "question": "In 'It took her months to get over the illness', 'get over' means:", "options": ["Recover from", "Climb across", "Finish quickly", "Understand"], "correct_answer": "Recover from", "explanation": "Get over = recover from illness or a setback."}
+    ]
+  }
+}

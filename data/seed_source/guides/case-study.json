@@ -1,0 +1,48 @@
+{
+  "slug": "case-study",
+  "title": "Case Study Interview",
+  "category": "Problem Solving",
+  "order": 5,
+  "question_category": "Case Study",
+  "icon": "🧩",
+  "summary": "Business problems solved live with the interviewer. The frameworks that work, how to structure the conversation, and the case types companies here actually set.",
+  "source": "Written for this portal, mapped to the real case questions recorded in the placement tracker",
+  "introduction": "You are given a business situation and asked what you would do. The interviewer holds information they will release only if you ask for it - so a case is a conversation, not a monologue. They are testing structure, business judgement and how you behave when you do not have enough information.",
+  "sections": [
+    {
+      "heading": "The shape of a case",
+      "body": "1. Listen and take notes. Write down the objective in the client's terms.\n\n2. Play back the problem in one sentence and confirm the goal. 'So the client wants to know whether to enter the Indian logistics market, with the aim of profitable scale within three years - is that right?' This catches misunderstandings before you waste ten minutes.\n\n3. Ask clarifying questions before structuring - two or three, not twenty. What is the time horizon? What does success look like? Any constraints?\n\n4. Structure out loud, and ask for a moment to think. Say what your buckets are before you dive into the first one, so the interviewer can redirect you early.\n\n5. Work through the structure, asking for data as you need it. Do not ask for 'all the data' - ask for the specific number your logic requires next.\n\n6. Synthesise. State a recommendation, the two or three reasons behind it, and the main risk. Never trail off without a decision."
+    },
+    {
+      "heading": "Frameworks worth knowing",
+      "body": "Do not force a memorised framework onto a case that does not fit. These are starting points to adapt:\n\n• Profitability: Profit = Revenue − Cost. Break revenue into price × volume, cost into fixed and variable. Almost every 'profits are falling' case starts here.\n• Market entry: Is the market attractive (size, growth, margins)? Can we win (capabilities, competition)? How do we enter (build, buy, partner)? What are the risks?\n• 4Cs: Company, Customers, Competitors, Context.\n• 4Ps for marketing cases: Product, Price, Place, Promotion.\n• Due diligence: market attractiveness, target's competitive position, financials, synergies, risks. A private-equity case in this bank asked exactly this.\n• Value chain: walk the process end to end to locate where cost or value leaks.\n\nSay which framework you are using and why. Adapting one visibly is stronger than reciting one perfectly."
+    },
+    {
+      "heading": "Worked outline: profitability decline",
+      "body": "'A retail client's profits have fallen 15% over two years. Why, and what should they do?'\n\n1. Clarify: is this absolute profit or margin? Industry-wide or client-specific? Which geographies?\n\n2. Structure: Profit = Revenue − Cost. Split first, then diagnose whichever side moved.\n\n3. Revenue side: has volume fallen (fewer customers, lower basket size) or price (discounting, mix shift toward cheaper products)? Ask for the split.\n\n4. Cost side: fixed (rent, salaries) or variable (COGS, logistics)? Has input cost inflated, or has efficiency dropped?\n\n5. Isolate: suppose data shows volume is flat but margin per unit is down, driven by logistics cost. Now the case is narrow and you can go deep.\n\n6. Recommend: renegotiate freight contracts, consolidate warehouses, or pass some cost through in price - with the trade-off of each stated. Name the risk: passing cost through may cost volume in a price-sensitive segment.\n\nThe grade comes from narrowing cleanly, not from listing every possible cause."
+    },
+    {
+      "heading": "Case types set by companies in this portal",
+      "body": "Recorded from the 2026 season:\n\n• Private-equity due diligence on a mid-sized Indian logistics company - assess market attractiveness and the target's competitive positioning (Alvarez & Marsal).\n• Profitability guesstimates combined with a case - for instance, estimating consumption for a new soft drink launch.\n• Market entry and expansion questions across consulting firms.\n• Operations cases on fleet and cost optimisation (Delhivery).\n• Marketing strategy cases - pick a brand you like and devise a strategy for it.\n\nConsulting and analytics roles in this portal draw the most cases. If you are targeting Deloitte, KPMG, A&M, C5i or similar, this is a round you will face."
+    },
+    {
+      "heading": "Behaviour during the case",
+      "body": "Think aloud. Silence tells the interviewer nothing, and they cannot give you credit for reasoning they cannot hear.\n\nAsk for data specifically and explain why you want it: 'To see whether this is a volume or price problem, could I get revenue split by units and average selling price?'\n\nUse the interviewer's hints. If they steer you toward cost, they are not making conversation - they are telling you where the answer is.\n\nDo arithmetic carefully and state the units. Getting a number wrong is recoverable; not noticing it is implausible is not.\n\nIt is fine to say you would want data you cannot get in the room, as long as you then reason under an assumption and label it as one."
+    }
+  ],
+  "checklist": [
+    "Can play back a problem statement and confirm the objective",
+    "Know profitability, market entry and 4C frameworks well enough to adapt them",
+    "Practised thinking aloud rather than solving silently",
+    "Comfortable doing percentage and breakeven arithmetic in conversation",
+    "Always close with a recommendation, reasons and a risk"
+  ],
+  "common_mistakes": [
+    "Forcing a memorised framework onto a case it does not fit",
+    "Solving silently, so the interviewer cannot follow or help",
+    "Asking for all available data instead of the next number your logic needs",
+    "Listing every possible cause without ever narrowing",
+    "Ignoring a hint the interviewer has deliberately offered",
+    "Ending with analysis instead of a decision"
+  ]
+}

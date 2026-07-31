@@ -1,0 +1,151 @@
+SYLLOGISMS
+CONCEPTS
+Questions on syllogism contains statements followed
+by conclusions. You have to analyze the given
+statements carefully and find which of the conclusions
+logically follow. Each statement of syllogism contains
+of three parts. They are, subject, predicate and copula.
+Subject is that about which something is said.
+Predicate is that part of the statement that which
+affirms is denied about the subject.
+Copula is the word of the statement which denotes the
+relation between the subject and predicate.
+Example: Consider the statement, 'woman is talented'.
+Here an information about woman is given. So, woman
+is the subject. 'talented' is  the quality affirmed for this
+subject. So it is the predicate. 'is' denotes the relation
+between subject and predicate. So, it is copula.
+Here we will discuss three types of methods to solve
+the questions on syllogism.
+1) Diagrammatic method
+2) Rules and Application method
+3) Numbering and Apply method
+1) Diagrammatic Method: 
+To solve the syllogism questions in this method, you
+have to represent the given statements in the form of a
+diagram. In syllogisms, frequently we come across the
+terms like all, some and no, not etc.
+Example: 1) All papers are pens.
+If the above statement are
+represented in a diagram, papers
+will be in inner circle and pens will
+be in outer circle. i.e.
+2) Some papers are pens.
+3) No paper is pen.
+'no' indicates there is no relations
+exists between 
+ subject and
+predicate of the given statement.
+Hence, the two circles will not meet
+each other.
+Example: Statements: Some  Note books are books
+                                       All books are papers
+                  Conclusions: I. Some Notebooks are papers
+                                         II. No papers is notebook
+Explanation: 
+The possible Venn
+diagram for the statements is given:
+From the given statements, statement-I
+follows from the above diagram but
+statement-II does not follow.
+Ask doubt with Question Id: 8078
+2) Rules and Application Method:
+The following rules are useful in solving problems.
+all
++
+all 
+→all
+all
++
+no
+→no
+some
++
+all
+→some
+all
++ some
+→no conclusion
+no
++
+no
+→no conclusion
+some
++ some
+→no conclusion
+some
++
+no
+→some-not
+no
++
+all 
+→reverse of some-not
+no
++ some
+→reverse of some-not
+some-not/reverse of some not+ anything = no conclusion.
+Implication Statements:
+1) All  Some
+→
+If 'all A`s are B`s' then 'some  A`s  are B`s' is also true.
+2) Some ↔ Some
+If 'some cats are rats' then 'some rats are cats' is also true.
+3) No ↔ No
+If 'no car is bus' then 'no bus is car' is also true. 
+Note: For either-or option: If one conclusion is positive
+(i.e. starts with all/ some) and the other conclusion is
+negative (i.e. starts with no) and if they both have same
+objects as that of the given statements then the answer
+will be those two conclusions with either-or words.
+Example: 1) Statements: Some keys are locks
+                                           All locks are doors
+                      Conclusions: I. All keys are doors
+                                             II. Some keys are doors
+                                             III. Some keys are not doors
+a) only conclusion-(I) follows  
+b) only conclusion-(II) follows
+c) only conclusion-(III) follows 
+d) both conclusion-(I) and (III) follows
+e) None of the given conclusions follow
+Explanation: 
+Step-1: Compare special words in both the statements.
+i.e. some + all. Then, from the rule, some + all  
+→some.
+Step-2: Compare predicate of the first statement and
+subject of the second statement. If both are same then
+cancel them and deduce a new conclusion. 
+'some keys are doors' is there in conclusion-(II).  So, only
+conclusion-(II) follows. Hence, option-b is correct.
+Login to your online account to ask doubts.
+2.46
+Paper
+Pen
+Some
+N
+B
+P
+Paper
+    No
+Pen
+Paper
+Pens
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

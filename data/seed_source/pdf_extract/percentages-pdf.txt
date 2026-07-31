@@ -1,0 +1,141 @@
+PERCENTAGES
+CONCEPTS
+A percentage is a way of expressing a number as a
+fraction of 100. The word 'per cent' or 'percentage'
+means for every one hundred. In other words, it gives
+rate of a parameter per hundred. It is denoted by the
+symbol %.
+e.g.: 30% means 30 out of one hundred or 30
+100
+.
+Key Notes:
+• To convert a percent into a fraction, divide by 100.
+e.g.: 20%= 20
+100
+=1
+5
+ • To convert a fraction into a percent, multiply by 100. 
+e.g.: 3
+4
+= 3
+4
+×100=75%
+• To write a decimal as a percent we move the decimal
+point two places to the right and put the % sign.
+e.g.: 0.35= 35
+100
+=35%
+• Conversely to write a percent as a decimal, we drop
+the % sign and insert or move the decimal point two
+places to the left.
+e.g.: 43% = 0.43; 12% = 0.12.
+Calculating Percentage: Percentage=(
+Value
+Total )×100.
+For example, if you obtained 18 marks out of 25 marks,
+what was your percentage of marks?
+Explanation: Total marks = 25. Marks obtained = 18.
+ Percentage of marks obtained =
+∴
+18
+25
+×100=72%.
+Calculating Percentage Increase or Decrease:
+• % Increase :  
+New value = (1+ Increase %
+100
+) × (Original Value)
+• % Decrease :
+New value = (1−Decrease %
+100
+) × (Original Value)
+e.g.: What is the discounted cost of a Rs. 80 book
+offered at 30% discount ?
+Explanation: 
+New Amount =(1−30
+100)×80=0.70×80=56
+• Calculating Percent Change: 
+Percentage change refers to the relative percent change
+of an increase or decrease in the original amount.
+Percent=
+Change
+OriginalValue
+×100
+e.g.: What is the discount percentage of a Rs.80 book
+that is sold for Rs 64 ?
+Explanation: Change =  80–64 = 16. Original Value = 80.
+Discount Percentage = 16
+80
+×100=1
+5
+×100=20%
+Calculating Successive Percentages:
+• If a number is successively increased by x% and y%
+then a single equivalent increase in that number will be
+(x+y+ xy
+100)%.
+e.g.: The price of an article is successively increased by
+10% and 20%. What is the overall percent increase in
+the price of the article.
+Explanation:
+(or) By using formula:
+=(x+y+ xy
+100)%=(10+20+ (10)(20)
+100 )%=30 +2=32%.
+• If there's an increase and a decrease, in that case, the
+decrease will be considered a negative value.
+e.g.: If there is an increase of 20% and then a decrease
+of 10% on the price of a commodity, the successive
+percentage will be
+ 20+(−10)+ 20×(−10)
+100
+=20−10−2=8% increase.
+• In case of discounts, the value of discount
+percentages will be considered negative. 
+e.g.: If a shop keeper give 20% and 10% discounts on a
+festival day, the final discount given by shopkeeper is 
+(−20)+(−10)+(−20)(−10)
+100
+= -100+25 = 75% discount.
+• If there are three discounts as x%, y% and z% then
+first  find the total discount of x% and y% and using it
+find the total discount with z%.
+• If the price of commodity increases by x%, the
+percentage should a family reduce its consumption so
+as not to increase the expenditure on the commodity =
+x
+100+x
+×100.
+• If the price of commodity decreases by x%, the
+percentage should a family increase its consumption so
+as not to decrease the expenditure on the commodity =
+x
+100−x
+×100.
+Login to your online account to ask doubts.
+1.41
+₹100 
+10% Increase
+₹110
+20% Increase
+₹132
+Overall 32% Increase
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

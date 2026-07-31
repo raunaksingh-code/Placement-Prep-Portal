@@ -1,0 +1,82 @@
+{
+  "study_material": {
+    "title": "Sentence Correction / Spotting Errors - Complete Study Notes",
+    "introduction": "These questions split a sentence into parts and ask which contains an error, or offer four versions and ask for the correct one. Errors cluster in predictable places: agreement, tense, prepositions, articles, pronouns and parallelism. Learn the checklist and scan in that order.",
+    "learning_objectives": [
+      "Scan sentences with a fixed error checklist",
+      "Catch article and preposition misuse",
+      "Spot redundancy and double comparatives",
+      "Maintain parallel structure in lists and correlatives",
+      "Identify misplaced and dangling modifiers"
+    ],
+    "concepts": [
+      {"heading": "1. The Error Checklist", "body": "Scan in this order: (1) subject-verb agreement, (2) tense consistency, (3) pronoun case and reference, (4) preposition choice, (5) article use, (6) parallelism, (7) modifier placement, (8) redundancy. Most exam errors are one of the first four."},
+      {"heading": "2. Articles", "body": "'A' before consonant SOUNDS, 'an' before vowel sounds - 'a university' (yoo sound), 'an hour' (silent h), 'an MBA' (em sound). 'The' for specific/unique things ('the sun', 'the book I bought'). No article with uncountable or general plural nouns ('Honesty is a virtue', 'Cats are independent')."},
+      {"heading": "3. Redundancy", "body": "Placement papers love wordy redundancies: 'return back', 'repeat again', 'reason is because', 'more better', 'each and every one of them all'. Correct forms: 'return', 'repeat', 'reason is that', 'better'. Never use a double comparative ('more easier') or double superlative ('most tallest')."},
+      {"heading": "4. Parallelism", "body": "Items in a list or joined by correlatives must share grammatical form. Wrong: 'She likes reading, writing and to paint.' Right: 'She likes reading, writing and painting.' Check both sides of 'and', 'or', 'not only...but also', 'both...and'."},
+      {"heading": "5. Frequent Traps", "body": "'One of the' + plural noun + singular verb: 'One of the students IS absent.' 'Each' and 'every' are singular. 'Hardly/scarcely...when', 'no sooner...than' are fixed pairings. Comparatives use 'than' ('better than'), and 'superior/inferior/prior/senior' take 'to', never 'than'."}
+    ],
+    "formulas": [
+      "A/an by sound, not spelling",
+      "One of the + plural noun + singular verb",
+      "Superior/inferior/senior/junior + to (never than)",
+      "No sooner ... than; Hardly ... when",
+      "Parallel structures on both sides of a conjunction"
+    ],
+    "shortcut_methods": [
+      "Read the sentence aloud mentally - most errors sound wrong",
+      "Strip away modifying phrases to expose the core subject-verb pair",
+      "When two options differ in only one word, that word is the tested point"
+    ],
+    "common_mistakes": [
+      "Choosing 'no error' too readily under time pressure",
+      "Missing pronoun-antecedent mismatch ('Everyone brought their book')",
+      "Using 'than' with superior/inferior",
+      "Overlooking parallelism in three-item lists"
+    ],
+    "summary": "Run the checklist top to bottom, isolate the subject and verb, and watch articles, prepositions, parallelism and redundancy.",
+    "quick_revision_notes": [
+      "An hour, a university, an MBA",
+      "One of the boys IS",
+      "Superior TO, not superior than",
+      "No double comparatives"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Spot the error: 'One of the students (A) / are absent (B) / from the class (C) / today. (D)'", "options": ["B", "A", "C", "D"], "correct_answer": "B", "step_by_step": "'One of the students' has 'one' as the subject, which is singular. 'are' should be 'is'.", "shortcut": "One of the + plural noun always takes a singular verb."},
+    {"difficulty": "easy", "question": "Choose the correct sentence.", "options": ["He is an honest man.", "He is a honest man.", "He is the honest man.", "He is honest man."], "correct_answer": "He is an honest man.", "step_by_step": "'Honest' begins with a silent h, so it sounds like a vowel: 'an' is correct.", "shortcut": "Go by sound, not spelling."},
+    {"difficulty": "medium", "question": "Spot the error: 'She returned back (A) / from Delhi (B) / last week (C) / with her family. (D)'", "options": ["A", "B", "C", "D"], "correct_answer": "A", "step_by_step": "'Return' already means 'come back', so 'returned back' is redundant. Use 'returned'.", "shortcut": "Watch for verbs that already contain the preposition's meaning."},
+    {"difficulty": "medium", "question": "Choose the correct sentence.", "options": ["She likes reading, writing and painting.", "She likes reading, writing and to paint.", "She likes to read, writing and painting.", "She likes read, write and painting."], "correct_answer": "She likes reading, writing and painting.", "step_by_step": "All three items must share the same form - three gerunds.", "shortcut": "Check that every list item has the same ending pattern."},
+    {"difficulty": "hard", "question": "Choose the correct sentence.", "options": ["This product is superior to the other brand.", "This product is superior than the other brand.", "This product is more superior than the other brand.", "This product is superior from the other brand."], "correct_answer": "This product is superior to the other brand.", "step_by_step": "'Superior' is already comparative and takes 'to', never 'than' or 'more'.", "shortcut": "Latin comparatives (superior, inferior, senior, junior, prior) always take 'to'."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["error-spotting", "article"], "question": "Choose the correct sentence.", "options": ["He is a university student.", "He is an university student.", "He is the university student here.", "He is university student."], "correct_answer": "He is a university student.", "explanation": "'University' starts with a 'yoo' consonant sound, so 'a' is used."},
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["error-spotting", "redundancy"], "question": "Spot the error: 'Please repeat again (A) / what you said (B) / during the meeting (C) / yesterday. (D)'", "options": ["A", "B", "C", "D"], "correct_answer": "A", "explanation": "'Repeat' already means to say again - 'repeat again' is redundant."},
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["error-spotting", "comparative"], "question": "Choose the correct sentence.", "options": ["This book is better than that one.", "This book is more better than that one.", "This book is more good than that one.", "This book is better then that one."], "correct_answer": "This book is better than that one.", "explanation": "'Better' is already comparative; 'than' (not 'then') is the comparison word."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["error-spotting", "preposition"], "question": "Spot the error: 'The report consists (A) / of five chapters (B) / which were written (C) / by different authors. (D)'", "options": ["No error", "A", "B", "C"], "correct_answer": "No error", "explanation": "'Consists of' is the correct pairing and the rest of the sentence is sound."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["error-spotting", "pronoun"], "question": "Choose the correct sentence.", "options": ["Every student must bring his or her own book.", "Every student must bring their own book.", "Every students must bring his own book.", "Every student must bring theirs own book."], "correct_answer": "Every student must bring his or her own book.", "explanation": "'Every student' is singular, so a singular pronoun is required in formal usage."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["error-spotting", "fixed-pair"], "question": "Choose the correct sentence.", "options": ["No sooner had he arrived than the meeting began.", "No sooner had he arrived when the meeting began.", "No sooner he arrived than the meeting began.", "No sooner did he arrived than meeting began."], "correct_answer": "No sooner had he arrived than the meeting began.", "explanation": "'No sooner ... than' is the fixed pairing, with inversion after 'No sooner'."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["error-spotting", "tense"], "question": "Spot the error: 'He has been working (A) / in this company (B) / since five years (C) / without a break. (D)'", "options": ["C", "A", "B", "D"], "correct_answer": "C", "explanation": "'Since' needs a point in time; for a duration use 'for five years'."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["error-spotting", "modifier"], "question": "Choose the correct sentence.", "options": ["Running to catch the bus, he dropped his wallet.", "Running to catch the bus, his wallet was dropped.", "Running to catch the bus, the wallet fell down.", "Running to catch the bus, there was a dropped wallet."], "correct_answer": "Running to catch the bus, he dropped his wallet.", "explanation": "The opening phrase must describe the subject - 'he' was running, not the wallet."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["error-spotting", "agreement"], "question": "Spot the error: 'The quality of the products (A) / sold in this store (B) / have improved (C) / considerably. (D)'", "options": ["C", "A", "B", "D"], "correct_answer": "C", "explanation": "The subject is 'quality' (singular), so it should be 'has improved'."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["error-spotting", "parallel"], "question": "Choose the correct sentence.", "options": ["He is responsible for hiring, training and evaluating staff.", "He is responsible for hiring, training and to evaluate staff.", "He is responsible for hire, training and evaluating staff.", "He is responsible to hiring, training and evaluation of staff."], "correct_answer": "He is responsible for hiring, training and evaluating staff.", "explanation": "All three items after 'for' must be gerunds for parallel structure."}
+  ],
+  "topic_test": {
+    "title": "Sentence Correction / Spotting Errors - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Run the checklist: agreement, tense, pronoun, preposition, article, parallelism."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["error-spotting"], "question": "Choose the correct sentence.", "options": ["She has been living here for ten years.", "She has been living here since ten years.", "She is living here for ten years.", "She lives here since ten years."], "correct_answer": "She has been living here for ten years.", "explanation": "'For' is used with a duration."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["error-spotting"], "question": "Spot the error: 'He is one of the (A) / best player (B) / in the team (C) / this season. (D)'", "options": ["B", "A", "C", "D"], "correct_answer": "B", "explanation": "'One of the' requires a plural noun: 'best players'."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["error-spotting"], "question": "Choose the correct sentence.", "options": ["It took me an hour to finish.", "It took me a hour to finish.", "It took me the hour to finish.", "It took me one hours to finish."], "correct_answer": "It took me an hour to finish.", "explanation": "'Hour' begins with a silent h, so it takes 'an'."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["error-spotting"], "question": "Spot the error: 'Neither of the two (A) / candidates were (B) / suitable for (C) / the position. (D)'", "options": ["B", "A", "C", "D"], "correct_answer": "B", "explanation": "'Neither' is singular: 'was suitable'."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["error-spotting"], "question": "Choose the correct sentence.", "options": ["He is junior to me in the office.", "He is junior than me in the office.", "He is more junior than me in office.", "He is junior from me in the office."], "correct_answer": "He is junior to me in the office.", "explanation": "'Junior' takes 'to'."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["error-spotting"], "question": "Spot the error: 'The reason for his failure (A) / is because he (B) / did not prepare (C) / adequately. (D)'", "options": ["B", "A", "C", "D"], "correct_answer": "B", "explanation": "'The reason is because' is redundant; use 'the reason is that'."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["error-spotting"], "question": "Choose the correct sentence.", "options": ["Hardly had he sat down when the phone rang.", "Hardly had he sat down than the phone rang.", "Hardly he had sat down when the phone rang.", "Hardly did he sat down when phone rang."], "correct_answer": "Hardly had he sat down when the phone rang.", "explanation": "'Hardly ... when' with inversion after 'Hardly'."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["error-spotting"], "question": "Spot the error: 'Each of the employees (A) / have been given (B) / a bonus this (C) / financial year. (D)'", "options": ["B", "A", "C", "D"], "correct_answer": "B", "explanation": "'Each' is singular: 'has been given'."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["error-spotting"], "question": "Choose the correct sentence.", "options": ["I prefer coffee to tea.", "I prefer coffee than tea.", "I prefer coffee more than tea.", "I prefer coffee over than tea."], "correct_answer": "I prefer coffee to tea.", "explanation": "'Prefer X to Y' is the standard construction."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["error-spotting"], "question": "Spot the error: 'The committee have (A) / decided to postpone (B) / the annual function (C) / until next month. (D)'", "options": ["A", "B", "C", "D"], "correct_answer": "A", "explanation": "A collective noun acting as one body takes a singular verb: 'The committee has decided'."}
+    ]
+  }
+}

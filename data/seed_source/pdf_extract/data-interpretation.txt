@@ -1,0 +1,434 @@
+DATA INTERPRETATION
+CONCEPTS
+The information related to any event given in the form
+of graphs, tables, charts etc is termed as data. The
+methodology of interpreting data to get the
+information is known as data interpretation.
+Mathematical identities which we  use in data
+interpretation are given below.
+To solve the problems on data interpretation, you need
+to be thorough in 'Percentages', 'Ratios' and 'Averages'
+chapters.
+Percentage: Proportions with the base 100 are known 
+as percentages (%). 
+For example,
+x
+y
+×100
+is in percentage form.
+e.g.: If the ratio of boys to total number of students in a
+college is
+1015
+4060
+.
+This can be written in a percentage
+form as
+1015
+4060
+×100=25%.
+To find by how much percent 'x' is more or less than y
+(or over y) when compared to y is given as
+Required Percentage=Value of X−Valueof Y
+Valueof Y
+×100
+Observe that the denominator contains the value with
+which the comparison is made.
+In the above formula, if numerator is positive, then
+there is percentage growth. If numerator is negative,
+then there is a decline in the percentage.
+Ratio: In the simplest possible form, ratio is a quotient
+or the numerical quantity obtained by dividing one
+figure by the other figure of same units.
+TABULAR DATA INTERPRETATION
+In this type of questions a table with data as well as a
+set of questions on the same data is given to you. You
+need to analyze the table data and answer the given
+questions.
+Example: Study the following table carefully and
+answer the questions that follow. 
+Table: Percentage of marks scored by students in SSC
+Marks percentage Girls Boys 
+>75 
+25 
+12 
+60-75 
+15 
+12 
+50-59 
+10 
+23 
+35-49 
+5 
+2 
+< 35 
+3 
+1 
+1) Give the total percentage of Girls who wrote SSC
+examination from that School.
+a) 25%         b) 54%             c) 23%              d) 58% 
+2) Give the percentage of students who scored
+distinction (> 75). 
+a) 43%         b) 34.25%        c) 24.85%         d) 40% 
+3) Give fail percentage of students in SSC examination.
+a) 1%           b) 2%               c) 4%                d) 8%
+4) Give pass percentage of boys in SSC examination.
+a) 90%         b) 88%             c) 98%              d) 99% 
+5) Give the percentage of students who scored more
+than 60% in the SSC examination.
+a) 25%         b) 59.3%          c) 22.2%           d) 50% 
+Explanation: 
+1)b; Total no.of girls appeared for SSC Examination =
+25 + 15 + 10 + 5 + 3 = 58.
+Total no.of students appeared for SSC examination =
+58 + 50 = 108.
+ Percentage of girls who wrote SSC Examination =
+∴
+58
+108
+×100=53.7=54%
+(approximately)
+2)b; No.of students who scored distinction = 25 +12 =37.
+ Percentage of students who scored distinction =
+∴
+37
+108
+×100=34.25%
+3)c; Total no.of students failed in SSC examination = 4.
+ Fail % =
+∴
+4
+108
+×100=3.7=4%
+(approximately)
+4)c; No.of boys passed in the examination = 49.
+ Boys pass percentage =
+∴
+49
+50
+×100=98%
+5)b; No.of students who scored more than 60% = 64.
+ Percentage of students who scored more than 60% =
+∴
+64
+108
+×100=59.26%=59.3%
+(approximately)
+Example: Production of cars by different companies
+in the span of 1980-2005 given. Interpret the data to
+answer the questions given below. 
+Company 
+Production of cars in thousands 
+1980-85 1985-90 1990-95 1995-00 2000- 05
+Maruthi 
+12.5
+15.0 
+16.2 
+18.0 
+22
+Hindustan
+Motors 
+10.4 
+11.1
+11.5
+11.5
+12
+Hyundai
+Motors 
+12
+14.3
+16.2 
+17.8 
+18.9 
+Ford 
+14.4
+14.1
+13.2
+18.1 
+25.3 
+General
+Motors 
+19.2 
+13.8
+13.5
+14.1
+15.8 
+1.134
+Praxis Groups
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+
+BAR GRAPHS
+Bar graphs normally comprise X-axis, Y-axis and bars.
+X and Y-axes represent the data. And bars represent
+the trend of data with respect X and Y-axes. In this type
+of questions, data is given in the form of bar graphs.
+You need to analyze the bars with respect to X and Y-
+axes to answer the given questions.
+Example: Imports and exports of a country from 2000
+- 2001 to 2004 -2005.
+1) In which of the following year the gap between
+import and export was maximum. 
+a) 2001-02        b) 2002-03       c) 2003-04      d) 2004-05 
+2) In which of the following year the gap between
+imports and exports was minimum.
+a) 2002-2003    b) 2003-2004   c) 2004-2005    d) none 
+3) Exports in 2001–2002 was approximately how many
+times that of the year 2003–2004.
+a) 2                   b) 3                   c) 4                   d) 5
+4) Give the ratio between the number of years in which
+exports is greater than imports and import is greater
+than exports.
+a) 3 : 2              b) 2 : 3              c) 3 : 1              d) 1 : 3
+5. Difference between average of imports and exports is
+a) 100               b) 90                 c) 80                 d) 70
+Explanations: 
+1)c; From the graph, gap between import and export
+was maximum in 2003-2004.
+2)c; From the graph, gap between imports and exports
+is minimum in 2004-2005 = 400–350 = 50 crore.
+3)c; Exports of the year 2001–2002 = 600 
+       Exports of the year 2003–2004 = 150 
+∴ Exports of 2001–2002 is 4 times greater than that of
+2003–2004.
+4)b; In 2 years i.e. 2000-2001 and 2001-2002 exports are
+greater than imports. 
+In 3 years i.e. 2002-2003, 2003-2004, 2004-2005 imports
+are greater than exports.
+5)d; Average of imports during 2000-2005 =
+300+ 500+ 600+ 550+ 400
+5
+= 2350
+5
+=470
+Average of exports during 2000-2005 =
+400+ 600+ 500+ 150+ 350
+5
+= 2000
+5
+=400
+∴ Difference = 470 – 400 = 70.
+Example: Turnover in crores of six companies (U, V,
+W, X, Y and Z) are given. 
+1) Which company's turn over is highest?
+a) U                   b) V               c) W                  d) X
+2) What is the percentage of turn over of the company-
+X over the turn over of the company-V?
+a) 25%               b) 50%          c) 75%               d) 100%
+3) Give the difference of average turnovers of first three
+companies and last three companies.
+a) 3.33               b) 6.66           c) 2.67               d) 1.85
+4) Give the percentage contribution of turnover of W in
+the overall turnover of all the companies.
+a) 12%               b) 50%          c) 40%               d) 29% 
+5) Difference of average percentage contribution of
+turnovers of companies U, V and X, Y is.
+a) 1%                 b) 2%            c) 3%                 d) 4%
+Explanations: 
+1)c; It is clear from the graph that turn over of company
+W is highest i.e. 8 crores.
+2)b; Turnover of company X = 3 crores
+        Turnover of company V = 6 crores
+ 
+∴Percentage of turn over of X over V=
+3
+6
+×100=50%
+3)a; Average turn over of first three companies
+4+ 6+ 8
+3
+=18
+3
+=6
+Average turn over of last three companies
+3+ 5+ 2
+3
+=10
+3
+=3.33
+∴ Difference = 6.00 – 3.33 = 2.67
+1.142
+Praxis Groups
+2000-2001 2001-2002 2002-2003 2003-2004 2004-2005
+0
+100
+200
+300
+400
+500
+600
+700
+Imports
+Exports
+U
+V
+W
+X
+Y
+Z
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+
+MIXED DIAGRAMS
+CONCEPTS
+In this type of data interpretation, data will be given in
+the form of two or more diagrams. The combination of
+the diagrams can be a bar diagram and a pie chart (or)
+a line graph and a table diagram (or) a pie chart and
+line graph.
+EXERCISE
+A) Study the following graphs carefully to answer the
+questions given below it. 
+Readers of newspapers in percentages in 3 different
+cities A, B and C over the years.
+Total population of 3 crores in 3 cities is represented
+in the following diagram.
+1) In 2002 in the city B how many people were reading
+a news paper in lakhs ?
+a) 108.333       b) 59.5883       c) 48.7499          d) 38.9421
+2) According to the data in city B what is the difference
+between minimum number of newspaper readers in a
+particular year and maximum number of newspaper
+readers in a particular year (approximately)?
+a) 34                  b) 31              c) 29                  d) 27
+3) What is the sum of populations of city A those who
+don't read any newspapers in all the 4 years (in lakhs)?
+a) 220                b) 200            c) 180                d) 160
+4) In the 2 years in which same and maximum
+percentage of readership is maintained in the cities A
+and C. What is the decrease in readership in the city A?
+a) 5 lakhs        b) 10 lakhs     c) 20 lakhs        d) 30 lakhs
+B) Study the following graphs carefully to answer the
+questions given below it. (Use most approximate
+figures, if necessary).
+Percentage of bags (empty, fruits and Flowers,
+colored balls) available in every house is given in the
+following Pie chart.
+There are 3 go-downs namely AB, BC, CE which have
+n bags in different days of the week as shown below.
+1.156
+Praxis Groups
+2001
+2002
+2003
+2004
+0%
+10%
+20%
+30%
+40%
+50%
+60%
+70%
+80%
+A
+B
+C
+A
+B
+C
+110o
+120o
+130o
+R
+M
+Y
+A
+G
+O
+W
+R
+0
+10
+20
+30
+40
+50
+60
+70
+80
+Different Bags containing colored (red, yellow, green, 
+white) balls  
+Different Bags containing fruits and Flowers (Mango, 
+Apple, Orange, Rose)
+      1000
+Coloured
+ balls Bags
+Fruits &
+flower      
+bags 60o
+Empty bags
+          200o
+sun
+mon
+tue
+wed
+thu
+fri
+sat
+36
+72
+216
+House AB
+House BC
+House CE
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

@@ -1,0 +1,79 @@
+{
+  "study_material": {
+    "title": "Mixture and Alligation - Complete Study Notes",
+    "introduction": "The rule of alligation finds the ratio in which two ingredients at different prices (or strengths) must be mixed to hit a target mean. It also powers remove-and-replace problems and profit-on-adulteration questions - all placement favourites.",
+    "learning_objectives": [
+      "Apply the alligation cross to price and concentration mixtures",
+      "Solve remove-and-replace (repeated dilution) problems",
+      "Handle two-vessel mixing with given ratios",
+      "Use weighted averages as an alligation alternative"
+    ],
+    "concepts": [
+      {"heading": "1. The Alligation Rule", "body": "To mix a cheaper ingredient (price c) with a dearer one (price d) to get mean price m: quantity of cheaper / quantity of dearer = (d - m)/(m - c). Draw the cross: put c and d on top, m in the middle, and take differences diagonally. The same rule works for concentrations, speeds and percentages."},
+      {"heading": "2. Weighted Average View", "body": "Alligation is just the weighted average identity rearranged: m = (n1c + n2d)/(n1 + n2). If alligation feels error-prone, fall back to this equation - it always works and generalises to three or more components."},
+      {"heading": "3. Remove and Replace", "body": "If a vessel contains V litres of pure liquid and k litres are removed and replaced with water n times, pure liquid left = V x (1 - k/V)^n. Each cycle multiplies the pure amount by the retention factor (1 - k/V). The fraction removed takes milk and water in their current ratio."},
+      {"heading": "4. Profit by Adulteration", "body": "A trader mixing free water into milk and selling at cost price gains profit% = (water/milk) x 100. More generally, treat water as a zero-cost ingredient and apply alligation between cost price of milk and effective cost of the mixture."},
+      {"heading": "5. Mixing Two Mixtures", "body": "When combining two vessels that each contain milk and water, track one component's absolute amount in each vessel, add them, and divide by the total volume. Ratios cannot be added directly - convert to quantities first."}
+    ],
+    "formulas": [
+      "Cheaper : Dearer = (d - m) : (m - c)",
+      "Pure left after n operations = V(1 - k/V)^n",
+      "Mean = (n1c + n2d)/(n1 + n2)",
+      "Profit% from free water = (water/milk) x 100"
+    ],
+    "shortcut_methods": [
+      "Alligation works on any linear quantity: prices, percentages, average ages, speeds",
+      "In remove-replace, only track the pure component - water is whatever remains",
+      "Answers to mixing ratios are usually small whole numbers - simplify aggressively"
+    ],
+    "common_mistakes": [
+      "Adding ratios from two vessels without converting to actual quantities",
+      "Using selling prices in alligation when cost prices are needed",
+      "Forgetting that removal takes both components proportionally"
+    ],
+    "summary": "One cross-diagram solves mixing-ratio questions; one retention-factor formula solves repeated replacement. Everything else is weighted averages.",
+    "quick_revision_notes": [
+      "Cheaper:Dearer = (d-m):(m-c)",
+      "V(1 - k/V)^n for repeated replacement",
+      "Water is a free ingredient with price 0",
+      "Convert ratios to quantities before combining vessels"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "In what ratio must rice at Rs. 40/kg be mixed with rice at Rs. 60/kg so that the mixture costs Rs. 45/kg?", "options": ["3:1", "1:3", "2:1", "3:2"], "correct_answer": "3:1", "step_by_step": "Cheaper:Dearer = (60-45):(45-40) = 15:5 = 3:1.", "shortcut": "Diagonal differences on the alligation cross."},
+    {"difficulty": "easy", "question": "An alloy has copper and zinc in ratio 5:3. How much copper is in 40 kg of alloy?", "options": ["25 kg", "24 kg", "15 kg", "20 kg"], "correct_answer": "25 kg", "step_by_step": "Copper = 40 x 5/8 = 25 kg.", "shortcut": "Each part = 5 kg."},
+    {"difficulty": "medium", "question": "In what ratio must a 30% solution be mixed with a 50% solution to obtain a 45% solution?", "options": ["1:3", "3:1", "2:3", "1:2"], "correct_answer": "1:3", "step_by_step": "Weaker:Stronger = (50-45):(45-30) = 5:15 = 1:3.", "shortcut": "The mean is closer to 50%, so more of the stronger solution."},
+    {"difficulty": "medium", "question": "A vessel has 40 litres of milk. 8 litres are removed and replaced with water, and the operation is repeated once more. How much milk remains?", "options": ["25.6 L", "24 L", "28.8 L", "26.4 L"], "correct_answer": "25.6 L", "step_by_step": "Retention factor = 1 - 8/40 = 0.8. Milk = 40 x 0.8^2 = 25.6 litres.", "shortcut": "Multiply by 0.8 per operation."},
+    {"difficulty": "hard", "question": "A milkman buys milk at Rs. 20/litre, adds water, and sells the mixture at Rs. 20/litre making 25% profit. Find the ratio of milk to water.", "options": ["4:1", "5:1", "3:1", "1:4"], "correct_answer": "4:1", "step_by_step": "Selling at 20 with 25% profit means cost of 1 litre of mixture = 16. So milk fraction = 16/20 = 4/5, water = 1/5: ratio 4:1.", "shortcut": "Alligation between milk (20) and water (0) with mean 16: (16-0):(20-16) = 4:1."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["mixtures", "alligation"], "question": "In what ratio should tea at Rs. 15/kg be mixed with tea at Rs. 20/kg to get a mixture worth Rs. 18/kg?", "options": ["2:3", "3:2", "1:2", "2:1"], "correct_answer": "2:3", "explanation": "(20-18):(18-15) = 2:3."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["mixtures", "ratio"], "question": "A 50-litre mixture has milk and water in ratio 3:2. How much milk does it contain?", "options": ["30 L", "20 L", "25 L", "35 L"], "correct_answer": "30 L", "explanation": "Milk = 50 x 3/5 = 30 litres."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["mixtures", "price"], "question": "Tea at Rs. 120/kg is mixed with tea at Rs. 80/kg in ratio 2:3. Find the price of the mixture per kg.", "options": ["Rs. 96", "Rs. 100", "Rs. 92", "Rs. 104"], "correct_answer": "Rs. 96", "explanation": "(2x120 + 3x80)/5 = 480/5 = 96."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["mixtures", "add-water"], "question": "A 60-litre mixture has milk and water in ratio 2:1. How much water must be added to make the ratio 1:2?", "options": ["60 L", "40 L", "30 L", "80 L"], "correct_answer": "60 L", "explanation": "Milk = 40, water = 20. For 1:2, water must be 80, so add 60 litres."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["mixtures", "alligation"], "question": "In what ratio must water be mixed with milk costing Rs. 24/litre so the mixture is worth Rs. 20/litre?", "options": ["1:5", "5:1", "1:4", "4:1"], "correct_answer": "1:5", "explanation": "Water(0):Milk(24), mean 20: water:milk = (24-20):(20-0) = 4:20 = 1:5."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["mixtures", "weighted"], "question": "A class is 60% boys with average score 70; the girls average 80. Find the class average.", "options": ["74", "75", "76", "73"], "correct_answer": "74", "explanation": "0.6x70 + 0.4x80 = 42 + 32 = 74."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["mixtures", "replace"], "question": "From 60 litres of milk, 12 litres are drawn and replaced with water. How much milk remains?", "options": ["48 L", "50 L", "45 L", "52 L"], "correct_answer": "48 L", "explanation": "Retention = 1 - 12/60 = 0.8; milk = 60 x 0.8 = 48 litres."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["mixtures", "two-vessels"], "question": "Vessel A contains milk and water 4:1 and vessel B contains them 3:2. Equal volumes are mixed. Find the milk:water ratio in the result.", "options": ["7:3", "12:7", "7:2", "3:2"], "correct_answer": "7:3", "explanation": "Take 5 L from each: A gives 4 milk, B gives 3 milk; total milk 7, water 3 in 10 L: 7:3."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["mixtures", "replace"], "question": "A container holds 50 litres with milk:water = 3:2. If 30% of the mixture is removed and replaced with pure water, what percent of the final mixture is milk?", "options": ["42%", "40%", "45%", "36%"], "correct_answer": "42%", "explanation": "Milk fraction 0.6 shrinks by retention 0.7: 0.6 x 0.7 = 0.42 = 42%."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["mixtures", "alligation"], "question": "Two salt solutions of 10% and 25% strength are mixed to get 30 litres of 20% solution. How many litres of the 25% solution are used?", "options": ["20 L", "10 L", "15 L", "18 L"], "correct_answer": "20 L", "explanation": "Ratio 10%:25% = (25-20):(20-10) = 1:2, so 25% solution = 30 x 2/3 = 20 litres."}
+  ],
+  "topic_test": {
+    "title": "Mixture and Alligation - Topic Test",
+    "duration_minutes": 20,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 20 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Draw the alligation cross for mixing-ratio questions."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["mixtures"], "question": "In what ratio must sugar at Rs. 15/kg be mixed with sugar at Rs. 20/kg to get a mixture at Rs. 18/kg?", "options": ["2:3", "3:2", "1:1", "3:4"], "correct_answer": "2:3", "explanation": "(20-18):(18-15) = 2:3."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["mixtures"], "question": "An alloy of 30 kg has zinc and copper in ratio 2:3. The copper content is:", "options": ["18 kg", "12 kg", "15 kg", "20 kg"], "correct_answer": "18 kg", "explanation": "Copper = 30 x 3/5 = 18 kg."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["mixtures"], "question": "Mixing 25% and 40% acid solutions to get 30% requires them in ratio:", "options": ["2:1", "1:2", "3:2", "2:3"], "correct_answer": "2:1", "explanation": "(40-30):(30-25) = 10:5 = 2:1."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["mixtures"], "question": "From a cask of 40 litres of wine, 8 litres are drawn and replaced with water. The wine remaining is:", "options": ["32 L", "34 L", "30 L", "36 L"], "correct_answer": "32 L", "explanation": "40 x (1 - 8/40) = 40 x 0.8 = 32 litres."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["mixtures"], "question": "Average wage of 20 skilled workers is Rs. 800 and of 30 unskilled is Rs. 500. The overall average wage is:", "options": ["Rs. 620", "Rs. 650", "Rs. 600", "Rs. 640"], "correct_answer": "Rs. 620", "explanation": "(20x800 + 30x500)/50 = 31000/50 = 620."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["mixtures"], "question": "How many kg of rice at Rs. 50/kg must be mixed with 30 kg of rice at Rs. 35/kg so the mixture is worth Rs. 40/kg?", "options": ["15 kg", "20 kg", "10 kg", "25 kg"], "correct_answer": "15 kg", "explanation": "Ratio 50-type : 35-type = (40-35):(50-40) = 1:2. With 30 kg of the cheaper, dearer = 15 kg."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["mixtures"], "question": "A 20-litre mixture of milk and water contains 25% water. If 5 litres of water are added, the water percentage becomes:", "options": ["40%", "35%", "30%", "45%"], "correct_answer": "40%", "explanation": "Water = 5 + 5 = 10 litres in 25 litres = 40%."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["mixtures"], "question": "A vessel of 80 litres of pure milk has 16 litres removed and replaced with water twice. The milk left is:", "options": ["51.2 L", "48 L", "56 L", "52.4 L"], "correct_answer": "51.2 L", "explanation": "80 x (0.8)^2 = 51.2 litres."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["mixtures"], "question": "Vessels of equal volume contain milk:water 5:1 and 7:2. Mixed together, the new ratio of milk to water is:", "options": ["29:7", "12:3", "35:2", "6:1"], "correct_answer": "29:7", "explanation": "Take 18 L each (LCM of 6 and 9): A: 15 milk 3 water; B: 14 milk 4 water. Total 29:7."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["mixtures"], "question": "A trader mixes 26 kg of rice at Rs. 20/kg with 30 kg at Rs. 36/kg and sells the mixture at Rs. 30/kg. His profit percent is:", "options": ["5%", "8%", "10%", "3%"], "correct_answer": "5%", "explanation": "Cost = 26x20 + 30x36 = 520 + 1080 = 1600 for 56 kg. Sale = 56 x 30 = 1680. Profit = 80/1600 = 5%."}
+    ]
+  }
+}

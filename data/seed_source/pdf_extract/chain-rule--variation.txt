@@ -1,0 +1,202 @@
+CHAIN RULE / VARIATION
+CONCEPTS
+What is Chain Rule or Variation: 
+Variations deal with, how one quantity changes with
+respect to one or more other quantities. Basically there
+are two types of variations: Direct variation and
+Indirect variation.
+Direct Variation: Suppose that a painter charges 100
+₹
+to paint a room. The below table shows the relationship
+between the number of rooms painted and the cost of
+the total job for 1 through 5 rooms.
+Number 
+of Rooms
+Cost of 
+the Job
+1
+ 100
+₹
+2
+ 200
+₹
+3
+ 300
+₹
+4
+ 400
+₹
+5
+ 500
+₹
+From the above table we observe that as the number of
+rooms increase, cost of the job also increases and vice
+versa. There is a direct variation between these two
+quantities. It means these two quantities are  directly
+proportional to each other. 
+• If the two quantities 'x' and 'y' are directly
+proportional to each other, then x = k y (or)
+x1
+x2
+=
+y1
+y2
+.
+e.g.: If 5 computers costs  275, how much would 18
+₹
+computers cost?
+Explanation: More number of computers  : More cost
+          Less number of computers     : Less cost
+The two quantities, computers and cost are directly
+proportional to each other.
+Computers      Cost
+           5  (x1)
+  275 (y1)
+          18 (x2)            ?  (y2)
+x1
+x2
+=
+y1
+y2
+⇒5
+18
+= 275
+x
+⇒x=990.
+(or) x = k y  5 = 275 k   k = 1
+55
+18 = k y 18= 1
+55
+y  y = 990.
+Indirect Variation: When two variables or quantities
+change in opposite directions, you have inverse
+variation. 
+The below table shows the relationship between  the
+number of persons and number of days required to
+complete a work.
+Persons
+Days
+1
+120
+2
+60
+3
+20
+4
+5
+5
+1
+If the number of persons increase, the days required to
+complete the work will decrease. There is an indirect
+variation between these two quantities. It means these
+two quantities are inversely proportional to each other.
+• If the two quantities x, y are indirectly proportional
+to each other, then x= k
+y
+(or)
+x1
+x2
+=
+y2
+y1
+.
+e.g.: There are 6 workers to paint a house. They
+typically paint the house in 8 hours. If 4 workers are
+not came to work today, how long will it take the
+remaining workers to paint the house.
+Explanation: If there are more workers, it takes less days
+to complete the work. These two quantities are
+indirectly proportional each other.
+                           Workers
+Hours
+  6 (x1)
+8 (y1)
+  2 (x2)
+? (y2)
+                  
+x1
+x2
+=
+y2
+y1
+6
+2
+= x
+8
+ x = 24.
+Combined Variation: 
+It involves both direct and indirect variation.
+• If 'x' varies directly with 'y' and indirectly with 'z',
+then the general form of the combined variation is
+x=k y
+z
+or
+x1
+x2
+=
+y1
+y2
+×
+z2
+z1
+.
+e.g.: If 300 men can complete a work in 16 days, how
+many men would do 1
+5 of the work in 15 days?
+Explanation: 
+Men
+Work
+   Days
+300 (x1)   
+  1    (y1)  
+  16 (z1)
+  
+ x   (x2)                  1
+5 (y2)
+  15 (z2)
+Compare men with work and days. 
+More men can do more work. (Direct Variation)
+If there are more men, it takes less days to complete the 
+work. (Indirect Variation)
+Hence, It is a Combined Variation:
+x1
+x2
+=
+y 1
+y 2
+×
+z2
+z1
+.
+300
+x
+= 1
+1/5
+× 15
+16
+4
+x
+= 1
+16
+ x = 64.
+Login to your online account to ask doubts.
+1.31
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

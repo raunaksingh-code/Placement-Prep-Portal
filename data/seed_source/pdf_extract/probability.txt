@@ -1,0 +1,118 @@
+PROBABILITY
+CONCEPTS
+•Random Experiment: Probability is the study of
+random or non deterministic experiments. If the dice is
+tossed in the air, then it is certain that the dice will
+come down, but is not certain that, say a 3 will appear.
+Definition: A random experiment is an experiment
+whose result would not be predicted but the list of
+possible outcomes are known. The non predicted
+outcomes cannot be taken under random experiments.
+The result of random experiments may not be
+predicted exactly but the result must be with in the list
+of predicted outputs.
+Example:
+1) Tossing a fair coin.
+2) Rolling a dice is a random experiment, since its
+results could not be predicted in any trial.
+3) Selection of a plastic component and verification of
+its compliance.
+4) Life time of a computer.
+5) Number of calls to a communication system during a
+fixed length interval of time.
+•Outcome: The result of a random experiment will be
+called an outcome.
+Example: 
+1) Tossing a coin.The result is either Head(H) or Tail(T).
+2) In an experiment of throwing a six-faced dice. The
+possible outcomes are 1, 2, 3, 4, 5 and 6.
+•Sample Space: The set of all possible outcomes of
+some given experiment is called sample space. A
+particular outcome, i.e. an element in that set is called a
+sample point or sample.
+Example:
+1) Toss a dice and observe the number that appears on
+top. Then the sample space consists of the six possible
+numbers:  S = {1, 2, 3, 4, 5, 6}
+2) Toss a coin 2 times and observe the sequence of
+heads (H) and tails (T) that appears. Then the sample
+space S consists of four elements: S = {HH, HT, TH, TT}
+Note: Shortcut: Tossing a coin 2 times is same as
+tossing 2 coins at a time. 
+S = {H, T} × {H, T}
+S = {HH, HT, TH, TT}
+3) Toss a coin until a head appears and then count the
+number of times the coin was tossed. The sample space
+of this experiment is  S = {1, 2, 3, ... ∞}. Here ∞ refers to
+the case when a head never appears and so the coin is
+tossed an infinite number of times. This is an example
+of a sample space which is countably infinite.
+•Events: An event A is a set of outcomes or, in other
+words, a subset of the sample space S.
+Example: If A random experiment is associated with
+what is the day today. It may be from Sunday to
+Saturday. If today is Friday and Friday belongs to the
+sample space   S = {Sun, Mon, Tue, Wed, Thu, Fri, Sat}.
+Different Types of Events:
+•Simple or Elementary Events: An  event with only
+one sample point is called simple or elementary event.
+In an experiment of tossing three coins at a time, the
+event 'A' is that all coins turns up with heads consists
+of only one point HHH. Then 'A' is a simple event. 
+As a matter of fact each outcome of an experiment is a
+simple event.
+•Complimentary Event: An event̄ A (or A1) is said to
+be complementary to an event 'A' in sample space 'S'
+consists of all those points which are not in 'A'. 
+Example: In tossing a coin three times, sample space S
+consists of eight points.
+S = {HHH, HHT, HTH, THH, HTT, TTH, THT, TTT}
+The event 'A' is such that there should be no heads in
+the sample point is {TTT}. Then the event̄ A (or A1)
+complementary to 'A' is that there exists at least one
+head in the sample space i.e. (HHH), (HHT), (HTH),
+(THH), (HTT), (TTH), (THT).
+•Equal Events: Two events A and B are said to be equal
+if A  B and B  A. This statement implies that all the
+points of A are also the points of B and vice-versa.
+Example: Let sample space S = {1, 2, 3, 4, 5, 6, 7, 8, 9,
+10}.
+Let A be the event defined as 'even number' and event B
+is defined as 'multiplies of 2'. 
+Then A = {2, 4, 6, 8, 10}; B = {2, 4, 6, 8, 10} here every
+point in A is also a point in B and vice-versa. Therefore
+events A and B are said to be equal events.
+•Transitivity of events: If A, B and C are 3 events such
+that A  B and B  C it implies that A  C such a
+property of events is known s transitivity of events.
+Let the sample space S = {1, 2,. . . . , 100}.
+Event A be the 'even numbers': A = {2, 4, 6, 8,.....,100}
+Event B be the 'multiples of 4' : B = {4, 8, 12,.......,100}
+Event C be the 'multiples of 8': C = {8, 16, 24,.....,100}
+Event point in C is also point in B and event point in B
+is also point in A but not vice–versa i.e. ABC.
+•Compound event: An event which is not simple or
+elementary is called a compound event. Every compound
+event can be uniquely represented by the union of a set
+of elementary events.
+1.102
+Praxis Groups
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

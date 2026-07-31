@@ -1,0 +1,69 @@
+{
+  "study_material": {
+    "title": "Statements and Arguments - Complete Study Notes",
+    "introduction": "These questions give a debatable statement and one or more arguments for or against it. You judge whether each argument is STRONG (relevant, substantial, tied to the merits) or WEAK (trivial, emotional, assumptive, or off-topic).",
+    "learning_objectives": [
+      "Distinguish strong arguments from weak ones",
+      "Spot emotional, trivial and assumption-based reasoning",
+      "Judge arguments independent of personal opinion",
+      "Apply the standard answer scheme (only I, only II, both, neither)"
+    ],
+    "concepts": [
+      {"heading": "1. What Makes an Argument Strong", "body": "A strong argument relates directly to the statement, addresses its core merits or demerits, cites a substantial consequence, and is realistic. It should matter to society or the issue at large, not just to a few individuals."},
+      {"heading": "2. What Makes an Argument Weak", "body": "Weak arguments are: emotional appeals without substance ('it would be terrible'), trivial points, assumptions not backed by the statement, examples of a single case, wishful comparisons ('other countries do it'), or arguments that attack/defend something the statement never claimed."},
+      {"heading": "3. Judge the Argument, Not the Position", "body": "A strong argument can exist on the side you personally disagree with. Evaluate only: is this reasoning relevant and weighty? Never mark by whether you agree with the conclusion."},
+      {"heading": "4. Common Formats", "body": "'Should X be done?' with Argument I (Yes, because...) and Argument II (No, because...). Answers: only I is strong; only II is strong; both are strong; neither is strong. Both sides CAN be strong simultaneously - the test is each argument's own quality."}
+    ],
+    "formulas": [
+      "Strong = relevant + substantial + realistic",
+      "Weak = emotional, trivial, assumptive, or off-topic",
+      "Both arguments can be strong; both can be weak"
+    ],
+    "shortcut_methods": [
+      "Ask: does this consequence actually follow, and does it matter at scale?",
+      "'Yes, because it is good' style circular reasoning is always weak",
+      "Comparisons to other countries without reasoning are weak"
+    ],
+    "common_mistakes": [
+      "Marking by personal opinion on the issue",
+      "Accepting emotional but hollow arguments as strong",
+      "Rejecting an argument because the other side also has a strong one"
+    ],
+    "summary": "Strength = relevance + substance + realism, judged per argument, with your own opinion switched off.",
+    "quick_revision_notes": [
+      "Strong: merits-based, large-scale consequence",
+      "Weak: emotion, triviality, assumption, single case",
+      "Both-strong is a legitimate answer",
+      "Never vote your opinion"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "medium", "question": "Statement: Should smoking be banned in all public places? Argument I: Yes, passive smoking harms the health of non-smokers. Argument II: No, smokers will feel bad. Which is strong?", "options": ["Only I", "Only II", "Both", "Neither"], "correct_answer": "Only I", "step_by_step": "I cites a substantial public-health consequence. II is a trivial emotional point.", "shortcut": "Health of many beats feelings of some."},
+    {"difficulty": "medium", "question": "Statement: Should all colleges make internships compulsory? Argument I: Yes, internships give students industry exposure that improves employability. Argument II: No, some students may find internships tiring. Which is strong?", "options": ["Only I", "Only II", "Both", "Neither"], "correct_answer": "Only I", "step_by_step": "I addresses the core benefit at scale. 'Tiring' is trivial.", "shortcut": "Substantial vs trivial."},
+    {"difficulty": "hard", "question": "Statement: Should India switch entirely to electric vehicles by 2035? Argument I: Yes, it would cut urban air pollution and oil imports substantially. Argument II: No, the charging infrastructure and power capacity needed do not yet exist and cannot be assumed. Which is strong?", "options": ["Both", "Only I", "Only II", "Neither"], "correct_answer": "Both", "step_by_step": "I gives major benefits; II raises a realistic, substantial feasibility constraint. Both address the merits.", "shortcut": "Opposite sides can both be strong."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 60, "tags": ["arguments", "trivial"], "question": "Statement: Should school students be given homework daily? Argument: No, because children do not enjoy homework. This argument is:", "options": ["Weak - it is a trivial/emotional point", "Strong - enjoyment matters most", "Strong - it cites evidence", "Neither weak nor strong"], "correct_answer": "Weak - it is a trivial/emotional point", "explanation": "Enjoyment alone is not a substantial educational consideration."},
+    {"difficulty": "easy", "estimated_time_sec": 60, "tags": ["arguments", "merit"], "question": "Statement: Should helmets be compulsory for two-wheeler riders? Argument: Yes, helmets drastically reduce fatal head injuries in accidents. This argument is:", "options": ["Strong - relevant and substantial", "Weak - accidents are rare", "Weak - it is emotional", "Irrelevant"], "correct_answer": "Strong - relevant and substantial", "explanation": "Directly addresses the life-safety merit of the proposal."},
+    {"difficulty": "medium", "estimated_time_sec": 70, "tags": ["arguments", "comparison"], "question": "Statement: Should our country adopt a four-day work week? Argument: Yes, because some European countries have tried it. This argument is:", "options": ["Weak - a bare comparison without reasoning", "Strong - international proof", "Strong - Europe is advanced", "Cannot be judged"], "correct_answer": "Weak - a bare comparison without reasoning", "explanation": "'Others do it' gives no reason it suits us; no outcome is cited."},
+    {"difficulty": "medium", "estimated_time_sec": 70, "tags": ["arguments", "both-sides"], "question": "Statement: Should university exams be conducted online? Argument I: Yes, online exams reduce logistics costs and enable faster results. Argument II: No, unreliable internet access would unfairly disadvantage rural students. Which is strong?", "options": ["Both", "Only I", "Only II", "Neither"], "correct_answer": "Both", "explanation": "Each cites a substantial, realistic consequence on the merits."},
+    {"difficulty": "medium", "estimated_time_sec": 70, "tags": ["arguments", "assumption"], "question": "Statement: Should the government double the tax on soft drinks? Argument: Yes, then nobody will ever drink them and all lifestyle diseases will vanish. This argument is:", "options": ["Weak - exaggerated and assumptive", "Strong - health benefit", "Strong - taxes change behaviour", "Neither"], "correct_answer": "Weak - exaggerated and assumptive", "explanation": "The claimed consequence (nobody, all diseases) is unrealistic."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["arguments", "single-case"], "question": "Statement: Should students be allowed to use AI tools in assignments? Argument: No, my cousin once copied an essay using AI. This argument is:", "options": ["Weak - a single personal case", "Strong - real evidence", "Strong - proves misuse", "Cannot be judged"], "correct_answer": "Weak - a single personal case", "explanation": "One anecdote cannot support a general policy conclusion."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["arguments", "policy"], "question": "Statement: Should public transport be made free in metro cities? Argument I: Yes, it would cut private vehicle use, congestion and pollution. Argument II: No, the massive recurring subsidy would strain city budgets and degrade service quality. Which is strong?", "options": ["Both", "Only I", "Only II", "Neither"], "correct_answer": "Both", "explanation": "Both address large-scale, realistic consequences of the proposal."}
+  ],
+  "topic_test": {
+    "title": "Statements and Arguments - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["7 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Judge each argument's own quality - not your opinion of the issue."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 60, "tags": ["arguments"], "question": "Statement: Should junk food ads be banned during children's TV programmes? Argument: Yes, such ads strongly influence children's eating habits and contribute to childhood obesity. This argument is:", "options": ["Strong", "Weak", "Emotional", "Irrelevant"], "correct_answer": "Strong", "explanation": "Substantial, relevant public-health reasoning."},
+      {"difficulty": "easy", "estimated_time_sec": 60, "tags": ["arguments"], "question": "Statement: Should the voting age be lowered to 16? Argument: No, because 16-year-olds like playing video games. This argument is:", "options": ["Weak", "Strong", "Partially strong", "Cannot be judged"], "correct_answer": "Weak", "explanation": "Irrelevant to civic maturity - off-topic reasoning."},
+      {"difficulty": "medium", "estimated_time_sec": 70, "tags": ["arguments"], "question": "Statement: Should companies be forced to disclose salaries in job ads? Argument I: Yes, transparency reduces pay discrimination and wasted applications. Argument II: No, salary is a private matter between employer and employee. Which is strong?", "options": ["Both", "Only I", "Only II", "Neither"], "correct_answer": "Both", "explanation": "I cites concrete benefits; II raises a legitimate substantial principle of contractual privacy."},
+      {"difficulty": "medium", "estimated_time_sec": 70, "tags": ["arguments"], "question": "Statement: Should plastic bags be banned? Argument: Yes, because plastic is bad. This argument is:", "options": ["Weak - circular, no substance", "Strong - environmental", "Strong - short and clear", "Neither"], "correct_answer": "Weak - circular, no substance", "explanation": "It restates the position without a reason."},
+      {"difficulty": "medium", "estimated_time_sec": 70, "tags": ["arguments"], "question": "Statement: Should attendance be optional in colleges? Argument I: Yes, adults should be responsible for their own learning outcomes. Argument II: No, classroom interaction is integral to many courses and optional attendance would undermine lab and group work. Which is strong?", "options": ["Both", "Only I", "Only II", "Neither"], "correct_answer": "Both", "explanation": "Both engage the merits with substantial reasoning."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["arguments"], "question": "Statement: Should all city buses be replaced with electric buses next year? Argument: Yes, and then the city will win environmental awards. This argument is:", "options": ["Weak - trivial consequence", "Strong - environmental benefit", "Strong - prestige matters", "Cannot be judged"], "correct_answer": "Weak - trivial consequence", "explanation": "Awards are a trivial outcome; the argument skips the real merits (emissions, cost, feasibility)."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["arguments"], "question": "Statement: Should exams have open-book formats? Argument: No, students would need to buy more books. This argument is:", "options": ["Weak - trivial and speculative", "Strong - cost concern", "Strong - practical", "Neither"], "correct_answer": "Weak - trivial and speculative", "explanation": "A minor, speculative cost point that ignores the pedagogical question."}
+    ]
+  }
+}

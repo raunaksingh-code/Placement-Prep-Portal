@@ -1,0 +1,80 @@
+{
+  "study_material": {
+    "title": "Data Interpretation - Complete Study Notes",
+    "introduction": "DI presents data as tables, bar graphs, line graphs, pie charts or mixed diagrams and asks for totals, averages, percentages and ratios. The math is elementary - the skill is reading the right numbers fast and avoiding calculation traps.",
+    "learning_objectives": [
+      "Read tables, bar/line graphs and pie charts accurately",
+      "Compute totals, averages, percentage changes and ratios from data",
+      "Convert pie-chart degrees to values and back",
+      "Approximate smartly to eliminate wrong options"
+    ],
+    "concepts": [
+      {"heading": "1. Tables and Bar Graphs", "body": "Tables give exact values; bar graphs compare categories visually. Typical asks: total across years, average per category, percentage growth between two years, the year with maximum increase. Always note units (lakhs, crores, thousands)."},
+      {"heading": "2. Line Graphs", "body": "Best for trends over time. Percentage increase = (new - old)/old x 100 - the base is the earlier value. Steepest segment = largest absolute change; largest percentage change may differ because bases differ."},
+      {"heading": "3. Pie Charts", "body": "The full circle is 360 degrees = 100% of the total. Value of a sector = (sector degrees/360) x total, or (sector %/100) x total. A 90-degree sector is 25%. To compare two sectors, their degree ratio equals their value ratio."},
+      {"heading": "4. Mixed Diagrams and Caselets", "body": "Some sets combine a pie chart with a table, or give data in a paragraph (caselet). Extract the numbers into a quick table first, then answer. Half the errors in DI come from picking the wrong row or year."},
+      {"heading": "5. Approximation", "body": "Options are usually far apart - round values to 2-3 significant digits before dividing. Compute percentages via convenient fractions: 12.5% = 1/8, 16.67% = 1/6, 33.33% = 1/3."}
+    ],
+    "formulas": [
+      "% change = (new - old)/old x 100",
+      "Pie sector value = (degrees/360) x total",
+      "Average = total/count",
+      "Ratio of sectors = ratio of degrees"
+    ],
+    "shortcut_methods": [
+      "Convert percentages to fractions before multiplying",
+      "Scan options first - precision needed depends on their spacing",
+      "In multi-year tables, mark the two cells you need before computing"
+    ],
+    "common_mistakes": [
+      "Using the new value as the base in percentage change",
+      "Missing units stated in the title or axis (lakhs vs crores)",
+      "Comparing absolute changes when percentage change is asked",
+      "Misreading adjacent rows or columns under time pressure"
+    ],
+    "summary": "Read the axes, note the units, pick the exact cells needed, and approximate with fraction equivalents - DI is accuracy plus speed, not advanced math.",
+    "quick_revision_notes": [
+      "360 degrees = 100% in a pie chart",
+      "% change base = earlier value",
+      "1/8 = 12.5%, 1/6 = 16.67%, 1/3 = 33.33%",
+      "Units first, then numbers"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "A company's sales (Rs. lakhs) for 2019-2023 were 40, 50, 45, 60, 55. What was the total sales over the five years?", "options": ["250", "245", "255", "240"], "correct_answer": "250", "step_by_step": "40+50+45+60+55 = 250 lakhs.", "shortcut": "Pair numbers to 100s: (40+60)+(45+55)+50."},
+    {"difficulty": "easy", "question": "For the same data, the average annual sales figure is:", "options": ["50 lakhs", "48 lakhs", "52 lakhs", "55 lakhs"], "correct_answer": "50 lakhs", "step_by_step": "250/5 = 50 lakhs.", "shortcut": "Total already computed - divide once."},
+    {"difficulty": "medium", "question": "For the same data, the percentage increase in sales from 2019 to 2020 was:", "options": ["25%", "20%", "10%", "12.5%"], "correct_answer": "25%", "step_by_step": "(50-40)/40 x 100 = 25%.", "shortcut": "10 on 40 = 1/4."},
+    {"difficulty": "medium", "question": "In a family-budget pie chart, the food sector measures 120 degrees. If monthly income is Rs. 36,000, spending on food is:", "options": ["Rs. 12,000", "Rs. 10,000", "Rs. 15,000", "Rs. 9,000"], "correct_answer": "Rs. 12,000", "step_by_step": "120/360 = 1/3 of 36,000 = 12,000.", "shortcut": "120 degrees is one-third of the circle."},
+    {"difficulty": "hard", "question": "For the 2019-2023 sales data (40, 50, 45, 60, 55), the ratio of 2021 sales to 2023 sales is:", "options": ["9:11", "3:4", "11:9", "5:6"], "correct_answer": "9:11", "step_by_step": "45:55 = 9:11.", "shortcut": "Divide both by 5."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["di", "table"], "question": "A factory produced 20, 25, 30, 35, 40 units (thousands) from 2018 to 2022. Total production was:", "options": ["150 thousand", "140 thousand", "160 thousand", "145 thousand"], "correct_answer": "150 thousand", "explanation": "20+25+30+35+40 = 150."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["di", "average"], "question": "For the same production data, the average annual production was:", "options": ["30 thousand", "25 thousand", "35 thousand", "28 thousand"], "correct_answer": "30 thousand", "explanation": "150/5 = 30."},
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["di", "pie"], "question": "In a pie chart, a sector of 90 degrees represents what percentage of the total?", "options": ["25%", "20%", "30%", "50%"], "correct_answer": "25%", "explanation": "90/360 = 1/4."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["di", "growth"], "question": "For the production data (20, 25, 30, 35, 40), the percentage growth from 2018 to 2022 was:", "options": ["100%", "50%", "80%", "120%"], "correct_answer": "100%", "explanation": "(40-20)/20 x 100 = 100%."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["di", "bar"], "question": "Streams A, B, C have 40, 60 and 100 students. Stream C holds what percent of all students?", "options": ["50%", "40%", "45%", "60%"], "correct_answer": "50%", "explanation": "100 of 200 = 50%."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["di", "pie-value"], "question": "A pie chart of a Rs. 72,000 budget shows rent at 60 degrees. Rent equals:", "options": ["Rs. 12,000", "Rs. 10,000", "Rs. 14,400", "Rs. 15,000"], "correct_answer": "Rs. 12,000", "explanation": "60/360 = 1/6 of 72,000."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["di", "year-max"], "question": "Sales were 40, 50, 45, 60, 55 (2019-2023). Which year saw the largest year-on-year increase?", "options": ["2022", "2020", "2023", "2021"], "correct_answer": "2022", "explanation": "Changes: +10, -5, +15, -5. Largest rise (+15) was in 2022."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["di", "combined"], "question": "Company X earned 30, 36, 45 (lakhs) and company Y earned 24, 36, 54 (lakhs) over three years. Y's total exceeds X's total by:", "options": ["3 lakhs", "6 lakhs", "9 lakhs", "0 lakhs"], "correct_answer": "3 lakhs", "explanation": "X = 111, Y = 114: difference 3 lakhs."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["di", "percentage-of-total"], "question": "For sales 40, 50, 45, 60, 55 (total 250), 2022's share of total sales was:", "options": ["24%", "22%", "25%", "20%"], "correct_answer": "24%", "explanation": "60/250 = 24%."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["di", "ratio"], "question": "Two pie-chart sectors measure 72 and 108 degrees. Their value ratio is:", "options": ["2:3", "3:2", "3:5", "2:5"], "correct_answer": "2:3", "explanation": "72:108 = 2:3."}
+  ],
+  "topic_test": {
+    "title": "Data Interpretation - Topic Test",
+    "duration_minutes": 20,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 20 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "The dataset for each question is inside the question text - read units carefully."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["di"], "question": "Monthly expenses: rent 8,000; food 6,000; travel 3,000; savings 3,000. What fraction goes to rent?", "options": ["2/5", "1/3", "1/4", "3/5"], "correct_answer": "2/5", "explanation": "8000/20000 = 2/5."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["di"], "question": "A shop sold 120, 150, 180 units over three months. Average monthly sales:", "options": ["150", "140", "160", "145"], "correct_answer": "150", "explanation": "450/3 = 150."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["di"], "question": "A pie chart sector of 36 degrees represents what percent?", "options": ["10%", "12%", "9%", "15%"], "correct_answer": "10%", "explanation": "36/360 = 10%."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["di"], "question": "Exports rose from 80 crores to 100 crores. The percentage rise is:", "options": ["25%", "20%", "22%", "18%"], "correct_answer": "25%", "explanation": "20/80 = 25%."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["di"], "question": "Marks in 5 subjects: 72, 85, 64, 90, 89 (each out of 100). Overall percentage:", "options": ["80%", "78%", "82%", "76%"], "correct_answer": "80%", "explanation": "Total 400/500 = 80%."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["di"], "question": "Population (lakhs): 2000: 12; 2010: 18; 2020: 27. Growth rate 2010-2020 was:", "options": ["50%", "40%", "60%", "45%"], "correct_answer": "50%", "explanation": "(27-18)/18 = 50%."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["di"], "question": "A budget pie chart allots education 54 degrees. Out of Rs. 40,000 income, education spending is:", "options": ["Rs. 6,000", "Rs. 5,400", "Rs. 7,200", "Rs. 4,800"], "correct_answer": "Rs. 6,000", "explanation": "54/360 = 15%; 15% of 40,000 = 6,000."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["di"], "question": "Firm P produced 45, 55, 50 units and firm Q produced 40, 60, 65 over three years. Q's average exceeds P's by:", "options": ["5 units", "10 units", "3 units", "7 units"], "correct_answer": "5 units", "explanation": "P avg = 50, Q avg = 55."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["di"], "question": "Sales doubled every year from 2020, starting at 15 lakhs. Sales in 2023 were:", "options": ["120 lakhs", "60 lakhs", "90 lakhs", "45 lakhs"], "correct_answer": "120 lakhs", "explanation": "15 - 30 - 60 - 120 over 2020-2023."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["di"], "question": "In a survey of 1,200 people shown as a pie chart, the 'metro' sector is 150 degrees. How many chose metro?", "options": ["500", "450", "550", "600"], "correct_answer": "500", "explanation": "150/360 x 1200 = 500."}
+    ]
+  }
+}

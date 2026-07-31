@@ -1,0 +1,76 @@
+{
+  "study_material": {
+    "title": "Reading Comprehension - Complete Study Notes",
+    "introduction": "Reading comprehension gives a passage and asks questions on its content, tone, inference and vocabulary. The answer is always supported by the passage - never by outside knowledge. Speed comes from reading the questions first and scanning purposefully.",
+    "learning_objectives": [
+      "Identify main idea versus supporting detail",
+      "Distinguish stated facts from valid inferences",
+      "Determine the author's tone and purpose",
+      "Deduce word meanings from context",
+      "Manage time across passage and questions"
+    ],
+    "concepts": [
+      {"heading": "1. Question Types", "body": "Factual (directly stated - locate and match), Inference (implied but not stated - must follow necessarily), Main idea (the passage's central point, not a single paragraph's), Tone/attitude (the author's stance), Vocabulary-in-context (meaning in THIS passage, which may not be the dictionary's first sense), and Structure (why the author included a paragraph)."},
+      {"heading": "2. The Efficient Method", "body": "Skim the questions first to know what to hunt for. Read the passage once at moderate speed, marking the topic sentence of each paragraph. Answer factual questions by returning to the text and pointing at the supporting line. Never answer from memory or from general knowledge."},
+      {"heading": "3. Inference Discipline", "body": "A valid inference must follow necessarily from the text. If a statement is merely plausible or 'probably true in the real world', it is wrong. Reject options containing extreme words - always, never, all, none, only - unless the passage states them explicitly."},
+      {"heading": "4. Tone Vocabulary", "body": "Common tone answers: objective/neutral (factual reporting), critical (finding fault), appreciative/laudatory (praising), sceptical (doubting), analytical (examining causes), optimistic, pessimistic, ironic, cautionary. Look at adjectives and adverbs the author chooses - they carry the tone."},
+      {"heading": "5. Main Idea vs Detail", "body": "The main idea covers the WHOLE passage. A common wrong answer is true but too narrow (covers one paragraph) or too broad (covers more than the passage claims). Test each option: does it summarise everything, or only a part?"}
+    ],
+    "formulas": [
+      "Every answer must be traceable to a line in the passage",
+      "Inference = necessarily true, not merely plausible",
+      "Reject extreme words unless explicitly stated",
+      "Main idea covers the whole passage, not one paragraph"
+    ],
+    "shortcut_methods": [
+      "Read the questions before the passage",
+      "Mark each paragraph's topic sentence as you read",
+      "For vocabulary questions, replace the word with each option and reread the sentence"
+    ],
+    "common_mistakes": [
+      "Answering from personal knowledge rather than the text",
+      "Choosing an option that is true but too narrow for a main-idea question",
+      "Accepting extreme-language options",
+      "Spending too long on one difficult inference question"
+    ],
+    "summary": "Preview the questions, read once with purpose, and anchor every answer to a specific line - inference means necessary, not likely.",
+    "quick_revision_notes": [
+      "Questions first, then passage",
+      "Point to the supporting line for every answer",
+      "Beware always/never/all/only",
+      "Main idea = whole passage"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "medium", "question": "Passage: 'Remote work has reshaped corporate culture. Companies report higher productivity and lower attrition, yet many managers worry that spontaneous collaboration has weakened. Firms now experiment with hybrid schedules to capture both gains.' What is the main idea?", "options": ["Remote work brings benefits but also concerns, prompting hybrid models", "Remote work has entirely failed", "Managers dislike all forms of remote work", "Productivity is the only measure that matters"], "correct_answer": "Remote work brings benefits but also concerns, prompting hybrid models", "step_by_step": "The passage presents gains (productivity, attrition), a concern (collaboration), and the response (hybrid). Only the first option covers all three parts.", "shortcut": "The main idea must span every sentence, not just one."},
+    {"difficulty": "medium", "question": "Using the same passage, what is the author's tone?", "options": ["Balanced and analytical", "Angry and dismissive", "Enthusiastically promotional", "Deeply pessimistic"], "correct_answer": "Balanced and analytical", "step_by_step": "The author presents both advantages and concerns without taking a side, and explains the resulting response - analysis, not advocacy.", "shortcut": "Presenting both sides evenly signals a neutral or analytical tone."},
+    {"difficulty": "hard", "question": "Using the same passage, which inference is valid?", "options": ["Hybrid schedules attempt to preserve collaboration while retaining remote-work gains", "Remote work will be abolished soon", "All managers oppose remote work", "Attrition is unaffected by work location"], "correct_answer": "Hybrid schedules attempt to preserve collaboration while retaining remote-work gains", "step_by_step": "The passage says firms adopt hybrid to 'capture both gains' - directly supporting this inference. The others contradict the text or use extreme words ('all', 'abolished').", "shortcut": "Eliminate options containing all/never/soon unless stated."},
+    {"difficulty": "medium", "question": "Passage: 'The scheme was lauded for its ambition but faltered in execution, as funds reached only a fraction of intended beneficiaries.' In this context, 'faltered' most nearly means:", "options": ["Failed to perform well", "Increased steadily", "Was celebrated", "Was cancelled"], "correct_answer": "Failed to perform well", "step_by_step": "The contrast marker 'but' opposes 'lauded', and the following clause explains poor delivery - so 'faltered' means performed badly.", "shortcut": "Use the contrast word to fix the direction of meaning."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 60, "tags": ["reading", "factual"], "question": "Passage: 'India's solar capacity grew from 10 GW in 2016 to over 70 GW in 2023, driven largely by falling panel prices and government auctions.' According to the passage, what drove the growth?", "options": ["Falling panel prices and government auctions", "Rising coal costs", "Foreign investment alone", "Increased rainfall"], "correct_answer": "Falling panel prices and government auctions", "explanation": "The passage names exactly these two drivers."},
+    {"difficulty": "easy", "estimated_time_sec": 55, "tags": ["reading", "factual"], "question": "Using the same passage, solar capacity in 2016 was:", "options": ["10 GW", "70 GW", "60 GW", "2023 GW"], "correct_answer": "10 GW", "explanation": "Directly stated in the passage."},
+    {"difficulty": "easy", "estimated_time_sec": 60, "tags": ["reading", "main-idea"], "question": "Passage: 'Sleep is not passive rest. During deep sleep the brain clears metabolic waste, consolidates memory and regulates hormones. Chronic sleep loss therefore affects far more than alertness.' The main idea is:", "options": ["Sleep performs essential biological functions beyond rest", "Sleep is only about feeling rested", "Hormones are the most important part of sleep", "People should sleep exactly eight hours"], "correct_answer": "Sleep performs essential biological functions beyond rest", "explanation": "This covers the whole passage; the others are too narrow or unsupported."},
+    {"difficulty": "medium", "estimated_time_sec": 75, "tags": ["reading", "inference"], "question": "Using the sleep passage, which inference is valid?", "options": ["Sleep deprivation may impair memory", "Sleep has no effect on hormones", "Everyone needs the same amount of sleep", "Deep sleep is unnecessary"], "correct_answer": "Sleep deprivation may impair memory", "explanation": "Since deep sleep consolidates memory, losing it may impair memory - a necessary inference."},
+    {"difficulty": "medium", "estimated_time_sec": 75, "tags": ["reading", "tone"], "question": "Passage: 'The report's conclusions rest on a sample of just forty respondents, yet its authors generalise confidently to an entire industry.' The author's tone is:", "options": ["Critical", "Admiring", "Neutral", "Humorous"], "correct_answer": "Critical", "explanation": "'Just forty' and 'yet ... confidently' signal disapproval of the methodology."},
+    {"difficulty": "medium", "estimated_time_sec": 70, "tags": ["reading", "vocabulary"], "question": "Passage: 'Her prudent management of the budget left the department with a surplus in a difficult year.' In context, 'prudent' means:", "options": ["Careful and wise", "Reckless", "Generous", "Indifferent"], "correct_answer": "Careful and wise", "explanation": "Producing a surplus in a hard year indicates careful, sensible management."},
+    {"difficulty": "hard", "estimated_time_sec": 85, "tags": ["reading", "inference"], "question": "Passage: 'Electric vehicle adoption depends less on battery technology today than on charging infrastructure. Where chargers are dense, sales climb sharply; where they are sparse, even generous subsidies have limited effect.' Which inference is valid?", "options": ["Subsidies alone may not raise EV sales without adequate charging access", "Battery technology no longer matters at all", "Subsidies always increase sales", "Charging infrastructure is cheap to build"], "correct_answer": "Subsidies alone may not raise EV sales without adequate charging access", "explanation": "The final clause states subsidies have limited effect where chargers are sparse. The others are extreme or unsupported."},
+    {"difficulty": "hard", "estimated_time_sec": 85, "tags": ["reading", "purpose"], "question": "Using the EV passage, the author's main purpose is to:", "options": ["Explain what most influences EV adoption", "Criticise electric vehicles", "Promote a specific car brand", "Describe how batteries work"], "correct_answer": "Explain what most influences EV adoption", "explanation": "The passage compares two factors and identifies infrastructure as decisive - explanation, not advocacy."}
+  ],
+  "topic_test": {
+    "title": "Reading Comprehension - Topic Test",
+    "duration_minutes": 20,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 20 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Each question carries its own short passage. Answer only from the passage."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 80, "tags": ["reading"], "question": "Passage: 'The library will remain closed on Mondays for maintenance. Members may still return books through the drop box outside the main entrance.' What can members do on Mondays?", "options": ["Return books via the drop box", "Borrow new books", "Attend reading sessions", "Access the reading room"], "correct_answer": "Return books via the drop box", "explanation": "Explicitly permitted in the second sentence."},
+      {"difficulty": "easy", "estimated_time_sec": 80, "tags": ["reading"], "question": "Passage: 'Bamboo grows faster than almost any other plant, with some species adding a metre a day. This rapid growth makes it a promising renewable material.' Why is bamboo promising?", "options": ["Because its rapid growth makes it renewable", "Because it is stronger than steel", "Because it is inexpensive to transport", "Because it grows only in Asia"], "correct_answer": "Because its rapid growth makes it renewable", "explanation": "The passage links growth speed directly to its promise as a renewable material."},
+      {"difficulty": "medium", "estimated_time_sec": 90, "tags": ["reading"], "question": "Passage: 'Many start-ups fail not because their product is poor but because they scale before finding genuine demand. Growth spending then outruns revenue.' The main idea is:", "options": ["Premature scaling, not product quality, often causes start-up failure", "All start-ups fail eventually", "Products are usually poor", "Revenue is irrelevant to start-ups"], "correct_answer": "Premature scaling, not product quality, often causes start-up failure", "explanation": "This captures the contrast the passage draws."},
+      {"difficulty": "medium", "estimated_time_sec": 90, "tags": ["reading"], "question": "Using the start-up passage, which inference is valid?", "options": ["Confirming demand before scaling may reduce failure risk", "Start-ups should never spend on growth", "Good products guarantee success", "Revenue always exceeds spending"], "correct_answer": "Confirming demand before scaling may reduce failure risk", "explanation": "Follows logically from the stated cause of failure."},
+      {"difficulty": "medium", "estimated_time_sec": 90, "tags": ["reading"], "question": "Passage: 'The committee's response was tepid at best; members offered polite nods but committed to nothing.' In context, 'tepid' means:", "options": ["Unenthusiastic", "Hostile", "Overjoyed", "Confused"], "correct_answer": "Unenthusiastic", "explanation": "'Polite nods but committed to nothing' defines lukewarm enthusiasm."},
+      {"difficulty": "medium", "estimated_time_sec": 90, "tags": ["reading"], "question": "Passage: 'Urban trees lower street temperatures by several degrees, reduce runoff during heavy rain, and improve air quality. Yet city budgets rarely fund their maintenance.' The author's tone in the last sentence is:", "options": ["Mildly critical", "Celebratory", "Indifferent", "Humorous"], "correct_answer": "Mildly critical", "explanation": "'Yet ... rarely fund' signals disapproval of the funding gap."},
+      {"difficulty": "hard", "estimated_time_sec": 100, "tags": ["reading"], "question": "Passage: 'Automation has eliminated many routine clerical roles, but demand for workers who can interpret and act on automated output has risen. The net effect on employment is therefore contested.' Which statement is best supported?", "options": ["Automation both removes and creates categories of work", "Automation has clearly reduced total employment", "Automation has no effect on jobs", "All clerical workers are now unemployed"], "correct_answer": "Automation both removes and creates categories of work", "explanation": "The passage names both an elimination and a rise in demand, and calls the net effect contested."},
+      {"difficulty": "hard", "estimated_time_sec": 100, "tags": ["reading"], "question": "Using the automation passage, the phrase 'the net effect is contested' implies:", "options": ["Experts disagree about the overall impact", "The effect has been precisely measured", "There is no effect at all", "Employment has certainly risen"], "correct_answer": "Experts disagree about the overall impact", "explanation": "'Contested' means disputed - no settled conclusion."}
+    ]
+  }
+}

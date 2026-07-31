@@ -1,0 +1,48 @@
+{
+  "slug": "group-discussion",
+  "title": "Group Discussion",
+  "category": "Interview Rounds",
+  "order": 3,
+  "question_category": "Group Discussion",
+  "icon": "💬",
+  "summary": "A selection process, not an elimination one. How GDs are scored, how to enter and hold a discussion, and the topics companies actually set.",
+  "source": "Campus Recruitment Book p99, plus real GD topics recorded in the 2026 placement tracker",
+  "introduction": "A topic or situation is put to a group of candidates, who get roughly 10-15 minutes to think and then discuss it among themselves. Assessors are not looking for a winner - they are watching how you think, listen and behave in a group. Group Discussion is a process of selection rather than elimination.",
+  "sections": [
+    {
+      "heading": "What is being assessed",
+      "body": "Assessors watch a small number of things, and content is only one of them:\n\n• Clarity of thought - is your point structured, or just loud?\n• Communication - can you make a point concisely and be understood?\n• Listening - do you build on what others said, or wait for your turn to talk?\n• Group behaviour - do you bring quieter people in, or talk over them?\n• Leadership - initiating, steering a drifting discussion back, and summarising.\n• Subject knowledge - facts and examples that show you follow the topic.\n\nA candidate who speaks three times with substance usually outscores one who speaks ten times without."
+    },
+    {
+      "heading": "Using the preparation minutes",
+      "body": "You get 10-15 minutes to think before the discussion starts. Do not spend it writing an essay.\n\nWrite down: two arguments for, two against, one example or data point for each side, and one line that could open the discussion. Deciding your own position early means you can enter whenever a gap appears rather than composing while others talk.\n\nFor an abstract or unfamiliar topic, define it first. Half of a weak GD is spent with people arguing past each other because nobody agreed what the topic meant."
+    },
+    {
+      "heading": "Entering and holding the discussion",
+      "body": "Opening the GD is high risk and high reward. Only do it if you have a clear structure to offer - define the topic, then set out the two or three angles worth discussing. A weak opening is worse than a strong second entry.\n\nIf you cannot get in: wait for a natural pause, use the previous speaker's name, and link to what they said. 'Building on Priya's point about cost, there is also...' is far harder to talk over than starting cold.\n\nWhen interrupted, do not surrender the floor immediately and do not raise your voice. Finish your sentence calmly and continue.\n\nIf the discussion has become a shouting match, the highest-value move is to restore order: 'Can we take these one at a time - we have covered cost, but not regulation.' Assessors notice this.\n\nSummarising near the end is the single most reliable way to score: capture both sides fairly, note where the group converged, and close."
+    },
+    {
+      "heading": "Structuring your argument",
+      "body": "For most topics one of these frames will carry you:\n\n• For and against, then your position.\n• Stakeholder-wise - what this means for customers, businesses, government, employees.\n• Short term versus long term.\n• PESTLE - political, economic, social, technological, legal, environmental - useful for policy topics.\n\nSpecifics beat opinions. 'Quick commerce is growing fast' is weak; 'quick commerce players now deliver in under 15 minutes in metros, which is what pressures the kirana model' is a contribution."
+    },
+    {
+      "heading": "Topics companies actually set",
+      "body": "These were recorded from the 2026 placement season by candidates in this portal:\n\n• Is quick commerce the death of kirana stores?\n• US tariffs - a threat or an opportunity for India?\n• Rise of entrepreneurship in India\n• Are EVs really sustainable?\n• OTT vs theatre - the preferences of millennials\n• Controversy as a marketing strategy\n• ChatGPT vs Google Search\n• Should homework be banned?\n\nNote the mix: business and current affairs dominate, with the occasional abstract or light topic. Reading a business daily for fifteen minutes a day covers most of this ground."
+    }
+  ],
+  "checklist": [
+    "Reading a business newspaper or brief daily",
+    "Can define a topic and frame two or three angles in 30 seconds",
+    "Have practised entering a discussion by linking to the previous speaker",
+    "Comfortable summarising both sides at the close",
+    "Know two or three current business stories well enough to cite specifics"
+  ],
+  "common_mistakes": [
+    "Speaking often but adding nothing new",
+    "Opening the GD with no structure just to speak first",
+    "Talking over others or raising your voice when interrupted",
+    "Never referring to anything another candidate said",
+    "Arguing from opinion with no example or number",
+    "Staying silent through the whole discussion, then trying to summarise"
+  ]
+}

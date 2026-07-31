@@ -1,0 +1,72 @@
+{
+  "study_material": {
+    "title": "Blood Relations - Complete Study Notes",
+    "introduction": "Blood relation puzzles describe a chain of family links and ask how two people are related. Draw a quick family tree with generations stacked vertically, and the answer reads off the diagram.",
+    "learning_objectives": [
+      "Decode chained relation statements ('my father's only son')",
+      "Draw family trees with clear generation levels",
+      "Handle pointing-to-photograph puzzles",
+      "Translate in-law and generation-gap relations"
+    ],
+    "concepts": [
+      {"heading": "1. Core Vocabulary", "body": "Father's/mother's son = brother; father's/mother's daughter = sister. Father's brother = uncle, father's sister = aunt. Brother's/sister's son = nephew, daughter = niece. Grandfather's only son = father. Spouse's relatives take 'in-law'."},
+      {"heading": "2. The Tree Method", "body": "Put older generations above, same generation side by side, marriages as horizontal links. Use squares/plus for male, circles/minus for female. Work through the statement clause by clause from the END: 'the daughter of my grandfather's only son' - first resolve 'grandfather's only son' (= father), then 'father's daughter' (= sister)."},
+      {"heading": "3. Photograph Puzzles", "body": "'Pointing to a photo, X says: ...' Resolve the description to find the person in the photo relative to X. Watch for the speaker's gender - some answers (like 'son' vs 'daughter' claims) depend on it, and if the gender is unknown the answer may be 'cannot be determined'."},
+      {"heading": "4. Coded Relations", "body": "Some questions use symbols: 'A + B means A is the father of B', etc. Translate each symbol into tree edges and rebuild the chain. Answer strictly from the final tree, not intuition."}
+    ],
+    "formulas": [
+      "Father's only son = the speaker's brother, or the speaker himself if male and an only son - context decides",
+      "Only son/only daughter phrases pin down identity",
+      "Uncle/aunt = parent's sibling; nephew/niece = sibling's child"
+    ],
+    "shortcut_methods": [
+      "Resolve nested phrases from the innermost outward",
+      "Draw the tree - 20 seconds of sketching prevents most errors",
+      "Flag gender-ambiguous speakers before finalising the answer"
+    ],
+    "common_mistakes": [
+      "Forgetting 'my father's only son' is the speaker himself (when male)",
+      "Confusing nephew (boy) with niece (girl)",
+      "Skipping the tree for 'easy' questions and mislinking generations"
+    ],
+    "summary": "Parse from the innermost phrase, sketch generations vertically, and check gender assumptions before answering.",
+    "quick_revision_notes": [
+      "Grandfather's only son = father",
+      "Parent's sibling = uncle/aunt",
+      "Sibling's child = nephew/niece",
+      "Draw the tree, always"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Pointing to a boy, Amit (an only child) says: 'He is the son of my father's only son.' Who is the boy to Amit?", "options": ["His son", "His brother", "His nephew", "His cousin"], "correct_answer": "His son", "step_by_step": "Father's only son = Amit himself. The boy is Amit's son.", "shortcut": "Resolve the inner phrase first."},
+    {"difficulty": "medium", "question": "Pointing to a photo, Sita says: 'She is the daughter of my grandfather's only son.' Who is she to Sita?", "options": ["Sister", "Cousin", "Aunt", "Mother"], "correct_answer": "Sister", "step_by_step": "Grandfather's only son = Sita's father. His daughter = Sita's sister.", "shortcut": "Two steps down the tree."},
+    {"difficulty": "medium", "question": "A is B's brother. B is C's sister. C is D's father. How is A related to D?", "options": ["Uncle", "Father", "Brother", "Grandfather"], "correct_answer": "Uncle", "step_by_step": "A, B, C are siblings; C's child D makes A the uncle.", "shortcut": "Sibling of a parent = uncle."},
+    {"difficulty": "hard", "question": "Introducing a man, a woman said: 'His wife is the only daughter of my mother.' How is the man related to the woman?", "options": ["Husband", "Brother", "Father", "Son-in-law"], "correct_answer": "Husband", "step_by_step": "Only daughter of her mother = the woman herself. The man's wife is her - he is her husband.", "shortcut": "'Only daughter of my mother' = me."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["blood-relations", "basic"], "question": "Your father's sister is your:", "options": ["Aunt", "Niece", "Cousin", "Mother"], "correct_answer": "Aunt", "explanation": "Parent's sister = aunt."},
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["blood-relations", "basic"], "question": "Your brother's daughter is your:", "options": ["Niece", "Nephew", "Cousin", "Sister"], "correct_answer": "Niece", "explanation": "Sibling's daughter = niece."},
+    {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["blood-relations", "chain"], "question": "P is the mother of Q; Q is the brother of R. How is P related to R?", "options": ["Mother", "Aunt", "Sister", "Grandmother"], "correct_answer": "Mother", "explanation": "Q and R are siblings, so P mothers both."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["blood-relations", "photo"], "question": "Pointing to a man, Ravi says: 'He is the brother of my mother.' The man is Ravi's:", "options": ["Uncle", "Father", "Cousin", "Nephew"], "correct_answer": "Uncle", "explanation": "Mother's brother = maternal uncle."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["blood-relations", "chain"], "question": "A is the father of B. C is the daughter of B. D is the brother of B. How is C related to D?", "options": ["Niece", "Daughter", "Sister", "Cousin"], "correct_answer": "Niece", "explanation": "C is D's sibling's daughter."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["blood-relations", "in-law"], "question": "Your spouse's brother is your:", "options": ["Brother-in-law", "Cousin", "Uncle", "Nephew"], "correct_answer": "Brother-in-law", "explanation": "Spouse's sibling takes 'in-law'."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["blood-relations", "nested"], "question": "Pointing to a photo, Mohan says: 'She is the mother of my son's sister.' Who is she to Mohan?", "options": ["His wife", "His mother", "His sister", "His daughter"], "correct_answer": "His wife", "explanation": "My son's sister = my daughter; her mother = my wife."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["blood-relations", "generations"], "question": "X is the grandfather of Y through Y's father, and Z is also a grandparent of Y through the same son. If X and Z are not the same person, how are X and Z related?", "options": ["Husband and wife", "Brothers", "Father and son", "Cousins"], "correct_answer": "Husband and wife", "explanation": "Grandfather and grandmother of Y on the same (father's) side are spouses."}
+  ],
+  "topic_test": {
+    "title": "Blood Relations - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Sketch a family tree for every chained question."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["blood-relations"], "question": "Your mother's mother is your:", "options": ["Grandmother", "Aunt", "Mother-in-law", "Great-aunt"], "correct_answer": "Grandmother", "explanation": "Maternal grandmother."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["blood-relations"], "question": "Your sister's son is your:", "options": ["Nephew", "Niece", "Cousin", "Grandson"], "correct_answer": "Nephew", "explanation": "Sibling's son = nephew."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["blood-relations"], "question": "A is B's father. B is C's mother. A is C's:", "options": ["Grandfather", "Uncle", "Father", "Brother"], "correct_answer": "Grandfather", "explanation": "Two generations up on the mother's side."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["blood-relations"], "question": "Pointing to a woman, Karan says: 'She is the daughter of the only son of my grandfather.' The woman is Karan's:", "options": ["Sister", "Cousin", "Mother", "Niece"], "correct_answer": "Sister", "explanation": "Grandfather's only son = Karan's father; his daughter = Karan's sister."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["blood-relations"], "question": "M is the brother of N. N is the sister of P. P is the father of Q. How is M related to Q?", "options": ["Uncle", "Father", "Grandfather", "Brother"], "correct_answer": "Uncle", "explanation": "M is a sibling of Q's father."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["blood-relations"], "question": "In 'A + B means A is the mother of B; A - B means A is the brother of B', what does P + Q - R mean for P and R?", "options": ["P is the mother of R", "P is the aunt of R", "P is the sister of R", "P is the grandmother of R"], "correct_answer": "P is the mother of R", "explanation": "P is mother of Q; Q is brother of R, so P mothers both Q and R."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["blood-relations"], "question": "Introducing a boy, a man says: 'He is the son of my wife's mother's only daughter.' The boy is the man's:", "options": ["Son", "Nephew", "Brother", "Grandson"], "correct_answer": "Son", "explanation": "Wife's mother's only daughter = the wife. Her son = his son."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["blood-relations"], "question": "Deepak said: 'This girl is the wife of the grandson of my mother.' How is Deepak related to the girl?", "options": ["Father-in-law", "Grandfather", "Husband", "Uncle"], "correct_answer": "Father-in-law", "explanation": "Grandson of Deepak's mother = Deepak's son. The girl is his son's wife."}
+    ]
+  }
+}

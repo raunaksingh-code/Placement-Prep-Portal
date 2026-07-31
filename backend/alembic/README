@@ -1,0 +1,53 @@
+Database migrations (Alembic)
+=============================
+
+The database schema is owned by Alembic. `app/main.py` does NOT create tables —
+if the schema is missing or stale, the app fails rather than silently diverging
+from the migration history.
+
+Run every command from the `backend/` directory.
+
+Create or update a database
+---------------------------
+    ./venv/Scripts/alembic upgrade head
+
+`python -m app.seed.seed` runs this for you before seeding, so a fresh clone
+only needs the seed command.
+
+After changing a model
+----------------------
+1. Edit the model under `app/models/`.
+2. Generate the migration:
+
+       ./venv/Scripts/alembic revision --autogenerate -m "short description"
+
+3. READ the generated file in `alembic/versions/`. Autogenerate is a starting
+   point, not an oracle — it does not detect renames (it emits a drop plus an
+   add, which loses the data) and it cannot infer data backfills.
+4. Apply it:
+
+       ./venv/Scripts/alembic upgrade head
+
+Useful commands
+---------------
+    alembic current              # which revision this database is on
+    alembic history --verbose    # full revision history
+    alembic downgrade -1         # undo the last migration
+
+SQLite specifics
+----------------
+`env.py` sets `render_as_batch=True` for SQLite. SQLite cannot ALTER most
+columns in place, so batch mode rebuilds the table (create new, copy rows, drop
+old, rename) — this preserves existing data. Without it, most column changes
+would fail outright on SQLite.
+
+The database URL comes from `app.core.config.settings.DATABASE_URL`, not from
+`alembic.ini`, so migrations always target the same database the app uses.
+Override it with the `DATABASE_URL` environment variable when needed.
+
+Adopting an existing database
+-----------------------------
+If you have a database that predates migrations and already matches the current
+models, mark it as up to date instead of re-running the baseline:
+
+    ./venv/Scripts/alembic stamp head

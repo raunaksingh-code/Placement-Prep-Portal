@@ -1,0 +1,79 @@
+{
+  "subject": "Quantitative Aptitude",
+  "module": "Quantitative Aptitude",
+  "topic": "Percentage",
+  "content_type": "Topic Test",
+  "status": "Published",
+  "test_meta": {
+    "title": "Percentage - Topic Test",
+    "test_type": "topic",
+    "duration_minutes": 30,
+    "total_marks": 25,
+    "total_questions": 25,
+    "marking_scheme": "+1 for each correct answer, 0 for unattempted, -0.25 for each incorrect answer (standard negative marking as used in CAT/XAT-style placement tests).",
+    "instructions": [
+      "This test contains 25 questions on Percentage, of mixed difficulty (8 easy, 10 medium, 7 hard).",
+      "Total time allowed: 30 minutes. The timer starts as soon as you begin and auto-submits the test on expiry.",
+      "Each question carries 1 mark. There is a negative marking of 0.25 marks for every incorrect answer. Unattempted questions carry no penalty.",
+      "Do not use a calculator -- all questions are designed to be solvable through mental math and the shortcuts covered in the study material.",
+      "Use the question palette to navigate between questions and to identify unanswered questions before submitting.",
+      "Once submitted, the test cannot be resumed or re-attempted in the same session. Review the answer key and detailed solutions after submission.",
+      "Aim to spend no more than 70-75 seconds per question on average to finish with review time to spare."
+    ]
+  },
+  "questions": [
+    {"id":"T1","difficulty":"easy","estimated_time_sec":30,"tags":["Percentage","basics"],"question":"Find 16% of 350.","options":["56","54","58","60"],"correct_answer":"56","explanation":"16% of 350 = 0.16 x 350 = 56."},
+    {"id":"T2","difficulty":"easy","estimated_time_sec":30,"tags":["Percentage","basics"],"question":"42 is what percent of 120?","options":["35%","30%","40%","32%"],"correct_answer":"35%","explanation":"(42/120) x 100 = 35%."},
+    {"id":"T3","difficulty":"easy","estimated_time_sec":25,"tags":["Percentage","fraction-conversion"],"question":"Convert 11/40 to a percentage.","options":["27.5%","25%","30%","22.5%"],"correct_answer":"27.5%","explanation":"11/40 = 0.275 = 27.5%."},
+    {"id":"T4","difficulty":"easy","estimated_time_sec":35,"tags":["Percentage","reverse-percentage"],"question":"If 22% of a number is 66, find the number.","options":["300","280","320","290"],"correct_answer":"300","explanation":"Number = 66/0.22 = 300."},
+    {"id":"T5","difficulty":"easy","estimated_time_sec":25,"tags":["Percentage","price-increase"],"question":"A price of Rs. 720 is increased by 15%. Find the new price.","options":["Rs. 828","Rs. 820","Rs. 830","Rs. 810"],"correct_answer":"Rs. 828","explanation":"New price = 720 x 1.15 = 828."},
+    {"id":"T6","difficulty":"easy","estimated_time_sec":30,"tags":["Percentage","percentage-change"],"question":"A number decreases from 150 to 105. Find the percentage decrease.","options":["30%","25%","35%","28%"],"correct_answer":"30%","explanation":"% decrease = [(150-105)/150] x 100 = 30%."},
+    {"id":"T7","difficulty":"easy","estimated_time_sec":20,"tags":["Percentage","conversion"],"question":"Express 0.08 as a percentage.","options":["8%","0.8%","80%","0.08%"],"correct_answer":"8%","explanation":"0.08 x 100 = 8%."},
+    {"id":"T8","difficulty":"easy","estimated_time_sec":30,"tags":["Percentage","exam-marks"],"question":"A student scores 54 out of 90 marks. Find the percentage scored.","options":["60%","55%","65%","58%"],"correct_answer":"60%","explanation":"(54/90) x 100 = 60%."},
+
+    {"id":"T9","difficulty":"medium","estimated_time_sec":65,"tags":["Percentage","successive-change","discount"],"question":"Two successive discounts of 25% and 10% are equivalent to a single discount of what percentage?","options":["32.5%","35%","30%","33%"],"correct_answer":"32.5%","explanation":"Net change = -25-10+[(-25)x(-10)/100] = -35+2.5 = -32.5%."},
+    {"id":"T10","difficulty":"medium","estimated_time_sec":75,"tags":["Percentage","price-consumption"],"question":"The price of rice rises by 10%. By what percent should consumption be reduced to keep expenditure unchanged? (to 2 decimal places)","options":["9.09%","10%","8%","11%"],"correct_answer":"9.09%","explanation":"Reduction = [10/110] x 100 = 9.09%."},
+    {"id":"T11","difficulty":"medium","estimated_time_sec":70,"tags":["Percentage","election"],"question":"In an election, the winner secured 58% of the votes polled and won by 3,200 votes. Find the total number of votes polled.","options":["20,000","19,000","21,000","18,000"],"correct_answer":"20,000","explanation":"Margin % = 2(58)-100 = 16% of total = 3200. Total = 3200/0.16 = 20,000."},
+    {"id":"T12","difficulty":"medium","estimated_time_sec":60,"tags":["Percentage","population-growth"],"question":"A population of 20,000 (as of 2 years ago) grows at 12% per annum. Find the current population.","options":["25,088","25,000","25,100","24,900"],"correct_answer":"25,088","explanation":"Population = 20000 x 1.12 x 1.12 = 20000 x 1.2544 = 25,088."},
+    {"id":"T13","difficulty":"medium","estimated_time_sec":85,"tags":["Percentage","income-expenditure-savings"],"question":"A man's income rises from Rs. 25,000 to Rs. 27,500, and his expenditure of Rs. 20,000 rises by 5%. Find the percentage increase in his savings.","options":["30%","25%","35%","28%"],"correct_answer":"30%","explanation":"Old savings = 5000. New expenditure = 21000. New income = 27500. New savings = 6500. % increase = (1500/5000)x100 = 30%."},
+    {"id":"T14","difficulty":"medium","estimated_time_sec":60,"tags":["Percentage","A-less-than-B"],"question":"A's income is 15% less than B's. B's income is what percent more than A's? (to 2 decimal places)","options":["≈17.65%","15%","20%","18%"],"correct_answer":"≈17.65%","explanation":"More % = [15/(100-15)] x 100 = [15/85] x 100 ≈ 17.65%."},
+    {"id":"T15","difficulty":"medium","estimated_time_sec":65,"tags":["Percentage","algebra"],"question":"55% of a number exceeds 2/5 of the number by 45. Find the number.","options":["300","280","320","290"],"correct_answer":"300","explanation":"0.55N - 0.40N = 45 => 0.15N = 45 => N = 300."},
+    {"id":"T16","difficulty":"medium","estimated_time_sec":65,"tags":["Percentage","exam-marks"],"question":"The passing percentage in an exam is 45%. A student scored 120 marks and failed by 15 marks. Find the maximum marks.","options":["300","290","310","280"],"correct_answer":"300","explanation":"Passing marks = 120+15 = 135 = 45% of maximum. Maximum = 135/0.45 = 300."},
+    {"id":"T17","difficulty":"medium","estimated_time_sec":75,"tags":["Percentage","ratio-change"],"question":"Two numbers are in the ratio 2:3. If the first is increased by 50% and the second by 20%, find the new ratio.","options":["5:6","2:3","3:3.6","1:2"],"correct_answer":"5:6","explanation":"New values: 2xx1.5=3x, 3xx1.2=3.6x. Ratio=3:3.6=30:36=5:6."},
+    {"id":"T18","difficulty":"medium","estimated_time_sec":70,"tags":["Percentage","profit-loss-link"],"question":"A shopkeeper allows a 12% discount on the marked price and gains 10%. If the cost price is Rs. 550, find the marked price.","options":["Rs. 687.50","Rs. 680","Rs. 690","Rs. 700"],"correct_answer":"Rs. 687.50","explanation":"SP = 550x1.10 = 605. MPx0.88 = 605 => MP = 605/0.88 = 687.50."},
+
+    {"id":"T19","difficulty":"hard","estimated_time_sec":100,"tags":["Percentage","successive-change","profit-loss-link"],"question":"A trader marks his goods 60% above cost price and gives successive discounts of 10% and 5%. Find his profit percentage.","options":["36.8%","38%","35%","40%"],"correct_answer":"36.8%","explanation":"Factor = 1.60x0.90x0.95 = 1.368, i.e. a 36.8% profit."},
+    {"id":"T20","difficulty":"hard","estimated_time_sec":100,"tags":["Percentage","population-growth","successive-change"],"question":"A population of 40,000 grows by 15% in year 1, declines by 10% in year 2, and grows by 5% in year 3. Find the population after 3 years.","options":["43,470","43,000","43,500","42,900"],"correct_answer":"43,470","explanation":"Factor = 1.15x0.90x1.05 = 1.08675. Population = 40000x1.08675 = 43,470."},
+    {"id":"T21","difficulty":"hard","estimated_time_sec":90,"tags":["Percentage","successive-change"],"question":"A salary of Rs. 30,000 is reduced by 10%, increased by 10%, then reduced by 10% again. Find the final salary.","options":["Rs. 26,730","Rs. 27,000","Rs. 26,700","Rs. 26,800"],"correct_answer":"Rs. 26,730","explanation":"Factor = 0.90x1.10x0.90 = 0.891. Final = 30000x0.891 = 26,730."},
+    {"id":"T22","difficulty":"hard","estimated_time_sec":100,"tags":["Percentage","election","invalid-votes"],"question":"In an election, 5% of the votes were invalid. The winner secured 52% of the valid votes and won by 2,280 votes. Find the total number of votes registered.","options":["60,000","58,000","62,000","59,000"],"correct_answer":"60,000","explanation":"Margin = 4% of valid votes = 2280 => valid votes = 57,000. Total registered = 57000/0.95 = 60,000."},
+    {"id":"T23","difficulty":"hard","estimated_time_sec":95,"tags":["Percentage","chained-comparison","algebra"],"question":"A's income is 35% more than B's, and B's income is 25% less than C's. If the total of A, B and C's incomes is Rs. 1,10,500, find B's income.","options":["Rs. 30,000","Rs. 28,000","Rs. 32,000","Rs. 29,000"],"correct_answer":"Rs. 30,000","explanation":"Let C=x. B=0.75x, A=0.75xx1.35=1.0125x. Sum=x(1+0.75+1.0125)=2.7625x=110500 => x=40,000. B=0.75x40000=30,000."},
+    {"id":"T24","difficulty":"hard","estimated_time_sec":75,"tags":["Percentage","mensuration-link"],"question":"The length of a rectangle is increased by 25% and its breadth is decreased by 25%. Find the percentage change in its area.","options":["6.25% decrease","No change","5% decrease","7.5% decrease"],"correct_answer":"6.25% decrease","explanation":"Area factor = 1.25x0.75 = 0.9375, i.e. a 6.25% decrease."},
+    {"id":"T25","difficulty":"hard","estimated_time_sec":110,"tags":["Percentage","repeated-dilution"],"question":"A vessel has 60 litres of milk. 15 litres is removed and replaced with water; this is repeated two more times (3 operations total). Find the quantity of milk left.","options":["≈25.31 litres","24 litres","26 litres","20 litres"],"correct_answer":"≈25.31 litres","explanation":"Milk left = 60 x (45/60)^3 = 60 x 0.421875 = 25.3125 ≈ 25.31 litres."}
+  ],
+  "answer_key": {
+    "T1":"56","T2":"35%","T3":"27.5%","T4":"300","T5":"Rs. 828","T6":"30%","T7":"8%","T8":"60%",
+    "T9":"32.5%","T10":"9.09%","T11":"20,000","T12":"25,088","T13":"30%","T14":"≈17.65%","T15":"300","T16":"300","T17":"5:6","T18":"Rs. 687.50",
+    "T19":"36.8%","T20":"43,470","T21":"Rs. 26,730","T22":"60,000","T23":"Rs. 30,000","T24":"6.25% decrease","T25":"≈25.31 litres"
+  },
+  "performance_analysis_template": {
+    "score_bands": [
+      {"range": "22-25 correct (88-100%)", "label": "Excellent", "feedback": "Percentage fundamentals and successive-change reasoning are placement-ready. Move to timed sectional mocks combining Percentage with Profit & Loss and Simple/Compound Interest."},
+      {"range": "17-21 correct (68-84%)", "label": "Good", "feedback": "Core concepts are solid but revisit whichever difficulty band had the most errors -- typically successive-change or price-consumption questions. Redo the Hard solved examples before the next attempt."},
+      {"range": "11-16 correct (44-64%)", "label": "Needs Practice", "feedback": "Revisit the Study Material formulas section, especially successive % change and the price-consumption relationship, then redo all 50 Solved Examples before reattempting."},
+      {"range": "0-10 correct (0-40%)", "label": "Foundational Gap", "feedback": "Restart from the Study Material introduction and concepts sections. Focus on fraction-percentage conversion fluency before attempting timed tests."}
+    ],
+    "metrics_to_report": [
+      "Overall score (out of 25) and percentile against other attempts on this topic test",
+      "Accuracy % by difficulty band (Easy / Medium / Hard) to isolate where errors cluster",
+      "Average time per question vs the 72-second target, flagging questions that took over 120 seconds",
+      "Topic-tag-level breakdown (e.g. 'successive-change', 'price-consumption', 'election') to show which sub-skill needs the most reinforcement",
+      "Negative-marking impact: marks lost to incorrect attempts vs marks foregone by skipping",
+      "Comparison to the student's own previous Percentage topic test attempt (improvement/regression trend)"
+    ],
+    "recommended_next_steps": [
+      "If accuracy on Hard questions < 50%, revisit the 15 Hard Solved Examples and the Advanced Challenge set before reattempting the test",
+      "If average time per question > 90 seconds despite high accuracy, drill the Shortcut Methods section specifically for speed",
+      "If errors cluster on a specific tag (e.g. successive-change), redo all Practice Questions carrying that tag before moving to the next topic"
+    ]
+  }
+}

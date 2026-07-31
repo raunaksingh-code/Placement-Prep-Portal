@@ -1,0 +1,182 @@
+{
+    "number-system": {
+        "title": "Number System Concepts",
+        "theory": "Number System Concepts\n\nThe Number System is the foundation of quantitative aptitude. It involves understanding different types of numbers and the rules that govern their interactions.\n\nTypes of Numbers\n- Natural Numbers (N): Counting numbers {1, 2, 3, 4, ...}\n- Whole Numbers (W): Natural numbers plus zero {0, 1, 2, 3, ...}\n- Integers (Z): Whole numbers plus negative natural numbers {..., -2, -1, 0, 1, 2, ...}\n- Rational Numbers (Q): Any number that can be expressed as p/q where p and q are integers and q \u2260 0.\n- Irrational Numbers: Numbers that cannot be expressed as simple fractions (e.g., \u03c0, \u221a2).\n- Prime Numbers: Numbers greater than 1 that have exactly two factors: 1 and themselves. Examples: 2, 3, 5, 7, 11...\n- Composite Numbers: Numbers that have more than two factors.\n\nLCM & HCF\n- LCM (Least Common Multiple): The smallest positive integer that is divisible by both 'a' and 'b'.\n- HCF (Highest Common Factor) / GCD: The largest positive integer that divides both 'a' and 'b' without remainder.\n- Important Rule: LCM(a,b) \u00d7 HCF(a,b) = a \u00d7 b\n\nDivisibility Rules (Crucial for fast calculations)\n- By 2: The last digit is even (0, 2, 4, 6, 8).\n- By 3: The sum of all digits is divisible by 3.\n- By 4: The number formed by the last two digits is divisible by 4.\n- By 5: The last digit is 0 or 5.\n- By 6: The number is divisible by both 2 and 3.\n- By 8: The number formed by the last three digits is divisible by 8.\n- By 9: The sum of all digits is divisible by 9.\n- By 11: The difference between the sum of digits at odd places and sum of digits at even places is either 0 or a multiple of 11."
+    },
+    "averages": {
+        "title": "Averages Concepts",
+        "theory": "Welcome to the Averages module!\n\nOverview:\nAverage = Sum of observations / Number of observations. Includes weighted averages.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "ratio---proportion": {
+        "title": "Ratio - Proportion Concepts",
+        "theory": "Ratio - Proportion\n\nRatio\nA ratio is the relation between two quantities which is expressed by a fraction.\n- The ratio of the number 'a' to the number 'b' is written as a/b (or) a : b\n- Two quantities which are being compared (a : b) are called its terms. The first term (a) is called antecedent and the second term (b) is called consequent.\n- The ratio of two quantities is always an abstract number (without any units).\n\nProportion\nEquality of two ratios is called proportion.\n- Consider the two ratios, a : b and c : d. Their proportion is written as a : b :: c : d (or) a/b = c/d\n- Here a, b, c, d are called Terms. a, d are called Extremes (end terms) and b, c are called Means (middle terms).\n- In a proportion, the product of means is equal to the product of extremes. (ad = bc)\n\nKey Notes\nIf a and b are two quantities, then:\n1. Duplicate ratio of a:b = a\u00b2 : b\u00b2\n2. Sub-duplicate ratio of a:b = \u221aa : \u221ab\n3. Triplicate ratio of a:b = a\u00b3 : b\u00b3\n4. Sub-triplicate ratio of a:b = \u221ba : \u221bb\n5. Inverse or reciprocal ratio of a:b = 1/a : 1/b"
+    },
+    "chain-rule--variation": {
+        "title": "Chain Rule / Variation Concepts",
+        "theory": "Chain Rule / Variation\n\nVariations deal with how one quantity changes with respect to one or more other quantities. Basically, there are two types of variations: Direct variation and Indirect variation.\n\nDirect Variation\nIf two quantities 'x' and 'y' are directly proportional to each other, then x = k y (or) x1/x2 = y1/y2.\nExample: More number of computers = More cost. Less number of computers = Less cost. These two quantities are directly proportional.\n\nIndirect Variation\nWhen two variables or quantities change in opposite directions, you have inverse variation.\nIf two quantities x, y are indirectly proportional to each other, then x = k/y (or) x1/x2 = y2/y1.\nExample: If the number of persons increases, the days required to complete the work will decrease. These two quantities are inversely proportional to each other.\n\nCombined Variation\nIt involves both direct and indirect variation.\nIf 'x' varies directly with 'y' and indirectly with 'z', then the general form of the combined variation is:\nx = k(y/z) or x1/x2 = (y1/y2) * (z2/z1)."
+    },
+    "mixture-and-allegations": {
+        "title": "Mixture and Allegations Concepts",
+        "theory": "Welcome to the Mixture and Allegations module!\n\nOverview:\nRule of alligation helps find the ratio in which ingredients are mixed.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "percentages": {
+        "title": "Percentages Concepts",
+        "theory": "Percentages Concepts\n\nPercent means 'per hundred'. It is derived from the Latin word 'per centum'. It is denoted by the symbol %. \nWhen we say x%, it means x per hundred or the fraction x/100.\n\nUnderstanding Percentages\nPercentages are everywhere in daily life - from discounts in shops to bank interest rates and election results. Being able to quickly calculate percentages is a crucial skill for aptitude tests.\n\nImportant Formulas\n1. Basic Percentage: (Part / Whole) \u00d7 100\n2. Percentage Increase: = (Increase in value / Original value) \u00d7 100\n   Example: If a price goes from $100 to $120, the increase is $20. (20/100) \u00d7 100 = 20% increase.\n3. Percentage Decrease: = (Decrease in value / Original value) \u00d7 100\n   Example: If a price drops from $100 to $80, the decrease is $20. (20/100) \u00d7 100 = 20% decrease.\n4. Successive Percentage Change: If a value changes by a% and then by b%, the net percentage change is:\n   Net Change = (a + b + (a*b)/100)%\n\nFraction to Percentage Conversions (Memorize these for speed)\n- 1/2 = 50%\n- 1/3 = 33.33%\n- 1/4 = 25%\n- 1/5 = 20%\n- 1/6 = 16.66%\n- 1/7 = 14.28%\n- 1/8 = 12.5%\n- 1/9 = 11.11%\n- 1/10 = 10%\n- 1/11 = 9.09%\n- 1/12 = 8.33%\n\nPro Tip: x% of y is always equal to y% of x. \nIf you need to calculate 16% of 50, it's much easier to calculate 50% of 16, which is 8!"
+    },
+    "profit-loss-and-discounts": {
+        "title": "Profit, Loss and Discounts Concepts",
+        "theory": "Profit, Loss and Discounts\n\n- Cost Price (CP) is the price at which an article is bought.\n- Selling Price (SP) is the price at which an article is sold.\n- Marked Price (MP) or List Price is the price marked on the article.\n\nFor example, a vendor buys 1kg of mangoes for \u20b950. He labeled the price as \u20b980. But sold for \u20b970. \nHere CP = \u20b950, MP = \u20b980, SP = \u20b970.\n\nProfit or Gain\nProfit is made when the selling price is greater than the cost price.\n- Profit = SP - CP\n- Profit % = (Profit / Cost Price) \u00d7 100\n\nLoss\nLoss is made when the cost price is greater than the selling price.\n- Loss = CP - SP\n- Loss % = (Loss / Cost Price) \u00d7 100\n\nNote: Profit or Loss is always calculated on the cost price only.\n\nDiscount\nDiscount is always calculated on the marked price.\n- Discount = MP - SP\n- Discount % = (Discount / MP) \u00d7 100\n\nDirect Formulas\n- SP = ((100 + Gain%) / 100) \u00d7 CP\n- SP = ((100 - Loss%) / 100) \u00d7 CP"
+    },
+    "simple-and-compound-interests": {
+        "title": "Simple and Compound Interests Concepts",
+        "theory": "Welcome to the Simple and Compound Interests module!\n\nOverview:\nSI = PTR/100. CI = P(1+R/100)^T - P.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "partnerships": {
+        "title": "Partnerships Concepts",
+        "theory": "Welcome to the Partnerships module!\n\nOverview:\nProfit is distributed in ratio of (Investment * Time).\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "time-and-work": {
+        "title": "Time and Work Concepts",
+        "theory": "Welcome to the Time and Work module!\n\nOverview:\nIf A does work in X days, 1 day's work is 1/X.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "pipes-and-cisterns": {
+        "title": "Pipes and Cisterns Concepts",
+        "theory": "Welcome to the Pipes and Cisterns module!\n\nOverview:\nSimilar to time and work. Inlet pipe does positive work, outlet does negative.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "time-speed-and-distance": {
+        "title": "Time Speed and Distance Concepts",
+        "theory": "Welcome to the Time Speed and Distance module!\n\nOverview:\nDistance = Speed * Time. Includes trains and boats & streams.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "set-theory": {
+        "title": "Set Theory Concepts",
+        "theory": "Welcome to the Set Theory module!\n\nOverview:\nUnion, Intersection, Venn Diagrams.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "functions": {
+        "title": "Functions Concepts",
+        "theory": "Welcome to the Functions module!\n\nOverview:\nMapping inputs to outputs. Domain and Range.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "permutations-and-combinations": {
+        "title": "Permutations and Combinations Concepts",
+        "theory": "Welcome to the Permutations and Combinations module!\n\nOverview:\nPermutations = Arrangements (Order matters). Combinations = Selections (Order doesn't matter).\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "probability": {
+        "title": "Probability Concepts",
+        "theory": "Welcome to the Probability module!\n\nOverview:\nFavorable outcomes / Total outcomes. Ranges from 0 to 1.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "geometry": {
+        "title": "Geometry Concepts",
+        "theory": "Welcome to the Geometry module!\n\nOverview:\nLines, angles, triangles, polygons, circles.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "data-interpretation": {
+        "title": "Data Interpretation Concepts",
+        "theory": "Welcome to the Data Interpretation module!\n\nOverview:\nAnalyzing Bar graphs, Pie charts, Line graphs, and Tabular data.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "algebra": {
+        "title": "Algebra Concepts",
+        "theory": "Welcome to the Algebra module!\n\nOverview:\nLinear and quadratic equations, polynomials, inequalities.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "arithmetic-reasoning": {
+        "title": "Arithmetic Reasoning Concepts",
+        "theory": "Welcome to the Arithmetic Reasoning module!\n\nOverview:\nLogical math puzzles, Venn diagram logic.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "coding---decoding": {
+        "title": "Coding - Decoding Concepts",
+        "theory": "Welcome to the Coding - Decoding module!\n\nOverview:\nDeciphering rules that map words/numbers to a secret code.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "seating-arrangement": {
+        "title": "Seating Arrangement Concepts",
+        "theory": "Welcome to the Seating Arrangement module!\n\nOverview:\nLinear and circular seating based on constraints.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "day-sequence-calendar": {
+        "title": "Day Sequence/ Calendar Concepts",
+        "theory": "Welcome to the Day Sequence/ Calendar module!\n\nOverview:\nCalculating odd days, leap years to find the day of the week.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "clocks": {
+        "title": "Clocks Concepts",
+        "theory": "Welcome to the Clocks module!\n\nOverview:\nAngle between hands. Minute hand moves 6 deg/min. Hour hand moves 0.5 deg/min.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "direction-sense-test": {
+        "title": "Direction Sense Test Concepts",
+        "theory": "Welcome to the Direction Sense Test module!\n\nOverview:\nNavigating N, S, E, W and finding shortest distance (Pythagoras).\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "blood-relations": {
+        "title": "Blood Relations Concepts",
+        "theory": "Welcome to the Blood Relations module!\n\nOverview:\nFamily trees, generating relations (uncle, nephew, niece).\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "analogy": {
+        "title": "Analogy Concepts",
+        "theory": "Welcome to the Analogy module!\n\nOverview:\nFinding relationships between pairs. A:B :: C:D.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "data-sufficiency": {
+        "title": "Data Sufficiency Concepts",
+        "theory": "Welcome to the Data Sufficiency module!\n\nOverview:\nDetermining if given statements are enough to answer the question.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "syllogisms": {
+        "title": "Syllogisms Concepts",
+        "theory": "Welcome to the Syllogisms module!\n\nOverview:\nDeducing conclusions from premises using Venn diagrams (All A are B).\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "statements-and-arguments": {
+        "title": "Statements and Arguments Concepts",
+        "theory": "Welcome to the Statements and Arguments module!\n\nOverview:\nEvaluating the strength of arguments based on a given statement.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "character-puzzle": {
+        "title": "Character Puzzle Concepts",
+        "theory": "Welcome to the Character Puzzle module!\n\nOverview:\nFinding the missing number in a matrix or shape based on logic.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "series": {
+        "title": "Series Concepts",
+        "theory": "Welcome to the Series module!\n\nOverview:\nNumber and letter series (AP, GP, alternating series).\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "non-verbal-reasoning": {
+        "title": "Non Verbal Reasoning Concepts",
+        "theory": "Welcome to the Non Verbal Reasoning module!\n\nOverview:\nVisual puzzles, next image in sequence, paper folding.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "sentence": {
+        "title": "Sentence Concepts",
+        "theory": "Welcome to the Sentence module!\n\nOverview:\nStructure of sentences (Subject, Verb, Object).\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "part-of-speech": {
+        "title": "Part of speech Concepts",
+        "theory": "Welcome to the Part of speech module!\n\nOverview:\nNouns, Verbs, Adjectives, Adverbs, Prepositions, Conjunctions.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "sentence-correction-spotting-errors": {
+        "title": "Sentence Correction/ Spotting Errors Concepts",
+        "theory": "Welcome to the Sentence Correction/ Spotting Errors module!\n\nOverview:\nFinding grammatical errors in sentences.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "vocabulary": {
+        "title": "Vocabulary Concepts",
+        "theory": "Welcome to the Vocabulary module!\n\nOverview:\nUnderstanding word meanings in context.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "antonyms": {
+        "title": "Antonyms Concepts",
+        "theory": "Welcome to the Antonyms module!\n\nOverview:\nWords with opposite meanings.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "synonyms": {
+        "title": "Synonyms Concepts",
+        "theory": "Welcome to the Synonyms module!\n\nOverview:\nWords with similar meanings.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "phrasal-verbs": {
+        "title": "Phrasal Verbs Concepts",
+        "theory": "Welcome to the Phrasal Verbs module!\n\nOverview:\nVerbs combined with prepositions (e.g., 'give up', 'look after').\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "idiomatic-expressions": {
+        "title": "Idiomatic Expressions Concepts",
+        "theory": "Welcome to the Idiomatic Expressions module!\n\nOverview:\nPhrases with figurative meanings (e.g., 'kick the bucket').\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "reading-comprehension": {
+        "title": "Reading Comprehension Concepts",
+        "theory": "Welcome to the Reading Comprehension module!\n\nOverview:\nReading passages and answering questions based on them.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "cloze-test": {
+        "title": "Cloze Test Concepts",
+        "theory": "Welcome to the Cloze Test module!\n\nOverview:\nFill in the blanks within a paragraph.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "sentence-rearrangement": {
+        "title": "Sentence Rearrangement Concepts",
+        "theory": "Welcome to the Sentence Rearrangement module!\n\nOverview:\nOrdering jumbled sentences into a coherent paragraph.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    },
+    "theme-detection": {
+        "title": "Theme Detection Concepts",
+        "theory": "Welcome to the Theme Detection module!\n\nOverview:\nIdentifying the central idea of a passage.\n\nThis content was successfully extracted and categorized from the Campus Recruitment Handbook."
+    }
+}

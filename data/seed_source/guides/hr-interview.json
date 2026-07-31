@@ -1,0 +1,53 @@
+{
+  "slug": "hr-interview",
+  "title": "HR Interview",
+  "category": "Interview Rounds",
+  "order": 1,
+  "question_category": "HR & Behavioural",
+  "icon": "🤝",
+  "summary": "The round that decides fit. What interviewers actually assess, how to answer the standard questions, and the mistakes that cost offers.",
+  "source": "Campus Recruitment Book p89, plus frameworks and sample answers written for this portal",
+  "introduction": "The HR round exists to verify what your resume claims and to judge whether you will work well inside the organisation. Technical skill gets you into the room; attitude, communication and honesty decide what happens next. Nearly every question below has been asked of candidates at companies in this portal - the linked questions at the bottom show you exactly where.",
+  "sections": [
+    {
+      "heading": "What the interviewer is actually assessing",
+      "body": "Ten things get judged, usually without being asked about directly:\n\n• Attitude - positive and interested. Do not show arrogance, even if you topped your college.\n• Communication - speak confidently, in clear language, with as little jargon as possible.\n• Confidence - a reflection of how you would handle a difficult professional situation. Confidence is great; overconfidence is a strict no.\n• Body language - walk in with a confident smile, shake hands firmly, keep good posture and eye contact. Do not slouch, fidget, bite your nails or look at the floor.\n• Leadership - show you are ready to take initiative and help your team.\n• Emotional maturity - interviewers sometimes provoke you deliberately with an unexpected question. Do not get rattled or angry, and do not simply agree with everything they say. Answer honestly and calmly.\n• Dressing sense - neatly ironed formals and clean shoes. Keep accessories and make-up minimal.\n• Integrity - never lie about your achievements. If you are praised, say thank you gracefully.\n• Flexibility - if asked whether you would relocate, show you can adapt rather than listing conditions.\n• Learnability - show a genuine appetite to keep learning. Even a strong candidate looks limited without it."
+    },
+    {
+      "heading": "Before the interview",
+      "body": "Research the company properly: what it does, its main clients, recent milestones, its vision, and who leads it. Candidates in this portal's question bank were asked 'Who is the CEO?' and 'What are the verticals/services?' outright - those are free marks you either have or you do not.\n\nRe-read your own resume as if you were the interviewer, and mark every line that invites a follow-up question. Most HR rounds are simply your resume read back to you with 'why' attached.\n\nPractise out loud, not in your head. Record yourself once, or run a mock with a friend - it exposes filler words and rambling answers that feel fine internally.\n\nArrive early. Turn your phone off, not to silent."
+    },
+    {
+      "heading": "Answering 'Tell me about yourself'",
+      "body": "This is the most frequently asked question in the entire bank. It is not an invitation to recite your resume chronologically from Class 10.\n\nUse Present - Past - Future:\n• Present: who you are professionally right now, in one line.\n• Past: the two or three experiences that best explain how you got here, chosen for relevance to THIS role.\n• Future: what you want next, pointed at the job you are interviewing for.\n\nKeep it to 60-90 seconds. Finish on why this role, so the natural next question is one you want.\n\nThe most common failure is length: a four-minute answer signals you cannot prioritise."
+    },
+    {
+      "heading": "Answering behavioural questions with STAR",
+      "body": "For any question that starts 'Tell me about a time when...', use STAR:\n\n• Situation - the context, in one or two sentences.\n• Task - what you specifically were responsible for.\n• Action - what YOU did. This is the longest part. Say 'I', not 'we'.\n• Result - what changed, quantified wherever you can.\n\nPrepare four or five stories that can be reshaped to fit many questions: a conflict, a failure, a leadership moment, a deadline under pressure, and something you are proud of. The same internship story can answer six different questions if you know which part to emphasise."
+    },
+    {
+      "heading": "The hard ones",
+      "body": "'What is your greatest weakness?' - name a real one, then show what you are doing about it. A disguised strength ('I work too hard') reads as evasive.\n\n'Why the low percentage in 12th / the gap year?' - candidates in this bank were asked exactly this. Answer directly, briefly, without defensiveness, then move to what you did afterwards. A calm two-sentence answer closes the topic; a defensive one keeps it open.\n\n'Why are you leaving your current company?' - stay forward-looking. Never criticise a previous employer or manager.\n\n'Where do you see yourself in five years?' - show ambition that is plausible within this organisation, not a plan that obviously routes around it.\n\n'Do you have any questions for us?' - always yes. Ask about the role, the team, or what success looks like in the first year. Never make your first question about salary."
+    },
+    {
+      "heading": "Do's and don'ts",
+      "body": "Do:\n• Give honest, specific, reasonably short answers.\n• Use real examples - 'how did that skill actually help?' is the follow-up you should expect.\n• Clarify a question you did not understand rather than guessing.\n• Greet everyone on the way in and thank them on the way out.\n\nDon't:\n• Dress casually - no jeans, t-shirts or slippers.\n• Lie about a skill. Say instead that you are keen to learn it.\n• Answer in one word, or in sentences that never end. If asked 'Are you good at Excel?', neither 'Yes' nor a five-minute history is right - give a short answer plus one piece of evidence."
+    }
+  ],
+  "checklist": [
+    "Researched the company: what it does, clients, recent news, leadership",
+    "Can deliver 'Tell me about yourself' in under 90 seconds",
+    "Four to five STAR stories prepared and rehearsed aloud",
+    "An honest answer ready for every awkward line on my resume",
+    "Two questions prepared to ask them",
+    "Formals ready, phone off, arriving early"
+  ],
+  "common_mistakes": [
+    "Reciting the resume chronologically instead of answering the question asked",
+    "Saying 'we' throughout a story so the interviewer never learns what you did",
+    "A rehearsed weakness that is obviously a strength in disguise",
+    "Criticising a former employer, manager or college",
+    "Having no questions at the end, or asking about salary first",
+    "Claiming a tool on your resume you cannot discuss for two minutes"
+  ]
+}

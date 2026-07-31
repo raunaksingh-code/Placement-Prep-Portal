@@ -1,0 +1,131 @@
+RATIO – PROPORTION
+CONCEPTS
+Ratio: A ratio is the relation between two quantities
+which is expressed by a fraction.
+• The ratio of the number 'a' to the number 'b' is
+written as a
+b
+  (or) a : b or a to b
+e.g.: The ratio of 5 hours to 3 hours can be written as
+5
+3
+(or)5:3.
+• The ratio is always a comparison between the
+quantities of same kind or of same units.
+For example, you cannot form the ratio between 5
+hours and 3 days. Because the two numbers are
+expressed in different units. Hence, convert 3 days to
+hours.
+i.e. 3 days = 72 hours. Thus the proper form of this ratio
+is 5
+72
+ (or) 5:72.
+• Two quantities which are being compared (a : b) are
+called its terms. The first term (a) is called antecedent
+and second term (b) is called consequent.
+• The ratio of two quantities is always an abstract
+number (without any units). 
+• If the terms of a ratio are multiplied or divided by the
+same quantity the value of the ratio remains unaltered.
+e.g.: The ratio a : b is same as  Ma : Mb.
+Proportion: Equality of two ratios is called proportion. 
+Consider the two ratios, a : b and c : d, then proportion
+is written as, a : b :: c : d  (or)   a : b = c : d (or) a
+b
+= c
+d
+Here a, b, c, d are called Terms. a, d are called Extremes
+(end terms) and b, c are called Means (middle terms).
+e.g.: Since the ratio 4 :20 (or) 4
+20 is equal to the ratio
+1:5(or) 1
+5 we may write the proportion as 4 : 20 :: 1 : 5
+or 4 : 20 = 1 : 5 or 4
+20
+=1
+5
+• In a proportion, product of means (middle terms) is
+equal to product of extremes (end terms).
+i.e. ad=bc or a
+b
+= c
+d
+.
+Key Notes: If a and b are two quantities, then
+1) Duplicate ratio of a :b=a
+2:b
+2
+2) Sub-duplicate ratio of a :b=√a:√b
+3) Triplicate ratio of a :b=a
+3:b
+3
+4) Sub-triplicate ratio a :b=
+3√a:
+3√b
+5) Inverse or reciprocal ratio of a :b=1
+a
+: 1
+b
+6) Third proportional of a and b is defined to be that
+number c such that a : b = b : c ⇒c= b
+2
+a
+.
+7) If a : b = x : y and  b : c = p : q,  then
+a) a :c= x×p
+y×q
+b)   a : b : c = px : py : qy
+8) Compound Ratio of (a : b), (c : d), (e : f) is a
+b
+× c
+d
+× e
+f
+.
+9) The ratio in which two kinds of substances must be
+mixed together one at  
+₹ x per kg and another at  
+₹ y per
+kg, so that the mixture may cost  ₹ n per kg.                
+The ratio is n−y
+x−n
+.
+10) Let the incomes of two persons be in the ratio of a :
+b and their expenditure be in the ratio of x : y and if the
+savings of each person is  ₹ n then income of each is
+₹ an(y−x)
+ay−bx
+and ₹ bn(y−x)
+ay−bx
+respectively.
+11) In a mixture the ratio of milk and water is a:b.
+In this mixture another n liters of water is added, then
+the ratio of milk and water in the resulting mixture
+became a : m.
+Then, the quantity of milk in the original mixture
+=
+an
+m−b
+and the quantity of water in the original mixture
+=
+bn
+m−b
+12) In a mixture of n liters, the ratio of milk and water
+is x : y.
+If another m liters of water is added to the mixture, the
+ratio of milk and water in the resulting mixture
+= xn:(yn+ mx+ my)
+13) If four numbers a, b, c and d are given then
+a)
+ad−bc
+(b+ c)−(a+ d) should be added to each of these
+numbers so that the resulting numbers may be
+proportional.
+b)
+ad−bc
+(a+ d)−(b+ c) should be subtracted from each of
+these numbers so that the resulting numbers may be
+proportional.
+Login to your online account to ask doubts.
+1.23
+

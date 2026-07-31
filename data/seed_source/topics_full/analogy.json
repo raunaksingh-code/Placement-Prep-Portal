@@ -1,0 +1,72 @@
+{
+  "study_material": {
+    "title": "Analogy - Complete Study Notes",
+    "introduction": "Analogy questions give a related pair (A : B) and ask you to complete C : ? with the SAME relationship. Name the relationship in one phrase first - worker:workplace, tool:action, part:whole - then apply it.",
+    "learning_objectives": [
+      "Identify the exact relationship in the given pair",
+      "Apply the relationship direction consistently",
+      "Solve letter and number analogies with position arithmetic",
+      "Eliminate options that fit a looser relationship"
+    ],
+    "concepts": [
+      {"heading": "1. Word Analogies", "body": "Common relations: worker:workplace (doctor:hospital), tool:action (pen:write), animal:movement (bird:fly), creator:creation (author:book), part:whole (wheel:car), young one:animal (calf:cow), instrument:measure (thermometer:temperature). State the relation in a sentence and test each option against that sentence."},
+      {"heading": "2. Direction Matters", "body": "Doctor:Hospital is worker to workplace. An option like School:Teacher reverses the direction and is wrong even though the words relate. Always preserve the order A-is-to-B."},
+      {"heading": "3. Letter Analogies", "body": "Use alphabet positions. ACE : BDF is +1 on each letter. PRT : QSU applies the same. Reverse pairs (AZ, BY) use positions summing to 27. Write the numbers - do not eyeball."},
+      {"heading": "4. Number Analogies", "body": "Typical rules: squares (4:16 as 7:49), cubes, x2 plus k, digit sums. Verify the rule works exactly on the given pair before applying, and check it fails on wrong options."}
+    ],
+    "formulas": [
+      "State the relation as a sentence, then test options",
+      "Letter shifts: same +/- k on every letter",
+      "27-sum for opposite letters"
+    ],
+    "shortcut_methods": [
+      "Make the sentence specific: 'a calf is a BABY cow', not just 'related to cow'",
+      "For numbers, test squares and cubes first",
+      "Eliminate reversed-direction options immediately"
+    ],
+    "common_mistakes": [
+      "Accepting a vaguer relationship than the given pair's",
+      "Reversing the direction of the relation",
+      "Stopping at the first plausible option without testing all four"
+    ],
+    "summary": "Name the relation precisely, keep its direction, and verify with positions or arithmetic for letters and numbers.",
+    "quick_revision_notes": [
+      "Relation first, options second",
+      "Direction A:B must match C:D",
+      "4:16 :: 7:49 (squares)",
+      "ACE:BDF is +1 each letter"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Doctor : Hospital :: Teacher : ?", "options": ["School", "Student", "Book", "Class test"], "correct_answer": "School", "step_by_step": "A doctor works in a hospital; a teacher works in a school.", "shortcut": "Worker : workplace."},
+    {"difficulty": "easy", "question": "Pen : Write :: Knife : ?", "options": ["Cut", "Sharp", "Kitchen", "Steel"], "correct_answer": "Cut", "step_by_step": "A pen is used to write; a knife is used to cut.", "shortcut": "Tool : action."},
+    {"difficulty": "medium", "question": "4 : 16 :: 7 : ?", "options": ["49", "28", "14", "77"], "correct_answer": "49", "step_by_step": "16 = 4 squared, so the answer is 7 squared = 49.", "shortcut": "Square relation."},
+    {"difficulty": "hard", "question": "ACE : BDF :: PRT : ?", "options": ["QSU", "QTU", "OQS", "QSV"], "correct_answer": "QSU", "step_by_step": "Each letter shifts +1: P->Q, R->S, T->U.", "shortcut": "Same shift on all letters."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["analogy", "word"], "question": "Bird : Fly :: Fish : ?", "options": ["Swim", "Water", "Gill", "Scale"], "correct_answer": "Swim", "explanation": "Animal : mode of movement."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["analogy", "word"], "question": "Book : Author :: Painting : ?", "options": ["Artist", "Canvas", "Colour", "Gallery"], "correct_answer": "Artist", "explanation": "Creation : creator."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["analogy", "word"], "question": "Calf : Cow :: Puppy : ?", "options": ["Dog", "Kennel", "Bone", "Cat"], "correct_answer": "Dog", "explanation": "Young one : adult animal."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["analogy", "number"], "question": "8 : 512 :: 6 : ?", "options": ["216", "36", "196", "156"], "correct_answer": "216", "explanation": "512 = 8 cubed; 6 cubed = 216."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["analogy", "number"], "question": "5 : 26 :: 9 : ?", "options": ["82", "80", "81", "90"], "correct_answer": "82", "explanation": "n^2 + 1: 81 + 1 = 82."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["analogy", "letter"], "question": "CAT : DBU :: PIG : ?", "options": ["QJH", "QIH", "PJH", "QJG"], "correct_answer": "QJH", "explanation": "+1 each letter: P->Q, I->J, G->H."},
+    {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["analogy", "word-precise"], "question": "Thermometer : Temperature :: Barometer : ?", "options": ["Pressure", "Weather", "Altitude", "Humidity"], "correct_answer": "Pressure", "explanation": "Instrument : quantity it measures. A barometer measures atmospheric pressure."},
+    {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["analogy", "letter-reverse"], "question": "AZ : BY :: CX : ?", "options": ["DW", "DV", "EW", "CW"], "correct_answer": "DW", "explanation": "Pairs of opposite letters (sum 27), stepping inward: D(4) with W(23)."}
+  ],
+  "topic_test": {
+    "title": "Analogy - Topic Test",
+    "duration_minutes": 12,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 12 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "State the relationship in a sentence before checking options."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["analogy"], "question": "Ear : Hear :: Eye : ?", "options": ["See", "Blink", "Lens", "Light"], "correct_answer": "See", "explanation": "Organ : function."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["analogy"], "question": "Cobbler : Shoes :: Carpenter : ?", "options": ["Furniture", "Hammer", "Wood", "Workshop"], "correct_answer": "Furniture", "explanation": "Worker : product (not material or tool)."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["analogy"], "question": "3 : 9 :: 11 : ?", "options": ["121", "111", "33", "144"], "correct_answer": "121", "explanation": "Squares."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["analogy"], "question": "Ornithology : Birds :: Botany : ?", "options": ["Plants", "Animals", "Insects", "Rocks"], "correct_answer": "Plants", "explanation": "Study : subject."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["analogy"], "question": "DE : 45 :: GH : ?", "options": ["78", "87", "67", "89"], "correct_answer": "78", "explanation": "Letter positions: D=4, E=5; G=7, H=8."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["analogy"], "question": "Hot : Cold :: Generous : ?", "options": ["Miserly", "Kind", "Rich", "Giving"], "correct_answer": "Miserly", "explanation": "Antonym relation."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["analogy"], "question": "6 : 42 :: 8 : ?", "options": ["72", "64", "56", "80"], "correct_answer": "72", "explanation": "n x (n+1): 6x7 = 42, 8x9 = 72."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["analogy"], "question": "KING : LJOH :: QUEEN : ?", "options": ["RVFFO", "RVEFO", "QVFFO", "RUFFO"], "correct_answer": "RVFFO", "explanation": "+1 on each letter: Q->R, U->V, E->F, E->F, N->O."}
+    ]
+  }
+}

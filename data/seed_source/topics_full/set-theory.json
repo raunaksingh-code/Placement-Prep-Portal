@@ -1,0 +1,72 @@
+{
+  "study_material": {
+    "title": "Set Theory - Complete Study Notes",
+    "introduction": "Set theory questions in placement tests are almost always two-set or three-set Venn diagram counting problems: how many like tea, coffee, both, or neither. One inclusion-exclusion identity does nearly all the work.",
+    "learning_objectives": [
+      "Use union, intersection and complement notation",
+      "Apply inclusion-exclusion for two and three sets",
+      "Translate word problems into Venn regions",
+      "Count subsets and proper subsets"
+    ],
+    "concepts": [
+      {"heading": "1. Basics", "body": "A set is a well-defined collection. Union (A or B), Intersection (A and B), Complement (not A). n(X) denotes the count of elements. 'Only A' = n(A) - n(A and B) - the word 'only' is the most common trap."},
+      {"heading": "2. Inclusion-Exclusion (2 sets)", "body": "n(A or B) = n(A) + n(B) - n(A and B). Neither = Total - n(A or B). Draw the Venn diagram and fill from the middle (intersection) outward - it prevents double counting."},
+      {"heading": "3. Inclusion-Exclusion (3 sets)", "body": "n(A or B or C) = n(A)+n(B)+n(C) - n(AB) - n(BC) - n(CA) + n(ABC). For 'exactly one' or 'exactly two' questions, fill all 8 Venn regions starting from the triple intersection."},
+      {"heading": "4. Subsets", "body": "A set with n elements has 2^n subsets (including the empty set and itself) and 2^n - 1 proper subsets. Power set = set of all subsets."}
+    ],
+    "formulas": [
+      "n(A or B) = n(A) + n(B) - n(A and B)",
+      "Neither = Total - n(A or B)",
+      "Three sets: add singles, subtract pairs, add the triple",
+      "Subsets of an n-set = 2^n"
+    ],
+    "shortcut_methods": [
+      "Fill Venn diagrams from the innermost region outward",
+      "'Only A' means subtract every overlap from n(A)",
+      "If everyone likes at least one of two things: both = n(A) + n(B) - 100 (in percent)"
+    ],
+    "common_mistakes": [
+      "Confusing 'A' (which includes the overlap) with 'only A'",
+      "Forgetting to add back the triple intersection with 3 sets",
+      "Ignoring the 'neither' group when totals do not match"
+    ],
+    "summary": "Inclusion-exclusion plus careful only/at-least/exactly reading solves every counting question; 2^n covers the subset ones.",
+    "quick_revision_notes": [
+      "n(A or B) = n(A)+n(B)-n(A and B)",
+      "Only A = n(A) - overlap",
+      "Subsets = 2^n, proper subsets = 2^n - 1"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "If n(A) = 20, n(B) = 15 and n(A and B) = 5, find n(A or B).", "options": ["30", "35", "25", "40"], "correct_answer": "30", "step_by_step": "n(A or B) = 20 + 15 - 5 = 30.", "shortcut": "Add and subtract the overlap once."},
+    {"difficulty": "medium", "question": "In a class of 50, 30 play cricket, 25 play football and 10 play both. How many play neither?", "options": ["5", "10", "15", "0"], "correct_answer": "5", "step_by_step": "At least one = 30 + 25 - 10 = 45. Neither = 50 - 45 = 5.", "shortcut": "Total minus union."},
+    {"difficulty": "medium", "question": "Out of 100 people, 60 drink tea, 45 drink coffee, 25 drink both. How many drink only tea?", "options": ["35", "40", "20", "30"], "correct_answer": "35", "step_by_step": "Only tea = 60 - 25 = 35.", "shortcut": "'Only' strips the overlap."},
+    {"difficulty": "hard", "question": "In a survey, 70% like product X and 60% like product Y. If everyone likes at least one, what percent like both?", "options": ["30%", "20%", "40%", "10%"], "correct_answer": "30%", "step_by_step": "Both = 70 + 60 - 100 = 30%.", "shortcut": "Overshoot above 100% is the overlap."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["sets", "union"], "question": "n(A) = 28, n(B) = 32, n(A or B) = 50. Find n(A and B).", "options": ["10", "8", "12", "6"], "correct_answer": "10", "explanation": "Overlap = 28 + 32 - 50 = 10."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["sets", "subsets"], "question": "How many subsets does a set of 5 elements have?", "options": ["32", "31", "25", "10"], "correct_answer": "32", "explanation": "2^5 = 32."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["sets", "subsets"], "question": "The number of proper subsets of a 4-element set is:", "options": ["15", "16", "14", "12"], "correct_answer": "15", "explanation": "2^4 - 1 = 15."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["sets", "venn"], "question": "Of 80 students, 45 like maths, 40 like science and 20 like both. How many like at least one subject?", "options": ["65", "70", "85", "60"], "correct_answer": "65", "explanation": "45 + 40 - 20 = 65."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["sets", "only"], "question": "In the survey above (45 maths, 40 science, 20 both), how many like only science?", "options": ["20", "25", "15", "40"], "correct_answer": "20", "explanation": "Only science = 40 - 20 = 20."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["sets", "neither"], "question": "In a town of 500 families, 285 read paper A, 212 read paper B and 127 read both. Families reading neither:", "options": ["130", "115", "120", "140"], "correct_answer": "130", "explanation": "Union = 285 + 212 - 127 = 370; neither = 500 - 370 = 130."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["sets", "three-sets"], "question": "Among 100 students: 50 like A, 40 like B, 30 like C; 15 like A&B, 10 like B&C, 12 like A&C; 5 like all three. How many like at least one?", "options": ["88", "83", "90", "78"], "correct_answer": "88", "explanation": "50+40+30 - 15-10-12 + 5 = 88."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["sets", "exactly"], "question": "Using the same data, how many like exactly two of the three subjects?", "options": ["22", "37", "27", "17"], "correct_answer": "22", "explanation": "(15-5) + (10-5) + (12-5) = 10 + 5 + 7 = 22."}
+  ],
+  "topic_test": {
+    "title": "Set Theory - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Sketch a quick Venn diagram for every counting question."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["sets"], "question": "n(A) = 35, n(B) = 25, n(A and B) = 15. n(A or B) = ?", "options": ["45", "60", "40", "50"], "correct_answer": "45", "explanation": "35 + 25 - 15 = 45."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["sets"], "question": "A set has 6 elements. Its number of subsets is:", "options": ["64", "63", "36", "32"], "correct_answer": "64", "explanation": "2^6 = 64."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["sets"], "question": "If A = {1,2,3,4} and B = {3,4,5,6}, then A intersection B is:", "options": ["{3,4}", "{1,2}", "{5,6}", "{1,2,3,4,5,6}"], "correct_answer": "{3,4}", "explanation": "Common elements are 3 and 4."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["sets"], "question": "In a class of 60, 25 play chess, 30 play carrom, 12 play both. Students playing neither:", "options": ["17", "15", "12", "20"], "correct_answer": "17", "explanation": "Union = 25+30-12 = 43; neither = 60-43 = 17."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["sets"], "question": "70 people were surveyed: 40 like apples, 35 like bananas, and everyone likes at least one. How many like both?", "options": ["5", "10", "15", "0"], "correct_answer": "5", "explanation": "40 + 35 - 70 = 5."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["sets"], "question": "Of 200 students, 120 passed maths and 90 passed english; 40 passed both. How many passed only english?", "options": ["50", "60", "40", "70"], "correct_answer": "50", "explanation": "90 - 40 = 50."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["sets"], "question": "Among 120 people: 65 read Hindi papers, 45 read English papers, 20 read both. How many read exactly one language's paper?", "options": ["70", "90", "80", "60"], "correct_answer": "70", "explanation": "(65-20) + (45-20) = 45 + 25 = 70."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["sets"], "question": "Three sets have n(A)=30, n(B)=28, n(C)=22, all pairwise overlaps = 8 and n(ABC) = 3. Find n(A or B or C).", "options": ["59", "56", "62", "50"], "correct_answer": "59", "explanation": "30+28+22 - 8-8-8 + 3 = 59."}
+    ]
+  }
+}

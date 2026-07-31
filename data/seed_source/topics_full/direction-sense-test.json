@@ -1,0 +1,72 @@
+{
+  "study_material": {
+    "title": "Direction Sense Test - Complete Study Notes",
+    "introduction": "Direction problems track a walker through turns and distances, then ask the final direction or straight-line distance from the start. Draw the path on a quick N-E-S-W grid and apply Pythagoras at the end.",
+    "learning_objectives": [
+      "Track position through multi-leg walks",
+      "Convert left/right turns into compass directions",
+      "Compute shortest distance with Pythagoras",
+      "Solve shadow-based direction questions"
+    ],
+    "concepts": [
+      {"heading": "1. The Compass Frame", "body": "North up, East right, South down, West left. Every solution starts with a small sketch: mark the start, draw each leg to rough scale, label the end. Never solve directions in your head."},
+      {"heading": "2. Turns", "body": "Facing North: right = East, left = West. Facing East: right = South, left = North. A 'right turn' is always 90 degrees clockwise, 'left' anticlockwise. About turn = 180 degrees. Track the CURRENT facing after every turn."},
+      {"heading": "3. Net Displacement", "body": "Sum the north-south legs and the east-west legs separately (opposite directions cancel). The shortest distance = sqrt(NS^2 + EW^2). Walking 3 km north then 4 km east ends 5 km from the start (3-4-5 triple)."},
+      {"heading": "4. Shadows", "body": "The sun rises in the east: morning shadows point WEST; evening shadows point EAST. At noon shadows point north (in India, northern hemisphere). If a person's shadow falls to their right in the morning, they face south."}
+    ],
+    "formulas": [
+      "Shortest distance = sqrt(NS^2 + EW^2)",
+      "Right = 90 clockwise, Left = 90 anticlockwise",
+      "Morning shadow west, evening shadow east"
+    ],
+    "shortcut_methods": [
+      "Cancel opposite legs before applying Pythagoras",
+      "Look for 3-4-5 and 5-12-13 triples in the leg lengths",
+      "Rotate the whole page mentally when facing changes confuse you - or just re-sketch"
+    ],
+    "common_mistakes": [
+      "Losing the current facing after multiple turns",
+      "Adding all distances instead of netting opposite directions",
+      "Reversing morning and evening shadow directions"
+    ],
+    "summary": "Sketch, track facing after each turn, net the legs, Pythagoras for distance, and remember: morning shadows point west.",
+    "quick_revision_notes": [
+      "N-E-S-W clockwise order",
+      "Net NS and EW separately",
+      "3N + 4E ends 5 away",
+      "Morning shadow = west"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "A man walks 3 km north, then 4 km east. How far is he from the start?", "options": ["5 km", "7 km", "4 km", "6 km"], "correct_answer": "5 km", "step_by_step": "Perpendicular legs: sqrt(9+16) = 5 km.", "shortcut": "3-4-5 triple."},
+    {"difficulty": "easy", "question": "Facing north, a man turns right, then right again. Which direction does he face?", "options": ["South", "East", "West", "North"], "correct_answer": "South", "step_by_step": "North -> East (right) -> South (right).", "shortcut": "Two rights = about turn."},
+    {"difficulty": "medium", "question": "A man walks 10 m south, 10 m east, then 10 m north. Where is he relative to the start?", "options": ["10 m east", "10 m south", "at the start", "10 m west"], "correct_answer": "10 m east", "step_by_step": "South and north legs cancel; only 10 m east remains.", "shortcut": "Cancel opposites first."},
+    {"difficulty": "hard", "question": "One morning, Ravi's shadow falls exactly to his right. Which direction is he facing?", "options": ["South", "North", "East", "West"], "correct_answer": "South", "step_by_step": "Morning shadow points west. West on his right means he faces south.", "shortcut": "Morning shadow = west, then orient."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["directions", "turns"], "question": "Facing east, you turn left. You now face:", "options": ["North", "South", "West", "East"], "correct_answer": "North", "explanation": "Left from east is north (anticlockwise)."},
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["directions", "distance"], "question": "A person walks 6 km west, then 8 km north. Distance from start:", "options": ["10 km", "14 km", "12 km", "9 km"], "correct_answer": "10 km", "explanation": "sqrt(36+64) = 10 (6-8-10 triple)."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["directions", "about-turn"], "question": "Facing south-west, an about turn leaves you facing:", "options": ["North-east", "South-east", "North-west", "West"], "correct_answer": "North-east", "explanation": "180 degrees from SW is NE."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["directions", "multi-leg"], "question": "A walks 5 km north, 3 km east, 5 km south. How far and in which direction from the start?", "options": ["3 km east", "3 km west", "5 km north", "8 km east"], "correct_answer": "3 km east", "explanation": "North and south cancel; 3 km east remains."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["directions", "turn-chain"], "question": "Facing north, you turn right, then left, then right. You now face:", "options": ["East", "West", "North", "South"], "correct_answer": "East", "explanation": "N -> E (R) -> N (L) -> E (R)."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["directions", "shadow"], "question": "In the evening, Meera's shadow falls to her left. She is facing:", "options": ["South", "North", "East", "West"], "correct_answer": "South", "explanation": "Evening shadow points east; east on her left means she faces south."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["directions", "l-shape"], "question": "From home, Ria cycles 4 km east, 3 km south, 4 km west and 7 km north. Where is she now?", "options": ["4 km north of home", "4 km south of home", "3 km north of home", "at home"], "correct_answer": "4 km north of home", "explanation": "EW cancels; NS: -3 + 7 = 4 km north."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["directions", "clockwise"], "question": "A man facing west turns 135 degrees clockwise. He now faces:", "options": ["North-east", "South-east", "North-west", "South-west"], "correct_answer": "North-east", "explanation": "West + 135 clockwise: W -> NW (45) -> N (90) -> NE (135)."}
+  ],
+  "topic_test": {
+    "title": "Direction Sense Test - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Sketch every path; never track directions purely mentally."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["directions"], "question": "Facing south, two successive left turns leave you facing:", "options": ["North", "East", "West", "South"], "correct_answer": "North", "explanation": "S -> E -> N."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["directions"], "question": "A walks 12 km north and 5 km east. Distance from start:", "options": ["13 km", "17 km", "15 km", "12 km"], "correct_answer": "13 km", "explanation": "5-12-13 triple."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["directions"], "question": "The direction opposite to north-west is:", "options": ["South-east", "North-east", "South-west", "West"], "correct_answer": "South-east", "explanation": "Diagonal opposite."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["directions"], "question": "B walks 8 m east, turns left, walks 6 m. Which direction is B from the start?", "options": ["North-east", "South-east", "North-west", "East"], "correct_answer": "North-east", "explanation": "East then north: net NE."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["directions"], "question": "Facing east, a 90-degree anticlockwise turn then a 180-degree turn leaves you facing:", "options": ["South", "North", "East", "West"], "correct_answer": "South", "explanation": "E -> N (anticlockwise 90) -> S (180)."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["directions"], "question": "At sunrise, Amit stands with his back to the sun. The direction in front of him is:", "options": ["West", "East", "North", "South"], "correct_answer": "West", "explanation": "Sun rises in the east; back to it means facing west."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["directions"], "question": "C walks 20 m north, turns right and walks 30 m, turns right and walks 35 m, turns left and walks 15 m. Net east-west displacement:", "options": ["45 m east", "30 m east", "15 m east", "45 m west"], "correct_answer": "45 m east", "explanation": "East legs: 30 + 15 = 45 m east (the 20 N and 35 S legs affect only NS)."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["directions"], "question": "From P, walk 10 km south to Q, then 10 km east to R, then 10 km north to S. The distance PS is:", "options": ["10 km", "20 km", "14.14 km", "0 km"], "correct_answer": "10 km", "explanation": "NS cancels: S is 10 km due east of P."}
+    ]
+  }
+}

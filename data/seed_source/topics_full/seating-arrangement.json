@@ -1,0 +1,72 @@
+{
+  "study_material": {
+    "title": "Seating Arrangement - Complete Study Notes",
+    "introduction": "Seating puzzles place people in a row or around a table under constraints. The method is universal: draw the seats, place the most constrained people first, and track facing direction for left/right.",
+    "learning_objectives": [
+      "Solve linear (row) arrangements with position clues",
+      "Handle circular arrangements facing the centre",
+      "Use the position-from-both-ends identity",
+      "Chain relative clues (left of, between, adjacent) correctly"
+    ],
+    "concepts": [
+      {"heading": "1. Linear Arrangements", "body": "Draw numbered seats. If a person is p-th from the left and q-th from the right, total seats = p + q - 1. People facing north: their left is your left as you read the row. Place fixed positions (ends, middle) first, then relative clues."},
+      {"heading": "2. Circular Arrangements", "body": "For people facing the CENTRE: right = clockwise neighbour is on the LEFT side visually - be careful: facing centre, a person's right hand points anticlockwise... Convention: facing centre, immediate right = the next person anticlockwise; immediate left = next person clockwise. Draw the circle, mark one person, and orient all clues consistently."},
+      {"heading": "3. Constraint Ordering", "body": "Start with the clue that fixes an absolute position (ends, opposite pairs, middle). Then apply 'X is second to the right of Y' type clues. Keep alternatives open as two mini-diagrams when a clue is ambiguous, and eliminate with later clues."},
+      {"heading": "4. Between and Adjacent", "body": "'X is between Y and Z' fixes only the local order YXZ or ZXY. 'Adjacent' means immediately next. Count positions strictly - 'second to the left' skips exactly one person."}
+    ],
+    "formulas": [
+      "Total = from-left + from-right - 1",
+      "Circular, facing centre: right = anticlockwise",
+      "n people in a row: n! arrangements; circle: (n-1)!"
+    ],
+    "shortcut_methods": [
+      "Fix the most constrained person first",
+      "Maintain two candidate diagrams when clues allow mirror images",
+      "Re-read every clue against the finished diagram before answering"
+    ],
+    "common_mistakes": [
+      "Flipping left/right for people facing the centre",
+      "Off-by-one errors in 'second to the right'",
+      "Assuming a unique arrangement when a mirror image also satisfies the clues"
+    ],
+    "summary": "Sketch seats, anchor absolute positions, layer relative clues, and double-check left/right against facing direction.",
+    "quick_revision_notes": [
+      "p + q - 1 for total seats",
+      "Facing centre flips left/right intuition",
+      "Anchor ends and opposites first",
+      "Verify all clues at the end"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "In a row of students, Ram is 7th from the left and 5th from the right. How many students are in the row?", "options": ["11", "12", "10", "13"], "correct_answer": "11", "step_by_step": "Total = 7 + 5 - 1 = 11.", "shortcut": "Add positions, subtract the double-counted person."},
+    {"difficulty": "medium", "question": "Five friends A, B, C, D, E sit in a row facing north. A is at the extreme left, E at the extreme right, C is in the middle, and B sits between A and C. Who is second from the left?", "options": ["B", "C", "D", "E"], "correct_answer": "B", "step_by_step": "Order: A B C D E. Second from left is B.", "shortcut": "Anchor ends and middle, the rest fills itself."},
+    {"difficulty": "medium", "question": "Four people sit around a square table facing the centre: P opposite R, S opposite Q. If Q is to the immediate right of P, who is to the immediate left of R?", "options": ["Q", "S", "P", "Cannot be determined"], "correct_answer": "Q", "step_by_step": "Place P north, R south. Facing centre, P's right is the west seat: Q west, S east. R (south, facing north) has west on his left: Q.", "shortcut": "Draw the square; do not trust mental rotation."},
+    {"difficulty": "hard", "question": "In a row of 40, A is 16th from the left. B is 8th to the right of A. What is B's position from the right end?", "options": ["17th", "16th", "24th", "18th"], "correct_answer": "17th", "step_by_step": "B is at position 24 from the left. From right: 40 - 24 + 1 = 17.", "shortcut": "From-right = total - from-left + 1."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["seating", "row"], "question": "In a queue, Mohan is 10th from the front and 6th from the back. How many people are in the queue?", "options": ["15", "16", "14", "17"], "correct_answer": "15", "explanation": "10 + 6 - 1 = 15."},
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["seating", "position"], "question": "In a row of 25, Sita is 9th from the left. Her position from the right is:", "options": ["17th", "16th", "18th", "15th"], "correct_answer": "17th", "explanation": "25 - 9 + 1 = 17."},
+    {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["seating", "between"], "question": "P, Q, R sit in a row. Q is between P and R. If P is not on the left end, the order from left is:", "options": ["R Q P", "P Q R", "Q P R", "R P Q"], "correct_answer": "R Q P", "explanation": "Q must be middle; P on the right end forces R Q P."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["seating", "row-five"], "question": "Five people V W X Y Z sit facing north. X is to the immediate right of W. V is at an extreme end with Z beside him. Y is to the immediate left of W. Which pair sits at the ends?", "options": ["V and X", "V and W", "Z and X", "V and Y"], "correct_answer": "V and X", "explanation": "Chain Y-W-X with V-Z on the left gives V Z Y W X."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["seating", "swap"], "question": "In a row of boys, Deepak is 11th from the left and Nilesh is 15th from the right. After they swap positions, Deepak is 25th from the left. How many boys are in the row?", "options": ["39", "38", "40", "36"], "correct_answer": "39", "explanation": "Deepak now occupies Nilesh's seat: 25th from left = 15th from right, so total = 25 + 15 - 1 = 39."},
+    {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["seating", "circle"], "question": "Six people A, B, C, D, E, F sit evenly around a circle. A sits opposite D, and B sits opposite E. Who sits opposite C?", "options": ["F", "A", "E", "D"], "correct_answer": "F", "explanation": "Opposite pairs partition the six seats; the only pair left is C and F."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["seating", "ranks"], "question": "In a class of students, Raj's rank is 13th from the top and 28th from the bottom. How many students are in the class?", "options": ["40", "41", "39", "42"], "correct_answer": "40", "explanation": "13 + 28 - 1 = 40."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["seating", "middle"], "question": "Seven people sit in a row. G sits exactly in the middle. E is 2nd to the left of G, and H sits at the right end. How many people sit between E and H?", "options": ["4", "3", "5", "2"], "correct_answer": "4", "explanation": "Seats 1-7: G at 4, E at 2, H at 7. Between E and H: seats 3, 4, 5, 6 = 4 people."}
+  ],
+  "topic_test": {
+    "title": "Seating Arrangement - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Draw seats before placing anyone."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["seating"], "question": "Ravi is 12th from the left and 9th from the right in a row. Total people:", "options": ["20", "21", "19", "22"], "correct_answer": "20", "explanation": "12 + 9 - 1 = 20."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["seating"], "question": "In a row of 30 facing north, Asha is 8th from the right. Her position from the left is:", "options": ["23rd", "22nd", "24th", "21st"], "correct_answer": "23rd", "explanation": "30 - 8 + 1 = 23."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["seating"], "question": "Three friends sit in a row: J is not next to K; L sits between them. The order is:", "options": ["J L K", "J K L", "L J K", "K J L"], "correct_answer": "J L K", "explanation": "L must separate J and K."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["seating"], "question": "Five people sit facing north: T at the extreme right, S 2nd from the left, R between S and T but not adjacent to T, Q at the extreme left. Where is P?", "options": ["Immediately left of T", "Extreme left", "Between Q and S", "Cannot be determined"], "correct_answer": "Immediately left of T", "explanation": "Seats become Q S R P T: R sits 3rd (not adjacent to T), leaving P at seat 4, immediately left of T."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["seating"], "question": "In a circle of 8 facing the centre, how many people sit between the two people who sit opposite each other (counting one side)?", "options": ["3", "4", "2", "5"], "correct_answer": "3", "explanation": "Opposite seats in an 8-circle leave 3 people on each side."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["seating"], "question": "In a class, Amit is 7th from the top and Sumit is 7th from the bottom of the merit list of 20. How many students are between them?", "options": ["6", "7", "5", "8"], "correct_answer": "6", "explanation": "Positions 7 and 14: between them are positions 8-13 = 6 students."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["seating"], "question": "Six friends sit in a row facing north. U is 4th from the left, and V is 4th from the right. How many sit between U and V?", "options": ["0", "1", "2", "3"], "correct_answer": "0", "explanation": "In 6 seats, 4th from left = seat 4; 4th from right = seat 3: they are adjacent."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["seating"], "question": "In a row, A is 5th to the left of B, and B is 12th from the left end. What is A's position from the left?", "options": ["7th", "8th", "6th", "17th"], "correct_answer": "7th", "explanation": "12 - 5 = 7."}
+    ]
+  }
+}

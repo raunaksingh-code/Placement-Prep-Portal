@@ -1,0 +1,51 @@
+"""Role category -> aptitude topics worth prioritising, used by the "prepare
+according to JD" plan. Shared by the extractor and the API."""
+
+CATEGORY_TOPICS: dict[str, list[str]] = {
+    "Consulting": [
+        "data-interpretation", "percentages", "ratio---proportion", "averages",
+        "profit-loss-and-discounts", "arithmetic-reasoning", "data-sufficiency",
+        "syllogisms", "statements-and-arguments", "reading-comprehension",
+    ],
+    "Data & Analytics": [
+        "data-interpretation", "percentages", "averages", "probability",
+        "permutations-and-combinations", "set-theory", "data-sufficiency",
+        "series", "arithmetic-reasoning", "algebra",
+    ],
+    "Finance": [
+        "simple-and-compound-interests", "percentages", "profit-loss-and-discounts",
+        "ratio---proportion", "partnerships", "averages", "data-interpretation",
+        "algebra", "data-sufficiency", "reading-comprehension",
+    ],
+    "Sales & Business Development": [
+        "percentages", "profit-loss-and-discounts", "ratio---proportion",
+        "data-interpretation", "averages", "reading-comprehension",
+        "statements-and-arguments", "vocabulary", "idiomatic-expressions",
+    ],
+    "Marketing": [
+        "percentages", "data-interpretation", "averages", "ratio---proportion",
+        "reading-comprehension", "theme-detection", "vocabulary",
+        "statements-and-arguments", "sentence-rearrangement",
+    ],
+    "Product & Technology": [
+        "series", "coding---decoding", "syllogisms", "data-sufficiency",
+        "permutations-and-combinations", "probability", "algebra",
+        "data-interpretation", "arithmetic-reasoning", "non-verbal-reasoning",
+    ],
+    "Operations": [
+        "time-and-work", "pipes-and-cisterns", "chain-rule--variation",
+        "time-speed-and-distance", "percentages", "ratio---proportion",
+        "averages", "data-interpretation", "arithmetic-reasoning",
+    ],
+    "Human Resources": [
+        "percentages", "averages", "data-interpretation", "reading-comprehension",
+        "statements-and-arguments", "vocabulary", "sentence-correction-spotting-errors",
+    ],
+    "General Management": [
+        "percentages", "ratio---proportion", "averages", "profit-loss-and-discounts",
+        "time-and-work", "data-interpretation", "syllogisms", "arithmetic-reasoning",
+        "reading-comprehension",
+    ],
+}
+
+DEFAULT_TOPICS = CATEGORY_TOPICS["General Management"]

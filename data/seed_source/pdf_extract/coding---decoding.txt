@@ -1,0 +1,164 @@
+CODING – DECODING
+CONCEPTS
+A code is a system of words, letters or signs which is
+used to represent a message in secret form. Coding and
+Decoding test is to examine the student's ability to
+identify the rule interpreted and decode the given
+message.
+Approach to solve the questions:
+1. You will be given two messages, one is original
+message and another one is coded message.
+2. You have to compare each element of the original
+message with corresponding element of coded
+message. Thereafter try to identify the rule in which
+coded message is formed.
+3. Using the identified rule you can easily answer the
+question asked.
+Tips to solve easily: 
+1) Remember English alphabets from A to Z with their
+position values i.e. A–1, B–2, C–3, . . . . . ., Z–26.
+2) Remember reverse order of English alphabets. i.e. Z
+to A with their position values i.e. Z–1, Y–2, .... , A–26. 
+3) Remember the corresponding opposite letter of each
+alphabet with their position values. The following table
+will give the opposite letter of each alphabet.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+A
+Z
+B
+Y
+C
+X
+D
+W
+E
+V
+F
+U
+G
+T
+H
+S
+I
+R
+J
+Q
+K
+P
+L
+O
+M
+N
+26 25
+24
+23
+22
+21
+20
+19
+18
+17
+16
+15 14
+To find out the opposite letter of a particular letter, we
+can use the below formula.
+Sum of the position numbers of a letter and it's
+opposite letter is always 27.
+Position number of a letter + Position number of its
+opposite letter = 27.
+e.g.: The opposite letter of 'H' is 'S'. 
+Because, H–8, S–19.       H+S = 27  8+19=27.
+Types of Coding-Decoding:
+(I) Letter Coding: In this type of coding, the original
+alphabets of the given word are replaced by certain
+other alphabets based on specific rule to form its code.
+You have to detect the hidden rule and answer the
+questions accordingly.               
+Examples: (1) In a certain code language,'COLLEGE' is
+written as 'GSPPIKI' then how will 'GROUPS' be
+written in that code?
+Explanation: Each letter of the word is moved four
+steps forward to obtain the code. So, GROUPS will be
+coded as KVSYTW.
+2) ‘ZYXW’ as coded as ‘ABCD’ then ‘STUV’ is coded as.
+Explanation: Here each letter is coded with its opposite
+letter. i.e. Z – A, Y – B, X – C, W – D. 
+Similarly, S – H, T – G, U – F, V – E.
+3) ‘bcd’ is coded as ‘def’ then ‘true’ is coded as.
+Explanation: Here every letter is moved two steps
+forward. i.e. b (+2) → d , c (+2) → e, d (+2) → f . 
+Similarly, t→ v, r→ t, u→ w, e→ g. So, the answer is 'vtwg'.
+4) ‘Hyderabad’ : ‘ixedszcze’ then ‘chennai’ :?
+Explanation:
+ Here the letters are alternatively
+increasing and decreasing by 1. 
+h(+1) → i , y(-1) → x , d(+1) → e , e(-1) → d, r(+1) → s, 
+a(-1) → z, b(+1) → c, a(-1) → z, d(+1) → e.
+So, chennai will be coded as dgfmozj.
+(II) Number Coding: In this type of coding, alphabets
+are assigned to the numbers or numerical code values
+are assigned to a word or alphabets. You have to
+compare the given codes to answer the questions.
+Example: 1) If READ is coded as 7421 and BOOK is
+coded as 8335, then how would you encode BOARD?
+Explanation: The alphabets are coded as follows. 
+From the above codes, we can say, B is coded as 8, O is
+coded as 3, A is coded as 2, R is coded as 7, D is coded
+as 1. Hence, BOARD is coded as 83271.
+(III) Substitution: In this type, the names of objects are
+substituted with different names. We should carefully
+trace the substitution to answer the questions.
+Example: 1) In a certain code language, 'book' is coded
+as 'pencil', 'pencil' is coded as 'mirror', 'mirror' is coded
+as 'board'. Then what is useful to write on a paper?
+Explanation: We use pencil to write on a paper but here
+pencil is coded as mirror. So, the answer is mirror.
+2) In a certain language, ‘man' is called as ‘woman’,
+'woman' is called as ‘girl’, ‘girl’ is called as ‘boy’, ‘boy’ is
+called as ‘worker’. Then in the same language what does
+a 6 year old female is called?
+Explanation: In general language, 6 years old female is
+called as girl. But in the given coded language ‘girl’ is
+called as ‘boy’. So, the answer is 'boy'. 
+(IV) Mixed Letter/ Number Coding: In this type, few
+sentences are given in a code language. Based on that
+you are asked to find the code for a particular given
+word(s). To answer such questions, you have to
+compare the two messages and deduce the common
+words and its corresponding codes. Analyze the entire
+message until the code for the given word is found. 
+2.1
+Praxis Groups
+R   E   A   D                 B    O   O   K
+7    4   2    1                  8     3    3    5 
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

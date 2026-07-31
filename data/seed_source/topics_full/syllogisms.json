@@ -1,0 +1,74 @@
+{
+  "study_material": {
+    "title": "Syllogisms - Complete Study Notes",
+    "introduction": "Syllogisms give premises ('All A are B', 'Some B are C') and ask which conclusions follow with certainty. Draw Venn diagrams and accept a conclusion ONLY if it holds in every possible diagram consistent with the premises.",
+    "learning_objectives": [
+      "Translate All/Some/No statements into Venn pictures",
+      "Chain two premises through the middle term",
+      "Reject conclusions that are merely possible",
+      "Handle 'either-or' complementary pairs"
+    ],
+    "concepts": [
+      {"heading": "1. The Four Statement Types", "body": "All A are B (A inside B). No A is B (disjoint circles). Some A are B (overlap guaranteed). Some A are not B (part of A outside B). 'Some' means at least one - it says nothing about the rest."},
+      {"heading": "2. Valid Chains", "body": "All A are B + All B are C gives All A are C. No A is B + All C are A gives No C is B. Some A are B guarantees Some B are A (conversion). All A are B converts only to Some B are A - never to All B are A."},
+      {"heading": "3. The Certainty Test", "body": "A conclusion follows only if TRUE IN EVERY valid diagram. 'All roses are flowers; some flowers are red' does NOT give 'some roses are red' - the red flowers may all be non-roses. If you can draw one diagram where the conclusion fails, reject it."},
+      {"heading": "4. Complementary Pairs", "body": "When neither of two conclusions follows individually but they exhaust all cases (e.g. 'Some A are B' / 'No A is B'), the answer is 'either I or II follows'. Look for this pattern when both conclusions involve the same terms."}
+    ],
+    "formulas": [
+      "All A are B: A inside B",
+      "Some A are B converts to Some B are A",
+      "All A are B converts to Some B are A only",
+      "Conclusion must survive every possible diagram"
+    ],
+    "shortcut_methods": [
+      "Draw the minimal diagram, then try to break each conclusion",
+      "'Some' + 'Some' premises almost never yield a definite conclusion",
+      "Check complementary either-or pairs before answering 'neither follows'"
+    ],
+    "common_mistakes": [
+      "Converting All A are B into All B are A",
+      "Accepting conclusions that are possible but not necessary",
+      "Missing the either-or pattern",
+      "Importing real-world knowledge into abstract premises"
+    ],
+    "summary": "Venn-diagram the premises, test each conclusion against every consistent picture, and only certainty counts.",
+    "quick_revision_notes": [
+      "Some = at least one",
+      "All A are B + All B are C = All A are C",
+      "Possible is not proven",
+      "Either-or when conclusions exhaust the cases"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Premises: All cats are animals. All animals are living beings. Conclusion: All cats are living beings. Does it follow?", "options": ["Yes, it follows", "No, it does not follow", "Only sometimes", "Cannot be determined"], "correct_answer": "Yes, it follows", "step_by_step": "Cats inside animals inside living beings - the chain is airtight.", "shortcut": "All + All chains through the middle term."},
+    {"difficulty": "medium", "question": "Premises: All roses are flowers. Some flowers are red. Conclusion: Some roses are red. Does it follow?", "options": ["No, it does not follow", "Yes, it follows", "It follows partially", "The premises contradict"], "correct_answer": "No, it does not follow", "step_by_step": "The red flowers might all be outside the rose circle. A diagram exists where no rose is red, so the conclusion is not certain.", "shortcut": "Some in the middle term proves nothing about the subset."},
+    {"difficulty": "medium", "question": "Premises: No dog is a cat. All puppies are dogs. Conclusion: No puppy is a cat. Does it follow?", "options": ["Yes, it follows", "No, it does not follow", "Only if puppies exist", "Cannot be determined"], "correct_answer": "Yes, it follows", "step_by_step": "Puppies sit inside dogs, and dogs are disjoint from cats - so puppies are disjoint from cats.", "shortcut": "Subset of a disjoint set is disjoint."},
+    {"difficulty": "hard", "question": "Premises: Some pens are pencils. Some pencils are erasers. Conclusion: Some pens are erasers. Does it follow?", "options": ["No, it does not follow", "Yes, it follows", "Yes, by transitivity", "The premises are inconsistent"], "correct_answer": "No, it does not follow", "step_by_step": "The pencil-eraser overlap may avoid the pen-pencil overlap entirely. Some + Some yields no definite chain.", "shortcut": "Two 'Some' premises rarely prove anything."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["syllogism", "conversion"], "question": "'Some apples are fruits' can be validly converted to:", "options": ["Some fruits are apples", "All fruits are apples", "No fruit is an apple", "Some fruits are not apples"], "correct_answer": "Some fruits are apples", "explanation": "Some-statements convert symmetrically."},
+    {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["syllogism", "all-conversion"], "question": "'All tigers are cats' validly yields which of these?", "options": ["Some cats are tigers", "All cats are tigers", "No cat is a tiger", "Some cats are not tigers"], "correct_answer": "Some cats are tigers", "explanation": "All A are B converts only partially: Some B are A."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["syllogism", "no-chain"], "question": "Premises: All books are papers. No paper is plastic. Conclusion I: No book is plastic. Conclusion II: Some plastics are papers. Which follows?", "options": ["Only I", "Only II", "Both", "Neither"], "correct_answer": "Only I", "explanation": "Books inside papers, papers disjoint from plastic - I follows. II contradicts the premises."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["syllogism", "some-not"], "question": "Premises: Some doctors are singers. All singers are artists. Conclusion: Some doctors are artists. Does it follow?", "options": ["Yes, it follows", "No, it does not follow", "Only if artists exist", "Cannot be determined"], "correct_answer": "Yes, it follows", "explanation": "The doctor-singer overlap sits inside artists, so those doctors are artists."},
+    {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["syllogism", "possible-trap"], "question": "Premises: All A are B. Some B are C. Which conclusion definitely follows?", "options": ["Some B are A", "Some A are C", "All B are A", "No A is C"], "correct_answer": "Some B are A", "explanation": "Only the conversion of the first premise is guaranteed; A-C relations are undetermined."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["syllogism", "either-or"], "question": "Premises: All keys are locks. Some locks are doors. Conclusions: I. Some keys are doors. II. No key is a door. Which follows?", "options": ["Either I or II", "Only I", "Only II", "Both I and II"], "correct_answer": "Either I or II", "explanation": "Neither is certain, but the two exhaust all possibilities for keys and doors - the complementary pair."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["syllogism", "three-chain"], "question": "Premises: All pens are tools. All tools are objects. Conclusions: I. All pens are objects. II. Some objects are pens. Which follows?", "options": ["Both I and II", "Only I", "Only II", "Neither"], "correct_answer": "Both I and II", "explanation": "The chain gives I, and converting I gives II."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["syllogism", "negative"], "question": "Premises: No fish is a bird. Some birds are swans. Conclusion: Some swans are not fish. Does it follow?", "options": ["Yes, it follows", "No, it does not follow", "Only if all swans are birds", "Cannot be determined"], "correct_answer": "Yes, it follows", "explanation": "The swans that are birds cannot be fish (birds and fish are disjoint), so at least those swans are not fish."}
+  ],
+  "topic_test": {
+    "title": "Syllogisms - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "A conclusion follows only if no valid diagram can break it."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 55, "tags": ["syllogism"], "question": "All squares are rectangles. All rectangles are polygons. Therefore all squares are polygons. This argument is:", "options": ["Valid", "Invalid", "Valid only for small squares", "Contradictory"], "correct_answer": "Valid", "explanation": "All-All chain."},
+      {"difficulty": "easy", "estimated_time_sec": 55, "tags": ["syllogism"], "question": "'No metal is a gas' converts validly to:", "options": ["No gas is a metal", "Some gases are metals", "All gases are metals", "Some metals are gases"], "correct_answer": "No gas is a metal", "explanation": "No-statements convert symmetrically."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["syllogism"], "question": "All A are B. No B is C. Conclusion: No A is C. Does it follow?", "options": ["Yes", "No", "Only sometimes", "Cannot be determined"], "correct_answer": "Yes", "explanation": "A inside B, B disjoint from C."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["syllogism"], "question": "Some cars are trucks. All trucks are vehicles. Conclusions: I. Some cars are vehicles. II. All vehicles are trucks. Which follows?", "options": ["Only I", "Only II", "Both", "Neither"], "correct_answer": "Only I", "explanation": "The overlap chains into vehicles; II reverses an All illegally."},
+      {"difficulty": "medium", "estimated_time_sec": 70, "tags": ["syllogism"], "question": "Some A are B. Some B are C. Conclusion: Some A are C. Does it follow?", "options": ["No", "Yes", "Yes, by transitivity", "The premises conflict"], "correct_answer": "No", "explanation": "The overlaps may not intersect - classic Some+Some trap."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["syllogism"], "question": "All poets are dreamers. No dreamer is practical. Conclusions: I. No poet is practical. II. Some practical people are poets. Which follows?", "options": ["Only I", "Only II", "Both", "Neither"], "correct_answer": "Only I", "explanation": "Chain gives I; II contradicts it."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["syllogism"], "question": "All X are Y. Conclusions: I. Some Y are X. II. Some Y are not X. Which follows?", "options": ["Only I", "Only II", "Both", "Either I or II"], "correct_answer": "Only I", "explanation": "I is the valid partial conversion. II fails when X = Y exactly."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["syllogism"], "question": "No pin is a needle. All needles are sharp. Conclusions: I. Some sharp things are needles. II. No pin is sharp. Which follows?", "options": ["Only I", "Only II", "Both", "Neither"], "correct_answer": "Only I", "explanation": "I converts premise 2. II is not forced - pins may be sharp without being needles."}
+    ]
+  }
+}

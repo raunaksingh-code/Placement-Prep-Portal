@@ -1,0 +1,80 @@
+{
+  "study_material": {
+    "title": "Permutations and Combinations - Complete Study Notes",
+    "introduction": "Permutations count arrangements (order matters); combinations count selections (order does not). Decide which one the question needs, then apply the factorial formulas. Repeated letters, together/never-together constraints and circular tables are the standard twists.",
+    "learning_objectives": [
+      "Apply the multiplication principle",
+      "Use nPr and nCr correctly",
+      "Handle words with repeated letters",
+      "Solve together / never-together constraints",
+      "Count circular arrangements and handshakes"
+    ],
+    "concepts": [
+      {"heading": "1. Multiplication Principle", "body": "If a task has k independent stages with n1, n2, ... choices, total ways = n1 x n2 x ... . Three shirts and four trousers give 12 outfits. This principle underlies every formula in the chapter."},
+      {"heading": "2. Permutations", "body": "nPr = n!/(n-r)! counts ordered arrangements of r items from n distinct items. All n items: n! ways. Words with repeated letters: divide by the factorial of each repeat count - APPLE has 5!/2! = 60 arrangements."},
+      {"heading": "3. Combinations", "body": "nCr = n!/(r!(n-r)!) counts unordered selections. nCr = nC(n-r) - choosing r to keep equals choosing n-r to discard. Handshakes among n people = nC2 = n(n-1)/2."},
+      {"heading": "4. Together and Apart", "body": "To keep a group together, glue it into one block: arrange the blocks, then arrange within the block. 4 boys and 3 girls with girls together: treat girls as 1 unit - 5! x 3! = 720. 'Never together' = total - together."},
+      {"heading": "5. Circular Arrangements", "body": "n distinct people around a round table: (n-1)! arrangements (rotations are identical). If clockwise and anticlockwise are considered the same (a necklace), divide by 2: (n-1)!/2."}
+    ],
+    "formulas": [
+      "nPr = n!/(n-r)!",
+      "nCr = n!/(r!(n-r)!)",
+      "Word with repeats: n!/(p! q! ...)",
+      "Circular: (n-1)!",
+      "Handshakes: nC2 = n(n-1)/2"
+    ],
+    "shortcut_methods": [
+      "Ask 'does order matter?' before anything else",
+      "nCr = nC(n-r) - compute the smaller side",
+      "Constraint problems: handle the constraint first, count the rest after"
+    ],
+    "common_mistakes": [
+      "Using permutations for committee (selection) problems",
+      "Forgetting to divide by repeated-letter factorials",
+      "Using n! instead of (n-1)! for circular tables",
+      "Double-counting when adding overlapping cases"
+    ],
+    "summary": "Order matters: permutation. Order doesn't: combination. Repeats divide, blocks glue, circles lose one factorial.",
+    "quick_revision_notes": [
+      "nP r orders, nCr selects",
+      "APPLE-type words: divide by repeats",
+      "Together = block trick; never = total - together",
+      "Round table: (n-1)!"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "In how many ways can 5 different books be arranged on a shelf?", "options": ["120", "60", "24", "100"], "correct_answer": "120", "step_by_step": "5! = 120.", "shortcut": "All distinct: factorial."},
+    {"difficulty": "easy", "question": "In how many ways can the letters of APPLE be arranged?", "options": ["60", "120", "24", "20"], "correct_answer": "60", "step_by_step": "5 letters with P repeated twice: 5!/2! = 60.", "shortcut": "Divide by repeats."},
+    {"difficulty": "medium", "question": "How many handshakes occur among 10 people if each shakes hands with every other exactly once?", "options": ["45", "90", "50", "100"], "correct_answer": "45", "step_by_step": "10C2 = 10 x 9/2 = 45.", "shortcut": "n(n-1)/2."},
+    {"difficulty": "medium", "question": "4 boys and 3 girls must sit in a row with all girls together. How many arrangements?", "options": ["720", "5040", "144", "360"], "correct_answer": "720", "step_by_step": "Glue girls: 5 units in 5! = 120 ways; girls among themselves 3! = 6. Total 720.", "shortcut": "Block trick: 5! x 3!."},
+    {"difficulty": "hard", "question": "How many 3-digit numbers can be formed from digits 1-5 with no repetition?", "options": ["60", "125", "100", "120"], "correct_answer": "60", "step_by_step": "5P3 = 5 x 4 x 3 = 60.", "shortcut": "Slots: 5, then 4, then 3."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 25, "tags": ["pnc", "factorial"], "question": "The value of 6! is:", "options": ["720", "120", "620", "5040"], "correct_answer": "720", "explanation": "6x5x4x3x2x1 = 720."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["pnc", "combination"], "question": "10C2 equals:", "options": ["45", "90", "20", "55"], "correct_answer": "45", "explanation": "10x9/2 = 45."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["pnc", "arrangement"], "question": "In how many ways can the letters of MOTHER be arranged?", "options": ["720", "360", "120", "5040"], "correct_answer": "720", "explanation": "6 distinct letters: 6! = 720."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["pnc", "repeats"], "question": "The number of arrangements of LEADER is:", "options": ["360", "720", "120", "240"], "correct_answer": "360", "explanation": "6!/2! = 360 (E repeats twice)."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["pnc", "committee"], "question": "A committee of 3 is chosen from 9 people. Number of ways:", "options": ["84", "72", "504", "27"], "correct_answer": "84", "explanation": "9C3 = 84."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["pnc", "equation"], "question": "If nC2 = 28, then n is:", "options": ["8", "7", "9", "14"], "correct_answer": "8", "explanation": "n(n-1)/2 = 28 gives n(n-1) = 56, n = 8."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["pnc", "digits"], "question": "How many 2-digit numbers can be formed from digits 1-5 without repetition?", "options": ["20", "25", "10", "24"], "correct_answer": "20", "explanation": "5P2 = 20."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["pnc", "mixed-committee"], "question": "From 5 men and 4 women, a committee of 2 men and 2 women is formed. Number of ways:", "options": ["60", "50", "40", "70"], "correct_answer": "60", "explanation": "5C2 x 4C2 = 10 x 6 = 60."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["pnc", "circular"], "question": "In how many ways can 5 people sit around a round table?", "options": ["24", "120", "60", "12"], "correct_answer": "24", "explanation": "(5-1)! = 24."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["pnc", "vowels-together"], "question": "How many arrangements of EQUATION keep all vowels together?", "options": ["2880", "5040", "1440", "4320"], "correct_answer": "2880", "explanation": "Vowels E,U,A,I,O as one block + Q,T,N: 4 units in 4! ways, vowels in 5! ways: 24 x 120 = 2880."}
+  ],
+  "topic_test": {
+    "title": "Permutations and Combinations - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "First decide: arrangement or selection?"],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["pnc"], "question": "8C3 equals:", "options": ["56", "336", "24", "28"], "correct_answer": "56", "explanation": "8x7x6/6 = 56."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["pnc"], "question": "How many ways can 4 students stand in a queue?", "options": ["24", "12", "16", "20"], "correct_answer": "24", "explanation": "4! = 24."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["pnc"], "question": "7P2 equals:", "options": ["42", "21", "49", "35"], "correct_answer": "42", "explanation": "7 x 6 = 42."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["pnc"], "question": "The number of distinct arrangements of BANANA is:", "options": ["60", "120", "720", "360"], "correct_answer": "60", "explanation": "6!/(3! 2!) = 720/12 = 60."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["pnc"], "question": "A quiz team of 2 boys and 2 girls is picked from 6 boys and 5 girls. Ways:", "options": ["150", "300", "125", "90"], "correct_answer": "150", "explanation": "6C2 x 5C2 = 15 x 10 = 150."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["pnc"], "question": "How many non-empty subsets does a 4-element set have?", "options": ["15", "16", "14", "12"], "correct_answer": "15", "explanation": "2^4 - 1 = 15."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["pnc"], "question": "6 people sit around a circular table. Number of distinct seatings:", "options": ["120", "720", "60", "24"], "correct_answer": "120", "explanation": "(6-1)! = 120."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["pnc"], "question": "From 4 boys and 3 girls, in how many row arrangements are the two specific friends A and B always together?", "options": ["1440", "720", "2520", "5040"], "correct_answer": "1440", "explanation": "Glue A and B: 6 units in 6! = 720 ways, A-B internally 2 ways: 1440."}
+    ]
+  }
+}

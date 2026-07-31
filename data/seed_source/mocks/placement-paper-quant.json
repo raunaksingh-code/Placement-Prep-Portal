@@ -1,0 +1,134 @@
+{
+  "slug": "placement-paper-quant-1",
+  "title": "Placement Paper - Quantitative Aptitude",
+  "test_type": "sectional",
+  "duration_minutes": 20,
+  "negative_mark": 0.25,
+  "source": "Campus Recruitment Book, Placement Papers 1 and 5 (pages 80-83)",
+  "sections": ["Quantitative Aptitude", "Logical Reasoning"],
+  "description": "Real placement-paper questions reproduced from the campus recruitment handbook. The book prints these without an answer key, so every answer and explanation here was worked out and verified. Questions that depended on a bar graph the PDF does not contain, or whose options were mangled in printing, have been left out.",
+  "instructions": [
+    "13 questions, 20 minutes.",
+    "+1 for each correct answer, -0.25 for each wrong answer, 0 for unattempted.",
+    "These are genuine placement-paper questions - expect a wider spread of topics than a single topic test."
+  ],
+  "questions": [
+    {
+      "topic": "time-speed-and-distance",
+      "difficulty": "hard",
+      "estimated_time_sec": 90,
+      "question": "A train running at 90 km/hr crosses a platform double its own length in 36 seconds. What is the length of the platform, in metres?",
+      "options": ["600", "450", "300", "200"],
+      "correct_answer": "600",
+      "explanation": "90 km/hr = 25 m/s, so the train covers 25 x 36 = 900 m while crossing. If the train is L long the platform is 2L, and crossing covers L + 2L = 3L = 900, giving L = 300. The platform is 2L = 600 m. (Note: 300 is the train's length, the trap answer.)"
+    },
+    {
+      "topic": "time-and-work",
+      "difficulty": "easy",
+      "estimated_time_sec": 45,
+      "question": "A can finish a work in 32 days and B can do the same work in half the time taken by A. Working together, what part of the work can they finish in a day?",
+      "options": ["3/32", "1/8", "5/32", "1/32"],
+      "correct_answer": "3/32",
+      "explanation": "B takes 16 days. Combined one-day work = 1/32 + 1/16 = 1/32 + 2/32 = 3/32."
+    },
+    {
+      "topic": "profit-loss-and-discounts",
+      "difficulty": "medium",
+      "estimated_time_sec": 60,
+      "question": "The owner of an electronics shop charges his customer 24% more than the cost price. If a customer paid Rs. 10,080 for a TV set, what was the cost price of the TV set?",
+      "options": ["Rs. 8,129", "Rs. 8,119", "Rs. 8,250", "Rs. 8,139"],
+      "correct_answer": "Rs. 8,129",
+      "explanation": "Cost price = 10080 / 1.24 = 8129.03, i.e. about Rs. 8,129."
+    },
+    {
+      "topic": "simple-and-compound-interests",
+      "difficulty": "easy",
+      "estimated_time_sec": 45,
+      "question": "What simple interest is obtained on an amount of Rs. 12,690 at 6% per annum for 3 years?",
+      "options": ["Rs. 2,284.20", "Rs. 2,423.40", "Rs. 2,233.40", "Rs. 2,525"],
+      "correct_answer": "Rs. 2,284.20",
+      "explanation": "SI = PTR/100 = 12690 x 6 x 3 / 100 = 2,284.20."
+    },
+    {
+      "topic": "simple-and-compound-interests",
+      "difficulty": "medium",
+      "estimated_time_sec": 60,
+      "question": "Find the compound interest on Rs. 8,000 at 5% per annum for 3 years, compounded annually.",
+      "options": ["Rs. 1,261", "Rs. 6,261", "Rs. 9,261", "Rs. 8,261"],
+      "correct_answer": "Rs. 1,261",
+      "explanation": "Amount = 8000 x 1.05^3 = 8000 x 1.157625 = 9,261. CI = 9261 - 8000 = 1,261. (9,261 is the amount, the trap answer.)"
+    },
+    {
+      "topic": "chain-rule--variation",
+      "difficulty": "easy",
+      "estimated_time_sec": 45,
+      "question": "6 machines of the same type produce a total of 270 bottles per minute. How many bottles do 10 such machines produce in four minutes?",
+      "options": ["1800", "648", "2700", "10800"],
+      "correct_answer": "1800",
+      "explanation": "One machine makes 270/6 = 45 bottles per minute. 10 machines in 4 minutes make 45 x 10 x 4 = 1,800."
+    },
+    {
+      "topic": "number-system",
+      "difficulty": "hard",
+      "estimated_time_sec": 90,
+      "question": "Find the least perfect square number which is divisible by 8, 15 and 24.",
+      "options": ["3600", "360", "6400", "64"],
+      "correct_answer": "3600",
+      "explanation": "LCM(8, 15, 24) = 120 = 2^3 x 3 x 5. A perfect square needs even powers of every prime, so raise it to 2^4 x 3^2 x 5^2 = 16 x 9 x 25 = 3,600."
+    },
+    {
+      "topic": "geometry",
+      "difficulty": "easy",
+      "estimated_time_sec": 45,
+      "question": "A rectangular garden has sides of 16 feet and 9 feet. It is reshaped into a square of the same area. How many feet long is each side of the new square garden?",
+      "options": ["12", "7", "9", "16"],
+      "correct_answer": "12",
+      "explanation": "Area = 16 x 9 = 144 sq ft. Side of the square = sqrt(144) = 12 feet."
+    },
+    {
+      "topic": "averages",
+      "difficulty": "medium",
+      "estimated_time_sec": 60,
+      "question": "The average of five consecutive numbers A, B, C, D and E is 48. What is the product of A and E?",
+      "options": ["2300", "2162", "2208", "2024"],
+      "correct_answer": "2300",
+      "explanation": "For consecutive numbers the average is the middle term, so C = 48 and the numbers are 46, 47, 48, 49, 50. A x E = 46 x 50 = 2,300."
+    },
+    {
+      "topic": "permutations-and-combinations",
+      "difficulty": "easy",
+      "estimated_time_sec": 40,
+      "question": "How many ways are there to lay four balls - coloured red, black, blue and green - in a row?",
+      "options": ["4!", "4", "4^4", "4(4!)"],
+      "correct_answer": "4!",
+      "explanation": "Four distinct objects in a row can be arranged in 4! = 24 ways."
+    },
+    {
+      "topic": "probability",
+      "difficulty": "hard",
+      "estimated_time_sec": 90,
+      "question": "Two cards are drawn together at random from 10 cards numbered 1 to 10. Find the probability that their sum is odd.",
+      "options": ["5/9", "4/9", "1/2", "1/5"],
+      "correct_answer": "5/9",
+      "explanation": "An odd sum needs one odd and one even card. There are 5 odd and 5 even, giving 5 x 5 = 25 favourable pairs out of C(10,2) = 45. P = 25/45 = 5/9."
+    },
+    {
+      "topic": "averages",
+      "difficulty": "medium",
+      "estimated_time_sec": 70,
+      "question": "The average of five numbers is 281. The average of the first two is 280 and the average of the last two is 178.5. What is the third number?",
+      "options": ["488", "336", "228", "464"],
+      "correct_answer": "488",
+      "explanation": "Total = 5 x 281 = 1405. First two sum to 560, last two to 357. Third = 1405 - 560 - 357 = 488."
+    },
+    {
+      "topic": "clocks",
+      "difficulty": "medium",
+      "estimated_time_sec": 60,
+      "question": "At 30 minutes past 4 o'clock, what is the angle between the two hands of the clock?",
+      "options": ["45 degrees", "48 degrees", "50 degrees", "60 degrees"],
+      "correct_answer": "45 degrees",
+      "explanation": "Angle = |30H - 5.5M| = |30 x 4 - 5.5 x 30| = |120 - 165| = 45 degrees."
+    }
+  ]
+}

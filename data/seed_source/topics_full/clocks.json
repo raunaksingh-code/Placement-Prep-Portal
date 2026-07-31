@@ -1,0 +1,73 @@
+{
+  "study_material": {
+    "title": "Clocks - Complete Study Notes",
+    "introduction": "Clock problems are angle arithmetic: the minute hand moves 6 degrees per minute, the hour hand 0.5 degrees per minute. One formula gives the angle at any time; relative speed logic gives coincidences and right angles.",
+    "learning_objectives": [
+      "Compute the angle between the hands at any time",
+      "Find when hands coincide, oppose or form right angles",
+      "Use the 55-minute gain of the minute hand",
+      "Handle fast/slow (gaining/losing) clock questions"
+    ],
+    "concepts": [
+      {"heading": "1. Hand Speeds", "body": "Minute hand: 360 degrees in 60 min = 6 deg/min. Hour hand: 360 in 12 hours = 0.5 deg/min. Relative speed = 5.5 deg/min - the minute hand gains 5.5 degrees on the hour hand every minute."},
+      {"heading": "2. The Angle Formula", "body": "Angle at H hours M minutes = |30H - 5.5M| degrees (take 360 minus the result if it exceeds 180). Example 3:30 - |90 - 165| = 75 degrees. Example 4:20 - |120 - 110| = 10 degrees."},
+      {"heading": "3. Coincidences and Oppositions", "body": "Hands coincide when the gap closes to 0: once every 65 5/11 minutes, i.e. 11 times in 12 hours, 22 times a day. They are opposite (180 apart) 11 times in 12 hours too; at right angles 22 times in 12 hours, 44 times a day."},
+      {"heading": "4. Gaining and Losing Clocks", "body": "A clock gaining k minutes per hour shows 60+k minutes for every true 60. Convert between true and shown time with the ratio. A clock that is 10 minutes fast SHOWS a later time; correct by subtracting."}
+    ],
+    "formulas": [
+      "Angle = |30H - 5.5M|",
+      "Minute hand speed 6 deg/min, hour hand 0.5 deg/min",
+      "Coincidences: every 65 5/11 min; 22/day",
+      "Right angles: 44 times/day"
+    ],
+    "shortcut_methods": [
+      "At H o'clock exactly, angle = 30H",
+      "Hands coincide between H and H+1 at 60H/11 minutes past H",
+      "Mirror-image time = 11:60 minus the given time (approximately, for reflection questions)"
+    ],
+    "common_mistakes": [
+      "Forgetting the hour hand moves during the minutes",
+      "Reporting reflex angles (>180) instead of the standard angle",
+      "Assuming right angles happen 48 times a day (it is 44)"
+    ],
+    "summary": "One formula (|30H - 5.5M|) plus the 5.5 deg/min relative speed answers nearly every clock question.",
+    "quick_revision_notes": [
+      "|30H - 5.5M| for the angle",
+      "Coincide 22 times/day, right angle 44 times/day",
+      "Hour hand: 0.5 deg per minute",
+      "6:00 = 180 degrees exactly"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "What is the angle between the hands at 3:30?", "options": ["75 degrees", "90 degrees", "60 degrees", "105 degrees"], "correct_answer": "75 degrees", "step_by_step": "|30x3 - 5.5x30| = |90 - 165| = 75.", "shortcut": "Formula directly."},
+    {"difficulty": "easy", "question": "The angle between the hands at 6:00 is:", "options": ["180 degrees", "90 degrees", "120 degrees", "150 degrees"], "correct_answer": "180 degrees", "step_by_step": "Hands point at 12 and 6: straight line, 180 degrees.", "shortcut": "30 x 6 = 180."},
+    {"difficulty": "medium", "question": "Find the angle between the hands at 4:20.", "options": ["10 degrees", "20 degrees", "5 degrees", "15 degrees"], "correct_answer": "10 degrees", "step_by_step": "|30x4 - 5.5x20| = |120 - 110| = 10.", "shortcut": "Hour hand has crept 10 degrees past the 4."},
+    {"difficulty": "hard", "question": "How many times do the hands of a clock form a right angle in 24 hours?", "options": ["44", "48", "22", "24"], "correct_answer": "44", "step_by_step": "22 times per 12 hours (some hours share events), so 44 per day.", "shortcut": "Not 48 - the classic trap."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["clocks", "angle"], "question": "The angle between the hands at 9:00 is:", "options": ["90 degrees", "180 degrees", "60 degrees", "270 degrees"], "correct_answer": "90 degrees", "explanation": "|30x9 - 0| = 270; take 360-270 = 90."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["clocks", "speed"], "question": "The minute hand moves how many degrees in one minute?", "options": ["6", "0.5", "5.5", "12"], "correct_answer": "6", "explanation": "360/60 = 6 deg/min."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["clocks", "speed"], "question": "In 20 minutes, the hour hand moves:", "options": ["10 degrees", "20 degrees", "5 degrees", "15 degrees"], "correct_answer": "10 degrees", "explanation": "0.5 x 20 = 10 degrees."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["clocks", "angle"], "question": "The angle between the hands at 7:30 is:", "options": ["45 degrees", "60 degrees", "30 degrees", "75 degrees"], "correct_answer": "45 degrees", "explanation": "|210 - 165| = 45."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["clocks", "angle"], "question": "The angle between the hands at 2:20 is:", "options": ["50 degrees", "60 degrees", "45 degrees", "40 degrees"], "correct_answer": "50 degrees", "explanation": "|60 - 110| = 50."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["clocks", "coincide"], "question": "In 12 hours, the hands of a clock coincide:", "options": ["11 times", "12 times", "22 times", "10 times"], "correct_answer": "11 times", "explanation": "They coincide every 65 5/11 minutes: 11 times per 12 hours."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["clocks", "coincide-time"], "question": "At what time between 1 and 2 o'clock do the hands coincide?", "options": ["1:05 5/11", "1:05", "1:06", "1:04 5/11"], "correct_answer": "1:05 5/11", "explanation": "Minutes = 60x1/11 = 5 5/11 past 1."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["clocks", "gaining"], "question": "A clock gains 5 minutes every hour. If set right at 7 am, what does it show at 7 pm the same day?", "options": ["8:00 pm", "7:55 pm", "7:30 pm", "8:05 pm"], "correct_answer": "8:00 pm", "explanation": "12 true hours x 5 min gain = 60 min extra: shows 8:00 pm."}
+  ],
+  "topic_test": {
+    "title": "Clocks - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Use Angle = |30H - 5.5M|; convert reflex angles."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["clocks"], "question": "The angle between the hands at 12:00 is:", "options": ["0 degrees", "180 degrees", "90 degrees", "360 degrees"], "correct_answer": "0 degrees", "explanation": "Both hands point at 12."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["clocks"], "question": "The angle at 5:00 is:", "options": ["150 degrees", "120 degrees", "160 degrees", "125 degrees"], "correct_answer": "150 degrees", "explanation": "30 x 5 = 150."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["clocks"], "question": "The hour hand completes one full circle in:", "options": ["12 hours", "24 hours", "6 hours", "1 hour"], "correct_answer": "12 hours", "explanation": "It passes all 12 numbers in 12 hours."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["clocks"], "question": "The angle between the hands at 10:10 is:", "options": ["115 degrees", "120 degrees", "110 degrees", "125 degrees"], "correct_answer": "115 degrees", "explanation": "|300 - 55| = 245; 360 - 245 = 115."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["clocks"], "question": "The hands are in a straight line but opposite in direction how many times in 24 hours?", "options": ["22", "24", "44", "11"], "correct_answer": "22", "explanation": "11 times per 12 hours."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["clocks"], "question": "The angle between the hands at 8:15 is:", "options": ["157.5 degrees", "160 degrees", "155 degrees", "150 degrees"], "correct_answer": "157.5 degrees", "explanation": "|240 - 82.5| = 157.5."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["clocks"], "question": "At what time between 4 and 5 o'clock are the hands together?", "options": ["4:21 9/11", "4:20", "4:22", "4:21"], "correct_answer": "4:21 9/11", "explanation": "Minutes = 60x4/11 = 21 9/11."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["clocks"], "question": "A watch loses 3 minutes every hour. Set right at 6 am, what true time has passed when it shows 6 pm the same day (shown 12 hours)?", "options": ["12 hours 38 minutes (approx)", "12 hours", "11 hours 24 minutes", "12 hours 30 minutes"], "correct_answer": "12 hours 38 minutes (approx)", "explanation": "It shows 57 min for each true 60: true = 720 x 60/57 = 757.9 min = about 12 h 38 min."}
+    ]
+  }
+}

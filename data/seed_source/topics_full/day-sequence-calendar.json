@@ -1,0 +1,74 @@
+{
+  "study_material": {
+    "title": "Day Sequence / Calendar - Complete Study Notes",
+    "introduction": "Calendar questions ask for the day of the week after some interval, or which years share a calendar. Everything runs on 'odd days' - the remainder of days modulo 7.",
+    "learning_objectives": [
+      "Compute odd days for spans of days, months and years",
+      "Identify leap years including century rules",
+      "Find the day of the week after a given gap",
+      "Reason about repeated calendars and same-day dates"
+    ],
+    "concepts": [
+      {"heading": "1. Odd Days", "body": "Odd days = total days mod 7. If today is Monday, 61 days later is 61 mod 7 = 5 odd days ahead: Saturday. All calendar arithmetic reduces to counting odd days."},
+      {"heading": "2. Leap Years", "body": "A year is leap if divisible by 4 - EXCEPT centuries, which must be divisible by 400. So 2024 and 2000 are leap; 1900 and 2100 are not. A leap year has 366 days = 2 odd days; an ordinary year has 365 = 1 odd day."},
+      {"heading": "3. Month Odd Days", "body": "Jan 3, Feb 0 (or 1 in leap year), Mar 3, Apr 2, May 3, Jun 2, Jul 3, Aug 3, Sep 2, Oct 3, Nov 2, Dec 3. Summing month odd days lets you walk from a known date to any other in the year."},
+      {"heading": "4. Next Year Same Date", "body": "The same date next year moves forward 1 weekday after an ordinary year, 2 after a leap year (if the span crosses Feb 29). Jan 1 2024 (Monday, leap year) makes Jan 1 2025 a Wednesday."},
+      {"heading": "5. Reference Facts", "body": "15 August 1947 was a Friday. 1 January 2000 was a Saturday. Centuries: 100 years contain 5 odd days, 200 years 3, 300 years 1, 400 years 0 - so the calendar repeats every 400 years."}
+    ],
+    "formulas": [
+      "Odd days = days mod 7",
+      "Ordinary year = 1 odd day; leap year = 2",
+      "Century leap rule: divisible by 400",
+      "400 years = 0 odd days (calendar repeats)"
+    ],
+    "shortcut_methods": [
+      "Only track remainders mod 7 - never total days",
+      "Count leap years in a span as floor(n/4) with century corrections",
+      "Same weekday shifts +1 per ordinary year, +2 per leap year crossed"
+    ],
+    "common_mistakes": [
+      "Treating 1900 or 2100 as leap years",
+      "Forgetting Feb 29 only matters if the span crosses it",
+      "Adding days instead of odd days for long spans"
+    ],
+    "summary": "Reduce everything modulo 7, know the leap rule (including centuries), and use +1/+2 shifts for year-to-year questions.",
+    "quick_revision_notes": [
+      "365 = 52 weeks + 1 day",
+      "Leap: /4, but centuries need /400",
+      "Same date next year: +1 (+2 across Feb 29)",
+      "Calendar repeats every 400 years"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "If today is Monday, what day will it be after 61 days?", "options": ["Saturday", "Sunday", "Friday", "Thursday"], "correct_answer": "Saturday", "step_by_step": "61 mod 7 = 5. Monday + 5 = Saturday.", "shortcut": "Work mod 7."},
+    {"difficulty": "easy", "question": "Which of these is a leap year?", "options": ["2000", "1900", "2100", "1800"], "correct_answer": "2000", "step_by_step": "Centuries must be divisible by 400: only 2000 qualifies.", "shortcut": "Century rule."},
+    {"difficulty": "medium", "question": "1 January 2024 was a Monday. What day was 1 January 2025?", "options": ["Wednesday", "Tuesday", "Thursday", "Monday"], "correct_answer": "Wednesday", "step_by_step": "2024 is leap (366 days = 2 odd days): Monday + 2 = Wednesday.", "shortcut": "Leap year shifts the next year by 2 days."},
+    {"difficulty": "hard", "question": "How many odd days are there in 100 years?", "options": ["5", "1", "3", "0"], "correct_answer": "5", "step_by_step": "76 ordinary (76 odd) + 24 leap (48 odd) = 124 odd days = 124 mod 7 = 5.", "shortcut": "Memorise: 100y=5, 200y=3, 300y=1, 400y=0."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["calendar", "odd-days"], "question": "If today is Friday, what day is it after 45 days?", "options": ["Monday", "Sunday", "Tuesday", "Saturday"], "correct_answer": "Monday", "explanation": "45 mod 7 = 3: Friday + 3 = Monday."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["calendar", "leap"], "question": "How many days does February have in a leap year?", "options": ["29", "28", "30", "27"], "correct_answer": "29", "explanation": "Leap years add Feb 29."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["calendar", "leap-check"], "question": "Which year is NOT a leap year?", "options": ["1900", "1600", "2016", "2024"], "correct_answer": "1900", "explanation": "1900/400 is not whole; century years need division by 400."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["calendar", "next-year"], "question": "15 August 2023 was a Tuesday. What day was 15 August 2024?", "options": ["Thursday", "Wednesday", "Friday", "Tuesday"], "correct_answer": "Thursday", "explanation": "The span crosses Feb 29 2024: shift +2, Tuesday to Thursday."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["calendar", "weeks"], "question": "365 days equal:", "options": ["52 weeks + 1 day", "52 weeks", "53 weeks", "52 weeks + 2 days"], "correct_answer": "52 weeks + 1 day", "explanation": "52 x 7 = 364, remainder 1."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["calendar", "backwards"], "question": "If the day before yesterday was Thursday, what day will it be the day after tomorrow?", "options": ["Monday", "Sunday", "Tuesday", "Saturday"], "correct_answer": "Monday", "explanation": "Today is Saturday; day after tomorrow is Monday."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["calendar", "sundays"], "question": "What is the probability that an ordinary (non-leap) year has 53 Sundays?", "options": ["1/7", "2/7", "1/2", "3/7"], "correct_answer": "1/7", "explanation": "One extra day beyond 52 weeks; it is a Sunday with probability 1/7."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["calendar", "200-years"], "question": "The number of odd days in 200 years is:", "options": ["3", "5", "1", "0"], "correct_answer": "3", "explanation": "2 x 5 = 10 odd days = 10 mod 7 = 3."}
+  ],
+  "topic_test": {
+    "title": "Day Sequence / Calendar - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Everything is mod 7; watch the century leap rule."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["calendar"], "question": "If today is Wednesday, 100 days from now is:", "options": ["Friday", "Thursday", "Saturday", "Monday"], "correct_answer": "Friday", "explanation": "100 mod 7 = 2: Wednesday + 2."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["calendar"], "question": "An ordinary year has how many odd days?", "options": ["1", "2", "0", "3"], "correct_answer": "1", "explanation": "365 mod 7 = 1."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["calendar"], "question": "Which is a leap year?", "options": ["2400", "2200", "2300", "2100"], "correct_answer": "2400", "explanation": "Only 2400 is divisible by 400."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["calendar"], "question": "1 March 2023 was a Wednesday. What day was 1 April 2023?", "options": ["Saturday", "Friday", "Sunday", "Thursday"], "correct_answer": "Saturday", "explanation": "March has 31 days = 3 odd days: Wednesday + 3."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["calendar"], "question": "A leap year has 53 Mondays with probability:", "options": ["2/7", "1/7", "3/7", "1/2"], "correct_answer": "2/7", "explanation": "Two extra days form one of 7 consecutive pairs; Monday appears in 2 pairs."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["calendar"], "question": "After how many years does the calendar of 2019 (ordinary year starting Tuesday) repeat identically for the first time?", "options": ["2030", "2025", "2024", "2026"], "correct_answer": "2030", "explanation": "Track odd-day shifts: +1 or +2 per year; the cumulative shift returns to 0 with matching leap status at 2030."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["calendar"], "question": "The number of odd days in 300 years is:", "options": ["1", "3", "5", "0"], "correct_answer": "1", "explanation": "3 x 5 = 15 mod 7 = 1."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["calendar"], "question": "If 1 January 2000 was a Saturday, what day was 1 January 2001?", "options": ["Monday", "Sunday", "Tuesday", "Saturday"], "correct_answer": "Monday", "explanation": "2000 is a leap year: 2 odd days, Saturday + 2 = Monday."}
+    ]
+  }
+}

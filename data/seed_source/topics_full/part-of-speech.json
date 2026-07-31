@@ -1,0 +1,79 @@
+{
+  "study_material": {
+    "title": "Parts of Speech - Complete Study Notes",
+    "introduction": "Parts of speech describe the role a word plays in a sentence. The same word can change its part of speech with context ('book a ticket' vs 'read a book'). Every grammar question - error spotting, sentence correction, fill in the blanks - rests on this foundation.",
+    "learning_objectives": [
+      "Identify all eight parts of speech in context",
+      "Distinguish adjectives from adverbs and use them correctly",
+      "Use the right pronoun case (I/me, who/whom)",
+      "Recognise prepositions and conjunctions in complex sentences"
+    ],
+    "concepts": [
+      {"heading": "1. Noun", "body": "Names a person, place, thing or idea. Types: proper (Delhi, Ravi - always capitalised), common (city, boy), collective (team, jury), abstract (honesty, courage), material (gold, water). Countable nouns take many/few; uncountable take much/little."},
+      {"heading": "2. Pronoun", "body": "Replaces a noun. Subject forms: I, he, she, we, they. Object forms: me, him, her, us, them. Use the subject form after 'than' when a verb is implied ('taller than I [am]'). Use 'who' for subjects, 'whom' for objects. Reflexive pronouns (myself) need an antecedent in the same sentence."},
+      {"heading": "3. Verb", "body": "Shows action or state. Transitive verbs take an object (he wrote a letter); intransitive do not (he slept). Auxiliary verbs (is, have, will, can) help form tenses and moods. Finite verbs change with the subject; non-finite forms are infinitives, gerunds and participles."},
+      {"heading": "4. Adjective and Adverb", "body": "Adjectives modify nouns (a quick runner); adverbs modify verbs, adjectives or other adverbs (he runs quickly). This is the most tested distinction: 'He drives careful' is wrong - use 'carefully'. After linking verbs (be, seem, look, taste), use an adjective: 'The soup tastes good', not 'well'."},
+      {"heading": "5. Preposition", "body": "Shows relation to a noun: in, on, at, by, for, with, of. Time: at (clock time), on (days/dates), in (months/years). Place: at (a point), on (a surface), in (an enclosed space). Many verbs demand a fixed preposition - 'depend on', 'consist of', 'differ from', 'married to'."},
+      {"heading": "6. Conjunction and Interjection", "body": "Conjunctions join words or clauses: coordinating (and, but, or, so), subordinating (because, although, if, when), correlative pairs (either...or, neither...nor, not only...but also). Correlative pairs must connect parallel structures. Interjections express sudden emotion (Alas! Hurrah!) and stand outside the grammar of the sentence."}
+    ],
+    "formulas": [
+      "Adjective modifies noun; adverb modifies verb/adjective/adverb",
+      "Linking verb + adjective (tastes good, not tastes well)",
+      "Either...or / Neither...nor must join parallel elements",
+      "Time prepositions: at (time), on (day), in (month/year)"
+    ],
+    "shortcut_methods": [
+      "If the word answers 'how/when/where', it is an adverb",
+      "Test pronoun case by completing the implied verb: 'than I (am)'",
+      "For fixed prepositions, learn the verb and preposition as one unit"
+    ],
+    "common_mistakes": [
+      "Using an adjective where an adverb is needed (drives careful)",
+      "Wrong pronoun case after prepositions ('between you and I' - should be 'me')",
+      "Breaking parallelism after correlative conjunctions",
+      "Using 'much' with countable nouns"
+    ],
+    "summary": "Know each word's role, watch the adjective/adverb line, keep pronoun cases straight, and memorise verb-preposition pairs.",
+    "quick_revision_notes": [
+      "8 parts: noun, pronoun, verb, adjective, adverb, preposition, conjunction, interjection",
+      "Between you and me (never 'and I')",
+      "Linking verbs take adjectives",
+      "Correlatives need parallel structure"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Identify the part of speech of the underlined word: 'She sings BEAUTIFULLY.'", "options": ["Adverb", "Adjective", "Noun", "Verb"], "correct_answer": "Adverb", "step_by_step": "'Beautifully' tells HOW she sings, modifying the verb - so it is an adverb.", "shortcut": "Words ending in -ly that answer 'how' are usually adverbs."},
+    {"difficulty": "easy", "question": "Choose the correct sentence.", "options": ["He drives carefully.", "He drives careful.", "He drives carefulness.", "He drive carefully."], "correct_answer": "He drives carefully.", "step_by_step": "The word modifies the verb 'drives', so the adverb 'carefully' is required.", "shortcut": "Modifying a verb means adverb."},
+    {"difficulty": "medium", "question": "Choose the correct pronoun: 'Between you and ___, the plan is flawed.'", "options": ["me", "I", "myself", "mine"], "correct_answer": "me", "step_by_step": "'Between' is a preposition, so it takes the object form 'me'.", "shortcut": "After any preposition, use me/him/her/us/them."},
+    {"difficulty": "medium", "question": "Fill in the blank: 'The soup tastes ___.'", "options": ["good", "well", "goodly", "greatly"], "correct_answer": "good", "step_by_step": "'Tastes' is a linking verb here, describing the soup - so an adjective ('good') follows, not an adverb.", "shortcut": "Linking verb + adjective."},
+    {"difficulty": "hard", "question": "Choose the correct sentence.", "options": ["He is not only intelligent but also hardworking.", "He is not only intelligent but also works hard.", "He not only is intelligent but also hardworking.", "He is not only intelligent but he also hardworking."], "correct_answer": "He is not only intelligent but also hardworking.", "step_by_step": "'Not only ... but also' must join parallel elements. Both 'intelligent' and 'hardworking' are adjectives - parallel and correct.", "shortcut": "Match the grammatical form on both sides of the correlative."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["parts-of-speech", "noun"], "question": "Identify the collective noun: 'The JURY announced its verdict.'", "options": ["jury", "verdict", "announced", "its"], "correct_answer": "jury", "explanation": "A jury is a group of people treated as one unit - a collective noun."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["parts-of-speech", "adjective"], "question": "In 'She wore a red dress', the word 'red' is a:", "options": ["Adjective", "Adverb", "Noun", "Pronoun"], "correct_answer": "Adjective", "explanation": "It modifies the noun 'dress'."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["parts-of-speech", "preposition"], "question": "Choose the correct preposition: 'The meeting is ___ Monday.'", "options": ["on", "in", "at", "by"], "correct_answer": "on", "explanation": "Days of the week take 'on'."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["parts-of-speech", "conjunction"], "question": "In 'He came late BECAUSE the train was delayed', the word 'because' is a:", "options": ["Subordinating conjunction", "Preposition", "Adverb", "Coordinating conjunction"], "correct_answer": "Subordinating conjunction", "explanation": "It introduces a dependent clause giving a reason."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["parts-of-speech", "preposition"], "question": "Choose the correct preposition: 'The success of the project depends ___ teamwork.'", "options": ["on", "in", "from", "of"], "correct_answer": "on", "explanation": "'Depend on' is a fixed verb-preposition pair."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["parts-of-speech", "pronoun"], "question": "Choose the correct form: 'She is taller than ___.'", "options": ["I", "me", "mine", "myself"], "correct_answer": "I", "explanation": "The implied verb completes it: 'taller than I am' - subject form."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["parts-of-speech", "quantifier"], "question": "Choose the correct word: 'There are ___ students in the hall.'", "options": ["many", "much", "little", "less"], "correct_answer": "many", "explanation": "'Students' is countable, so 'many' is used."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["parts-of-speech", "verb-type"], "question": "In 'He wrote a letter', the verb 'wrote' is:", "options": ["Transitive", "Intransitive", "Auxiliary", "Linking"], "correct_answer": "Transitive", "explanation": "It takes the direct object 'a letter'."},
+    {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["parts-of-speech", "who-whom"], "question": "Choose the correct word: 'To ___ should I address the complaint?'", "options": ["whom", "who", "whose", "which"], "correct_answer": "whom", "explanation": "After the preposition 'to', the object form 'whom' is required."},
+    {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["parts-of-speech", "word-class-shift"], "question": "In 'Please BOOK a ticket for me', the word 'book' is used as a:", "options": ["Verb", "Noun", "Adjective", "Adverb"], "correct_answer": "Verb", "explanation": "Here 'book' expresses the action of reserving - a verb, not the object noun."}
+  ],
+  "topic_test": {
+    "title": "Parts of Speech - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Decide each word's role in ITS sentence - the same word can shift class."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["parts-of-speech"], "question": "In 'Honesty is the best policy', the word 'honesty' is a:", "options": ["Abstract noun", "Proper noun", "Collective noun", "Adjective"], "correct_answer": "Abstract noun", "explanation": "It names a quality, not a physical thing."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["parts-of-speech"], "question": "Choose the correct sentence.", "options": ["He speaks English fluently.", "He speaks English fluent.", "He speak English fluently.", "He speaks fluent English badly written."], "correct_answer": "He speaks English fluently.", "explanation": "An adverb is needed to modify 'speaks'."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["parts-of-speech"], "question": "Choose the correct preposition: 'She has been waiting ___ 3 o'clock.'", "options": ["since", "for", "from", "at"], "correct_answer": "since", "explanation": "'Since' is used with a point in time in perfect continuous tenses."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["parts-of-speech"], "question": "Choose the correct sentence.", "options": ["Neither the manager nor the employees were present.", "Neither the manager nor the employees was present.", "Neither the manager or the employees were present.", "Neither of the manager nor employees were present."], "correct_answer": "Neither the manager nor the employees were present.", "explanation": "With 'neither...nor', the verb agrees with the nearer subject ('employees' - plural)."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["parts-of-speech"], "question": "Identify the part of speech of 'fast' in 'He runs fast.'", "options": ["Adverb", "Adjective", "Noun", "Preposition"], "correct_answer": "Adverb", "explanation": "It modifies the verb 'runs' - 'fast' works as both adjective and adverb depending on context."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["parts-of-speech"], "question": "Choose the correct preposition: 'This cake is different ___ the one we had yesterday.'", "options": ["from", "than", "to", "with"], "correct_answer": "from", "explanation": "Standard usage is 'different from'."},
+      {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["parts-of-speech"], "question": "Choose the correct sentence.", "options": ["He gave the book to my brother and me.", "He gave the book to my brother and I.", "He gave the book to myself and my brother.", "He gave the book to I and my brother."], "correct_answer": "He gave the book to my brother and me.", "explanation": "After the preposition 'to', the object pronoun 'me' is required."},
+      {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["parts-of-speech"], "question": "In 'Swimming is good exercise', the word 'swimming' functions as a:", "options": ["Gerund (noun)", "Present participle", "Main verb", "Adjective"], "correct_answer": "Gerund (noun)", "explanation": "An -ing form acting as the subject of the sentence is a gerund, working as a noun."}
+    ]
+  }
+}

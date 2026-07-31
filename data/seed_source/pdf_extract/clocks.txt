@@ -1,0 +1,160 @@
+CLOCKS
+CONCEPTS
+1) 60 minute space traces an angle of 3600 for minutes
+hand.  ∴ 1 minute space traverses an angle of 60.
+2) In 1 hour:  
+Minute hand traverses 60 minute space or 3600. 
+Hour hand traverses 5 minute space or 300.
+3) The minute hand travels 900 in 15 minutes.
+4) The hands of the clock are in straight line when they
+coincide (or) when they are opposite to each other.
+5) The hands of the clock are perpendicular to each
+other for 22 times in 12 hours and for 44 times in day.
+6) The hands of the clock are opposite to each other for
+11 times in 12 hours and 22 times in a day.
+7) The hands of the clock coincides with each other for
+11 times in 12 hours and 22 times per day.
+8) The hands of the clock are 44 times in a straight line
+per day.
+9) 55 minute spaces are gained by minute hand in 60
+minutes period.
+To find how many minute spaces it has actually gained,
+let us assume a standard point where the both minute
+hand and hour hand coincides. After 60 minutes,
+minute hand moves 60 minute spaces and hour hand
+moves 5 minute spaces. Now there are 55 minute
+spaces between minute hand and hour hand. So we can
+say in 60 minutes of time, minute hand leads/gains
+hours hand by 55 minute spaces.
+Angle traversed by the hands of the clock:
+Hand of clock
+Second
+(S)
+Minute
+(M)
+Hour
+(H)
+1 sec
+6o
+(
+1
+10)
+o
+(
+1
+120)
+o
+1 min = 60 sec
+360o
+6o
+(
+1
+2)
+o
+1 h = 60m = 3600s
+21600o
+360o
+30o
+12 h
+259200o
+4320o
+360o
+Angle of hands with respect to 12 - marking on clock
+when hour, minute and seconds are given,
+θH=[30H+ M
+2
++  S
+120]
+o
+θM=[6M+ S
+10]
+o
+θS=6So
+Example: At what time between 2 O'clock and 3
+O'clock the hands of the clock be together.
+Explanation: At 2 O'clock the minute hand is at 12 and
+hour hand is at 2. They are 10 minute spaces apart. To
+be together, minute hand must gain 10 minute spaces
+over hour hand. 55 minutes are gained in 60 minutes.
+10 minutes are gained in  x  minutes.
+i.e. x=10×60
+55
+=10 10
+11 minutes after 2 O'clock the two
+hands of a clock will be together.
+Alternate Method: 
+Hands of the clock are together. It means the angle
+between minute hand and hour hand is zero. Since,
+seconds hand is not given we take S = 0. 
+θ=∣θM−θH∣=∣6 M−(30 H+ M
+2 )∣=11
+2
+M – 30 H
+⇒11
+2
+M – (30×2)=0
+⇒11
+2
+M=60 M=120
+11
+=10 10
+11
+Example: What is the angular difference between the
+Hours hand and Seconds hand at 4:25:40. 
+Explanation:
+θ=∣θS−θH∣=∣6S−(30H+ M
+2
++ S
+120)∣
+=∣
+119S
+120
+−30H−M
+2∣
+=∣
+119×40
+120
+−30×4−30
+2 ∣
+=(120+ 15−119
+3 )
+o
+=(
+286
+3 )
+o
+Example: What is the angular difference between the
+Minute hand and Seconds hand at 4:25:40.
+Explanation: 
+θ=∣θS−θM∣=∣6S−(6 M+ S
+10)∣
+=∣
+9S
+10
+−6 M∣=∣
+9×40
+10
+−6×25∣
+=(150−36)
+o=114o
+Login to your online account to ask doubts.
+2.20
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

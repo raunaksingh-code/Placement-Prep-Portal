@@ -1,0 +1,74 @@
+{
+  "study_material": {
+    "title": "Non-Verbal Reasoning - Complete Study Notes",
+    "introduction": "Non-verbal reasoning tests pattern recognition without words: figure series, mirror and water images, paper folding, embedded figures, dice and painted cubes. Even in text form, the underlying logic (rotations, reflections, counting) can be mastered.",
+    "learning_objectives": [
+      "Track rotations through figure series",
+      "Form mirror images and water images mentally",
+      "Solve dice problems using the opposite-faces rule",
+      "Count sub-cubes by painted faces in cut-cube problems",
+      "Reason about paper folding and punched holes"
+    ],
+    "concepts": [
+      {"heading": "1. Rotations", "body": "A figure rotating 90 degrees clockwise per step returns to its start after 4 steps; 45 degrees per step needs 8. Track one distinctive element (an arrow tip, a dot) instead of the whole figure. Clockwise for the viewer is the standard convention."},
+      {"heading": "2. Mirror and Water Images", "body": "Mirror image (vertical mirror): left and right swap - 'b' becomes 'd', 'AMBULANCE' is written reversed on ambulances. Water image (horizontal mirror below): top and bottom flip - 'M' resembles 'W'. Letters with vertical symmetry (A, H, I, M, O, T, U, V, W, X, Y) look unchanged in a mirror."},
+      {"heading": "3. Dice", "body": "On a standard die, opposite faces sum to 7: 1-6, 2-5, 3-4. From two views sharing a common face you can deduce the arrangement. Faces that appear together in one view can never be opposite."},
+      {"heading": "4. Painted Cube", "body": "A cube painted outside then cut into n x n x n small cubes: corners (3 painted faces) = 8 always; edges (2 faces) = 12(n-2); faces (1 face) = 6(n-2)^2; inside (0 faces) = (n-2)^3. For n = 3: 8, 12, 6, 1."},
+      {"heading": "5. Paper Folding and Punching", "body": "Each fold doubles the layers, so a hole punched through f folds appears 2^f times when unfolded, mirrored across each fold line. One fold + one punch = 2 holes; two folds + one punch = 4 holes."}
+    ],
+    "formulas": [
+      "90-degree rotations cycle every 4 steps",
+      "Dice: opposite faces sum to 7",
+      "Painted n-cube: 8 corners, 12(n-2) edges, 6(n-2)^2 faces, (n-2)^3 inner",
+      "Holes after f folds = 2^f"
+    ],
+    "shortcut_methods": [
+      "Follow one marked element through rotations",
+      "For mirror images, check letters against the symmetric set",
+      "In dice problems, eliminate faces seen adjacent - they cannot be opposite"
+    ],
+    "common_mistakes": [
+      "Confusing mirror (left-right) with water (top-bottom) images",
+      "Assuming faces seen together might be opposite",
+      "Forgetting the hidden inner cube in painted-cube counts"
+    ],
+    "summary": "Rotation cycles, reflection rules, the sum-to-7 dice rule and the painted-cube formulas cover the standard non-verbal questions.",
+    "quick_revision_notes": [
+      "4 x 90 degrees = full circle",
+      "Mirror swaps left-right; water flips top-bottom",
+      "Opposite dice faces sum to 7",
+      "3x3x3 painted cube: 8/12/6/1"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "An arrow points north and rotates 90 degrees clockwise each step. After 3 steps it points:", "options": ["West", "East", "South", "North"], "correct_answer": "West", "step_by_step": "N -> E -> S -> W after three 90-degree clockwise turns.", "shortcut": "3 x 90 = 270 clockwise = 90 anticlockwise."},
+    {"difficulty": "easy", "question": "On a standard die, the face opposite 3 is:", "options": ["4", "5", "2", "6"], "correct_answer": "4", "step_by_step": "Opposite faces sum to 7: 7 - 3 = 4.", "shortcut": "Sum-to-7 rule."},
+    {"difficulty": "medium", "question": "A 3x3x3 cube is painted outside and cut into 27 unit cubes. How many unit cubes have paint on exactly 2 faces?", "options": ["12", "8", "6", "1"], "correct_answer": "12", "step_by_step": "Edge cubes carry 2 painted faces: 12(n-2) = 12 x 1 = 12.", "shortcut": "One per edge for n = 3."},
+    {"difficulty": "hard", "question": "A paper is folded twice and a single hole is punched through all layers. When unfolded, how many holes are there?", "options": ["4", "2", "1", "8"], "correct_answer": "4", "step_by_step": "Two folds = 4 layers = 2^2 = 4 holes.", "shortcut": "2 to the power of folds."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["nonverbal", "mirror"], "question": "The mirror image of the letter 'b' most resembles:", "options": ["d", "p", "q", "b"], "correct_answer": "d", "explanation": "A vertical mirror swaps left and right."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["nonverbal", "water"], "question": "The water image of the letter 'M' most resembles:", "options": ["W", "M", "E", "N"], "correct_answer": "W", "explanation": "Water image flips top and bottom."},
+    {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["nonverbal", "rotation"], "question": "A figure rotates 45 degrees clockwise each step. After how many steps does it first return to its original position?", "options": ["8", "4", "6", "2"], "correct_answer": "8", "explanation": "8 x 45 = 360 degrees."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["nonverbal", "dice"], "question": "Two views of a die show 1 adjacent to 2, 3 and 4. Which number is opposite 1?", "options": ["6", "5", "3", "2"], "correct_answer": "6", "explanation": "1 cannot be opposite anything seen adjacent (2,3,4); on a standard die 1 is opposite 6."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["nonverbal", "symmetric"], "question": "Which of these letters looks the SAME in a mirror?", "options": ["A", "B", "F", "R"], "correct_answer": "A", "explanation": "A has vertical symmetry."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["nonverbal", "cube"], "question": "A 4x4x4 painted cube is cut into 64 unit cubes. How many have exactly 3 painted faces?", "options": ["8", "24", "12", "16"], "correct_answer": "8", "explanation": "Only the corners, always 8."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["nonverbal", "cube-inner"], "question": "In the same 4x4x4 painted cube, how many unit cubes have NO painted face?", "options": ["8", "16", "4", "27"], "correct_answer": "8", "explanation": "(n-2)^3 = 2^3 = 8."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["nonverbal", "folding"], "question": "A square paper is folded in half once and two holes are punched through both layers. Unfolded, the paper shows:", "options": ["4 holes", "2 holes", "3 holes", "8 holes"], "correct_answer": "4 holes", "explanation": "Each punch doubles: 2 x 2 = 4."}
+  ],
+  "topic_test": {
+    "title": "Non-Verbal Reasoning - Topic Test",
+    "duration_minutes": 12,
+    "negative_mark": 0.25,
+    "instructions": ["7 questions, 12 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Use the sum-to-7 dice rule and the painted-cube formulas."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 50, "tags": ["nonverbal"], "question": "An arrow pointing east rotates 180 degrees. It now points:", "options": ["West", "North", "South", "East"], "correct_answer": "West", "explanation": "Half turn reverses direction."},
+      {"difficulty": "easy", "estimated_time_sec": 50, "tags": ["nonverbal"], "question": "On a standard die showing 2 on top, the bottom face is:", "options": ["5", "6", "3", "4"], "correct_answer": "5", "explanation": "2 + 5 = 7."},
+      {"difficulty": "easy", "estimated_time_sec": 50, "tags": ["nonverbal"], "question": "The water image of 'U' most resembles:", "options": ["An upside-down U (like a horseshoe opening down)", "U unchanged", "C", "D"], "correct_answer": "An upside-down U (like a horseshoe opening down)", "explanation": "Vertical flip turns the opening downward."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["nonverbal"], "question": "A 5x5x5 painted cube is cut into 125 unit cubes. Cubes with exactly one painted face number:", "options": ["54", "36", "27", "48"], "correct_answer": "54", "explanation": "6(n-2)^2 = 6 x 9 = 54."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["nonverbal"], "question": "A figure rotates 60 degrees clockwise each step. Steps needed to first return to the start:", "options": ["6", "4", "8", "3"], "correct_answer": "6", "explanation": "6 x 60 = 360."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["nonverbal"], "question": "A paper folded three times gets one punch through all layers. Holes when unfolded:", "options": ["8", "6", "4", "3"], "correct_answer": "8", "explanation": "2^3 = 8."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["nonverbal"], "question": "Which clock time looks the same in a mirror? ", "options": ["12:00", "3:15", "9:45", "6:20"], "correct_answer": "12:00", "explanation": "Hands at 12 lie on the vertical axis of symmetry, unchanged by a vertical mirror."}
+    ]
+  }
+}

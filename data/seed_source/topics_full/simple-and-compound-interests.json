@@ -1,0 +1,83 @@
+{
+  "study_material": {
+    "title": "Simple and Compound Interest - Complete Study Notes",
+    "introduction": "Simple interest grows linearly (interest only on the principal); compound interest grows geometrically (interest on interest). Placement questions revolve around the two formulas, the CI-SI difference shortcut, and doubling-time reasoning.",
+    "learning_objectives": [
+      "Apply SI = PTR/100 and CI = P(1 + R/100)^T - P fluently",
+      "Use the 2-year and 3-year CI-SI difference shortcuts",
+      "Handle half-yearly and quarterly compounding",
+      "Reason about doubling/tripling times",
+      "Reverse-engineer principal, rate or time from given interest"
+    ],
+    "concepts": [
+      {"heading": "1. Simple Interest", "body": "SI = P x T x R / 100, Amount = P + SI. Interest each year is identical (PR/100), so SI problems are linear equations in disguise. If a sum becomes n times itself in T years at SI, then R = 100(n-1)/T."},
+      {"heading": "2. Compound Interest", "body": "Amount = P(1 + R/100)^T; CI = Amount - P. Each year's interest joins the principal for the next year. Successive-percentage logic applies: 2 years at 10% is a net 21% growth (10 + 10 + 100/100)."},
+      {"heading": "3. Compounding Frequency", "body": "For half-yearly compounding, halve the rate and double the time: Amount = P(1 + R/200)^(2T). For quarterly, quarter the rate and quadruple the time. More frequent compounding always yields slightly more interest."},
+      {"heading": "4. CI - SI Difference", "body": "For 2 years: difference = P(R/100)^2. For 3 years: difference = P(R/100)^2 x (3 + R/100). These shortcuts crack the common 'difference between CI and SI' questions in seconds."},
+      {"heading": "5. Growth Multiples", "body": "At SI, a sum doubling in T years means PTR/100 = P, so R = 100/T. At CI, doubling depends on (1 + R/100)^T = 2; useful anchors: 10% doubles in about 7.3 years, and if a sum becomes k times in T years at CI, it becomes k^2 times in 2T years."}
+    ],
+    "formulas": [
+      "SI = PTR/100",
+      "CI Amount = P(1 + R/100)^T",
+      "Half-yearly: P(1 + R/200)^(2T)",
+      "CI - SI (2 yrs) = P(R/100)^2",
+      "CI - SI (3 yrs) = P(R/100)^2 (3 + R/100)",
+      "SI doubling: R x T = 100"
+    ],
+    "shortcut_methods": [
+      "Two years at r% CI = net (2r + r^2/100)% growth",
+      "At CI, k times in T years means k^2 times in 2T years",
+      "Percentage-change chain logic works for CI: multiply factors"
+    ],
+    "common_mistakes": [
+      "Using the SI formula for compound problems and vice versa",
+      "Forgetting to adjust rate and time for half-yearly compounding",
+      "Subtracting principal incorrectly - CI is amount minus principal",
+      "Assuming CI doubling time is 100/R years (that is SI logic)"
+    ],
+    "summary": "SI is linear, CI is exponential. Memorise both formulas, the frequency adjustment, and the CI-SI difference shortcuts - that covers nearly every question.",
+    "quick_revision_notes": [
+      "SI = PTR/100; CI = P(1+R/100)^T - P",
+      "Half-yearly: rate/2, time x2",
+      "CI-SI over 2 yrs = P(R/100)^2",
+      "Doubles at SI when RT = 100"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Find the simple interest on Rs. 5,000 at 8% per annum for 3 years.", "options": ["Rs. 1,200", "Rs. 1,000", "Rs. 1,250", "Rs. 1,300"], "correct_answer": "Rs. 1,200", "step_by_step": "SI = 5000 x 8 x 3/100 = 1,200.", "shortcut": "8% of 5000 = 400 per year, times 3."},
+    {"difficulty": "easy", "question": "Find the compound interest on Rs. 10,000 at 10% per annum for 2 years.", "options": ["Rs. 2,100", "Rs. 2,000", "Rs. 2,200", "Rs. 1,900"], "correct_answer": "Rs. 2,100", "step_by_step": "Amount = 10000 x 1.1^2 = 12,100. CI = 2,100.", "shortcut": "Net 2-year growth at 10% = 21%."},
+    {"difficulty": "medium", "question": "A sum doubles itself in 8 years at simple interest. Find the rate.", "options": ["12.5%", "10%", "8%", "15%"], "correct_answer": "12.5%", "step_by_step": "Doubling means SI = P, so PTR/100 = P gives R = 100/8 = 12.5%.", "shortcut": "R x T = 100 for doubling at SI."},
+    {"difficulty": "medium", "question": "An amount grows to Rs. 8,820 in 2 years at 5% compound interest. Find the principal.", "options": ["Rs. 8,000", "Rs. 8,200", "Rs. 7,800", "Rs. 8,400"], "correct_answer": "Rs. 8,000", "step_by_step": "P x 1.05^2 = 8820, so P = 8820/1.1025 = 8,000.", "shortcut": "1.05^2 = 1.1025 divides cleanly."},
+    {"difficulty": "hard", "question": "The difference between CI and SI on a sum for 2 years at 5% per annum is Rs. 20. Find the sum.", "options": ["Rs. 8,000", "Rs. 10,000", "Rs. 6,000", "Rs. 12,000"], "correct_answer": "Rs. 8,000", "step_by_step": "Difference = P(R/100)^2 = P x 0.0025 = 20, so P = 8,000.", "shortcut": "P = difference x (100/R)^2."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["interest", "si"], "question": "Simple interest on Rs. 2,000 at 5% for 4 years is:", "options": ["Rs. 400", "Rs. 450", "Rs. 500", "Rs. 350"], "correct_answer": "Rs. 400", "explanation": "SI = 2000 x 5 x 4/100 = 400."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["interest", "si"], "question": "What principal earns Rs. 720 simple interest at 6% per annum in 3 years?", "options": ["Rs. 4,000", "Rs. 3,600", "Rs. 4,200", "Rs. 3,800"], "correct_answer": "Rs. 4,000", "explanation": "P = 720 x 100/(6 x 3) = 4,000."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["interest", "rate"], "question": "Rs. 4,000 earns Rs. 800 simple interest in 4 years. The rate per annum is:", "options": ["5%", "4%", "6%", "8%"], "correct_answer": "5%", "explanation": "R = 800 x 100/(4000 x 4) = 5%."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["interest", "time"], "question": "In how many years does Rs. 2,500 at 8% simple interest earn Rs. 600?", "options": ["3 years", "2 years", "4 years", "2.5 years"], "correct_answer": "3 years", "explanation": "T = 600 x 100/(2500 x 8) = 3."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["interest", "ci"], "question": "Compound interest on Rs. 5,000 at 10% per annum for 2 years is:", "options": ["Rs. 1,050", "Rs. 1,000", "Rs. 1,100", "Rs. 1,025"], "correct_answer": "Rs. 1,050", "explanation": "Net growth 21%; 5000 x 0.21 = 1,050."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["interest", "ci"], "question": "The amount of Rs. 12,000 at 5% compound interest for 2 years is:", "options": ["Rs. 13,230", "Rs. 13,200", "Rs. 13,000", "Rs. 13,320"], "correct_answer": "Rs. 13,230", "explanation": "12000 x 1.05^2 = 12000 x 1.1025 = 13,230."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["interest", "difference"], "question": "The difference between CI and SI on Rs. 10,000 for 2 years at 10% is:", "options": ["Rs. 100", "Rs. 200", "Rs. 50", "Rs. 150"], "correct_answer": "Rs. 100", "explanation": "P(R/100)^2 = 10000 x 0.01 = 100."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["interest", "multiples"], "question": "A sum triples in 10 years at simple interest. The rate per annum is:", "options": ["20%", "30%", "15%", "25%"], "correct_answer": "20%", "explanation": "SI = 2P over 10 years: R = 100 x 2/10 = 20%."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["interest", "half-yearly"], "question": "Rs. 8,000 is invested at 10% per annum compounded half-yearly for 1 year. The amount is:", "options": ["Rs. 8,820", "Rs. 8,800", "Rs. 8,840", "Rs. 8,880"], "correct_answer": "Rs. 8,820", "explanation": "Rate 5% per half-year, 2 periods: 8000 x 1.05^2 = 8,820."},
+    {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["interest", "rate-equals-time"], "question": "Simple interest on a sum is 1/9 of the sum, and the rate percent equals the number of years. The rate is:", "options": ["3 1/3 %", "3%", "5%", "10/9 %"], "correct_answer": "3 1/3 %", "explanation": "P r t/100 = P/9 with r = t gives r^2 = 100/9, r = 10/3 = 3 1/3 %."}
+  ],
+  "topic_test": {
+    "title": "Simple and Compound Interest - Topic Test",
+    "duration_minutes": 20,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 20 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Adjust rate and time before applying formulas for non-annual compounding."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["interest"], "question": "SI on Rs. 3,000 at 6% for 2 years is:", "options": ["Rs. 360", "Rs. 300", "Rs. 380", "Rs. 400"], "correct_answer": "Rs. 360", "explanation": "3000 x 6 x 2/100 = 360."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["interest"], "question": "The amount on Rs. 4,500 at 4% SI for 3 years is:", "options": ["Rs. 5,040", "Rs. 5,000", "Rs. 4,960", "Rs. 5,100"], "correct_answer": "Rs. 5,040", "explanation": "SI = 540; amount = 5,040."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["interest"], "question": "A sum doubles in 5 years at simple interest. The annual rate is:", "options": ["20%", "25%", "15%", "10%"], "correct_answer": "20%", "explanation": "RT = 100, so R = 20%."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["interest"], "question": "Rs. 1,000 grows to Rs. 1,210 in 2 years under compound interest. The rate is:", "options": ["10%", "11%", "10.5%", "12%"], "correct_answer": "10%", "explanation": "(1+r)^2 = 1.21 gives 1+r = 1.1, r = 10%."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["interest"], "question": "CI on Rs. 6,000 at 10% for 2 years is:", "options": ["Rs. 1,260", "Rs. 1,200", "Rs. 1,320", "Rs. 1,160"], "correct_answer": "Rs. 1,260", "explanation": "Net 21% of 6000 = 1,260."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["interest"], "question": "The CI on a sum for 2 years at 5% per annum is Rs. 615. The sum is:", "options": ["Rs. 6,000", "Rs. 5,800", "Rs. 6,150", "Rs. 6,200"], "correct_answer": "Rs. 6,000", "explanation": "Net growth 10.25%; P = 615/0.1025 = 6,000."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["interest"], "question": "In how many years will Rs. 800 at 5% SI yield the same interest as Rs. 600 at 10% SI in 2 years?", "options": ["3 years", "2 years", "4 years", "2.5 years"], "correct_answer": "3 years", "explanation": "Target interest = 600 x 0.1 x 2 = 120. 800 x 0.05 x t = 120 gives t = 3."},
+      {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["interest"], "question": "The difference between CI and SI on Rs. 6,250 for 2 years at 4% per annum is:", "options": ["Rs. 10", "Rs. 12", "Rs. 8", "Rs. 15"], "correct_answer": "Rs. 10", "explanation": "P(R/100)^2 = 6250 x 0.0016 = 10."},
+      {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["interest"], "question": "Rs. 20,000 at 10% compound interest amounts after 3 years to:", "options": ["Rs. 26,620", "Rs. 26,000", "Rs. 26,200", "Rs. 27,000"], "correct_answer": "Rs. 26,620", "explanation": "20000 x 1.331 = 26,620."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["interest"], "question": "A sum becomes 9/8 of itself in 2 years at simple interest. The annual rate is:", "options": ["6.25%", "12.5%", "8%", "5%"], "correct_answer": "6.25%", "explanation": "SI = P/8 over 2 years, so annual interest = P/16: rate = 100/16 = 6.25%."}
+    ]
+  }
+}

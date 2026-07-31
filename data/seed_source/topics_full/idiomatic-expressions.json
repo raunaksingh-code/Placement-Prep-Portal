@@ -1,0 +1,78 @@
+{
+  "study_material": {
+    "title": "Idiomatic Expressions - Complete Study Notes",
+    "introduction": "An idiom is a fixed expression whose meaning cannot be derived from its individual words - 'kick the bucket' means to die. Idioms appear in placement papers as meaning-selection or sentence-substitution questions, and there is no shortcut except structured familiarity.",
+    "learning_objectives": [
+      "Recall the meanings of high-frequency English idioms",
+      "Use context to narrow unfamiliar idioms",
+      "Avoid literal interpretation traps",
+      "Group idioms thematically for faster recall"
+    ],
+    "concepts": [
+      {"heading": "1. Why Literal Reading Fails", "body": "Idioms are frozen metaphors. 'Spill the beans' has nothing to do with beans; it means reveal a secret. Options in exams always include the literal reading as a distractor, so never pick the meaning that simply restates the words."},
+      {"heading": "2. Success and Effort Idioms", "body": "Burn the midnight oil = work late into the night. Go the extra mile = make extra effort. Hit the nail on the head = be exactly right. Break the ice = start a conversation in an awkward setting. Get the ball rolling = start something. Pull one's socks up = improve one's effort."},
+      {"heading": "3. Difficulty and Trouble Idioms", "body": "In hot water = in trouble. A hard nut to crack = a difficult problem or person. Between the devil and the deep sea = between two equally bad options. Bite off more than you can chew = take on too much. At sea = confused. Beat about the bush = avoid the main point."},
+      {"heading": "4. Money and Rarity Idioms", "body": "Once in a blue moon = very rarely. Cost an arm and a leg = extremely expensive. Make ends meet = manage on limited income. Tighten one's belt = economise. A drop in the ocean = an insignificant amount."},
+      {"heading": "5. People and Behaviour Idioms", "body": "Let the cat out of the bag = reveal a secret accidentally. Turn a blind eye = ignore deliberately. Pull someone's leg = tease playfully. A wolf in sheep's clothing = a dangerous person appearing harmless. Bury the hatchet = make peace. Face the music = accept the consequences. Call a spade a spade = speak plainly."}
+    ],
+    "formulas": [
+      "Never choose the literal meaning",
+      "Group by theme: effort, trouble, money, behaviour",
+      "Context tone (positive/negative) narrows the options"
+    ],
+    "shortcut_methods": [
+      "Check whether the sentence context is positive or negative, then match the idiom's tone",
+      "Learn idioms in short example sentences, not as bare phrases",
+      "When unsure, eliminate the literal option and the tonally opposite option first"
+    ],
+    "common_mistakes": [
+      "Choosing the literal meaning of the words",
+      "Confusing similar idioms (spill the beans vs let the cat out of the bag are close; both mean reveal a secret, but the latter implies accident)",
+      "Ignoring the sentence's emotional tone"
+    ],
+    "summary": "Idioms must be learned, not derived. Group them thematically, learn them in sentences, and always reject the literal option.",
+    "quick_revision_notes": [
+      "Burn the midnight oil = work late",
+      "Once in a blue moon = rarely",
+      "Turn a blind eye = deliberately ignore",
+      "Bury the hatchet = make peace"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "What does 'burn the midnight oil' mean?", "options": ["Work late into the night", "Waste resources", "Light a lamp", "Cause a fire"], "correct_answer": "Work late into the night", "step_by_step": "The idiom refers to studying or working by lamplight long after dark - sustained late-night effort.", "shortcut": "Reject the literal fire/lamp options."},
+    {"difficulty": "easy", "question": "What does 'once in a blue moon' mean?", "options": ["Very rarely", "Every month", "At night only", "Frequently"], "correct_answer": "Very rarely", "step_by_step": "A blue moon is an uncommon lunar event, so the idiom means something that happens seldom.", "shortcut": "Rare astronomical event = rare occurrence."},
+    {"difficulty": "medium", "question": "What does 'let the cat out of the bag' mean?", "options": ["Reveal a secret", "Free an animal", "Make a mess", "Start an argument"], "correct_answer": "Reveal a secret", "step_by_step": "The idiom means to disclose something meant to be kept hidden, usually accidentally.", "shortcut": "Same family as 'spill the beans'."},
+    {"difficulty": "medium", "question": "In 'The manager decided to turn a blind eye to the minor violations', 'turn a blind eye' means:", "options": ["Deliberately ignore", "Look away in fear", "Lose eyesight", "Investigate closely"], "correct_answer": "Deliberately ignore", "step_by_step": "The idiom means to pretend not to notice something wrong - a conscious choice to overlook.", "shortcut": "The context 'minor violations' signals tolerance, not investigation."},
+    {"difficulty": "hard", "question": "What does 'between the devil and the deep sea' mean?", "options": ["Facing two equally bad choices", "In great danger at sea", "Undecided about travel", "Between two friends"], "correct_answer": "Facing two equally bad choices", "step_by_step": "Both the devil and drowning are terrible outcomes - the idiom captures a dilemma with no good option.", "shortcut": "Similar to 'caught between a rock and a hard place'."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["idioms", "common"], "question": "'A piece of cake' means:", "options": ["Very easy", "Delicious food", "A small portion", "A celebration"], "correct_answer": "Very easy", "explanation": "Used for tasks requiring little effort."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["idioms", "common"], "question": "'Break the ice' means:", "options": ["Start a conversation", "Destroy something", "Cool a drink", "End a friendship"], "correct_answer": "Start a conversation", "explanation": "Used for easing initial social awkwardness."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["idioms", "common"], "question": "'In hot water' means:", "options": ["In trouble", "Taking a bath", "In a warm place", "Feeling angry"], "correct_answer": "In trouble", "explanation": "Describes someone facing difficulty or punishment."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["idioms", "common"], "question": "'Cost an arm and a leg' means:", "options": ["Be very expensive", "Cause injury", "Require hard labour", "Be worthless"], "correct_answer": "Be very expensive", "explanation": "Refers to an extremely high price."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["idioms", "behaviour"], "question": "'Pull someone's leg' means:", "options": ["Tease playfully", "Help someone up", "Delay someone", "Insult harshly"], "correct_answer": "Tease playfully", "explanation": "Means to joke with someone, not to mock cruelly."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["idioms", "behaviour"], "question": "'A wolf in sheep's clothing' describes:", "options": ["A dangerous person appearing harmless", "A shy person", "A skilled farmer", "A confused animal"], "correct_answer": "A dangerous person appearing harmless", "explanation": "Refers to hidden malicious intent behind a friendly exterior."},
+    {"difficulty": "medium", "estimated_time_sec": 45, "tags": ["idioms", "conflict"], "question": "'Bury the hatchet' means:", "options": ["Make peace", "Hide a weapon", "Forget a lesson", "Start a fight"], "correct_answer": "Make peace", "explanation": "Comes from the practice of burying weapons to end hostilities."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["idioms", "communication"], "question": "'Beat about the bush' means:", "options": ["Avoid the main point", "Search thoroughly", "Work in a garden", "Attack someone"], "correct_answer": "Avoid the main point", "explanation": "Means speaking indirectly instead of addressing the issue."},
+    {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["idioms", "difficulty"], "question": "'Bite off more than you can chew' means:", "options": ["Take on more than you can handle", "Eat too quickly", "Speak rudely", "Waste food"], "correct_answer": "Take on more than you can handle", "explanation": "Describes over-commitment beyond one's capacity."},
+    {"difficulty": "hard", "estimated_time_sec": 60, "tags": ["idioms", "consequences"], "question": "'Face the music' means:", "options": ["Accept the consequences", "Attend a concert", "Perform on stage", "Enjoy oneself"], "correct_answer": "Accept the consequences", "explanation": "Means confronting the results of one's actions."}
+  ],
+  "topic_test": {
+    "title": "Idiomatic Expressions - Topic Test",
+    "duration_minutes": 12,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 12 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "The literal meaning is always a trap option."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["idioms"], "question": "'Spill the beans' means:", "options": ["Reveal a secret", "Drop food", "Waste money", "Make a mistake"], "correct_answer": "Reveal a secret", "explanation": "Means to disclose confidential information."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["idioms"], "question": "'Hit the nail on the head' means:", "options": ["Be exactly right", "Injure oneself", "Finish carpentry", "Act violently"], "correct_answer": "Be exactly right", "explanation": "Describes a precisely accurate statement."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["idioms"], "question": "'Make ends meet' means:", "options": ["Manage on limited income", "Finish a task", "Join two objects", "Meet a deadline"], "correct_answer": "Manage on limited income", "explanation": "Refers to covering expenses with available money."},
+      {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["idioms"], "question": "'A hard nut to crack' means:", "options": ["A difficult problem or person", "A tough food item", "A strong athlete", "An old machine"], "correct_answer": "A difficult problem or person", "explanation": "Used for challenges that resist easy solutions."},
+      {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["idioms"], "question": "'Go the extra mile' means:", "options": ["Make additional effort", "Travel further", "Waste time", "Take a longer route"], "correct_answer": "Make additional effort", "explanation": "Means doing more than what is required."},
+      {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["idioms"], "question": "'A drop in the ocean' means:", "options": ["An insignificant amount", "A rainy day", "A sea voyage", "A large donation"], "correct_answer": "An insignificant amount", "explanation": "Describes something too small to matter against the whole."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["idioms"], "question": "'Call a spade a spade' means:", "options": ["Speak plainly and directly", "Use gardening tools", "Accuse someone", "Play cards"], "correct_answer": "Speak plainly and directly", "explanation": "Means naming things frankly without euphemism."},
+      {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["idioms"], "question": "'Tighten one's belt' means:", "options": ["Economise", "Lose weight", "Get ready", "Feel nervous"], "correct_answer": "Economise", "explanation": "Means reducing spending during financial hardship."},
+      {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["idioms"], "question": "'At sea' (as in 'He was completely at sea during the lecture') means:", "options": ["Confused", "Travelling", "Relaxed", "Excited"], "correct_answer": "Confused", "explanation": "Means lost or unable to understand."},
+      {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["idioms"], "question": "'Get the ball rolling' means:", "options": ["Start an activity", "Play a sport", "Cause confusion", "End a discussion"], "correct_answer": "Start an activity", "explanation": "Means to begin a process or set things in motion."}
+    ]
+  }
+}

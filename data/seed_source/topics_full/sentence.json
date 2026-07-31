@@ -1,0 +1,82 @@
+{
+  "study_material": {
+    "title": "Sentence Structure and Subject-Verb Agreement - Complete Study Notes",
+    "introduction": "A sentence needs a subject and a finite verb expressing a complete thought. Placement papers test sentence structure mainly through subject-verb agreement, tense consistency and clause construction - the highest-frequency grammar errors in English sections.",
+    "learning_objectives": [
+      "Identify subject, verb, object and complement",
+      "Apply subject-verb agreement rules including tricky cases",
+      "Distinguish phrases from clauses, simple from complex sentences",
+      "Maintain tense consistency across a sentence",
+      "Use active and passive voice correctly"
+    ],
+    "concepts": [
+      {"heading": "1. Sentence Components", "body": "Subject = who/what performs the action. Predicate = the verb and everything after it. Object = receiver of the action (direct: 'gave a book'; indirect: 'gave HIM a book'). Complement = completes the meaning after a linking verb ('She is a DOCTOR')."},
+      {"heading": "2. Subject-Verb Agreement - Core Rules", "body": "The verb agrees with the SUBJECT in number and person, never with the nearest noun. 'The list of items IS on the desk' - subject is 'list', not 'items'. Words between the subject and verb (with, along with, as well as, together with, including) do NOT change the number: 'The manager, along with his assistants, IS attending.'"},
+      {"heading": "3. Agreement - Special Cases", "body": "Either/neither/each/everyone/somebody take singular verbs. With 'either...or' and 'neither...nor', the verb agrees with the NEARER subject. Two subjects joined by 'and' take a plural verb, unless they name one entity ('Bread and butter IS my breakfast'). Collective nouns take a singular verb when acting as a unit. Amounts of money, distance and time take singular verbs ('Ten kilometres IS a long walk')."},
+      {"heading": "4. Phrases and Clauses", "body": "A phrase has no finite verb ('in the morning'); a clause has one ('when he arrived'). Independent clauses stand alone; dependent clauses cannot. Simple sentence = one independent clause. Compound = two independent clauses joined by and/but/or. Complex = one independent plus one or more dependent clauses."},
+      {"heading": "5. Tense Consistency and Voice", "body": "Keep tenses consistent unless the meaning demands a shift: 'He came and SAT down' (not 'sits'). In reported speech, a past reporting verb shifts the tense back. Passive voice: object becomes subject + form of 'be' + past participle ('The letter was written by him'). Prefer active voice unless the doer is unknown or unimportant."}
+    ],
+    "formulas": [
+      "Verb agrees with the subject, not the nearest noun",
+      "Either...or / Neither...nor: verb matches the nearer subject",
+      "Along with / as well as / including do not affect number",
+      "Passive = be + past participle",
+      "Amounts of money/time/distance take singular verbs"
+    ],
+    "shortcut_methods": [
+      "Mentally delete phrases between commas, then check the verb",
+      "Find the true subject by asking 'who or what + verb?'",
+      "For each/every/either/neither, default to a singular verb"
+    ],
+    "common_mistakes": [
+      "Matching the verb to the nearest noun instead of the subject",
+      "Treating 'along with X' as making the subject plural",
+      "Unnecessary tense shifts mid-sentence",
+      "Dangling modifiers: 'Walking down the street, the building appeared' (the building was not walking)"
+    ],
+    "summary": "Locate the true subject, ignore intervening phrases, apply the special-case rules, and keep tense and voice consistent.",
+    "quick_revision_notes": [
+      "The list of items IS (not are)",
+      "Along with / as well as = no change in number",
+      "Neither...nor: nearer subject rules",
+      "Each/every/everyone = singular"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Choose the correct sentence.", "options": ["The list of items is on the desk.", "The list of items are on the desk.", "The list of item are on the desk.", "The lists of items is on the desk."], "correct_answer": "The list of items is on the desk.", "step_by_step": "The subject is 'list' (singular), not 'items'. So the verb is 'is'.", "shortcut": "Delete the 'of' phrase and re-read."},
+    {"difficulty": "medium", "question": "Choose the correct sentence.", "options": ["The manager, along with his assistants, is attending the meeting.", "The manager, along with his assistants, are attending the meeting.", "The manager along with his assistants were attending.", "The manager and along with assistants are attending."], "correct_answer": "The manager, along with his assistants, is attending the meeting.", "step_by_step": "'Along with...' is parenthetical and does not make the subject plural. Subject = 'manager' (singular).", "shortcut": "Ignore everything between the commas."},
+    {"difficulty": "medium", "question": "Choose the correct sentence.", "options": ["Neither the students nor the teacher was informed.", "Neither the students nor the teacher were informed.", "Neither the student nor the teachers was informed.", "Neither of the students nor teacher were informed."], "correct_answer": "Neither the students nor the teacher was informed.", "step_by_step": "With neither...nor, the verb agrees with the nearer subject - 'teacher' is singular, so 'was'.", "shortcut": "Look at the subject immediately before the verb."},
+    {"difficulty": "medium", "question": "Identify the sentence type: 'Although it was raining, we went out.'", "options": ["Complex", "Simple", "Compound", "Compound-complex"], "correct_answer": "Complex", "step_by_step": "'Although it was raining' is a dependent clause; 'we went out' is independent. One of each = complex sentence.", "shortcut": "A subordinating conjunction (although, because, if) signals a complex sentence."},
+    {"difficulty": "hard", "question": "Choose the correct sentence.", "options": ["Ten kilometres is a long distance to walk.", "Ten kilometres are a long distance to walk.", "Ten kilometre are a long distance to walk.", "Ten kilometres were a long distance to walking."], "correct_answer": "Ten kilometres is a long distance to walk.", "step_by_step": "A measurement treated as a single quantity takes a singular verb.", "shortcut": "Money, distance and time as one amount = singular."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["sentence", "agreement"], "question": "Choose the correct verb: 'Each of the boys ___ a prize.'", "options": ["receives", "receive", "are receiving", "have received"], "correct_answer": "receives", "explanation": "'Each' is always singular."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["sentence", "agreement"], "question": "Choose the correct verb: 'The team ___ playing well this season.'", "options": ["is", "are", "were", "have"], "correct_answer": "is", "explanation": "A collective noun acting as one unit takes a singular verb."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["sentence", "clause"], "question": "Which of these is a clause?", "options": ["when he arrived", "in the morning", "on the table", "under the bridge"], "correct_answer": "when he arrived", "explanation": "It contains a subject and a finite verb; the others are phrases."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["sentence", "agreement"], "question": "Choose the correct verb: 'Bread and butter ___ my usual breakfast.'", "options": ["is", "are", "were", "have been"], "correct_answer": "is", "explanation": "The two nouns name one combined dish, so a singular verb is used."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["sentence", "agreement"], "question": "Choose the correct verb: 'Neither of the answers ___ correct.'", "options": ["is", "are", "were", "have been"], "correct_answer": "is", "explanation": "'Neither' as a pronoun is singular."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["sentence", "voice"], "question": "Convert to passive: 'The chef prepared the meal.'", "options": ["The meal was prepared by the chef.", "The meal is prepared by the chef.", "The meal has prepared by the chef.", "The meal was preparing by the chef."], "correct_answer": "The meal was prepared by the chef.", "explanation": "Past simple passive = was/were + past participle."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["sentence", "type"], "question": "Identify the sentence type: 'He studied hard, and he passed the exam.'", "options": ["Compound", "Simple", "Complex", "Compound-complex"], "correct_answer": "Compound", "explanation": "Two independent clauses joined by the coordinating conjunction 'and'."},
+    {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["sentence", "modifier"], "question": "Choose the correct sentence.", "options": ["Walking down the street, I saw the old building.", "Walking down the street, the old building appeared.", "Walking down the street, the building was seen by me.", "Walking down the street, there was an old building."], "correct_answer": "Walking down the street, I saw the old building.", "explanation": "The introductory participial phrase must describe the subject - 'I' was walking, not the building."},
+    {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["sentence", "agreement"], "question": "Choose the correct verb: 'The number of applicants ___ increased this year.'", "options": ["has", "have", "are", "were"], "correct_answer": "has", "explanation": "'The number of' takes a singular verb ('a number of' takes plural)."},
+    {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["sentence", "tense"], "question": "Choose the correct sentence.", "options": ["He said that he was busy that day.", "He said that he is busy that day.", "He said that he will be busy that day.", "He says that he was busy that day."], "correct_answer": "He said that he was busy that day.", "explanation": "A past reporting verb shifts the reported tense back to past."}
+  ],
+  "topic_test": {
+    "title": "Sentence Structure - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Find the true subject before choosing the verb."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["sentence"], "question": "Choose the correct verb: 'One of my friends ___ a doctor.'", "options": ["is", "are", "were", "have been"], "correct_answer": "is", "explanation": "The subject is 'one', which is singular."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["sentence"], "question": "Choose the correct verb: 'The books on the shelf ___ dusty.'", "options": ["are", "is", "was", "has been"], "correct_answer": "are", "explanation": "Subject is 'books' (plural); 'on the shelf' is a phrase."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["sentence"], "question": "Choose the correct verb: 'Everyone ___ ready for the test.'", "options": ["is", "are", "were", "have"], "correct_answer": "is", "explanation": "Indefinite pronouns ending in -one are singular."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["sentence"], "question": "Choose the correct verb: 'Either the students or the teacher ___ mistaken.'", "options": ["is", "are", "were", "have been"], "correct_answer": "is", "explanation": "Agreement with the nearer subject 'teacher'."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["sentence"], "question": "Choose the correct verb: 'Twenty rupees ___ too little for this.'", "options": ["is", "are", "were", "have been"], "correct_answer": "is", "explanation": "An amount of money is treated as a single quantity."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["sentence"], "question": "Convert to passive: 'They are building a new bridge.'", "options": ["A new bridge is being built.", "A new bridge is built.", "A new bridge was being built.", "A new bridge has built."], "correct_answer": "A new bridge is being built.", "explanation": "Present continuous passive = is/are being + past participle."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["sentence"], "question": "Identify the sentence type: 'She sang beautifully.'", "options": ["Simple", "Compound", "Complex", "Compound-complex"], "correct_answer": "Simple", "explanation": "One independent clause with a single finite verb."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["sentence"], "question": "Choose the correct verb: 'A number of students ___ absent today.'", "options": ["are", "is", "was", "has been"], "correct_answer": "are", "explanation": "'A number of' means 'several' and takes a plural verb."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["sentence"], "question": "Choose the correct sentence.", "options": ["Not only did he win the race, but he also broke the record.", "Not only he won the race, but he also broke the record.", "Not only he did win the race, but also broke the record.", "He not only won the race, but also he broke record."], "correct_answer": "Not only did he win the race, but he also broke the record.", "explanation": "When a sentence begins with 'Not only', the auxiliary is inverted before the subject."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["sentence"], "question": "Choose the correct sentence.", "options": ["Having finished the work, he went home.", "Having finished the work, the home was gone to.", "Having finished the work, it was time going home.", "Have finished the work, he went home."], "correct_answer": "Having finished the work, he went home.", "explanation": "The participial phrase correctly modifies the subject 'he', who finished the work."}
+    ]
+  }
+}

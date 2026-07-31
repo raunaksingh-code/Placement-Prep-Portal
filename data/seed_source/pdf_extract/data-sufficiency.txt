@@ -1,0 +1,128 @@
+DATA SUFFICIENCY
+CONCEPTS
+Purpose of Data sufficiency: 
+Here the examiners intention is to check the student's
+capability in decision making. One can agree that the
+decision making is the sense of checking whether the
+data is sufficient or not.
+Nature of Questions: You will be given a question
+followed with the two statements.
+You don’t need to solve the question. You just have to
+judge whether given two statements have enough
+information to solve the question.
+CONCEPTUAL EXAMPLES
+Each of the questions below consist of a question and
+two statements numbered I and II. You have to decide
+whether the data provided in the statements are
+sufficient to answer the given question. Read both
+the statements and give answer as
+a: If the data in statement-I alone is sufficient and the
+data in statement-II alone is not sufficient to answer the
+question.
+b: If the data in statement-II alone is sufficient and the
+data in statement-I alone is not sufficient to answer the
+question.
+c: If the data either in statement-I or in statement-II
+alone are sufficient to answer the question.
+d: If the data either in statement-I and II together are
+not sufficient to answer the questions. And some more
+data needed.
+e: If the data in both statement-I and II together are
+necessary to answer the question.
+1) What is the average of p, q and r?
+I. r is 25.
+II. p + q is 20.
+Explanation: To find the average, we need values of p,
+q, r. From the given two statements values of p, q, r are
+known. Hence, we require both the statement-I and II
+to answer the given question. Hence,option-e is correct.
+Ask doubt with Question Id: 5503
+2) Who is youngest among Raju, Vamsi and Rajni?
+I. Raju is one year elder to Vamsi.
+II. Vamsi age is average age of Raju and Rajni.
+Explanation: From statement-II, Vamsi's age is between
+the ages of Raju and Rajni.
+From statement-I, Raju is one year elder to Vamsi. It
+means Rajni will be one year younger to Vamsi.
+ From both the statements, we can say, 
+∴
+Rajni is
+youngest among the three. Hence, option-e is correct.
+Ask doubt with Question Id: 5504
+3) What is the value of x?
+I. x2+2x –3=0          II. x2+4x – 5=0
+Explanation: From statement-I,  x2 + 2x – 3 = 0
+x2 + 3x – x – 3 = 0 ⇒ x(x + 3) – 1(x + 3) = 0 ⇒ x = 1 or –3
+ From statement-I alone we can't say exact value of 
+∴
+x.
+From statement-II, x2 + 4x – 5 = 0  x2 + 5x – x – 5 = 0
+x(x + 5) – 1(x + 5)=0 i.e. x =1 or – 5.
+ 
+∴From statement-I and II, we conclude, x = 1. 
+As both the statements together are required to answer
+the given question, option-e is correct.
+Ask doubt with Question Id: 5505
+4) Find the area of the square?
+I. The side of the square is 7 cm
+II. The circumference of the square is 28 cm
+Explanation: Area = (side)2 
+From statement-I, we know the value of side. Therefore
+area can be found.
+From statement-II, circumference i.e. 4(side)=28.
+From this we can find the value of side. As a result area
+can also be found. 
+Here, either of the statements-I or II alone are sufficient
+to answer the given question. Hence,option-c is correct.
+Ask doubt with Question Id: 5506
+5) What is the cost price of the chair?
+I. The selling price of the chair is 324 at profit of 8%.
+₹
+II. The profit is 12%.
+Explanation: 
+From statement-I, CP= 100
+100+ 8
+×324=₹300
+ Statement-I alone is sufficient to answer.
+∴
+Statement-II does not have the enough information to
+solve the given question. Hence, option-a is correct.
+Ask doubt with Question Id: 5507
+6) Who is tallest?
+I. C is eldest.
+II. A is shortest and B is youngest but taller than C.
+Explanation: Statement-I alone is not sufficient to
+answer. From statement-II, A is shortest. And B is taller
+than C. It means B is taller than A and C.  i.e. only
+statement -II is sufficient to answer the question. 
+Hence, option-b is correct.
+Ask doubt with Question Id: 5508
+7) Is r > s ?
+I. r > t
+II. at > ar, a < 0.
+Explanation: Statement-I and II gave information
+about t and r. But not s. So, it is not possible to say
+whether r > s or not because of insufficient information
+from both the statements.  Hence, option-d is correct.
+Ask doubt with Question Id: 5509
+Login to your online account to ask doubts.
+2.40
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

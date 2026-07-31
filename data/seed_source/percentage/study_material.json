@@ -1,0 +1,100 @@
+{
+  "subject": "Quantitative Aptitude",
+  "module": "Quantitative Aptitude",
+  "topic": "Percentage",
+  "content_type": "Study Material",
+  "status": "Published",
+  "estimated_time": 1800,
+  "tags": ["Percentage", "MBA", "Study Material", "Foundations"],
+  "title": "Percentage - Complete Study Notes",
+  "introduction": "Percentage (from Latin 'per centum', meaning 'per hundred') expresses a number as a fraction of 100. It is the single most-used arithmetic tool across MBA placement quantitative sections and every recruiter's DI/caselet round, because profit & loss, interest, growth rates, and data interpretation questions all reduce to percentage calculations. Speed with percentages is what separates candidates who finish a 20-question quant section in 15 minutes from those who don't finish it at all.",
+  "learning_objectives": [
+    "Convert fluently between fractions, decimals, and percentages without a calculator",
+    "Compute percentage increase/decrease and reverse-engineer the base value from a percentage change",
+    "Handle successive percentage changes (two or more changes applied one after another) using the net-effect shortcut",
+    "Distinguish 'percentage change' from 'percentage points' and avoid the base-value trap",
+    "Solve population growth/depreciation, income-expenditure-savings, and exam/election style percentage problems within 60-90 seconds each",
+    "Apply the price-consumption inverse relationship to solve constant-expenditure problems instantly"
+  ],
+  "concepts": [
+    {
+      "heading": "1. The Core Idea",
+      "body": "x% of a quantity Q means (x/100) * Q. Every percentage statement is secretly a fraction with denominator 100. 'What percentage is 45 of 180?' is just asking for (45/180)*100 = 25%. Master the fraction-percentage equivalence table below before anything else -- it eliminates long division from at least a third of all percentage questions."
+    },
+    {
+      "heading": "2. Percentage Increase / Decrease",
+      "body": "New Value = Original Value * (1 + p/100) for an increase of p%, or Original Value * (1 - p/100) for a decrease of p%. To find the percentage change itself: %Change = [(New - Original) / Original] * 100. The denominator is always the ORIGINAL (base) value, never the new value -- this is the single most common source of errors in placement tests."
+    },
+    {
+      "heading": "3. Successive Percentage Change",
+      "body": "If a value changes by a% and then by b% (each change applied to the result of the previous one), the net single equivalent change is: a + b + (ab/100), using negative signs for decreases. E.g., two successive increases of 10% and 20% give a net change of 10 + 20 + (10*20/100) = 32%. A 10% increase followed by a 10% decrease gives 10 - 10 + (10*(-10)/100) = -1%, i.e. a net 1% decrease -- NOT zero. This asymmetry is a favourite trap in placement papers."
+    },
+    {
+      "heading": "4. Percentage Points vs Percentage Change",
+      "body": "If an interest rate rises from 8% to 10%, it has risen by 2 percentage points, but the percentage INCREASE in the rate itself is (2/8)*100 = 25%. Recruiters (especially in DI/caselet questions from consulting firms) deliberately word questions to test whether you confuse the two."
+    },
+    {
+      "heading": "5. Price-Consumption (Constant Expenditure) Relationship",
+      "body": "If the price of a commodity increases by r%, and total expenditure is to remain unchanged, consumption must be reduced by [r / (100 + r)] * 100 percent. Conversely, if price falls by r%, consumption can increase by [r / (100 - r)] * 100 percent to keep expenditure constant. This single formula replaces messy simultaneous equations in almost every 'by what % should a family reduce consumption' question."
+    },
+    {
+      "heading": "6. Population Growth and Depreciation",
+      "body": "If a quantity grows at r% per annum compounded annually, after n years: Future Value = P * (1 + r/100)^n. For depreciation (e.g. machine value, population decline), use P * (1 - r/100)^n. When growth/decline rates differ year to year, multiply the individual year-factors instead of using a single r."
+    },
+    {
+      "heading": "7. Marks, Pass Percentage and Election Problems",
+      "body": "Exam problems typically give: (marks obtained / maximum marks)*100 = percentage scored, and pass problems use (pass marks/max marks)*100 = pass %. In election problems with two candidates, if the winner gets w% of valid votes and wins by a known margin, the margin itself equals (2w - 100)% of the total valid votes -- a direct shortcut instead of setting up two equations."
+    },
+    {
+      "heading": "8. Income, Expenditure and Savings",
+      "body": "Savings = Income - Expenditure. If income increases by i% and expenditure increases by e% while savings must be tracked, always convert to actual numbers relative to a convenient assumed base (e.g., assume original income = 100) rather than tracking percentages of two different bases simultaneously -- this is the #1 place candidates mix up 'percentage of what'."
+    }
+  ],
+  "formulas": [
+    "Percentage equivalent of a fraction a/b = (a/b) * 100 %",
+    "x% of Q = (x/100) * Q",
+    "% Change = [(New - Original) / Original] * 100",
+    "New Value (increase by p%) = Original * (100 + p)/100",
+    "New Value (decrease by p%) = Original * (100 - p)/100",
+    "Net % change for successive changes a% and b% = a + b + (ab/100)   [use negative sign for a decrease]",
+    "If price rises by r%, reduce consumption by [r/(100+r)] * 100 % to keep expenditure constant",
+    "If price falls by r%, consumption may rise by [r/(100-r)] * 100 % to keep expenditure constant",
+    "Compound growth over n years = P * (1 + r/100)^n ; Depreciation over n years = P * (1 - r/100)^n",
+    "If A is x% more than B, then B is [x/(100+x)] * 100 % less than A",
+    "If A is x% less than B, then B is [x/(100-x)] * 100 % more than A",
+    "Election margin (2-candidate) = (2w - 100)% of total valid votes, where w% = winner's vote share"
+  ],
+  "shortcut_methods": [
+    "Memorise the fraction-percentage table: 1/2=50%, 1/3=33.33%, 1/4=25%, 1/5=20%, 1/6=16.67%, 1/7=14.28%, 1/8=12.5%, 1/9=11.11%, 1/10=10%, 1/11=9.09%, 1/12=8.33%, 1/16=6.25%, 1/20=5%, 1/25=4%. Recognising '37.5%' instantly as 3/8 saves 20+ seconds per question.",
+    "To find x% of a number mentally, break x into 10s, 5s and 1s: e.g. 17% of 450 = 10% (45) + 5% (22.5) + 2% (9) = 76.5.",
+    "For successive % changes, multiply the multiplying factors instead of adding percentages when more than 2 changes are involved: e.g. +10%, -20%, +25% => 1.10 * 0.80 * 1.25 = 1.10, i.e. net +10%.",
+    "'A is what % more/less than B' -- always divide the difference by B (the value you're comparing AGAINST), never by A.",
+    "For 'if the numerator/denominator of a fraction changes by x%/y%, find % change in fraction' problems, use: net % change in fraction = numerator% - denominator% - (numerator% * denominator%)/100 approximately, or exactly compute via successive-change formula on the reciprocal.",
+    "When a question gives a percentage relationship as a ratio (e.g., 'A's income is 150% of B's'), instantly rewrite as A:B = 3:2 to switch into simpler ratio arithmetic."
+  ],
+  "common_mistakes": [
+    "Using the NEW value as the base/denominator instead of the ORIGINAL value when computing % change.",
+    "Adding successive percentage changes directly (10% + 20% = 30%) instead of using the ab/100 correction term (the correct net change is 32%).",
+    "Confusing percentage POINT change with percentage change (e.g., rate moving 8%->10% is a 2 percentage-point rise, but a 25% relative increase).",
+    "In 'A is x% more than B' problems, incorrectly computing 'B is x% less than A' using the same x instead of re-deriving via [x/(100+x)]*100.",
+    "Forgetting that reducing a value by x% and then increasing the result by the same x% does NOT return the original value.",
+    "Rounding intermediate percentage values too early, which compounds error across multi-step problems -- keep fractions exact until the final step.",
+    "In exam/marks problems, dividing by the wrong 'maximum marks' when multiple subjects with different maximum marks are combined."
+  ],
+  "real_life_examples": [
+    "A retail chain's quarterly report states revenue 'grew 12%' -- recognising this instantly requires knowing the previous quarter's figure is the base, exactly the kind of number a case-interview candidate at McKinsey or Bain must sanity-check within seconds.",
+    "A consulting case on airline pricing: 'if fuel surcharge increases ticket price by 15%, what consumption drop keeps total spend flat for a corporate travel budget?' -- solved directly with the price-consumption formula.",
+    "Reading an EY or Deloitte due-diligence style DI table showing a company's headcount changing across years to compute CAGR-like successive percentage growth.",
+    "Interpreting RBI repo rate news: 'rate hiked from 6% to 6.5%' is a 50 percentage-point... no, a 0.5 percentage-point hike, but an 8.33% relative increase -- a distinction financial-analyst interview questions frequently probe."
+  ],
+  "summary": "Percentage problems are fraction problems in disguise, and their difficulty in placement tests comes almost entirely from base-value confusion (original vs new, A vs B) and from successive changes not being additive. Internalise the ab/100 correction term, the price-consumption inverse relationship, and the fraction-percentage equivalence table, and roughly 80% of percentage questions across CAT, XAT, and analyst-recruitment quant sections become sub-45-second problems.",
+  "quick_revision_notes": [
+    "% change always uses ORIGINAL value as denominator",
+    "Successive change a%, b% => net = a + b + ab/100 (sign-sensitive)",
+    "A x% more than B =/= B x% less than A (recompute via x/(100+x))",
+    "Price up r% => cut consumption by r/(100+r)*100 % to hold expenditure",
+    "Compound growth/depreciation over n years uses (1 +/- r/100)^n, multiply yearly factors if rates differ",
+    "Election margin (2 candidates) = (2w-100)% of total valid votes",
+    "Know 1/6 to 1/25 fraction-percentage equivalents cold"
+  ]
+}

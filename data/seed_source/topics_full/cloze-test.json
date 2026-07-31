@@ -1,0 +1,79 @@
+{
+  "study_material": {
+    "title": "Cloze Test - Complete Study Notes",
+    "introduction": "A cloze test is a passage with blanks; you choose the word that fits each gap. Unlike isolated fill-in-the-blanks, the whole passage supplies the context - so read the complete paragraph before filling anything.",
+    "learning_objectives": [
+      "Use grammatical constraints to narrow options",
+      "Follow the logical flow with connector words",
+      "Maintain tense and tone consistency across a passage",
+      "Apply collocation knowledge to select natural wording"
+    ],
+    "concepts": [
+      {"heading": "1. Read the Whole Passage First", "body": "Never fill blanks in isolation. Read the entire passage once for the overall theme and tone. Later sentences often disambiguate earlier blanks, and the theme fixes whether the tone is positive, negative or neutral."},
+      {"heading": "2. Grammatical Filtering", "body": "Ask what part of speech the slot needs. After an article, expect a noun or adjective. After a modal (can, should), expect a base verb. After a preposition, expect a noun or gerund. This single test usually eliminates two of four options instantly."},
+      {"heading": "3. Connector Logic", "body": "Contrast connectors (but, however, although, nevertheless, yet) mean the blank reverses direction. Addition connectors (moreover, furthermore, also, besides) continue the same direction. Cause-effect connectors (therefore, hence, consequently, because) signal a result. Match the blank's polarity to the connector."},
+      {"heading": "4. Consistency", "body": "Tense must stay consistent unless the passage signals a time shift. Subject-verb agreement still applies inside the blank. Tone must match: a critical passage will not suddenly take a celebratory word."},
+      {"heading": "5. Collocation and Register", "body": "Choose the word that native usage prefers: 'make a decision' not 'do a decision'; 'a heavy burden'; 'raise concerns'; 'pose a threat'; 'play a role'. Formal passages need formal words - avoid casual options in an academic paragraph."}
+    ],
+    "formulas": [
+      "Read whole passage, then fill",
+      "Part of speech filter first",
+      "Contrast connector = reverse polarity",
+      "Cause connector = result follows"
+    ],
+    "shortcut_methods": [
+      "Fill the easy blanks first; they constrain the harder ones",
+      "Reread the completed sentence to confirm it sounds natural",
+      "If two options are grammatically identical, decide by connotation"
+    ],
+    "common_mistakes": [
+      "Filling blanks one by one without reading ahead",
+      "Ignoring the connector and choosing the wrong polarity",
+      "Breaking tense consistency",
+      "Choosing a technically correct but unnatural collocation"
+    ],
+    "summary": "Read fully, filter by grammar, follow the connectors, and confirm the sentence sounds natural in context.",
+    "quick_revision_notes": [
+      "Whole passage first, always",
+      "But/however = flip direction",
+      "Therefore/hence = result",
+      "Trust natural collocations"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "medium", "question": "Passage: 'The project was delayed ___ the heavy rains.' Choose the best word.", "options": ["because of", "although", "despite", "however"], "correct_answer": "because of", "step_by_step": "Rain caused the delay, so a cause connector is needed. 'Because of' takes a noun phrase, which fits 'the heavy rains'.", "shortcut": "Cause relation plus a noun phrase points to 'because of'."},
+    {"difficulty": "medium", "question": "Passage: 'She studied hard; ___, she failed to clear the cutoff.' Choose the best word.", "options": ["nevertheless", "therefore", "moreover", "hence"], "correct_answer": "nevertheless", "step_by_step": "Hard study would predict success, but the result was failure - the sentence needs a contrast connector.", "shortcut": "Unexpected result means contrast, not cause."},
+    {"difficulty": "easy", "question": "Passage: 'Regular exercise can ___ the risk of heart disease.' Choose the best word.", "options": ["reduce", "reduction", "reducing", "reduced"], "correct_answer": "reduce", "step_by_step": "After the modal 'can', a base-form verb is required.", "shortcut": "Modal + base verb, always."},
+    {"difficulty": "hard", "question": "Passage: 'The new regulations ___ a serious threat to small businesses, many of which lack the staff to handle the added paperwork.' Choose the best word.", "options": ["pose", "make", "give", "do"], "correct_answer": "pose", "step_by_step": "The natural collocation is 'pose a threat'. The other verbs are grammatical but unidiomatic.", "shortcut": "Learn fixed verb-noun pairs: pose a threat, raise concerns, play a role."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["cloze", "grammar"], "question": "'The students were asked to ___ their assignments by Friday.' Choose the best word.", "options": ["submit", "submission", "submitting", "submitted"], "correct_answer": "submit", "explanation": "'To' + base verb (infinitive)."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["cloze", "connector"], "question": "'He was tired; ___, he completed the report.' Choose the best word.", "options": ["still", "therefore", "so", "thus"], "correct_answer": "still", "explanation": "Contrast is needed - tiredness would predict not finishing."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["cloze", "collocation"], "question": "'It is difficult to ___ a decision without complete information.' Choose the best word.", "options": ["make", "do", "take up", "give"], "correct_answer": "make", "explanation": "'Make a decision' is the standard collocation."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["cloze", "connector"], "question": "'The scheme was well designed. ___, its implementation was poorly monitored.' Choose the best word.", "options": ["However", "Therefore", "Moreover", "Consequently"], "correct_answer": "However", "explanation": "Good design versus poor implementation needs a contrast connector."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["cloze", "tense"], "question": "'By the time we arrived, the meeting ___ already started.' Choose the best word.", "options": ["had", "has", "have", "was"], "correct_answer": "had", "explanation": "An earlier past action needs the past perfect."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["cloze", "collocation"], "question": "'The audit ___ serious concerns about the firm's accounting practices.' Choose the best word.", "options": ["raised", "lifted", "grew", "rose"], "correct_answer": "raised", "explanation": "'Raise concerns' is the natural collocation; 'rose' is intransitive."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["cloze", "meaning"], "question": "'Despite repeated warnings, he remained ___ to the risks involved.' Choose the best word.", "options": ["oblivious", "alert", "sensitive", "attentive"], "correct_answer": "oblivious", "explanation": "'Despite warnings' signals he ignored them - unaware fits; the others contradict."},
+    {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["cloze", "tone"], "question": "'The scientist's findings were initially dismissed, but subsequent experiments ___ her conclusions beyond doubt.' Choose the best word.", "options": ["confirmed", "questioned", "weakened", "contradicted"], "correct_answer": "confirmed", "explanation": "'But' reverses the earlier dismissal, and 'beyond doubt' demands a word meaning established."},
+    {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["cloze", "connector"], "question": "'The city invested heavily in public transport; ___, private vehicle use fell by a fifth within three years.' Choose the best word.", "options": ["consequently", "nevertheless", "although", "conversely"], "correct_answer": "consequently", "explanation": "The fall in car use is the result of the investment - a cause-effect connector is needed."},
+    {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["cloze", "register"], "question": "'The committee will ___ the proposal at its next sitting before issuing a formal recommendation.' Choose the best word.", "options": ["deliberate on", "chat about", "mess with", "look over quickly"], "correct_answer": "deliberate on", "explanation": "The formal register of 'committee' and 'formal recommendation' demands the formal option."}
+  ],
+  "topic_test": {
+    "title": "Cloze Test - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Check part of speech first, then the connector's direction."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["cloze"], "question": "'She has been working here ___ 2019.' Choose the best word.", "options": ["since", "for", "from", "during"], "correct_answer": "since", "explanation": "'Since' is used with a point in time."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["cloze"], "question": "'The manager asked the team to ___ the deadline.' Choose the best word.", "options": ["meet", "reach up", "make", "do"], "correct_answer": "meet", "explanation": "'Meet a deadline' is the standard collocation."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["cloze"], "question": "'He is ___ honest employee who never conceals a mistake.' Choose the best word.", "options": ["an", "a", "the", "some"], "correct_answer": "an", "explanation": "'Honest' begins with a vowel sound."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["cloze"], "question": "'The medicine relieved the pain; ___, the underlying cause remained untreated.' Choose the best word.", "options": ["however", "therefore", "thus", "hence"], "correct_answer": "however", "explanation": "The second clause contrasts with the relief described."},
+      {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["cloze"], "question": "'Heavy rainfall ___ to the widespread flooding last week.' Choose the best word.", "options": ["contributed", "contribution", "contributing", "contributes"], "correct_answer": "contributed", "explanation": "Past tense matches 'last week'."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["cloze"], "question": "'Volunteers ___ a crucial role in the relief effort.' Choose the best word.", "options": ["played", "did", "made", "gave"], "correct_answer": "played", "explanation": "'Play a role' is the fixed collocation."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["cloze"], "question": "'The proposal was rejected ___ its high cost.' Choose the best word.", "options": ["on account of", "although", "whereas", "nevertheless"], "correct_answer": "on account of", "explanation": "A cause phrase followed by a noun phrase is required."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["cloze"], "question": "'Although the data were ___, the researchers drew sweeping conclusions from them.' Choose the best word.", "options": ["scanty", "abundant", "conclusive", "robust"], "correct_answer": "scanty", "explanation": "'Although' contrasts with 'sweeping conclusions', so the data must have been insufficient."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["cloze"], "question": "'The negotiator's ___ approach defused a situation that could easily have escalated.' Choose the best word.", "options": ["tactful", "aggressive", "careless", "hostile"], "correct_answer": "tactful", "explanation": "Defusing tension implies a sensitive, diplomatic approach."},
+      {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["cloze"], "question": "'Far from being obsolete, the technique has ___ renewed interest among engineers.' Choose the best word.", "options": ["attracted", "lost", "prevented", "discouraged"], "correct_answer": "attracted", "explanation": "'Far from being obsolete' sets a positive direction, and 'attract interest' is the natural pairing."}
+    ]
+  }
+}

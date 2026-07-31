@@ -1,0 +1,141 @@
+DIRECTION SENSE TEST
+CONCEPTS
+Direction sense test question will be asked to check the
+candidates ability in deciding the shortest way within
+time. In this type of questions, we will see persons or
+things moving in East, West, North and South
+directions from an initial point.
+There are 4 directions viz., East, West, North, South. 
+And 4 cardinal directions viz., North–East, North–
+West, South–East, South–West.
+There are 4 types of problems which are frequently
+been asked in Campus Recruitment Tests. 
+1) Problems on Distances
+2) Problems on clocks
+3) Problems on Angles
+4) Problems  on Shadows
+The diagram below illustrates the relevant positions of
+all the 8 directions.
+Problems on directions can be solved in 2 ways.
+(1) Diagrammatic way
+(2) Shortcut way
+While solving the problems on directions, it is very
+important for you to remember the left and right
+directions of each direction. i.e. Left of the East is
+North. Right of East is South and so on.
+Type-(1): Problems on Distances:
+Steps for shortcut method:
+1) If the directions are same, then add the distances.
+2) If directions are opposite, then subtract the distances
+and write the direction which has maximum value.
+3) If directions are North–East, North–West, South–East
+or South–West then take both directions as single
+direction and calculate the distance using the formula.
+√(First Distance)
+2+ (Second Distance)
+2
+Example: A man walk 15 Km towards North. From
+there he walks 10 Km towards East. Then 15 Km
+towards South. Finally he walks towards East 12 Km.
+How far and in which direction is he with reference to
+his starting point?
+Explanation: Diagrammatic Method
+The shortest distance is AD + DE = 10 + 12 = 22 km and 
+the direction is East.
+Shortcut Method:
+First he walked 15 Km North, so write N(15). 
+Next he walked 10 Km East, so write E(10) i.e
+N(15)E(10) and continue till the last statement.
+Then we get, N(15) E(10) S(15) E(12)
+Now apply the tips discussed above.
+i.e.   add E(10) and E(12) = E(22) ( same directions)
+∵
+ 
+and subtract N(15) and S(15) = 0 (∵ opposite directions)
+ 
+∴Finally he is in East direction with distance 22 Km.
+Example: A Boy started to school from his home. He
+walks 100 m in East. Then he walks 50 m to his left.
+From there he walks 150 m to his left again, finally he
+reached his school. How far and in which direction his
+school is located from his home?
+Explanation: Diagrammatic Method:
+From ∆ ADE the shortest distance is AD.
+BC || EA. So, BC = EA = 50. 
+AD=√(AE)2+ (DE)2 = √(50)2+ (50)2
+AD=√2500+ 2500 = √5000 = 10√50
+The school is in North West direction and at a distance
+of  10√50meters from his home.
+Shortcut Method:
+Write from starting point to destination. 
+i.e. E(100)  N(50) W(150)
+East and West are opposite directions to each other, so
+subtract them and write the direction which has
+highest value. i.e. W(50).
+N(50) W(50) = NW[√(50)2+ (50)2]
+= NW[√2500+ 2500] = NW[√5000]=NW[10√50]
+Required direction= North–West; Distance = 10√50m
+Type-(2): Problems on Clocks: 
+Steps to Solve:
+1) Representing the given time in a clock diagram. 
+Rotate the directions diagram according to the given
+clock timings. (Rotation of the direction arrows either
+clock wise or and clockwise but maximum 1800 only).
+2) If two timings are given in the problem, then apply
+the same rotated directions to second timing also.
+Login to your online account to ask doubts.
+2.24
+A
+100 m
+B
+50 m
+C
+100 m
+D
+50 m E
+150 m
+SE
+E
+NE
+N
+NW
+W
+SW
+S
+SE
+E
+NE
+N
+NW
+W
+SW
+S
+A
+D
+12
+15
+15
+B
+10
+C
+E
+10
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

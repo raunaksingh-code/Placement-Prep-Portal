@@ -1,0 +1,74 @@
+{
+  "study_material": {
+    "title": "Series (Number and Letter) - Complete Study Notes",
+    "introduction": "Series questions ask for the next term or the odd one out. The generating rules are limited: constant difference, changing difference, multiplication, squares/cubes, primes, Fibonacci, and alternating/mixed patterns. Test them in that order.",
+    "learning_objectives": [
+      "Identify arithmetic, geometric and second-difference patterns",
+      "Recognise square, cube, prime and Fibonacci series",
+      "Solve letter series with position arithmetic",
+      "Spot the wrong term in a corrupted series"
+    ],
+    "concepts": [
+      {"heading": "1. Difference Patterns", "body": "Compute successive differences first. Constant difference = arithmetic (5, 9, 13...). Differences growing by a constant = quadratic pattern (2, 6, 12, 20 with differences 4, 6, 8 - next is 30). If first differences look messy, try second differences."},
+      {"heading": "2. Ratio Patterns", "body": "If each term divides the next evenly, it is geometric: 3, 6, 12, 24 doubles. Mixed rules like 'x2 + 1' also appear: 3, 7, 15, 31. Test the ratio when differences fail."},
+      {"heading": "3. Special Number Families", "body": "Squares 1, 4, 9, 16, 25; cubes 1, 8, 27, 64, 125; primes 2, 3, 5, 7, 11, 13; Fibonacci 1, 1, 2, 3, 5, 8 (each term = sum of previous two); n^2+1, n^2-1 variants like 2, 5, 10, 17, 26."},
+      {"heading": "4. Letter Series", "body": "Convert letters to positions. A, C, F, J, O has gaps 2, 3, 4, 5 - next gap 6 gives U. Alternating series interleave two independent patterns - separate the odd and even positions before hunting a rule."}
+    ],
+    "formulas": [
+      "First differences, then second differences",
+      "Fibonacci: t(n) = t(n-1) + t(n-2)",
+      "Letter position arithmetic with A=1 ... Z=26"
+    ],
+    "shortcut_methods": [
+      "Check differences, then ratios, then special families - in that order",
+      "For odd-one-out, find the rule the majority obeys",
+      "Interleaved series: split alternate terms into two rows"
+    ],
+    "common_mistakes": [
+      "Forcing an arithmetic rule onto a geometric series",
+      "Missing interleaved (alternating) patterns",
+      "Stopping at the first rule that fits only two terms"
+    ],
+    "summary": "Differences, ratios, special families, interleaving - four checks crack almost every series.",
+    "quick_revision_notes": [
+      "2,6,12,20,30 = n(n+1)",
+      "Gaps can grow: +2,+3,+4...",
+      "Fibonacci adds previous two",
+      "Split alternating series into two sub-series"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "Find the next term: 2, 6, 12, 20, 30, ?", "options": ["42", "40", "36", "44"], "correct_answer": "42", "step_by_step": "Differences are 4, 6, 8, 10 - next difference 12 gives 42. (Terms are n(n+1).)", "shortcut": "n(n+1): 6x7 = 42."},
+    {"difficulty": "easy", "question": "Find the next term: 3, 6, 12, 24, ?", "options": ["48", "36", "30", "44"], "correct_answer": "48", "step_by_step": "Each term doubles: 24 x 2 = 48.", "shortcut": "Geometric with ratio 2."},
+    {"difficulty": "medium", "question": "Find the next letter: A, C, F, J, O, ?", "options": ["U", "T", "S", "V"], "correct_answer": "U", "step_by_step": "Gaps 2, 3, 4, 5; next gap 6: O(15) + 6 = U(21).", "shortcut": "Growing gaps."},
+    {"difficulty": "hard", "question": "Find the next term: 100, 96, 88, 76, 60, ?", "options": ["40", "44", "36", "48"], "correct_answer": "40", "step_by_step": "Differences -4, -8, -12, -16; next -20 gives 40.", "shortcut": "Differences fall by 4 each step."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["series", "squares"], "question": "Next term: 1, 4, 9, 16, ?", "options": ["25", "20", "24", "36"], "correct_answer": "25", "explanation": "Perfect squares: 5^2."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["series", "primes"], "question": "Next term: 2, 3, 5, 7, 11, ?", "options": ["13", "12", "15", "17"], "correct_answer": "13", "explanation": "Prime numbers."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["series", "fibonacci"], "question": "Next term: 1, 1, 2, 3, 5, 8, ?", "options": ["13", "12", "11", "16"], "correct_answer": "13", "explanation": "Fibonacci: 5 + 8."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["series", "n2plus1"], "question": "Next term: 5, 10, 17, 26, ?", "options": ["37", "35", "38", "36"], "correct_answer": "37", "explanation": "n^2 + 1: 36 + 1 = 37."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["series", "odd-diff"], "question": "Next term: 7, 12, 19, 28, 39, ?", "options": ["52", "50", "51", "54"], "correct_answer": "52", "explanation": "Differences 5, 7, 9, 11; next 13."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["series", "letters-desc"], "question": "Next letter: Z, X, U, Q, ?", "options": ["L", "M", "N", "K"], "correct_answer": "L", "explanation": "Gaps -2, -3, -4; next -5: Q(17) - 5 = L(12)."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["series", "times2plus1"], "question": "Next term: 3, 7, 15, 31, ?", "options": ["63", "62", "47", "64"], "correct_answer": "63", "explanation": "Each term = 2 x previous + 1."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["series", "alternating"], "question": "Next term: 1, 10, 3, 20, 5, 30, ?", "options": ["7", "40", "6", "35"], "correct_answer": "7", "explanation": "Two interleaved series: 1,3,5,7 and 10,20,30. The 7th term belongs to the odd series: 7."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["series", "cubes"], "question": "Next term: 1, 8, 27, 64, ?", "options": ["125", "100", "121", "216"], "correct_answer": "125", "explanation": "Cubes: 5^3."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["series", "wrong-term"], "question": "Find the wrong term: 2, 5, 10, 17, 26, 36, 50", "options": ["36", "26", "50", "17"], "correct_answer": "36", "explanation": "Pattern n^2+1 gives 2, 5, 10, 17, 26, 37, 50 - the 36 should be 37."}
+  ],
+  "topic_test": {
+    "title": "Series - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Check differences first, then ratios, then special families."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["series"], "question": "Next term: 4, 8, 12, 16, ?", "options": ["20", "18", "24", "22"], "correct_answer": "20", "explanation": "Add 4."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["series"], "question": "Next term: 5, 15, 45, 135, ?", "options": ["405", "270", "315", "375"], "correct_answer": "405", "explanation": "Multiply by 3."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["series"], "question": "Next letter: B, D, F, H, ?", "options": ["J", "I", "K", "G"], "correct_answer": "J", "explanation": "Even-position letters, +2 each."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["series"], "question": "Next term: 2, 6, 18, 54, ?", "options": ["162", "108", "148", "216"], "correct_answer": "162", "explanation": "Multiply by 3."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["series"], "question": "Next term: 10, 17, 26, 37, 50, ?", "options": ["65", "63", "64", "60"], "correct_answer": "65", "explanation": "Differences 7, 9, 11, 13; next 15."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["series"], "question": "Next letter pair: AZ, BY, CX, ?", "options": ["DW", "DV", "EW", "DX"], "correct_answer": "DW", "explanation": "First letters ascend, second letters descend (opposite pairs)."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["series"], "question": "Next term: 6, 11, 21, 41, 81, ?", "options": ["161", "121", "141", "162"], "correct_answer": "161", "explanation": "Each term = 2 x previous - 1."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["series"], "question": "Find the wrong term: 3, 10, 27, 4, 16, 64, 5, 25, 125", "options": ["10", "27", "16", "25"], "correct_answer": "10", "explanation": "Triplets are n, n^2, n^3: 3, 9, 27 - the 10 should be 9."}
+    ]
+  }
+}

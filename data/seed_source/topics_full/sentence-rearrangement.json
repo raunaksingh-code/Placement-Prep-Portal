@@ -1,0 +1,75 @@
+{
+  "study_material": {
+    "title": "Sentence Rearrangement (Para Jumbles) - Complete Study Notes",
+    "introduction": "Para jumbles give shuffled sentences labelled P, Q, R, S and ask for the correct order. The solution comes from finding the opening sentence and then following link words, pronouns and chronology - not from reading every permutation.",
+    "learning_objectives": [
+      "Identify the opening sentence reliably",
+      "Use pronouns and article shifts to link sentences",
+      "Follow chronological and logical connectors",
+      "Verify the final sequence end to end"
+    ],
+    "concepts": [
+      {"heading": "1. Finding the Opening Sentence", "body": "The opener introduces the subject by FULL NAME and uses the indefinite article ('A committee was formed...'). It contains no pronouns referring backwards (it, this, they, such), no connectors (however, therefore, moreover) and no definite reference to something unmentioned."},
+      {"heading": "2. Pronoun Links", "body": "A sentence containing 'he', 'it', 'they', 'this' must FOLLOW the sentence naming that person or thing. Similarly, 'a scientist' in one sentence becomes 'the scientist' in the next - the indefinite-to-definite shift fixes the order of that pair."},
+      {"heading": "3. Connector Links", "body": "'However', 'but', 'on the contrary' must follow the idea they contradict. 'Therefore', 'thus', 'as a result' must follow the cause. 'Moreover', 'furthermore', 'also' must follow a related earlier point. 'Finally', 'in conclusion' mark the last sentence."},
+      {"heading": "4. Mandatory Pairs", "body": "Some sentences clearly belong together (a question and its answer, a cause and its effect, a general statement and its example). Lock these pairs first, then check which answer options preserve them - this often eliminates three of four options immediately."},
+      {"heading": "5. Chronology and Logic", "body": "Look for time markers: first, then, later, subsequently, eventually, finally. Also follow logical progression: problem then solution, general then specific, claim then evidence then conclusion."}
+    ],
+    "formulas": [
+      "Opener: full name + indefinite article, no back-referring pronoun",
+      "Indefinite 'a X' precedes definite 'the X'",
+      "Pronoun sentences follow the noun sentence",
+      "Lock mandatory pairs, then eliminate options"
+    ],
+    "shortcut_methods": [
+      "Find one mandatory pair and eliminate options that break it - often faster than building the whole order",
+      "Check only the first sentence of each option against opener rules",
+      "Read your final sequence once as a paragraph to confirm it flows"
+    ],
+    "common_mistakes": [
+      "Starting with a sentence that contains 'it' or 'however'",
+      "Ignoring the a/the shift for the same noun",
+      "Building the whole sequence without using the answer options to eliminate",
+      "Failing to reread the assembled paragraph"
+    ],
+    "summary": "Spot the opener, lock mandatory pairs, follow pronouns and connectors, then verify the paragraph reads smoothly.",
+    "quick_revision_notes": [
+      "Openers never begin with it/this/however/therefore",
+      "'A scientist' comes before 'the scientist'",
+      "Lock pairs, eliminate options",
+      "Always reread the final order"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "medium", "question": "Arrange: (P) It quickly became the company's best-selling item. (Q) A small firm in Pune launched a new water purifier last year. (R) The product used a filtration method that needed no electricity. (S) Sales crossed one lakh units within six months.", "options": ["QRPS", "QPRS", "PQRS", "RQPS"], "correct_answer": "QRPS", "step_by_step": "Q opens - it names 'a small firm' and 'a new water purifier' with indefinite articles and no back-reference. R then describes 'the product'. P says 'it became best-selling'. S gives the supporting sales figure.", "shortcut": "Only Q qualifies as an opener, which eliminates two options instantly."},
+    {"difficulty": "medium", "question": "Arrange: (P) However, the results were disappointing. (Q) The team spent months designing the experiment. (R) They therefore revised their hypothesis. (S) Only two of the twelve trials succeeded.", "options": ["QPSR", "PQSR", "QSPR", "RQPS"], "correct_answer": "QPSR", "step_by_step": "Q opens (no connector, no pronoun). P follows with 'However' contradicting the effort. S gives the evidence of disappointment. R concludes with 'therefore'.", "shortcut": "'However' and 'therefore' can never open a paragraph."},
+    {"difficulty": "easy", "question": "Which sentence is most likely the OPENING sentence of a para jumble?", "options": ["A new policy was announced by the ministry last week.", "It was welcomed by most industry bodies.", "However, small traders raised objections.", "Therefore, the rollout was postponed."], "correct_answer": "A new policy was announced by the ministry last week.", "step_by_step": "It introduces the subject with an indefinite article and contains no pronoun or connector referring to earlier text.", "shortcut": "Eliminate anything starting with It/However/Therefore."},
+    {"difficulty": "hard", "question": "Arrange: (P) The technique is now taught in medical schools worldwide. (Q) A Japanese surgeon developed it in the 1980s. (R) Keyhole surgery reduces recovery time dramatically. (S) Initially, senior doctors dismissed the method as risky.", "options": ["RQSP", "QRSP", "RSQP", "QSRP"], "correct_answer": "RQSP", "step_by_step": "R opens by naming the topic (keyhole surgery) without pronouns. Q gives its origin, using 'it' to refer back to R. S describes the initial reaction. P concludes with its present-day status.", "shortcut": "Q contains 'it', so it cannot open - eliminate options starting with Q."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 50, "tags": ["para-jumble", "opener"], "question": "Which sentence can NOT be the opening sentence?", "options": ["This made the situation worse.", "A famous author visited our college.", "Rainfall this year was unusually heavy.", "The Indian economy grew steadily in the last decade."], "correct_answer": "This made the situation worse.", "explanation": "'This' refers back to something not yet mentioned."},
+    {"difficulty": "easy", "estimated_time_sec": 55, "tags": ["para-jumble", "pronoun"], "question": "If sentence X says 'A young engineer joined the team' and sentence Y says 'She soon led the project', then:", "options": ["X must come before Y", "Y must come before X", "Order does not matter", "They cannot be adjacent"], "correct_answer": "X must come before Y", "explanation": "'She' refers back to the engineer introduced in X."},
+    {"difficulty": "easy", "estimated_time_sec": 55, "tags": ["para-jumble", "connector"], "question": "A sentence beginning with 'Finally,' most likely appears:", "options": ["Last in the paragraph", "First in the paragraph", "Second in the paragraph", "Anywhere"], "correct_answer": "Last in the paragraph", "explanation": "'Finally' signals the concluding point."},
+    {"difficulty": "medium", "estimated_time_sec": 75, "tags": ["para-jumble", "sequence"], "question": "Arrange: (P) They found traces of an ancient settlement. (Q) A team of archaeologists surveyed the riverbank. (R) The site is now protected by the state government. (S) Excavation began the following summer.", "options": ["QPSR", "QSPR", "PQSR", "SQPR"], "correct_answer": "QPSR", "explanation": "Q introduces the team; P uses 'They' referring to them; S continues chronologically; R states the present status."},
+    {"difficulty": "medium", "estimated_time_sec": 75, "tags": ["para-jumble", "cause-effect"], "question": "Arrange: (P) As a result, ticket prices fell sharply. (Q) Two new airlines entered the domestic market. (R) Passengers benefited from the increased competition. (S) Both offered aggressive introductory fares.", "options": ["QSPR", "QPSR", "PQSR", "SQPR"], "correct_answer": "QSPR", "explanation": "Q opens; S elaborates ('Both'); P gives the result; R states the final consequence."},
+    {"difficulty": "medium", "estimated_time_sec": 75, "tags": ["para-jumble", "contrast"], "question": "Arrange: (P) But adoption among older users remained low. (Q) A mobile payment app launched across three states. (R) Younger customers embraced it immediately. (S) The company therefore redesigned its interface.", "options": ["QRPS", "QPRS", "RQPS", "QRSP"], "correct_answer": "QRPS", "explanation": "Q opens; R describes the positive response; P contrasts with 'But'; S concludes with 'therefore'."},
+    {"difficulty": "hard", "estimated_time_sec": 90, "tags": ["para-jumble", "complex"], "question": "Arrange: (P) Such fabrics are now used in sportswear and medical dressings. (Q) Nanotechnology has transformed textile manufacturing. (R) Researchers can embed particles that repel water or kill bacteria. (S) These properties survive repeated washing.", "options": ["QRSP", "QSRP", "RQSP", "QRPS"], "correct_answer": "QRSP", "explanation": "Q states the general claim; R explains how; S adds a property of what R described ('These properties'); P concludes with applications ('Such fabrics')."},
+    {"difficulty": "hard", "estimated_time_sec": 90, "tags": ["para-jumble", "complex"], "question": "Arrange: (P) The scheme was consequently extended to twelve more districts. (Q) A pilot programme provided free school meals in four districts. (R) Attendance rose by nearly a fifth within one academic year. (S) Officials attributed the improvement largely to the meals.", "options": ["QRSP", "QSRP", "RQSP", "QRPS"], "correct_answer": "QRSP", "explanation": "Q opens with the pilot; R gives the outcome; S interprets that outcome; P states the consequent expansion."}
+  ],
+  "topic_test": {
+    "title": "Sentence Rearrangement - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Find the opener first, then lock mandatory pairs."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 60, "tags": ["para-jumble"], "question": "Which is the best opening sentence?", "options": ["A cyclone formed over the Bay of Bengal last week.", "It moved towards the coast rapidly.", "However, it weakened before landfall.", "Therefore, the alert was withdrawn."], "correct_answer": "A cyclone formed over the Bay of Bengal last week.", "explanation": "Indefinite article, no back-reference, no connector."},
+      {"difficulty": "easy", "estimated_time_sec": 60, "tags": ["para-jumble"], "question": "Arrange: (P) He scored a century in his first match. (Q) A new batsman joined the state team. (R) Selectors soon called him for the national squad.", "options": ["QPR", "PQR", "QRP", "RQP"], "correct_answer": "QPR", "explanation": "Q introduces the batsman; P uses 'He'; R follows chronologically."},
+      {"difficulty": "easy", "estimated_time_sec": 60, "tags": ["para-jumble"], "question": "Arrange: (P) The library therefore extended its opening hours. (Q) Students complained about limited study space during exams.", "options": ["QP", "PQ", "Either order works", "Neither is valid"], "correct_answer": "QP", "explanation": "'Therefore' in P marks it as the consequence of Q."},
+      {"difficulty": "medium", "estimated_time_sec": 80, "tags": ["para-jumble"], "question": "Arrange: (P) It now supplies power to over two thousand homes. (Q) A solar plant was commissioned in the village last year. (R) Residents had previously depended on unreliable diesel generators.", "options": ["QRP", "QPR", "RQP", "PQR"], "correct_answer": "QRP", "explanation": "Q opens; R gives the earlier background ('previously'); P states the present outcome."},
+      {"difficulty": "medium", "estimated_time_sec": 80, "tags": ["para-jumble"], "question": "Arrange: (P) Moreover, it consumed far less memory than its rivals. (Q) A small team released an open-source database engine. (R) The software handled millions of queries per second.", "options": ["QRP", "QPR", "RPQ", "PQR"], "correct_answer": "QRP", "explanation": "Q opens; R describes performance; P adds a further point with 'Moreover'."},
+      {"difficulty": "medium", "estimated_time_sec": 85, "tags": ["para-jumble"], "question": "Arrange: (P) Farmers in the region reported higher yields. (Q) The state introduced a drip irrigation subsidy. (R) Water consumption also fell by a third. (S) Both outcomes exceeded the government's targets.", "options": ["QPRS", "QRPS", "PQRS", "QSPR"], "correct_answer": "QPRS", "explanation": "Q opens; P and R give the two outcomes; S refers to 'Both outcomes' and must come last."},
+      {"difficulty": "hard", "estimated_time_sec": 95, "tags": ["para-jumble"], "question": "Arrange: (P) This resistance delayed adoption by nearly a decade. (Q) A physician proposed that doctors wash their hands between patients. (R) His colleagues ridiculed the suggestion. (S) Today the practice is standard in every hospital.", "options": ["QRPS", "QPRS", "RQPS", "QRSP"], "correct_answer": "QRPS", "explanation": "Q opens; R gives the reaction; P refers to 'This resistance'; S concludes with the modern position."},
+      {"difficulty": "hard", "estimated_time_sec": 95, "tags": ["para-jumble"], "question": "Arrange: (P) Such variation makes a single national policy difficult. (Q) Rainfall patterns differ sharply across Indian states. (R) Kerala receives heavy monsoon rain while Rajasthan stays arid. (S) Even neighbouring districts can show wide differences.", "options": ["QRSP", "QSRP", "RQSP", "QRPS"], "correct_answer": "QRSP", "explanation": "Q states the general point; R gives the example; S adds a finer-grained example; P concludes with the implication of 'Such variation'."}
+    ]
+  }
+}

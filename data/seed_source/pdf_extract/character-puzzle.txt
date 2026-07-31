@@ -1,0 +1,193 @@
+CHARACTER PUZZLE
+CONCEPTS
+In this type of questions, a figure or a matrix is given in
+which some numbers are filled according to a rule. A
+place is left blank. You have to analyze the given
+character or number and find out the missing number
+or letter from the given possible answers which may be
+filled in the blank space. 
+CONCEPTUAL EXAMPLES
+1) Which number will replace the question mark?
+a) 23           b) 18           c) 22      d) 21      e) None of these
+Explanation:  From figure (a),9 + 5 + 3 = 17 17 + 3 = 20
+From figure (b), 2 + 6 + 8 = 16  16 + 3 = 9
+From figure (c), 7 + 9 + 4 = 20  20 + 3 = 23
+Ask doubt with Question Id: 8206
+2) Which number will replace the question mark ?
+a) 236         b) 336         c) 286        d) 386        e) 436
+Explanation: [3×7×8] + [2×3×6] = 204
+           [4×6×5] + [8×7×2] = 232
+      Similarly, [4×5×8] + [6×7×3] = 286
+Ask doubt with Question Id: 8207
+3) which number will replace the question mark?
+a) 81           b) 84           c) 516           d) 514          e) 86
+Explanation: From (a), 43 + 62 = 64 + 36 = 100
+                        From (b), 33 + 52 = 27 + 25 = 52
+                  So, From (c), 83 + 22 = 512 + 4 = 516
+Ask doubt with Question Id: 8208
+4) Which number will replace the question mark?
+a) 79           b) 89           c) 99            d) 69             e) 109
+Explanation: From (a), 8 × 3 + 6 = 30 
+                        From (b), 9 × 4 + 8 = 44
+                   So, from (c), 12× 6 +7 = 79
+Ask doubt with Question Id: 8209
+5) What number will replace the question mark ?
+a) 229           b) 134          c) 329          d) 439           e) 339
+Explanation: From (a), 32 + 62 + 42 + 72 = 110
+                        From (b), 92 + 72 + 52 + 22 = 159
+                   So, from (c), 82 + 62 + 32 + 52 = 134
+Ask doubt with Question Id: 8210
+6) Which number will replace the question mark?
+12
+19
+16
+4
+3
+?
+6
+3
+8
+8
+19
+4
+a) 8              b) 16             c) 4        d) 2     e) None of these
+Explanation: From Column-I: (12 × 4) ÷ 6 = 8
+From column-II: (19 × 3) ÷ 3 =19
+So, from column-III: (16 × ?) ÷ 8 = 4  16×? = 32  ? = 2.
+Ask doubt with Question Id: 8211
+7) Which number will replace the question mark?
+a) 108     b) 46      c) 64    d) 104    e) can't be determined
+Explanation: From (a), 82 – 32   = 55
+                        From (b), 92 – 72  = 32
+                  So, from (c), 122 – 62 = 108    
+Ask doubt with Question Id: 8212
+8) Which character will replace the question mark?
+A5
+F10
+K15
+B16
+G21
+L26
+C27
+H32 
+?
+a) M37          b) N36            c) O37           d) M36           e) M38
+ Explanation:  
+From column-I, A B C (5+11+11)
+→→
+From column-II, F G H (10+11+11)
+→→
+From column-III, K L M (15+11+11)
+→→
+The character M37 will replace the question mark
+Ask doubt with Question Id: 8213
+2.61
+Praxis Groups
+3
+7
+8
+2
+3
+6
+6
+5
+8
+7
+2
+232
+4
+5
+8
+6
+7
+3
+? 
+4
+204
+8
+30
+3
+6
+9
+44
+4
+8
+12
+?
+6
+7
+(a)
+(c)
+(b)
+4
+6
+100
+3
+5
+52
+8
+2
+?
+5
+3
+20
+9
+(a)
+6 8
+19
+2
+(b)
+9
+4
+?
+7
+(c)
+(a)
+3
+6
+4
+7
+110
+(b)
+9
+7
+5
+2
+159
+(c)
+8
+6
+3
+5
+?
+8
+3
+55
+(a)
+7 
+9
+32
+(b)
+12
+6
+(c)
+?
+
+ E-BOOK                
+Quantitative Aptitude
+CLICK HERE
+Data Interpretation
+CLICK HERE
+Logical Reasoning
+CLICK HERE
+Verbal Ability
+CLICK HERE
+All Subjects
+CLICK HERE
+(OR)
+ PRINTED BOOK                                 
+Purchase at Following e-Commerce sites 
+         
+            
+visit: https://www.campusrecruitment.co.in/download.html
+

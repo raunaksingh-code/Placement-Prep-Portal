@@ -1,0 +1,79 @@
+{
+  "study_material": {
+    "title": "Chain Rule / Variation - Complete Study Notes",
+    "introduction": "Variation problems ask how one quantity changes when related quantities change - more men means fewer days, more speed means less time. The chain rule (unitary method) turns these into one-line proportions, and is the backbone of time-and-work and pipes-and-cisterns problems.",
+    "learning_objectives": [
+      "Distinguish direct from inverse variation at a glance",
+      "Apply the man-days (M1 D1 H1 = M2 D2 H2 style) equation",
+      "Solve combined variation with several changing quantities",
+      "Handle provisions-lasting and wage-distribution problems"
+    ],
+    "concepts": [
+      {"heading": "1. Direct Variation", "body": "x and y vary directly if x/y is constant: more computers, more cost. Then x1/x2 = y1/y2. Examples: cost vs quantity, distance vs time at fixed speed, work done vs number of identical workers."},
+      {"heading": "2. Inverse Variation", "body": "x and y vary inversely if xy is constant: more workers, fewer days. Then x1/x2 = y2/y1. Examples: speed vs time for fixed distance, men vs days for fixed work, pipes vs filling time."},
+      {"heading": "3. The Work Equation", "body": "For jobs measured in man-hours: (M1 x D1 x H1) / W1 = (M2 x D2 x H2) / W2, where M = men, D = days, H = hours per day, W = amount of work. With equal work it reduces to M1 D1 H1 = M2 D2 H2. Set up the equation, plug in knowns, solve the single unknown."},
+      {"heading": "4. Combined Variation", "body": "If x varies directly with y and inversely with z, then x = k(y/z), so x1/x2 = (y1/y2) x (z2/z1). Write each factor as 'does more of this quantity increase or decrease the answer?' and orient the fraction accordingly - this sanity check prevents most errors."},
+      {"heading": "5. Provisions Problems", "body": "Food for M men lasting D days = MD man-days of provisions. If people leave or join after d days, compute remaining man-days = M(D - d), then divide by the new headcount to get remaining days."}
+    ],
+    "formulas": [
+      "Direct: x1/x2 = y1/y2",
+      "Inverse: x1 y1 = x2 y2",
+      "M1 D1 H1 / W1 = M2 D2 H2 / W2",
+      "Remaining provisions (man-days) = headcount x days left"
+    ],
+    "shortcut_methods": [
+      "Ask 'more or less?' for each changing quantity and multiply correction fractions onto the base value",
+      "Keep one unknown; convert everything else to numbers first",
+      "For provisions: always convert to man-days immediately"
+    ],
+    "common_mistakes": [
+      "Inverting the wrong fraction in inverse variation",
+      "Ignoring hours-per-day when both days and daily hours change",
+      "Forgetting that work amount can change too (walls of different lengths)"
+    ],
+    "summary": "Identify each quantity as direct or inverse, write the chain of correction fractions, and compute. The man-days equation covers nearly every variant.",
+    "quick_revision_notes": [
+      "Direct: ratio same way; Inverse: ratio flips",
+      "M1 D1 H1 = M2 D2 H2 for equal work",
+      "Provisions are man-days",
+      "x directly with y, inversely with z: x = ky/z"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "15 men can build a wall in 20 days. How long will 25 men take?", "options": ["12 days", "15 days", "10 days", "18 days"], "correct_answer": "12 days", "step_by_step": "Men and days vary inversely: 15 x 20 = 25 x D, so D = 300/25 = 12 days.", "shortcut": "Days = 20 x (15/25) = 12."},
+    {"difficulty": "easy", "question": "If 5 kg of rice costs Rs. 240, what do 8 kg cost?", "options": ["Rs. 384", "Rs. 380", "Rs. 400", "Rs. 360"], "correct_answer": "Rs. 384", "step_by_step": "Direct variation: cost = 240 x 8/5 = 384.", "shortcut": "Per kg = 48; 8 kg = 384."},
+    {"difficulty": "medium", "question": "10 men working 6 hours a day finish a job in 18 days. In how many days will 15 men working 8 hours a day finish it?", "options": ["9 days", "12 days", "10 days", "8 days"], "correct_answer": "9 days", "step_by_step": "M1D1H1 = M2D2H2: 10 x 18 x 6 = 15 x D x 8, so D = 1080/120 = 9 days.", "shortcut": "18 x (10/15) x (6/8) = 9."},
+    {"difficulty": "medium", "question": "y varies inversely as x, and y = 9 when x = 4. Find y when x = 6.", "options": ["6", "8", "13.5", "4"], "correct_answer": "6", "step_by_step": "xy = k = 36. When x = 6, y = 36/6 = 6.", "shortcut": "Product stays 36."},
+    {"difficulty": "hard", "question": "A garrison of 200 men has provisions for 45 days. After 15 days, 50 men leave. How long will the remaining food last the rest?", "options": ["40 days", "35 days", "30 days", "45 days"], "correct_answer": "40 days", "step_by_step": "Remaining provisions = 200 x 30 = 6000 man-days. Remaining men = 150. Days = 6000/150 = 40.", "shortcut": "30 days' food for 200 men stretches by factor 200/150 = 4/3: 30 x 4/3 = 40."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["variation", "inverse"], "question": "36 men can eat a stock of food in 30 days. How long will the same stock last 27 men?", "options": ["40 days", "36 days", "45 days", "32 days"], "correct_answer": "40 days", "explanation": "36 x 30 = 27 x D, so D = 40 days."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["variation", "direct"], "question": "A car covers 240 km in 4 hours. At the same speed, how long for 360 km?", "options": ["6 hours", "5 hours", "5.5 hours", "6.5 hours"], "correct_answer": "6 hours", "explanation": "Speed = 60 km/h; 360/60 = 6 hours."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["variation", "inverse"], "question": "8 identical pumps empty a tank in 6 hours. How long would 12 such pumps take?", "options": ["4 hours", "9 hours", "5 hours", "3 hours"], "correct_answer": "4 hours", "explanation": "8 x 6 = 12 x t, so t = 4 hours."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["variation", "direct"], "question": "A 20 m rope weighs 4 kg. What does a 35 m rope of the same kind weigh?", "options": ["7 kg", "6 kg", "8 kg", "7.5 kg"], "correct_answer": "7 kg", "explanation": "Weight per metre = 0.2 kg; 35 x 0.2 = 7 kg."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["variation", "wages"], "question": "12 workers working 5 days earn Rs. 6,000. How much will 8 workers earn in 7 days at the same rate?", "options": ["Rs. 5,600", "Rs. 5,200", "Rs. 6,400", "Rs. 4,800"], "correct_answer": "Rs. 5,600", "explanation": "Wages scale with worker-days: 6000 x (8x7)/(12x5) = 6000 x 56/60 = 5,600."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["variation", "squares"], "question": "x varies as the square of y. When y doubles, x becomes:", "options": ["4 times", "2 times", "8 times", "half"], "correct_answer": "4 times", "explanation": "x = ky^2, so doubling y multiplies x by 2^2 = 4."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["variation", "combined"], "question": "20 cows graze a field in 12 days. How long would 15 cows take on the same field?", "options": ["16 days", "15 days", "18 days", "20 days"], "correct_answer": "16 days", "explanation": "20 x 12 = 15 x D, so D = 16 days."},
+    {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["variation", "direct"], "question": "If x varies directly as y, and x = 6 when y = 8, find x when y = 20.", "options": ["15", "12", "18", "24"], "correct_answer": "15", "explanation": "x/y = 3/4 constant, so x = 20 x 3/4 = 15."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["variation", "man-hours"], "question": "9 workers working 6 hours a day complete a job in 10 days. How many days will 12 workers working 5 hours a day need?", "options": ["9 days", "8 days", "10 days", "12 days"], "correct_answer": "9 days", "explanation": "9x6x10 = 12x5xD, so D = 540/60 = 9 days."},
+    {"difficulty": "hard", "estimated_time_sec": 75, "tags": ["variation", "cloth"], "question": "8 kg of cotton makes 40 m of cloth. How much cotton is needed for 100 m of the same cloth?", "options": ["20 kg", "18 kg", "24 kg", "16 kg"], "correct_answer": "20 kg", "explanation": "Cotton per metre = 0.2 kg; 100 x 0.2 = 20 kg."}
+  ],
+  "topic_test": {
+    "title": "Chain Rule / Variation - Topic Test",
+    "duration_minutes": 20,
+    "negative_mark": 0.25,
+    "instructions": ["10 questions, 20 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Decide direct vs inverse for each quantity before computing."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["variation"], "question": "14 men can do a job in 18 days. How many days will 21 men take?", "options": ["12", "14", "10", "16"], "correct_answer": "12", "explanation": "14 x 18 = 21 x D, D = 12."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["variation"], "question": "6 machines produce a batch in 4 hours. How long would 8 machines take?", "options": ["3 hours", "2.5 hours", "3.5 hours", "2 hours"], "correct_answer": "3 hours", "explanation": "6 x 4 = 8 x t, t = 3."},
+      {"difficulty": "easy", "estimated_time_sec": 40, "tags": ["variation"], "question": "If 12 notebooks cost Rs. 300, what do 20 notebooks cost?", "options": ["Rs. 500", "Rs. 480", "Rs. 450", "Rs. 550"], "correct_answer": "Rs. 500", "explanation": "Per notebook Rs. 25; 20 x 25 = 500."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["variation"], "question": "y varies inversely as x. If y = 12 when x = 5, find x when y = 20.", "options": ["3", "4", "6", "2.5"], "correct_answer": "3", "explanation": "k = 60; x = 60/20 = 3."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["variation"], "question": "A contractor employs 30 men to finish a road in 40 days. After 10 days he finds only 1/5 of the road built. How many extra men (working at the same rate) does he need to finish on time?", "options": ["10", "20", "15", "5"], "correct_answer": "10", "explanation": "1/5 work took 300 man-days, so full road = 1500. Remaining 4/5 = 1200 man-days in 30 days needs 40 men - 10 extra."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["variation"], "question": "A wheel makes 500 revolutions to cover 1 km. How many revolutions to cover 2.5 km?", "options": ["1250", "1000", "1500", "1200"], "correct_answer": "1250", "explanation": "Direct variation: 500 x 2.5 = 1250."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["variation"], "question": "Food lasts 20 people for 30 days. If 5 more people join at the start, how long does it last?", "options": ["24 days", "25 days", "22 days", "26 days"], "correct_answer": "24 days", "explanation": "600 man-days / 25 people = 24 days."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["variation"], "question": "If 5 men or 8 boys can do a job in 24 days, how long will 10 men and 4 boys take?", "options": ["9.6 days", "10 days", "12 days", "8 days"], "correct_answer": "9.6 days", "explanation": "1 man = 8/5 boys, so 10 men + 4 boys = 16 + 4 = 20 boy-units. 8 boys x 24 days = 192 boy-days; 192/20 = 9.6 days."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["variation"], "question": "x varies directly as y and inversely as z. When y = 10 and z = 5, x = 8. Find x when y = 15 and z = 6.", "options": ["10", "12", "9", "8"], "correct_answer": "10", "explanation": "x = ky/z; k = 8x5/10 = 4. x = 4x15/6 = 10."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["variation"], "question": "A fort had provisions for 150 men for 45 days. After 10 days, 25 men left. How long will the remaining food last?", "options": ["42 days", "40 days", "36 days", "45 days"], "correct_answer": "42 days", "explanation": "Remaining = 150 x 35 = 5250 man-days for 125 men: 5250/125 = 42 days."}
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "study_material": {
+    "title": "Probability - Complete Study Notes",
+    "introduction": "Probability = favourable outcomes / total outcomes, ranging from 0 (impossible) to 1 (certain). Placement questions live on dice, coins, cards and coloured balls - master the sample spaces and the rest is counting.",
+    "learning_objectives": [
+      "Compute probabilities from equally likely sample spaces",
+      "Use the addition rule and complements",
+      "Apply the multiplication rule for independent and dependent events",
+      "Solve dice, coin, card and ball-drawing problems"
+    ],
+    "concepts": [
+      {"heading": "1. Sample Spaces", "body": "One die: 6 outcomes. Two dice: 36 ordered pairs. One coin: 2; n coins: 2^n. A deck: 52 cards, 4 suits of 13, 26 red and 26 black, 12 face cards (J,Q,K in each suit), 4 aces. Know these cold."},
+      {"heading": "2. Basic Rule and Complement", "body": "P(E) = favourable/total when outcomes are equally likely. P(not E) = 1 - P(E). 'At least one' is nearly always fastest via the complement: P(at least one head in 2 tosses) = 1 - P(no head) = 1 - 1/4 = 3/4."},
+      {"heading": "3. Addition Rule", "body": "P(A or B) = P(A) + P(B) - P(A and B). For mutually exclusive events the overlap is zero. Example: P(king or queen) = 4/52 + 4/52 = 2/13."},
+      {"heading": "4. Multiplication Rule", "body": "Independent events: P(A and B) = P(A) x P(B). Without replacement, probabilities change: P(two aces) = 4/52 x 3/51 = 1/221. Always ask whether the first draw affects the second."},
+      {"heading": "5. Classic Setups", "body": "Two dice sums: 7 is most likely (6 ways, P = 1/6). Leap year has 366 days = 52 weeks + 2 days; P(53 Sundays) = 2/7. Balls from a bag: use combinations - P(both red from 4R 3B) = 4C2/7C2 = 6/21 = 2/7."}
+    ],
+    "formulas": [
+      "P(E) = favourable/total",
+      "P(not E) = 1 - P(E)",
+      "P(A or B) = P(A) + P(B) - P(A and B)",
+      "Independent: P(A and B) = P(A)P(B)",
+      "Without replacement: multiply updated fractions"
+    ],
+    "shortcut_methods": [
+      "'At least one' - complement of 'none'",
+      "Two-dice questions: memorise counts of each sum (2:1 way ... 7:6 ways ... 12:1 way)",
+      "Selection probabilities: combinations over combinations"
+    ],
+    "common_mistakes": [
+      "Forgetting to subtract the overlap in the addition rule",
+      "Treating draws without replacement as independent",
+      "Counting 2-dice outcomes as 21 instead of 36 (order matters in the sample space)"
+    ],
+    "summary": "Count the sample space, count the favourable cases, and reach for complements on 'at least' questions.",
+    "quick_revision_notes": [
+      "P(sum 7 with 2 dice) = 1/6",
+      "P(53 Sundays in leap year) = 2/7",
+      "Two aces without replacement = 1/221",
+      "At least one = 1 - none"
+    ]
+  },
+  "solved_examples": [
+    {"difficulty": "easy", "question": "A die is rolled. What is the probability of getting an even number?", "options": ["1/2", "1/3", "2/3", "1/6"], "correct_answer": "1/2", "step_by_step": "Favourable: 2, 4, 6 (3 of 6). P = 1/2.", "shortcut": "Half the faces are even."},
+    {"difficulty": "easy", "question": "Two coins are tossed. Probability of two heads:", "options": ["1/4", "1/2", "1/3", "3/4"], "correct_answer": "1/4", "step_by_step": "Sample space HH, HT, TH, TT; one favourable: 1/4.", "shortcut": "(1/2)^2."},
+    {"difficulty": "medium", "question": "Two dice are thrown. Probability that the sum is 7:", "options": ["1/6", "1/12", "5/36", "7/36"], "correct_answer": "1/6", "step_by_step": "Favourable: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6 of 36 = 1/6.", "shortcut": "7 is the most likely sum: 6 ways."},
+    {"difficulty": "medium", "question": "A card is drawn from a standard deck. Probability it is a king:", "options": ["1/13", "1/52", "1/4", "4/13"], "correct_answer": "1/13", "step_by_step": "4 kings in 52 cards: 4/52 = 1/13.", "shortcut": "One rank = 1/13."},
+    {"difficulty": "hard", "question": "Two cards are drawn without replacement. Probability both are aces:", "options": ["1/221", "1/169", "1/26", "2/221"], "correct_answer": "1/221", "step_by_step": "4/52 x 3/51 = 12/2652 = 1/221.", "shortcut": "Multiply the shrinking fractions."}
+  ],
+  "practice_questions": [
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["probability", "bag"], "question": "A bag has 3 red and 5 blue balls. Probability of drawing a red ball:", "options": ["3/8", "5/8", "3/5", "1/3"], "correct_answer": "3/8", "explanation": "3 favourable of 8 total."},
+    {"difficulty": "easy", "estimated_time_sec": 30, "tags": ["probability", "die"], "question": "Probability of rolling a prime number on one die:", "options": ["1/2", "1/3", "2/3", "1/6"], "correct_answer": "1/2", "explanation": "Primes 2, 3, 5: 3 of 6."},
+    {"difficulty": "easy", "estimated_time_sec": 35, "tags": ["probability", "complement"], "question": "A bag has 4 black and 6 white balls. Probability the drawn ball is NOT black:", "options": ["3/5", "2/5", "1/2", "4/10"], "correct_answer": "3/5", "explanation": "White = 6/10 = 3/5."},
+    {"difficulty": "medium", "estimated_time_sec": 50, "tags": ["probability", "coins"], "question": "Two coins are tossed. Probability of at least one head:", "options": ["3/4", "1/2", "1/4", "2/3"], "correct_answer": "3/4", "explanation": "1 - P(no head) = 1 - 1/4 = 3/4."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["probability", "cards"], "question": "Probability of drawing a red queen from a deck:", "options": ["1/26", "1/13", "1/52", "2/13"], "correct_answer": "1/26", "explanation": "2 red queens of 52 = 1/26."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["probability", "three-coins"], "question": "Three coins are tossed. Probability of exactly two heads:", "options": ["3/8", "1/2", "1/4", "5/8"], "correct_answer": "3/8", "explanation": "HHT, HTH, THH: 3 of 8."},
+    {"difficulty": "medium", "estimated_time_sec": 55, "tags": ["probability", "leap-year"], "question": "Probability that a leap year has 53 Sundays:", "options": ["2/7", "1/7", "3/7", "1/2"], "correct_answer": "2/7", "explanation": "The 2 extra days can be (Sat,Sun) or (Sun,Mon) among 7 pairs."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["probability", "without-replacement"], "question": "From 4 red and 3 blue balls, two are drawn together. Probability both are red:", "options": ["2/7", "4/7", "1/7", "3/7"], "correct_answer": "2/7", "explanation": "4C2/7C2 = 6/21 = 2/7."},
+    {"difficulty": "hard", "estimated_time_sec": 70, "tags": ["probability", "dice-complement"], "question": "Two dice are thrown. Probability of at least one six:", "options": ["11/36", "1/6", "1/3", "25/36"], "correct_answer": "11/36", "explanation": "1 - (5/6)^2 = 1 - 25/36 = 11/36."},
+    {"difficulty": "hard", "estimated_time_sec": 65, "tags": ["probability", "numbers"], "question": "A number is picked at random from 1 to 100. Probability it is divisible by 7:", "options": ["7/50", "1/7", "14/99", "13/100"], "correct_answer": "7/50", "explanation": "14 multiples of 7 up to 100: 14/100 = 7/50."}
+  ],
+  "topic_test": {
+    "title": "Probability - Topic Test",
+    "duration_minutes": 15,
+    "negative_mark": 0.25,
+    "instructions": ["8 questions, 15 minutes.", "+1 for correct, -0.25 for wrong, 0 for unattempted.", "Use complements for 'at least one' questions."],
+    "questions": [
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["probability"], "question": "Probability of rolling a number less than 3 on one die:", "options": ["1/3", "1/2", "1/6", "2/3"], "correct_answer": "1/3", "explanation": "1 and 2: 2 of 6."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["probability"], "question": "A letter is picked from MOBILE. Probability it is a vowel:", "options": ["1/2", "1/3", "1/6", "2/3"], "correct_answer": "1/2", "explanation": "O, I, E: 3 vowels of 6 letters."},
+      {"difficulty": "easy", "estimated_time_sec": 45, "tags": ["probability"], "question": "Probability of drawing an ace from a deck:", "options": ["1/13", "1/52", "4/13", "1/4"], "correct_answer": "1/13", "explanation": "4/52 = 1/13."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["probability"], "question": "Two dice are thrown. Probability of a doublet (same number on both):", "options": ["1/6", "1/12", "1/36", "1/9"], "correct_answer": "1/6", "explanation": "6 doublets of 36 outcomes."},
+      {"difficulty": "medium", "estimated_time_sec": 60, "tags": ["probability"], "question": "Probability that a card drawn is a face card (J, Q or K):", "options": ["3/13", "1/13", "4/13", "12/13"], "correct_answer": "3/13", "explanation": "12 face cards of 52 = 3/13."},
+      {"difficulty": "medium", "estimated_time_sec": 65, "tags": ["probability"], "question": "Two dice are thrown. Probability the sum is 9:", "options": ["1/9", "1/12", "5/36", "1/6"], "correct_answer": "1/9", "explanation": "(3,6),(4,5),(5,4),(6,3): 4/36 = 1/9."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["probability"], "question": "A bag has 5 white and 3 black balls; two are drawn together. Probability both are white:", "options": ["5/14", "15/28", "3/14", "5/8"], "correct_answer": "5/14", "explanation": "5C2/8C2 = 10/28 = 5/14."},
+      {"difficulty": "hard", "estimated_time_sec": 80, "tags": ["probability"], "question": "Three coins are tossed. Probability of at least one tail:", "options": ["7/8", "3/4", "1/2", "5/8"], "correct_answer": "7/8", "explanation": "1 - P(all heads) = 1 - 1/8 = 7/8."}
+    ]
+  }
+}
