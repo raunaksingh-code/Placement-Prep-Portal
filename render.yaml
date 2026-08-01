@@ -13,6 +13,12 @@ services:
     startCommand: alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /api/health
     envVars:
+      # Pin the interpreter. Render otherwise defaults to its current Python,
+      # and several pinned dependencies (bcrypt 4.0.1, passlib 1.7.4,
+      # python-jose 3.3.0) have no wheels for 3.13 and fail to build.
+      # This is the version the app was developed and tested against.
+      - key: PYTHON_VERSION
+        value: 3.11.9
       - key: ENVIRONMENT
         value: production
       - key: SECRET_KEY
