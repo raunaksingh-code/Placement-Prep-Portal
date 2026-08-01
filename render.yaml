@@ -7,10 +7,11 @@ services:
     plan: free
     rootDir: backend
     buildCommand: pip install -r requirements.txt
-    # Migrations run in the start command rather than preDeployCommand, which is
-    # not available on the free plan. `alembic upgrade head` is idempotent, so
-    # running it on every boot is safe.
-    startCommand: alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    # Migrations and seeding both run here rather than in preDeployCommand or a
+    # shell session, neither of which is available on the free plan. Both are
+    # idempotent - alembic skips applied revisions, and the seeder checks for
+    # existing rows before inserting - so re-running on every boot is safe.
+    startCommand: alembic upgrade head && python -m app.seed.seed && uvicorn app.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /api/health
     envVars:
       # Pin the interpreter. Render otherwise defaults to its current Python,
