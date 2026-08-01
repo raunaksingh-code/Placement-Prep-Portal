@@ -1,5 +1,14 @@
 name: Deploy Frontend to GitHub Pages
 
+# Deploys the React frontend only. The FastAPI backend cannot run on GitHub
+# Pages (it serves static files) — host it separately and point the frontend at
+# it via the VITE_API_BASE_URL repository variable.
+#
+# Set it once: Settings -> Secrets and variables -> Actions -> Variables ->
+#   New repository variable
+#   Name:  VITE_API_BASE_URL
+#   Value: https://your-api-host.onrender.com   (no trailing slash)
+
 on:
   push:
     branches: ["main"]
@@ -23,18 +32,37 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
           cache-dependency-path: './frontend/package-lock.json'
+
       - name: Install dependencies
         run: npm ci
+
+      - name: Fail early if the API URL is not configured
+        run: |
+          if [ -z "${{ vars.VITE_API_BASE_URL }}" ]; then
+            echo "::error::VITE_API_BASE_URL repository variable is not set."
+            echo "The build would produce a site whose every API call fails."
+            echo "Set it under Settings -> Secrets and variables -> Actions -> Variables."
+            exit 1
+          fi
+
+      - name: Type check
+        run: npx tsc --noEmit
+
       - name: Build
+        env:
+          VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL }}
         run: npm run build
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

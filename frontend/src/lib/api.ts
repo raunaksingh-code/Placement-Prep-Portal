@@ -34,6 +34,10 @@ export class ApiError extends Error {
   }
 }
 
+// In dev this is empty and Vite proxies /api to localhost:8000. In a deployed
+// build it points at the hosted API, e.g. https://placement-prep-api.onrender.com
+const API_BASE = (import.meta.env.VITE_API_BASE_URL ?? '').replace(/\/$/, '')
+
 export async function api<T>(path: string, options: RequestInit = {}): Promise<T> {
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
@@ -42,7 +46,7 @@ export async function api<T>(path: string, options: RequestInit = {}): Promise<T
   const token = getToken()
   if (token) headers['Authorization'] = `Bearer ${token}`
 
-  const res = await fetch(path, { ...options, headers })
+  const res = await fetch(`${API_BASE}${path}`, { ...options, headers })
   if (res.status === 401) {
     clearAuth()
     if (!window.location.pathname.startsWith('/login')) {

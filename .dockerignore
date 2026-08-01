@@ -1,0 +1,18 @@
+**/__pycache__/
+**/*.py[cod]
+backend/venv/
+backend/alembic/versions/__pycache__/
+frontend/
+node_modules/
+.git/
+.github/
+.claude/
+*.db
+*.sqlite*
+.env
+
+# Confidential source material must never enter an image
+CampusRecruitmentBook.pdf
+data/seed_source/JDs/
+data/seed_source/jd_extract/
+*.xlsx

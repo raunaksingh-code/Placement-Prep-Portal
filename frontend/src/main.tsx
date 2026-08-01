@@ -20,6 +20,18 @@ import CompanyDetailPage from './features/companies/CompanyDetailPage.tsx'
 import JDDetailPage from './features/companies/JDDetailPage.tsx'
 import QuestionBankPage from './features/companies/QuestionBankPage.tsx'
 
+// GitHub Pages serves this from /<repo>/, so the router must know that prefix.
+// import.meta.env.BASE_URL mirrors `base` in vite.config.ts ('/' in dev).
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+// 404.html (the GitHub Pages SPA fallback) stashes the path it was asked for.
+// Restore it before the router mounts so deep links resolve.
+const redirectPath = sessionStorage.getItem('redirectPath')
+if (redirectPath) {
+  sessionStorage.removeItem('redirectPath')
+  window.history.replaceState(null, '', redirectPath)
+}
+
 const router = createBrowserRouter([
   { path: '/login', element: <LoginPage /> },
   { path: '/register', element: <RegisterPage /> },
@@ -44,7 +56,7 @@ const router = createBrowserRouter([
       { path: 'question-bank', element: <QuestionBankPage /> },
     ],
   },
-], { basename: '/Placement-Prep-Portal' })
+], { basename })
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Placement Prep Portal</title>
+    <script>
+      // GitHub Pages has no server-side rewrite, so a direct visit to a client
+      // route (e.g. /Placement-Prep-Portal/progress) lands here as a 404.
+      // Stash the intended path and bounce to index.html, which restores it.
+      sessionStorage.setItem('redirectPath', location.pathname + location.search + location.hash)
+      var base = location.pathname.split('/')[1]
+      location.replace('/' + (base ? base + '/' : ''))
+    </script>
+  </head>
+  <body></body>
+</html>

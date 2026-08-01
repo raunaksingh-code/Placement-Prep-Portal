@@ -22,7 +22,7 @@ from app.models import test as test_models  # noqa: F401
 from app.models import user as user_models  # noqa: F401
 
 config = context.config
-config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
+config.set_main_option("sqlalchemy.url", settings.sqlalchemy_url)
 
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
@@ -31,12 +31,12 @@ target_metadata = Base.metadata
 
 # SQLite cannot ALTER most things in place. Batch mode makes Alembic rebuild the
 # table (create new -> copy rows -> drop old -> rename), which preserves data.
-IS_SQLITE = settings.DATABASE_URL.startswith("sqlite")
+IS_SQLITE = settings.sqlalchemy_url.startswith("sqlite")
 
 
 def run_migrations_offline() -> None:
     context.configure(
-        url=settings.DATABASE_URL,
+        url=settings.sqlalchemy_url,
         target_metadata=target_metadata,
         literal_binds=True,
         dialect_opts={"paramstyle": "named"},
