@@ -8,4 +8,27 @@ env/
 venv/
 .claude/
 .DS_Store
+
+# Databases — never commit. These hold real user accounts, password hashes and
+# attempt history. Create yours with `alembic upgrade head` + the seed script.
+*.db
+*.sqlite
+*.sqlite3
 placementpro.db
+
+# ---------------------------------------------------------------------------
+# Confidential source material — MUST NOT be committed.
+#
+# The job descriptions were shared with the institute by recruiting companies
+# for a specific batch, and the question tracker records interview experiences
+# contributed by named classmates. Neither may be redistributed publicly.
+# CampusRecruitmentBook.pdf is a copyrighted commercial publication.
+#
+# Keep these outside the repo and point the extractor at them locally.
+# See README for how to supply them.
+# ---------------------------------------------------------------------------
+CampusRecruitmentBook.pdf
+data/seed_source/JDs/
+data/seed_source/jd_extract/
+*Question Tracker.xlsx
+*.xlsx
