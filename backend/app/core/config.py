@@ -16,6 +16,12 @@ class Settings(BaseSettings):
     # Comma-separated in the environment: CORS_ORIGINS=https://user.github.io
     CORS_ORIGINS: str | list[str] = ["http://localhost:5173", "http://127.0.0.1:5173"]
     ENVIRONMENT: str = "development"
+    # Restrict who can register. The portal carries job descriptions shared with
+    # the institute in confidence and interview experiences contributed by named
+    # students, so signup is limited to institute addresses in production.
+    # Comma-separated, e.g. ALLOWED_EMAIL_DOMAINS=greatlakes.edu.in
+    # Empty (the default) allows any address - fine for local development.
+    ALLOWED_EMAIL_DOMAINS: str | list[str] = []
 
     class Config:
         env_file = ".env"
@@ -32,6 +38,20 @@ class Settings(BaseSettings):
         if isinstance(raw, str):
             return [o.strip() for o in raw.split(",") if o.strip()]
         return raw
+
+    @property
+    def allowed_email_domains(self) -> list[str]:
+        raw = self.ALLOWED_EMAIL_DOMAINS
+        values = raw.split(",") if isinstance(raw, str) else raw
+        return [d.strip().lower().lstrip("@") for d in values if str(d).strip()]
+
+    def email_allowed(self, email: str) -> bool:
+        domains = self.allowed_email_domains
+        if not domains:
+            return True
+        addr = email.strip().lower()
+        # Match the domain itself and any subdomain of it
+        return any(addr.endswith(f"@{d}") or addr.endswith(f".{d}") for d in domains)
 
     @property
     def sqlalchemy_url(self) -> str:

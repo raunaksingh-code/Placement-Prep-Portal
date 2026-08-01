@@ -19,16 +19,21 @@ placementpro.db
 # ---------------------------------------------------------------------------
 # Confidential source material — MUST NOT be committed.
 #
-# The job descriptions were shared with the institute by recruiting companies
-# for a specific batch, and the question tracker records interview experiences
-# contributed by named classmates. Neither may be redistributed publicly.
-# CampusRecruitmentBook.pdf is a copyrighted commercial publication.
+# The original JD documents were shared with the institute by recruiting
+# companies for a specific batch; the question tracker records interview
+# experiences contributed by named classmates; CampusRecruitmentBook.pdf is a
+# copyrighted commercial publication. None may be redistributed.
 #
 # Keep these outside the repo and point the extractor at them locally.
 # See README for how to supply them.
+#
+# NOTE: data/seed_source/jd_extract/ IS committed — the app needs it to serve
+# the JD and question-bank modules, and it is ~1.4 MB of derived JSON rather
+# than 53 MB of source documents. It is only safe to commit while this repo
+# stays PRIVATE and registration is limited via ALLOWED_EMAIL_DOMAINS.
+# If this repo is ever made public again, remove it first.
 # ---------------------------------------------------------------------------
 CampusRecruitmentBook.pdf
 data/seed_source/JDs/
-data/seed_source/jd_extract/
 *Question Tracker.xlsx
 *.xlsx

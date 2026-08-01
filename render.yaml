@@ -22,6 +22,10 @@ services:
         value: 3.11.9
       - key: ENVIRONMENT
         value: production
+      # The JD and question-bank modules expose confidential material, so only
+      # institute addresses may register.
+      - key: ALLOWED_EMAIL_DOMAINS
+        value: greatlakes.edu.in
       - key: SECRET_KEY
         generateValue: true
       - key: DATABASE_URL
