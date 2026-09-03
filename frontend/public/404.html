@@ -5,11 +5,12 @@
     <title>Placement Prep Portal</title>
     <script>
       // GitHub Pages has no server-side rewrite, so a direct visit to a client
-      // route (e.g. /Placement-Prep-Portal/progress) lands here as a 404.
-      // Stash the intended path and bounce to index.html, which restores it.
+      // route (e.g. /progress) lands here as a 404. Stash the intended path
+      // and bounce to index.html, which restores it. The site is served from
+      // a custom domain's root (not a /<repo>/ project-page subpath), so the
+      // redirect target is always '/'.
       sessionStorage.setItem('redirectPath', location.pathname + location.search + location.hash)
-      var base = location.pathname.split('/')[1]
-      location.replace('/' + (base ? base + '/' : ''))
+      location.replace('/')
     </script>
   </head>
   <body></body>
