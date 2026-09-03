@@ -36,6 +36,21 @@ services:
       # e.g. https://raunaksingh-code.github.io
       - key: CORS_ORIGINS
         sync: false
+      # OAuth client ID from the Google Cloud Console. Must match the
+      # frontend's VITE_GOOGLE_CLIENT_ID. Leave unset to hide the Google
+      # sign-in button.
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      # Comma-separated emails to promote to admin on their next sign-in.
+      # Only needed to bootstrap the first admin - after that, admins are
+      # managed from the admin page.
+      - key: ADMIN_EMAILS
+        sync: false
+      # Powers the AI Coach features (ATS grader, mock interview/GD, chatbot).
+      # Get a key from https://aistudio.google.com/apikey. Without it, those
+      # endpoints fall back to a fixed mock response.
+      - key: GEMINI_API_KEY
+        sync: false
 
 databases:
   - name: placement-prep-db

@@ -7,7 +7,11 @@ name: Deploy Frontend to GitHub Pages
 # Set it once: Settings -> Secrets and variables -> Actions -> Variables ->
 #   New repository variable
 #   Name:  VITE_API_BASE_URL
-#   Value: https://your-api-host.onrender.com   (no trailing slash)
+#   Value: https://api.placementmantra.shop   (no trailing slash)
+#
+# Served from the custom domain placementmantra.shop, configured under
+# Settings -> Pages -> Custom domain, with GoDaddy DNS pointed at GitHub
+# Pages (see README for the exact records).
 
 on:
   push:
@@ -58,9 +62,12 @@ jobs:
       - name: Build
         env:
           VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL }}
-          # Pages serves a project site from /<repo>/, unlike Vercel/Netlify
-          # which serve from the root.
-          VITE_BASE_PATH: /${{ github.event.repository.name }}/
+          # Optional - unset hides the "Sign in with Google" button. Must
+          # match the backend's GOOGLE_CLIENT_ID.
+          VITE_GOOGLE_CLIENT_ID: ${{ vars.VITE_GOOGLE_CLIENT_ID }}
+        # No VITE_BASE_PATH: the site is served from a custom domain's root
+        # (placementmantra.shop), not the /<repo>/ subpath a github.io project
+        # site would use. vite.config.ts already defaults base to '/'.
         run: npm run build
 
       - name: Setup Pages

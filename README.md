@@ -106,6 +106,7 @@ Variables):
 
 ```
 VITE_API_BASE_URL = https://your-api-host.onrender.com
+VITE_GOOGLE_CLIENT_ID = your-oauth-client-id.apps.googleusercontent.com
 ```
 
 Pushing to `main` then builds and deploys. The workflow fails fast if that
@@ -119,6 +120,8 @@ variable is missing, rather than shipping a site whose every API call 404s.
 | `SECRET_KEY` | yes | `python -c "import secrets; print(secrets.token_urlsafe(48))"` |
 | `DATABASE_URL` | yes | `postgres://` and `postgresql://` are rewritten to the psycopg driver automatically |
 | `CORS_ORIGINS` | yes | Comma-separated origins |
+| `GOOGLE_CLIENT_ID` | no | OAuth client ID from the Google Cloud Console. Must match the frontend's `VITE_GOOGLE_CLIENT_ID`; leave both unset to hide the "Sign in with Google" button. |
+| `ADMIN_EMAILS` | no | Comma-separated emails promoted to admin on next sign-in. Only needed to bootstrap the first admin - further admins are granted from the admin page. |
 
 ## Stack
 

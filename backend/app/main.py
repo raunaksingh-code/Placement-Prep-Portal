@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.api import auth, companies, guides, learning, practice, progress
+from app.api import admin, auth, companies, connections, guides, learning, practice, profile, progress, projects, ai
 from app.core.config import settings
 
 # Schema is owned by Alembic - run `alembic upgrade head` to create or update it.
@@ -23,6 +23,11 @@ app.include_router(practice.router)
 app.include_router(companies.router)
 app.include_router(progress.router)
 app.include_router(guides.router)
+app.include_router(projects.router)
+app.include_router(ai.router)
+app.include_router(admin.router)
+app.include_router(connections.router)
+app.include_router(profile.router)
 
 
 @app.get("/api/health")

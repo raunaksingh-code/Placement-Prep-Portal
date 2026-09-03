@@ -22,6 +22,20 @@ class Settings(BaseSettings):
     # Comma-separated, e.g. ALLOWED_EMAIL_DOMAINS=greatlakes.edu.in
     # Empty (the default) allows any address - fine for local development.
     ALLOWED_EMAIL_DOMAINS: str | list[str] = []
+    # OAuth client ID from the Google Cloud Console, shared with the frontend
+    # (VITE_GOOGLE_CLIENT_ID). Required for the "Sign in with Google" button;
+    # without it /api/auth/google refuses requests.
+    GOOGLE_CLIENT_ID: str = ""
+    # Bootstraps the admin role: any user whose email appears here is promoted
+    # to admin the next time they authenticate (see get_current_user). From
+    # then on, admin status is a DB flag other admins can grant from the
+    # admin page - this list only needs to name the first one.
+    # Comma-separated, e.g. ADMIN_EMAILS=raunak.pgdm27g@greatlakes.edu.in
+    ADMIN_EMAILS: str | list[str] = []
+    # Powers the AI Coach features (ATS grader, mock interview/GD, chatbot).
+    # Get a key from https://aistudio.google.com/apikey. Without it, those
+    # endpoints fall back to a fixed mock response.
+    GEMINI_API_KEY: str = ""
 
     class Config:
         env_file = ".env"
@@ -52,6 +66,15 @@ class Settings(BaseSettings):
         addr = email.strip().lower()
         # Match the domain itself and any subdomain of it
         return any(addr.endswith(f"@{d}") or addr.endswith(f".{d}") for d in domains)
+
+    @property
+    def admin_emails(self) -> list[str]:
+        raw = self.ADMIN_EMAILS
+        values = raw.split(",") if isinstance(raw, str) else raw
+        return [e.strip().lower() for e in values if str(e).strip()]
+
+    def is_admin_email(self, email: str) -> bool:
+        return email.strip().lower() in self.admin_emails
 
     @property
     def sqlalchemy_url(self) -> str:

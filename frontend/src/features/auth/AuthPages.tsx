@@ -1,10 +1,79 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useRef, useState, type FormEvent } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { api, setAuth, type User } from '../../lib/api'
 
 interface TokenResponse {
   access_token: string
   user: User
+}
+
+// Populated by the Google Identity Services script once it loads.
+declare global {
+  interface Window {
+    google?: {
+      accounts: {
+        id: {
+          initialize: (config: { client_id: string; callback: (response: { credential: string }) => void }) => void
+          renderButton: (parent: HTMLElement, options: Record<string, unknown>) => void
+        }
+      }
+    }
+  }
+}
+
+const GOOGLE_CLIENT_ID: string | undefined = import.meta.env.VITE_GOOGLE_CLIENT_ID
+
+let googleScriptPromise: Promise<void> | null = null
+function loadGoogleScript(): Promise<void> {
+  if (!googleScriptPromise) {
+    googleScriptPromise = new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = 'https://accounts.google.com/gsi/client'
+      script.async = true
+      script.defer = true
+      script.onload = () => resolve()
+      script.onerror = () => reject(new Error('Failed to load Google Sign-In'))
+      document.head.appendChild(script)
+    })
+  }
+  return googleScriptPromise
+}
+
+function GoogleSignInButton({ onCredential }: { onCredential: (credential: string) => void }) {
+  const buttonRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!GOOGLE_CLIENT_ID) return
+    let cancelled = false
+    loadGoogleScript().then(() => {
+      if (cancelled || !buttonRef.current || !window.google) return
+      window.google.accounts.id.initialize({
+        client_id: GOOGLE_CLIENT_ID,
+        callback: (response) => onCredential(response.credential),
+      })
+      window.google.accounts.id.renderButton(buttonRef.current, {
+        theme: 'outline',
+        size: 'large',
+        width: 336,
+      })
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [onCredential])
+
+  if (!GOOGLE_CLIENT_ID) return null
+
+  return (
+    <div className="mt-5">
+      <div className="flex items-center gap-3 text-xs text-slate-400 mb-4">
+        <div className="h-px flex-1 bg-slate-200" />
+        <span>OR</span>
+        <div className="h-px flex-1 bg-slate-200" />
+      </div>
+      <div ref={buttonRef} className="flex justify-center" />
+    </div>
+  )
 }
 
 function AuthShell({ title, children }: { title: string; children: React.ReactNode }) {
@@ -49,6 +118,23 @@ export function LoginPage() {
     }
   }
 
+  async function submitGoogleCredential(credential: string) {
+    setBusy(true)
+    setError('')
+    try {
+      const res = await api<TokenResponse>('/api/auth/google', {
+        method: 'POST',
+        body: JSON.stringify({ credential }),
+      })
+      setAuth(res.access_token, res.user)
+      navigate('/')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Google sign-in failed')
+    } finally {
+      setBusy(false)
+    }
+  }
+
   return (
     <AuthShell title="Sign in to continue your preparation">
       <form onSubmit={submit} className="space-y-4">
@@ -57,6 +143,7 @@ export function LoginPage() {
         {error && <p className="text-sm text-red-600">{error}</p>}
         <button className={btnCls} disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button>
       </form>
+      <GoogleSignInButton onCredential={submitGoogleCredential} />
       <p className="text-sm text-center text-slate-500 mt-4">
         New here?{' '}
         <Link to="/register" className="text-indigo-600 hover:underline">Create an account</Link>

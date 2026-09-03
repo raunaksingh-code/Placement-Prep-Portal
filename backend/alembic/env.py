@@ -20,6 +20,12 @@ from app.models import guide as guide_models  # noqa: F401
 from app.models import learning as learning_models  # noqa: F401
 from app.models import test as test_models  # noqa: F401
 from app.models import user as user_models  # noqa: F401
+from app.models import project as project_models  # noqa: F401
+from app.models import connection as connection_models  # noqa: F401
+from app.models import experience as experience_models  # noqa: F401
+from app.models import education as education_models  # noqa: F401
+from app.models import skill as skill_models  # noqa: F401
+from app.models import resume as resume_models  # noqa: F401
 
 config = context.config
 config.set_main_option("sqlalchemy.url", settings.sqlalchemy_url)

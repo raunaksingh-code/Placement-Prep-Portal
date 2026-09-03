@@ -1,3 +1,103 @@
+export interface User {
+  id: number
+  email: string
+  full_name: string
+  headline?: string
+  bio?: string
+  domain?: string
+  linkedin_url?: string
+  github_url?: string
+  is_admin: boolean
+}
+
+export interface Experience {
+  id: number
+  title: string
+  company: string
+  location?: string | null
+  start_month: string
+  end_month?: string | null
+  description?: string | null
+}
+
+export interface Education {
+  id: number
+  school: string
+  degree?: string | null
+  field_of_study?: string | null
+  start_year?: string | null
+  end_year?: string | null
+  description?: string | null
+}
+
+export interface Skill {
+  id: number
+  name: string
+  endorsement_count: number
+  endorsed_by_me: boolean
+}
+
+export interface Resume {
+  filename: string
+  content_type: string
+  uploaded_at: string
+}
+
+export type ConnectionStatus = 'self' | 'none' | 'pending_outgoing' | 'pending_incoming' | 'connected'
+
+export interface UserProfile extends User {
+  experiences: Experience[]
+  education: Education[]
+  skills: Skill[]
+  resume: Resume | null
+  connection_count: number
+  connection_status: ConnectionStatus
+  connection_id: number | null
+}
+
+export interface ConnectionRequest {
+  id: number
+  user: User
+  created_at: string
+}
+
+export interface ConnectionSummary {
+  connection_id: number
+  other_user_id: number
+  status: 'pending' | 'accepted'
+  is_requester: boolean
+}
+
+export interface Project {
+  id: number
+  title: string
+  description: string
+  domain: string
+  created_by_id: number
+  created_at: string
+  creator: User
+}
+
+export interface ATSResponse {
+  score: number
+  suggestions: string[]
+  feedback: string
+}
+
+export interface AnswerResponse {
+  improved_answer: string
+  feedback: string
+}
+
+export interface ChatMessage {
+  role: 'user' | 'ai'
+  content: string
+}
+
+export interface ChatReply {
+  reply: string
+}
+
 export interface Subject {
   id: number
   slug: string
