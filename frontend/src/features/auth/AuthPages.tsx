@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react'
+import { GraduationCap } from 'lucide-react'
 import { Link, useNavigate } from 'react-router-dom'
 import { api, setAuth, type User } from '../../lib/api'
 
@@ -80,7 +81,12 @@ function AuthShell({ title, children }: { title: string; children: React.ReactNo
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-md">
-        <h1 className="text-2xl font-bold text-center text-indigo-700 mb-1">Placement Prep Portal</h1>
+        <div className="flex justify-center mb-3">
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600 text-white shadow-lg shadow-indigo-500/30">
+            <GraduationCap size={24} strokeWidth={2.25} />
+          </span>
+        </div>
+        <h1 className="text-2xl font-bold text-center text-indigo-700 mb-1">Placement Mantra</h1>
         <p className="text-center text-slate-500 mb-6">{title}</p>
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">{children}</div>
       </div>

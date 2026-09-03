@@ -1,4 +1,4 @@
-# Placement Prep Portal
+# Placement Mantra
 
 A placement preparation portal for PGDM students: aptitude learning and practice,
 timed mock tests, job descriptions with role-specific prep plans, a company-wise

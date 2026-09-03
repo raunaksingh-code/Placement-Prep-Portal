@@ -1,4 +1,4 @@
-import { LogOut } from 'lucide-react'
+import { GraduationCap, LogOut } from 'lucide-react'
 import { Link, Navigate, NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { clearAuth, getToken, getUser } from '../lib/api'
 
@@ -34,10 +34,10 @@ export default function Layout() {
         <div className="max-w-[90rem] mx-auto px-4 h-16 flex items-center justify-between gap-4">
           <div className="flex items-center gap-7 min-w-0 overflow-x-auto no-scrollbar">
             <Link to="/" className="flex items-center gap-2.5 whitespace-nowrap">
-              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 text-white font-bold text-sm shadow-md shadow-indigo-500/30">
-                P
+              <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 text-white shadow-md shadow-indigo-500/30">
+                <GraduationCap size={18} strokeWidth={2.25} />
               </span>
-              <span className="font-bold text-[15px] text-slate-900">Placement Prep Portal</span>
+              <span className="font-bold text-[15px] text-slate-900">Placement Mantra</span>
             </Link>
             <nav className="flex items-center gap-1 text-sm">
               {nav.map((n) => (

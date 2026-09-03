@@ -7,7 +7,7 @@ from app.core.config import settings
 # Schema is owned by Alembic - run `alembic upgrade head` to create or update it.
 # Nothing here touches the database structure.
 
-app = FastAPI(title="Placement Prep Portal API")
+app = FastAPI(title="Placement Mantra API")
 
 app.add_middleware(
     CORSMiddleware,
