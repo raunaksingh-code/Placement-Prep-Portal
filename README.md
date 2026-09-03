@@ -87,14 +87,27 @@ cd backend && ./venv/Scripts/alembic upgrade head
 The frontend is static and goes to GitHub Pages. **The backend cannot run on
 GitHub Pages** — it needs a Python host and a database.
 
+### Database (Neon)
+
+Render's own free Postgres tier deletes the database (not just spins it
+down) a fixed number of days after creation — that's a one-way trip, not a
+pause. Use [Neon](https://neon.tech) instead: its free tier suspends compute
+on idle but never deletes data.
+
+1. Sign up at neon.tech, create a project.
+2. Copy the connection string it gives you (`postgresql://<user>:<password>@<host>/<dbname>?sslmode=require`).
+3. Paste it into `DATABASE_URL` on the Render web service (below) — it's
+   `sync: false` in `render.yaml`, so it's set once by hand, not generated.
+
 ### Backend (Render)
 
 1. New → Blueprint, point Render at this repo. [`render.yaml`](render.yaml)
-   provisions the web service and a Postgres database.
-2. Render generates `SECRET_KEY` and wires `DATABASE_URL` automatically.
-3. Set `CORS_ORIGINS` to your Pages origin, e.g. `https://<user>.github.io`.
-4. Migrations run on each deploy via `preDeployCommand`.
-5. Seed content once from the Render shell: `python -m app.seed.seed`.
+   provisions the web service (no database — see above).
+2. Render generates `SECRET_KEY` automatically.
+3. Set `DATABASE_URL` (the Neon connection string) and `CORS_ORIGINS` (your
+   frontend origin(s), comma-separated) in the dashboard.
+4. Migrations and seeding both run in `startCommand` on every boot — both are
+   idempotent, so this is safe to leave as-is.
 
 A `Dockerfile` is included if you prefer a container host — build from the repo
 root, not from `backend/`.
@@ -112,16 +125,22 @@ VITE_GOOGLE_CLIENT_ID = your-oauth-client-id.apps.googleusercontent.com
 Pushing to `main` then builds and deploys. The workflow fails fast if that
 variable is missing, rather than shipping a site whose every API call 404s.
 
+If you're serving from a custom domain rather than a `github.io/<repo>/`
+project-page subpath, also set the domain under Settings → Pages → Custom
+domain, and point its DNS at GitHub Pages (4 A records to GitHub's IPs for
+the apex, a CNAME to `<user>.github.io` for `www`).
+
 ### Production environment variables
 
 | Variable | Required | Notes |
 |---|---|---|
 | `ENVIRONMENT` | yes | Set to `production`. The app refuses to start with the default `SECRET_KEY` when set. |
 | `SECRET_KEY` | yes | `python -c "import secrets; print(secrets.token_urlsafe(48))"` |
-| `DATABASE_URL` | yes | `postgres://` and `postgresql://` are rewritten to the psycopg driver automatically |
+| `DATABASE_URL` | yes | A Neon (or other Postgres) connection string. `postgres://` and `postgresql://` are rewritten to the psycopg driver automatically |
 | `CORS_ORIGINS` | yes | Comma-separated origins |
 | `GOOGLE_CLIENT_ID` | no | OAuth client ID from the Google Cloud Console. Must match the frontend's `VITE_GOOGLE_CLIENT_ID`; leave both unset to hide the "Sign in with Google" button. |
 | `ADMIN_EMAILS` | no | Comma-separated emails promoted to admin on next sign-in. Only needed to bootstrap the first admin - further admins are granted from the admin page. |
+| `GEMINI_API_KEY` | no | Powers the AI Coach features (ATS grader, mock interview/GD, chatbot). Get one at [aistudio.google.com/apikey](https://aistudio.google.com/apikey); those endpoints fall back to a fixed mock response without it. |
 
 ## Stack
 
