@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from fastapi import Depends, HTTPException, status
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
@@ -8,6 +10,14 @@ from app.db.session import get_db
 from app.models.user import User
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
+
+
+def touch_last_login(user: User, db: Session) -> None:
+    """Stamps last_login_at on a successful sign-in, for the admin dashboard's
+    active-user counts. Called from register/login/google login only - not
+    from get_current_user, which would turn every API call into a write."""
+    user.last_login_at = datetime.utcnow()
+    db.commit()
 
 
 def sync_admin_bootstrap(user: User, db: Session) -> None:

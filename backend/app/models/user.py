@@ -26,3 +26,6 @@ class User(Base):
     # get_current_user), then managed from the admin page.
     is_admin: Mapped[bool] = mapped_column(Boolean, nullable=False, default=False, server_default="0")
     created_at: Mapped[datetime] = mapped_column(DateTime, server_default=func.now())
+    # Updated on every successful login (password or Google). Null until the
+    # user's first sign-in after this column was added.
+    last_login_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)

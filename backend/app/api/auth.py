@@ -4,7 +4,7 @@ from google.oauth2 import id_token as google_id_token
 from sqlalchemy.orm import Session
 
 from app.api.connections import connection_count, connection_status
-from app.api.deps import get_current_user, sync_admin_bootstrap
+from app.api.deps import get_current_user, sync_admin_bootstrap, touch_last_login
 from app.api.profile import skill_out
 from app.core.config import settings
 from app.core.security import create_access_token, hash_password, verify_password
@@ -60,6 +60,7 @@ def register(body: UserRegister, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(user)
     sync_admin_bootstrap(user, db)
+    touch_last_login(user, db)
     return TokenOut(access_token=create_access_token(user.email), user=UserOut.model_validate(user))
 
 @router.post("/login", response_model=TokenOut)
@@ -68,6 +69,7 @@ def login(body: UserLogin, db: Session = Depends(get_db)):
     if not user or not user.hashed_password or not verify_password(body.password, user.hashed_password):
         raise HTTPException(status_code=401, detail="Incorrect email or password")
     sync_admin_bootstrap(user, db)
+    touch_last_login(user, db)
     return TokenOut(access_token=create_access_token(user.email), user=UserOut.model_validate(user))
 
 @router.post("/google", response_model=TokenOut)
@@ -105,6 +107,7 @@ def google_login(body: GoogleAuth, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(user)
     sync_admin_bootstrap(user, db)
+    touch_last_login(user, db)
     return TokenOut(access_token=create_access_token(user.email), user=UserOut.model_validate(user))
 
 @router.get("/me", response_model=UserProfileOut)

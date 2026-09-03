@@ -98,6 +98,35 @@ export interface ChatReply {
   reply: string
 }
 
+export interface AdminUser extends User {
+  created_at: string
+  last_login_at: string | null
+}
+
+export interface DailyCount {
+  date: string
+  count: number
+}
+
+export interface AdminStats {
+  total_users: number
+  total_admins: number
+  new_users_7d: number
+  new_users_30d: number
+  active_users_24h: number
+  active_users_7d: number
+  total_projects: number
+  total_connections: number
+  total_resumes: number
+  total_test_attempts: number
+  completed_test_attempts: number
+  total_companies: number
+  total_job_descriptions: number
+  total_interview_questions: number
+  signups_by_day: DailyCount[]
+  recent_users: AdminUser[]
+}
+
 export interface Subject {
   id: number
   slug: string

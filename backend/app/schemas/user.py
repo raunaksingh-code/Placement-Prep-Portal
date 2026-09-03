@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import BaseModel, EmailStr
 
 from app.schemas.education import EducationOut
@@ -46,6 +48,13 @@ class UserUpdate(BaseModel):
 
 class AdminUserUpdate(BaseModel):
     is_admin: bool
+
+
+class AdminUserOut(UserOut):
+    """UserOut plus the signup/activity timestamps only admins should see."""
+
+    created_at: datetime
+    last_login_at: datetime | None = None
 
 
 class UserProfileOut(UserOut):
