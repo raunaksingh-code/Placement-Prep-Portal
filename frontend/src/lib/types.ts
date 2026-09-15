@@ -98,6 +98,18 @@ export interface ChatReply {
   reply: string
 }
 
+export interface HomeSummary {
+  topic_count: number
+  subject_count: number
+  company_count: number
+  jd_count: number
+  question_count: number
+  mock_test_count: number
+  guide_count: number
+  progress_attempts: number
+  progress_accuracy: number
+}
+
 export interface AdminUser extends User {
   created_at: string
   last_login_at: string | null

@@ -14,27 +14,22 @@ import {
   UserRound,
 } from 'lucide-react'
 import { api } from '../../lib/api'
-import type { CompanySummary, GuideSummary, MockTest, Progress, Subject } from '../../lib/types'
+import type { HomeSummary } from '../../lib/types'
 
 export default function HomePage() {
-  const [subjects, setSubjects] = useState<Subject[]>([])
-  const [companies, setCompanies] = useState<CompanySummary[]>([])
-  const [mocks, setMocks] = useState<MockTest[]>([])
-  const [progress, setProgress] = useState<Progress | null>(null)
-  const [guides, setGuides] = useState<GuideSummary[]>([])
+  const [summary, setSummary] = useState<HomeSummary | null>(null)
 
   useEffect(() => {
-    api<Subject[]>('/api/subjects').then(setSubjects).catch(() => {})
-    api<CompanySummary[]>('/api/companies').then(setCompanies).catch(() => {})
-    api<MockTest[]>('/api/mock-tests').then(setMocks).catch(() => {})
-    api<Progress>('/api/progress').then(setProgress).catch(() => {})
-    api<GuideSummary[]>('/api/guides').then(setGuides).catch(() => {})
+    api<HomeSummary>('/api/home').then(setSummary).catch(() => {})
   }, [])
 
-  const topicCount = subjects.reduce((n, s) => n + s.topic_count, 0)
-  const jdCount = companies.reduce((n, c) => n + c.jd_count, 0)
-  const questionCount = companies.reduce((n, c) => n + c.question_count, 0)
-  const companyCount = companies.filter((c) => c.jd_count).length
+  const topicCount = summary?.topic_count ?? 0
+  const subjectCount = summary?.subject_count ?? 0
+  const jdCount = summary?.jd_count ?? 0
+  const questionCount = summary?.question_count ?? 0
+  const companyCount = summary?.company_count ?? 0
+  const mockCount = summary?.mock_test_count ?? 0
+  const guideCount = summary?.guide_count ?? 0
 
   const cards = [
     {
@@ -43,7 +38,7 @@ export default function HomePage() {
       gradient: 'from-blue-500 to-indigo-600',
       title: 'Aptitude Preparation',
       blurb: 'Learn each topic, then practice and take timed tests.',
-      stat: topicCount ? `${topicCount} topics across ${subjects.length} subjects` : '',
+      stat: topicCount ? `${topicCount} topics across ${subjectCount} subjects` : '',
     },
     {
       to: '/mock-tests',
@@ -51,7 +46,7 @@ export default function HomePage() {
       gradient: 'from-amber-500 to-orange-600',
       title: 'Mock Tests',
       blurb: 'Full-length and sectional papers, timed with negative marking.',
-      stat: mocks.length ? `${mocks.length} tests available` : '',
+      stat: mockCount ? `${mockCount} tests available` : '',
     },
     {
       to: '/interview-prep',
@@ -59,7 +54,7 @@ export default function HomePage() {
       gradient: 'from-emerald-500 to-teal-600',
       title: 'Interview Preparation',
       blurb: 'HR, resume, GD, technical, guesstimates and cases — with real questions.',
-      stat: guides.length ? `${guides.length} guides` : '',
+      stat: guideCount ? `${guideCount} guides` : '',
     },
     {
       to: '/companies',
@@ -83,8 +78,8 @@ export default function HomePage() {
       gradient: 'from-sky-500 to-blue-600',
       title: 'Your Progress',
       blurb: 'Scores, accuracy, syllabus coverage and the topics to revise next.',
-      stat: progress?.summary.attempts
-        ? `${progress.summary.attempts} tests · ${progress.summary.accuracy}% accuracy`
+      stat: summary?.progress_attempts
+        ? `${summary.progress_attempts} tests · ${summary.progress_accuracy}% accuracy`
         : 'No attempts yet',
     },
     {
@@ -122,10 +117,10 @@ export default function HomePage() {
   ]
 
   const heroStats = [
-    { label: 'Topics', value: topicCount || subjects.length },
-    { label: 'Companies', value: companyCount || companies.length },
+    { label: 'Topics', value: topicCount },
+    { label: 'Companies', value: companyCount },
     { label: 'Questions', value: questionCount },
-    { label: 'Mock tests', value: mocks.length },
+    { label: 'Mock tests', value: mockCount },
   ]
 
   return (
