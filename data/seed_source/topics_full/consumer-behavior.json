@@ -1,0 +1,114 @@
+{
+  "study_material": {
+    "title": "Consumer Behavior",
+    "introduction": "Understanding why customers buy what they buy is the foundation under every marketing decision. This topic covers the consumer decision journey, the types of buying behavior, and the psychological factors interviewers expect a marketing candidate to reference.",
+    "learning_objectives": [
+      "Walk through the 5 stages of the consumer decision-making process",
+      "Distinguish high-involvement from low-involvement purchase decisions",
+      "Explain Maslow's hierarchy of needs as applied to marketing",
+      "Identify the difference between needs, wants and demands",
+      "Describe cognitive dissonance and why post-purchase marketing matters"
+    ],
+    "concepts": [
+      {
+        "heading": "1. The Consumer Decision-Making Process",
+        "body": "Problem/need recognition -> information search -> evaluation of alternatives -> purchase decision -> post-purchase behavior. Marketing can intervene at every stage: awareness campaigns at need recognition, content/reviews at information search, comparison and differentiation at evaluation, promotions/friction-removal at purchase, and follow-up/support at post-purchase (where satisfaction drives repeat purchase and word-of-mouth)."
+      },
+      {
+        "heading": "2. High vs. Low Involvement Purchases",
+        "body": "High-involvement purchases (a car, a house, a laptop) involve significant cost/risk, so customers research extensively and take a long decision journey. Low-involvement purchases (a candy bar, a bottle of water) are cheap, frequent, and largely habitual, with little conscious deliberation. Marketing strategy differs sharply: high-involvement needs detailed information and trust-building; low-involvement relies more on availability, habit, and simple brand recognition at the point of purchase."
+      },
+      {
+        "heading": "3. Maslow's Hierarchy of Needs in Marketing",
+        "body": "Physiological (food, water) -> Safety (security, health) -> Social/Belonging (relationships, community) -> Esteem (status, recognition) -> Self-actualization (achieving potential). Marketers position products against the need level most relevant to the target: insurance appeals to Safety, a luxury watch to Esteem, a fitness app to Self-actualization. Misjudging which need level a product actually satisfies for its audience is a common positioning mistake."
+      },
+      {
+        "heading": "4. Needs, Wants, and Demands",
+        "body": "A need is a basic requirement (thirst). A want is a need shaped by culture/personality into a specific form (wanting a specific brand of soda). A demand is a want backed by the ability and willingness to pay. Marketing doesn't create needs, but it does shape wants and convert them into demand by making a specific offering desirable and accessible."
+      },
+      {
+        "heading": "5. Post-Purchase Behavior & Cognitive Dissonance",
+        "body": "After a purchase, especially a significant one, customers often experience cognitive dissonance - doubt about whether they made the right choice. Good post-purchase marketing (confirmation emails, onboarding support, easy returns, follow-up content) reduces this doubt, increasing satisfaction, reducing returns, and improving the odds of repeat purchase and positive word-of-mouth."
+      }
+    ],
+    "formulas": [
+      "Decision journey: Need recognition -> Information search -> Evaluation of alternatives -> Purchase -> Post-purchase behavior",
+      "Demand = Want + ability and willingness to pay"
+    ],
+    "shortcut_methods": [
+      "If a case involves an expensive, infrequent purchase, default to assuming high involvement (detailed comparison, trust signals matter); if cheap and frequent, assume low involvement (habit, availability matter more)",
+      "When asked to position a product, ask which Maslow level it genuinely satisfies for the target customer - that's often the core of the positioning angle",
+      "If post-purchase churn/returns are high for an expensive product, cognitive dissonance is a strong first hypothesis to investigate"
+    ],
+    "common_mistakes": [
+      "Assuming all purchases follow the same lengthy decision journey - low-involvement purchases are often near-automatic",
+      "Confusing 'need' with 'want' - marketing shapes wants and turns them into demand, it doesn't invent basic needs",
+      "Ignoring post-purchase experience, when it's often the cheapest lever to increase retention and referrals"
+    ],
+    "summary": "Consumer behavior interviews test whether you can place a purchase decision on the involvement spectrum, connect a product's appeal to the right level of Maslow's hierarchy, and remember that the customer relationship doesn't end at checkout - post-purchase experience drives repeat business.",
+    "quick_revision_notes": [
+      "Decision journey: Need recognition -> Search -> Evaluate -> Purchase -> Post-purchase",
+      "High involvement = expensive/infrequent/research-heavy; Low involvement = cheap/frequent/habitual",
+      "Maslow: Physiological -> Safety -> Social -> Esteem -> Self-actualization",
+      "Need (basic) -> Want (shaped by culture) -> Demand (want + ability/willingness to pay)",
+      "Cognitive dissonance = post-purchase doubt; reduce it to drive retention and word-of-mouth"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["decision-journey"],
+      "question": "What is the correct order of the consumer decision-making process?",
+      "options": [
+        "Need recognition, information search, evaluation of alternatives, purchase, post-purchase behavior",
+        "Purchase, need recognition, evaluation, information search, post-purchase behavior",
+        "Information search, purchase, need recognition, evaluation, post-purchase behavior",
+        "Post-purchase behavior, purchase, evaluation, need recognition, information search"
+      ],
+      "correct_answer": "Need recognition, information search, evaluation of alternatives, purchase, post-purchase behavior",
+      "explanation": "This is the standard 5-stage sequence: recognizing a need comes first, and post-purchase behavior (satisfaction, dissonance) comes last."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["involvement"],
+      "question": "Buying a laptop for the first time is typically a ___ involvement decision, while buying a bottle of water is typically a ___ involvement decision.",
+      "options": ["high; low", "low; high", "high; high", "low; low"],
+      "correct_answer": "high; low",
+      "explanation": "Expensive, infrequent purchases with real risk (a laptop) are high-involvement; cheap, frequent, habitual purchases (water) are low-involvement."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["maslow"],
+      "question": "A luxury watch brand's marketing emphasizes exclusivity and status among peers. This appeals most directly to which level of Maslow's hierarchy?",
+      "options": ["Esteem", "Physiological", "Safety", "Self-actualization"],
+      "correct_answer": "Esteem",
+      "explanation": "Status, recognition and how one is perceived by others map to the Esteem level of Maslow's hierarchy."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["needs-wants-demands"],
+      "question": "A person is thirsty (a need) and specifically wants a branded sparkling water, and is willing and able to pay for it. This willingness-and-ability-to-pay stage is called:",
+      "options": ["Demand", "Need", "Want", "Segmentation"],
+      "correct_answer": "Demand",
+      "explanation": "A want backed by the ability and willingness to pay for it becomes a demand."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 50,
+      "tags": ["case", "cognitive-dissonance"],
+      "question": "A company selling expensive furniture notices many customers requesting refunds shortly after a purchase, despite no product defects. What is the most likely explanation and fix?",
+      "options": [
+        "Cognitive dissonance after a high-involvement purchase - add reassurance touchpoints like confirmation emails, setup support, and clear return policies to reduce post-purchase doubt",
+        "The product must be defective, even though none were reported",
+        "The price is too low, so customers don't value it",
+        "This is unrelated to consumer behavior and purely a logistics issue"
+      ],
+      "correct_answer": "Cognitive dissonance after a high-involvement purchase - add reassurance touchpoints like confirmation emails, setup support, and clear return policies to reduce post-purchase doubt",
+      "explanation": "High-involvement, expensive purchases commonly trigger post-purchase doubt (cognitive dissonance) even without any product defect. Reassurance and support after purchase is the standard fix."
+    }
+  ]
+}

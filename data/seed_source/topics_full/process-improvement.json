@@ -1,0 +1,110 @@
+{
+  "study_material": {
+    "title": "Process Improvement (Lean & Six Sigma)",
+    "introduction": "Process improvement is about systematically removing waste and reducing variability in how work gets done. Lean focuses on eliminating waste and speeding up flow; Six Sigma focuses on reducing variation and defects using data. Together they're the most commonly referenced frameworks in operations interviews.",
+    "learning_objectives": [
+      "List the 8 wastes of Lean (DOWNTIME)",
+      "Explain the 5S workplace organization method",
+      "Walk through the DMAIC cycle used in Six Sigma projects",
+      "Distinguish Lean's focus (speed/waste) from Six Sigma's focus (variation/defects)",
+      "Read and interpret a simple process flow to spot a bottleneck"
+    ],
+    "concepts": [
+      {
+        "heading": "1. The 8 Wastes of Lean (DOWNTIME)",
+        "body": "Defects, Overproduction, Waiting, Non-utilized talent, Transportation, Inventory, Motion, Extra-processing. Lean's core idea: anything that doesn't add value the customer would pay for is waste, and should be reduced or removed. Overproduction is considered the worst waste because it causes most of the others (excess inventory, extra transport, extra storage)."
+      },
+      {
+        "heading": "2. 5S Workplace Organization",
+        "body": "Sort (remove what's not needed), Set in order (organize what remains for easy access), Shine (clean and inspect), Standardize (make the new order the norm via visual controls/checklists), Sustain (build habits/audits to maintain it). A simple but frequently-tested Lean tool for improving flow and reducing search/motion waste."
+      },
+      {
+        "heading": "3. DMAIC (Six Sigma)",
+        "body": "Define the problem and customer requirements -> Measure current performance with data -> Analyze root causes (not symptoms) -> Improve by testing and implementing a fix -> Control by putting monitoring in place so the gain sticks. DMAIC is the standard structured problem-solving cycle for existing processes with a measurable defect/quality issue."
+      },
+      {
+        "heading": "4. Bottleneck Identification",
+        "body": "In any multi-step process, the overall throughput is capped by the slowest step (the bottleneck) - speeding up any other step does not increase total output, it just creates more waiting before the bottleneck. Theory of Constraints: identify the constraint, exploit it (maximize its utilization), subordinate everything else to it, elevate it (add capacity) if still limiting, then repeat."
+      }
+    ],
+    "formulas": [
+      "Takt time = available production time / customer demand (the pace needed to match demand)",
+      "Cycle time = actual time to complete one unit at a given process step",
+      "Throughput = output of the bottleneck step (not the average of all steps)"
+    ],
+    "shortcut_methods": [
+      "If a case asks 'how do we speed up this process', find the step with the longest cycle time first - that's the bottleneck, and it's almost always the right place to focus",
+      "'DOWNTIME' spells out the 8 wastes - a quick way to recall them under interview pressure",
+      "DMAIC is for improving an EXISTING process; if the question is about designing something NEW, that's DFSS (Design for Six Sigma) or a Lean 'future-state map', not DMAIC"
+    ],
+    "common_mistakes": [
+      "Recommending 'work faster' at a non-bottleneck step - it won't change total throughput",
+      "Treating Lean and Six Sigma as interchangeable - Lean removes waste/speeds flow, Six Sigma reduces variation/defects using statistics; many firms combine them as 'Lean Six Sigma'",
+      "Jumping to 'Improve' in DMAIC without first Measuring and Analyzing root cause - a classic interview red flag"
+    ],
+    "summary": "Process improvement interviews reward structure: name the framework (Lean waste, DMAIC, Theory of Constraints), locate the actual constraint or waste with a quick flow analysis, then propose a targeted fix rather than a generic 'work harder' answer.",
+    "quick_revision_notes": [
+      "8 wastes = DOWNTIME (Defects, Overproduction, Waiting, Non-utilized talent, Transport, Inventory, Motion, Extra-processing)",
+      "5S = Sort, Set in order, Shine, Standardize, Sustain",
+      "DMAIC = Define, Measure, Analyze, Improve, Control",
+      "Total throughput = bottleneck's throughput, not the average"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["lean", "waste"],
+      "question": "Which of the following is considered the most serious of the Lean 'wastes' because it causes many of the others?",
+      "options": ["Overproduction", "Waiting", "Transportation", "Motion"],
+      "correct_answer": "Overproduction",
+      "explanation": "Producing more than needed leads directly to excess inventory, extra transport, extra storage, and extra handling - it's the root cause of most other wastes."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["six-sigma", "dmaic"],
+      "question": "In the DMAIC cycle, which phase comes immediately before 'Improve'?",
+      "options": ["Analyze", "Define", "Control", "Measure"],
+      "correct_answer": "Analyze",
+      "explanation": "DMAIC order: Define, Measure, Analyze, Improve, Control - root causes must be analyzed before proposing an improvement."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 45,
+      "tags": ["bottleneck"],
+      "question": "A process has 4 steps with cycle times of 5, 8, 3 and 6 minutes per unit. If you halve the cycle time of the 3-minute step, what happens to overall throughput?",
+      "options": [
+        "No change - the bottleneck is the 8-minute step",
+        "Throughput roughly doubles",
+        "Throughput increases by 1.5 minutes per unit",
+        "Throughput becomes unpredictable"
+      ],
+      "correct_answer": "No change - the bottleneck is the 8-minute step",
+      "explanation": "Overall throughput is capped by the slowest (bottleneck) step. Speeding up a non-bottleneck step doesn't change total output."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["5s"],
+      "question": "Which 5S step focuses on creating visual controls and checklists so the improved workplace organization becomes the new normal?",
+      "options": ["Standardize", "Sort", "Shine", "Sustain"],
+      "correct_answer": "Standardize",
+      "explanation": "Standardize turns the improved state into documented, repeatable practice (visual controls, checklists); Sustain is about building habits/audits to maintain it long-term."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 55,
+      "tags": ["case"],
+      "question": "A factory wants to reduce defects in a stable, existing assembly line where the root cause is unclear. Which approach is most appropriate?",
+      "options": [
+        "Run a DMAIC project to measure, find the root cause, and control the fix",
+        "Immediately redesign the line from scratch",
+        "Increase the speed of every station equally",
+        "Add more inspectors at the end of the line only"
+      ],
+      "correct_answer": "Run a DMAIC project to measure, find the root cause, and control the fix",
+      "explanation": "DMAIC is the standard structured approach for reducing defects/variation in an existing process when the root cause isn't yet known - it forces measurement and root-cause analysis before jumping to a fix."
+    }
+  ]
+}

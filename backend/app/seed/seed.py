@@ -54,6 +54,46 @@ SUBJECTS = [
     ("verbal-ability", "Verbal Ability", VERBAL),
 ]
 
+# Domain Preparation: same Subject/Topic model as above (track="domain"
+# instead of "aptitude"), but topics are listed here with their titles
+# directly rather than looked up in topics.json, since there's no shared
+# metadata file for them. Content itself still comes from
+# data/seed_source/topics_full/<slug>.json, same as aptitude topics -
+# see the "All other topics" pack loader below.
+DOMAIN_SUBJECTS = [
+    ("finance", "Finance", []),
+    (
+        "operations",
+        "Operations",
+        [
+            ("supply-chain-fundamentals", "Supply Chain Fundamentals"),
+            ("inventory-management", "Inventory Management"),
+            ("process-improvement", "Process Improvement (Lean & Six Sigma)"),
+            ("quality-management", "Quality Management & TQM"),
+        ],
+    ),
+    (
+        "analytics",
+        "Analytics",
+        [
+            ("data-analytics-fundamentals", "Data Analytics Fundamentals"),
+            ("statistics-for-business", "Statistics for Business Analytics"),
+            ("data-visualization", "Data Visualization & Dashboards"),
+            ("predictive-analytics", "Predictive Analytics & Forecasting"),
+        ],
+    ),
+    (
+        "marketing",
+        "Marketing",
+        [
+            ("marketing-fundamentals", "Marketing Fundamentals (4Ps & STP)"),
+            ("digital-marketing", "Digital Marketing & Social Media"),
+            ("consumer-behavior", "Consumer Behavior"),
+            ("brand-management", "Brand Management & Positioning"),
+        ],
+    ),
+]
+
 
 def load_json(*parts):
     with open(SEED_DIR.joinpath(*parts), encoding="utf-8") as f:
@@ -206,6 +246,21 @@ def seed():
                     db.add(topic)
                     db.flush()
                     db.add(TopicContent(topic_id=topic.id, theory=entry.get("theory")))
+        db.commit()
+
+        for order, (slug, name, topics) in enumerate(DOMAIN_SUBJECTS):
+            subject = db.query(Subject).filter(Subject.slug == slug).first()
+            if not subject:
+                subject = Subject(slug=slug, name=name, order=order, track="domain")
+                db.add(subject)
+                db.flush()
+            for t_order, (t_slug, t_title) in enumerate(topics):
+                topic = db.query(Topic).filter(Topic.slug == t_slug).first()
+                if not topic:
+                    topic = Topic(subject_id=subject.id, slug=t_slug, title=t_title, order=t_order)
+                    db.add(topic)
+                    db.flush()
+                    db.add(TopicContent(topic_id=topic.id))
         db.commit()
 
         # --- Percentage: full content ---

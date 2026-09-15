@@ -5,6 +5,7 @@ class SubjectOut(BaseModel):
     id: int
     slug: str
     name: str
+    track: str = "aptitude"
     topic_count: int = 0
 
     model_config = {"from_attributes": True}

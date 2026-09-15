@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import {
   ArrowUpRight,
   Bot,
+  Briefcase,
   Building2,
   Globe2,
   Handshake,
@@ -30,6 +31,8 @@ export default function HomePage() {
   const companyCount = summary?.company_count ?? 0
   const mockCount = summary?.mock_test_count ?? 0
   const guideCount = summary?.guide_count ?? 0
+  const domainTopicCount = summary?.domain_topic_count ?? 0
+  const domainSubjectCount = summary?.domain_subject_count ?? 0
 
   const cards = [
     {
@@ -39,6 +42,14 @@ export default function HomePage() {
       title: 'Aptitude Preparation',
       blurb: 'Learn each topic, then practice and take timed tests.',
       stat: topicCount ? `${topicCount} topics across ${subjectCount} subjects` : '',
+    },
+    {
+      to: '/domain-prep',
+      icon: Briefcase,
+      gradient: 'from-teal-500 to-cyan-600',
+      title: 'Domain Preparation',
+      blurb: 'Finance, Operations, Analytics and Marketing — core concepts for domain interviews.',
+      stat: domainTopicCount ? `${domainTopicCount} topics across ${domainSubjectCount} domains` : '',
     },
     {
       to: '/mock-tests',

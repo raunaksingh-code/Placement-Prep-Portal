@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import func
 from sqlalchemy.orm import Session, joinedload
 
@@ -18,11 +18,14 @@ router = APIRouter(prefix="/api", tags=["learning"], dependencies=[Depends(get_c
 
 
 @router.get("/subjects", response_model=list[SubjectOut])
-def list_subjects(db: Session = Depends(get_db)):
-    subjects = db.query(Subject).order_by(Subject.order).all()
+def list_subjects(
+    track: str = Query("aptitude", pattern="^(aptitude|domain)$"),
+    db: Session = Depends(get_db),
+):
+    subjects = db.query(Subject).filter(Subject.track == track).order_by(Subject.order).all()
     counts = dict(db.query(Topic.subject_id, func.count(Topic.id)).group_by(Topic.subject_id).all())
     return [
-        SubjectOut(id=s.id, slug=s.slug, name=s.name, topic_count=counts.get(s.id, 0))
+        SubjectOut(id=s.id, slug=s.slug, name=s.name, track=s.track, topic_count=counts.get(s.id, 0))
         for s in subjects
     ]
 

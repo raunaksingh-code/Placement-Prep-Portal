@@ -1,0 +1,104 @@
+{
+  "study_material": {
+    "title": "Brand Management & Positioning",
+    "introduction": "A brand is more than a logo - it's the sum of associations a customer holds in their mind. This topic covers how brand equity is built and measured, the standard brand-growth strategies (Ansoff Matrix), and how brands manage extension and architecture decisions.",
+    "learning_objectives": [
+      "Define brand equity and name its core components",
+      "Use the Ansoff Matrix to classify a growth strategy",
+      "Distinguish brand extension from line extension",
+      "Explain the difference between brand awareness, brand image, and brand loyalty",
+      "Reason about the risk of over-extending a brand"
+    ],
+    "concepts": [
+      {
+        "heading": "1. Brand Equity",
+        "body": "The added value a brand name gives a product beyond its functional attributes - why customers will pay more for a branded product than an identical unbranded one. Keller's model breaks it into 4 components: Brand Awareness (do customers know it exists / recall it), Brand Associations (what comes to mind - quality, attributes, feelings), Perceived Quality (customer's judgment of overall quality), and Brand Loyalty (likelihood of repeat purchase and resistance to switching). Strong equity across all four is what lets a brand charge a premium and survive competitive pressure."
+      },
+      {
+        "heading": "2. The Ansoff Matrix",
+        "body": "A 2x2 framework for growth strategy based on Products (existing/new) x Markets (existing/new). Market Penetration (existing product, existing market - sell more to current customers, lowest risk). Market Development (existing product, new market - e.g. new geography or new customer segment). Product Development (new product, existing market - e.g. new flavor for existing customers). Diversification (new product, new market - highest risk, least related to current business)."
+      },
+      {
+        "heading": "3. Brand Extension vs. Line Extension",
+        "body": "Line extension: a new variant within the SAME product category under the same brand (a new flavor of an existing soft drink). Brand extension: using an established brand name to enter a DIFFERENT product category (a shoe brand launching apparel). Line extensions are lower risk (same category, same core competence); brand extensions can leverage brand equity into new revenue but risk diluting the brand if the new category is a poor fit with what the brand stands for."
+      },
+      {
+        "heading": "4. Awareness, Image, and Loyalty",
+        "body": "Brand Awareness is simply whether customers know/recall the brand (a prerequisite, not sufficient on its own). Brand Image is the specific set of associations and perceptions customers hold (what the brand 'means'). Brand Loyalty is behavioral commitment - repeat purchase and resistance to switching even when competitors offer discounts. A brand can have very high awareness but weak image or loyalty (well-known but not preferred) - these are separate things to diagnose and fix independently."
+      }
+    ],
+    "formulas": [
+      "Ansoff Matrix axes: Products (Existing/New) x Markets (Existing/New) -> Penetration, Market Development, Product Development, Diversification",
+      "Brand equity (Keller) = Awareness + Associations + Perceived Quality + Loyalty"
+    ],
+    "shortcut_methods": [
+      "For any 'how should this company grow' question, plot the option on the Ansoff Matrix first - it instantly tells you the relative risk level (Penetration lowest, Diversification highest)",
+      "To tell line extension from brand extension, ask: same category or different category? Same = line extension, different = brand extension",
+      "If a brand has high awareness but low sales, the problem is likely image or loyalty, not awareness - don't default to 'we need more advertising'"
+    ],
+    "common_mistakes": [
+      "Recommending diversification as a first move when a lower-risk penetration or market-development option hasn't been explored",
+      "Treating brand extension as risk-free just because the parent brand is strong - a poor category fit can dilute the brand's core meaning",
+      "Assuming more advertising fixes any brand problem, without diagnosing whether the actual gap is in awareness, image, or loyalty"
+    ],
+    "summary": "Brand management interviews reward structure: use the Ansoff Matrix to evaluate growth options by risk, distinguish line vs. brand extension by category fit, and diagnose brand health specifically (awareness vs. image vs. loyalty) rather than reaching for a generic 'spend more on marketing' answer.",
+    "quick_revision_notes": [
+      "Brand equity = Awareness + Associations + Perceived Quality + Loyalty (Keller)",
+      "Ansoff: Penetration (low risk) -> Market Dev / Product Dev -> Diversification (high risk)",
+      "Line extension = same category, same brand; Brand extension = new category, same brand",
+      "High awareness does not guarantee strong image or loyalty - diagnose separately"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["ansoff"],
+      "question": "A beverage company sells its existing soft drink into a new international market it has never entered before. This is an example of:",
+      "options": ["Market Development", "Market Penetration", "Product Development", "Diversification"],
+      "correct_answer": "Market Development",
+      "explanation": "Selling an existing product into a new market (new geography, in this case) is Market Development on the Ansoff Matrix."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["ansoff"],
+      "question": "Which Ansoff Matrix strategy generally carries the highest risk?",
+      "options": ["Diversification", "Market Penetration", "Product Development", "Market Development"],
+      "correct_answer": "Diversification",
+      "explanation": "Diversification (new product into a new market) is furthest from the company's existing strengths and customer base, making it the highest-risk quadrant."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["extension"],
+      "question": "A sneaker brand launches a clothing apparel line under the same brand name. This is best described as:",
+      "options": ["Brand extension", "Line extension", "Market penetration", "Brand equity"],
+      "correct_answer": "Brand extension",
+      "explanation": "Entering a different product category (apparel, vs. the original footwear category) under the same brand name is a brand extension, not a line extension."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["brand-equity"],
+      "question": "A brand is instantly recognized by 90% of the target market, but sales are declining because customers perceive it as outdated compared to competitors. Which component of brand equity is weakest?",
+      "options": ["Brand associations/image", "Brand awareness", "Brand name length", "Market size"],
+      "correct_answer": "Brand associations/image",
+      "explanation": "Awareness is clearly high (90% recognition); the problem is the associations customers hold - they perceive it as outdated, a brand image issue, not an awareness issue."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 55,
+      "tags": ["case"],
+      "question": "A premium coffee brand considers launching a budget instant-coffee line under the same brand name to capture price-sensitive customers. What is the biggest strategic risk?",
+      "options": [
+        "It could dilute the premium brand's associations and confuse what the brand stands for",
+        "Instant coffee is a completely unrelated industry with no possible connection",
+        "There is no risk since it uses the same brand name",
+        "This would be classified as market penetration, which is always safe"
+      ],
+      "correct_answer": "It could dilute the premium brand's associations and confuse what the brand stands for",
+      "explanation": "A budget line extension under a premium brand name risks diluting the brand's premium associations and confusing customers about what the brand represents - a classic brand-extension/line-extension risk, even though the category (coffee) is related."
+    }
+  ]
+}

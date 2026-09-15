@@ -48,6 +48,16 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <HomePage /> },
       { path: 'aptitude', element: <SubjectListPage /> },
+      {
+        path: 'domain-prep',
+        element: (
+          <SubjectListPage
+            track="domain"
+            title="Domain Preparation"
+            subtitle="Finance, Operations, Analytics and Marketing — pick a domain, learn the concepts, then practice."
+          />
+        ),
+      },
       { path: 'subjects/:slug', element: <TopicListPage /> },
       { path: 'topics/:slug', element: <TopicDetailPage /> },
       { path: 'topics/:slug/practice', element: <PracticePage /> },

@@ -1,0 +1,125 @@
+{
+  "study_material": {
+    "title": "Supply Chain Fundamentals",
+    "introduction": "A supply chain is the network of organizations, people, activities and resources involved in moving a product from raw material to the end customer. Operations interviews test whether you can map this flow, identify where value (and cost) is added, and reason about trade-offs like cost vs. speed vs. reliability.",
+    "learning_objectives": [
+      "Describe the end-to-end flow: suppliers, manufacturing, distribution, retail, customer",
+      "Distinguish push vs. pull supply chains and when each fits",
+      "Explain the bullwhip effect and what causes it",
+      "Compare centralized vs. decentralized distribution models",
+      "Use basic SCM vocabulary correctly: lead time, fill rate, SKU, 3PL"
+    ],
+    "concepts": [
+      {
+        "heading": "1. The End-to-End Flow",
+        "body": "Raw materials -> suppliers -> manufacturing/production -> warehousing -> distribution -> retail/last mile -> customer. Each handoff adds lead time and cost, and each stage holds inventory as a buffer against variability. In interviews, always start by sketching this flow for the specific product in question before jumping to solutions."
+      },
+      {
+        "heading": "2. Push vs. Pull Systems",
+        "body": "Push systems produce based on forecasts and push inventory downstream (good for stable, predictable demand - e.g. commodities). Pull systems produce/replenish only in response to actual demand signals (good for volatile demand or high holding cost - e.g. fashion, perishables). Most real chains are hybrid: push upstream (bulk raw materials) and pull downstream (final assembly to order)."
+      },
+      {
+        "heading": "3. The Bullwhip Effect",
+        "body": "Small fluctuations in real customer demand get amplified into larger swings as you move upstream through the chain, because each stage adds its own buffer/safety margin when forecasting from the stage below it rather than from true end demand. Causes: demand-signal processing, order batching, price fluctuations (promotions), and rationing/shortage gaming. Fixes: share point-of-sale data upstream, smaller/more frequent orders, stable pricing, vendor-managed inventory."
+      },
+      {
+        "heading": "4. Distribution Network Design",
+        "body": "Centralized (one large warehouse) minimizes total inventory (risk pooling) and cost but increases delivery lead time. Decentralized (many regional warehouses) does the opposite - faster delivery, higher total safety stock needed. The right answer depends on product value density, demand variability by region, and customer service targets."
+      }
+    ],
+    "formulas": [
+      "Lead time = order placement to order receipt (supplier lead time + transit time + processing time)",
+      "Fill rate = orders fulfilled from stock on hand / total orders placed",
+      "Perfect order rate = % of orders delivered complete, on time, undamaged, with correct documentation"
+    ],
+    "shortcut_methods": [
+      "In case interviews, always draw the flow diagram first - it forces you to locate the actual bottleneck instead of guessing",
+      "When asked 'should we centralize or decentralize', anchor on: demand variability (favors centralize), delivery speed requirement (favors decentralize)",
+      "If demand is unpredictable, default recommendation is pull + smaller batches + more frequent replenishment, not more forecasting"
+    ],
+    "common_mistakes": [
+      "Treating 'supply chain' and 'logistics' as synonyms - logistics (transport/warehousing) is one part of the broader supply chain (which also includes sourcing, production planning, and demand planning)",
+      "Recommending more forecasting accuracy as the fix for bullwhip effect instead of fixing information sharing and batching",
+      "Assuming centralization is always cheaper - it's cheaper in inventory holding but adds transportation cost and delivery time"
+    ],
+    "summary": "Supply chain questions are really about trade-offs: cost vs. speed, centralization vs. responsiveness, forecast-driven vs. demand-driven. Map the flow, name the trade-off explicitly, then make a reasoned call.",
+    "quick_revision_notes": [
+      "Push = forecast-driven, Pull = demand-driven, most chains are hybrid",
+      "Bullwhip effect: demand variability amplifies upstream - fix with shared data, not more forecasting",
+      "Centralize = lower inventory cost, slower delivery; Decentralize = opposite",
+      "Fill rate and perfect order rate are the standard customer-service metrics"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["supply-chain", "basics"],
+      "question": "Which of these best describes a 'pull' supply chain system?",
+      "options": [
+        "Production is triggered by actual customer demand signals",
+        "Production is based purely on long-range sales forecasts",
+        "Inventory is held only at the manufacturing site",
+        "All orders are batched monthly regardless of demand"
+      ],
+      "correct_answer": "Production is triggered by actual customer demand signals",
+      "explanation": "Pull systems replenish/produce in response to real demand rather than forecasts, reducing excess inventory risk."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 45,
+      "tags": ["bullwhip-effect"],
+      "question": "The bullwhip effect refers to:",
+      "options": [
+        "Amplification of demand variability as you move upstream in the supply chain",
+        "A sudden drop in transportation costs",
+        "The tendency of retailers to under-order during promotions",
+        "A method for calculating safety stock"
+      ],
+      "correct_answer": "Amplification of demand variability as you move upstream in the supply chain",
+      "explanation": "Small changes in end-customer demand get magnified into large swings for upstream suppliers due to batching, forecasting lag, and order gaming."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["distribution"],
+      "question": "A company centralizes its warehouse from 10 regional locations into 1 national facility. What is the most likely trade-off?",
+      "options": [
+        "Lower total inventory cost, but longer delivery times to customers",
+        "Higher total inventory cost, and longer delivery times",
+        "Lower total inventory cost, and shorter delivery times",
+        "No change in cost or delivery time"
+      ],
+      "correct_answer": "Lower total inventory cost, but longer delivery times to customers",
+      "explanation": "Centralization pools risk/safety stock (lower total inventory) but customers are now farther from the warehouse on average, increasing delivery time."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["metrics"],
+      "question": "Fill rate measures:",
+      "options": [
+        "The proportion of demand met directly from available stock",
+        "The cost of holding one unit of inventory for a year",
+        "The number of SKUs a warehouse carries",
+        "The speed of a delivery truck"
+      ],
+      "correct_answer": "The proportion of demand met directly from available stock",
+      "explanation": "Fill rate = orders/units fulfilled from on-hand stock, divided by total demand - a core customer-service metric."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 60,
+      "tags": ["case", "trade-offs"],
+      "question": "A fashion retailer with highly unpredictable, fast-changing demand is currently forecasting 6 months ahead and pushing inventory to stores. What is the single most impactful change to recommend?",
+      "options": [
+        "Shift toward a pull-based, shorter replenishment cycle closer to actual demand",
+        "Increase the forecast horizon to 12 months for more data",
+        "Centralize all production in one factory regardless of location",
+        "Increase safety stock at every store to avoid stockouts"
+      ],
+      "correct_answer": "Shift toward a pull-based, shorter replenishment cycle closer to actual demand",
+      "explanation": "For volatile, fast-fashion demand, forecast accuracy degrades quickly over long horizons - the standard fix is to move closer to a pull system with shorter cycles (like fast-fashion players do), not to forecast further out or just add more stock."
+    }
+  ]
+}

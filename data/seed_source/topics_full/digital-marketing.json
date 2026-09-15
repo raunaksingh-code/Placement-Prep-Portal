@@ -1,0 +1,111 @@
+{
+  "study_material": {
+    "title": "Digital Marketing & Social Media",
+    "introduction": "Most placement-season marketing roles involve digital channels day one. This topic covers the core digital marketing vocabulary - funnels, paid vs. owned vs. earned media, the key metrics recruiters expect you to know, and how to reason about channel selection.",
+    "learning_objectives": [
+      "Explain the marketing funnel (Awareness, Consideration, Conversion, Retention/Loyalty)",
+      "Distinguish paid, owned, and earned media with an example of each",
+      "Define CAC, CTR, conversion rate and ROAS",
+      "Explain the difference between SEO and SEM",
+      "Reason about which channel fits which funnel stage"
+    ],
+    "concepts": [
+      {
+        "heading": "1. The Marketing Funnel",
+        "body": "Awareness (customer learns the brand exists - broad reach channels like social ads, video), Consideration (customer evaluates options - content marketing, reviews, comparison content), Conversion (customer purchases - retargeting ads, promotions, strong product pages), Retention/Loyalty (customer returns and advocates - email, loyalty programs, community). Different channels and messages are appropriate at different funnel stages - a common interview mistake is using a broad-awareness message at the conversion stage, or vice versa."
+      },
+      {
+        "heading": "2. Paid, Owned and Earned Media",
+        "body": "Paid media: you pay for placement (search ads, social ads, influencer sponsorships) - fast, scalable, but stops when spend stops. Owned media: channels the brand controls (website, email list, app, blog) - builds a long-term asset, but requires effort to build an audience. Earned media: publicity you don't pay for or control directly (press coverage, organic social shares, word of mouth) - highest credibility, but not directly controllable. A healthy digital strategy usually blends all three rather than relying on one."
+      },
+      {
+        "heading": "3. SEO vs. SEM",
+        "body": "SEO (Search Engine Optimization): improving a website's organic (unpaid) ranking in search results through content quality, keywords, backlinks and technical site health - slow to build, but free traffic once ranked and compounds over time. SEM (Search Engine Marketing): paying for ads that appear in search results (e.g. Google Ads), typically priced per click - immediate visibility, but traffic stops the moment spend stops."
+      },
+      {
+        "heading": "4. Core Digital Metrics",
+        "body": "CTR (Click-Through Rate): clicks / impressions - measures how compelling an ad or link is. Conversion Rate: conversions / total visitors - measures how well a page/flow turns interest into action. CAC (Customer Acquisition Cost): total marketing+sales spend / new customers acquired - what it costs to win one customer. ROAS (Return on Ad Spend): revenue generated / amount spent on ads - direct profitability signal for a campaign. CAC should always be evaluated against Customer Lifetime Value (LTV); a low CAC alone doesn't guarantee profitability if LTV is even lower."
+      }
+    ],
+    "formulas": [
+      "CTR = clicks / impressions",
+      "Conversion rate = conversions / total visitors",
+      "CAC = total acquisition spend / number of new customers acquired",
+      "ROAS = revenue from ads / ad spend"
+    ],
+    "shortcut_methods": [
+      "Map any digital channel question to the funnel first: is this an awareness, consideration, conversion, or retention play? That instantly narrows down which channels and metrics are relevant.",
+      "If CAC is mentioned, always ask about LTV in the same breath - CAC alone can't tell you if acquisition is profitable",
+      "SEO = free but slow to build; SEM = fast but stops the instant you stop paying - a good default answer for 'which should we use' is both, at different time horizons"
+    ],
+    "common_mistakes": [
+      "Treating paid, owned and earned media as interchangeable rather than complementary",
+      "Quoting CAC as a success metric without comparing it to LTV",
+      "Confusing SEO (organic/free) with SEM (paid search ads) - they're often literally displayed on the same search results page but work completely differently"
+    ],
+    "summary": "Digital marketing interview questions almost always reduce to: which funnel stage are we solving for, which media type (paid/owned/earned) fits it, and which metric proves it worked - CAC and ROAS being the two recruiters ask about most.",
+    "quick_revision_notes": [
+      "Funnel: Awareness -> Consideration -> Conversion -> Retention",
+      "Paid = pay for placement; Owned = brand-controlled channel; Earned = free publicity/word of mouth",
+      "SEO = organic/free/slow; SEM = paid search ads/fast/stops when spend stops",
+      "CAC must be judged against LTV, never in isolation"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["funnel"],
+      "question": "A broad social media ad campaign introducing a new brand to people who've never heard of it targets which funnel stage?",
+      "options": ["Awareness", "Conversion", "Retention", "Loyalty"],
+      "correct_answer": "Awareness",
+      "explanation": "Introducing the brand to a new audience for the first time is the top-of-funnel Awareness stage."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["media-types"],
+      "question": "A positive news article about a company, written by an independent journalist without payment, is an example of:",
+      "options": ["Earned media", "Paid media", "Owned media", "SEM"],
+      "correct_answer": "Earned media",
+      "explanation": "Publicity that isn't paid for or directly controlled by the brand - like unsolicited press coverage - is earned media."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["seo-sem"],
+      "question": "Which of the following best describes SEO?",
+      "options": [
+        "Improving unpaid, organic search ranking through content and site quality",
+        "Paying for ads to appear at the top of search results",
+        "Running social media influencer campaigns",
+        "Measuring return on ad spend"
+      ],
+      "correct_answer": "Improving unpaid, organic search ranking through content and site quality",
+      "explanation": "SEO is about improving organic (unpaid) search rankings, unlike SEM which is paid search advertising."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["metrics"],
+      "question": "A campaign spends Rs. 50,000 and acquires 500 new customers. What is the CAC?",
+      "options": ["Rs. 100", "Rs. 500", "Rs. 50", "Rs. 1,000"],
+      "correct_answer": "Rs. 100",
+      "explanation": "CAC = total spend / new customers = 50,000 / 500 = Rs. 100 per customer."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 55,
+      "tags": ["case"],
+      "question": "A startup proudly reports a CAC of Rs. 200 per customer. What critical piece of information is missing to judge whether this is good?",
+      "options": [
+        "The customer's lifetime value (LTV) - CAC alone doesn't show profitability",
+        "The company's total employee count",
+        "The exact ad creative used",
+        "The color scheme of the landing page"
+      ],
+      "correct_answer": "The customer's lifetime value (LTV) - CAC alone doesn't show profitability",
+      "explanation": "CAC only tells you the cost to acquire a customer - it must be compared against LTV (the revenue that customer generates over time) to know whether the spend is actually profitable."
+    }
+  ]
+}

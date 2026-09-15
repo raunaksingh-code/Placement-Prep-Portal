@@ -1,0 +1,104 @@
+{
+  "study_material": {
+    "title": "Data Analytics Fundamentals",
+    "introduction": "Business analytics is about turning raw data into decisions. This topic covers the four types of analytics, the standard analytics workflow, and the vocabulary interviewers expect for entry-level analyst roles - before diving into statistics or visualization specifics.",
+    "learning_objectives": [
+      "Distinguish descriptive, diagnostic, predictive and prescriptive analytics",
+      "Walk through the standard analytics workflow from data to decision",
+      "Explain the difference between structured and unstructured data",
+      "Define KPI and explain what makes a metric a good KPI",
+      "Recognize common data quality issues and how to handle them"
+    ],
+    "concepts": [
+      {
+        "heading": "1. The Four Types of Analytics",
+        "body": "Descriptive ('what happened?' - dashboards, summary stats), Diagnostic ('why did it happen?' - drill-downs, correlation analysis), Predictive ('what will happen?' - forecasting, machine learning models), Prescriptive ('what should we do?' - optimization, recommendation engines). Maturity increases roughly in this order, and most entry-level analyst work sits in descriptive/diagnostic."
+      },
+      {
+        "heading": "2. The Analytics Workflow",
+        "body": "Define the business question -> collect/access the data -> clean and prepare it (often 60-80% of real project time) -> explore and analyze -> visualize and communicate -> the business acts on the insight. Skipping the 'define the question' step is the most common reason analyses don't drive decisions - a technically correct answer to the wrong question is still wrong."
+      },
+      {
+        "heading": "3. Structured vs. Unstructured Data",
+        "body": "Structured data fits neatly into rows/columns (sales transactions, a database table) and is easy to query with SQL. Unstructured data has no predefined format (text reviews, images, call recordings, social media posts) and needs additional processing (NLP, parsing) before analysis. Most companies have far more unstructured than structured data, which is why text/image analytics is a growing skill area."
+      },
+      {
+        "heading": "4. KPIs and Metric Design",
+        "body": "A Key Performance Indicator should be: aligned to a business objective, measurable and well-defined (everyone computes it the same way), actionable (someone can actually influence it), and tracked consistently over time. A common interview trap is proposing a metric that's easy to measure but doesn't actually move the business needle (a 'vanity metric') - e.g. app downloads instead of active users."
+      }
+    ],
+    "formulas": [
+      "Data quality is judged on: accuracy, completeness, consistency, timeliness, and uniqueness (no duplicates)",
+      "Vanity metric vs. actionable metric: a metric is actionable only if a specific decision changes based on its value"
+    ],
+    "shortcut_methods": [
+      "When given a business problem, always restate it as a specific, answerable question first - interviewers reward this explicitly before any analysis",
+      "If asked to classify an analytics task, ask 'is this explaining the past, predicting the future, or recommending an action?' to place it in descriptive/predictive/prescriptive",
+      "Default assumption for any 'we have messy data' question: propose a data-cleaning step (dedupe, handle missing values, standardize formats) before any modeling"
+    ],
+    "common_mistakes": [
+      "Jumping straight to a specific tool or chart before clarifying the business question being asked",
+      "Treating 'more data' as automatically better - data that's inaccurate, stale, or irrelevant to the question doesn't help",
+      "Proposing a KPI that's easy to track but not actionable (a vanity metric)"
+    ],
+    "summary": "Analytics interviews test whether you can go from a vague business ask to a specific, answerable question, and know roughly where in the descriptive-to-prescriptive spectrum a given task sits, before any statistics or tooling comes into play.",
+    "quick_revision_notes": [
+      "Descriptive (what happened) -> Diagnostic (why) -> Predictive (what will) -> Prescriptive (what should we do)",
+      "Data cleaning is typically the largest share of real analytics project time",
+      "A good KPI is aligned, measurable, and actionable - avoid vanity metrics",
+      "Structured data = rows/columns/SQL-friendly; unstructured = text/image/needs processing"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["analytics-types"],
+      "question": "A sales dashboard showing last month's revenue by region is an example of:",
+      "options": ["Descriptive analytics", "Predictive analytics", "Prescriptive analytics", "Diagnostic analytics"],
+      "correct_answer": "Descriptive analytics",
+      "explanation": "Descriptive analytics summarizes what already happened - a dashboard of past revenue is a classic example."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["analytics-types"],
+      "question": "A model that recommends the optimal discount to offer each customer to maximize expected profit is an example of:",
+      "options": ["Prescriptive analytics", "Descriptive analytics", "Diagnostic analytics", "None of the above"],
+      "correct_answer": "Prescriptive analytics",
+      "explanation": "Recommending a specific action to optimize an outcome is prescriptive analytics - the most advanced of the four types."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["data-types"],
+      "question": "Which of these is an example of unstructured data?",
+      "options": ["Customer product reviews (free text)", "A sales transactions table", "A spreadsheet of monthly revenue by product", "A SQL database of employee records"],
+      "correct_answer": "Customer product reviews (free text)",
+      "explanation": "Free-form text has no predefined row/column structure, making it unstructured data - unlike tables or databases."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 45,
+      "tags": ["workflow"],
+      "question": "In a typical analytics project, which phase usually consumes the most time?",
+      "options": ["Data cleaning and preparation", "Building the final chart", "Presenting results to stakeholders", "Defining the business question"],
+      "correct_answer": "Data cleaning and preparation",
+      "explanation": "Real-world data is messy - cleaning, deduplicating and preparing it typically takes 60-80% of total project time, more than modeling or visualization."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 50,
+      "tags": ["kpi", "case"],
+      "question": "A mobile app team proposes 'total app downloads' as their primary success KPI. What is the strongest critique?",
+      "options": [
+        "It's a vanity metric - it doesn't capture whether users actually engage with or retain the app",
+        "It's too difficult to measure accurately",
+        "It's a form of prescriptive analytics",
+        "It's an example of unstructured data"
+      ],
+      "correct_answer": "It's a vanity metric - it doesn't capture whether users actually engage with or retain the app",
+      "explanation": "Downloads are easy to count but don't reflect real usage or value - a classic vanity metric. A better KPI would track active usage or retention, which the team can actually act on."
+    }
+  ]
+}

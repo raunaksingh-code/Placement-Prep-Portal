@@ -1,0 +1,111 @@
+{
+  "study_material": {
+    "title": "Inventory Management",
+    "introduction": "Inventory ties up cash and warehouse space, but too little of it causes stockouts and lost sales. This topic covers the quantitative core of operations interviews: how much to order (EOQ), when to order (reorder point), and how much safety buffer to hold against uncertain demand.",
+    "learning_objectives": [
+      "Calculate Economic Order Quantity (EOQ) and explain what it optimizes",
+      "Determine reorder point given lead time and demand rate",
+      "Explain why safety stock exists and what drives its size",
+      "Classify inventory using ABC analysis",
+      "Distinguish the four costs relevant to inventory decisions"
+    ],
+    "concepts": [
+      {
+        "heading": "1. The Four Inventory Costs",
+        "body": "Ordering cost (fixed cost per order placed, independent of quantity - admin, setup), holding/carrying cost (cost of storing one unit for a period - capital, warehousing, insurance, obsolescence, usually 20-30% of unit cost per year), stockout cost (lost sales, expediting, customer goodwill), and unit purchase cost. Inventory models exist to balance these against each other."
+      },
+      {
+        "heading": "2. Economic Order Quantity (EOQ)",
+        "body": "EOQ finds the order quantity that minimizes total ordering cost + holding cost. As order size increases, ordering cost per unit falls (fewer orders) but holding cost rises (more average inventory). EOQ is the quantity at which these two costs are equal - the minimum of the total cost curve."
+      },
+      {
+        "heading": "3. Reorder Point and Lead Time",
+        "body": "Reorder point (ROP) is the inventory level that triggers a new order, set so the order arrives just as stock runs out: ROP = average daily demand x lead time (in days). If lead time or demand is variable, safety stock is added on top so a spike in either doesn't cause a stockout before the new order arrives."
+      },
+      {
+        "heading": "4. ABC Analysis",
+        "body": "Classifies inventory by value contribution, following the Pareto principle: 'A' items (~20% of SKUs, ~80% of value) get tight control and frequent review; 'B' items get moderate control; 'C' items (bulk of SKUs, little value) get loose, infrequent control. This focuses management effort where it matters most."
+      }
+    ],
+    "formulas": [
+      "EOQ = sqrt( (2 x D x S) / H )  where D = annual demand, S = ordering cost per order, H = annual holding cost per unit",
+      "Reorder Point (ROP) = average daily demand x lead time (days)",
+      "Safety Stock = Z x sigma(demand during lead time)  where Z is the service-level factor",
+      "Total annual cost = (D/Q)xS + (Q/2)xH  where Q is order quantity"
+    ],
+    "shortcut_methods": [
+      "EOQ is symmetric in D and H under the square root - doubling demand only increases EOQ by about 1.41x (sqrt(2)), not 2x. Useful for quick mental estimates.",
+      "If a question gives you D, S and H and asks for the order quantity that minimizes total cost, it's almost always asking for EOQ directly",
+      "Higher desired service level -> higher Z -> more safety stock -> higher holding cost. There's no free lunch between service level and inventory cost."
+    ],
+    "common_mistakes": [
+      "Forgetting holding cost is usually expressed per unit per YEAR - mixing up annual vs. monthly figures breaks the EOQ calculation",
+      "Confusing reorder point (a stock LEVEL, a trigger) with EOQ (an order QUANTITY, how much to order)",
+      "Assuming safety stock exists only because of demand variability - lead time variability matters just as much"
+    ],
+    "summary": "Inventory management is a cost-balancing exercise: EOQ balances ordering vs. holding cost, reorder point plus safety stock balances stockout risk vs. holding cost, and ABC analysis prioritizes control effort by value.",
+    "quick_revision_notes": [
+      "EOQ = sqrt(2DS/H) - minimizes ordering + holding cost",
+      "ROP = daily demand x lead time; add safety stock for variability",
+      "Higher service level -> more safety stock -> more holding cost",
+      "ABC: A = high value/few SKUs (tight control), C = low value/many SKUs (loose control)"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 60,
+      "tags": ["eoq", "calculation"],
+      "question": "Annual demand is 10,000 units, ordering cost is Rs. 100 per order, and annual holding cost is Rs. 5 per unit. What is the EOQ?",
+      "options": ["632 units", "500 units", "1000 units", "200 units"],
+      "correct_answer": "632 units",
+      "explanation": "EOQ = sqrt(2 x 10000 x 100 / 5) = sqrt(400000) ≈ 632 units."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["reorder-point"],
+      "question": "Average daily demand is 50 units and supplier lead time is 6 days. Ignoring safety stock, what should the reorder point be?",
+      "options": ["300 units", "50 units", "56 units", "6 units"],
+      "correct_answer": "300 units",
+      "explanation": "ROP = daily demand x lead time = 50 x 6 = 300 units."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["abc-analysis"],
+      "question": "In ABC inventory analysis, 'A' items typically represent:",
+      "options": [
+        "A small percentage of SKUs contributing a large percentage of total inventory value",
+        "The majority of SKUs but very little total value",
+        "Items that are always out of stock",
+        "Only items purchased from a single supplier"
+      ],
+      "correct_answer": "A small percentage of SKUs contributing a large percentage of total inventory value",
+      "explanation": "ABC analysis applies the Pareto principle - roughly 20% of SKUs ('A' items) drive roughly 80% of value, so they get the tightest control."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 45,
+      "tags": ["safety-stock"],
+      "question": "If a company increases its target service level (reducing acceptable stockout probability), what happens to required safety stock, all else equal?",
+      "options": [
+        "Safety stock increases",
+        "Safety stock decreases",
+        "Safety stock stays the same",
+        "Safety stock becomes zero"
+      ],
+      "correct_answer": "Safety stock increases",
+      "explanation": "A higher service level requires a larger Z-factor (more buffer against demand/lead-time variability), which increases safety stock."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 60,
+      "tags": ["eoq", "trade-offs"],
+      "question": "If annual demand doubles while ordering cost and holding cost stay the same, by what approximate factor does the EOQ increase?",
+      "options": ["About 1.41x (sqrt 2)", "Exactly 2x", "4x", "It stays the same"],
+      "correct_answer": "About 1.41x (sqrt 2)",
+      "explanation": "EOQ = sqrt(2DS/H). Since D is under a square root, doubling D multiplies EOQ by sqrt(2) ≈ 1.41, not by 2."
+    }
+  ]
+}

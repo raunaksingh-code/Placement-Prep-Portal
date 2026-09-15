@@ -11,6 +11,9 @@ class Subject(Base):
     slug: Mapped[str] = mapped_column(String, unique=True, index=True)
     name: Mapped[str] = mapped_column(String)
     order: Mapped[int] = mapped_column(Integer, default=0)
+    # "aptitude" (Quant/Reasoning/Verbal) or "domain" (Finance/Operations/
+    # Analytics/Marketing) - the two subject lists shown on separate pages.
+    track: Mapped[str] = mapped_column(String, default="aptitude", server_default="aptitude")
 
     topics: Mapped[list["Topic"]] = relationship(back_populates="subject", order_by="Topic.order")
 

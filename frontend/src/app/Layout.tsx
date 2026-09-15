@@ -4,6 +4,7 @@ import { clearAuth, getToken, getUser } from '../lib/api'
 
 const NAV = [
   { to: '/aptitude', label: 'Aptitude' },
+  { to: '/domain-prep', label: 'Domain Prep' },
   { to: '/mock-tests', label: 'Mock Tests' },
   { to: '/interview-prep', label: 'Interview Prep' },
   { to: '/companies', label: 'Companies & JDs' },

@@ -1,0 +1,115 @@
+{
+  "study_material": {
+    "title": "Predictive Analytics & Forecasting",
+    "introduction": "Predictive analytics uses historical data to estimate what will happen next - demand forecasts, churn prediction, credit risk scoring. This topic covers forecasting basics and the core vocabulary of predictive modeling at the level expected in an analyst interview, without requiring you to derive any machine learning math.",
+    "learning_objectives": [
+      "Explain what a time series forecast is and name its main components",
+      "Distinguish moving average forecasting from exponential smoothing at a conceptual level",
+      "Define overfitting and why it's a problem",
+      "Explain the train/test split and why models are evaluated on unseen data",
+      "Describe classification vs. regression as the two basic types of predictive tasks"
+    ],
+    "concepts": [
+      {
+        "heading": "1. Time Series Components",
+        "body": "Trend (long-term upward/downward direction), Seasonality (regular, repeating pattern tied to a calendar - e.g. retail sales spiking every December), Cyclical variation (longer, irregular swings tied to business/economic cycles), and Noise/Irregular (random variation with no pattern). A good forecast separates these out rather than treating the raw series as one signal."
+      },
+      {
+        "heading": "2. Simple Forecasting Methods",
+        "body": "Moving average: forecast = average of the last N periods - smooths out noise but reacts slowly to real changes, and treats all N periods as equally important. Exponential smoothing: gives more weight to recent observations and progressively less to older ones - reacts faster to genuine shifts while still smoothing noise. Neither method handles strong seasonality well on its own; seasonal variants (e.g. Holt-Winters) add that."
+      },
+      {
+        "heading": "3. Overfitting and Generalization",
+        "body": "A model that fits the training data extremely well but performs poorly on new data has memorized noise/quirks specific to that dataset rather than learning the real underlying pattern - this is overfitting. It's the single most common failure mode in predictive modeling. Simpler models, more data, and validation on unseen data all help control it."
+      },
+      {
+        "heading": "4. Train/Test Split & Evaluation",
+        "body": "Data is split into a training set (used to build the model) and a test set (held out, used only to check how well it generalizes). A model that looks great on training data but poor on the test set is overfit. For time series specifically, the split must respect chronological order (train on the past, test on a later period) rather than randomly shuffling rows - shuffling would leak future information into training."
+      },
+      {
+        "heading": "5. Classification vs. Regression",
+        "body": "Regression predicts a continuous number (next month's revenue, a house price). Classification predicts a category/label (will this customer churn: yes/no; is this transaction fraudulent: yes/no). The same underlying data can sometimes support either framing depending on the business question - e.g. 'how much will this customer spend' (regression) vs. 'will this customer churn' (classification)."
+      }
+    ],
+    "formulas": [
+      "Moving average forecast = average of the last N actual values",
+      "Exponential smoothing forecast = alpha x latest actual + (1 - alpha) x previous forecast, where alpha (0 to 1) controls how much weight recent data gets",
+      "Forecast error = actual - forecast (commonly summarized as MAE or MAPE across a test period)"
+    ],
+    "shortcut_methods": [
+      "If a series has a clear repeating pattern tied to months/seasons, name it 'seasonality' explicitly - interviewers listen for this specific term",
+      "Whenever a model performs suspiciously well, ask 'could this be overfitting - was it tested on truly unseen, out-of-time data?'",
+      "To decide regression vs. classification quickly: is the answer a number (regression) or a category/yes-no (classification)?"
+    ],
+    "common_mistakes": [
+      "Evaluating a time-series model's accuracy on the same data it was trained on - always check performance on a held-out, later period",
+      "Randomly shuffling time-series data before splitting into train/test, which leaks future information into the training set",
+      "Treating any high accuracy number as automatically good, without asking whether the model actually generalizes to new/future data"
+    ],
+    "summary": "Predictive analytics interviews test conceptual fluency: can you decompose a time series into trend/seasonality/noise, do you know why overfitting happens and how train/test splits guard against it, and can you correctly frame a business question as regression or classification.",
+    "quick_revision_notes": [
+      "Time series = Trend + Seasonality + Cyclical + Noise",
+      "Exponential smoothing reacts faster to recent changes than a simple moving average",
+      "Overfitting = great on training data, poor on new data",
+      "Time-series train/test split must respect chronological order, never shuffle",
+      "Regression predicts a number; classification predicts a category"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["time-series"],
+      "question": "A retailer's sales consistently spike every December due to holiday shopping. This repeating, calendar-linked pattern is called:",
+      "options": ["Seasonality", "Trend", "Noise", "Overfitting"],
+      "correct_answer": "Seasonality",
+      "explanation": "A regular, calendar-tied repeating pattern (like an annual holiday spike) is seasonality, one of the core components of a time series."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["overfitting"],
+      "question": "A predictive model achieves 99% accuracy on the data it was trained on but only 60% accuracy on new data. This is a classic sign of:",
+      "options": ["Overfitting", "Seasonality", "A perfectly generalizing model", "Underfitting"],
+      "correct_answer": "Overfitting",
+      "explanation": "A large gap between training performance and performance on new/unseen data is the textbook signature of overfitting - the model memorized training-specific noise rather than the real pattern."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["train-test-split"],
+      "question": "When building a model to forecast next quarter's sales from 5 years of monthly history, how should the train/test split be done?",
+      "options": [
+        "Train on the earlier years, test on the most recent period, preserving chronological order",
+        "Randomly shuffle all months and split 80/20",
+        "Train and test on the exact same data",
+        "Use only the most recent month as the training set"
+      ],
+      "correct_answer": "Train on the earlier years, test on the most recent period, preserving chronological order",
+      "explanation": "Time-series splits must respect chronological order - testing on a later period than training simulates real forecasting and avoids leaking future information."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["classification-vs-regression"],
+      "question": "Predicting whether a customer will cancel their subscription (yes/no) is an example of:",
+      "options": ["Classification", "Regression", "Exponential smoothing", "A moving average"],
+      "correct_answer": "Classification",
+      "explanation": "Predicting a category/label (yes/no churn) rather than a continuous number is a classification task."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 55,
+      "tags": ["forecasting", "case"],
+      "question": "A demand series shows a sudden, genuine shift in customer behavior last month. Which forecasting method will react to this change fastest?",
+      "options": [
+        "Exponential smoothing with a high weight on recent data",
+        "A 12-month simple moving average",
+        "A model trained only on data from 2 years ago",
+        "Ignoring the recent months entirely"
+      ],
+      "correct_answer": "Exponential smoothing with a high weight on recent data",
+      "explanation": "Exponential smoothing weights recent observations more heavily, so it adapts faster to a genuine recent shift than a simple moving average, which treats old and new periods equally and reacts slowly."
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "study_material": {
+    "title": "Statistics for Business Analytics",
+    "introduction": "Business analyst interviews routinely test core statistics: describing a dataset, understanding correlation vs. causation, and reading the results of an A/B test. This topic covers exactly that layer - conceptual and calculation-light, but precise.",
+    "learning_objectives": [
+      "Compute and interpret mean, median, mode and standard deviation",
+      "Explain correlation vs. causation with a concrete example",
+      "Read a p-value and explain statistical significance in plain terms",
+      "Describe how an A/B test is set up and interpreted",
+      "Identify when to use mean vs. median for a skewed dataset"
+    ],
+    "concepts": [
+      {
+        "heading": "1. Central Tendency and Spread",
+        "body": "Mean (average) is sensitive to outliers; median (middle value) is not - so median is the better summary for skewed data like income or house prices, where a few extreme values would distort the mean. Standard deviation measures how spread out values are around the mean; a small standard deviation means data points cluster tightly, a large one means they're spread widely."
+      },
+      {
+        "heading": "2. Correlation vs. Causation",
+        "body": "Two variables being correlated (moving together) does not mean one causes the other. Classic case: ice cream sales and drowning incidents are correlated - both rise in summer - but ice cream doesn't cause drowning. A third variable (heat/season) drives both. Interviewers specifically probe for this because it's the single most common analytical mistake in business."
+      },
+      {
+        "heading": "3. Statistical Significance and P-values",
+        "body": "A p-value estimates the probability of seeing a result at least as extreme as what you observed, purely by chance, if there were actually no real effect. A small p-value (conventionally < 0.05) suggests the observed effect is unlikely to be random noise, so we call it 'statistically significant.' It does NOT mean the effect is large or important - a tiny, business-irrelevant effect can still be 'statistically significant' with enough data."
+      },
+      {
+        "heading": "4. A/B Testing",
+        "body": "Randomly split users into a Control group (sees the current version) and a Treatment group (sees the new version), measure the metric of interest in both, and check if the difference is statistically significant. Randomization is what allows you to say the treatment CAUSED the difference, not just correlates with it - this is why A/B tests are the gold standard for testing product/marketing changes."
+      }
+    ],
+    "formulas": [
+      "Mean = sum of values / number of values",
+      "Standard deviation = sqrt( average of squared deviations from the mean )",
+      "Statistical significance threshold: commonly p < 0.05 (5% chance the result is due to random chance alone)"
+    ],
+    "shortcut_methods": [
+      "If a dataset has extreme outliers (salaries, house prices), reach for median over mean by default",
+      "When you see two things moving together in a case study, ask out loud: 'is there a third factor driving both?' before concluding causation",
+      "For an A/B test question, always check: was assignment to groups truly random? If not, the comparison isn't a valid causal test"
+    ],
+    "common_mistakes": [
+      "Concluding causation just because two variables are correlated",
+      "Treating 'statistically significant' as the same as 'important' or 'large' - significance is about confidence, not magnitude",
+      "Using mean instead of median for skewed data, giving a misleading 'typical value'"
+    ],
+    "summary": "Business statistics interviews aren't about complex formulas - they test whether you instinctively distinguish correlation from causation, know what a p-value actually claims, and can reason about whether an A/B test's design lets you draw a valid causal conclusion.",
+    "quick_revision_notes": [
+      "Mean is outlier-sensitive; median is not - use median for skewed data",
+      "Correlation != causation - always ask about a possible third variable",
+      "p < 0.05 = 'unlikely due to chance', not 'important' or 'big effect'",
+      "A/B tests need true random assignment to support a causal claim"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["central-tendency"],
+      "question": "A dataset of employee salaries has a few extremely high outliers (senior executives). Which measure best represents the 'typical' salary?",
+      "options": ["Median", "Mean", "Standard deviation", "Range"],
+      "correct_answer": "Median",
+      "explanation": "Median is not distorted by extreme outliers, unlike the mean, so it better represents a typical value in skewed data."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["correlation"],
+      "question": "A study finds cities with more fire trucks dispatched also have more fire damage. What is the most likely explanation?",
+      "options": [
+        "Bigger fires require more trucks AND cause more damage - both driven by fire size, not trucks causing damage",
+        "Fire trucks cause fire damage",
+        "There is no possible explanation",
+        "The correlation must be a data entry error"
+      ],
+      "correct_answer": "Bigger fires require more trucks AND cause more damage - both driven by fire size, not trucks causing damage",
+      "explanation": "This is a classic correlation-vs-causation trap: fire severity is the confounding variable driving both the number of trucks dispatched and the damage - trucks don't cause damage."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["p-value"],
+      "question": "A test shows p = 0.03 for a new website design increasing clicks. What is the correct interpretation?",
+      "options": [
+        "The observed increase is unlikely to be due to random chance alone",
+        "The new design definitely caused a large increase in clicks",
+        "There is a 3% chance the new design is better",
+        "The test is invalid because p is too low"
+      ],
+      "correct_answer": "The observed increase is unlikely to be due to random chance alone",
+      "explanation": "p = 0.03 means: if there were truly no effect, there'd only be a 3% chance of seeing a difference this large by chance - it says nothing about the size or business importance of the effect."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["ab-testing"],
+      "question": "In an A/B test, what is essential for the result to support a causal conclusion?",
+      "options": [
+        "Users must be randomly assigned to control and treatment groups",
+        "Both groups must be exactly the same size",
+        "The test must run for at least a year",
+        "The p-value must be exactly zero"
+      ],
+      "correct_answer": "Users must be randomly assigned to control and treatment groups",
+      "explanation": "Random assignment is what rules out confounding variables and allows a causal claim - without it, any difference could be due to pre-existing group differences, not the treatment."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 55,
+      "tags": ["case", "significance"],
+      "question": "An A/B test with 2 million users finds a statistically significant (p = 0.01) 0.02% increase in conversion rate for a new checkout flow. What is the best next step?",
+      "options": [
+        "Assess whether a 0.02% lift is large enough to be worth the cost of rolling out the change",
+        "Immediately roll out the change everywhere since it's statistically significant",
+        "Discard the result since 0.02% is too small to be real",
+        "Re-run the test with fewer users"
+      ],
+      "correct_answer": "Assess whether a 0.02% lift is large enough to be worth the cost of rolling out the change",
+      "explanation": "With very large sample sizes, even tiny, practically meaningless effects can be statistically significant. The next step is judging business significance (is the lift worth the implementation cost), not just statistical significance."
+    }
+  ]
+}

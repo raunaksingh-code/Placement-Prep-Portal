@@ -1,0 +1,110 @@
+{
+  "study_material": {
+    "title": "Quality Management & TQM",
+    "introduction": "Quality management is about consistently meeting customer requirements and preventing defects rather than catching them after the fact. This covers Total Quality Management (TQM) principles, the cost of quality, and how quality control differs from quality assurance - all common ground in operations and general management interviews.",
+    "learning_objectives": [
+      "Explain the difference between Quality Control (QC) and Quality Assurance (QA)",
+      "List the core principles of Total Quality Management (TQM)",
+      "Break down the four categories in the Cost of Quality model",
+      "Describe what a Pareto chart and a fishbone (Ishikawa) diagram are used for",
+      "Explain why 'quality is free' (Crosby's argument)"
+    ],
+    "concepts": [
+      {
+        "heading": "1. Quality Control vs. Quality Assurance",
+        "body": "Quality Control (QC) is reactive/detective - inspecting outputs to catch defects before they reach the customer (e.g. final inspection, testing). Quality Assurance (QA) is proactive/preventive - building process controls so defects don't occur in the first place (e.g. standardized procedures, training, process audits). Mature organizations invest more in QA to reduce reliance on QC."
+      },
+      {
+        "heading": "2. Total Quality Management (TQM)",
+        "body": "A management philosophy where quality is everyone's responsibility, not just a QC department's. Core principles: customer focus, continuous improvement (kaizen), employee involvement, process-centered thinking, and fact-based (data-driven) decision making. TQM treats quality as a strategic, organization-wide commitment rather than a final inspection step."
+      },
+      {
+        "heading": "3. Cost of Quality",
+        "body": "Four buckets: Prevention costs (training, process design - stopping defects before they happen), Appraisal costs (inspection, testing - finding defects), Internal failure costs (scrap, rework - defects caught before shipping), External failure costs (returns, warranty, recalls, reputation damage - defects reaching the customer). External failure costs are typically the most expensive by far, which is the core argument for investing upstream in prevention."
+      },
+      {
+        "heading": "4. Basic Quality Tools",
+        "body": "Pareto chart: ranks defect causes by frequency to focus effort on the 'vital few' (80/20 rule). Fishbone/Ishikawa diagram: maps potential root causes of a problem across categories (commonly Man, Machine, Method, Material, Measurement, Environment - the '6 Ms') to structure root-cause brainstorming. Control chart: tracks a process metric over time against statistical control limits to distinguish normal variation from a real problem."
+      }
+    ],
+    "formulas": [
+      "Cost of Quality = Prevention + Appraisal + Internal Failure + External Failure costs",
+      "Defect rate = number of defective units / total units produced",
+      "First Pass Yield = units passing inspection without rework / total units started"
+    ],
+    "shortcut_methods": [
+      "If a scenario describes catching bad units at final inspection, that's QC. If it describes preventing bad units via better process design/training, that's QA.",
+      "'Quality is free' (Crosby): the cost of preventing defects is almost always lower than the cost of the failures (internal rework + external returns/reputation) they cause - useful default argument for why to invest in prevention",
+      "When asked to prioritize which defect to fix first, reach for a Pareto chart mentally: fix the highest-frequency cause first"
+    ],
+    "common_mistakes": [
+      "Treating QC and QA as the same thing - QC catches defects, QA prevents them",
+      "Assuming appraisal (inspection) cost is the biggest cost of quality - external failure cost (recalls, lost customers) is typically far larger",
+      "Using a fishbone diagram to rank causes by importance - it's for generating/organizing possible causes, not prioritizing them (that's what Pareto analysis is for)"
+    ],
+    "summary": "Quality management interviews reward showing that prevention beats detection: TQM makes quality everyone's job, the Cost of Quality model shows external failures are the most expensive, and simple tools (Pareto, fishbone) exist to find and fix root causes systematically instead of firefighting.",
+    "quick_revision_notes": [
+      "QC = detect defects (reactive), QA = prevent defects (proactive)",
+      "Cost of Quality: Prevention, Appraisal, Internal Failure, External Failure",
+      "External failure cost is usually the largest - prevention is cheaper",
+      "Pareto chart = rank causes by frequency; Fishbone = brainstorm root causes by category"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["qc-vs-qa"],
+      "question": "A company inspects finished products at the end of the line to catch defective units before shipping. This is an example of:",
+      "options": ["Quality Control", "Quality Assurance", "Total Quality Management", "Kaizen"],
+      "correct_answer": "Quality Control",
+      "explanation": "Inspecting finished output to catch defects is reactive/detective - the definition of Quality Control, as opposed to QA which prevents defects via process design."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["cost-of-quality"],
+      "question": "A product recall after defective units reached customers falls under which cost-of-quality category?",
+      "options": ["External failure cost", "Internal failure cost", "Prevention cost", "Appraisal cost"],
+      "correct_answer": "External failure cost",
+      "explanation": "Costs incurred after a defect reaches the customer (recalls, returns, warranty, reputation) are external failure costs - typically the most expensive category."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["tqm"],
+      "question": "Which of these is NOT a core principle of Total Quality Management (TQM)?",
+      "options": [
+        "Quality is solely the responsibility of the QC department",
+        "Continuous improvement (kaizen)",
+        "Customer focus",
+        "Fact-based, data-driven decision making"
+      ],
+      "correct_answer": "Quality is solely the responsibility of the QC department",
+      "explanation": "TQM's defining idea is that quality is everyone's responsibility across the organization, not confined to one department."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 45,
+      "tags": ["tools"],
+      "question": "A team wants to brainstorm and organize the possible root causes of a recurring defect across categories like Man, Machine, Method and Material. Which tool fits best?",
+      "options": ["Fishbone (Ishikawa) diagram", "Pareto chart", "Control chart", "Gantt chart"],
+      "correct_answer": "Fishbone (Ishikawa) diagram",
+      "explanation": "The fishbone diagram organizes potential root causes into structured categories (the '6 Ms') to guide root-cause brainstorming."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 50,
+      "tags": ["cost-of-quality", "case"],
+      "question": "A factory currently spends heavily on final inspection (appraisal) but has a high rate of customer returns (external failure). What is the most defensible recommendation based on the cost-of-quality model?",
+      "options": [
+        "Shift investment toward prevention (better process/training) to reduce both failure categories",
+        "Increase appraisal spending further to catch even more defects at final inspection",
+        "Stop all inspection to save cost",
+        "Accept the return rate as unavoidable"
+      ],
+      "correct_answer": "Shift investment toward prevention (better process/training) to reduce both failure categories",
+      "explanation": "Since external failure costs are typically the most expensive and appraisal alone isn't preventing them, the cost-of-quality logic (Crosby's 'quality is free') argues for investing upstream in prevention rather than more inspection."
+    }
+  ]
+}

@@ -108,6 +108,8 @@ export interface HomeSummary {
   guide_count: number
   progress_attempts: number
   progress_accuracy: number
+  domain_topic_count: number
+  domain_subject_count: number
 }
 
 export interface AdminUser extends User {
@@ -143,6 +145,7 @@ export interface Subject {
   id: number
   slug: string
   name: string
+  track: 'aptitude' | 'domain'
   topic_count: number
 }
 

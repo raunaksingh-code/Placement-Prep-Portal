@@ -1,0 +1,109 @@
+{
+  "study_material": {
+    "title": "Marketing Fundamentals (4Ps & STP)",
+    "introduction": "Every marketing case interview traces back to two frameworks: STP (how you choose who to target) and the 4Ps (how you design the offer for them). This topic builds fluency in both, since almost every marketing question can be structured around one or the other.",
+    "learning_objectives": [
+      "Walk through Segmentation, Targeting and Positioning (STP) in order",
+      "Explain each of the 4Ps and give an example decision for each",
+      "Distinguish the 4Ps (seller's view) from the 4Cs (buyer's view)",
+      "Identify common bases for market segmentation",
+      "Write a one-line positioning statement for a product"
+    ],
+    "concepts": [
+      {
+        "heading": "1. Segmentation",
+        "body": "Dividing a broad market into groups of customers with similar needs/behavior, using bases like demographic (age, income), geographic (region, urban/rural), psychographic (lifestyle, values), and behavioral (usage rate, brand loyalty, purchase occasion). Good segments are measurable, substantial (large enough to be worth targeting), accessible, and actionable."
+      },
+      {
+        "heading": "2. Targeting",
+        "body": "Evaluating each segment's attractiveness (size, growth, competitive intensity, fit with company strengths) and choosing which one(s) to pursue. Strategies range from undifferentiated (one offer for everyone), to differentiated (tailored offers per segment), to concentrated/niche (one segment only), to micromarketing (individual-level personalization)."
+      },
+      {
+        "heading": "3. Positioning",
+        "body": "Defining how the brand should be perceived in the target customer's mind relative to competitors - the specific, differentiated place it occupies. A positioning statement typically follows: 'For [target segment], [brand] is the [category] that [key benefit/differentiator], because [reason to believe].' Positioning must be simple enough to fit in one sentence and be genuinely differentiated, not just a list of features."
+      },
+      {
+        "heading": "4. The 4Ps (Marketing Mix)",
+        "body": "Product (what you sell - features, quality, variants), Price (how much, and the pricing strategy - premium, penetration, value), Place (where/how customers access it - channels, distribution), Promotion (how you communicate it - advertising, PR, sales promotion, digital). Every marketing decision maps to one or more of these 4 levers. The 4Cs reframe the same decisions from the buyer's side: Customer solution, Cost, Convenience, Communication."
+      }
+    ],
+    "formulas": [
+      "STP order: Segment the market -> Target the best segment(s) -> Position the offer for that target",
+      "Positioning statement template: For [target], [brand] is the [category] that [benefit], because [reason to believe]"
+    ],
+    "shortcut_methods": [
+      "If a case asks 'who should we sell to and how do we position it', that's STP - segment first, target second, position last, always in that order",
+      "If a case asks 'what should we change about the offer', map the question onto the 4Ps to structure the answer (is this a Product issue? Price? Place? Promotion?)",
+      "A quick positioning check: could a competitor make the exact same claim? If yes, it isn't differentiated enough."
+    ],
+    "common_mistakes": [
+      "Jumping straight to promotion/advertising ideas without first defining the target segment and positioning",
+      "Writing a positioning statement that's just a feature list, not a genuine point of difference the customer would care about",
+      "Confusing segmentation (dividing the market) with targeting (choosing which segment to pursue) - they're sequential, not the same step"
+    ],
+    "summary": "STP answers 'who do we serve and how do we want to be seen', and the 4Ps answer 'how do we design the offer to deliver on that positioning'. Nearly every marketing interview question can be structured through one of these two frameworks.",
+    "quick_revision_notes": [
+      "STP = Segmentation -> Targeting -> Positioning, always in that order",
+      "Segmentation bases: demographic, geographic, psychographic, behavioral",
+      "4Ps = Product, Price, Place, Promotion (seller's view); 4Cs = buyer's view of the same",
+      "Positioning statement: For [target], [brand] is the [category] that [benefit], because [reason]"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["stp"],
+      "question": "In the STP framework, what is the correct order of steps?",
+      "options": ["Segmentation, Targeting, Positioning", "Positioning, Targeting, Segmentation", "Targeting, Segmentation, Positioning", "Segmentation, Positioning, Targeting"],
+      "correct_answer": "Segmentation, Targeting, Positioning",
+      "explanation": "You must first divide the market into segments, then choose which to target, then decide how to position the offer for that chosen target."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["4ps"],
+      "question": "A company decides to sell its product exclusively through its own website instead of retail stores. This is primarily a change to which 'P'?",
+      "options": ["Place", "Product", "Price", "Promotion"],
+      "correct_answer": "Place",
+      "explanation": "Place covers distribution channels - how and where customers access the product, including the choice between direct-to-consumer and retail."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["segmentation"],
+      "question": "Segmenting customers based on their lifestyle, values, and interests (rather than age or income) is an example of which segmentation base?",
+      "options": ["Psychographic", "Demographic", "Geographic", "Behavioral"],
+      "correct_answer": "Psychographic",
+      "explanation": "Psychographic segmentation groups customers by lifestyle, values and personality, as opposed to demographic (age/income) or geographic (location) bases."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 45,
+      "tags": ["positioning"],
+      "question": "Which of these is the strongest positioning statement?",
+      "options": [
+        "For busy professionals, QuickMeal is the meal-kit service that delivers restaurant-quality dinners in 10 minutes, because every recipe is pre-portioned and pre-cooked 80%",
+        "QuickMeal has great food and fast delivery",
+        "QuickMeal offers many recipes at a fair price",
+        "QuickMeal is a meal-kit company"
+      ],
+      "correct_answer": "For busy professionals, QuickMeal is the meal-kit service that delivers restaurant-quality dinners in 10 minutes, because every recipe is pre-portioned and pre-cooked 80%",
+      "explanation": "It names a specific target, a specific differentiated benefit (10-minute prep), and a credible reason to believe it - the full positioning-statement structure, unlike the vague alternatives."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 50,
+      "tags": ["case"],
+      "question": "A niche premium skincare brand wants to grow revenue fast and considers selling through mass discount retailers at a lower price point. What is the biggest strategic risk?",
+      "options": [
+        "It would undermine the brand's premium positioning, confusing the target segment about what the brand stands for",
+        "Mass retailers never allow small brands on their shelves",
+        "There is no risk - more distribution is always better",
+        "This is purely a Product decision, unrelated to positioning"
+      ],
+      "correct_answer": "It would undermine the brand's premium positioning, confusing the target segment about what the brand stands for",
+      "explanation": "Place, Price and Positioning must stay consistent - selling a premium brand through discount channels at a lower price contradicts its positioning and can damage the brand's perceived value with its core target segment."
+    }
+  ]
+}

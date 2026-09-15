@@ -1,0 +1,104 @@
+{
+  "study_material": {
+    "title": "Data Visualization & Dashboards",
+    "introduction": "A great analysis with a bad chart doesn't get acted on. This topic covers how to pick the right chart type, avoid the common ways charts mislead an audience, and what makes a dashboard genuinely useful rather than just decorative.",
+    "learning_objectives": [
+      "Match the right chart type to the data relationship being shown",
+      "Identify at least 3 common ways charts mislead readers",
+      "Explain the difference between an operational and an executive dashboard",
+      "Describe pre-attentive attributes (color, size, position) and why they matter",
+      "Critique a chart for unnecessary chart junk / clutter"
+    ],
+    "concepts": [
+      {
+        "heading": "1. Matching Chart Type to Data Relationship",
+        "body": "Comparison across categories -> bar chart. Trend over time -> line chart. Part-to-whole -> stacked bar or (sparingly) pie chart, only with few categories. Relationship between two numeric variables -> scatter plot. Distribution of a single variable -> histogram. Geographic pattern -> map. Choosing the wrong chart type for the relationship is the single most common visualization mistake."
+      },
+      {
+        "heading": "2. How Charts Mislead",
+        "body": "Truncated y-axis (not starting at zero) exaggerates small differences into what looks like a huge change. Dual y-axes with different scales can make unrelated trends look correlated. 3D charts distort the true size of segments. Cherry-picked time windows can make a flat or declining trend look like consistent growth. A trustworthy chart makes the honest comparison obvious at a glance."
+      },
+      {
+        "heading": "3. Pre-attentive Attributes",
+        "body": "Color, size, position and shape are processed by the brain before conscious attention - a red bar among gray ones, or one bar taller than the rest, is noticed instantly. Good visualization design uses this deliberately: highlight the one number that matters with color, and mute everything else, rather than making everything equally colorful (which highlights nothing)."
+      },
+      {
+        "heading": "4. Dashboards: Operational vs. Executive",
+        "body": "Operational dashboards are used moment-to-moment by frontline teams to act immediately (e.g. a call-center queue monitor) - dense, real-time, detailed. Executive dashboards summarize high-level trends for strategic decisions (e.g. monthly KPI summary for leadership) - a handful of the most important numbers, updated less frequently, with drill-down available but not required. Designing one dashboard to serve both audiences usually satisfies neither."
+      }
+    ],
+    "formulas": [
+      "Data-ink ratio (Tufte): ink used to display actual data / total ink used in the chart - higher is better, less clutter",
+      "Rule of thumb: if a chart needs a long caption to explain what it's showing, the chart itself needs to be redesigned"
+    ],
+    "shortcut_methods": [
+      "If asked to critique a chart, check the y-axis first - a non-zero baseline is the most common way to exaggerate a trend",
+      "For 'which chart type should I use', map the question to one of 5 buckets: comparison, trend, part-to-whole, relationship, distribution",
+      "When designing for executives, force yourself to cut to the 3-5 numbers that actually drive a decision - resist the urge to show everything"
+    ],
+    "common_mistakes": [
+      "Defaulting to pie charts for many categories - beyond 4-5 slices they become unreadable; a bar chart is almost always clearer",
+      "Adding unnecessary 3D effects, gradients or excessive gridlines ('chart junk') that add no information",
+      "Building one dashboard meant to serve both daily operational decisions and monthly executive summaries"
+    ],
+    "summary": "Good data visualization is chart-type selection matched to the relationship in the data, honest axes and scales, deliberate use of color/size to draw the eye to what matters, and a dashboard designed for one specific audience and decision, not everyone at once.",
+    "quick_revision_notes": [
+      "Comparison=bar, Trend=line, Part-to-whole=stacked bar/pie, Relationship=scatter, Distribution=histogram",
+      "Truncated y-axis is the most common way charts mislead",
+      "Pre-attentive attributes (color, size) should highlight the one number that matters",
+      "Operational dashboards = real-time/detailed; Executive dashboards = few numbers, high-level"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["chart-selection"],
+      "question": "You want to show how monthly revenue has changed over the past 2 years. Which chart type fits best?",
+      "options": ["Line chart", "Pie chart", "Scatter plot", "Stacked bar chart"],
+      "correct_answer": "Line chart",
+      "explanation": "Line charts are the standard choice for showing a trend over a continuous time period."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["misleading-charts"],
+      "question": "A bar chart's y-axis starts at 90 instead of 0, making a change from 92 to 95 look like a massive jump. This is an example of:",
+      "options": ["A truncated axis exaggerating the apparent difference", "Correct and honest visualization practice", "A scatter plot misuse", "A pre-attentive attribute error"],
+      "correct_answer": "A truncated axis exaggerating the apparent difference",
+      "explanation": "Not starting the y-axis at zero for a bar chart visually exaggerates small differences, one of the most common ways charts mislead."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["chart-selection"],
+      "question": "To show the relationship between advertising spend and sales across 50 products, which chart is most appropriate?",
+      "options": ["Scatter plot", "Pie chart", "Line chart", "Single stacked bar"],
+      "correct_answer": "Scatter plot",
+      "explanation": "Scatter plots are designed to reveal the relationship between two numeric variables across many data points."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["dashboards"],
+      "question": "A call center wants a screen showing live queue length and wait times that agents check constantly during their shift. This is best described as:",
+      "options": ["An operational dashboard", "An executive dashboard", "A predictive model", "A Pareto chart"],
+      "correct_answer": "An operational dashboard",
+      "explanation": "Real-time, detailed, action-oriented views used moment-to-moment by frontline staff are operational dashboards, distinct from high-level executive summaries."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 50,
+      "tags": ["critique", "case"],
+      "question": "A leadership dashboard shows 40 metrics on one screen, all in different bright colors, updated in real time. What is the strongest critique?",
+      "options": [
+        "Too many equally-emphasized metrics and colors make it hard to identify what actually matters - it should be reduced to a handful of key numbers with deliberate use of color",
+        "The dashboard needs more colors to be readable",
+        "Real-time updates are inappropriate for any dashboard",
+        "Executive dashboards should never use color"
+      ],
+      "correct_answer": "Too many equally-emphasized metrics and colors make it hard to identify what actually matters - it should be reduced to a handful of key numbers with deliberate use of color",
+      "explanation": "When everything is colorful and emphasized equally, nothing stands out - good dashboard design deliberately limits scope and uses pre-attentive attributes (like color) sparingly to highlight what matters most, especially for an executive audience."
+    }
+  ]
+}

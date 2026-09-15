@@ -24,6 +24,8 @@ class HomeSummary(BaseModel):
     guide_count: int
     progress_attempts: int
     progress_accuracy: float
+    domain_topic_count: int
+    domain_subject_count: int
 
 
 @router.get("/home", response_model=HomeSummary)
@@ -47,9 +49,13 @@ def home_summary(db: Session = Depends(get_db), user: User = Depends(get_current
         .filter(TestAttempt.user_id == user.id, TestAttempt.is_completed.is_(True), TestAttempt.total > 0)
         .first()
     )
+    aptitude_subject_ids = [s.id for s in db.query(Subject.id).filter(Subject.track == "aptitude")]
+    domain_subject_ids = [s.id for s in db.query(Subject.id).filter(Subject.track == "domain")]
     return HomeSummary(
-        topic_count=db.query(Topic).count(),
-        subject_count=db.query(Subject).count(),
+        topic_count=db.query(Topic).filter(Topic.subject_id.in_(aptitude_subject_ids)).count(),
+        subject_count=len(aptitude_subject_ids),
+        domain_topic_count=db.query(Topic).filter(Topic.subject_id.in_(domain_subject_ids)).count(),
+        domain_subject_count=len(domain_subject_ids),
         company_count=db.query(JobDescription.company_id).distinct().count(),
         jd_count=db.query(JobDescription).count(),
         question_count=db.query(InterviewQuestion).count(),
