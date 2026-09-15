@@ -1,0 +1,136 @@
+{
+  "study_material": {
+    "title": "Financial Statements & Accrual Accounting",
+    "introduction": "Every finance interview, from a corporate finance role to investment banking, starts here: can you walk through the three financial statements and explain how they connect? This topic covers the Income Statement, Balance Sheet, and Cash Flow Statement, plus the accrual-accounting concepts (revenue recognition, depreciation, goodwill) that explain why they're built the way they are.",
+    "learning_objectives": [
+      "Walk through the Income Statement, Balance Sheet, and Cash Flow Statement line by line",
+      "Explain how the three statements link to each other",
+      "Apply the revenue recognition and matching principles",
+      "Explain how a change in depreciation flows through all three statements",
+      "Define goodwill and explain why it exists on the balance sheet"
+    ],
+    "concepts": [
+      {
+        "heading": "1. The Income Statement",
+        "body": "Shows profitability over a period. Revenue, less Cost of Goods Sold (COGS), gives Gross Profit. Subtracting operating expenses (SG&A, R&D) gives EBITDA (Earnings Before Interest, Taxes, Depreciation & Amortization). Subtracting D&A gives EBIT/Operating Income. Subtracting net interest expense gives Pre-Tax Income, and subtracting taxes gives Net Income - the 'bottom line'."
+      },
+      {
+        "heading": "2. The Balance Sheet",
+        "body": "A snapshot at one point in time: Assets = Liabilities + Shareholders' Equity. Assets are listed by liquidity (Current: cash, receivables, inventory; Long-term: PP&E, intangibles, goodwill). Liabilities are listed by how soon they come due (Current: payables, short-term debt; Long-term: long-term debt, deferred taxes). Equity holds common stock, additional paid-in capital, treasury stock, and retained earnings - the cumulative profits kept in the business."
+      },
+      {
+        "heading": "3. The Cash Flow Statement",
+        "body": "Reconciles accrual-based net income to actual cash movement, in three sections: Cash from Operations (starts with net income, adds back non-cash items like D&A, adjusts for working-capital changes), Cash from Investing (capex, acquisitions), and Cash from Financing (debt/equity raised or repaid, dividends, buybacks). The sum of all three is the net change in cash for the period."
+      },
+      {
+        "heading": "4. How the Three Statements Connect",
+        "body": "Net income (Income Statement) is the starting line of the Cash Flow Statement. The Cash Flow Statement's ending cash balance flows onto the Balance Sheet as the period's cash. Net income, less dividends paid, rolls into Retained Earnings on the Balance Sheet. Depreciation on the Income Statement reduces PP&E on the Balance Sheet, and is added back on the Cash Flow Statement since it's non-cash."
+      },
+      {
+        "heading": "5. Accrual Accounting Principles",
+        "body": "Revenue Recognition: record revenue when it's earned (delivered), not when cash is received. Matching Principle: record an expense in the same period as the revenue it helped generate. This is why an item is capitalized (spread over its useful life, like a building) if its benefit lasts more than a year, but expensed immediately (like a month's wages) if the benefit is short-term."
+      },
+      {
+        "heading": "6. Goodwill",
+        "body": "When an acquirer pays more than the fair market value of a target's net identifiable assets, the excess is recorded as goodwill on the acquirer's balance sheet. Under US GAAP, public companies cannot amortize goodwill - it's tested annually for impairment instead, since it's assumed to have an indefinite life (similar to land)."
+      }
+    ],
+    "formulas": [
+      "Net Income = Revenue - COGS - SG&A - R&D - D&A - Interest Expense - Taxes",
+      "Assets = Liabilities + Shareholders' Equity",
+      "Current Period Retained Earnings = Prior Retained Earnings + Net Income - Dividends",
+      "Straight-Line Depreciation = (Historical Cost - Salvage Value) / Useful Life",
+      "Goodwill = Purchase Price - Fair Market Value of Net Identifiable Assets"
+    ],
+    "shortcut_methods": [
+      "If asked 'walk me through the 3 statements', keep it to 3-4 sentences per statement and finish with how they link - interviewers grade on structure, not exhaustive detail",
+      "For 'how does a $X change in [item] flow through the statements', always trace it in order: Income Statement effect -> tax-adjusted net income change -> Cash Flow Statement -> Balance Sheet, and confirm the balance sheet still balances",
+      "When something is a non-cash expense (D&A) it reduces net income and taxes, but gets added back on the cash flow statement - net cash impact is only the tax savings, not the full expense"
+    ],
+    "common_mistakes": [
+      "Saying depreciation has 'no effect' on anything because it's non-cash - it still reduces taxable income and therefore actual cash taxes paid",
+      "Forgetting that public companies can no longer amortize goodwill under US GAAP - it's tested for impairment instead",
+      "Confusing capitalizing (spreading a cost over years, e.g. a machine) with expensing (recording a cost immediately, e.g. wages) - the test is how long the benefit lasts, not the dollar amount"
+    ],
+    "summary": "The three statements are one interconnected system: the Income Statement measures accrual profit, the Balance Sheet is a snapshot of what the company owns and owes, and the Cash Flow Statement reconciles the two by tracking actual cash. Fluency here - especially the linkages - is the single most tested skill in any finance interview.",
+    "quick_revision_notes": [
+      "IS: Revenue -> Gross Profit -> EBITDA -> EBIT -> Pre-Tax Income -> Net Income",
+      "BS: Assets = Liabilities + Equity, listed by liquidity/maturity",
+      "CFS: Operations + Investing + Financing = Net Change in Cash",
+      "Net income links IS to CFS; ending cash links CFS to BS; retained earnings links IS to BS",
+      "Goodwill = purchase price - fair value of net assets acquired; not amortized under US GAAP"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["income-statement"],
+      "question": "What is the correct order of line items on the income statement, from top to bottom?",
+      "options": [
+        "Revenue, Gross Profit, EBITDA, EBIT, Pre-Tax Income, Net Income",
+        "Net Income, EBIT, EBITDA, Gross Profit, Revenue",
+        "Revenue, Net Income, EBITDA, EBIT, Gross Profit",
+        "EBITDA, Revenue, Gross Profit, Net Income, EBIT"
+      ],
+      "correct_answer": "Revenue, Gross Profit, EBITDA, EBIT, Pre-Tax Income, Net Income",
+      "explanation": "The income statement flows from revenue down through successive deductions (COGS, opex, D&A, interest, tax) to arrive at net income, the bottom line."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["three-statement-linkage"],
+      "question": "Depreciation increases by $10 (tax rate 30%). What is the immediate impact on the cash balance?",
+      "options": [
+        "Cash increases by $3",
+        "Cash decreases by $10",
+        "Cash decreases by $7",
+        "No impact on cash"
+      ],
+      "correct_answer": "Cash increases by $3",
+      "explanation": "Net income falls by $7 after tax, but the $10 depreciation is added back as non-cash on the cash flow statement, netting to a $3 increase in cash (the tax shield from the extra depreciation)."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["accrual-accounting"],
+      "question": "Under the revenue recognition principle, when should revenue be recorded?",
+      "options": [
+        "When the good or service is delivered/earned, regardless of when cash is received",
+        "Only when cash is received from the customer",
+        "At the start of the fiscal year",
+        "When the invoice is printed"
+      ],
+      "correct_answer": "When the good or service is delivered/earned, regardless of when cash is received",
+      "explanation": "Accrual accounting recognizes revenue when it's earned, not when cash changes hands - that's the core distinction from cash-basis accounting."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["balance-sheet"],
+      "question": "A company issues a $5 million dividend. What is the balance sheet impact?",
+      "options": [
+        "Cash decreases by $5M and retained earnings decreases by $5M",
+        "Cash increases by $5M and retained earnings decreases by $5M",
+        "Only retained earnings changes; cash is unaffected",
+        "Only cash changes; retained earnings is unaffected"
+      ],
+      "correct_answer": "Cash decreases by $5M and retained earnings decreases by $5M",
+      "explanation": "Dividends are paid out of retained earnings and reduce cash directly - both sides of the balance sheet fall by the same amount, keeping it balanced."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 50,
+      "tags": ["goodwill", "case"],
+      "question": "An acquirer buys a company for $500 million; the target's net identifiable assets have a fair market value of $420 million. How much goodwill is recorded, and can it be amortized under US GAAP?",
+      "options": [
+        "$80 million goodwill; cannot be amortized (tested annually for impairment instead)",
+        "$80 million goodwill; must be amortized over 10 years",
+        "$500 million goodwill; cannot be amortized",
+        "$420 million goodwill; must be amortized over 15 years"
+      ],
+      "correct_answer": "$80 million goodwill; cannot be amortized (tested annually for impairment instead)",
+      "explanation": "Goodwill = purchase price - fair value of net assets = $500M - $420M = $80M. Under US GAAP, public companies cannot amortize goodwill; it's tested annually for impairment."
+    }
+  ]
+}

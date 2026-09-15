@@ -1,0 +1,114 @@
+{
+  "study_material": {
+    "title": "Relative Valuation & Trading Comps",
+    "introduction": "Where a DCF values a company from its own fundamentals, relative valuation ('comps') values it against what the market is paying for similar businesses. This is the fastest, most commonly used valuation method in practice, and this topic covers how to build a peer group, pick the right multiple, and interpret what a multiple actually means.",
+    "learning_objectives": [
+      "Explain the logic of relative valuation and how a peer group is built",
+      "Match the correct numerator (equity value vs. enterprise value) to the correct denominator",
+      "List the most common valuation multiples and when each is used",
+      "Distinguish trading comps from transaction comps",
+      "Explain what drives two similar companies to trade at different multiples"
+    ],
+    "concepts": [
+      {
+        "heading": "1. The Logic of Multiples",
+        "body": "A multiple standardizes a company's value on a per-unit basis (e.g. value per dollar of EBITDA) so companies of different sizes can be compared. The numerator and denominator must represent the same group of capital providers: Enterprise Value pairs with unlevered metrics (EBITDA, EBIT, Revenue - all pre-debt), while Equity Value pairs with levered, post-debt metrics (Net Income/EPS for P/E, Book Value for P/B). Mixing them (e.g. EV / Net Income) is a classic error, since it compares a value belonging to all capital providers against earnings belonging only to shareholders."
+      },
+      {
+        "heading": "2. Building a Peer Group (Spreading Comps)",
+        "body": "1) Select comparable companies based on operational profile (industry, products, end markets, life-cycle stage) and financial profile (size, margins, growth, leverage). 2) Gather financials and 'scrub' them for non-recurring items and accounting differences. 3) Calculate multiples (LTM and forward/NTM), typically showing min/max/25th/75th percentile/mean/median across the set. 4) Apply the peer group's median (or mean) multiple to the target company's own metric to estimate its value."
+      },
+      {
+        "heading": "3. Trading Comps vs. Transaction Comps",
+        "body": "Trading Comps: uses current public market prices of similar companies - easy to access data, reflects up-to-date sentiment, but excludes any control premium. Transaction Comps: uses prices actually paid in recent M&A deals for similar companies - captures the control premium buyers pay to gain a controlling stake, but data can be sparse, dated, or hard to compile (especially for private-company deals), and old deals may not reflect current market conditions."
+      },
+      {
+        "heading": "4. Common Multiples",
+        "body": "EV/EBITDA (the most widely used - capital structure and tax neutral), EV/EBIT, EV/Revenue (used for unprofitable companies), P/E (Price/Earnings - the most common equity-value multiple), P/B (Price/Book - common for financial institutions). The choice depends on the industry and whether the company is profitable enough for earnings-based multiples to be meaningful."
+      },
+      {
+        "heading": "5. Why Multiples Differ Between 'Similar' Companies",
+        "body": "Even close competitors can trade at different multiples because of differences in growth prospects, ROIC, cost of capital, leverage, or simple market mispricing. Higher growth and higher ROIC generally justify a higher multiple, since investors are paying for future value creation, not just current earnings. A high P/E relative to peers can mean the market expects strong future growth - or that the company is overvalued - context (industry, growth stage) determines which interpretation is right."
+      }
+    ],
+    "formulas": [
+      "EV/EBITDA, EV/EBIT, EV/Revenue (Enterprise Value multiples - pair with unlevered metrics)",
+      "P/E = Share Price / EPS = Market Cap / Net Income (Equity Value multiple - pairs with levered metrics)",
+      "P/B = Share Price / Book Value per Share"
+    ],
+    "shortcut_methods": [
+      "Quick numerator/denominator check: if the numerator is Enterprise Value, the denominator must be a pre-interest, pre-debt metric (EBITDA, EBIT, Revenue); if the numerator is Equity Value, the denominator must be a post-debt metric (Net Income, EPS)",
+      "Transaction comps generally value higher than trading comps because of the control premium - if asked to rank valuation methods by typical output, transaction comps usually top the list",
+      "If two 'identical' companies trade at different EV/EBITDA multiples, look first at growth prospects and ROIC differences before assuming market mispricing"
+    ],
+    "common_mistakes": [
+      "Pairing Enterprise Value with Net Income (a levered metric) in a multiple - always match unlevered-to-unlevered or levered-to-levered",
+      "Assuming trading comps are 'unbiased' just because they use real market prices - the market can misprice individual stocks, and peer group selection itself involves judgment",
+      "Ignoring that leverage differences can distort P/E multiples between otherwise similar companies, even when EV/EBITDA multiples for the same two companies stay close"
+    ],
+    "summary": "Relative valuation trades the rigor of a DCF for speed and market grounding: build a defensible peer group, match the right multiple type to the right metric, and interpret differences in multiples through the lens of growth, returns, and risk rather than assuming the market is simply wrong.",
+    "quick_revision_notes": [
+      "EV pairs with unlevered metrics (EBITDA, EBIT, Revenue); Equity Value pairs with levered metrics (Net Income, EPS)",
+      "EV/EBITDA is the most widely used multiple - capital structure and tax neutral",
+      "Transaction comps > trading comps in typical value, due to the control premium",
+      "Multiple differences between peers usually trace back to growth, ROIC, or leverage differences"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["multiples-basics"],
+      "question": "Which of these is a correctly matched valuation multiple?",
+      "options": ["EV/EBITDA", "EV/Net Income", "Equity Value/EBIT", "Market Cap/EBITDA"],
+      "correct_answer": "EV/EBITDA",
+      "explanation": "Enterprise Value (all capital providers) correctly pairs with EBITDA (an unlevered, pre-debt metric). The other options mismatch an unlevered numerator/denominator with a levered one."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["trading-vs-transaction"],
+      "question": "What is the key piece of information transaction comps capture that trading comps do not?",
+      "options": ["The control premium paid to acquire a company", "The company's tax rate", "Daily stock price volatility", "The company's dividend history"],
+      "correct_answer": "The control premium paid to acquire a company",
+      "explanation": "Transaction comps reflect actual acquisition prices, which include a control premium over the pre-deal market price - information trading comps (based on public market prices only) don't capture."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["multiples-selection"],
+      "question": "Which multiple is most appropriate for valuing a currently unprofitable, high-growth company?",
+      "options": ["EV/Revenue", "P/E", "EV/EBITDA", "P/B"],
+      "correct_answer": "EV/Revenue",
+      "explanation": "When earnings or EBITDA are negative or not meaningful, revenue-based multiples remain usable since revenue is typically still positive, unlike earnings-based multiples."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 45,
+      "tags": ["case"],
+      "question": "Two otherwise identical companies have different leverage levels. Would you expect their EV/EBITDA multiples or their P/E multiples to differ more, and why?",
+      "options": [
+        "P/E multiples would differ more, since leverage directly affects EPS (through interest expense) while EV/EBITDA is capital-structure neutral",
+        "EV/EBITDA would differ more, since EBITDA is affected by leverage",
+        "Both would be identical regardless of leverage",
+        "Neither multiple is affected by leverage"
+      ],
+      "correct_answer": "P/E multiples would differ more, since leverage directly affects EPS (through interest expense) while EV/EBITDA is capital-structure neutral",
+      "explanation": "EV/EBITDA is designed to be independent of capital structure, so it should stay similar between the two. P/E is directly affected because more debt means more interest expense, lowering EPS (the denominator) for the more leveraged company."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 55,
+      "tags": ["peer-group"],
+      "question": "When building a peer group for trading comps, which factor is LEAST relevant to include as a comparability criterion?",
+      "options": [
+        "The CEO's personal educational background",
+        "Industry and end markets served",
+        "Growth rate and margin profile",
+        "Size (revenue/EBITDA) and capital structure"
+      ],
+      "correct_answer": "The CEO's personal educational background",
+      "explanation": "Peer group selection is based on operational profile (industry, products, end markets) and financial profile (size, margins, growth, leverage) - an executive's personal background has no bearing on business comparability."
+    }
+  ]
+}

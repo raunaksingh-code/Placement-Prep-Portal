@@ -1,0 +1,114 @@
+{
+  "study_material": {
+    "title": "Financial Statement Analysis & Ratios",
+    "introduction": "Once you can read the three statements, the next skill is analyzing them: profitability margins, working capital efficiency, and the liquidity/leverage ratios that tell you whether a company can pay its bills and service its debt. This is standard ground in any finance interview, from FP&A to credit analysis to equity research.",
+    "learning_objectives": [
+      "Calculate and interpret gross, operating, net, and EBITDA margins",
+      "Explain working capital and the cash conversion cycle",
+      "Compute DSO, DIH, and DPO and know what each measures",
+      "Distinguish ROA, ROE, and ROIC and explain how leverage links ROA to ROE",
+      "Identify the key liquidity, leverage, and coverage ratios used in credit analysis"
+    ],
+    "concepts": [
+      {
+        "heading": "1. Profitability Margins",
+        "body": "Gross Margin = Gross Profit / Revenue (efficiency of production). Operating Margin = EBIT / Revenue (core profitability, independent of capital structure and taxes). Net Margin = Net Income / Revenue (bottom-line profitability, affected by financing and taxes). EBITDA Margin = EBITDA / Revenue - the most widely used margin for cross-company comparison since it strips out both capital structure (interest) and non-cash items (D&A)."
+      },
+      {
+        "heading": "2. Working Capital & the Cash Conversion Cycle",
+        "body": "Working Capital = Current Assets - Current Liabilities, a measure of near-term liquidity. Net Working Capital (NWC) excludes cash and debt since they're non-operating. Three efficiency ratios matter: Days Inventory Held (DIH = Inventory/COGS x 365 - time to sell inventory), Days Sales Outstanding (DSO = AR/Revenue x 365 - time to collect from customers), Days Payable Outstanding (DPO = AP/COGS x 365 - time taken to pay suppliers). Cash Conversion Cycle = DIH + DSO - DPO: the number of days cash is tied up before it's converted back to cash. Lower is better."
+      },
+      {
+        "heading": "3. Return Ratios: ROA, ROE, ROIC",
+        "body": "Return on Assets (ROA) = Net Income / Average Total Assets - how efficiently assets generate profit. Return on Equity (ROE) = Net Income / Average Shareholders' Equity - how efficiently shareholder capital is used. Without debt, ROA and ROE are equal; adding leverage raises ROE above ROA (since equity, the denominator, shrinks relative to assets). Return on Invested Capital (ROIC) = NOPAT / Invested Capital - compared against WACC, a company earning ROIC above its cost of capital is creating value."
+      },
+      {
+        "heading": "4. Credit Analysis Ratios",
+        "body": "Liquidity ratios (Current Ratio = Current Assets/Current Liabilities, Quick Ratio - stricter, only highly liquid assets) show whether short-term obligations can be met. Leverage ratios (Debt/EBITDA, Debt/Equity) show how much debt is used relative to earnings or capital. Coverage ratios (EBITDA/Interest Expense, Debt Service Coverage Ratio) show whether cash flow can service debt payments - a DSCR below 1.0x is a red flag."
+      }
+    ],
+    "formulas": [
+      "Gross/Operating/Net/EBITDA Margin = (Gross Profit / EBIT / Net Income / EBITDA) / Revenue",
+      "DIH = (Inventory / COGS) x 365; DSO = (AR / Revenue) x 365; DPO = (AP / COGS) x 365",
+      "Cash Conversion Cycle = DIH + DSO - DPO",
+      "ROA = Net Income / Average Total Assets; ROE = Net Income / Average Shareholders' Equity",
+      "ROIC = NOPAT / Invested Capital",
+      "Current Ratio = Current Assets / Current Liabilities"
+    ],
+    "shortcut_methods": [
+      "EBITDA margin is the default 'apples-to-apples' profitability comparison across companies with different debt levels and tax situations - reach for it first when comparing peers",
+      "Lower DSO/DIH and higher DPO are all 'good' for cash conversion cycle - the company collects fast, sells inventory fast, and pays suppliers slowly",
+      "ROE > ROA is not automatically bad - it just means the company uses leverage. Check whether the leverage is sustainable (via coverage ratios) before judging it as risky"
+    ],
+    "common_mistakes": [
+      "Comparing net margins across companies with very different capital structures or tax jurisdictions - use EBITDA or operating margin for a cleaner comparison",
+      "Treating negative working capital as automatically bad - some efficient businesses (fast inventory turnover, slow supplier payment) run on negative working capital by design",
+      "Forgetting that ROA and ROE use AVERAGE (not ending) assets/equity, since the income statement numerator covers a period while the balance sheet denominator is a snapshot"
+    ],
+    "summary": "Ratio analysis translates raw financial statements into comparable, standardized signals: margins for profitability, DSO/DIH/DPO and the cash conversion cycle for working-capital efficiency, and ROA/ROE/ROIC plus liquidity/leverage/coverage ratios for overall financial health and creditworthiness.",
+    "quick_revision_notes": [
+      "EBITDA margin = most comparable profitability metric across peers (capital-structure and tax neutral)",
+      "Cash Conversion Cycle = DIH + DSO - DPO; lower is better",
+      "ROE = ROA when no debt; leverage pushes ROE above ROA",
+      "ROIC > WACC means the company is creating value with its capital allocation",
+      "DSCR < 1.0x signals the company may not generate enough cash to service its debt"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["margins"],
+      "question": "Which margin is most commonly used to compare profitability across companies with different capital structures and tax rates?",
+      "options": ["EBITDA Margin", "Net Profit Margin", "Gross Margin only", "Dividend Yield"],
+      "correct_answer": "EBITDA Margin",
+      "explanation": "EBITDA margin excludes interest (capital structure), taxes, and non-cash D&A, making it the most standardized basis for cross-company comparison."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 45,
+      "tags": ["working-capital"],
+      "question": "A company has DIH of 40 days, DSO of 30 days, and DPO of 25 days. What is its cash conversion cycle?",
+      "options": ["45 days", "95 days", "5 days", "70 days"],
+      "correct_answer": "45 days",
+      "explanation": "Cash Conversion Cycle = DIH + DSO - DPO = 40 + 30 - 25 = 45 days."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["roa-roe"],
+      "question": "A company has ROA of 10% and a 50/50 debt-to-equity capital structure. What is its approximate ROE?",
+      "options": ["20%", "10%", "5%", "50%"],
+      "correct_answer": "20%",
+      "explanation": "With $100 in assets, 10% ROA implies $10 net income. With equity at only $50 (50/50 D/E), ROE = $10/$50 = 20% - leverage amplifies ROE above ROA."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["credit-analysis"],
+      "question": "A Debt Service Coverage Ratio (DSCR) below 1.0x most likely indicates:",
+      "options": [
+        "The company may not generate enough cash flow to cover its debt obligations",
+        "The company has no debt at all",
+        "The company is highly profitable",
+        "The company's inventory turns over quickly"
+      ],
+      "correct_answer": "The company may not generate enough cash flow to cover its debt obligations",
+      "explanation": "DSCR compares available cash flow to required debt payments; below 1.0x means cash flow is insufficient to cover those obligations, a warning sign for creditors."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 50,
+      "tags": ["roic", "case"],
+      "question": "Company A has an ROIC of 15% and a WACC of 9%. Company B has an ROIC of 8% and a WACC of 9%. What can you conclude?",
+      "options": [
+        "Company A is creating value from its capital allocation; Company B is destroying value",
+        "Both companies are creating equal value",
+        "Company B is performing better because its WACC and ROIC are closer",
+        "ROIC and WACC cannot be compared this way"
+      ],
+      "correct_answer": "Company A is creating value from its capital allocation; Company B is destroying value",
+      "explanation": "A company creates value when ROIC exceeds its cost of capital (WACC). Company A's 15% ROIC > 9% WACC creates value; Company B's 8% ROIC < 9% WACC destroys value."
+    }
+  ]
+}

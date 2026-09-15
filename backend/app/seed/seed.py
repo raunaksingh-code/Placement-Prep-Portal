@@ -61,7 +61,17 @@ SUBJECTS = [
 # data/seed_source/topics_full/<slug>.json, same as aptitude topics -
 # see the "All other topics" pack loader below.
 DOMAIN_SUBJECTS = [
-    ("finance", "Finance", []),
+    (
+        "finance",
+        "Finance",
+        [
+            ("financial-statements-basics", "Financial Statements & Accrual Accounting"),
+            ("financial-statement-analysis", "Financial Statement Analysis & Ratios"),
+            ("corporate-finance-valuation-basics", "Corporate Finance & Valuation Fundamentals"),
+            ("dcf-valuation", "Discounted Cash Flow (DCF) & Cost of Capital"),
+            ("relative-valuation-comps", "Relative Valuation & Trading Comps"),
+        ],
+    ),
     (
         "operations",
         "Operations",

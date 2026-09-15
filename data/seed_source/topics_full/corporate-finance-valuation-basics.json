@@ -1,0 +1,128 @@
+{
+  "study_material": {
+    "title": "Corporate Finance & Valuation Fundamentals",
+    "introduction": "Before DCF or comps, every valuation question rests on two ideas: the time value of money, and the distinction between equity value and enterprise value. This topic builds that foundation, plus an overview of the five main valuation methods and the free cash flow concept that underlies most of them.",
+    "learning_objectives": [
+      "Explain present value and the time value of money",
+      "Calculate equity value and enterprise value, and convert between them",
+      "Explain why enterprise value is 'capital structure neutral' and equity value is not",
+      "List the five main valuation methodologies and when each is used",
+      "Define free cash flow and explain why non-operating items are excluded"
+    ],
+    "concepts": [
+      {
+        "heading": "1. Present Value & Time Value of Money",
+        "body": "A dollar today is worth more than a dollar in the future, because today's dollar can be invested to earn a return. This is why intrinsic valuation methods (like DCF) work by discounting future cash flows back to today's value - a company's worth equals the present value of all the cash it will generate."
+      },
+      {
+        "heading": "2. Equity Value vs. Enterprise Value",
+        "body": "Equity Value (market capitalization) = Share Price x Diluted Shares Outstanding - the value belonging only to common shareholders. Enterprise Value (EV) = Equity Value + Net Debt + Preferred Stock + Minority Interest - the value of the whole business, belonging to ALL capital providers (debt and equity). EV is 'capital structure neutral': raising debt doesn't change EV, since new cash and new debt offset each other. This is why EV can be lower than equity value for cash-rich companies (their negative net debt reduces EV below equity value) - Apple and Microsoft are classic examples."
+      },
+      {
+        "heading": "3. The Five Main Valuation Methods",
+        "body": "Trading Comps (value based on how similar public companies are currently priced by the market). Transaction Comps (value based on prices paid in recent M&A deals for similar companies - typically yields the highest value due to control premiums). DCF/Intrinsic Valuation (value based on projected cash flows, discounted to present value - the most 'academically rigorous' but also the most sensitive to assumptions). LBO Analysis (the maximum price a financial buyer could pay and still hit its required investment return). Liquidation Analysis (asset-based value under a distressed, worst-case wind-down scenario)."
+      },
+      {
+        "heading": "4. Free Cash Flow",
+        "body": "Free Cash Flow (FCF) is a company's discretionary cash flow after the expenses needed to keep operating: FCF = Cash from Operations - Capex. One-time items like acquisitions are excluded because they're not part of core, recurring operations. Non-operating income (investment income, asset sale gains) is also excluded from both DCF and comps analysis, so that only the cash-generating power of the core business is being valued."
+      }
+    ],
+    "formulas": [
+      "Present Value = Future Cash Flow / (1 + discount rate)^number of periods",
+      "Equity Value = Share Price x Diluted Shares Outstanding",
+      "Enterprise Value = Equity Value + Net Debt + Preferred Stock + Minority Interest",
+      "Net Debt = Total Debt - Cash & Equivalents",
+      "Free Cash Flow = Cash from Operations - Capex"
+    ],
+    "shortcut_methods": [
+      "If a company is cash-rich (net debt is negative), its Enterprise Value will be LOWER than its Equity Value - not a contradiction, since EV excludes non-operating cash",
+      "Transaction comps almost always give the highest valuation of the main methods, because of the control premium buyers pay - useful as a quick sanity-check ranking",
+      "When in doubt about which method to use, the honest answer is 'use several and triangulate' - interviewers reward this over picking just one method"
+    ],
+    "common_mistakes": [
+      "Treating equity value and enterprise value as interchangeable - they represent different groups of capital providers",
+      "Assuming raising more debt increases enterprise value - it doesn't, EV is capital-structure neutral (the cash raised offsets the new debt)",
+      "Including one-time items like a recent acquisition in the calculation of free cash flow - FCF should reflect only recurring, core operations"
+    ],
+    "summary": "Every valuation conversation starts from the same two ideas: cash today is worth more than cash tomorrow (present value), and a business's total value (enterprise value) is different from what's left over for shareholders after debt (equity value). From there, the five valuation methods are just different lenses - market-based (comps), fundamentals-based (DCF), or scenario-based (LBO, liquidation) - on the same underlying question of what a company is worth.",
+    "quick_revision_notes": [
+      "PV: money today > money tomorrow, because it can be invested",
+      "Equity Value = shareholders only; Enterprise Value = all capital providers, capital-structure neutral",
+      "EV = Equity Value + Net Debt + Preferred + Minority Interest",
+      "5 methods: Trading Comps, Transaction Comps, DCF, LBO, Liquidation",
+      "FCF = Cash from Operations - Capex; excludes one-time and non-operating items"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["equity-value-ev"],
+      "question": "Which formula correctly calculates Enterprise Value?",
+      "options": [
+        "Equity Value + Net Debt + Preferred Stock + Minority Interest",
+        "Equity Value - Net Debt - Preferred Stock",
+        "Net Income x P/E Multiple",
+        "Total Assets - Total Liabilities"
+      ],
+      "correct_answer": "Equity Value + Net Debt + Preferred Stock + Minority Interest",
+      "explanation": "Enterprise Value represents the value to ALL capital providers, so it adds net debt and other non-equity claims to equity value."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["net-debt"],
+      "question": "A company has $2 billion in total debt and $3 billion in cash. What is its net debt, and what does this imply about its Enterprise Value vs. Equity Value?",
+      "options": [
+        "Net debt is -$1 billion (net cash); Enterprise Value is lower than Equity Value",
+        "Net debt is $1 billion; Enterprise Value is higher than Equity Value",
+        "Net debt is $5 billion; Enterprise Value is much higher than Equity Value",
+        "Net debt cannot be negative"
+      ],
+      "correct_answer": "Net debt is -$1 billion (net cash); Enterprise Value is lower than Equity Value",
+      "explanation": "Net Debt = Total Debt - Cash = $2B - $3B = -$1B. Since EV = Equity Value + Net Debt, a negative net debt makes EV lower than Equity Value - the Apple/Microsoft pattern."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["valuation-methods"],
+      "question": "Which valuation method typically produces the highest implied value, and why?",
+      "options": [
+        "Transaction comps, because they include a control premium",
+        "Trading comps, because public markets are always efficient",
+        "Liquidation analysis, because it values total assets",
+        "DCF, because it uses the most data"
+      ],
+      "correct_answer": "Transaction comps, because they include a control premium",
+      "explanation": "Transaction comps reflect actual prices paid to acquire companies, which include a control premium (often 25-50% above market price) to incentivize shareholders to sell."
+    },
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["free-cash-flow"],
+      "question": "Why are one-time acquisitions excluded from the calculation of free cash flow?",
+      "options": [
+        "They are not part of the company's core, recurring operations",
+        "Acquisitions are always cash-neutral",
+        "Free cash flow only measures financing activities",
+        "Acquisitions increase EBITDA automatically"
+      ],
+      "correct_answer": "They are not part of the company's core, recurring operations",
+      "explanation": "Free cash flow is meant to reflect the recurring cash-generating power of the core business, so one-time, discretionary events like acquisitions are excluded."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 55,
+      "tags": ["case"],
+      "question": "A company raises $250 million in new debt and holds the cash on its balance sheet. What happens to its Enterprise Value?",
+      "options": [
+        "No change - the increase in debt is offset by the increase in cash, leaving net debt (and EV) unchanged",
+        "Enterprise Value increases by $250 million",
+        "Enterprise Value decreases by $250 million",
+        "Equity Value increases by $250 million"
+      ],
+      "correct_answer": "No change - the increase in debt is offset by the increase in cash, leaving net debt (and EV) unchanged",
+      "explanation": "Since EV is capital-structure neutral and net debt = debt - cash, raising debt and holding the cash leaves net debt unchanged, so EV is theoretically unaffected (though financing costs could indirectly affect valuation later)."
+    }
+  ]
+}

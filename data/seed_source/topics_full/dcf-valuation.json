@@ -1,0 +1,118 @@
+{
+  "study_material": {
+    "title": "Discounted Cash Flow (DCF) & Cost of Capital",
+    "introduction": "The DCF is the most tested valuation method in finance interviews precisely because it forces you to show real understanding: forecasting cash flows, choosing a discount rate, and reasoning about risk. This topic walks through building a DCF end-to-end, and the WACC/beta mechanics behind the discount rate.",
+    "learning_objectives": [
+      "Walk through the steps of building a DCF from unlevered free cash flow to price per share",
+      "Distinguish unlevered (FCFF) from levered (FCFE) free cash flow, and their matching discount rates",
+      "Calculate WACC and explain each component",
+      "Explain beta, and how leverage affects it",
+      "Explain the two methods for calculating terminal value"
+    ],
+    "concepts": [
+      {
+        "heading": "1. The DCF Process",
+        "body": "1) Forecast unlevered free cash flow (FCFF) for 5-10 years. 2) Calculate terminal value for all cash flows beyond the forecast period. 3) Discount both the forecast-period cash flows and the terminal value to present value using WACC. 4) Sum these to get Enterprise Value, then subtract net debt and other non-equity claims to reach Equity Value. 5) Divide by diluted shares outstanding for price per share. 6) Run sensitivity analysis, since DCF outputs are highly sensitive to the assumptions used."
+      },
+      {
+        "heading": "2. Unlevered vs. Levered Free Cash Flow",
+        "body": "Unlevered FCF (FCFF) = EBIT x (1 - Tax Rate) + D&A - Change in NWC - Capex - cash flow available to ALL capital providers, discounted at WACC, and used in the standard (unlevered) DCF to arrive directly at Enterprise Value. Levered FCF (FCFE) = Cash from Operations - Capex - Debt Principal Payments - cash flow left for equity holders only, discounted at the Cost of Equity, arriving directly at Equity Value. Both approaches should theoretically converge on the same value."
+      },
+      {
+        "heading": "3. WACC (Weighted Average Cost of Capital)",
+        "body": "WACC = [E/(D+E) x Cost of Equity] + [D/(D+E) x Cost of Debt x (1 - Tax Rate)]. It's the blended, opportunity cost of capital across a company's debt and equity, using MARKET values (not book values) for the weights. If a company has no debt, WACC equals its cost of equity. As debt increases from zero, WACC initially falls (thanks to the tax-deductibility of interest, the 'tax shield'), but past an optimal point, rising default/distress risk pushes WACC back up."
+      },
+      {
+        "heading": "4. Cost of Equity & Beta (CAPM)",
+        "body": "Cost of Equity = Risk-Free Rate + Beta x Equity Risk Premium (the Capital Asset Pricing Model). The risk-free rate is usually proxied by the 10-year US Treasury yield. Beta measures a stock's sensitivity to overall market movements: beta = 1 moves with the market, beta > 1 is more volatile (cyclical sectors like autos, semiconductors), beta < 1 is less volatile (defensive sectors like utilities, healthcare staples). Since raw regression betas are noisy, analysts often 'unlever' peer-group betas to strip out each company's leverage effect, average them, then 're-lever' at the target's own capital structure - useful especially for private companies with no observable beta of their own."
+      },
+      {
+        "heading": "5. Terminal Value",
+        "body": "Two standard approaches: Growth in Perpetuity (Gordon Growth) Method: TV = FCF(next year) / (discount rate - perpetual growth rate) - assumes cash flows grow forever at a modest, sustainable rate. Exit Multiple Method: applies a valuation multiple (like EV/EBITDA) to the final forecast year's metric, based on what similar mature companies trade at. Terminal value commonly makes up roughly 60-80% of a DCF's total implied value, which is exactly why the DCF is criticized as being so assumption-sensitive - most of the value comes from what happens after the explicit forecast ends."
+      }
+    ],
+    "formulas": [
+      "FCFF (Unlevered FCF) = EBIT x (1 - Tax Rate) + D&A - Change in NWC - Capex",
+      "FCFE (Levered FCF) = Cash from Operations - Capex - Debt Principal Payments",
+      "WACC = [E/(D+E) x Re] + [D/(D+E) x Rd x (1 - t)]",
+      "Cost of Equity (CAPM) = Risk-Free Rate + Beta x Equity Risk Premium",
+      "Terminal Value (Growth in Perpetuity) = FCF(t+1) / (r - g)",
+      "Unlevered Beta = Levered Beta / [1 + (1-t) x (Debt/Equity)]"
+    ],
+    "shortcut_methods": [
+      "Match the cash flow to the right discount rate: unlevered FCF -> WACC -> Enterprise Value; levered FCF -> Cost of Equity -> Equity Value directly. Mixing these up is the most common DCF mistake in interviews.",
+      "Higher beta or higher leverage -> higher discount rate -> lower valuation, all else equal - a quick sanity check on any DCF-direction question",
+      "If asked which input matters most in a DCF, the discount rate usually swings the valuation far more than the revenue growth assumption - say this explicitly, it's a commonly tested distinction"
+    ],
+    "common_mistakes": [
+      "Discounting unlevered FCF at the cost of equity (or levered FCF at WACC) instead of matching cash flow type to discount rate type",
+      "Using BOOK values instead of MARKET values for the debt and equity weights in WACC",
+      "Forgetting that terminal value is usually the majority of a DCF's total value - underestimating how much the terminal assumptions (growth rate, exit multiple) drive the whole output"
+    ],
+    "summary": "A DCF is a mechanical process (forecast cash flows, discount them, add terminal value, convert to equity value) built on top of judgment calls about risk (WACC, beta) and the far future (terminal value assumptions) - which is exactly why interviewers use it to probe both technical mechanics and business judgment at once.",
+    "quick_revision_notes": [
+      "DCF steps: forecast UFCF -> terminal value -> discount at WACC -> Enterprise Value -> minus net debt -> Equity Value -> divide by shares",
+      "Unlevered FCF + WACC = Enterprise Value; Levered FCF + Cost of Equity = Equity Value",
+      "WACC blends cost of equity and after-tax cost of debt, weighted by market value",
+      "Cost of Equity (CAPM) = Risk-Free Rate + Beta x Equity Risk Premium",
+      "Terminal value is usually 60-80% of total DCF value - the discount rate matters more than the growth rate"
+    ]
+  },
+  "practice_questions": [
+    {
+      "difficulty": "easy",
+      "estimated_time_sec": 30,
+      "tags": ["dcf-basics"],
+      "question": "In a standard (unlevered) DCF, unlevered free cash flows should be discounted using:",
+      "options": ["WACC", "Cost of Equity", "The risk-free rate only", "The company's current P/E ratio"],
+      "correct_answer": "WACC",
+      "explanation": "Unlevered FCF belongs to all capital providers (debt and equity), so it must be discounted at WACC, the blended cost of capital, to arrive at Enterprise Value."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 45,
+      "tags": ["wacc"],
+      "question": "A company has no debt in its capital structure. What is its WACC equal to?",
+      "options": ["Its cost of equity", "Its cost of debt", "Zero", "The risk-free rate"],
+      "correct_answer": "Its cost of equity",
+      "explanation": "WACC blends cost of equity and after-tax cost of debt by their respective weights. With no debt, the equity weight is 100%, so WACC simply equals the cost of equity."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["beta"],
+      "question": "Which industry would typically have the HIGHEST beta?",
+      "options": ["Semiconductors (highly cyclical)", "Utilities", "Healthcare staples", "Consumer essentials (toiletries)"],
+      "correct_answer": "Semiconductors (highly cyclical)",
+      "explanation": "Cyclical industries like semiconductors see demand swing sharply with the economy, making their stock returns more sensitive to the market - a higher beta - compared to defensive sectors like utilities or consumer staples."
+    },
+    {
+      "difficulty": "medium",
+      "estimated_time_sec": 40,
+      "tags": ["terminal-value"],
+      "question": "A DCF's terminal value, using the growth in perpetuity method, is calculated as:",
+      "options": [
+        "Next year's FCF divided by (discount rate minus perpetual growth rate)",
+        "Current year's FCF multiplied by the discount rate",
+        "The sum of all forecasted cash flows",
+        "EBITDA multiplied by the risk-free rate"
+      ],
+      "correct_answer": "Next year's FCF divided by (discount rate minus perpetual growth rate)",
+      "explanation": "The Gordon Growth / perpetuity formula is TV = FCF(t+1) / (r - g), capturing the present value of cash flows growing forever at rate g, discounted at rate r."
+    },
+    {
+      "difficulty": "hard",
+      "estimated_time_sec": 55,
+      "tags": ["case", "wacc"],
+      "question": "As a company adds a moderate amount of debt to an all-equity capital structure, what typically happens to its WACC initially, and why?",
+      "options": [
+        "WACC decreases, because debt is cheaper than equity and interest is tax-deductible (the tax shield)",
+        "WACC always increases immediately with any debt",
+        "WACC stays exactly the same regardless of leverage",
+        "WACC becomes impossible to calculate with any debt"
+      ],
+      "correct_answer": "WACC decreases, because debt is cheaper than equity and interest is tax-deductible (the tax shield)",
+      "explanation": "Debt is typically cheaper than equity, and interest expense is tax-deductible, so moderate leverage initially lowers WACC - until financial distress risk at higher leverage levels reverses the trend and WACC starts rising again."
+    }
+  ]
+}
