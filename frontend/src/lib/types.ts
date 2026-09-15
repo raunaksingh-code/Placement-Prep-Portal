@@ -417,6 +417,7 @@ export interface MockTest {
   negative_mark: number
   description: string | null
   sections: string[] | null
+  track: string | null
   attempt_count: number
   best_score: number | null
 }

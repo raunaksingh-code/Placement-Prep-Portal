@@ -3,16 +3,24 @@ import { useNavigate } from 'react-router-dom'
 import { api } from '../../lib/api'
 import type { MockTest } from '../../lib/types'
 
-const GROUPS = [
+const GROUPS: { key: string; title: string; blurb: string; match: (t: MockTest) => boolean }[] = [
   {
-    type: 'full_mock',
+    key: 'full_mock',
     title: 'Full mock tests',
     blurb: 'Full-length papers covering all three sections, like a real placement test.',
+    match: (t) => t.test_type === 'full_mock',
   },
   {
-    type: 'sectional',
+    key: 'sectional',
     title: 'Sectional tests',
     blurb: 'One section at a time — useful when you want to drill a single area.',
+    match: (t) => t.test_type === 'sectional' && t.track !== 'domain',
+  },
+  {
+    key: 'domain',
+    title: 'Domain tests',
+    blurb: 'Finance, Operations, Analytics or Marketing — one domain at a time.',
+    match: (t) => t.test_type === 'sectional' && t.track === 'domain',
   },
 ]
 
@@ -43,10 +51,10 @@ export default function MockTestListPage() {
       </p>
 
       {GROUPS.map((group) => {
-        const items = tests.filter((t) => t.test_type === group.type)
+        const items = tests.filter(group.match)
         if (!items.length) return null
         return (
-          <section key={group.type} className="mb-8">
+          <section key={group.key} className="mb-8">
             <h2 className="font-semibold text-lg">{group.title}</h2>
             <p className="text-sm text-slate-500 mb-3">{group.blurb}</p>
             <div className="grid gap-3 sm:grid-cols-2">

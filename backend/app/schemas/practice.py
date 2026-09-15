@@ -44,6 +44,7 @@ class MockTestOut(BaseModel):
     negative_mark: float = 0.0
     description: str | None = None
     sections: list | None = None
+    track: str | None = None
     attempt_count: int = 0
     best_score: float | None = None
 

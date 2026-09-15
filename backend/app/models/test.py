@@ -69,6 +69,10 @@ class Test(Base):
     description: Mapped[str | None] = mapped_column(Text, nullable=True)
     # Cross-topic tests only: which subject each section maps to, in order
     sections: Mapped[list | None] = mapped_column(JSON, nullable=True)
+    # "aptitude" (default, incl. null) or "domain" - lets the Mock Tests page
+    # show Domain sectional tests as their own group, same idea as
+    # Subject.track for Aptitude vs Domain Preparation.
+    track: Mapped[str | None] = mapped_column(String, nullable=True)
 
     questions: Mapped[list["TestQuestion"]] = relationship(
         back_populates="test", order_by="TestQuestion.order"

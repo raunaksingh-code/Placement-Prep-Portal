@@ -99,6 +99,7 @@ def list_mock_tests(db: Session = Depends(get_db), user: User = Depends(get_curr
                 negative_mark=t.negative_mark,
                 description=t.description,
                 sections=t.sections,
+                track=t.track,
                 attempt_count=len(mine),
                 best_score=max((a.score for a in mine), default=None),
             )

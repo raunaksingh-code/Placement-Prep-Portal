@@ -60,7 +60,7 @@ def home_summary(db: Session = Depends(get_db), user: User = Depends(get_current
         jd_count=db.query(JobDescription).count(),
         question_count=db.query(InterviewQuestion).count(),
         mock_test_count=db.query(Test)
-        .filter(Test.test_type.in_([TestType.full_mock, TestType.sectional]))
+        .filter(Test.test_type.in_([TestType.full_mock, TestType.sectional]), Test.track.is_(None))
         .count(),
         guide_count=db.query(InterviewGuide).count(),
         progress_attempts=attempts_row[0] or 0,

@@ -87,6 +87,45 @@ SECTIONAL_MOCKS = [
     },
 ]
 
+# Domain Preparation sectional tests - same shape as SECTIONAL_MOCKS above,
+# but sourced from the domain (Finance/Operations/Analytics/Marketing)
+# question pools and flagged track="domain" so the Mock Tests page can show
+# them as their own group instead of mixed in with the aptitude sectionals.
+DOMAIN_SECTIONAL_MOCKS = [
+    {
+        "slug": "sectional-finance",
+        "title": "Sectional Test - Finance",
+        "subject": "finance",
+        "seed": 511,
+        "count": 25,
+        "duration_minutes": 35,
+    },
+    {
+        "slug": "sectional-operations",
+        "title": "Sectional Test - Operations",
+        "subject": "operations",
+        "seed": 522,
+        "count": 20,
+        "duration_minutes": 30,
+    },
+    {
+        "slug": "sectional-analytics",
+        "title": "Sectional Test - Analytics",
+        "subject": "analytics",
+        "seed": 533,
+        "count": 20,
+        "duration_minutes": 30,
+    },
+    {
+        "slug": "sectional-marketing",
+        "title": "Sectional Test - Marketing",
+        "subject": "marketing",
+        "seed": 544,
+        "count": 20,
+        "duration_minutes": 30,
+    },
+]
+
 
 def _pool_by_subject(db: Session) -> dict[str, list[Question]]:
     """All practice/topic-test questions grouped by subject slug."""
@@ -298,37 +337,39 @@ def seed_generated_mocks(db: Session) -> int:
         created += 1
         db.commit()
 
-    for spec in SECTIONAL_MOCKS:
-        if db.query(Test).filter(Test.slug == spec["slug"]).count():
-            continue
-        available = pool.get(spec["subject"], [])
-        if not available:
-            continue
-        rng = random.Random(spec["seed"])
-        name = subject_names.get(spec["subject"], spec["subject"])
-        test = Test(
-            slug=spec["slug"],
-            title=spec["title"],
-            test_type=TestType.sectional,
-            duration_minutes=spec["duration_minutes"],
-            negative_mark=0.25,
-            sections=[name],
-            description=f"A timed {name} section drawn from across all its topics.",
-            instructions=[
-                f"{spec['count']} questions, {spec['duration_minutes']} minutes.",
-                "+1 for each correct answer, -0.25 for each wrong answer, 0 for unattempted.",
-                f"Questions are spread across every {name} topic.",
-            ],
-        )
-        db.add(test)
-        db.flush()
-        for order, source in enumerate(_pick(available, spec["count"], rng)):
-            clone = _clone_question(db, source)
-            db.add(
-                TestQuestion(test_id=test.id, question_id=clone.id, order=order, section=name)
+    for specs, track in [(SECTIONAL_MOCKS, None), (DOMAIN_SECTIONAL_MOCKS, "domain")]:
+        for spec in specs:
+            if db.query(Test).filter(Test.slug == spec["slug"]).count():
+                continue
+            available = pool.get(spec["subject"], [])
+            if not available:
+                continue
+            rng = random.Random(spec["seed"])
+            name = subject_names.get(spec["subject"], spec["subject"])
+            test = Test(
+                slug=spec["slug"],
+                title=spec["title"],
+                test_type=TestType.sectional,
+                track=track,
+                duration_minutes=spec["duration_minutes"],
+                negative_mark=0.25,
+                sections=[name],
+                description=f"A timed {name} section drawn from across all its topics.",
+                instructions=[
+                    f"{spec['count']} questions, {spec['duration_minutes']} minutes.",
+                    "+1 for each correct answer, -0.25 for each wrong answer, 0 for unattempted.",
+                    f"Questions are spread across every {name} topic.",
+                ],
             )
-        created += 1
-        db.commit()
+            db.add(test)
+            db.flush()
+            for order, source in enumerate(_pick(available, spec["count"], rng)):
+                clone = _clone_question(db, source)
+                db.add(
+                    TestQuestion(test_id=test.id, question_id=clone.id, order=order, section=name)
+                )
+            created += 1
+            db.commit()
 
     return created
 
