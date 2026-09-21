@@ -216,12 +216,13 @@ def mock_interview(body: MockInterviewRequest, current_user: User = Depends(get_
     if not body.messages:
         prompt = f"""
         You are an experienced interviewer conducting a {body.interview_type} interview{company_line}{role_line}
-        for a college campus placement. Greet the candidate in one short sentence, then ask your
-        first question. Ask exactly ONE question. Keep it realistic and concise, the way a real
-        interviewer would open.{context_str}
+        for a college campus placement. 
+        IMPORTANT: Your questions must strictly align with the {body.interview_type} round. For example, if it's an HR round, focus solely on behavioral, situational, and cultural fit questions. If it's a Technical round, focus on technical concepts, problem-solving, and role-specific skills.
+        
+        Greet the candidate in one short sentence, then ask your first question. Ask exactly ONE question. Keep it realistic and concise, the way a real interviewer would open.{context_str}
         """
     else:
-        wrap_up = body.time_up or candidate_turns >= 6
+        wrap_up = body.time_up or candidate_turns >= 20
         if wrap_up:
             instruction = (
                 'The candidate has answered enough questions, or the time is up. Do NOT ask '
@@ -231,10 +232,10 @@ def mock_interview(body: MockInterviewRequest, current_user: User = Depends(get_
             )
         else:
             instruction = (
-                "Ask exactly ONE next question that follows naturally from the candidate's last "
-                "answer (a related follow-up, a probe for more detail, or a new question of "
-                "similar difficulty). Keep it concise and professional, like a real interviewer. "
-                "Do not answer on the candidate's behalf."
+                f"Ask exactly ONE next question. Do NOT repeat previous questions. If you have already explored a topic or if the candidate gave a sufficient answer, move on to a NEW, distinct topic relevant to the role and JD. "
+                f"Make sure your question is strictly a {body.interview_type} question (e.g., HR questions for HR round, technical questions for Technical round). "
+                "You may ask a related follow-up if their previous answer was incomplete, but avoid getting stuck on one topic for too long. "
+                "Keep it concise and professional, like a real interviewer. Do not answer on the candidate's behalf."
             )
         prompt = f"""
         You are an experienced interviewer conducting a {body.interview_type} interview{company_line}{role_line}
