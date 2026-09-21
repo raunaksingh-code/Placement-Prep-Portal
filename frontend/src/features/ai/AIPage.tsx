@@ -1,19 +1,21 @@
 import { useRef, useState } from 'react'
-import { Bot, FileUp, Loader2, MessagesSquare, Mic, Users } from 'lucide-react'
+import { Bot, FileUp, Loader2, MessagesSquare, Mic, Users, Headphones } from 'lucide-react'
 import { api } from '../../lib/api'
 import { extractPdfText } from '../../lib/pdf'
 import type { ATSResponse, AnswerResponse, ChatMessage, ChatReply } from '../../lib/types'
 import ChatThread from './ChatThread'
 import InterviewCall from './InterviewCall'
 import GdCall from './GdCall'
+import EnglishCall from './EnglishCall'
 
-type Tab = 'ats' | 'answer' | 'mock-interview' | 'mock-gd' | 'chatbot'
+type Tab = 'ats' | 'answer' | 'mock-interview' | 'mock-gd' | 'chatbot' | 'english-practice'
 
 const TABS: { id: Tab; label: string; icon: typeof Bot }[] = [
   { id: 'ats', label: 'ATS Resume Grader', icon: FileUp },
   { id: 'answer', label: 'Answer Framer', icon: MessagesSquare },
   { id: 'mock-interview', label: 'Virtual Interview', icon: Mic },
   { id: 'mock-gd', label: 'Virtual GD', icon: Users },
+  { id: 'english-practice', label: 'English Practice', icon: Headphones },
   { id: 'chatbot', label: 'Ask AI', icon: Bot },
 ]
 
@@ -77,6 +79,10 @@ export default function AIPage() {
   // Virtual GD state
   const [gdTopic, setGdTopic] = useState('')
   const [gdStarted, setGdStarted] = useState(false)
+
+  // English Practice state
+  const [englishTopic, setEnglishTopic] = useState('')
+  const [englishStarted, setEnglishStarted] = useState(false)
 
   // Chatbot state
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([])
@@ -570,6 +576,43 @@ export default function AIPage() {
                 </div>
               ) : (
                 <GdCall topic={gdTopic} onRestart={restartGd} />
+              )}
+            </div>
+          )}
+
+          {activeTab === 'english-practice' && (
+            <div>
+              {!englishStarted ? (
+                <div className="max-w-md mx-auto text-center py-6">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white shadow-lg mb-4">
+                    <Headphones size={24} />
+                  </div>
+                  <h2 className="text-xl font-semibold text-slate-900 mb-1">English Practice Partner</h2>
+                  <p className="text-sm text-slate-500 mb-6">
+                    Have a casual voice conversation with the AI to practice your English articulation and fluency.
+                  </p>
+                  <div className="text-left space-y-3">
+                    <label className="block text-sm font-medium text-slate-700">What would you like to talk about?</label>
+                    <input
+                      value={englishTopic}
+                      onChange={(e) => setEnglishTopic(e.target.value)}
+                      placeholder="e.g. My favorite hobbies, A recent trip..."
+                      className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 outline-none text-sm"
+                    />
+                    <button
+                      onClick={() => englishTopic.trim() && setEnglishStarted(true)}
+                      disabled={!englishTopic.trim()}
+                      className="mt-3 w-full py-3 bg-indigo-600 text-white font-medium rounded-xl hover:bg-indigo-700 transition shadow-md disabled:opacity-50"
+                    >
+                      Start Practice
+                    </button>
+                  </div>
+                  <p className="text-xs text-slate-400 mt-3">
+                    You'll be asked to allow camera and microphone access.
+                  </p>
+                </div>
+              ) : (
+                <EnglishCall topic={englishTopic} onRestart={() => setEnglishStarted(false)} />
               )}
             </div>
           )}

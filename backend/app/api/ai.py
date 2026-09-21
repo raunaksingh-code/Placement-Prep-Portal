@@ -311,3 +311,56 @@ def mock_gd(body: MockGDRequest, current_user: User = Depends(get_current_user))
         "GEMINI_API_KEY.)",
     )
     return MockGDResponse(reply=reply)
+
+
+# --- English Practice: AI acts as a language partner ---
+
+class EnglishPracticeRequest(BaseModel):
+    messages: list[ChatMessage]
+    topic: str
+    time_up: bool | None = False
+
+class EnglishPracticeResponse(BaseModel):
+    reply: str
+
+@router.post("/english-practice", response_model=EnglishPracticeResponse)
+def english_practice(body: EnglishPracticeRequest, current_user: User = Depends(get_current_user)):
+    candidate_turns = sum(1 for m in body.messages if m.role == "user")
+
+    if not body.messages:
+        prompt = f"""
+        You are a friendly, encouraging English language partner helping a non-native speaker practice their conversational English.
+        The topic for today's practice is: "{body.topic}".
+        
+        Start the conversation by greeting them warmly and asking an open-ended question about the topic to get them talking. Keep your sentences natural, relatively simple, and conversational.
+        """
+    else:
+        wrap_up = body.time_up or candidate_turns >= 20
+        if wrap_up:
+            instruction = (
+                'The user wants to end the practice session, or the time is up. '
+                'Do NOT continue the conversation. Instead, reply with a header "English Practice Feedback" followed by a detailed review of their English: '
+                '1. Grammar Corrections (point out specific mistakes and how to fix them). '
+                '2. Vocabulary Suggestions (better words they could have used). '
+                '3. Articulation & Fluency (overall assessment).'
+            )
+        else:
+            instruction = (
+                "Act as a natural conversational partner. Respond to the user's last message, and gently guide the conversation forward by asking a related question about the topic. "
+                "Do NOT provide grammar corrections yet, unless they explicitly ask for it; just focus on having a natural flow. "
+                "Keep your response concise (2-3 sentences max) so the user does most of the talking."
+            )
+        prompt = f"""
+        You are a friendly English language practice partner. The topic is: "{body.topic}".
+
+        Transcript so far:
+        {_transcript(body.messages, ai_label="AI")}
+
+        {instruction}
+        """
+
+    reply = _call_gemini(
+        prompt,
+        "Hello! Let's talk about our topic. (Note: AI service is currently unavailable or misconfigured - ask an admin to set GEMINI_API_KEY.)",
+    )
+    return EnglishPracticeResponse(reply=reply)
