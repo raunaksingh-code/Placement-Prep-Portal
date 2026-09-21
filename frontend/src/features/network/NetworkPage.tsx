@@ -6,8 +6,9 @@ import { ConnectButton } from './ConnectButton'
 import { li } from './linkedinTheme'
 import { MyProfileCard } from './MyProfileCard'
 import { SuggestionsRail } from './SuggestionsRail'
+import { MessagesTab } from './MessagesTab'
 
-type Tab = 'discover' | 'connections' | 'requests'
+type Tab = 'discover' | 'connections' | 'requests' | 'messages'
 
 function UserCard({ user, children }: { user: User; children?: React.ReactNode }) {
   return (
@@ -38,6 +39,8 @@ export default function NetworkPage() {
   const [tab, setTab] = useState<Tab>('discover')
   const [pendingCount, setPendingCount] = useState(0)
 
+  const [messageUserId, setMessageUserId] = useState<number | undefined>(undefined)
+
   useEffect(() => {
     api<ConnectionRequest[]>('/api/connections/pending').then((r) => setPendingCount(r.length)).catch(() => {})
   }, [])
@@ -45,6 +48,7 @@ export default function NetworkPage() {
   const tabs: { key: Tab; label: string }[] = [
     { key: 'discover', label: 'Discover' },
     { key: 'connections', label: 'My Connections' },
+    { key: 'messages', label: 'Messages' },
     { key: 'requests', label: `Requests${pendingCount ? ` (${pendingCount})` : ''}` },
   ]
 
@@ -75,7 +79,15 @@ export default function NetworkPage() {
         </div>
 
         {tab === 'discover' && <DiscoverTab myId={me?.id} />}
-        {tab === 'connections' && <ConnectionsTab />}
+        {tab === 'connections' && (
+            <ConnectionsTab 
+                onMessage={(id) => {
+                    setMessageUserId(id)
+                    setTab('messages')
+                }} 
+            />
+        )}
+        {tab === 'messages' && <MessagesTab preselectUserId={messageUserId} />}
         {tab === 'requests' && <RequestsTab onCountChange={setPendingCount} />}
       </div>
 
@@ -178,7 +190,7 @@ function DiscoverTab({ myId }: { myId?: number }) {
   )
 }
 
-function ConnectionsTab() {
+function ConnectionsTab({ onMessage }: { onMessage: (userId: number) => void }) {
   const [connections, setConnections] = useState<User[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -200,10 +212,16 @@ function ConnectionsTab() {
     <div className="grid gap-5 sm:grid-cols-2">
       {connections.map((u) => (
         <UserCard key={u.id} user={u}>
-          <div className="mt-auto pt-3 border-t border-black/10">
+          <div className="mt-auto pt-3 border-t border-black/10 flex items-center justify-between">
             <Link to={`/users/${u.id}`} className={li.ghostLink}>
               View profile
             </Link>
+            <button 
+                onClick={() => onMessage(u.id)}
+                className="text-sm font-semibold text-[#0A66C2] hover:bg-blue-50 px-3 py-1.5 rounded-full transition"
+            >
+                Message
+            </button>
           </div>
         </UserCard>
       ))}
