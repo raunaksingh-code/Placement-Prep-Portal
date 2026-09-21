@@ -35,19 +35,23 @@ export default function AIPage() {
   const [loadingAts, setLoadingAts] = useState(false)
 
   // PDF upload state, keyed by field
-  const [extracting, setExtracting] = useState<'jd' | 'resume' | null>(null)
-  const [uploadError, setUploadError] = useState<{ field: 'jd' | 'resume'; message: string } | null>(null)
+  const [extracting, setExtracting] = useState<'jd' | 'resume' | 'interview-jd' | 'interview-cv' | null>(null)
+  const [uploadError, setUploadError] = useState<{ field: 'jd' | 'resume' | 'interview-jd' | 'interview-cv'; message: string } | null>(null)
   const jdFileRef = useRef<HTMLInputElement>(null)
   const resumeFileRef = useRef<HTMLInputElement>(null)
+  const intJdFileRef = useRef<HTMLInputElement>(null)
+  const intCvFileRef = useRef<HTMLInputElement>(null)
 
-  const handlePdfUpload = async (field: 'jd' | 'resume', file: File | undefined) => {
+  const handlePdfUpload = async (field: 'jd' | 'resume' | 'interview-jd' | 'interview-cv', file: File | undefined) => {
     if (!file) return
     setUploadError(null)
     setExtracting(field)
     try {
       const text = await extractPdfText(file)
       if (field === 'jd') setJobDescription(text)
-      else setResumeText(text)
+      else if (field === 'resume') setResumeText(text)
+      else if (field === 'interview-jd') setInterviewJD(text)
+      else if (field === 'interview-cv') setInterviewCV(text)
     } catch (err) {
       setUploadError({ field, message: err instanceof Error ? err.message : 'Could not read that PDF.' })
     } finally {
@@ -64,6 +68,10 @@ export default function AIPage() {
   // Virtual Interview state
   const [interviewType, setInterviewType] = useState(INTERVIEW_TYPES[1])
   const [interviewCompany, setInterviewCompany] = useState('')
+  const [interviewRole, setInterviewRole] = useState('')
+  const [interviewJD, setInterviewJD] = useState('')
+  const [interviewCV, setInterviewCV] = useState('')
+  const [interviewDuration, setInterviewDuration] = useState('15')
   const [interviewStarted, setInterviewStarted] = useState(false)
 
   // Virtual GD state
@@ -403,6 +411,96 @@ export default function AIPage() {
                         className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none text-sm"
                       />
                     </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1.5">
+                        Role <span className="text-slate-400 font-normal">(optional)</span>
+                      </label>
+                      <input
+                        value={interviewRole}
+                        onChange={(e) => setInterviewRole(e.target.value)}
+                        placeholder="e.g. Frontend Developer, Data Analyst..."
+                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none text-sm"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <label className="block text-sm font-medium text-slate-700">
+                          Job Description <span className="text-slate-400 font-normal">(optional)</span>
+                        </label>
+                        <button
+                          type="button"
+                          onClick={() => intJdFileRef.current?.click()}
+                          disabled={extracting === 'interview-jd'}
+                          className="flex items-center gap-1.5 text-xs font-semibold text-emerald-600 hover:text-emerald-800 disabled:opacity-60"
+                        >
+                          {extracting === 'interview-jd' ? <Loader2 size={13} className="animate-spin" /> : <FileUp size={13} />}
+                          Upload PDF
+                        </button>
+                        <input
+                          ref={intJdFileRef}
+                          type="file"
+                          accept="application/pdf"
+                          className="hidden"
+                          onChange={(e) => {
+                            handlePdfUpload('interview-jd', e.target.files?.[0])
+                            e.target.value = ''
+                          }}
+                        />
+                      </div>
+                      <textarea
+                        rows={3}
+                        value={interviewJD}
+                        onChange={(e) => setInterviewJD(e.target.value)}
+                        placeholder="Paste the JD here..."
+                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none resize-none text-sm"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex items-center justify-between mb-1.5">
+                        <label className="block text-sm font-medium text-slate-700">
+                          Your CV <span className="text-slate-400 font-normal">(optional)</span>
+                        </label>
+                        <button
+                          type="button"
+                          onClick={() => intCvFileRef.current?.click()}
+                          disabled={extracting === 'interview-cv'}
+                          className="flex items-center gap-1.5 text-xs font-semibold text-emerald-600 hover:text-emerald-800 disabled:opacity-60"
+                        >
+                          {extracting === 'interview-cv' ? <Loader2 size={13} className="animate-spin" /> : <FileUp size={13} />}
+                          Upload PDF
+                        </button>
+                        <input
+                          ref={intCvFileRef}
+                          type="file"
+                          accept="application/pdf"
+                          className="hidden"
+                          onChange={(e) => {
+                            handlePdfUpload('interview-cv', e.target.files?.[0])
+                            e.target.value = ''
+                          }}
+                        />
+                      </div>
+                      <textarea
+                        rows={3}
+                        value={interviewCV}
+                        onChange={(e) => setInterviewCV(e.target.value)}
+                        placeholder="Paste your CV here..."
+                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none resize-none text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1.5">Timer (minutes)</label>
+                      <select
+                        value={interviewDuration}
+                        onChange={(e) => setInterviewDuration(e.target.value)}
+                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none text-sm bg-white"
+                      >
+                        <option value="15">15 minutes</option>
+                        <option value="20">20 minutes</option>
+                        <option value="25">25 minutes</option>
+                        <option value="30">30 minutes</option>
+                      </select>
+                    </div>
                   </div>
                   <p className="text-xs text-slate-400 mt-3">
                     You'll be asked to allow camera and microphone access - this is a real video call
@@ -416,7 +514,7 @@ export default function AIPage() {
                   </button>
                 </div>
               ) : (
-                <InterviewCall interviewType={interviewType} company={interviewCompany} onRestart={restartInterview} />
+                <InterviewCall interviewType={interviewType} company={interviewCompany} role={interviewRole} jd={interviewJD} cv={interviewCV} duration={parseInt(interviewDuration, 10)} onRestart={restartInterview} />
               )}
             </div>
           )}

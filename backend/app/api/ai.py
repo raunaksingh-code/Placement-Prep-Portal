@@ -192,6 +192,10 @@ class MockInterviewRequest(BaseModel):
     messages: list[ChatMessage]
     interview_type: str
     company: str | None = None
+    jd: str | None = None
+    cv: str | None = None
+    role: str | None = None
+    time_up: bool | None = False
 
 class MockInterviewResponse(BaseModel):
     reply: str
@@ -199,20 +203,28 @@ class MockInterviewResponse(BaseModel):
 @router.post("/mock-interview", response_model=MockInterviewResponse)
 def mock_interview(body: MockInterviewRequest, current_user: User = Depends(get_current_user)):
     company_line = f" at {body.company}" if body.company else ""
+    role_line = f" for the role of {body.role}" if body.role else ""
+    
+    context_str = ""
+    if body.jd:
+        context_str += f"\n\nJob Description:\n{body.jd}"
+    if body.cv:
+        context_str += f"\n\nCandidate CV/Resume:\n{body.cv}"
+
     candidate_turns = sum(1 for m in body.messages if m.role == "user")
 
     if not body.messages:
         prompt = f"""
-        You are an experienced interviewer conducting a {body.interview_type} interview{company_line}
+        You are an experienced interviewer conducting a {body.interview_type} interview{company_line}{role_line}
         for a college campus placement. Greet the candidate in one short sentence, then ask your
         first question. Ask exactly ONE question. Keep it realistic and concise, the way a real
-        interviewer would open.
+        interviewer would open.{context_str}
         """
     else:
-        wrap_up = candidate_turns >= 6
+        wrap_up = body.time_up or candidate_turns >= 6
         if wrap_up:
             instruction = (
-                'The candidate has answered enough questions, or asked to stop. Do NOT ask '
+                'The candidate has answered enough questions, or the time is up. Do NOT ask '
                 'another question - instead reply with a header "Interview Summary" followed by '
                 'a short, structured review: Strengths (2-3 bullets), Areas to improve (2-3 '
                 'bullets), and a Rating: X/10.'
@@ -225,8 +237,8 @@ def mock_interview(body: MockInterviewRequest, current_user: User = Depends(get_
                 "Do not answer on the candidate's behalf."
             )
         prompt = f"""
-        You are an experienced interviewer conducting a {body.interview_type} interview{company_line}
-        for a college campus placement. Stay in character as the interviewer throughout.
+        You are an experienced interviewer conducting a {body.interview_type} interview{company_line}{role_line}
+        for a college campus placement. Stay in character as the interviewer throughout.{context_str}
 
         Transcript so far:
         {_transcript(body.messages, ai_label="Interviewer")}

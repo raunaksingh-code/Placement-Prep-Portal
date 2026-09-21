@@ -10,12 +10,16 @@ const INTERVIEWER: AiParticipant = { id: 'interviewer', name: 'Interviewer', gra
 interface InterviewCallProps {
   interviewType: string
   company: string
+  role?: string
+  jd?: string
+  cv?: string
+  duration?: number
   onRestart: () => void
 }
 
 type Phase = 'connecting' | 'ai-speaking' | 'your-turn' | 'listening' | 'thinking' | 'ended'
 
-export default function InterviewCall({ interviewType, company, onRestart }: InterviewCallProps) {
+export default function InterviewCall({ interviewType, company, role, jd, cv, duration = 15, onRestart }: InterviewCallProps) {
   const [phase, setPhase] = useState<Phase>('connecting')
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [caption, setCaption] = useState('')
@@ -30,6 +34,22 @@ export default function InterviewCall({ interviewType, company, onRestart }: Int
   const streamRef = useRef<MediaStream | null>(null)
   const recognizerRef = useRef<ReturnType<typeof createRecognizer>>(null)
   const startedRef = useRef(false)
+
+  const [timeLeft, setTimeLeft] = useState(duration * 60)
+
+  useEffect(() => {
+    if (phase === 'ended' || phase === 'connecting') return
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer)
+          return 0
+        }
+        return prev - 1
+      })
+    }, 1000)
+    return () => clearInterval(timer)
+  }, [phase])
 
   useEffect(() => {
     let cancelled = false
@@ -63,7 +83,7 @@ export default function InterviewCall({ interviewType, company, onRestart }: Int
     try {
       const res = await api<ChatReply>('/api/ai/mock-interview', {
         method: 'POST',
-        body: JSON.stringify({ messages: [], interview_type: interviewType, company: company || undefined }),
+        body: JSON.stringify({ messages: [], interview_type: interviewType, company: company || undefined, role: role || undefined, jd: jd || undefined, cv: cv || undefined, time_up: timeLeft <= 0 }),
       })
       await sayAndAdvance(res.reply, [])
     } catch {
@@ -115,7 +135,7 @@ export default function InterviewCall({ interviewType, company, onRestart }: Int
     try {
       const res = await api<ChatReply>('/api/ai/mock-interview', {
         method: 'POST',
-        body: JSON.stringify({ messages: next, interview_type: interviewType, company: company || undefined }),
+        body: JSON.stringify({ messages: next, interview_type: interviewType, company: company || undefined, role: role || undefined, jd: jd || undefined, cv: cv || undefined, time_up: timeLeft <= 0 }),
       })
       await sayAndAdvance(res.reply, next)
     } catch {
@@ -134,11 +154,20 @@ export default function InterviewCall({ interviewType, company, onRestart }: Int
 
   const speechSupported = isSpeechRecognitionSupported()
 
+  const formatTime = (seconds: number) => {
+    const m = Math.floor(seconds / 60)
+    const s = seconds % 60
+    return `${m}:${s.toString().padStart(2, '0')}`
+  }
+
   return (
     <div>
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2 text-sm font-medium text-slate-700">
-          {interviewType} Interview{company ? ` · ${company}` : ''}
+          {interviewType} Interview{company ? ` · ${company}` : ''}{role ? ` · ${role}` : ''}
+          <span className={`ml-2 px-2 py-0.5 rounded-full text-xs font-semibold ${timeLeft <= 60 ? 'bg-red-100 text-red-700' : 'bg-slate-100 text-slate-700'}`}>
+            {formatTime(timeLeft)}
+          </span>
         </div>
         <button onClick={onRestart} className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-800">
           <RotateCcw size={13} />
