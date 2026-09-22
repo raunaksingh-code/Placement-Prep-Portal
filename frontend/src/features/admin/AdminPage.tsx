@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
 import { api, ApiError, getUser } from '../../lib/api'
 import { parseApiDate } from '../../lib/format'
-import type { AdminStats, AdminUser, Project } from '../../lib/types'
+import type { AdminStats, AdminUser, Project, AdminTestAttempt } from '../../lib/types'
 
-type Tab = 'overview' | 'users' | 'projects'
+type Tab = 'overview' | 'users' | 'projects' | 'tests'
 
 export default function AdminPage() {
   const [tab, setTab] = useState<Tab>('overview')
@@ -15,13 +15,14 @@ export default function AdminPage() {
     { id: 'overview', label: 'Overview' },
     { id: 'users', label: 'Users' },
     { id: 'projects', label: 'Projects' },
+    { id: 'tests', label: 'Tests' },
   ]
 
   return (
     <div>
       <div className="mb-8">
         <h1 className="text-2xl font-bold mb-1 text-slate-900">Admin</h1>
-        <p className="text-slate-500">Platform activity, users and projects.</p>
+        <p className="text-slate-500">Platform activity, users, projects, and tests.</p>
       </div>
 
       <div className="flex gap-2 mb-6 border-b border-slate-200">
@@ -38,7 +39,7 @@ export default function AdminPage() {
         ))}
       </div>
 
-      {tab === 'overview' ? <OverviewTab /> : tab === 'users' ? <UsersTab /> : <ProjectsTab />}
+      {tab === 'overview' ? <OverviewTab /> : tab === 'users' ? <UsersTab /> : tab === 'projects' ? <ProjectsTab /> : <TestsTab />}
     </div>
   )
 }
@@ -340,6 +341,90 @@ function ProjectsTab() {
           {projects.length === 0 && (
             <tr>
               <td colSpan={5} className="px-4 py-8 text-center text-slate-500">No projects found.</td>
+            </tr>
+          )}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+function TestsTab() {
+  const [attempts, setAttempts] = useState<AdminTestAttempt[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState('')
+
+  function load() {
+    setLoading(true)
+    setError('')
+    api<AdminTestAttempt[]>('/api/admin/tests')
+      .then(setAttempts)
+      .catch((err) => setError(err instanceof ApiError ? err.message : 'Failed to load test attempts'))
+      .finally(() => setLoading(false))
+  }
+
+  useEffect(load, [])
+
+  if (loading) return <div className="p-8 text-center text-slate-500">Loading test attempts...</div>
+  if (error) return <div className="p-8 text-center text-red-600">{error}</div>
+
+  return (
+    <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
+      <table className="w-full text-sm">
+        <thead className="bg-slate-50 text-slate-500 text-left">
+          <tr>
+            <th className="px-4 py-3 font-medium">User</th>
+            <th className="px-4 py-3 font-medium">Test Title</th>
+            <th className="px-4 py-3 font-medium">Type</th>
+            <th className="px-4 py-3 font-medium">Score</th>
+            <th className="px-4 py-3 font-medium">Accuracy</th>
+            <th className="px-4 py-3 font-medium">Status</th>
+            <th className="px-4 py-3 font-medium">Started At</th>
+            <th className="px-4 py-3 font-medium text-right">Actions</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-slate-100">
+          {attempts.map((a) => (
+            <tr key={a.id}>
+              <td className="px-4 py-3">
+                <Link to={`/users/${a.user_id}`} className="font-medium text-slate-900 hover:text-indigo-600 hover:underline">
+                  {a.user_name}
+                </Link>
+                <div className="text-xs text-slate-500">{a.user_email}</div>
+              </td>
+              <td className="px-4 py-3 text-slate-600">{a.test_title}</td>
+              <td className="px-4 py-3 text-slate-600 capitalize">{a.test_type}</td>
+              <td className="px-4 py-3 text-slate-900 font-medium">
+                {a.is_completed ? `${a.score} / ${a.total}` : '—'}
+              </td>
+              <td className="px-4 py-3 text-slate-600">
+                {a.is_completed ? `${a.accuracy}%` : '—'}
+              </td>
+              <td className="px-4 py-3">
+                {a.is_completed ? (
+                  <span className="inline-flex px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700">Completed</span>
+                ) : (
+                  <span className="inline-flex px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-700">In Progress</span>
+                )}
+              </td>
+              <td className="px-4 py-3 text-slate-600">
+                {new Date(a.started_at).toLocaleDateString()} {new Date(a.started_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+              </td>
+              <td className="px-4 py-3 text-right">
+                {a.is_completed && (
+                  <Link
+                    to={`/attempts/${a.id}`}
+                    className="text-indigo-600 hover:underline"
+                  >
+                    View Report
+                  </Link>
+                )}
+              </td>
+            </tr>
+          ))}
+          {attempts.length === 0 && (
+            <tr>
+              <td colSpan={8} className="px-4 py-8 text-center text-slate-500">No test attempts found.</td>
             </tr>
           )}
         </tbody>

@@ -291,7 +291,10 @@ def submit_attempt(
 
 @router.get("/attempts/{attempt_id}", response_model=AttemptResultOut)
 def get_attempt(attempt_id: int, db: Session = Depends(get_db), user: User = Depends(get_current_user)):
-    attempt = db.query(TestAttempt).filter(TestAttempt.id == attempt_id, TestAttempt.user_id == user.id).first()
+    q = db.query(TestAttempt).filter(TestAttempt.id == attempt_id)
+    if not user.is_admin:
+        q = q.filter(TestAttempt.user_id == user.id)
+    attempt = q.first()
     if not attempt:
         raise HTTPException(status_code=404, detail="Attempt not found")
     if not attempt.is_completed:

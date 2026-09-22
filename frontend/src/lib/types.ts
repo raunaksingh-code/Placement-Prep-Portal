@@ -141,6 +141,21 @@ export interface AdminStats {
   recent_users: AdminUser[]
 }
 
+export interface AdminTestAttempt {
+  id: number
+  user_id: number
+  user_name: string
+  user_email: string
+  test_title: string
+  test_type: string
+  score: number
+  total: number
+  accuracy: number
+  is_completed: boolean
+  started_at: string
+  submitted_at: string | null
+}
+
 export interface Subject {
   id: number
   slug: string

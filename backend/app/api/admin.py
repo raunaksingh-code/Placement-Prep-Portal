@@ -146,3 +146,41 @@ def delete_project(project_id: int, db: Session = Depends(get_db), _: User = Dep
         raise HTTPException(status_code=404, detail="Project not found")
     db.delete(project)
     db.commit()
+
+class AdminTestAttemptOut(BaseModel):
+    id: int
+    user_id: int
+    user_name: str
+    user_email: str
+    test_title: str
+    test_type: str
+    score: int
+    total: int
+    accuracy: float
+    is_completed: bool
+    started_at: datetime
+    submitted_at: datetime | None
+
+@router.get("/tests", response_model=list[AdminTestAttemptOut])
+def list_test_attempts(db: Session = Depends(get_db), _: User = Depends(get_current_admin)):
+    from app.models.test import TestAttempt, Test
+    attempts = db.query(TestAttempt).join(User).join(Test).order_by(TestAttempt.started_at.desc()).all()
+    out = []
+    for a in attempts:
+        total = a.correct_count + a.incorrect_count + a.unattempted_count
+        acc = round((a.correct_count / total * 100) if total > 0 else 0.0, 1)
+        out.append(AdminTestAttemptOut(
+            id=a.id,
+            user_id=a.user.id,
+            user_name=a.user.full_name,
+            user_email=a.user.email,
+            test_title=a.test.title,
+            test_type=a.test.test_type,
+            score=a.score,
+            total=total,
+            accuracy=acc,
+            is_completed=a.is_completed,
+            started_at=a.started_at,
+            submitted_at=a.submitted_at
+        ))
+    return out
