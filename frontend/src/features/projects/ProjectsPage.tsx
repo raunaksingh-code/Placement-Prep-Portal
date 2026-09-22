@@ -8,10 +8,12 @@ export default function ProjectsPage() {
   const [showModal, setShowModal] = useState(false)
   const [formData, setFormData] = useState({ title: '', description: '', domain: 'Software Development' })
   const [submitting, setSubmitting] = useState(false)
+  const [filter, setFilter] = useState<'all' | 'mba'>('all')
 
   const fetchProjects = () => {
     setLoading(true)
-    api<Project[]>('/api/projects')
+    const url = filter === 'mba' ? '/api/projects?mba_only=true' : '/api/projects'
+    api<Project[]>(url)
       .then((data) => {
         setProjects(data)
         setLoading(false)
@@ -21,7 +23,7 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     fetchProjects()
-  }, [])
+  }, [filter])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -41,22 +43,47 @@ export default function ProjectsPage() {
     }
   }
 
-  if (loading && projects.length === 0) return <div className="p-8 text-center text-slate-500">Loading projects...</div>
-
   return (
     <div>
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
         <div>
-          <h1 className="text-2xl font-bold mb-1 text-slate-900">Domain Projects & Opportunities</h1>
+          <h1 className="text-2xl font-bold mb-1 text-slate-900">Domain Projects & Internships</h1>
           <p className="text-slate-500">Collaborate on live projects to build your resume.</p>
         </div>
         <button
           onClick={() => setShowModal(true)}
-          className="bg-indigo-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition shadow-sm"
+          className="bg-indigo-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition shadow-sm whitespace-nowrap"
         >
           + Post a Project
         </button>
       </div>
+
+      <div className="flex gap-2 mb-8">
+        <button
+          onClick={() => setFilter('all')}
+          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+            filter === 'all'
+              ? 'bg-slate-800 text-white'
+              : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
+          }`}
+        >
+          All Projects
+        </button>
+        <button
+          onClick={() => setFilter('mba')}
+          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+            filter === 'mba'
+              ? 'bg-indigo-600 text-white'
+              : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
+          }`}
+        >
+          MBA Related Only
+        </button>
+      </div>
+
+      {loading ? (
+        <div className="p-8 text-center text-slate-500">Loading projects...</div>
+      ) : (
 
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((p) => (
@@ -99,6 +126,7 @@ export default function ProjectsPage() {
           </div>
         )}
       </div>
+      )}
 
       {showModal && (
         <div className="fixed inset-0 bg-slate-900/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
@@ -131,6 +159,10 @@ export default function ProjectsPage() {
                   <option value="Data Science & Analytics">Data Science & Analytics</option>
                   <option value="Product Management">Product Management</option>
                   <option value="Marketing">Marketing</option>
+                  <option value="Finance">Finance</option>
+                  <option value="Operations">Operations</option>
+                  <option value="HR">HR</option>
+                  <option value="Sales">Sales</option>
                   <option value="Design">Design</option>
                 </select>
               </div>
