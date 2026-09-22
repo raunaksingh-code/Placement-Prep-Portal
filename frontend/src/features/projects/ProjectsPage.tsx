@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { api } from '../../lib/api'
 import type { Project } from '../../lib/types'
+import { RefreshCw } from 'lucide-react'
 
 export default function ProjectsPage() {
   const [projects, setProjects] = useState<Project[]>([])
@@ -58,26 +59,37 @@ export default function ProjectsPage() {
         </button>
       </div>
 
-      <div className="flex gap-2 mb-8">
+      <div className="flex flex-wrap gap-2 mb-8 items-center justify-between">
+        <div className="flex gap-2">
+          <button
+            onClick={() => setFilter('all')}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              filter === 'all'
+                ? 'bg-slate-800 text-white'
+                : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
+            }`}
+          >
+            All Projects
+          </button>
+          <button
+            onClick={() => setFilter('mba')}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              filter === 'mba'
+                ? 'bg-indigo-600 text-white'
+                : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
+            }`}
+          >
+            MBA Related Only
+          </button>
+        </div>
+        
         <button
-          onClick={() => setFilter('all')}
-          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-            filter === 'all'
-              ? 'bg-slate-800 text-white'
-              : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
-          }`}
+          onClick={fetchProjects}
+          disabled={loading}
+          className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition shadow-sm disabled:opacity-50"
         >
-          All Projects
-        </button>
-        <button
-          onClick={() => setFilter('mba')}
-          className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-            filter === 'mba'
-              ? 'bg-indigo-600 text-white'
-              : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'
-          }`}
-        >
-          MBA Related Only
+          <RefreshCw size={16} className={loading ? 'animate-spin' : ''} />
+          Refresh
         </button>
       </div>
 
