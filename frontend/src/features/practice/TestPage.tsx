@@ -10,7 +10,7 @@ function formatTime(sec: number) {
   return `${m}:${String(s).padStart(2, '0')}`
 }
 
-const MAX_WARNINGS = 3
+const MAX_WARNINGS = 1
 
 export default function TestPage() {
   const { testId } = useParams()
@@ -63,16 +63,12 @@ export default function TestPage() {
     if (!startedRef.current || submittingRef.current) return
     const currentWarnings = warningsRef.current + 1
     setWarnings(currentWarnings)
-    setWarningMessage(`Warning ${currentWarnings}/${MAX_WARNINGS}: ${reason}`)
+    setWarningMessage(`Violation: ${reason}`)
     
     if (currentWarnings >= MAX_WARNINGS) {
       setTimeout(() => {
         submit()
       }, 3000)
-    } else {
-      setTimeout(() => {
-        setWarningMessage(null)
-      }, 4000)
     }
   }, [submit])
 
@@ -249,7 +245,7 @@ export default function TestPage() {
             <li><strong>Do not switch tabs</strong> or click outside the window.</li>
             <li><strong>No talking</strong> or background help is allowed.</li>
             <li>Copy/Paste and screenshots are disabled.</li>
-            <li>3 violations will result in automatic submission.</li>
+            <li className="text-red-600 font-medium">Zero tolerance: ANY violation will result in immediate automatic submission.</li>
           </ul>
         </div>
         
@@ -283,16 +279,14 @@ export default function TestPage() {
       
       {/* Warning Overlay */}
       {warningMessage && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-red-900/40 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-red-900/60 backdrop-blur-md">
           <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full text-center animate-in zoom-in-95 duration-200">
             <div className="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center text-red-600 mb-4">
               <AlertTriangle size={32} />
             </div>
-            <h2 className="text-2xl font-bold text-slate-900 mb-2">Proctoring Warning</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">Proctoring Violation</h2>
             <p className="text-lg text-slate-600 mb-6">{warningMessage}</p>
-            {warnings >= MAX_WARNINGS && (
-              <p className="text-red-600 font-medium">Maximum warnings reached. Submitting test...</p>
-            )}
+            <p className="text-red-600 font-medium">Submitting test immediately...</p>
           </div>
         </div>
       )}
@@ -311,7 +305,7 @@ export default function TestPage() {
             <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span> Recording
           </span>
           <span className="text-[10px] font-medium text-slate-500">
-            Warnings: {warnings}/{MAX_WARNINGS}
+            Strict Proctoring
           </span>
         </div>
       </div>
