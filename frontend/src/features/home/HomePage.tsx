@@ -8,6 +8,7 @@ import {
   Globe2,
   Handshake,
   MessagesSquare,
+  Newspaper,
   Rocket,
   Target,
   Timer,
@@ -108,6 +109,14 @@ export default function HomePage() {
       title: 'Domain Projects',
       blurb: 'Find and collaborate on live projects in SDE, Data, Marketing, and more.',
       stat: 'Live opportunities',
+    },
+    {
+      to: '/business-news',
+      icon: Newspaper,
+      gradient: 'from-blue-600 to-indigo-800',
+      title: 'Business News',
+      blurb: 'Daily business and market news fetched directly via RSS feeds.',
+      stat: 'Real-time updates',
     },
     {
       to: '/ai-coach',
