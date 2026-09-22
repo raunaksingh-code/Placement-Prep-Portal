@@ -14,12 +14,13 @@ interface InterviewCallProps {
   jd?: string
   cv?: string
   duration?: number
+  difficulty?: string
   onRestart: () => void
 }
 
 type Phase = 'connecting' | 'ai-speaking' | 'your-turn' | 'listening' | 'thinking' | 'ended'
 
-export default function InterviewCall({ interviewType, company, role, jd, cv, duration = 15, onRestart }: InterviewCallProps) {
+export default function InterviewCall({ interviewType, company, role, jd, cv, duration = 15, difficulty = 'Medium', onRestart }: InterviewCallProps) {
   const [phase, setPhase] = useState<Phase>('connecting')
   const [messages, setMessages] = useState<ChatMessage[]>([])
   const [caption, setCaption] = useState('')
@@ -83,7 +84,7 @@ export default function InterviewCall({ interviewType, company, role, jd, cv, du
     try {
       const res = await api<ChatReply>('/api/ai/mock-interview', {
         method: 'POST',
-        body: JSON.stringify({ messages: [], interview_type: interviewType, company: company || undefined, role: role || undefined, jd: jd || undefined, cv: cv || undefined, time_up: timeLeft <= 0 }),
+        body: JSON.stringify({ messages: [], interview_type: interviewType, company: company || undefined, role: role || undefined, jd: jd || undefined, cv: cv || undefined, difficulty, time_up: timeLeft <= 0 }),
       })
       await sayAndAdvance(res.reply, [])
     } catch {
@@ -135,7 +136,7 @@ export default function InterviewCall({ interviewType, company, role, jd, cv, du
     try {
       const res = await api<ChatReply>('/api/ai/mock-interview', {
         method: 'POST',
-        body: JSON.stringify({ messages: next, interview_type: interviewType, company: company || undefined, role: role || undefined, jd: jd || undefined, cv: cv || undefined, time_up: timeLeft <= 0 }),
+        body: JSON.stringify({ messages: next, interview_type: interviewType, company: company || undefined, role: role || undefined, jd: jd || undefined, cv: cv || undefined, difficulty, time_up: timeLeft <= 0 }),
       })
       await sayAndAdvance(res.reply, next)
     } catch {

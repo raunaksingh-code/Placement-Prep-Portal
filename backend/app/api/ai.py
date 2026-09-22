@@ -195,6 +195,7 @@ class MockInterviewRequest(BaseModel):
     jd: str | None = None
     cv: str | None = None
     role: str | None = None
+    difficulty: str | None = "Medium"
     time_up: bool | None = False
 
 class MockInterviewResponse(BaseModel):
@@ -204,6 +205,7 @@ class MockInterviewResponse(BaseModel):
 def mock_interview(body: MockInterviewRequest, current_user: User = Depends(get_current_user)):
     company_line = f" at {body.company}" if body.company else ""
     role_line = f" for the role of {body.role}" if body.role else ""
+    difficulty_line = f" The questions should be of {body.difficulty.upper()} difficulty level." if body.difficulty else ""
     
     context_str = ""
     if body.jd:
@@ -218,7 +220,9 @@ def mock_interview(body: MockInterviewRequest, current_user: User = Depends(get_
         You are an experienced, professional interviewer conducting a {body.interview_type} interview{company_line}{role_line}
         for a college campus placement. Act exactly like a real human interviewer.
         
-        IMPORTANT: Your questions must strictly align with the {body.interview_type} round. For example, if it's an HR round, focus solely on behavioral, situational, and cultural fit questions. If it's a Technical round, focus on technical concepts, problem-solving, and role-specific skills.
+        IMPORTANT: Your questions must strictly align with the {body.interview_type} round.{difficulty_line} 
+        For example, if it's an HR round, focus solely on behavioral, situational, and cultural fit questions. If it's a Technical round, focus on technical concepts, problem-solving, and role-specific skills.
+        Make sure to cover the candidate's ENTIRE CV and background if provided, exploring different sections and not getting stuck on just one or two topics.
         
         Greet the candidate naturally in one short sentence, then ask your first question. Ask exactly ONE question. Keep it realistic, conversational, and concise, the way a real interviewer would open.{context_str}
         """
@@ -234,7 +238,10 @@ def mock_interview(body: MockInterviewRequest, current_user: User = Depends(get_
         else:
             instruction = (
                 f"Act exactly like a real human interviewer. React naturally to the candidate's previous answer (e.g., 'That makes sense,' 'I see, but...', 'Interesting.'). "
-                f"Then, ask exactly ONE next question. Do NOT repeat previous questions. If you have already explored a topic or if the candidate gave a sufficient answer, move on to a NEW, distinct topic relevant to the role and JD. "
+                f"Then, ask exactly ONE next question. Do NOT repeat previous questions. "
+                f"Your questions must be of {body.difficulty.upper() if body.difficulty else 'MEDIUM'} difficulty. "
+                f"If you have already explored a topic or if the candidate gave a sufficient answer, move on to a NEW, distinct topic relevant to the role and JD. "
+                f"Make sure to cover the candidate's ENTIRE CV broadly and other relevant questions, avoiding getting stuck on one single topic. "
                 f"Make sure your question is strictly a {body.interview_type} question (e.g., HR questions for HR round, technical questions for Technical round). "
                 "You may ask a related follow-up to probe for depth if their previous answer was superficial, but avoid getting stuck on one topic for too long. "
                 "Keep your response conversational, concise, and professional. Do not be overly robotic or overly polite. Do not answer on the candidate's behalf."

@@ -74,6 +74,7 @@ export default function AIPage() {
   const [interviewJD, setInterviewJD] = useState('')
   const [interviewCV, setInterviewCV] = useState('')
   const [interviewDuration, setInterviewDuration] = useState('15')
+  const [interviewDifficulty, setInterviewDifficulty] = useState('Medium')
   const [interviewStarted, setInterviewStarted] = useState(false)
 
   // Virtual GD state
@@ -495,12 +496,25 @@ export default function AIPage() {
                       />
                     </div>
                     <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1.5">Difficulty</label>
+                      <select
+                        value={interviewDifficulty}
+                        onChange={(e) => setInterviewDifficulty(e.target.value)}
+                        className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none text-sm bg-white"
+                      >
+                        <option value="Easy">Easy</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Hard">Hard</option>
+                      </select>
+                    </div>
+                    <div>
                       <label className="block text-sm font-medium text-slate-700 mb-1.5">Timer (minutes)</label>
                       <select
                         value={interviewDuration}
                         onChange={(e) => setInterviewDuration(e.target.value)}
                         className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-emerald-500 outline-none text-sm bg-white"
                       >
+                        <option value="10">10 minutes</option>
                         <option value="15">15 minutes</option>
                         <option value="20">20 minutes</option>
                         <option value="25">25 minutes</option>
@@ -520,7 +534,7 @@ export default function AIPage() {
                   </button>
                 </div>
               ) : (
-                <InterviewCall interviewType={interviewType} company={interviewCompany} role={interviewRole} jd={interviewJD} cv={interviewCV} duration={parseInt(interviewDuration, 10)} onRestart={restartInterview} />
+                <InterviewCall interviewType={interviewType} company={interviewCompany} role={interviewRole} jd={interviewJD} cv={interviewCV} duration={parseInt(interviewDuration, 10)} difficulty={interviewDifficulty} onRestart={restartInterview} />
               )}
             </div>
           )}
