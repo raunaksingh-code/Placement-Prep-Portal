@@ -10,6 +10,7 @@ import {
   MessagesSquare,
   Newspaper,
   Rocket,
+  Search,
   Target,
   Timer,
   TrendingUp,
@@ -20,6 +21,7 @@ import type { HomeSummary } from '../../lib/types'
 
 export default function HomePage() {
   const [summary, setSummary] = useState<HomeSummary | null>(null)
+  const [searchQuery, setSearchQuery] = useState('')
 
   useEffect(() => {
     api<HomeSummary>('/api/home').then(setSummary).catch(() => {})
@@ -143,6 +145,11 @@ export default function HomePage() {
     { label: 'Mock tests', value: mockCount },
   ]
 
+  const filteredCards = cards.filter((c) => 
+    c.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+    c.blurb.toLowerCase().includes(searchQuery.toLowerCase())
+  )
+
   return (
     <div className="space-y-10">
       <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-blue-600 px-6 py-12 sm:px-10 sm:py-14 shadow-[0_20px_60px_-15px_rgba(79,70,229,0.5)]">
@@ -173,9 +180,28 @@ export default function HomePage() {
       </section>
 
       <section>
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {cards.map((c, i) => {
-            const Icon = c.icon
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
+          <h2 className="text-xl font-bold text-slate-900">Explore Modules</h2>
+          <div className="relative w-full sm:w-72">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+            <input
+              type="text"
+              placeholder="Search modules..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
+            />
+          </div>
+        </div>
+
+        {filteredCards.length === 0 ? (
+          <div className="py-12 text-center text-slate-500 bg-white rounded-2xl border border-slate-200 border-dashed">
+            No modules match your search.
+          </div>
+        ) : (
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {filteredCards.map((c, i) => {
+              const Icon = c.icon
             return (
               <Link
                 key={c.to}
@@ -203,8 +229,9 @@ export default function HomePage() {
                 )}
               </Link>
             )
-          })}
-        </div>
+            })}
+          </div>
+        )}
       </section>
     </div>
   )
