@@ -152,61 +152,69 @@ export default function HomePage() {
   )
 
   return (
-    <div className="space-y-10">
-      <section 
-        className="relative overflow-hidden rounded-3xl px-6 py-16 sm:px-12 sm:py-24 shadow-sm border border-slate-200"
-        style={{
-          backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95)), url(/hero-bg.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="relative z-10 max-w-3xl">
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
-            <span className="text-emerald-600">Placement Mantra,</span><br/>
-            Placements Simplified!!!
-          </h1>
-          <p className="mt-6 text-lg sm:text-xl text-slate-700 max-w-2xl font-medium">
-            Everything for the placement season - aptitude, domain projects, and real interview
-            questions, all in one place.
-          </p>
-          
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm sm:text-base font-semibold text-slate-700">
-            <span className="flex items-center gap-1.5"><Check size={18} className="text-emerald-500 stroke-[3]" /> Aptitude</span>
-            <span className="flex items-center gap-1.5"><Check size={18} className="text-emerald-500 stroke-[3]" /> Domains</span>
-            <span className="flex items-center gap-1.5"><Check size={18} className="text-emerald-500 stroke-[3]" /> Interview Prep</span>
-            <span className="flex items-center gap-1.5"><Check size={18} className="text-emerald-500 stroke-[3]" /> Mock Tests</span>
-          </div>
+    <div className="space-y-12">
+      <section className="relative overflow-hidden prepinsta-grid rounded-3xl shadow-sm border border-slate-200 bg-white pt-16 sm:pt-24 pb-0 flex flex-col">
+        <div className="relative z-10 flex flex-col md:flex-row items-center gap-12 px-6 sm:px-12 pb-16 sm:pb-24">
+          <div className="flex-1 max-w-2xl">
+            <h1 className="text-4xl sm:text-[3.5rem] font-extrabold tracking-tight text-slate-900 leading-[1.15]">
+              <span className="text-emerald-500">Placement Mantra,</span><br/>
+              Placements Simplified!!!
+            </h1>
+            
+            <button className="mt-8 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-8 rounded-full shadow-lg shadow-emerald-500/30 transition-all hover:scale-105">
+              Sign Up for Free
+            </button>
 
-          <div className="mt-10 flex flex-wrap gap-4 sm:gap-6">
-            {heroStats.map((s) => (
-              <div
-                key={s.label}
-                className="rounded-2xl bg-white/60 backdrop-blur-md border border-white/40 px-6 py-4 min-w-[8rem] shadow-sm"
-              >
-                <div className="text-3xl font-extrabold text-slate-900">{s.value || '---'}</div>
-                <div className="text-xs font-bold text-slate-600 uppercase tracking-widest mt-1">
-                  {s.label}
-                </div>
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm sm:text-base font-bold text-slate-700">
+              <span className="flex items-center gap-1.5"><Check size={20} className="text-emerald-500 stroke-[3]" /> Aptitude</span>
+              <span className="flex items-center gap-1.5"><Check size={20} className="text-emerald-500 stroke-[3]" /> Coding</span>
+              <span className="flex items-center gap-1.5"><Check size={20} className="text-emerald-500 stroke-[3]" /> Interview Prep</span>
+              <span className="flex items-center gap-1.5"><Check size={20} className="text-emerald-500 stroke-[3]" /> New Age Skills</span>
+            </div>
+
+            <div className="mt-10 flex items-center gap-4">
+              <div className="flex -space-x-3">
+                 <div className="w-10 h-10 rounded-full border-2 border-white bg-blue-100 flex items-center justify-center text-xs font-bold text-blue-600">A</div>
+                 <div className="w-10 h-10 rounded-full border-2 border-white bg-green-100 flex items-center justify-center text-xs font-bold text-green-600">B</div>
+                 <div className="w-10 h-10 rounded-full border-2 border-white bg-yellow-100 flex items-center justify-center text-xs font-bold text-yellow-600">C</div>
+                 <div className="w-10 h-10 rounded-full border-2 border-white bg-purple-100 flex items-center justify-center text-xs font-bold text-purple-600">D</div>
               </div>
-            ))}
+              <div>
+                 <div className="font-extrabold text-slate-900 text-lg">10 Million+</div>
+                 <div className="text-xs font-medium text-slate-500 uppercase tracking-wide">Monthly Active Learners</div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="flex-1 relative w-full h-[350px] sm:h-[450px] hidden md:block mt-8 md:mt-0">
+            <div className="absolute inset-0 bg-emerald-500 rounded-tl-[80px] rounded-br-[80px] transform rotate-3" />
+            <img src="/hero-bg.png" alt="Campus" className="absolute inset-0 w-full h-full object-cover rounded-tl-[80px] rounded-br-[80px] shadow-xl" />
+            
+            <div className="absolute top-10 -left-10 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 flex items-center gap-3">
+               <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500">M</div>
+               <div>
+                 <div className="font-bold text-sm text-slate-900">Got Placed</div>
+                 <div className="text-xs text-slate-500 font-medium">Mayur • <span className="text-emerald-600 font-bold bg-emerald-50 px-1 rounded">10 LPA</span></div>
+               </div>
+            </div>
+            
+            <div className="absolute bottom-12 -right-5 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 text-center min-w-[120px]">
+               <div className="font-extrabold text-2xl text-slate-900">4.5 <span className="text-emerald-500">★</span></div>
+               <div className="text-xs text-slate-500 font-medium mt-1">Google Reviews</div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="bg-emerald-500 py-3 flex overflow-hidden whitespace-nowrap mt-auto">
+          <div className="animate-marquee inline-block font-extrabold text-white text-lg tracking-[0.2em] px-4">
+            INFOSYS • KPMG • PERSISTENT • SIMPLILEARN • TEXAS INSTRUMENTS • UPGRAD • ZOHO • ACCENTURE • BOSCH • GOOGLE • INFOSYS • KPMG • PERSISTENT • SIMPLILEARN • TEXAS INSTRUMENTS • UPGRAD • ZOHO • ACCENTURE • BOSCH • GOOGLE • 
           </div>
         </div>
       </section>
 
       <section>
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
-          <h2 className="text-xl font-bold text-slate-900">Explore Modules</h2>
-          <div className="relative w-full sm:w-72">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
-            <input
-              type="text"
-              placeholder="Search modules..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm"
-            />
-          </div>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
+          <h2 className="text-2xl font-extrabold text-slate-900">Explore Modules</h2>
         </div>
 
         {filteredCards.length === 0 ? (
@@ -214,7 +222,7 @@ export default function HomePage() {
             No modules match your search.
           </div>
         ) : (
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {filteredCards.map((c, i) => {
               const Icon = c.icon
             return (
@@ -222,23 +230,23 @@ export default function HomePage() {
                 key={c.to}
                 to={c.to}
                 style={{ animationDelay: `${i * 40}ms` }}
-                className="group animate-fade-up relative flex flex-col rounded-2xl bg-white p-6 border border-slate-200/80 shadow-[0_1px_2px_rgba(15,23,42,0.04),0_10px_24px_-12px_rgba(15,23,42,0.12)] transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_1px_2px_rgba(15,23,42,0.04),0_24px_40px_-16px_rgba(79,70,229,0.35)] hover:border-indigo-200"
+                className="group animate-fade-up relative flex flex-col rounded-2xl bg-white p-6 border border-slate-200 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1.5 hover:shadow-xl hover:border-emerald-200"
               >
                 <div className="flex items-start justify-between">
                   <div
-                    className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${c.gradient} text-white shadow-lg shadow-slate-900/10 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-3`}
+                    className={`flex h-12 w-12 items-center justify-center rounded-xl bg-slate-50 text-slate-600 transition-colors duration-300 group-hover:bg-emerald-50 group-hover:text-emerald-600`}
                   >
-                    <Icon size={22} strokeWidth={2} />
+                    <Icon size={22} strokeWidth={2.5} />
                   </div>
                   <ArrowUpRight
                     size={18}
-                    className="mt-1 text-slate-300 transition-all duration-300 group-hover:text-indigo-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    className="mt-1 text-slate-300 transition-all duration-300 group-hover:text-emerald-500 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   />
                 </div>
-                <h2 className="mt-4 font-semibold text-lg text-slate-900">{c.title}</h2>
-                <p className="text-sm text-slate-500 mt-1.5 leading-relaxed">{c.blurb}</p>
+                <h2 className="mt-5 font-bold text-lg text-slate-900">{c.title}</h2>
+                <p className="text-sm text-slate-500 mt-2 leading-relaxed font-medium">{c.blurb}</p>
                 {c.stat && (
-                  <p className="text-xs text-indigo-600 font-semibold mt-4 pt-3 border-t border-slate-100">
+                  <p className="text-xs text-emerald-600 font-bold mt-5 pt-4 border-t border-slate-100 uppercase tracking-wide">
                     {c.stat}
                   </p>
                 )}
