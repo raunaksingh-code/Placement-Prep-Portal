@@ -185,40 +185,60 @@ def list_test_attempts(db: Session = Depends(get_db), _: User = Depends(get_curr
         ))
     return out
 
+
+class QuestionOptionCreate(BaseModel):
+    text: str
+    is_correct: bool
+
+class QuestionCreate(BaseModel):
+    text: str
+    explanation: str | None = None
+    options: list[QuestionOptionCreate]
+
+class InteractiveTestCreate(BaseModel):
+    title: str
+    test_type: str
+    track: str
+    duration_minutes: int
+    negative_mark: float
+    questions: list[QuestionCreate]
+
 @router.post("/tests/publish", status_code=status.HTTP_201_CREATED)
-async def publish_test(
-    title: str = Form(...),
-    test_type: str = Form(...), # "mock" or "sectional"
-    track: str = Form("aptitude"),
-    file: UploadFile = File(...),
-    db: Session = Depends(get_db),
-    _: User = Depends(get_current_admin)
-):
-    if file.content_type not in ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"]:
-        raise HTTPException(status_code=400, detail="Test must be a PDF or Word document")
+def publish_interactive_test(data: InteractiveTestCreate, db: Session = Depends(get_db), _: User = Depends(get_current_admin)):
+    from app.models.test import Test, TestType, Question, QuestionOption, TestQuestion, QuestionBank, Difficulty
     
-    data = await file.read()
-    if not data or len(data) > 10 * 1024 * 1024:
-        raise HTTPException(status_code=400, detail="Test file is empty or too large (>10MB)")
-
-    t_type = TestType.full_mock if test_type == "mock" else TestType.sectional
-    test = Test(
-        title=title,
+    # 1. Create Test
+    t_type = TestType.full_mock if data.test_type == 'mock' else TestType.sectional
+    new_test = Test(
+        title=data.title,
         test_type=t_type,
-        track=track,
-        duration_minutes=60,
-        negative_mark=0.25,
-        description=f"A new {test_type} test."
+        duration_minutes=data.duration_minutes,
+        negative_mark=data.negative_mark,
+        description=data.track  # Store track in description or a new field, to filter by aptitude/domain
     )
-    db.add(test)
-    db.flush()
-
-    doc = TestDocument(
-        test_id=test.id,
-        filename=file.filename or "test_document",
-        content_type=file.content_type,
-        data=data
-    )
-    db.add(doc)
+    db.add(new_test)
     db.commit()
-    return {"message": "Test published successfully", "test_id": test.id}
+    db.refresh(new_test)
+    
+    # 2. Create Questions and TestQuestions
+    for order, q_data in enumerate(data.questions):
+        new_q = Question(
+            text=q_data.text,
+            explanation=q_data.explanation,
+            bank=QuestionBank.mock,
+            difficulty=Difficulty.medium,
+            topic_id=None
+        )
+        db.add(new_q)
+        db.commit()
+        db.refresh(new_q)
+        
+        # Options
+        for opt in q_data.options:
+            db.add(QuestionOption(question_id=new_q.id, text=opt.text, is_correct=opt.is_correct))
+            
+        # TestQuestion link
+        db.add(TestQuestion(test_id=new_test.id, question_id=new_q.id, order=order))
+        
+    db.commit()
+    return {"status": "success", "test_id": new_test.id}

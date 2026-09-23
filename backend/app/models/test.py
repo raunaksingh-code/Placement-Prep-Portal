@@ -31,7 +31,7 @@ class Question(Base):
     __tablename__ = "questions"
 
     id: Mapped[int] = mapped_column(primary_key=True)
-    topic_id: Mapped[int] = mapped_column(ForeignKey("topics.id"), index=True)
+    topic_id: Mapped[int | None] = mapped_column(ForeignKey("topics.id"), index=True, nullable=True)
     bank: Mapped[QuestionBank] = mapped_column(Enum(QuestionBank), default=QuestionBank.practice)
     text: Mapped[str] = mapped_column(Text)
     difficulty: Mapped[Difficulty] = mapped_column(Enum(Difficulty), default=Difficulty.medium)
