@@ -153,36 +153,18 @@ export default function HomePage() {
 
   return (
     <div className="space-y-12">
-      <section className="relative overflow-hidden prepinsta-grid rounded-3xl shadow-sm border border-slate-200 bg-white pt-16 sm:pt-24 pb-0 flex flex-col">
-        <div className="relative z-10 flex flex-col md:flex-row items-center gap-12 px-6 sm:px-12 pb-16 sm:pb-24">
+      <section className="relative overflow-hidden prepinsta-grid rounded-3xl shadow-sm border border-slate-200 bg-white pt-16 sm:pt-24 pb-16 sm:pb-24 flex flex-col">
+        <div className="relative z-10 flex flex-col md:flex-row items-center gap-12 px-6 sm:px-12">
           <div className="flex-1 max-w-2xl">
             <h1 className="text-4xl sm:text-[3.5rem] font-extrabold tracking-tight text-slate-900 leading-[1.15]">
               <span className="text-emerald-500">Placement Mantra,</span><br/>
               Placements Simplified!!!
             </h1>
             
-            <button className="mt-8 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-3.5 px-8 rounded-full shadow-lg shadow-emerald-500/30 transition-all hover:scale-105">
-              Sign Up for Free
-            </button>
-
             <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm sm:text-base font-bold text-slate-700">
               <span className="flex items-center gap-1.5"><Check size={20} className="text-emerald-500 stroke-[3]" /> Aptitude</span>
-              <span className="flex items-center gap-1.5"><Check size={20} className="text-emerald-500 stroke-[3]" /> Coding</span>
               <span className="flex items-center gap-1.5"><Check size={20} className="text-emerald-500 stroke-[3]" /> Interview Prep</span>
               <span className="flex items-center gap-1.5"><Check size={20} className="text-emerald-500 stroke-[3]" /> New Age Skills</span>
-            </div>
-
-            <div className="mt-10 flex items-center gap-4">
-              <div className="flex -space-x-3">
-                 <div className="w-10 h-10 rounded-full border-2 border-white bg-blue-100 flex items-center justify-center text-xs font-bold text-blue-600">A</div>
-                 <div className="w-10 h-10 rounded-full border-2 border-white bg-green-100 flex items-center justify-center text-xs font-bold text-green-600">B</div>
-                 <div className="w-10 h-10 rounded-full border-2 border-white bg-yellow-100 flex items-center justify-center text-xs font-bold text-yellow-600">C</div>
-                 <div className="w-10 h-10 rounded-full border-2 border-white bg-purple-100 flex items-center justify-center text-xs font-bold text-purple-600">D</div>
-              </div>
-              <div>
-                 <div className="font-extrabold text-slate-900 text-lg">10 Million+</div>
-                 <div className="text-xs font-medium text-slate-500 uppercase tracking-wide">Monthly Active Learners</div>
-              </div>
             </div>
           </div>
           
@@ -190,24 +172,10 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-emerald-500 rounded-tl-[80px] rounded-br-[80px] transform rotate-3" />
             <img src="/hero-bg.png" alt="Campus" className="absolute inset-0 w-full h-full object-cover rounded-tl-[80px] rounded-br-[80px] shadow-xl" />
             
-            <div className="absolute top-10 -left-10 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 flex items-center gap-3">
-               <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500">M</div>
-               <div>
-                 <div className="font-bold text-sm text-slate-900">Got Placed</div>
-                 <div className="text-xs text-slate-500 font-medium">Mayur • <span className="text-emerald-600 font-bold bg-emerald-50 px-1 rounded">10 LPA</span></div>
-               </div>
-            </div>
-            
             <div className="absolute bottom-12 -right-5 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 text-center min-w-[120px]">
                <div className="font-extrabold text-2xl text-slate-900">4.5 <span className="text-emerald-500">★</span></div>
                <div className="text-xs text-slate-500 font-medium mt-1">Google Reviews</div>
             </div>
-          </div>
-        </div>
-        
-        <div className="bg-emerald-500 py-3 flex overflow-hidden whitespace-nowrap mt-auto">
-          <div className="animate-marquee inline-block font-extrabold text-white text-lg tracking-[0.2em] px-4">
-            INFOSYS • KPMG • PERSISTENT • SIMPLILEARN • TEXAS INSTRUMENTS • UPGRAD • ZOHO • ACCENTURE • BOSCH • GOOGLE • INFOSYS • KPMG • PERSISTENT • SIMPLILEARN • TEXAS INSTRUMENTS • UPGRAD • ZOHO • ACCENTURE • BOSCH • GOOGLE • 
           </div>
         </div>
       </section>

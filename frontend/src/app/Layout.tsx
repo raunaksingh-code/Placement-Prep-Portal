@@ -81,10 +81,6 @@ export default function Layout() {
             >
               Logout
             </button>
-            
-            <Link to="/profile" className="hidden sm:flex px-5 py-2 bg-emerald-500 text-white rounded-md font-semibold text-sm hover:bg-emerald-600 transition-colors shadow-sm gap-2 items-center">
-              <span>Get Prime ↗</span>
-            </Link>
           </div>
         </div>
       </header>
