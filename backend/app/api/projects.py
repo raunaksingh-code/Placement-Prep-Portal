@@ -24,6 +24,7 @@ def create_project(body: ProjectCreate, db: Session = Depends(get_db), current_u
         title=body.title,
         description=body.description,
         domain=body.domain,
+        external_link=body.external_link,
         created_by_id=current_user.id
     )
     db.add(project)

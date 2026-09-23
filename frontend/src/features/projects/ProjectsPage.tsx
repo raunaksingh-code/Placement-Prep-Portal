@@ -7,7 +7,7 @@ export default function ProjectsPage() {
   const [projects, setProjects] = useState<Project[]>([])
   const [loading, setLoading] = useState(true)
   const [showModal, setShowModal] = useState(false)
-  const [formData, setFormData] = useState({ title: '', description: '', domain: 'Software Development' })
+  const [formData, setFormData] = useState({ title: '', description: '', domain: 'Software Development', external_link: '' })
   const [submitting, setSubmitting] = useState(false)
   const [filter, setFilter] = useState<'all' | 'mba'>('all')
 
@@ -35,7 +35,7 @@ export default function ProjectsPage() {
         body: JSON.stringify(formData),
       })
       setShowModal(false)
-      setFormData({ title: '', description: '', domain: 'Software Development' })
+      setFormData({ title: '', description: '', domain: 'Software Development', external_link: '' })
       fetchProjects()
     } catch (err) {
       console.error(err)
@@ -117,9 +117,20 @@ export default function ProjectsPage() {
                 <p className="text-xs text-slate-500">{new Date(p.created_at).toLocaleDateString()}</p>
               </div>
               
-              <button className="ml-auto text-indigo-600 text-sm font-medium hover:text-indigo-800 transition">
-                I'm Interested
-              </button>
+              {p.external_link ? (
+                <a 
+                  href={p.external_link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="ml-auto text-indigo-600 text-sm font-medium hover:text-indigo-800 transition"
+                >
+                  Register External
+                </a>
+              ) : (
+                <button className="ml-auto text-indigo-600 text-sm font-medium hover:text-indigo-800 transition">
+                  I'm Interested
+                </button>
+              )}
             </div>
           </div>
         ))}
@@ -188,6 +199,17 @@ export default function ProjectsPage() {
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
                   placeholder="Describe the project, what you're building, and who you need..."
                   className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-indigo-500 outline-none resize-none"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-1">External Registration Link (Optional)</label>
+                <input
+                  type="url"
+                  value={formData.external_link}
+                  onChange={(e) => setFormData({ ...formData, external_link: e.target.value })}
+                  placeholder="https://..."
+                  className="w-full px-4 py-2 rounded-lg border border-slate-300 focus:ring-2 focus:ring-indigo-500 outline-none"
                 />
               </div>
               

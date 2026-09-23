@@ -6,12 +6,14 @@ class ProjectCreate(BaseModel):
     title: str
     description: str
     domain: str
+    external_link: str | None = None
 
 class ProjectOut(BaseModel):
     id: int
     title: str
     description: str
     domain: str
+    external_link: str | None
     created_by_id: int
     created_at: datetime
     creator: UserOut

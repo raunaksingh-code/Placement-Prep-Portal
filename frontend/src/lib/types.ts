@@ -73,6 +73,7 @@ export interface Project {
   title: string
   description: string
   domain: string
+  external_link?: string
   created_by_id: number
   created_at: string
   creator: User
