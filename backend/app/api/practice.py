@@ -20,8 +20,21 @@ from app.schemas.practice import (
     TestQuestionOut,
     TopicBreakdown,
 )
+from fastapi.responses import Response
 
 router = APIRouter(prefix="/api", tags=["practice"])
+
+@router.get("/tests/{test_id}/document")
+def download_test_document(test_id: int, db: Session = Depends(get_db), _: User = Depends(get_current_user)):
+    from app.models.test import TestDocument
+    doc = db.query(TestDocument).filter(TestDocument.test_id == test_id).first()
+    if not doc:
+        raise HTTPException(status_code=404, detail="No document found for this test")
+    return Response(
+        content=doc.data,
+        media_type=doc.content_type,
+        headers={"Content-Disposition": f'attachment; filename="{doc.filename}"'},
+    )
 
 
 def _correct_option(question: Question) -> str:
@@ -71,7 +84,7 @@ def list_mock_tests(db: Session = Depends(get_db), user: User = Depends(get_curr
     """Cross-topic tests: full-length mocks, sectional tests and curated papers."""
     tests = (
         db.query(Test)
-        .options(joinedload(Test.questions))
+        .options(joinedload(Test.questions), joinedload(Test.document))
         .filter(Test.test_type.in_([TestType.full_mock, TestType.sectional]))
         .order_by(Test.test_type, Test.id)
         .all()
@@ -100,6 +113,8 @@ def list_mock_tests(db: Session = Depends(get_db), user: User = Depends(get_curr
                 description=t.description,
                 sections=t.sections,
                 track=t.track,
+                has_document=t.document is not None,
+                document_filename=t.document.filename if t.document else None,
                 attempt_count=len(mine),
                 best_score=max((a.score for a in mine), default=None),
             )

@@ -1,6 +1,6 @@
 from datetime import datetime, timedelta
 
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, UploadFile, File, Form
 from pydantic import BaseModel
 from sqlalchemy import func, or_
 from sqlalchemy.orm import Session
@@ -14,7 +14,7 @@ from app.models.experience import Experience
 from app.models.project import Project
 from app.models.resume import Resume
 from app.models.skill import Skill, SkillEndorsement
-from app.models.test import TestAttempt
+from app.models.test import TestAttempt, Test, TestDocument, TestType
 from app.models.user import User
 from app.schemas.project import ProjectOut
 from app.schemas.user import AdminUserOut, AdminUserUpdate, UserOut
@@ -184,3 +184,41 @@ def list_test_attempts(db: Session = Depends(get_db), _: User = Depends(get_curr
             submitted_at=a.submitted_at
         ))
     return out
+
+@router.post("/tests/publish", status_code=status.HTTP_201_CREATED)
+async def publish_test(
+    title: str = Form(...),
+    test_type: str = Form(...), # "mock" or "sectional"
+    track: str = Form("aptitude"),
+    file: UploadFile = File(...),
+    db: Session = Depends(get_db),
+    _: User = Depends(get_current_admin)
+):
+    if file.content_type not in ["application/pdf", "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"]:
+        raise HTTPException(status_code=400, detail="Test must be a PDF or Word document")
+    
+    data = await file.read()
+    if not data or len(data) > 10 * 1024 * 1024:
+        raise HTTPException(status_code=400, detail="Test file is empty or too large (>10MB)")
+
+    t_type = TestType.full_mock if test_type == "mock" else TestType.sectional
+    test = Test(
+        title=title,
+        test_type=t_type,
+        track=track,
+        duration_minutes=60,
+        negative_mark=0.25,
+        description=f"A new {test_type} test."
+    )
+    db.add(test)
+    db.flush()
+
+    doc = TestDocument(
+        test_id=test.id,
+        filename=file.filename or "test_document",
+        content_type=file.content_type,
+        data=data
+    )
+    db.add(doc)
+    db.commit()
+    return {"message": "Test published successfully", "test_id": test.id}

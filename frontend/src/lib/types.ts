@@ -434,6 +434,8 @@ export interface MockTest {
   description: string | null
   sections: string[] | null
   track: string | null
+  has_document?: boolean
+  document_filename?: string | null
   attempt_count: number
   best_score: number | null
 }

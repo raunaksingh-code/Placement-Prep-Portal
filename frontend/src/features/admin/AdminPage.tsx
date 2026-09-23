@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { Link, Navigate } from 'react-router-dom'
-import { api, ApiError, getUser } from '../../lib/api'
+import { api, apiUpload, ApiError, getUser } from '../../lib/api'
 import { parseApiDate } from '../../lib/format'
 import type { AdminStats, AdminUser, Project, AdminTestAttempt } from '../../lib/types'
 
-type Tab = 'overview' | 'users' | 'projects' | 'tests'
+type Tab = 'overview' | 'users' | 'projects' | 'tests' | 'publish'
 
 export default function AdminPage() {
   const [tab, setTab] = useState<Tab>('overview')
@@ -15,7 +15,8 @@ export default function AdminPage() {
     { id: 'overview', label: 'Overview' },
     { id: 'users', label: 'Users' },
     { id: 'projects', label: 'Projects' },
-    { id: 'tests', label: 'Tests' },
+    { id: 'tests', label: 'Test Attempts' },
+    { id: 'publish', label: 'Publish Test' },
   ]
 
   return (
@@ -25,12 +26,12 @@ export default function AdminPage() {
         <p className="text-slate-500">Platform activity, users, projects, and tests.</p>
       </div>
 
-      <div className="flex gap-2 mb-6 border-b border-slate-200">
+      <div className="flex gap-2 mb-6 border-b border-slate-200 overflow-x-auto">
         {tabs.map((t) => (
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className={`px-4 py-2 text-sm font-medium border-b-2 -mb-px transition ${
+            className={`px-4 py-2 text-sm font-medium border-b-2 -mb-px transition whitespace-nowrap ${
               tab === t.id ? 'border-indigo-600 text-indigo-700' : 'border-transparent text-slate-500 hover:text-slate-800'
             }`}
           >
@@ -39,7 +40,11 @@ export default function AdminPage() {
         ))}
       </div>
 
-      {tab === 'overview' ? <OverviewTab /> : tab === 'users' ? <UsersTab /> : tab === 'projects' ? <ProjectsTab /> : <TestsTab />}
+      {tab === 'overview' && <OverviewTab />}
+      {tab === 'users' && <UsersTab />}
+      {tab === 'projects' && <ProjectsTab />}
+      {tab === 'tests' && <TestsTab />}
+      {tab === 'publish' && <PublishTestTab />}
     </div>
   )
 }
@@ -432,3 +437,83 @@ function TestsTab() {
     </div>
   )
 }
+
+function PublishTestTab() {
+  const [title, setTitle] = useState('')
+  const [testType, setTestType] = useState('mock')
+  const [track, setTrack] = useState('aptitude')
+  const [file, setFile] = useState<File | null>(null)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
+  const [success, setSuccess] = useState('')
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!file) return setError('Please select a PDF or DOC file')
+    setError('')
+    setSuccess('')
+    setSubmitting(true)
+    
+    const formData = new FormData()
+    formData.append('title', title)
+    formData.append('test_type', testType)
+    formData.append('track', track)
+    formData.append('file', file)
+
+    try {
+      await apiUpload('/api/admin/tests/publish', formData)
+      setSuccess('Test published successfully!')
+      setTitle('')
+      setFile(null)
+    } catch(err: any) {
+      setError(err.message)
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  return (
+    <div className=\g-white rounded-2xl border border-slate-200 p-6 max-w-2xl\>
+      <h2 className=\	ext-lg font-semibold mb-4\>Publish a Document Test</h2>
+      <p className=\	ext-sm text-slate-500 mb-6\>
+        Upload a PDF or Word document containing a Mock Test or Sectional Test. Students will be able to download the test document.
+      </p>
+
+      {error && <div className=\g-red-50 text-red-600 p-3 rounded-lg mb-4 text-sm\>{error}</div>}
+      {success && <div className=\g-green-50 text-green-700 p-3 rounded-lg mb-4 text-sm\>{success}</div>}
+
+      <form onSubmit={handleSubmit} className=\space-y-4\>
+        <div>
+          <label className=\lock text-sm font-medium mb-1\>Title</label>
+          <input type=\	ext\ value={title} onChange={(e) => setTitle(e.target.value)} required className=\w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500\ placeholder=\e.g. TCS Ninja Mock Test 1\ />
+        </div>
+        <div className=\grid grid-cols-2 gap-4\>
+          <div>
+            <label className=\lock text-sm font-medium mb-1\>Test Type</label>
+            <select value={testType} onChange={(e) => setTestType(e.target.value)} className=\w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500\>
+              <option value=\mock\>Full Mock Test</option>
+              <option value=\sectional\>Sectional Test</option>
+            </select>
+          </div>
+          <div>
+            <label className=\lock text-sm font-medium mb-1\>Track</label>
+            <select value={track} onChange={(e) => setTrack(e.target.value)} className=\w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500\>
+              <option value=\ptitude\>Aptitude (Default)</option>
+              <option value=\domain\>Domain</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label className=\lock text-sm font-medium mb-1\>Document (PDF / DOC)</label>
+          <input type=\ile\ accept=\.pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document\ onChange={(e) => setFile(e.target.files?.[0] || null)} required className=\w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500\ />
+        </div>
+        <div className=\pt-4\>
+          <button type=\submit\ disabled={submitting} className=\g-indigo-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 disabled:opacity-50\>
+            {submitting ? 'Publishing...' : 'Publish Test'}
+          </button>
+        </div>
+      </form>
+    </div>
+  )
+}
+

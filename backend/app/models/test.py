@@ -1,7 +1,7 @@
 import enum
 from datetime import datetime
 
-from sqlalchemy import JSON, Boolean, DateTime, Enum, Float, ForeignKey, Integer, String, Text, func
+from sqlalchemy import JSON, Boolean, DateTime, Enum, Float, ForeignKey, Integer, String, Text, LargeBinary, func
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
@@ -77,6 +77,7 @@ class Test(Base):
     questions: Mapped[list["TestQuestion"]] = relationship(
         back_populates="test", order_by="TestQuestion.order"
     )
+    document: Mapped["TestDocument"] = relationship(back_populates="test", uselist=False)
 
 
 class TestQuestion(Base):
@@ -109,4 +110,16 @@ class TestAttempt(Base):
     # Wall-clock seconds spent, recorded on submit. Null for attempts predating this.
     time_taken_sec: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
-    test: Mapped[Test] = relationship()
+    test: Mapped["Test"] = relationship()
+
+class TestDocument(Base):
+    __tablename__ = "test_documents"
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    test_id: Mapped[int] = mapped_column(ForeignKey("tests.id"), unique=True)
+    filename: Mapped[str] = mapped_column(String)
+    content_type: Mapped[str] = mapped_column(String)
+    data: Mapped[bytes] = mapped_column(LargeBinary)
+
+    test: Mapped["Test"] = relationship(back_populates="document")
+

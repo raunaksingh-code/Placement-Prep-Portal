@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { api } from '../../lib/api'
+import { api, downloadFile } from '../../lib/api'
 import type { MockTest } from '../../lib/types'
+import { FileText, Download } from 'lucide-react'
 
 const GROUPS: { key: string; title: string; blurb: string; match: (t: MockTest) => boolean }[] = [
   {
@@ -27,6 +28,7 @@ const GROUPS: { key: string; title: string; blurb: string; match: (t: MockTest) 
 export default function MockTestListPage() {
   const [tests, setTests] = useState<MockTest[] | null>(null)
   const [error, setError] = useState('')
+  const [downloadingId, setDownloadingId] = useState<number | null>(null)
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -39,8 +41,20 @@ export default function MockTestListPage() {
     navigate(`/tests/${test.id}`, { state: { test } })
   }
 
+  async function handleDownload(test: MockTest) {
+    if (!test.document_filename) return
+    try {
+      setDownloadingId(test.id)
+      await downloadFile(`/api/tests/${test.id}/document`, test.document_filename)
+    } catch (e: any) {
+      alert("Failed to download: " + e.message)
+    } finally {
+      setDownloadingId(null)
+    }
+  }
+
   if (error) return <p className="text-red-600">{error}</p>
-  if (!tests) return <p className="text-slate-500">Loading…</p>
+  if (!tests) return <p className="text-slate-500">Loading...</p>
 
   return (
     <div>
@@ -63,30 +77,49 @@ export default function MockTestListPage() {
                   key={t.id}
                   className="bg-white rounded-xl border border-slate-200 p-4 flex flex-col"
                 >
-                  <h3 className="font-medium">{t.title}</h3>
+                  <h3 className="font-medium flex items-center gap-2">
+                    {t.has_document && <FileText size={18} className="text-emerald-500" />}
+                    {t.title}
+                  </h3>
                   <p className="text-xs text-slate-500 mt-1">
-                    {t.question_count} questions · {t.duration_minutes} min · −{t.negative_mark} per
-                    wrong answer
+                    {t.has_document ? (
+                      <span>Document Test</span>
+                    ) : (
+                      <span>{t.question_count} questions • {t.duration_minutes} min • -{t.negative_mark} per wrong answer</span>
+                    )}
                   </p>
                   {t.sections && t.sections.length > 1 && (
-                    <p className="text-xs text-slate-400 mt-1">{t.sections.join(' · ')}</p>
+                    <p className="text-xs text-slate-400 mt-1">{t.sections.join(' • ')}</p>
                   )}
                   {t.description && (
                     <p className="text-sm text-slate-600 mt-2 flex-1">{t.description}</p>
                   )}
 
                   <div className="flex items-center justify-between mt-4">
-                    <button
-                      onClick={() => open(t)}
-                      className="px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700"
-                    >
-                      {t.attempt_count ? 'Retake test' : 'Start test'}
-                    </button>
-                    {t.attempt_count > 0 && (
-                      <span className="text-xs text-slate-500">
-                        {t.attempt_count} attempt{t.attempt_count > 1 ? 's' : ''} · best{' '}
-                        <strong className="text-slate-700">{t.best_score}</strong>/{t.question_count}
-                      </span>
+                    {t.has_document ? (
+                      <button
+                        onClick={() => handleDownload(t)}
+                        disabled={downloadingId === t.id}
+                        className="px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 disabled:opacity-50 flex items-center gap-2"
+                      >
+                        <Download size={16} />
+                        {downloadingId === t.id ? 'Downloading...' : 'Download Test'}
+                      </button>
+                    ) : (
+                      <>
+                        <button
+                          onClick={() => open(t)}
+                          className="px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700"
+                        >
+                          {t.attempt_count ? 'Retake test' : 'Start test'}
+                        </button>
+                        {t.attempt_count > 0 && (
+                          <span className="text-xs text-slate-500">
+                            {t.attempt_count} attempt{t.attempt_count > 1 ? 's' : ''} • best{' '}
+                            <strong className="text-slate-700">{t.best_score}</strong>/{t.question_count}
+                          </span>
+                        )}
+                      </>
                     )}
                   </div>
                 </div>
