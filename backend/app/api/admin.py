@@ -167,8 +167,8 @@ def list_test_attempts(db: Session = Depends(get_db), _: User = Depends(get_curr
     attempts = db.query(TestAttempt).join(User).join(Test).order_by(TestAttempt.started_at.desc()).all()
     out = []
     for a in attempts:
-        total = a.correct_count + a.incorrect_count + a.unattempted_count
-        acc = round((a.correct_count / total * 100) if total > 0 else 0.0, 1)
+        total = a.total
+        acc = round(max(0, a.score) / total * 100, 1) if total > 0 else 0.0
         out.append(AdminTestAttemptOut(
             id=a.id,
             user_id=a.user.id,
