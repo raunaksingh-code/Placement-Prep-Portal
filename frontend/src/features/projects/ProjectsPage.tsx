@@ -119,15 +119,18 @@ export default function ProjectsPage() {
               
               {p.external_link ? (
                 <a 
-                  href={p.external_link} 
+                  href={p.external_link.startsWith('http') ? p.external_link : `https://${p.external_link}`}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="ml-auto text-indigo-600 text-sm font-medium hover:text-indigo-800 transition"
+                  className="ml-auto text-emerald-600 text-sm font-medium hover:text-emerald-800 transition"
                 >
                   Register External
                 </a>
               ) : (
-                <button className="ml-auto text-indigo-600 text-sm font-medium hover:text-indigo-800 transition">
+                <button 
+                  onClick={() => alert("Registration feature coming soon! Check back later.")}
+                  className="ml-auto text-emerald-600 text-sm font-medium hover:text-emerald-800 transition"
+                >
                   I'm Interested
                 </button>
               )}
