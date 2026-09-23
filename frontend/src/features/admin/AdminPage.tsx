@@ -473,42 +473,42 @@ function PublishTestTab() {
   }
 
   return (
-    <div className=\g-white rounded-2xl border border-slate-200 p-6 max-w-2xl\>
-      <h2 className=\	ext-lg font-semibold mb-4\>Publish a Document Test</h2>
-      <p className=\	ext-sm text-slate-500 mb-6\>
+    <div className="bg-white rounded-2xl border border-slate-200 p-6 max-w-2xl">
+      <h2 className="text-lg font-semibold mb-4">Publish a Document Test</h2>
+      <p className="text-sm text-slate-500 mb-6">
         Upload a PDF or Word document containing a Mock Test or Sectional Test. Students will be able to download the test document.
       </p>
 
-      {error && <div className=\g-red-50 text-red-600 p-3 rounded-lg mb-4 text-sm\>{error}</div>}
-      {success && <div className=\g-green-50 text-green-700 p-3 rounded-lg mb-4 text-sm\>{success}</div>}
+      {error && <div className="bg-red-50 text-red-600 p-3 rounded-lg mb-4 text-sm">{error}</div>}
+      {success && <div className="bg-green-50 text-green-700 p-3 rounded-lg mb-4 text-sm">{success}</div>}
 
-      <form onSubmit={handleSubmit} className=\space-y-4\>
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className=\lock text-sm font-medium mb-1\>Title</label>
-          <input type=\	ext\ value={title} onChange={(e) => setTitle(e.target.value)} required className=\w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500\ placeholder=\e.g. TCS Ninja Mock Test 1\ />
+          <label className="block text-sm font-medium mb-1">Title</label>
+          <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="e.g. TCS Ninja Mock Test 1" />
         </div>
-        <div className=\grid grid-cols-2 gap-4\>
+        <div className="grid grid-cols-2 gap-4">
           <div>
-            <label className=\lock text-sm font-medium mb-1\>Test Type</label>
-            <select value={testType} onChange={(e) => setTestType(e.target.value)} className=\w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500\>
-              <option value=\mock\>Full Mock Test</option>
-              <option value=\sectional\>Sectional Test</option>
+            <label className="block text-sm font-medium mb-1">Test Type</label>
+            <select value={testType} onChange={(e) => setTestType(e.target.value)} className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              <option value="mock">Full Mock Test</option>
+              <option value="sectional">Sectional Test</option>
             </select>
           </div>
           <div>
-            <label className=\lock text-sm font-medium mb-1\>Track</label>
-            <select value={track} onChange={(e) => setTrack(e.target.value)} className=\w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500\>
-              <option value=\ptitude\>Aptitude (Default)</option>
-              <option value=\domain\>Domain</option>
+            <label className="block text-sm font-medium mb-1">Track</label>
+            <select value={track} onChange={(e) => setTrack(e.target.value)} className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              <option value="aptitude">Aptitude (Default)</option>
+              <option value="domain">Domain</option>
             </select>
           </div>
         </div>
         <div>
-          <label className=\lock text-sm font-medium mb-1\>Document (PDF / DOC)</label>
-          <input type=\ile\ accept=\.pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document\ onChange={(e) => setFile(e.target.files?.[0] || null)} required className=\w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500\ />
+          <label className="block text-sm font-medium mb-1">Document (PDF / DOC)</label>
+          <input type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" onChange={(e) => setFile(e.target.files?.[0] || null)} required className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
         </div>
-        <div className=\pt-4\>
-          <button type=\submit\ disabled={submitting} className=\g-indigo-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 disabled:opacity-50\>
+        <div className="pt-4">
+          <button type="submit" disabled={submitting} className="bg-indigo-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-indigo-700 disabled:opacity-50">
             {submitting ? 'Publishing...' : 'Publish Test'}
           </button>
         </div>
