@@ -171,11 +171,6 @@ export default function HomePage() {
           <div className="flex-1 relative w-full h-[350px] sm:h-[450px] hidden md:block mt-8 md:mt-0">
             <div className="absolute inset-0 bg-emerald-500 rounded-tl-[80px] rounded-br-[80px] transform rotate-3" />
             <img src="/hero-bg.png" alt="Campus" className="absolute inset-0 w-full h-full object-cover rounded-tl-[80px] rounded-br-[80px] shadow-xl" />
-            
-            <div className="absolute bottom-12 -right-5 bg-white rounded-2xl p-4 shadow-xl border border-slate-100 text-center min-w-[120px]">
-               <div className="font-extrabold text-2xl text-slate-900">4.5 <span className="text-emerald-500">★</span></div>
-               <div className="text-xs text-slate-500 font-medium mt-1">Google Reviews</div>
-            </div>
           </div>
         </div>
       </section>
