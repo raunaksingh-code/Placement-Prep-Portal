@@ -5,6 +5,7 @@ import {
   Bot,
   Briefcase,
   Building2,
+  Check,
   Globe2,
   Handshake,
   MessagesSquare,
@@ -152,25 +153,39 @@ export default function HomePage() {
 
   return (
     <div className="space-y-10">
-      <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-violet-600 to-blue-600 px-6 py-12 sm:px-10 sm:py-14 shadow-[0_20px_60px_-15px_rgba(79,70,229,0.5)]">
-        <div className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-blue-400/20 blur-3xl" />
-        <div className="relative">
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-            Placement Preparation
+      <section 
+        className="relative overflow-hidden rounded-3xl px-6 py-16 sm:px-12 sm:py-24 shadow-sm border border-slate-200"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95)), url(/hero-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="relative z-10 max-w-3xl">
+          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+            <span className="text-emerald-600">Placement Mantra,</span><br/>
+            Placements Simplified!!!
           </h1>
-          <p className="mt-3 max-w-2xl text-indigo-100 text-base sm:text-lg">
-            Everything for the placement season — aptitude, job descriptions and real interview
+          <p className="mt-6 text-lg sm:text-xl text-slate-700 max-w-2xl font-medium">
+            Everything for the placement season - aptitude, domain projects, and real interview
             questions, all in one place.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4 sm:gap-6">
+          
+          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm sm:text-base font-semibold text-slate-700">
+            <span className="flex items-center gap-1.5"><Check size={18} className="text-emerald-500 stroke-[3]" /> Aptitude</span>
+            <span className="flex items-center gap-1.5"><Check size={18} className="text-emerald-500 stroke-[3]" /> Domains</span>
+            <span className="flex items-center gap-1.5"><Check size={18} className="text-emerald-500 stroke-[3]" /> Interview Prep</span>
+            <span className="flex items-center gap-1.5"><Check size={18} className="text-emerald-500 stroke-[3]" /> Mock Tests</span>
+          </div>
+
+          <div className="mt-10 flex flex-wrap gap-4 sm:gap-6">
             {heroStats.map((s) => (
               <div
                 key={s.label}
-                className="rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-3 min-w-[7.5rem]"
+                className="rounded-2xl bg-white/60 backdrop-blur-md border border-white/40 px-6 py-4 min-w-[8rem] shadow-sm"
               >
-                <div className="text-2xl font-bold text-white">{s.value || '—'}</div>
-                <div className="text-xs font-medium text-indigo-100/90 uppercase tracking-wide">
+                <div className="text-3xl font-extrabold text-slate-900">{s.value || '---'}</div>
+                <div className="text-xs font-bold text-slate-600 uppercase tracking-widest mt-1">
                   {s.label}
                 </div>
               </div>
