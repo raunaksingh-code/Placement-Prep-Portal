@@ -45,6 +45,8 @@ class MockTestOut(BaseModel):
     description: str | None = None
     sections: list | None = None
     track: str | None = None
+    has_document: bool = False
+    document_filename: str | None = None
     attempt_count: int = 0
     best_score: float | None = None
 
