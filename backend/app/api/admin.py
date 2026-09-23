@@ -154,7 +154,7 @@ class AdminTestAttemptOut(BaseModel):
     user_email: str
     test_title: str
     test_type: str
-    score: int
+    score: float
     total: int
     accuracy: float
     is_completed: bool
