@@ -10,6 +10,7 @@ export default function ProjectsPage() {
   const [formData, setFormData] = useState({ title: '', description: '', domain: 'Software Development', external_link: '' })
   const [submitting, setSubmitting] = useState(false)
   const [filter, setFilter] = useState<'all' | 'mba'>('all')
+  const [registered, setRegistered] = useState<number[]>(() => JSON.parse(localStorage.getItem('registered_projects') || '[]'))
 
   const fetchProjects = () => {
     setLoading(true)
@@ -128,10 +129,25 @@ export default function ProjectsPage() {
                 </a>
               ) : (
                 <button 
-                  onClick={() => alert("Registration feature coming soon! Check back later.")}
-                  className="ml-auto text-emerald-600 text-sm font-medium hover:text-emerald-800 transition"
+                  onClick={() => {
+                    if (registered.includes(p.id)) {
+                      const newReg = registered.filter((id) => id !== p.id)
+                      setRegistered(newReg)
+                      localStorage.setItem('registered_projects', JSON.stringify(newReg))
+                    } else {
+                      const newReg = [...registered, p.id]
+                      setRegistered(newReg)
+                      localStorage.setItem('registered_projects', JSON.stringify(newReg))
+                      alert("You have successfully registered for this project!")
+                    }
+                  }}
+                  className={`ml-auto text-sm font-medium transition ${
+                    registered.includes(p.id)
+                      ? 'text-slate-500 hover:text-slate-700'
+                      : 'text-emerald-600 hover:text-emerald-800'
+                  }`}
                 >
-                  I'm Interested
+                  {registered.includes(p.id) ? 'Registered ✅' : 'I\'m Interested'}
                 </button>
               )}
             </div>
