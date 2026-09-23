@@ -1,6 +1,8 @@
-import { GraduationCap, LogOut, Search, Bell } from 'lucide-react'
-import { Link, Navigate, NavLink, Outlet, useNavigate } from 'react-router-dom'
+import { GraduationCap, LogOut, Search, Bell, X } from 'lucide-react'
+import { Link, Navigate, NavLink, Outlet, useNavigate, useLocation } from 'react-router-dom'
 import { clearAuth, getToken, getUser } from '../lib/api'
+import { LoginPage } from '../features/auth/AuthPages'
+import HomePage from '../features/home/HomePage'
 
 const NAV = [
   { to: '/aptitude', label: 'Aptitude' },
@@ -15,9 +17,13 @@ const NAV = [
 
 export default function Layout() {
   const navigate = useNavigate()
+  const location = useLocation()
   const user = getUser()
+  const isAuth = !!getToken()
 
-  if (!getToken()) return <Navigate to="/login" replace />
+  // If they aren't authenticated and are trying to access a page other than root,
+  // we show the login modal over the homepage.
+  const showLoginModal = !isAuth && location.pathname !== '/'
 
   const nav = user?.is_admin ? [...NAV, { to: '/admin', label: 'Admin' }] : NAV
   const initials = (user?.full_name ?? '?')
@@ -72,20 +78,39 @@ export default function Layout() {
               <Bell size={18} />
             </button>
 
-            <button
-              onClick={() => {
-                clearAuth()
-                navigate('/login')
-              }}
-              className="px-5 py-2 rounded-md border border-slate-200 text-slate-700 font-semibold text-sm hover:bg-slate-50 hover:border-slate-300 transition-colors"
-            >
-              Logout
-            </button>
+            {isAuth ? (
+              <button
+                onClick={() => {
+                  clearAuth()
+                  navigate('/login')
+                }}
+                className="px-5 py-2 rounded-md border border-slate-200 text-slate-700 font-semibold text-sm hover:bg-slate-50 hover:border-slate-300 transition-colors"
+              >
+                Logout
+              </button>
+            ) : (
+              <button
+                onClick={() => navigate('/login')}
+                className="px-5 py-2 rounded-md bg-emerald-500 text-white font-semibold text-sm hover:bg-emerald-600 transition-colors shadow-sm"
+              >
+                Login
+              </button>
+            )}
           </div>
         </div>
       </header>
-      <main className="max-w-[85rem] mx-auto px-4 py-8">
-        <Outlet />
+      <main className="max-w-[85rem] mx-auto px-4 py-8 relative">
+        {showLoginModal && (
+           <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+             <div className="bg-white rounded-3xl w-full max-w-md p-6 relative shadow-2xl">
+                <button onClick={() => navigate('/')} className="absolute top-4 right-4 text-slate-400 hover:text-slate-600 bg-slate-100 rounded-full p-1 transition-colors">
+                  <X size={20} />
+                </button>
+                <LoginPage isModal={true} />
+             </div>
+           </div>
+        )}
+        {showLoginModal ? <HomePage /> : <Outlet />}
       </main>
     </div>
   )

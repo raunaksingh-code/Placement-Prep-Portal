@@ -1,9 +1,10 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Header
 from pydantic import BaseModel
 from sqlalchemy import func
 from sqlalchemy.orm import Session
+from typing import Optional
 
-from app.api.deps import get_current_user
+from app.api.deps import get_current_user, get_optional_user
 from app.db.session import get_db
 from app.models.company import InterviewQuestion, JobDescription
 from app.models.guide import InterviewGuide
@@ -11,7 +12,7 @@ from app.models.learning import Subject, Topic
 from app.models.test import Test, TestAttempt, TestType
 from app.models.user import User
 
-router = APIRouter(prefix="/api", tags=["home"], dependencies=[Depends(get_current_user)])
+router = APIRouter(prefix="/api", tags=["home"])
 
 
 class HomeSummary(BaseModel):
@@ -29,7 +30,7 @@ class HomeSummary(BaseModel):
 
 
 @router.get("/home", response_model=HomeSummary)
-def home_summary(db: Session = Depends(get_db), user: User = Depends(get_current_user)):
+def home_summary(db: Session = Depends(get_db), user: Optional[User] = Depends(get_optional_user)):
     """One cheap, aggregate-only endpoint for the homepage's stat tiles.
 
     The homepage used to fire five separate requests (subjects, companies,
@@ -44,11 +45,14 @@ def home_summary(db: Session = Depends(get_db), user: User = Depends(get_current
     across topics) - close enough for a homepage teaser stat, and far
     cheaper since it needs no test/question/option joins.
     """
-    attempts_row = (
-        db.query(func.count(TestAttempt.id), func.avg(TestAttempt.score / TestAttempt.total * 100.0))
-        .filter(TestAttempt.user_id == user.id, TestAttempt.is_completed.is_(True), TestAttempt.total > 0)
-        .first()
-    )
+    attempts_row = None
+    if user:
+        attempts_row = (
+            db.query(func.count(TestAttempt.id), func.avg(TestAttempt.score / TestAttempt.total * 100.0))
+            .filter(TestAttempt.user_id == user.id, TestAttempt.is_completed.is_(True), TestAttempt.total > 0)
+            .first()
+        )
+        
     aptitude_subject_ids = [s.id for s in db.query(Subject.id).filter(Subject.track == "aptitude")]
     domain_subject_ids = [s.id for s in db.query(Subject.id).filter(Subject.track == "domain")]
     return HomeSummary(
@@ -63,6 +67,6 @@ def home_summary(db: Session = Depends(get_db), user: User = Depends(get_current
         .filter(Test.test_type.in_([TestType.full_mock, TestType.sectional]), Test.track.is_(None))
         .count(),
         guide_count=db.query(InterviewGuide).count(),
-        progress_attempts=attempts_row[0] or 0,
-        progress_accuracy=round(attempts_row[1], 1) if attempts_row[1] is not None else 0.0,
+        progress_attempts=attempts_row[0] if attempts_row else 0,
+        progress_accuracy=round(attempts_row[1], 1) if attempts_row and attempts_row[1] is not None else 0.0,
     )

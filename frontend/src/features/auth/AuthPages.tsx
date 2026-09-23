@@ -77,16 +77,31 @@ function GoogleSignInButton({ onCredential }: { onCredential: (credential: strin
   )
 }
 
-function AuthShell({ title, children }: { title: string; children: React.ReactNode }) {
+function AuthShell({ title, children, isModal }: { title: string; children: React.ReactNode, isModal?: boolean }) {
+  if (isModal) {
+    return (
+      <div className="w-full">
+        <div className="flex justify-center mb-3">
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 text-white shadow-lg">
+            <GraduationCap size={24} strokeWidth={2.25} />
+          </span>
+        </div>
+        <h1 className="text-2xl font-bold text-center text-slate-900 mb-1">Placement Mantra</h1>
+        <p className="text-center text-slate-500 mb-6">{title}</p>
+        <div>{children}</div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-md">
         <div className="flex justify-center mb-3">
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600 text-white shadow-lg shadow-indigo-500/30">
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-600 to-green-600 text-white shadow-lg shadow-emerald-500/30">
             <GraduationCap size={24} strokeWidth={2.25} />
           </span>
         </div>
-        <h1 className="text-2xl font-bold text-center text-indigo-700 mb-1">Placement Mantra</h1>
+        <h1 className="text-2xl font-bold text-center text-emerald-700 mb-1">Placement Mantra</h1>
         <p className="text-center text-slate-500 mb-6">{title}</p>
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">{children}</div>
       </div>
@@ -95,11 +110,11 @@ function AuthShell({ title, children }: { title: string; children: React.ReactNo
 }
 
 const inputCls =
-  'w-full border border-slate-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500'
+  'w-full border border-slate-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-500'
 const btnCls =
-  'w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg py-2 disabled:opacity-50'
+  'w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg py-2 disabled:opacity-50'
 
-export function LoginPage() {
+export function LoginPage({ isModal }: { isModal?: boolean }) {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -142,17 +157,17 @@ export function LoginPage() {
   }
 
   return (
-    <AuthShell title="Sign in to continue your preparation">
+    <AuthShell title="Sign in to continue your preparation" isModal={isModal}>
       <form onSubmit={submit} className="space-y-4">
         <input className={inputCls} type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         <input className={inputCls} type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         {error && <p className="text-sm text-red-600">{error}</p>}
-        <button className={btnCls} disabled={busy}>{busy ? 'Signing in…' : 'Sign in'}</button>
+        <button className={btnCls} disabled={busy}>{busy ? 'Signing in...' : 'Sign in'}</button>
       </form>
       <GoogleSignInButton onCredential={submitGoogleCredential} />
       <p className="text-sm text-center text-slate-500 mt-4">
         New here?{' '}
-        <Link to="/register" className="text-indigo-600 hover:underline">Create an account</Link>
+        <Link to="/register" className="text-emerald-600 hover:underline">Create an account</Link>
       </p>
     </AuthShell>
   )
