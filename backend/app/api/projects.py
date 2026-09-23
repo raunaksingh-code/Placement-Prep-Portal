@@ -19,13 +19,12 @@ def list_projects(domain: str | None = None, mba_only: bool = False, db: Session
     return query.order_by(Project.created_at.desc()).all()
 
 @router.post("", response_model=ProjectOut, status_code=status.HTTP_201_CREATED)
-def create_project(body: ProjectCreate, db: Session = Depends(get_db)):
-    # TEMPORARY: Hardcoding created_by_id to 1 to bypass auth for production seeding
+def create_project(body: ProjectCreate, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     project = Project(
         title=body.title,
         description=body.description,
         domain=body.domain,
-        created_by_id=1
+        created_by_id=current_user.id
     )
     db.add(project)
     db.commit()
