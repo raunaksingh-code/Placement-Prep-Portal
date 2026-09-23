@@ -4,7 +4,7 @@ import { api, apiUpload, ApiError, getUser } from '../../lib/api'
 import { parseApiDate } from '../../lib/format'
 import type { AdminStats, AdminUser, Project, AdminTestAttempt } from '../../lib/types'
 
-type Tab = 'overview' | 'users' | 'projects' | 'tests' | 'publish'
+type Tab = 'overview' | 'users' | 'tests' | 'publish'
 
 export default function AdminPage() {
   const [tab, setTab] = useState<Tab>('overview')
@@ -14,7 +14,6 @@ export default function AdminPage() {
   const tabs: { id: Tab; label: string }[] = [
     { id: 'overview', label: 'Overview' },
     { id: 'users', label: 'Users' },
-    { id: 'projects', label: 'Projects' },
     { id: 'tests', label: 'Test Attempts' },
     { id: 'publish', label: 'Publish Test' },
   ]
@@ -23,7 +22,7 @@ export default function AdminPage() {
     <div>
       <div className="mb-8">
         <h1 className="text-2xl font-bold mb-1 text-slate-900">Admin</h1>
-        <p className="text-slate-500">Platform activity, users, projects, and tests.</p>
+        <p className="text-slate-500">Platform activity, users and tests.</p>
       </div>
 
       <div className="flex gap-2 mb-6 border-b border-slate-200 overflow-x-auto">
@@ -42,7 +41,6 @@ export default function AdminPage() {
 
       {tab === 'overview' && <OverviewTab />}
       {tab === 'users' && <UsersTab />}
-      {tab === 'projects' && <ProjectsTab />}
       {tab === 'tests' && <TestsTab />}
       {tab === 'publish' && <PublishTestTab />}
     </div>
@@ -108,7 +106,6 @@ function OverviewTab() {
         <h2 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">Engagement</h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <StatCard label="Test attempts" value={stats.total_test_attempts} hint={`${stats.completed_test_attempts} completed`} />
-          <StatCard label="Domain projects" value={stats.total_projects} />
           <StatCard label="Connections made" value={stats.total_connections} />
           <StatCard label="Resumes uploaded" value={stats.total_resumes} />
         </div>
@@ -268,84 +265,6 @@ function UsersTab() {
           {users.length === 0 && (
             <tr>
               <td colSpan={7} className="px-4 py-8 text-center text-slate-500">No users found.</td>
-            </tr>
-          )}
-        </tbody>
-      </table>
-    </div>
-  )
-}
-
-function ProjectsTab() {
-  const [projects, setProjects] = useState<Project[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
-  const [busyId, setBusyId] = useState<number | null>(null)
-
-  function load() {
-    setLoading(true)
-    setError('')
-    api<Project[]>('/api/admin/projects')
-      .then(setProjects)
-      .catch((err) => setError(err instanceof ApiError ? err.message : 'Failed to load projects'))
-      .finally(() => setLoading(false))
-  }
-
-  useEffect(load, [])
-
-  async function removeProject(project: Project) {
-    if (!confirm(`Delete project "${project.title}"?`)) return
-    setBusyId(project.id)
-    try {
-      await api(`/api/admin/projects/${project.id}`, { method: 'DELETE' })
-      setProjects((prev) => prev.filter((p) => p.id !== project.id))
-    } catch (err) {
-      alert(err instanceof ApiError ? err.message : 'Failed to delete project')
-    } finally {
-      setBusyId(null)
-    }
-  }
-
-  if (loading) return <div className="p-8 text-center text-slate-500">Loading projects...</div>
-  if (error) return <div className="p-8 text-center text-red-600">{error}</div>
-
-  return (
-    <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden">
-      <table className="w-full text-sm">
-        <thead className="bg-slate-50 text-slate-500 text-left">
-          <tr>
-            <th className="px-4 py-3 font-medium">Title</th>
-            <th className="px-4 py-3 font-medium">Domain</th>
-            <th className="px-4 py-3 font-medium">Creator</th>
-            <th className="px-4 py-3 font-medium">Created</th>
-            <th className="px-4 py-3 font-medium text-right">Actions</th>
-          </tr>
-        </thead>
-        <tbody className="divide-y divide-slate-100">
-          {projects.map((p) => (
-            <tr key={p.id}>
-              <td className="px-4 py-3 font-medium text-slate-900">{p.title}</td>
-              <td className="px-4 py-3 text-slate-600">{p.domain}</td>
-              <td className="px-4 py-3 text-slate-600">
-                <Link to={`/users/${p.created_by_id}`} className="hover:text-indigo-600 hover:underline">
-                  {p.creator.full_name}
-                </Link>
-              </td>
-              <td className="px-4 py-3 text-slate-600">{new Date(p.created_at).toLocaleDateString()}</td>
-              <td className="px-4 py-3 text-right">
-                <button
-                  onClick={() => removeProject(p)}
-                  disabled={busyId === p.id}
-                  className="text-red-600 hover:underline disabled:opacity-50"
-                >
-                  Delete
-                </button>
-              </td>
-            </tr>
-          ))}
-          {projects.length === 0 && (
-            <tr>
-              <td colSpan={5} className="px-4 py-8 text-center text-slate-500">No projects found.</td>
             </tr>
           )}
         </tbody>

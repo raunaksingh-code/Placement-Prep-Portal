@@ -7,7 +7,6 @@ import HomePage from '../features/home/HomePage'
 const NAV = [
   { to: '/aptitude', label: 'Aptitude' },
   { to: '/domain-prep', label: 'Domains' },
-  { to: '/projects', label: 'Projects' },
   { to: '/business-news', label: 'Business News' },
   { to: '/companies', label: 'Companies' },
   { to: '/mock-tests', label: 'Tests' },

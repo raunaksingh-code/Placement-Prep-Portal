@@ -106,14 +106,6 @@ export default function HomePage() {
       stat: 'New!',
     },
     {
-      to: '/projects',
-      icon: Rocket,
-      gradient: 'from-orange-500 to-red-600',
-      title: 'Domain Projects',
-      blurb: 'Find and collaborate on live projects in SDE, Data, Marketing, and more.',
-      stat: 'Live opportunities',
-    },
-    {
       to: '/business-news',
       icon: Newspaper,
       gradient: 'from-blue-600 to-indigo-800',
