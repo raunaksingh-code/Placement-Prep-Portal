@@ -1,5 +1,5 @@
 import { GraduationCap, LogOut, Search, Bell, X } from 'lucide-react'
-import { Link, Navigate, NavLink, Outlet, useNavigate, useLocation } from 'react-router-dom'
+import { Link, Navigate, NavLink, Outlet, useNavigate, useLocation, useSearchParams } from 'react-router-dom'
 import { clearAuth, getToken, getUser } from '../lib/api'
 import { LoginPage } from '../features/auth/AuthPages'
 import HomePage from '../features/home/HomePage'
@@ -17,6 +17,7 @@ const NAV = [
 export default function Layout() {
   const navigate = useNavigate()
   const location = useLocation()
+  const [searchParams, setSearchParams] = useSearchParams()
   const user = getUser()
   const isAuth = !!getToken()
 
@@ -68,7 +69,9 @@ export default function Layout() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
               <input 
                 type="text" 
-                placeholder="Search for placements..." 
+                value={searchParams.get('q') || ''}
+                onChange={handleSearch}
+                placeholder="Search for modules..." 
                 className="w-full pl-10 pr-4 py-2 bg-slate-50 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500"
               />
             </div>
