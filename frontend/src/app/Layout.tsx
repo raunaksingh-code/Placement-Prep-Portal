@@ -21,6 +21,16 @@ export default function Layout() {
   const user = getUser()
   const isAuth = !!getToken()
 
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newParams = new URLSearchParams(searchParams)
+    if (e.target.value) {
+      newParams.set('q', e.target.value)
+    } else {
+      newParams.delete('q')
+    }
+    setSearchParams(newParams)
+  }
+
   // If they aren't authenticated and are trying to access a page other than root,
   // we show the login modal over the homepage.
   const showLoginModal = !isAuth && location.pathname !== '/'
