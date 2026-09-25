@@ -17,12 +17,14 @@ import {
   TrendingUp,
   UserRound,
 } from 'lucide-react'
+import { useSearchParams } from 'react-router-dom'
 import { api } from '../../lib/api'
 import type { HomeSummary } from '../../lib/types'
 
 export default function HomePage() {
   const [summary, setSummary] = useState<HomeSummary | null>(null)
-  const [searchQuery, setSearchQuery] = useState('')
+  const [searchParams] = useSearchParams()
+  const searchQuery = searchParams.get('q') || ''
 
   useEffect(() => {
     api<HomeSummary>('/api/home').then(setSummary).catch(() => {})

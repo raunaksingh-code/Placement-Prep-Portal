@@ -9,8 +9,11 @@
       // and bounce to index.html, which restores it. The site is served from
       // a custom domain's root (not a /<repo>/ project-page subpath), so the
       // redirect target is always '/'.
-      sessionStorage.setItem('redirectPath', location.pathname + location.search + location.hash)
-      location.replace('/')
+      const path = location.pathname + location.search + location.hash;
+      if (path !== '/' && path !== '/index.html') {
+        sessionStorage.setItem('redirectPath', path)
+        location.replace('/')
+      }
     </script>
   </head>
   <body></body>

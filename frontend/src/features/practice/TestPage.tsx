@@ -162,39 +162,8 @@ export default function TestPage() {
   async function start() {
     try {
       // Request permissions
-      const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+      const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false })
       streamRef.current = stream
-      
-      // Start audio proctoring
-      const audioCtx = new window.AudioContext()
-      audioContextRef.current = audioCtx
-      const source = audioCtx.createMediaStreamSource(stream)
-      const analyser = audioCtx.createAnalyser()
-      analyser.fftSize = 256
-      source.connect(analyser)
-      const dataArray = new Uint8Array(analyser.frequencyBinCount)
-      
-      let noiseViolations = 0
-      const checkAudio = () => {
-        if (!submittingRef.current && startedRef.current) {
-          analyser.getByteFrequencyData(dataArray)
-          const sum = dataArray.reduce((a, b) => a + b, 0)
-          const avg = sum / dataArray.length
-          if (avg > 50) { // Threshold for talking
-            noiseViolations++
-            if (noiseViolations > 10) { // Buffer to avoid single blips
-              issueWarning('Background noise or talking detected.')
-              noiseViolations = 0
-            }
-          } else {
-            noiseViolations = Math.max(0, noiseViolations - 1)
-          }
-        }
-        if (!submittingRef.current) {
-          requestAnimationFrame(checkAudio)
-        }
-      }
-      checkAudio()
       
       // Enter Fullscreen
       await document.documentElement.requestFullscreen()
@@ -205,7 +174,7 @@ export default function TestPage() {
       if (a.duration_minutes) setSecondsLeft(a.duration_minutes * 60)
       
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Could not start test. Ensure camera/mic permissions are granted and try again.')
+      setError(e instanceof Error ? e.message : 'Could not start test. Ensure camera permissions are granted and try again.')
     }
   }
 
@@ -240,10 +209,10 @@ export default function TestPage() {
         <div className="bg-slate-50 border border-slate-200 rounded-lg p-4 mb-6">
           <h3 className="text-sm font-semibold text-slate-800 mb-2">Proctoring Rules:</h3>
           <ul className="list-disc pl-5 text-sm text-slate-600 space-y-1.5">
-            <li>You must grant <strong>Camera & Microphone</strong> access to start.</li>
+            <li>You must grant <strong>Camera</strong> access to start.</li>
             <li>The test will run in <strong>Full Screen</strong> mode. Do not exit it.</li>
             <li><strong>Do not switch tabs</strong> or click outside the window.</li>
-            <li><strong>No talking</strong> or background help is allowed.</li>
+            <li><strong>Background help</strong> is not allowed.</li>
             <li>Copy/Paste and screenshots are disabled.</li>
             <li className="text-red-600 font-medium">Zero tolerance: ANY violation will result in immediate automatic submission.</li>
           </ul>
