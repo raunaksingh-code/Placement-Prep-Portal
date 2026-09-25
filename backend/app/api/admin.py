@@ -139,6 +139,19 @@ def delete_user(user_id: int, db: Session = Depends(get_db), current_admin: User
 def list_projects(db: Session = Depends(get_db), _: User = Depends(get_current_admin)):
     return db.query(Project).order_by(Project.created_at.desc()).all()
 
+@router.delete("/tests/{test_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_test(test_id: int, db: Session = Depends(get_db), _: User = Depends(get_current_admin)):
+    from app.models.test import Test, TestQuestion, TestAttempt, TestDocument
+    test = db.query(Test).filter(Test.id == test_id).first()
+    if not test:
+        raise HTTPException(status_code=404, detail="Test not found")
+    
+    db.query(TestQuestion).filter(TestQuestion.test_id == test_id).delete(synchronize_session=False)
+    db.query(TestAttempt).filter(TestAttempt.test_id == test_id).delete(synchronize_session=False)
+    db.query(TestDocument).filter(TestDocument.test_id == test_id).delete(synchronize_session=False)
+    db.delete(test)
+    db.commit()
+
 @router.delete("/projects/{project_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_project(project_id: int, db: Session = Depends(get_db), _: User = Depends(get_current_admin)):
     project = db.query(Project).filter(Project.id == project_id).first()

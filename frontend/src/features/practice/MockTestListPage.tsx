@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { api, downloadFile } from '../../lib/api'
+import { api, downloadFile, getUser } from '../../lib/api'
 import type { MockTest } from '../../lib/types'
-import { FileText, Download } from 'lucide-react'
+import { FileText, Download, Trash2 } from 'lucide-react'
 
 const GROUPS: { key: string; title: string; blurb: string; match: (t: MockTest) => boolean }[] = [
   {
@@ -29,14 +29,15 @@ export default function MockTestListPage() {
   const [tests, setTests] = useState<MockTest[] | null>(null)
   const [error, setError] = useState('')
   const [downloadingId, setDownloadingId] = useState<number | null>(null)
+  const [deletingId, setDeletingId] = useState<number | null>(null)
   const navigate = useNavigate()
+  
+  const isAdmin = getUser()?.is_admin
 
   useEffect(() => {
     api<MockTest[]>('/api/mock-tests').then(setTests).catch((e) => setError(e.message))
   }, [])
 
-  // TestPage creates the attempt on its own start screen; pass the meta along so it
-  // can show this test's real instructions before the timer begins.
   function open(test: MockTest) {
     navigate(`/tests/${test.id}`, { state: { test } })
   }
@@ -50,6 +51,19 @@ export default function MockTestListPage() {
       alert("Failed to download: " + e.message)
     } finally {
       setDownloadingId(null)
+    }
+  }
+
+  async function handleDelete(test: MockTest) {
+    if (!confirm(`Are you sure you want to delete "${test.title}"?`)) return
+    try {
+      setDeletingId(test.id)
+      await api(`/api/admin/tests/${test.id}`, { method: 'DELETE' })
+      setTests(tests => tests ? tests.filter(t => t.id !== test.id) : null)
+    } catch (e: any) {
+      alert("Failed to delete: " + e.message)
+    } finally {
+      setDeletingId(null)
     }
   }
 
@@ -96,30 +110,42 @@ export default function MockTestListPage() {
                   )}
 
                   <div className="flex items-center justify-between mt-4">
-                    {t.has_document ? (
-                      <button
-                        onClick={() => handleDownload(t)}
-                        disabled={downloadingId === t.id}
-                        className="px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 disabled:opacity-50 flex items-center gap-2"
-                      >
-                        <Download size={16} />
-                        {downloadingId === t.id ? 'Downloading...' : 'Download Test'}
-                      </button>
-                    ) : (
-                      <>
+                    <div className="flex items-center gap-2">
+                      {t.has_document ? (
                         <button
-                          onClick={() => open(t)}
-                          className="px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700"
+                          onClick={() => handleDownload(t)}
+                          disabled={downloadingId === t.id}
+                          className="px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700 disabled:opacity-50 flex items-center gap-2"
                         >
-                          {t.attempt_count ? 'Retake test' : 'Start test'}
+                          <Download size={16} />
+                          {downloadingId === t.id ? 'Downloading...' : 'Download Test'}
                         </button>
-                        {t.attempt_count > 0 && (
-                          <span className="text-xs text-slate-500">
-                            {t.attempt_count} attempt{t.attempt_count > 1 ? 's' : ''} • best{' '}
-                            <strong className="text-slate-700">{t.best_score}</strong>/{t.question_count}
-                          </span>
-                        )}
-                      </>
+                      ) : (
+                        <>
+                          <button
+                            onClick={() => open(t)}
+                            className="px-4 py-2 rounded-lg bg-emerald-600 text-white text-sm font-medium hover:bg-emerald-700"
+                          >
+                            {t.attempt_count ? 'Retake test' : 'Start test'}
+                          </button>
+                          {t.attempt_count > 0 && (
+                            <span className="text-xs text-slate-500">
+                              {t.attempt_count} attempt{t.attempt_count > 1 ? 's' : ''} • best{' '}
+                              <strong className="text-slate-700">{t.best_score}</strong>/{t.question_count}
+                            </span>
+                          )}
+                        </>
+                      )}
+                    </div>
+                    {isAdmin && (
+                      <button
+                        onClick={() => handleDelete(t)}
+                        disabled={deletingId === t.id}
+                        className="p-2 text-slate-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+                        title="Delete test"
+                      >
+                        <Trash2 size={18} />
+                      </button>
                     )}
                   </div>
                 </div>
