@@ -1,8 +1,9 @@
-import { GraduationCap, LogOut, Search, Bell, X } from 'lucide-react'
+import { GraduationCap, LogOut, Search, Bell, X, MessageSquare, UserPlus } from 'lucide-react'
 import { Link, Navigate, NavLink, Outlet, useNavigate, useLocation, useSearchParams } from 'react-router-dom'
-import { clearAuth, getToken, getUser } from '../lib/api'
+import { api, clearAuth, getToken, getUser } from '../lib/api'
 import { LoginPage } from '../features/auth/AuthPages'
 import HomePage from '../features/home/HomePage'
+import { useState, useEffect, useRef } from 'react'
 
 const NAV = [
   { to: '/aptitude', label: 'Aptitude' },
@@ -20,6 +21,30 @@ export default function Layout() {
   const [searchParams, setSearchParams] = useSearchParams()
   const user = getUser()
   const isAuth = !!getToken()
+
+  const [notifications, setNotifications] = useState({ connection_requests: 0, unread_messages: 0, total: 0 })
+  const [showNotifications, setShowNotifications] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!isAuth) return
+    const fetchNotifs = () => {
+      api<any>('/api/notifications/unread').then(setNotifications).catch(() => {})
+    }
+    fetchNotifs()
+    const interval = setInterval(fetchNotifs, 15000)
+    return () => clearInterval(interval)
+  }, [isAuth, location.pathname]) // re-fetch on navigation too
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setShowNotifications(false)
+      }
+    }
+    if (showNotifications) document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [showNotifications])
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newParams = new URLSearchParams(searchParams)
@@ -86,9 +111,67 @@ export default function Layout() {
               />
             </div>
 
-            <button className="hidden sm:flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 hover:text-slate-900 hover:bg-slate-50 transition-colors">
-              <Bell size={18} />
-            </button>
+            {isAuth && (
+              <div className="relative" ref={dropdownRef}>
+                <button 
+                  onClick={() => setShowNotifications(!showNotifications)}
+                  className="hidden sm:flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-500 hover:text-slate-900 hover:bg-slate-50 transition-colors relative"
+                >
+                  <Bell size={18} />
+                  {notifications.total > 0 && (
+                    <span className="absolute top-2 right-2.5 w-2 h-2 bg-red-500 rounded-full ring-2 ring-white"></span>
+                  )}
+                </button>
+                
+                {showNotifications && (
+                  <div className="absolute right-0 mt-3 w-72 bg-white border border-slate-200 rounded-xl shadow-xl py-2 z-50 overflow-hidden">
+                    <div className="px-4 py-3 border-b border-slate-100 font-semibold text-sm text-slate-800 bg-slate-50/50">
+                      Notifications
+                    </div>
+                    {notifications.total === 0 ? (
+                      <div className="px-4 py-6 text-sm text-center text-slate-500">
+                        You're all caught up!
+                      </div>
+                    ) : (
+                      <div className="flex flex-col">
+                        {notifications.connection_requests > 0 && (
+                          <Link 
+                            to="/network" 
+                            state={{ tab: 'requests' }} 
+                            onClick={() => setShowNotifications(false)} 
+                            className="px-4 py-4 text-sm hover:bg-slate-50 border-b border-slate-50 flex items-start gap-3 transition-colors"
+                          >
+                            <div className="mt-0.5 p-1.5 bg-blue-100 text-blue-600 rounded-full">
+                              <UserPlus size={14} />
+                            </div>
+                            <div className="flex-1">
+                              <div className="font-medium text-slate-800">New Connection Request</div>
+                              <div className="text-slate-500 mt-0.5">You have {notifications.connection_requests} pending request{notifications.connection_requests > 1 ? 's' : ''}.</div>
+                            </div>
+                          </Link>
+                        )}
+                        {notifications.unread_messages > 0 && (
+                          <Link 
+                            to="/network" 
+                            state={{ tab: 'messages' }} 
+                            onClick={() => setShowNotifications(false)} 
+                            className="px-4 py-4 text-sm hover:bg-slate-50 flex items-start gap-3 transition-colors"
+                          >
+                            <div className="mt-0.5 p-1.5 bg-emerald-100 text-emerald-600 rounded-full">
+                              <MessageSquare size={14} />
+                            </div>
+                            <div className="flex-1">
+                              <div className="font-medium text-slate-800">New Message</div>
+                              <div className="text-slate-500 mt-0.5">You have {notifications.unread_messages} unread message{notifications.unread_messages > 1 ? 's' : ''}.</div>
+                            </div>
+                          </Link>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
 
             {isAuth ? (
               <button
