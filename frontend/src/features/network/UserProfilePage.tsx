@@ -79,12 +79,23 @@ export default function UserProfilePage() {
                   {profile.connection_count} connection{profile.connection_count === 1 ? '' : 's'}
                 </p>
               </div>
-              <ConnectButton
-                userId={profile.id}
-                status={profile.connection_status}
-                connectionId={profile.connection_id}
-                onChange={handleConnectionChange}
-              />
+              <div className="flex items-center gap-3">
+                <ConnectButton
+                  userId={profile.id}
+                  status={profile.connection_status}
+                  connectionId={profile.connection_id}
+                  onChange={handleConnectionChange}
+                />
+                {profile.connection_status === 'connected' && (
+                  <Link 
+                    to="/network" 
+                    state={{ tab: 'messages', messageUserId: profile.id }}
+                    className={li.primaryBtn}
+                  >
+                    Message
+                  </Link>
+                )}
+              </div>
             </div>
 
             {profile.headline && <p className="text-black/80 font-medium mt-4">{profile.headline}</p>}

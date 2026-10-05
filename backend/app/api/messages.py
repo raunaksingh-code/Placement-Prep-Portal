@@ -100,7 +100,7 @@ def get_conversations(
     # Sort conversations: those with messages first (most recent), then alphabetical
     results.sort(
         key=lambda c: (
-            c.last_message.created_at if c.last_message else datetime.min
+            c.last_message.created_at.timestamp() if c.last_message else 0
         ),
         reverse=True,
     )

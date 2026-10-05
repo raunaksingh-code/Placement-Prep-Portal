@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { api, ApiError, getUser } from '../../lib/api'
 import type { ConnectionRequest, ConnectionStatus, ConnectionSummary, User } from '../../lib/types'
 import { ConnectButton } from './ConnectButton'
@@ -36,10 +36,11 @@ function UserCard({ user, children }: { user: User; children?: React.ReactNode }
 
 export default function NetworkPage() {
   const me = getUser()
-  const [tab, setTab] = useState<Tab>('discover')
+  const location = useLocation()
+  const [tab, setTab] = useState<Tab>(location.state?.tab || 'discover')
   const [pendingCount, setPendingCount] = useState(0)
 
-  const [messageUserId, setMessageUserId] = useState<number | undefined>(undefined)
+  const [messageUserId, setMessageUserId] = useState<number | undefined>(location.state?.messageUserId || undefined)
 
   useEffect(() => {
     api<ConnectionRequest[]>('/api/connections/pending').then((r) => setPendingCount(r.length)).catch(() => {})
