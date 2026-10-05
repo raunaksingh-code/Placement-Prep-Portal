@@ -237,14 +237,14 @@ def mock_interview(body: MockInterviewRequest, current_user: User = Depends(get_
             )
         else:
             instruction = (
-                f"Act exactly like a real human interviewer. React naturally to the candidate's previous answer (e.g., 'That makes sense,' 'I see, but...', 'Interesting.'). "
+                f"Act exactly like a real human interviewer. React naturally to the candidate's previous answer (e.g., 'That makes sense,' 'Interesting.'). "
                 f"Then, ask exactly ONE next question. Do NOT repeat previous questions. "
-                f"Your questions must be of {body.difficulty.upper() if body.difficulty else 'MEDIUM'} difficulty. "
-                f"If you have already explored a topic or if the candidate gave a sufficient answer, move on to a NEW, distinct topic relevant to the role and JD. "
-                f"Make sure to cover the candidate's ENTIRE CV broadly and other relevant questions, avoiding getting stuck on one single topic. "
-                f"Make sure your question is strictly a {body.interview_type} question (e.g., HR questions for HR round, technical questions for Technical round). "
-                "You may ask a related follow-up to probe for depth if their previous answer was superficial, but avoid getting stuck on one topic for too long. "
-                "Keep your response conversational, concise, and professional. Do not be overly robotic or overly polite. Do not answer on the candidate's behalf."
+                f"CRITICAL RULES FOR INTERVIEW FLOW:\n"
+                f"1. A real interview evaluates the candidate across multiple dimensions. You MUST ask every type of question relevant to the {body.interview_type} round, the Job Description, and their CV.\n"
+                f"2. DO NOT get stuck on a single topic or project for the entire duration. Limit yourself to a maximum of 1 or 2 follow-up questions on any single topic.\n"
+                f"3. After a topic has been sufficiently discussed, smoothly transition to a completely NEW area (e.g., a different project from the CV, a core skill required in the JD, or a relevant behavioral/situational question).\n"
+                f"4. Ensure the difficulty level matches {body.difficulty.upper() if body.difficulty else 'MEDIUM'}.\n"
+                f"5. Keep your response conversational, concise, and professional without being robotic. Never answer on the candidate's behalf."
             )
         prompt = f"""
         You are an experienced, professional interviewer conducting a {body.interview_type} interview{company_line}{role_line}
