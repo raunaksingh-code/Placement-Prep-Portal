@@ -173,6 +173,7 @@ class AdminTestAttemptOut(BaseModel):
     is_completed: bool
     started_at: datetime
     submitted_at: datetime | None
+    submission_reason: str | None = None
 
 @router.get("/tests", response_model=list[AdminTestAttemptOut])
 def list_test_attempts(db: Session = Depends(get_db), _: User = Depends(get_current_admin)):
@@ -194,7 +195,8 @@ def list_test_attempts(db: Session = Depends(get_db), _: User = Depends(get_curr
             accuracy=acc,
             is_completed=a.is_completed,
             started_at=a.started_at,
-            submitted_at=a.submitted_at
+            submitted_at=a.submitted_at,
+            submission_reason=a.submission_reason
         ))
     return out
 

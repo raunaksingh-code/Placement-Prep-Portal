@@ -155,6 +155,7 @@ export interface AdminTestAttempt {
   is_completed: boolean
   started_at: string
   submitted_at: string | null
+  submission_reason: string | null
 }
 
 export interface Subject {

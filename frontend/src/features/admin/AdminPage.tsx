@@ -326,7 +326,14 @@ function TestsTab() {
               </td>
               <td className="px-4 py-3">
                 {a.is_completed ? (
-                  <span className="inline-flex px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700">Completed</span>
+                  <div className="flex flex-col gap-1 items-start">
+                    <span className="inline-flex px-2 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700">Completed</span>
+                    {a.submission_reason && a.submission_reason !== 'Manual submission' && (
+                      <span className="inline-flex px-1.5 py-0.5 rounded text-[10px] font-medium bg-amber-50 text-amber-700 border border-amber-200 whitespace-nowrap" title={a.submission_reason}>
+                        Flagged: {a.submission_reason.replace('Violation: ', '')}
+                      </span>
+                    )}
+                  </div>
                 ) : (
                   <span className="inline-flex px-2 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-700">In Progress</span>
                 )}
