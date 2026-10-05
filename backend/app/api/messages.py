@@ -10,7 +10,7 @@ from app.models.connection import Connection
 from app.models.message import Message
 from app.models.user import User
 
-router = APIRouter(prefix="/messages", tags=["messages"])
+router = APIRouter(prefix="/api/messages", tags=["messages"])
 
 
 class MessageCreate(BaseModel):
