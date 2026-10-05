@@ -24,6 +24,12 @@ export default function ResultPage() {
       <div className="bg-white border border-slate-200 rounded-xl p-8 text-center mb-6">
         <h1 className="text-xl font-bold mb-1">{result.test_title}</h1>
         <p className="text-slate-500 text-sm mb-6">Attempt result</p>
+        
+        {result.submission_reason && result.submission_reason !== 'Manual submission' && (
+          <div className="bg-amber-50 border border-amber-200 text-amber-800 text-sm font-medium rounded-lg px-4 py-3 mb-6 flex items-center justify-center gap-2">
+            Auto-submitted: {result.submission_reason}
+          </div>
+        )}
         <p className="text-5xl font-bold text-indigo-700 mb-2">
           {result.score}
           <span className="text-2xl text-slate-400"> / {result.total}</span>

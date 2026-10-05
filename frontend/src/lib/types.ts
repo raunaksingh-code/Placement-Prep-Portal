@@ -479,6 +479,7 @@ export interface AttemptResult {
   unattempted: number
   negative_mark: number
   submitted_at: string | null
+  submission_reason: string | null
   results: QuestionResult[]
   sections: SectionResult[]
   weakest_topics: TopicBreakdown[]

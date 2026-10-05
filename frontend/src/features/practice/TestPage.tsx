@@ -39,7 +39,7 @@ export default function TestPage() {
   const startedRef = useRef(started)
   startedRef.current = started
 
-  const submit = useCallback(async () => {
+  const submit = useCallback(async (reason: string = 'Manual submission') => {
     if (submittingRef.current || !attempt) return
     submittingRef.current = true
     try {
@@ -50,7 +50,7 @@ export default function TestPage() {
       
       const result = await api<AttemptResult>(`/api/attempts/${attempt.attempt_id}/submit`, {
         method: 'POST',
-        body: JSON.stringify({ answers: answersRef.current }),
+        body: JSON.stringify({ answers: answersRef.current, reason }),
       })
       navigate(`/attempts/${result.attempt_id}`)
     } catch (e) {
@@ -67,7 +67,7 @@ export default function TestPage() {
     
     if (currentWarnings >= MAX_WARNINGS) {
       setTimeout(() => {
-        submit()
+        submit(`Violation: ${reason}`)
       }, 3000)
     }
   }, [submit])
@@ -140,7 +140,7 @@ export default function TestPage() {
   useEffect(() => {
     if (!started || secondsLeft === null) return
     if (secondsLeft <= 0) {
-      submit()
+      submit('Time expired')
       return
     }
     const t = setTimeout(() => setSecondsLeft((s) => (s === null ? null : s - 1)), 1000)
@@ -349,7 +349,7 @@ export default function TestPage() {
                 </button>
               ) : (
                 <button
-                  onClick={submit}
+                  onClick={() => submit('Manual submission')}
                   className="bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg px-4 py-2 text-sm font-medium shadow-sm"
                 >
                   Submit test
@@ -383,7 +383,7 @@ export default function TestPage() {
               </div>
             ))}
             <button
-              onClick={submit}
+              onClick={() => submit('Manual submission')}
               className="w-full mt-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg py-2.5 text-sm font-medium shadow-sm"
             >
               Submit

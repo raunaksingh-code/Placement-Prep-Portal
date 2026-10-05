@@ -109,6 +109,8 @@ class TestAttempt(Base):
     is_completed: Mapped[bool] = mapped_column(Boolean, default=False)
     # Wall-clock seconds spent, recorded on submit. Null for attempts predating this.
     time_taken_sec: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    # E.g., 'Manual submission', 'Time expired', 'Violation: Tab switching detected'
+    submission_reason: Mapped[str | None] = mapped_column(String, nullable=True)
 
     test: Mapped["Test"] = relationship()
     user: Mapped["User"] = relationship()

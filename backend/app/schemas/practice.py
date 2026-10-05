@@ -53,6 +53,7 @@ class MockTestOut(BaseModel):
 
 class AttemptSubmitIn(BaseModel):
     answers: dict[str, str]
+    reason: str | None = None
 
 
 class QuestionResult(BaseModel):
@@ -94,6 +95,7 @@ class AttemptResultOut(BaseModel):
     unattempted: int
     negative_mark: float
     submitted_at: datetime | None
+    submission_reason: str | None = None
     results: list[QuestionResult]
     sections: list[SectionResult] = []
     weakest_topics: list[TopicBreakdown] = []

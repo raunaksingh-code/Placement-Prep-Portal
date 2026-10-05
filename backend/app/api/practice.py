@@ -253,6 +253,7 @@ def _build_result(attempt: TestAttempt, db: Session) -> AttemptResultOut:
         unattempted=unattempted,
         negative_mark=test.negative_mark,
         submitted_at=attempt.submitted_at,
+        submission_reason=attempt.submission_reason,
         results=results,
         sections=section_results,
         weakest_topics=weakest[:5],
@@ -293,6 +294,7 @@ def submit_attempt(
     attempt.score = round(score, 2)
     attempt.is_completed = True
     attempt.submitted_at = now
+    attempt.submission_reason = body.reason
     # started_at comes back from the DB naive; compare like with like
     started = attempt.started_at
     if started is not None:
