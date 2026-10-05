@@ -61,6 +61,20 @@ def run_migrations_online() -> None:
         poolclass=pool.NullPool,
     )
     with connectable.connect() as connection:
+        # --- AUTO-FIX CORRUPTED DEPLOYMENT STATE ON RENDER ---
+        try:
+            from sqlalchemy import text
+            res = connection.execute(text("SELECT version_num FROM alembic_version"))
+            version = res.scalar()
+            if version == "b4c69f83c5c3":
+                print("Running emergency fix: patching alembic_version from b4c69f83c5c3 to 4b40f6e5d69e...")
+                connection.execute(text("UPDATE alembic_version SET version_num = '4b40f6e5d69e' WHERE version_num = 'b4c69f83c5c3'"))
+                connection.commit()
+                print("Patch applied successfully.")
+        except Exception as e:
+            pass # DB might not be initialized yet, which is fine
+        # -----------------------------------------------------
+
         context.configure(
             connection=connection,
             target_metadata=target_metadata,
