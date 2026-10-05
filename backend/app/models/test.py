@@ -111,6 +111,7 @@ class TestAttempt(Base):
     time_taken_sec: Mapped[int | None] = mapped_column(Integer, nullable=True)
 
     test: Mapped["Test"] = relationship()
+    user: Mapped["User"] = relationship()
 
 class TestDocument(Base):
     __tablename__ = "test_documents"
