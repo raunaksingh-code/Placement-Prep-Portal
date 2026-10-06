@@ -160,7 +160,12 @@ export function LoginPage({ isModal }: { isModal?: boolean }) {
     <AuthShell title="Sign in to continue your preparation" isModal={isModal}>
       <form onSubmit={submit} className="space-y-4">
         <input className={inputCls} type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input className={inputCls} type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        <div>
+          <input className={inputCls} type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <div className="flex justify-end mt-1">
+            <Link to="/forgot-password" className="text-xs text-emerald-600 hover:underline">Forgot password?</Link>
+          </div>
+        </div>
         {error && <p className="text-sm text-red-600">{error}</p>}
         <button className={btnCls} disabled={busy}>{busy ? 'Signing in...' : 'Sign in'}</button>
       </form>
@@ -212,6 +217,88 @@ export function RegisterPage() {
         Already registered?{' '}
         <Link to="/login" className="text-indigo-600 hover:underline">Sign in</Link>
       </p>
+    </AuthShell>
+  )
+}
+
+export function ForgotPasswordPage() {
+  const [email, setEmail] = useState('')
+  const [otp, setOtp] = useState('')
+  const [newPassword, setNewPassword] = useState('')
+  const [step, setStep] = useState<'request' | 'verify' | 'done'>('request')
+  
+  const [error, setError] = useState('')
+  const [busy, setBusy] = useState(false)
+
+  async function requestOtp(e: FormEvent) {
+    e.preventDefault()
+    setBusy(true)
+    setError('')
+    try {
+      const res = await api<{ dev_otp?: string }>('/api/auth/forgot-password', {
+        method: 'POST',
+        body: JSON.stringify({ email }),
+      })
+      if (res.dev_otp) {
+        console.log("DEV OTP:", res.dev_otp) // helpful for local dev without real emails
+      }
+      setStep('verify')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Request failed')
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  async function verifyOtp(e: FormEvent) {
+    e.preventDefault()
+    setBusy(true)
+    setError('')
+    try {
+      await api('/api/auth/reset-password', {
+        method: 'POST',
+        body: JSON.stringify({ email, otp, new_password: newPassword }),
+      })
+      setStep('done')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Reset failed')
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <AuthShell title="Reset your password">
+      {step === 'done' ? (
+        <div className="text-center">
+          <p className="text-emerald-700 font-medium mb-4">Password reset successfully!</p>
+          <Link to="/login" className="text-indigo-600 hover:underline">Return to sign in</Link>
+        </div>
+      ) : step === 'verify' ? (
+        <>
+          <p className="text-sm text-slate-600 mb-4 text-center">
+            Enter the 6-digit OTP sent to {email}
+          </p>
+          <form onSubmit={verifyOtp} className="space-y-4">
+            <input className={inputCls} type="text" placeholder="6-digit OTP" value={otp} onChange={(e) => setOtp(e.target.value)} required />
+            <input className={inputCls} type="password" placeholder="New Password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required minLength={6} />
+            {error && <p className="text-sm text-red-600">{error}</p>}
+            <button className={btnCls} disabled={busy}>{busy ? 'Verifying...' : 'Reset Password'}</button>
+          </form>
+        </>
+      ) : (
+        <>
+          <form onSubmit={requestOtp} className="space-y-4">
+            <input className={inputCls} type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+            {error && <p className="text-sm text-red-600">{error}</p>}
+            <button className={btnCls} disabled={busy}>{busy ? 'Sending...' : 'Send OTP'}</button>
+          </form>
+          <p className="text-sm text-center text-slate-500 mt-4">
+            Remembered your password?{' '}
+            <Link to="/login" className="text-indigo-600 hover:underline">Sign in</Link>
+          </p>
+        </>
+      )}
     </AuthShell>
   )
 }

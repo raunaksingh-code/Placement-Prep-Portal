@@ -132,6 +132,10 @@ def toggle_endorsement(skill_id: int, db: Session = Depends(get_db), current_use
     db.refresh(skill)
     return skill_out(db, skill, current_user.id)
 
+import uuid
+from fastapi.responses import RedirectResponse
+from app.core.storage import storage
+
 @router.post("/resume", response_model=ResumeOut)
 async def upload_resume(
     file: UploadFile = File(...), db: Session = Depends(get_db), current_user: User = Depends(get_current_user)
@@ -141,16 +145,40 @@ async def upload_resume(
     data = await file.read()
     if not data:
         raise HTTPException(status_code=400, detail="Resume file is empty")
-    if len(data) > MAX_RESUME_BYTES:
+    file_size = len(data)
+    if file_size > MAX_RESUME_BYTES:
         raise HTTPException(status_code=400, detail="Resume must be under 5MB")
+
+    # Generate safe unique key
+    storage_key = f"resumes/{uuid.uuid4()}"
+    filename = file.filename or "resume"
+    
+    # Save to object storage
+    storage.save(data, storage_key, file.content_type)
 
     resume = db.query(Resume).filter(Resume.user_id == current_user.id).first()
     if resume:
-        resume.filename = file.filename or "resume"
+        # Delete old storage object if it exists
+        if resume.storage_key:
+            try:
+                storage.delete(resume.storage_key)
+            except Exception:
+                pass # Non-fatal
+                
+        resume.filename = filename
         resume.content_type = file.content_type
-        resume.data = data
+        resume.data = None # Stop storing in DB
+        resume.storage_key = storage_key
+        resume.file_size = file_size
     else:
-        resume = Resume(user_id=current_user.id, filename=file.filename or "resume", content_type=file.content_type, data=data)
+        resume = Resume(
+            user_id=current_user.id, 
+            filename=filename, 
+            content_type=file.content_type, 
+            data=None,
+            storage_key=storage_key,
+            file_size=file_size
+        )
         db.add(resume)
     db.commit()
     db.refresh(resume)
@@ -160,16 +188,41 @@ async def upload_resume(
 def delete_resume(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     resume = db.query(Resume).filter(Resume.user_id == current_user.id).first()
     if resume:
+        if resume.storage_key:
+            try:
+                storage.delete(resume.storage_key)
+            except Exception:
+                pass
         db.delete(resume)
         db.commit()
 
 @router.get("/resume/{user_id}")
 def download_resume(user_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    if user_id != current_user.id and not current_user.is_admin:
+        raise HTTPException(status_code=403, detail="Not authorized to access this resume")
     resume = db.query(Resume).filter(Resume.user_id == user_id).first()
     if not resume:
         raise HTTPException(status_code=404, detail="No resume uploaded")
+        
+    # Attempt to get presigned URL if storage provider supports it
+    if resume.storage_key:
+        url = storage.get_presigned_url(resume.storage_key, resume.filename, resume.content_type)
+        if url:
+            return RedirectResponse(url)
+            
+        # Fallback to proxying the file through FastAPI
+        file_bytes = storage.get(resume.storage_key)
+        if file_bytes is None:
+            raise HTTPException(status_code=404, detail="Resume file not found in storage")
+        content = file_bytes
+    else:
+        # Backward compatibility for existing DB blobs
+        if not resume.data:
+            raise HTTPException(status_code=404, detail="Resume data is missing")
+        content = resume.data
+
     return Response(
-        content=resume.data,
+        content=content,
         media_type=resume.content_type,
         headers={"Content-Disposition": f'attachment; filename="{resume.filename}"'},
     )

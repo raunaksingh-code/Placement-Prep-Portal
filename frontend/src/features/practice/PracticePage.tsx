@@ -13,10 +13,14 @@ export default function PracticePage() {
   const [selected, setSelected] = useState<string | null>(null)
   const [tally, setTally] = useState({ right: 0, wrong: 0 })
 
+  const [submitting, setSubmitting] = useState(false)
+  const [result, setResult] = useState<{ is_correct: boolean; correct_answer: string; explanation: string | null } | null>(null)
+
   useEffect(() => {
     setQuestions(null)
     setIndex(0)
     setSelected(null)
+    setResult(null)
     setTally({ right: 0, wrong: 0 })
     const q = difficulty ? `?difficulty=${difficulty}&limit=15` : '?limit=15'
     api<PracticeQuestion[]>(`/api/topics/${slug}/practice${q}`)
@@ -31,12 +35,22 @@ export default function PracticePage() {
   const done = index >= questions.length
   const q = questions[Math.min(index, questions.length - 1)]
 
-  function choose(option: string) {
-    if (selected) return
+  async function choose(option: string) {
+    if (selected || submitting) return
+    setSubmitting(true)
     setSelected(option)
-    setTally((t) =>
-      option === q.correct_answer ? { ...t, right: t.right + 1 } : { ...t, wrong: t.wrong + 1 },
-    )
+    try {
+      const res = await api<{ is_correct: boolean; correct_answer: string; explanation: string | null }>(
+        `/api/questions/${q.id}/submit`,
+        { method: 'POST', body: JSON.stringify({ selected_option: option }) }
+      )
+      setResult(res)
+      setTally((t) => (res.is_correct ? { ...t, right: t.right + 1 } : { ...t, wrong: t.wrong + 1 }))
+    } catch (e: any) {
+      setError(e.message)
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -94,8 +108,8 @@ export default function PracticePage() {
           <div className="space-y-2">
             {q.options.map((o) => {
               let cls = 'border-slate-200 hover:border-indigo-300 hover:bg-indigo-50/50'
-              if (selected) {
-                if (o === q.correct_answer) cls = 'border-emerald-400 bg-emerald-50'
+              if (selected && result) {
+                if (o === result.correct_answer) cls = 'border-emerald-400 bg-emerald-50'
                 else if (o === selected) cls = 'border-red-400 bg-red-50'
                 else cls = 'border-slate-200 opacity-60'
               }
@@ -103,7 +117,7 @@ export default function PracticePage() {
                 <button
                   key={o}
                   onClick={() => choose(o)}
-                  disabled={!!selected}
+                  disabled={!!selected || submitting}
                   className={`w-full text-left border rounded-lg px-4 py-2.5 transition ${cls}`}
                 >
                   {o}
@@ -111,18 +125,19 @@ export default function PracticePage() {
               )
             })}
           </div>
-          {selected && (
+          {selected && result && (
             <div className="mt-5">
-              {q.explanation && (
+              {result.explanation && (
                 <p className="text-sm text-slate-700 bg-slate-50 border border-slate-200 rounded-lg p-3">
                   <span className="font-medium">Explanation: </span>
-                  {q.explanation}
+                  {result.explanation}
                 </p>
               )}
               <button
                 onClick={() => {
                   setIndex((i) => i + 1)
                   setSelected(null)
+                  setResult(null)
                 }}
                 className="mt-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg px-5 py-2 text-sm font-medium"
               >

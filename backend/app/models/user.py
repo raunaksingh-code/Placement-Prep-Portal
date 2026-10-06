@@ -29,3 +29,7 @@ class User(Base):
     # Updated on every successful login (password or Google). Null until the
     # user's first sign-in after this column was added.
     last_login_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)
+    
+    # OTP for password resets
+    reset_otp: Mapped[str | None] = mapped_column(String, nullable=True)
+    reset_otp_expires_at: Mapped[datetime | None] = mapped_column(DateTime, nullable=True)

@@ -398,9 +398,13 @@ export interface PracticeQuestion {
   text: string
   difficulty: string
   options: string[]
+  estimated_time_sec: number | null
+}
+
+export interface PracticeSubmitResult {
+  is_correct: boolean
   correct_answer: string
   explanation: string | null
-  estimated_time_sec: number | null
 }
 
 export interface TestQuestion {

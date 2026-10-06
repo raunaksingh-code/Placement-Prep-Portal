@@ -36,6 +36,13 @@ class Settings(BaseSettings):
     # Get a key from https://aistudio.google.com/apikey. Without it, those
     # endpoints fall back to a fixed mock response.
     GEMINI_API_KEY: str = ""
+    
+    # SMTP Email configuration for sending OTPs etc.
+    SMTP_SERVER: str = ""
+    SMTP_PORT: int = 587
+    SMTP_USERNAME: str = ""
+    SMTP_PASSWORD: str = ""
+    SMTP_FROM_EMAIL: str = "noreply@placementprep.com"
 
     class Config:
         env_file = ".env"

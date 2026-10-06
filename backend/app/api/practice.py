@@ -15,6 +15,8 @@ from app.schemas.practice import (
     AttemptSubmitIn,
     MockTestOut,
     PracticeQuestionOut,
+    PracticeSubmitIn,
+    PracticeSubmitOut,
     QuestionResult,
     SectionResult,
     TestQuestionOut,
@@ -71,12 +73,30 @@ def practice_questions(
             text=qu.text,
             difficulty=qu.difficulty.value,
             options=[o.text for o in qu.options],
-            correct_answer=_correct_option(qu),
-            explanation=qu.explanation,
             estimated_time_sec=qu.estimated_time_sec,
         )
         for qu in questions
     ]
+
+
+@router.post("/questions/{question_id}/submit", response_model=PracticeSubmitOut)
+def submit_practice_question(
+    question_id: int,
+    body: PracticeSubmitIn,
+    db: Session = Depends(get_db),
+    _: User = Depends(get_current_user)
+):
+    question = db.query(Question).options(joinedload(Question.options)).filter(Question.id == question_id).first()
+    if not question:
+        raise HTTPException(status_code=404, detail="Question not found")
+        
+    correct_ans = _correct_option(question)
+    
+    return PracticeSubmitOut(
+        is_correct=(body.selected_option == correct_ans),
+        correct_answer=correct_ans,
+        explanation=question.explanation
+    )
 
 
 @router.get("/mock-tests", response_model=list[MockTestOut])

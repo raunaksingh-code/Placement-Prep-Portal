@@ -8,9 +8,15 @@ class PracticeQuestionOut(BaseModel):
     text: str
     difficulty: str
     options: list[str]
+    estimated_time_sec: int | None = None
+
+class PracticeSubmitIn(BaseModel):
+    selected_option: str
+
+class PracticeSubmitOut(BaseModel):
+    is_correct: bool
     correct_answer: str
     explanation: str | None = None
-    estimated_time_sec: int | None = None
 
 
 class TestQuestionOut(BaseModel):

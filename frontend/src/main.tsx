@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import Layout from './app/Layout.tsx'
-import { LoginPage, RegisterPage } from './features/auth/AuthPages.tsx'
+import { LoginPage, RegisterPage, ForgotPasswordPage } from './features/auth/AuthPages.tsx'
 import HomePage from './features/home/HomePage.tsx'
 import SubjectListPage from './features/learning/SubjectListPage.tsx'
 import TopicListPage from './features/learning/TopicListPage.tsx'
@@ -42,6 +42,7 @@ if (redirectPath) {
 const router = createBrowserRouter([
   { path: '/login', element: <LoginPage /> },
   { path: '/register', element: <RegisterPage /> },
+  { path: '/forgot-password', element: <ForgotPasswordPage /> },
   {
     path: '/',
     element: <Layout />,
