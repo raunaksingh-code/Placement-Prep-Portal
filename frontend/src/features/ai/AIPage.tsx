@@ -641,9 +641,9 @@ export default function AIPage() {
               emptyState={
                 <>
                   <Bot size={40} className="opacity-40 mb-3" />
-                  <p className="font-medium text-slate-500 mb-1">Ask me anything about placements</p>
+                  <p className="font-medium text-slate-500 mb-1">MBA Placement Coach</p>
                   <p className="text-sm">
-                    Aptitude topics, resume advice, specific companies, GD tips, salary negotiation - fire away.
+                    Consulting cases, MBA resume advice, company-specific roles, GD tips, and salary negotiation - fire away.
                   </p>
                 </>
               }

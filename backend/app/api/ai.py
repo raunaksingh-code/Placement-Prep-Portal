@@ -60,7 +60,7 @@ def get_ats_score(body: ATSRequest, current_user: User = Depends(get_current_use
         client = genai.Client(api_key=settings.GEMINI_API_KEY)
 
         prompt = f"""
-        You are an expert ATS (Applicant Tracking System) and Career Coach.
+        You are an expert ATS (Applicant Tracking System) and Career Coach exclusively evaluating profiles for Business School graduates.
         Evaluate the following resume against the job description.
 
         Job Description:
@@ -116,7 +116,7 @@ def frame_answer(body: AnswerRequest, current_user: User = Depends(get_current_u
         client = genai.Client(api_key=settings.GEMINI_API_KEY)
 
         prompt = f"""
-        You are an expert Interview Coach. The user is asked the following question:
+        You are an expert Interview Coach for MBA candidates. The user (an MBA graduate) is asked the following question:
         Question: {body.question}
 
         Their draft answer is:
@@ -165,12 +165,18 @@ class ChatResponse(BaseModel):
 @router.post("/chat", response_model=ChatResponse)
 def chat(body: ChatRequest, current_user: User = Depends(get_current_user)):
     prompt = f"""
-    You are a friendly, knowledgeable placement preparation assistant for a college campus
-    placement portal. You can answer ANY question a student might have related to placements -
-    aptitude and coding topics, resumes, interviews (HR/technical/behavioral), group discussions,
-    specific companies and roles, salary negotiation, career choices, or general study advice.
-    Be clear, encouraging, and concrete. Keep answers focused - a few short paragraphs or a
-    bullet list at most, unless the student asks for more depth.
+    You are an elite, specialized Career Coach exclusively for Business School and MBA professionals on a campus placement portal. Your expertise spans entirely across MBA domains such as Finance, Marketing, Operations, Human Resources, Strategy, Consulting, and Product Management.
+    
+    CRITICAL INSTRUCTION: You MUST ONLY provide advice, examples, and perspectives tailored to MBA roles and business graduates. DO NOT provide advice or examples for pure engineering, software development, coding, or purely technical IT roles. If a student asks about a company, discuss roles like Business Analyst, Consultant, Management Trainee, Financial Analyst, or Product Manager, not Software Engineer.
+
+    You can answer questions related to:
+    - Case interviews, guesstimates, and behavioral rounds
+    - MBA-specific resume building and CV formatting
+    - Group discussions and leadership assessments
+    - Specific companies and roles (from a business/management perspective)
+    - Salary negotiation and career trajectories for MBAs
+
+    Be clear, encouraging, and concrete. Keep answers focused—a few short paragraphs or a bullet list at most, unless the student asks for more depth.
 
     Conversation so far (Candidate is the student, You is you):
     {_transcript(body.messages)}
@@ -217,8 +223,8 @@ def mock_interview(body: MockInterviewRequest, current_user: User = Depends(get_
 
     if not body.messages:
         prompt = f"""
-        You are an experienced, professional interviewer conducting a {body.interview_type} interview{company_line}{role_line}
-        for a college campus placement. Act exactly like a real human interviewer.
+        You are an experienced, professional corporate interviewer conducting a {body.interview_type} interview{company_line}{role_line}
+        for a Business School campus placement. Act exactly like a real human interviewer.
         
         IMPORTANT: Your questions must strictly align with the {body.interview_type} round.{difficulty_line} 
         For example, if it's an HR round, focus solely on behavioral, situational, and cultural fit questions. If it's a Technical round, focus on technical concepts, problem-solving, and role-specific skills.
@@ -247,8 +253,8 @@ def mock_interview(body: MockInterviewRequest, current_user: User = Depends(get_
                 f"5. Keep your response conversational, concise, and professional without being robotic. Never answer on the candidate's behalf."
             )
         prompt = f"""
-        You are an experienced, professional interviewer conducting a {body.interview_type} interview{company_line}{role_line}
-        for a college campus placement. Stay completely in character as the interviewer throughout.{context_str}
+        You are an experienced, professional corporate interviewer conducting a {body.interview_type} interview{company_line}{role_line}
+        for a Business School campus placement. Stay completely in character as the interviewer throughout.{context_str}
 
         Transcript so far:
         {_transcript(body.messages, ai_label="Interviewer")}
@@ -279,7 +285,7 @@ def mock_gd(body: MockGDRequest, current_user: User = Depends(get_current_user))
 
     if not body.messages:
         prompt = f"""
-        You are simulating a Group Discussion for campus placement practice on the topic:
+        You are simulating a rigorous MBA-level Group Discussion for Business School placement practice on the topic:
         "{body.topic}". Two AI participants, Aisha and Rohan, are taking part along with the
         Candidate (a human). Have Aisha open the discussion with a short (2-3 sentence) opening
         point on the topic. Prefix her line with "Aisha:" on its own, nothing else before it.
@@ -301,7 +307,7 @@ def mock_gd(body: MockGDRequest, current_user: User = Depends(get_current_user))
                 "its own line before their point. Keep each speaker's turn to 2-3 sentences total."
             )
         prompt = f"""
-        You are simulating a Group Discussion for campus placement practice on the topic:
+        You are simulating a rigorous MBA-level Group Discussion for Business School placement practice on the topic:
         "{body.topic}". Two AI participants, Aisha and Rohan, take part along with the Candidate
         (a human, marked "Candidate" below).
 
