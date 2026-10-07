@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import { Send } from 'lucide-react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import type { ChatMessage } from '../../lib/types'
 
 interface ChatThreadProps {
@@ -44,13 +46,46 @@ export default function ChatThread({
           messages.map((m, i) => (
             <div key={i} className={`flex ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
               <div
-                className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed whitespace-pre-wrap shadow-sm ${
+                className={`max-w-[85%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed shadow-sm ${
                   m.role === 'user'
-                    ? `${accent} text-white rounded-br-sm`
+                    ? `${accent} text-white rounded-br-sm whitespace-pre-wrap`
                     : 'bg-white text-slate-800 border border-slate-200 rounded-bl-sm'
                 }`}
               >
-                {m.content}
+                {m.role === 'ai' ? (
+                  <ReactMarkdown 
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      p: ({node, ...props}) => <p className="mb-2 last:mb-0" {...props} />,
+                      ul: ({node, ...props}) => <ul className="list-disc list-inside mb-2" {...props} />,
+                      ol: ({node, ...props}) => <ol className="list-decimal list-inside mb-2" {...props} />,
+                      li: ({node, ...props}) => <li className="mb-1" {...props} />,
+                      strong: ({node, ...props}) => <strong className="font-semibold text-slate-900" {...props} />,
+                      h1: ({node, ...props}) => <h1 className="text-lg font-bold mt-4 mb-2" {...props} />,
+                      h2: ({node, ...props}) => <h2 className="text-base font-bold mt-3 mb-2" {...props} />,
+                      h3: ({node, ...props}) => <h3 className="text-sm font-bold mt-2 mb-1" {...props} />,
+                      a: ({node, ...props}) => <a className="text-indigo-600 hover:underline" {...props} />,
+                      code: ({node, className, children, ...props}: any) => {
+                        const match = /language-(\w+)/.exec(className || '')
+                        const inline = !match && !className?.includes('language-')
+                        return inline ? (
+                          <code className="bg-slate-100 px-1 py-0.5 rounded text-pink-600 text-xs font-mono" {...props}>{children}</code>
+                        ) : (
+                          <div className="bg-slate-800 rounded-lg overflow-hidden my-2">
+                            <div className="px-3 py-1 bg-slate-900 text-slate-400 text-xs">{match?.[1] || 'code'}</div>
+                            <pre className="p-3 overflow-x-auto text-slate-50 text-xs font-mono">
+                              <code className={className} {...props}>{children}</code>
+                            </pre>
+                          </div>
+                        )
+                      }
+                    }}
+                  >
+                    {m.content}
+                  </ReactMarkdown>
+                ) : (
+                  m.content
+                )}
               </div>
             </div>
           ))
