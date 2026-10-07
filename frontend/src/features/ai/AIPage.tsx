@@ -645,13 +645,15 @@ export default function AIPage() {
               placeholder="Ask anything about placements..."
               accent="bg-fuchsia-600"
               emptyState={
-                <>
-                  <Bot size={40} className="opacity-40 mb-3" />
-                  <p className="font-medium text-slate-500 mb-1">MBA Placement Coach</p>
-                  <p className="text-sm">
+                <div className="flex flex-col items-center max-w-sm mx-auto">
+                  <div className="w-20 h-20 mb-5 rounded-full bg-gradient-to-tr from-fuchsia-100 to-indigo-100 flex items-center justify-center shadow-inner text-fuchsia-500">
+                    <Bot size={36} strokeWidth={1.5} />
+                  </div>
+                  <p className="font-medium text-slate-800 text-lg mb-2">MBA Placement Coach</p>
+                  <p className="text-sm text-slate-500 leading-relaxed">
                     Consulting cases, MBA resume advice, company-specific roles, GD tips, and salary negotiation - fire away.
                   </p>
-                </>
+                </div>
               }
             />
           )}

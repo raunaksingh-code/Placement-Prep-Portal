@@ -40,9 +40,7 @@ export default function ChatThread({
       <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4">
         {messages.length === 0 && !loading ? (
           <div className="h-full flex flex-col items-center justify-center text-slate-500 text-center px-6">
-            <div className="w-24 h-24 mb-6 rounded-full bg-gradient-to-tr from-fuchsia-100 to-indigo-100 flex items-center justify-center shadow-inner">
-              {emptyState}
-            </div>
+            {emptyState}
           </div>
         ) : (
           messages.map((m, i) => (
