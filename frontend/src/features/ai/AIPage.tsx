@@ -145,39 +145,45 @@ export default function AIPage() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto py-6">
+    <div className="max-w-5xl mx-auto py-8 px-4 sm:px-6 relative">
+      {/* Decorative background glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[300px] bg-gradient-to-br from-fuchsia-400/20 via-purple-400/20 to-indigo-400/20 blur-[80px] -z-10 rounded-full pointer-events-none" />
+
       <div className="text-center mb-10">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-purple-600 text-white shadow-lg shadow-purple-500/30 mb-4">
-          <Bot size={28} />
+        <div className="inline-flex items-center justify-center w-16 h-16 rounded-3xl bg-gradient-to-br from-fuchsia-500 to-purple-600 text-white shadow-xl shadow-fuchsia-500/20 mb-5 ring-4 ring-white">
+          <Bot size={30} strokeWidth={2} />
         </div>
-        <h1 className="text-3xl font-bold mb-3 text-slate-900">AI Placement Coach</h1>
-        <p className="text-slate-500 max-w-xl mx-auto text-lg">
+        <h1 className="text-4xl font-extrabold mb-4 text-slate-900 tracking-tight">
+          AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-indigo-600">Placement Coach</span>
+        </h1>
+        <p className="text-slate-500 max-w-2xl mx-auto text-lg leading-relaxed">
           Powered by Gemini. Grade your resume, practice mock interviews and group discussions, or
           just ask anything about placements.
         </p>
       </div>
 
-      <div className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-        <div className="flex flex-wrap border-b border-slate-200">
-          {TABS.map((t) => {
-            const Icon = t.icon
-            return (
-              <button
-                key={t.id}
-                onClick={() => setActiveTab(t.id)}
-                className={`flex items-center gap-1.5 px-4 sm:px-5 py-4 text-center font-medium text-sm transition-colors border-b-2 ${
-                  activeTab === t.id
-                    ? 'border-indigo-600 text-indigo-600 bg-indigo-50/50'
-                    : 'border-transparent text-slate-500 hover:text-slate-800 hover:bg-slate-50'
-                }`}
-              >
-                <Icon size={15} />
-                {t.label}
-              </button>
-            )
-          })}
-        </div>
+      <div className="flex flex-wrap items-center justify-center gap-1.5 mb-8 bg-slate-100/80 p-1.5 rounded-2xl max-w-fit mx-auto border border-slate-200/60 backdrop-blur-sm shadow-sm">
+        {TABS.map((t) => {
+          const Icon = t.icon
+          const active = activeTab === t.id
+          return (
+            <button
+              key={t.id}
+              onClick={() => setActiveTab(t.id)}
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 ${
+                active
+                  ? 'bg-white text-fuchsia-600 shadow-sm border border-slate-200/50 scale-100 ring-1 ring-slate-900/5'
+                  : 'text-slate-500 hover:text-slate-800 hover:bg-slate-200/60 border border-transparent'
+              }`}
+            >
+              <Icon size={16} className={active ? 'text-fuchsia-600' : 'opacity-70'} />
+              {t.label}
+            </button>
+          )
+        })}
+      </div>
 
+      <div className="bg-white/80 backdrop-blur-xl rounded-[2rem] shadow-2xl shadow-slate-200/50 border border-slate-200/60 overflow-hidden">
         <div className="p-6 sm:p-8">
           {activeTab === 'ats' && (
             <div className="grid md:grid-cols-2 gap-8">
