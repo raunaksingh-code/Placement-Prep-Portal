@@ -37,3 +37,5 @@ CampusRecruitmentBook.pdf
 data/seed_source/JDs/
 *Question Tracker.xlsx
 *.xlsx
+local_storage/
+backend/local_storage/
