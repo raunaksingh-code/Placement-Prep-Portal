@@ -1,0 +1,17 @@
+name: Automated 30-Minute News Refresh
+
+on:
+  schedule:
+    # Runs every 30 minutes
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  refresh-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger News Refresh Endpoint
+        run: |
+          API_URL="${{ vars.VITE_API_BASE_URL || 'https://api.placementmantra.shop' }}"
+          echo "Triggering news refresh at ${API_URL}/api/news/refresh"
+          curl -s -X POST "${API_URL}/api/news/refresh" || echo "API host asleep or unreachable; will retry on next schedule."

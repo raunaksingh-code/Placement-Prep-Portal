@@ -140,7 +140,11 @@ the apex, a CNAME to `<user>.github.io` for `www`).
 | `CORS_ORIGINS` | yes | Comma-separated origins |
 | `GOOGLE_CLIENT_ID` | no | OAuth client ID from the Google Cloud Console. Must match the frontend's `VITE_GOOGLE_CLIENT_ID`; leave both unset to hide the "Sign in with Google" button. |
 | `ADMIN_EMAILS` | no | Comma-separated emails promoted to admin on next sign-in. Only needed to bootstrap the first admin - further admins are granted from the admin page. |
-| `GEMINI_API_KEY` | no | Powers the AI Coach features (ATS grader, mock interview/GD, chatbot). Get one at [aistudio.google.com/apikey](https://aistudio.google.com/apikey); those endpoints fall back to a fixed mock response without it. |
+| `GEMINI_API_KEY` | no | Powers the AI Coach and MBA Business News Intelligence features (easy explanation, takeaways, why it matters, interview questions, GD topics). Get one at [aistudio.google.com/apikey](https://aistudio.google.com/apikey); falls back to analytical framework engine without it. |
+| `NEWSDATA_API_KEY` | no | Powers Indian business & economy news from NewsData.io. Get one at [newsdata.io](https://newsdata.io). CNBC feed continues working if unset. |
+| `MARKETAUX_API_KEY` | no | Powers stock market, company developments and sentiment data from Marketaux. Get one at [marketaux.com](https://marketaux.com). |
+| `FINNHUB_API_KEY` | no | Powers global market news from Finnhub. Get one at [finnhub.io](https://finnhub.io). |
+| `NEWS_REFRESH_MINUTES` | no | Background news refresh interval in minutes (defaults to `30`). |
 
 ## Stack
 

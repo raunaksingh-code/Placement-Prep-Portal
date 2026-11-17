@@ -27,6 +27,7 @@ from app.models import education as education_models  # noqa: F401
 from app.models import skill as skill_models  # noqa: F401
 from app.models import resume as resume_models  # noqa: F401
 from app.models import message as message_models  # noqa: F401
+from app.models import news as news_models  # noqa: F401
 
 config = context.config
 config.set_main_option("sqlalchemy.url", settings.sqlalchemy_url)
@@ -83,6 +84,7 @@ def run_migrations_online() -> None:
         )
         with context.begin_transaction():
             context.run_migrations()
+        connection.commit()
 
 
 if context.is_offline_mode():

@@ -57,3 +57,10 @@ services:
       # endpoints fall back to a fixed mock response.
       - key: GEMINI_API_KEY
         sync: false
+      # Optional API keys for expanded business news providers:
+      - key: NEWSDATA_API_KEY
+        sync: false
+      - key: MARKETAUX_API_KEY
+        sync: false
+      - key: FINNHUB_API_KEY
+        sync: false

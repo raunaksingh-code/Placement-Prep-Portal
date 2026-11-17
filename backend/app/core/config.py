@@ -44,6 +44,12 @@ class Settings(BaseSettings):
     SMTP_PASSWORD: str = ""
     SMTP_FROM_EMAIL: str = "noreply@placementprep.com"
 
+    # Business News Providers API Keys & Refresh Settings
+    NEWSDATA_API_KEY: str = ""
+    MARKETAUX_API_KEY: str = ""
+    FINNHUB_API_KEY: str = ""
+    NEWS_REFRESH_MINUTES: int = 30
+
     class Config:
         env_file = ".env"
 

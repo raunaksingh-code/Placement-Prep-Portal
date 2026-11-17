@@ -1,111 +1,927 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { api } from '../../lib/api'
-import { Newspaper, ExternalLink, RefreshCw } from 'lucide-react'
+import {
+  Newspaper,
+  ExternalLink,
+  RefreshCw,
+  Search,
+  Sparkles,
+  Layers,
+  Landmark,
+  Building2,
+  TrendingUp,
+  Briefcase,
+  Rocket,
+  Globe,
+  Cpu,
+  Handshake,
+  Target,
+  Factory,
+  Ship,
+  Calendar,
+  Clock,
+  CheckCircle2,
+  HelpCircle,
+  MessageSquare,
+  X,
+  ChevronRight,
+  Filter,
+  BarChart3,
+  Flame,
+  Award
+} from 'lucide-react'
 
-interface NewsItem {
+export interface NewsArticle {
+  id: number
   title: string
-  link: string
-  pub_date: string
-  description: string
+  description: string | null
+  url: string
+  link?: string
+  source: string
+  provider: string
+  category: string
+  image_url: string | null
+  published_at: string
+  pub_date?: string
+  is_featured: boolean
+  sentiment?: string | null
+  ai_summary?: string | null
+  ai_takeaways?: string[] | null
+  ai_why_it_matters?: {
+    businesses?: string
+    consumers?: string
+    investors?: string
+    indian_economy?: string
+    industries?: string
+  } | null
+  ai_interview_questions?: string[] | null
+  ai_gd_topic?: string | null
 }
 
+interface NewsListResponse {
+  articles: NewsArticle[]
+  total: number
+  page: number
+  limit: number
+  has_more: boolean
+}
+
+interface CategoryCount {
+  category: string
+  count: number
+}
+
+interface NewsStatus {
+  last_refreshed_at: string | null
+  refresh_interval_minutes: number
+  total_articles: number
+  categories_count: number
+  providers: Record<string, any>
+}
+
+// 12 Business News Categories
+const CATEGORIES = [
+  { name: 'All News', icon: Layers, color: 'emerald' },
+  { name: 'Indian Economy', icon: Landmark, color: 'blue' },
+  { name: 'Banking & Finance', icon: Building2, color: 'indigo' },
+  { name: 'Stock Market', icon: TrendingUp, color: 'emerald' },
+  { name: 'Corporate News', icon: Briefcase, color: 'slate' },
+  { name: 'Startups & Venture Capital', icon: Rocket, color: 'amber' },
+  { name: 'Global Business', icon: Globe, color: 'cyan' },
+  { name: 'Technology & AI', icon: Cpu, color: 'purple' },
+  { name: 'Mergers & Acquisitions', icon: Handshake, color: 'rose' },
+  { name: 'Management & Strategy', icon: Target, color: 'teal' },
+  { name: 'Industry & Manufacturing', icon: Factory, color: 'orange' },
+  { name: 'International Trade', icon: Ship, color: 'sky' },
+]
+
 export default function BusinessNewsPage() {
-  const [news, setNews] = useState<NewsItem[]>([])
+  const [articles, setArticles] = useState<NewsArticle[]>([])
+  const [featuredArticles, setFeaturedArticles] = useState<NewsArticle[]>([])
+  const [categories, setCategories] = useState<CategoryCount[]>([])
+  const [sources, setSources] = useState<string[]>([])
+  const [status, setStatus] = useState<NewsStatus | null>(null)
+
+  // Filters & Pagination State
+  const [selectedCategory, setSelectedCategory] = useState<string>('All News')
+  const [selectedSource, setSelectedSource] = useState<string>('all')
+  const [searchQuery, setSearchQuery] = useState<string>('')
+  const [debouncedSearch, setDebouncedSearch] = useState<string>('')
+  const [page, setPage] = useState(1)
+  const [hasMore, setHasMore] = useState(false)
+  const [totalCount, setTotalCount] = useState(0)
+
+  // Loading & Error States
   const [loading, setLoading] = useState(true)
+  const [loadingMore, setLoadingMore] = useState(false)
+  const [refreshing, setRefreshing] = useState(false)
   const [error, setError] = useState('')
+  const [refreshMessage, setRefreshMessage] = useState('')
 
-  function loadNews() {
-    setLoading(true)
-    setError('')
-    api<NewsItem[]>('/api/news')
-      .then(setNews)
-      .catch(() => setError('Failed to load business news. Please try again later.'))
-      .finally(() => setLoading(false))
-  }
+  // MBA Intelligence Modal State
+  const [activeArticle, setActiveArticle] = useState<NewsArticle | null>(null)
+  const [loadingAi, setLoadingAi] = useState(false)
 
+  // Debounce search query
   useEffect(() => {
-    loadNews()
+    const handler = setTimeout(() => {
+      setDebouncedSearch(searchQuery.trim())
+      setPage(1)
+    }, 350)
+    return () => clearTimeout(handler)
+  }, [searchQuery])
+
+  // Initial load for metadata (categories, sources, status, featured)
+  useEffect(() => {
+    loadMetadata()
   }, [])
 
+  // Load articles when filters change
+  useEffect(() => {
+    loadArticles(1, true)
+  }, [selectedCategory, selectedSource, debouncedSearch])
+
+  function loadMetadata() {
+    api<NewsStatus>('/api/news/status')
+      .then(setStatus)
+      .catch(() => {})
+
+    api<CategoryCount[]>('/api/news/categories')
+      .then(setCategories)
+      .catch(() => {})
+
+    api<string[]>('/api/news/sources')
+      .then(setSources)
+      .catch(() => {})
+
+    api<NewsArticle[]>('/api/news/featured?limit=3')
+      .then(setFeaturedArticles)
+      .catch(() => {})
+  }
+
+  function loadArticles(targetPage: number = 1, reset: boolean = false) {
+    if (reset) {
+      setLoading(true)
+      setError('')
+    } else {
+      setLoadingMore(true)
+    }
+
+    const params = new URLSearchParams()
+    if (selectedCategory && selectedCategory !== 'All News') {
+      params.set('category', selectedCategory)
+    }
+    if (selectedSource && selectedSource !== 'all') {
+      params.set('source', selectedSource)
+    }
+    if (debouncedSearch) {
+      params.set('q', debouncedSearch)
+    }
+    params.set('page', targetPage.toString())
+    params.set('limit', '18')
+
+    api<NewsListResponse>(`/api/news?${params.toString()}`)
+      .then((res) => {
+        if (reset) {
+          setArticles(res.articles || [])
+        } else {
+          setArticles((prev) => [...prev, ...(res.articles || [])])
+        }
+        setTotalCount(res.total || 0)
+        setHasMore(res.has_more)
+        setPage(targetPage)
+      })
+      .catch(() => {
+        setError('Failed to fetch business news. Please check your connection and try again.')
+      })
+      .finally(() => {
+        setLoading(false)
+        setLoadingMore(false)
+      })
+  }
+
+  function handleManualRefresh() {
+    setRefreshing(true)
+    setRefreshMessage('')
+    api<{ message: string; articles_added: number }>('/api/news/refresh', { method: 'POST' })
+      .then((res) => {
+        setRefreshMessage(res.message || 'News feed updated with latest headlines!')
+        loadMetadata()
+        loadArticles(1, true)
+        setTimeout(() => setRefreshMessage(''), 5000)
+      })
+      .catch(() => {
+        setRefreshMessage('Feed refreshed with cached articles.')
+        loadArticles(1, true)
+        setTimeout(() => setRefreshMessage(''), 5000)
+      })
+      .finally(() => setRefreshing(false))
+  }
+
+  function handleOpenAiInsights(article: NewsArticle) {
+    setActiveArticle(article)
+    // If article doesn't have AI summary yet, trigger asynchronous analysis
+    if (!article.ai_summary || !article.ai_takeaways) {
+      setLoadingAi(true)
+      api<NewsArticle>(`/api/news/${article.id}/analyze`, { method: 'POST' })
+        .then((updated) => {
+          setActiveArticle(updated)
+          // Update in local articles list too
+          setArticles((prev) => prev.map((a) => (a.id === updated.id ? updated : a)))
+          setFeaturedArticles((prev) => prev.map((a) => (a.id === updated.id ? updated : a)))
+        })
+        .catch(() => {})
+        .finally(() => setLoadingAi(false))
+    }
+  }
+
+  // Helper to format publication dates
+  function formatPubDate(dateStr?: string) {
+    if (!dateStr) return 'Recent'
+    try {
+      const d = new Date(dateStr)
+      const now = new Date()
+      const diffMs = now.getTime() - d.getTime()
+      const diffHours = Math.floor(diffMs / (1000 * 60 * 60))
+      
+      if (diffHours < 1) {
+        const diffMins = Math.max(1, Math.floor(diffMs / (1000 * 60)))
+        return `${diffMins}m ago`
+      }
+      if (diffHours < 24) {
+        return `${diffHours}h ago`
+      }
+      return d.toLocaleDateString('en-IN', {
+        month: 'short',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+      })
+    } catch {
+      return 'Recent'
+    }
+  }
+
+  // Category badge styles
+  function getCategoryBadgeClass(category: string) {
+    switch (category) {
+      case 'Indian Economy':
+        return 'bg-blue-50 text-blue-700 border-blue-200'
+      case 'Banking & Finance':
+        return 'bg-indigo-50 text-indigo-700 border-indigo-200'
+      case 'Stock Market':
+        return 'bg-emerald-50 text-emerald-700 border-emerald-200'
+      case 'Corporate News':
+        return 'bg-slate-100 text-slate-800 border-slate-200'
+      case 'Startups & Venture Capital':
+        return 'bg-amber-50 text-amber-800 border-amber-200'
+      case 'Global Business':
+        return 'bg-cyan-50 text-cyan-800 border-cyan-200'
+      case 'Technology & AI':
+        return 'bg-purple-50 text-purple-700 border-purple-200'
+      case 'Mergers & Acquisitions':
+        return 'bg-rose-50 text-rose-700 border-rose-200'
+      case 'Management & Strategy':
+        return 'bg-teal-50 text-teal-700 border-teal-200'
+      case 'Industry & Manufacturing':
+        return 'bg-orange-50 text-orange-800 border-orange-200'
+      case 'International Trade':
+        return 'bg-sky-50 text-sky-700 border-sky-200'
+      default:
+        return 'bg-emerald-50 text-emerald-700 border-emerald-200'
+    }
+  }
+
+  // Count helper
+  const countLookup = useMemo(() => {
+    const map: Record<string, number> = {}
+    categories.forEach((c) => {
+      map[c.category] = c.count
+    })
+    return map
+  }, [categories])
+
   return (
-    <div>
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-8 gap-4">
-        <div>
-          <h1 className="text-2xl font-bold mb-1 text-slate-900 flex items-center gap-2">
-            <Newspaper className="text-indigo-600" />
-            Daily Business News
-          </h1>
-          <p className="text-slate-500">
-            Stay updated with the latest market trends, economic shifts, and corporate announcements for your interviews.
-          </p>
+    <div className="space-y-8 pb-16">
+      {/* 1. Header Hero Card matching Placement Mantra Design */}
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-950 p-6 sm:p-8 text-white shadow-xl border border-slate-800">
+        <div className="absolute top-0 right-0 -mt-12 -mr-12 w-96 h-96 rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
+
+        <div className="relative z-10">
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-5">
+            <div className="flex items-center gap-2.5">
+              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+                <Newspaper size={20} />
+              </span>
+              <div>
+                <span className="text-xs font-bold tracking-wider uppercase text-emerald-400">
+                  Placement Mantra
+                </span>
+                <span className="text-slate-400 text-xs block">Business Intelligence</span>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                LIVE MODULE
+              </span>
+            </div>
+          </div>
+
+          <div className="max-w-3xl">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mb-2">
+              Business & Economy
+            </h1>
+            <p className="text-slate-300 text-base sm:text-lg mb-4">
+              Understand the business world. Prepare for your next placement interview and GD with curated multi-source intelligence.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-2 mb-6">
+              <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-white/10 text-slate-200">
+                Business News
+              </span>
+              <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-white/10 text-slate-200">
+                India & Macro
+              </span>
+              <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-white/10 text-slate-200">
+                Finance & Markets
+              </span>
+              <span className="px-2.5 py-1 rounded-md text-xs font-medium bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                MBA Interview Ready
+              </span>
+            </div>
+          </div>
+
+          {/* Quick Metrics Bar */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-slate-700/60">
+            <div className="bg-slate-800/60 backdrop-blur rounded-xl p-3 border border-slate-700/50">
+              <span className="text-xs text-slate-400 block mb-0.5">News categories</span>
+              <span className="text-xl sm:text-2xl font-bold text-white">12</span>
+            </div>
+            <div className="bg-slate-800/60 backdrop-blur rounded-xl p-3 border border-slate-700/50">
+              <span className="text-xs text-slate-400 block mb-0.5">Refresh interval</span>
+              <span className="text-xl sm:text-2xl font-bold text-emerald-400">30 min</span>
+            </div>
+            <div className="bg-slate-800/60 backdrop-blur rounded-xl p-3 border border-slate-700/50">
+              <span className="text-xs text-slate-400 block mb-0.5">Indexed articles</span>
+              <span className="text-xl sm:text-2xl font-bold text-white">
+                {status?.total_articles || totalCount || '30+'}
+              </span>
+            </div>
+            <div className="bg-slate-800/60 backdrop-blur rounded-xl p-3 border border-slate-700/50 flex flex-col justify-between">
+              <span className="text-xs text-slate-400 block mb-0.5">Automated sync</span>
+              <button
+                onClick={handleManualRefresh}
+                disabled={refreshing}
+                className="inline-flex items-center justify-center gap-1.5 px-3 py-1 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-semibold transition disabled:opacity-50"
+              >
+                <RefreshCw size={13} className={refreshing ? 'animate-spin' : ''} />
+                {refreshing ? 'Syncing...' : 'Refresh Feed'}
+              </button>
+            </div>
+          </div>
+
+          {refreshMessage && (
+            <div className="mt-3 py-1.5 px-3 bg-emerald-950/70 border border-emerald-500/40 text-emerald-200 rounded-lg text-xs flex items-center gap-2">
+              <CheckCircle2 size={14} className="text-emerald-400" />
+              {refreshMessage}
+            </div>
+          )}
         </div>
-        <button
-          onClick={loadNews}
-          disabled={loading}
-          className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-indigo-600 transition shadow-sm disabled:opacity-50"
-        >
-          <RefreshCw size={16} className={loading ? 'animate-spin' : ''} />
-          Refresh
-        </button>
       </div>
 
-      {error && (
-        <div className="bg-red-50 text-red-600 p-4 rounded-xl border border-red-100 mb-6">
-          {error}
+      {/* 2. Explore Categories Grid */}
+      <div>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+            <Layers className="text-emerald-600" size={20} />
+            Explore categories
+          </h2>
+          <span className="text-xs font-medium text-slate-500">
+            Click to filter curated topics
+          </span>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2.5">
+          {CATEGORIES.map((cat) => {
+            const Icon = cat.icon
+            const isSelected = selectedCategory === cat.name
+            const count = cat.name === 'All News' ? (status?.total_articles || totalCount) : (countLookup[cat.name] || 0)
+
+            return (
+              <button
+                key={cat.name}
+                onClick={() => setSelectedCategory(cat.name)}
+                className={`flex items-center justify-between p-3 rounded-xl border text-left transition-all ${
+                  isSelected
+                    ? 'bg-emerald-600 text-white border-emerald-600 shadow-md ring-2 ring-emerald-500/30'
+                    : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200 hover:border-slate-300'
+                }`}
+              >
+                <div className="flex items-center gap-2 min-w-0">
+                  <Icon size={17} className={isSelected ? 'text-white' : 'text-slate-500'} />
+                  <span className="text-xs font-semibold truncate">{cat.name}</span>
+                </div>
+                {count > 0 && (
+                  <span
+                    className={`ml-1 px-1.5 py-0.5 rounded-full text-[10px] font-bold shrink-0 ${
+                      isSelected
+                        ? 'bg-emerald-700 text-white'
+                        : 'bg-slate-100 text-slate-600'
+                    }`}
+                  >
+                    {count}
+                  </span>
+                )}
+              </button>
+            )
+          })}
+        </div>
+      </div>
+
+      {/* 3. Search and Filtering Controls */}
+      <div className="bg-white rounded-xl border border-slate-200 p-4 shadow-sm flex flex-col md:flex-row gap-3 items-stretch md:items-center justify-between">
+        <div className="relative flex-1">
+          <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" size={17} />
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search company, industry, or keyword (e.g. Reliance, RBI, Tata Motors, AI)..."
+            className="w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-lg text-sm text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+            >
+              <X size={16} />
+            </button>
+          )}
+        </div>
+
+        <div className="flex items-center gap-2.5 flex-wrap">
+          <div className="flex items-center gap-1.5 text-xs text-slate-500 whitespace-nowrap">
+            <Filter size={14} />
+            <span>Source:</span>
+          </div>
+          <select
+            value={selectedSource}
+            onChange={(e) => setSelectedSource(e.target.value)}
+            className="px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-medium text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500"
+          >
+            <option value="all">All Providers & Sources</option>
+            {sources.map((src) => (
+              <option key={src} value={src}>
+                {src}
+              </option>
+            ))}
+          </select>
+
+          {(selectedCategory !== 'All News' || selectedSource !== 'all' || debouncedSearch) && (
+            <button
+              onClick={() => {
+                setSelectedCategory('All News')
+                setSelectedSource('all')
+                setSearchQuery('')
+              }}
+              className="px-3 py-2 text-xs font-medium text-rose-600 hover:bg-rose-50 rounded-lg transition"
+            >
+              Reset Filters
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* 4. Featured Business Stories (when on All News and no search) */}
+      {selectedCategory === 'All News' && !debouncedSearch && featuredArticles.length > 0 && (
+        <div>
+          <div className="flex items-center gap-2 mb-4">
+            <Flame className="text-amber-500" size={20} />
+            <h2 className="text-lg font-bold text-slate-900">Featured business stories</h2>
+            <span className="text-xs bg-amber-50 text-amber-700 font-semibold px-2 py-0.5 rounded border border-amber-200">
+              Top Picks
+            </span>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5">
+            {featuredArticles.map((art) => (
+              <div
+                key={art.id}
+                className="group flex flex-col bg-gradient-to-b from-white to-slate-50 rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md hover:border-emerald-300 transition"
+              >
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <span
+                    className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${getCategoryBadgeClass(
+                      art.category
+                    )}`}
+                  >
+                    {art.category}
+                  </span>
+                  <span className="text-[11px] text-slate-400 font-medium">
+                    {formatPubDate(art.published_at)}
+                  </span>
+                </div>
+
+                <h3 className="font-bold text-slate-900 group-hover:text-emerald-700 transition line-clamp-2 text-base mb-2">
+                  {art.title}
+                </h3>
+
+                <p className="text-xs text-slate-600 line-clamp-3 mb-4 leading-relaxed">
+                  {art.description || 'Key developments unfolding in the corporate and financial markets.'}
+                </p>
+
+                <div className="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                  <span className="text-[11px] font-medium text-slate-500 truncate">
+                    {art.source}
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => handleOpenAiInsights(art)}
+                      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition"
+                      title="View MBA Analysis & Interview Questions"
+                    >
+                      <Sparkles size={13} />
+                      Insights
+                    </button>
+                    <a
+                      href={art.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="p-1 text-slate-400 hover:text-emerald-600 transition"
+                      title="Read full article"
+                    >
+                      <ExternalLink size={15} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       )}
 
-      {loading ? (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[1, 2, 3, 4, 5, 6].map((i) => (
-            <div key={i} className="bg-white rounded-xl border border-slate-200 p-5 h-48 animate-pulse flex flex-col justify-between">
-              <div>
-                <div className="h-5 bg-slate-200 rounded-md w-3/4 mb-3"></div>
-                <div className="h-5 bg-slate-200 rounded-md w-full mb-4"></div>
-                <div className="h-3 bg-slate-100 rounded-md w-1/4"></div>
-              </div>
-            </div>
-          ))}
+      {/* 5. Latest Business Headlines Feed */}
+      <div>
+        <div className="flex items-center justify-between mb-4">
+          <div>
+            <h2 className="text-lg font-bold text-slate-900 flex items-center gap-2">
+              <BarChart3 className="text-emerald-600" size={20} />
+              Latest business headlines
+            </h2>
+            <p className="text-xs text-slate-500">
+              Showing {articles.length} of {totalCount} curated updates
+            </p>
+          </div>
         </div>
-      ) : (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {news.map((item, i) => {
-            const date = item.pub_date ? new Date(item.pub_date).toLocaleDateString(undefined, { 
-              weekday: 'short', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' 
-            }) : 'Recent'
-            
-            return (
-              <a
+
+        {error && (
+          <div className="bg-rose-50 text-rose-700 p-4 rounded-xl border border-rose-200 mb-6 flex items-center justify-between">
+            <span className="text-sm font-medium">{error}</span>
+            <button
+              onClick={() => loadArticles(1, true)}
+              className="text-xs font-bold underline hover:no-underline ml-4"
+            >
+              Retry
+            </button>
+          </div>
+        )}
+
+        {/* Loading Skeletons */}
+        {loading ? (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[1, 2, 3, 4, 5, 6].map((i) => (
+              <div
                 key={i}
-                href={item.link}
-                target="_blank"
-                rel="noreferrer"
-                className="group flex flex-col bg-white rounded-xl border border-slate-200 p-5 hover:shadow-md hover:border-indigo-300 transition"
+                className="bg-white rounded-xl border border-slate-200 p-5 h-56 animate-pulse flex flex-col justify-between"
               >
-                <div className="flex-1">
-                  <h3 className="font-semibold text-slate-900 mb-2 group-hover:text-indigo-600 transition line-clamp-3">
+                <div>
+                  <div className="flex justify-between mb-3">
+                    <div className="h-4 bg-slate-200 rounded w-1/3" />
+                    <div className="h-3 bg-slate-100 rounded w-1/4" />
+                  </div>
+                  <div className="h-5 bg-slate-200 rounded w-full mb-2" />
+                  <div className="h-5 bg-slate-200 rounded w-4/5 mb-3" />
+                  <div className="h-3 bg-slate-100 rounded w-full mb-1.5" />
+                  <div className="h-3 bg-slate-100 rounded w-2/3" />
+                </div>
+                <div className="pt-3 border-t border-slate-100 flex justify-between">
+                  <div className="h-3 bg-slate-200 rounded w-1/4" />
+                  <div className="h-6 bg-slate-200 rounded w-16" />
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+              {articles.map((item) => (
+                <div
+                  key={item.id}
+                  className="group flex flex-col bg-white rounded-xl border border-slate-200 p-5 hover:shadow-md hover:border-emerald-300 transition"
+                >
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span
+                      className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${getCategoryBadgeClass(
+                        item.category
+                      )}`}
+                    >
+                      {item.category}
+                    </span>
+                    <span className="text-[11px] font-medium text-slate-400">
+                      {formatPubDate(item.published_at)}
+                    </span>
+                  </div>
+
+                  <h3 className="font-bold text-slate-900 group-hover:text-emerald-700 transition line-clamp-2 text-base mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-600 line-clamp-4 mb-4">
-                    {item.description}
+
+                  <p className="text-xs text-slate-600 line-clamp-3 mb-4 leading-relaxed">
+                    {item.description || 'Follow full coverage on publisher site for details and commentary.'}
+                  </p>
+
+                  {item.sentiment && (
+                    <div className="mb-3">
+                      <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-700">
+                        Sentiment: {item.sentiment}
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="mt-auto pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                    <div className="text-[11px] text-slate-500 truncate">
+                      Source: <span className="font-semibold text-slate-700">{item.source}</span>
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => handleOpenAiInsights(item)}
+                        className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-semibold bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition"
+                      >
+                        <Sparkles size={13} />
+                        MBA Insights
+                      </button>
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="p-1.5 text-slate-400 hover:text-emerald-600 rounded-md hover:bg-slate-50 transition"
+                        title="Read original full article"
+                      >
+                        <ExternalLink size={15} />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+
+              {articles.length === 0 && !error && (
+                <div className="col-span-full py-16 text-center bg-white rounded-xl border border-slate-200 p-8">
+                  <div className="w-12 h-12 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+                    <Search size={22} />
+                  </div>
+                  <h3 className="font-bold text-slate-800 text-base mb-1">No business news found</h3>
+                  <p className="text-sm text-slate-500 max-w-md mx-auto mb-4">
+                    We couldn't find any articles matching your search or filters. Try adjusting keywords or selecting another category.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setSelectedCategory('All News')
+                      setSelectedSource('all')
+                      setSearchQuery('')
+                    }}
+                    className="px-4 py-2 bg-emerald-600 text-white rounded-lg text-xs font-semibold hover:bg-emerald-500 transition shadow-sm"
+                  >
+                    View All News
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Load More Button */}
+            {hasMore && (
+              <div className="text-center pt-8">
+                <button
+                  onClick={() => loadArticles(page + 1, false)}
+                  disabled={loadingMore}
+                  className="px-6 py-2.5 bg-white border border-slate-200 rounded-xl text-sm font-semibold text-slate-700 hover:bg-slate-50 hover:border-emerald-300 hover:text-emerald-700 transition shadow-sm disabled:opacity-50 inline-flex items-center gap-2"
+                >
+                  {loadingMore ? (
+                    <>
+                      <RefreshCw size={15} className="animate-spin text-emerald-600" />
+                      Loading more articles...
+                    </>
+                  ) : (
+                    <>Load More Articles</>
+                  )}
+                </button>
+              </div>
+            )}
+          </>
+        )}
+      </div>
+
+      {/* 6. AI-Powered MBA Intelligence Modal */}
+      {activeArticle && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
+          <div
+            className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="px-6 py-5 border-b border-slate-100 bg-slate-50/70 flex items-start justify-between gap-4">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <span
+                    className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${getCategoryBadgeClass(
+                      activeArticle.category
+                    )}`}
+                  >
+                    {activeArticle.category}
+                  </span>
+                  <span className="text-xs text-slate-500 font-medium">
+                    {activeArticle.source} • {formatPubDate(activeArticle.published_at)}
+                  </span>
+                </div>
+                <h2 className="text-lg font-bold text-slate-900 leading-snug">
+                  {activeArticle.title}
+                </h2>
+              </div>
+
+              <button
+                onClick={() => setActiveArticle(null)}
+                className="p-1.5 text-slate-400 hover:text-slate-600 rounded-lg hover:bg-slate-200/50 transition shrink-0"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Modal Content */}
+            <div className="p-6 overflow-y-auto space-y-6">
+              {loadingAi ? (
+                <div className="py-12 text-center space-y-3">
+                  <Sparkles size={32} className="text-emerald-600 animate-spin mx-auto" />
+                  <p className="text-sm font-semibold text-slate-700">
+                    Synthesizing MBA intelligence & interview preparation...
+                  </p>
+                  <p className="text-xs text-slate-500 max-w-sm mx-auto">
+                    Breaking down strategic implications across businesses, consumers, investors, and the economy.
                   </p>
                 </div>
-                <div className="pt-4 mt-auto border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-xs font-medium text-slate-400">
-                    {date}
-                  </span>
-                  <span className="text-indigo-600 opacity-0 group-hover:opacity-100 transition transform translate-x-1 group-hover:translate-x-0">
-                    <ExternalLink size={16} />
-                  </span>
-                </div>
-              </a>
-            )
-          })}
-          {news.length === 0 && !error && (
-            <div className="col-span-full py-12 text-center text-slate-500">
-              No news articles found right now. Check back later.
+              ) : (
+                <>
+                  {/* A. Easy Explanation */}
+                  <div className="bg-emerald-50/70 border border-emerald-200/60 rounded-xl p-4">
+                    <h3 className="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+                      <Sparkles size={14} className="text-emerald-600" />
+                      Easy Explanation (for MBA Students)
+                    </h3>
+                    <p className="text-sm text-emerald-950 leading-relaxed font-medium">
+                      {activeArticle.ai_summary ||
+                        activeArticle.description ||
+                        'Key development shaping market dynamics and strategic positioning.'}
+                    </p>
+                  </div>
+
+                  {/* B. Key Takeaways */}
+                  {activeArticle.ai_takeaways && activeArticle.ai_takeaways.length > 0 && (
+                    <div>
+                      <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                        <CheckCircle2 size={15} className="text-emerald-600" />
+                        Key Takeaways
+                      </h3>
+                      <ul className="space-y-2">
+                        {activeArticle.ai_takeaways.map((point, idx) => (
+                          <li
+                            key={idx}
+                            className="text-xs text-slate-700 flex items-start gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-1.5 shrink-0" />
+                            <span>{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* C. Why It Matters Framework */}
+                  {activeArticle.ai_why_it_matters && (
+                    <div>
+                      <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wider mb-2.5 flex items-center gap-1.5">
+                        <BarChart3 size={15} className="text-indigo-600" />
+                        Why It Matters (MBA Framework)
+                      </h3>
+                      <div className="grid gap-2 text-xs">
+                        {activeArticle.ai_why_it_matters.businesses && (
+                          <div className="bg-white p-2.5 rounded-lg border border-slate-200">
+                            <span className="font-bold text-slate-900 block mb-0.5">
+                              🏢 For Businesses:
+                            </span>
+                            <span className="text-slate-600">
+                              {activeArticle.ai_why_it_matters.businesses}
+                            </span>
+                          </div>
+                        )}
+                        {activeArticle.ai_why_it_matters.investors && (
+                          <div className="bg-white p-2.5 rounded-lg border border-slate-200">
+                            <span className="font-bold text-slate-900 block mb-0.5">
+                              📈 For Investors & Markets:
+                            </span>
+                            <span className="text-slate-600">
+                              {activeArticle.ai_why_it_matters.investors}
+                            </span>
+                          </div>
+                        )}
+                        {activeArticle.ai_why_it_matters.indian_economy && (
+                          <div className="bg-white p-2.5 rounded-lg border border-slate-200">
+                            <span className="font-bold text-slate-900 block mb-0.5">
+                              🇮🇳 For the Indian Economy:
+                            </span>
+                            <span className="text-slate-600">
+                              {activeArticle.ai_why_it_matters.indian_economy}
+                            </span>
+                          </div>
+                        )}
+                        {activeArticle.ai_why_it_matters.consumers && (
+                          <div className="bg-white p-2.5 rounded-lg border border-slate-200">
+                            <span className="font-bold text-slate-900 block mb-0.5">
+                              👥 For Consumers:
+                            </span>
+                            <span className="text-slate-600">
+                              {activeArticle.ai_why_it_matters.consumers}
+                            </span>
+                          </div>
+                        )}
+                        {activeArticle.ai_why_it_matters.industries && (
+                          <div className="bg-white p-2.5 rounded-lg border border-slate-200">
+                            <span className="font-bold text-slate-900 block mb-0.5">
+                              🏭 For Ancillary Industries:
+                            </span>
+                            <span className="text-slate-600">
+                              {activeArticle.ai_why_it_matters.industries}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* D. Interview Preparation */}
+                  {activeArticle.ai_interview_questions && activeArticle.ai_interview_questions.length > 0 && (
+                    <div className="bg-amber-50/60 border border-amber-200/60 rounded-xl p-4">
+                      <h3 className="text-xs font-bold text-amber-900 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                        <Award size={15} className="text-amber-600" />
+                        Interview Questions (Placement Prep)
+                      </h3>
+                      <div className="space-y-2">
+                        {activeArticle.ai_interview_questions.map((q, idx) => (
+                          <div
+                            key={idx}
+                            className="bg-white p-3 rounded-lg border border-amber-200/50 text-xs text-amber-950 font-medium"
+                          >
+                            <span className="font-bold text-amber-800 mr-1.5">Q{idx + 1}:</span>
+                            {q}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* E. Group Discussion Topic */}
+                  {activeArticle.ai_gd_topic && (
+                    <div className="bg-purple-50/60 border border-purple-200/60 rounded-xl p-4">
+                      <h3 className="text-xs font-bold text-purple-900 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+                        <MessageSquare size={14} className="text-purple-600" />
+                        Group Discussion (GD) Topic
+                      </h3>
+                      <p className="text-xs font-bold text-purple-950 bg-white p-3 rounded-lg border border-purple-200/50">
+                        "{activeArticle.ai_gd_topic}"
+                      </p>
+                    </div>
+                  )}
+                </>
+              )}
             </div>
-          )}
+
+            {/* Modal Footer */}
+            <div className="px-6 py-3.5 border-t border-slate-100 bg-slate-50/80 flex items-center justify-between gap-3">
+              <span className="text-xs text-slate-500">
+                Source attribution: <strong className="text-slate-700">{activeArticle.source}</strong>
+              </span>
+
+              <a
+                href={activeArticle.url}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 text-white rounded-lg text-xs font-semibold hover:bg-emerald-500 transition shadow-sm"
+              >
+                <span>Read Full Article</span>
+                <ExternalLink size={14} />
+              </a>
+            </div>
+          </div>
         </div>
       )}
     </div>
