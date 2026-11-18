@@ -10,7 +10,7 @@ def main():
         return
     
     try:
-        engine = create_engine(settings.DATABASE_URL)
+        engine = create_engine(settings.sqlalchemy_url)
         with engine.begin() as conn:
             result = conn.execute(text("SELECT version_num FROM alembic_version")).scalar()
             print("Current alembic_version:", result)

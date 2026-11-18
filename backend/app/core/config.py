@@ -50,6 +50,13 @@ class Settings(BaseSettings):
     FINNHUB_API_KEY: str = ""
     NEWS_REFRESH_MINUTES: int = 30
 
+    # Object Storage configuration (local / s3)
+    STORAGE_PROVIDER: str = "local"
+    S3_BUCKET_NAME: str = ""
+    S3_REGION_NAME: str = ""
+    AWS_ACCESS_KEY_ID: str = ""
+    AWS_SECRET_ACCESS_KEY: str = ""
+
     class Config:
         env_file = ".env"
 

@@ -1,10 +1,15 @@
 import os
 from abc import ABC, abstractmethod
-import boto3
-from botocore.exceptions import ClientError
 from typing import Optional
 
 from app.core.config import settings
+
+try:
+    import boto3
+    from botocore.exceptions import ClientError
+except ImportError:
+    boto3 = None
+    ClientError = Exception
 
 class StorageProvider(ABC):
     @abstractmethod
@@ -58,6 +63,8 @@ class LocalStorageProvider(StorageProvider):
 
 class S3StorageProvider(StorageProvider):
     def __init__(self, bucket_name: str, region_name: str, access_key: str, secret_key: str):
+        if boto3 is None:
+            raise RuntimeError("boto3 is required for S3StorageProvider. Please install boto3.")
         self.bucket_name = bucket_name
         self.s3_client = boto3.client(
             "s3",
