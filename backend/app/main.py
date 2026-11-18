@@ -59,6 +59,6 @@ app.include_router(messages.router)
 app.include_router(news.router)
 app.include_router(notifications.router)
 
-@app.get("/api/health")
+@app.api_route("/api/health", methods=["GET", "HEAD"])
 def health():
     return {"status": "ok"}
