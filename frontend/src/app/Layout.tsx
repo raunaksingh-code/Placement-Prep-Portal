@@ -56,9 +56,10 @@ export default function Layout() {
     setSearchParams(newParams)
   }
 
-  // If they aren't authenticated and are trying to access a page other than root,
+  // If they aren't authenticated and are trying to access a page other than root or legal pages,
   // we show the login modal over the homepage.
-  const showLoginModal = !isAuth && location.pathname !== '/'
+  const PUBLIC_PATHS = ['/', '/privacy', '/terms']
+  const showLoginModal = !isAuth && !PUBLIC_PATHS.includes(location.pathname)
 
   const nav = user?.is_admin ? [...NAV, { to: '/admin', label: 'Admin' }] : NAV
   const initials = (user?.full_name ?? '?')
@@ -207,6 +208,57 @@ export default function Layout() {
         )}
         {showLoginModal ? <HomePage /> : <Outlet />}
       </main>
+
+      {/* Footer with Legal Policies and Placement Cell Compliance */}
+      <footer className="border-t border-slate-200/80 bg-slate-50/60 mt-16 text-slate-600 text-sm">
+        <div className="max-w-[85rem] mx-auto px-4 py-12 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+            <div className="md:col-span-2 space-y-3">
+              <div className="flex items-center gap-2 font-bold text-lg text-slate-900">
+                <div className="p-1.5 bg-emerald-500 text-white rounded-lg">
+                  <GraduationCap size={20} />
+                </div>
+                <span>Placement Mantra</span>
+              </div>
+              <p className="text-slate-500 text-sm max-w-md leading-relaxed">
+                Campus placement readiness, corporate recruitment intelligence, and AI-powered interview preparation designed for MBA graduates and business professionals.
+              </p>
+              <div className="flex items-center gap-2 pt-1">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium border border-emerald-200/60">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  PlaceCom & Career Cell Compliant
+                </span>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-slate-900 mb-3 text-sm">Preparation Modules</h4>
+              <ul className="space-y-2 text-sm text-slate-500">
+                <li><Link to="/aptitude" className="hover:text-slate-900 transition-colors">Aptitude Tests</Link></li>
+                <li><Link to="/domain-prep" className="hover:text-slate-900 transition-colors">Domain Specializations</Link></li>
+                <li><Link to="/companies" className="hover:text-slate-900 transition-colors">Company Intel & JDs</Link></li>
+                <li><Link to="/business-news" className="hover:text-slate-900 transition-colors">Business News</Link></li>
+                <li><Link to="/ai-coach" className="hover:text-slate-900 transition-colors">AI Placement Coach</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-slate-900 mb-3 text-sm">Legal & Policies</h4>
+              <ul className="space-y-2 text-sm text-slate-500">
+                <li><Link to="/privacy" className="hover:text-slate-900 transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="hover:text-slate-900 transition-colors">Terms of Service</Link></li>
+                <li><Link to="/terms" className="hover:text-slate-900 transition-colors">PlaceCom Code of Conduct</Link></li>
+                <li><span className="text-slate-400 text-xs">Encrypted Resume Storage</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-slate-200/80 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+            <p>© {new Date().getFullYear()} Placement Mantra. Placement Cell & Career Readiness Portal.</p>
+            <p>Confidential institutional materials. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }

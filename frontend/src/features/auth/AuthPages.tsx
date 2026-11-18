@@ -89,12 +89,18 @@ function AuthShell({ title, children, isModal }: { title: string; children: Reac
         <h1 className="text-2xl font-bold text-center text-slate-900 mb-1">Placement Mantra</h1>
         <p className="text-center text-slate-500 mb-6">{title}</p>
         <div>{children}</div>
+        <div className="mt-6 pt-4 border-t border-slate-100 text-center text-xs text-slate-400">
+          By signing in, you agree to our{' '}
+          <Link to="/terms" className="text-emerald-600 hover:underline">Terms of Service</Link>
+          {' '}and{' '}
+          <Link to="/privacy" className="text-emerald-600 hover:underline">Privacy Policy</Link>.
+        </div>
       </div>
     )
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
+    <div className="min-h-screen flex items-center justify-center px-4 py-8">
       <div className="w-full max-w-md">
         <div className="flex justify-center mb-3">
           <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-600 to-green-600 text-white shadow-lg shadow-emerald-500/30">
@@ -104,6 +110,12 @@ function AuthShell({ title, children, isModal }: { title: string; children: Reac
         <h1 className="text-2xl font-bold text-center text-emerald-700 mb-1">Placement Mantra</h1>
         <p className="text-center text-slate-500 mb-6">{title}</p>
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">{children}</div>
+        <div className="mt-6 text-center text-xs text-slate-400">
+          By continuing, you agree to our{' '}
+          <Link to="/terms" className="text-emerald-600 hover:underline">Terms of Service</Link>
+          {' '}and{' '}
+          <Link to="/privacy" className="text-emerald-600 hover:underline">Privacy Policy</Link>.
+        </div>
       </div>
     </div>
   )
