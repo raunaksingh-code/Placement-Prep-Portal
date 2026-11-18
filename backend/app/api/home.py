@@ -1,3 +1,6 @@
+import html
+from datetime import datetime, timezone
+import requests
 from fastapi import APIRouter, Depends, Header
 from pydantic import BaseModel
 from sqlalchemy import func
@@ -5,6 +8,7 @@ from sqlalchemy.orm import Session
 from typing import Optional
 
 from app.api.deps import get_current_user, get_optional_user
+from app.core.config import settings
 from app.db.session import get_db
 from app.models.company import InterviewQuestion, JobDescription
 from app.models.guide import InterviewGuide
@@ -70,3 +74,67 @@ def home_summary(db: Session = Depends(get_db), user: Optional[User] = Depends(g
         progress_attempts=attempts_row[0] if attempts_row else 0,
         progress_accuracy=round(attempts_row[1], 1) if attempts_row and attempts_row[1] is not None else 0.0,
     )
+
+
+class ContactRequest(BaseModel):
+    name: str
+    email: str
+    message: str
+
+
+@router.post("/contact")
+def submit_contact(body: ContactRequest):
+    name = body.name.strip()
+    email = body.email.strip()
+    message = body.message.strip()
+    if not name or not email or not message:
+        return {"status": "error", "message": "All fields are required"}
+
+    # 1. Send to Telegram if configured
+    if settings.TELEGRAM_BOT_TOKEN and settings.TELEGRAM_CHAT_ID:
+        try:
+            telegram_url = f"https://api.telegram.org/bot{settings.TELEGRAM_BOT_TOKEN}/sendMessage"
+            text = (
+                f"🚀 <b>New Inquiry on Placement Mantra!</b>\n\n"
+                f"👤 <b>Name:</b> {html.escape(name)}\n"
+                f"📧 <b>Email:</b> {html.escape(email)}\n"
+                f"💬 <b>Message:</b>\n{html.escape(message)}\n\n"
+                f"⏰ <i>Time:</i> {datetime.now(timezone.utc).strftime('%d %b %Y, %H:%M UTC')}"
+            )
+            requests.post(
+                telegram_url,
+                json={"chat_id": settings.TELEGRAM_CHAT_ID, "text": text, "parse_mode": "HTML"},
+                timeout=5,
+            )
+        except Exception as e:
+            print(f"Telegram notification error: {e}")
+
+    # 2. Also send to email via SMTP if configured
+    if settings.SMTP_SERVER and settings.SMTP_USERNAME and settings.SMTP_PASSWORD:
+        try:
+            import smtplib
+            from email.mime.text import MIMEText
+            from email.mime.multipart import MIMEMultipart
+
+            msg = MIMEMultipart("alternative")
+            msg["Subject"] = f"New Placement Mantra Inquiry from {name}"
+            msg["From"] = settings.SMTP_FROM_EMAIL
+            msg["To"] = "raunaksingh181190@gmail.com"
+
+            html_content = f"""
+            <h3>New Contact Inquiry on Placement Mantra</h3>
+            <p><strong>Name:</strong> {html.escape(name)}</p>
+            <p><strong>Email:</strong> {html.escape(email)}</p>
+            <p><strong>Message:</strong></p>
+            <p>{html.escape(message)}</p>
+            """
+            msg.attach(MIMEText(html_content, "html"))
+            with smtplib.SMTP(settings.SMTP_SERVER, settings.SMTP_PORT) as server:
+                server.starttls()
+                server.login(settings.SMTP_USERNAME, settings.SMTP_PASSWORD)
+                server.send_message(msg)
+        except Exception as e:
+            print(f"SMTP forward error: {e}")
+
+    return {"status": "ok", "message": "Inquiry delivered successfully"}
+
