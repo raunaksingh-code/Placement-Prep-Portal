@@ -27,6 +27,8 @@ import AIPage from './features/ai/AIPage.tsx'
 import AdminPage from './features/admin/AdminPage.tsx'
 import BusinessNewsPage from './features/news/BusinessNewsPage.tsx'
 import { PrivacyPolicyPage, TermsOfServicePage } from './features/legal/LegalPages.tsx'
+import AboutPage from './features/about/AboutPage.tsx'
+import ContactPage from './features/contact/ContactPage.tsx'
 
 // GitHub Pages serves this from /<repo>/, so the router must know that prefix.
 // import.meta.env.BASE_URL mirrors `base` in vite.config.ts ('/' in dev).
@@ -81,6 +83,8 @@ const router = createBrowserRouter([
       { path: 'admin', element: <AdminPage /> },
       { path: 'privacy', element: <PrivacyPolicyPage /> },
       { path: 'terms', element: <TermsOfServicePage /> },
+      { path: 'about', element: <AboutPage /> },
+      { path: 'contact', element: <ContactPage /> },
     ],
   },
 ], { basename })

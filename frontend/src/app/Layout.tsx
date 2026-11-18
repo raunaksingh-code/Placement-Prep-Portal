@@ -56,9 +56,9 @@ export default function Layout() {
     setSearchParams(newParams)
   }
 
-  // If they aren't authenticated and are trying to access a page other than root or legal pages,
+  // If they aren't authenticated and are trying to access a page other than root or public pages,
   // we show the login modal over the homepage.
-  const PUBLIC_PATHS = ['/', '/privacy', '/terms']
+  const PUBLIC_PATHS = ['/', '/privacy', '/terms', '/about', '/contact']
   const showLoginModal = !isAuth && !PUBLIC_PATHS.includes(location.pathname)
 
   const nav = user?.is_admin ? [...NAV, { to: '/admin', label: 'Admin' }] : NAV
@@ -209,10 +209,10 @@ export default function Layout() {
         {showLoginModal ? <HomePage /> : <Outlet />}
       </main>
 
-      {/* Footer with Legal Policies and Placement Cell Compliance */}
+      {/* Footer with Legal Policies, About, and Contact details */}
       <footer className="border-t border-slate-200/80 bg-slate-50/60 mt-16 text-slate-600 text-sm">
         <div className="max-w-[85rem] mx-auto px-4 py-12 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-10">
             <div className="md:col-span-2 space-y-3">
               <div className="flex items-center gap-2 font-bold text-lg text-slate-900">
                 <div className="p-1.5 bg-emerald-500 text-white rounded-lg">
@@ -232,13 +232,36 @@ export default function Layout() {
             </div>
 
             <div>
-              <h4 className="font-semibold text-slate-900 mb-3 text-sm">Preparation Modules</h4>
+              <h4 className="font-semibold text-slate-900 mb-3 text-sm">Preparation</h4>
               <ul className="space-y-2 text-sm text-slate-500">
                 <li><Link to="/aptitude" className="hover:text-slate-900 transition-colors">Aptitude Tests</Link></li>
                 <li><Link to="/domain-prep" className="hover:text-slate-900 transition-colors">Domain Specializations</Link></li>
                 <li><Link to="/companies" className="hover:text-slate-900 transition-colors">Company Intel & JDs</Link></li>
                 <li><Link to="/business-news" className="hover:text-slate-900 transition-colors">Business News</Link></li>
                 <li><Link to="/ai-coach" className="hover:text-slate-900 transition-colors">AI Placement Coach</Link></li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-semibold text-slate-900 mb-3 text-sm">About & Support</h4>
+              <ul className="space-y-2 text-sm text-slate-500">
+                <li><Link to="/about" className="hover:text-slate-900 transition-colors">About Us</Link></li>
+                <li><Link to="/contact" className="hover:text-slate-900 transition-colors">Contact Us</Link></li>
+                <li>
+                  <a href="mailto:raunaksingh181190@gmail.com" className="hover:text-slate-900 transition-colors text-xs break-all">
+                    raunaksingh181190@gmail.com
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+919334318989" className="hover:text-slate-900 transition-colors text-xs">
+                    +91 9334318989
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wa.me/918539036364" target="_blank" rel="noopener noreferrer" className="text-emerald-600 hover:text-emerald-700 font-medium text-xs">
+                    WhatsApp: +91 8539036364
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -254,7 +277,7 @@ export default function Layout() {
           </div>
 
           <div className="border-t border-slate-200/80 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-            <p>© {new Date().getFullYear()} Placement Mantra. Placement Cell & Career Readiness Portal.</p>
+            <p>© {new Date().getFullYear()} Placement Mantra. Founded by Raunak Singh.</p>
             <p>Confidential institutional materials. All rights reserved.</p>
           </div>
         </div>
