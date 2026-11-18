@@ -223,12 +223,6 @@ export default function Layout() {
               <p className="text-slate-500 text-sm max-w-md leading-relaxed">
                 Campus placement readiness, corporate recruitment intelligence, and AI-powered interview preparation designed for MBA graduates and business professionals.
               </p>
-              <div className="flex items-center gap-2 pt-1">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-medium border border-emerald-200/60">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  PlaceCom & Career Cell Compliant
-                </span>
-              </div>
             </div>
 
             <div>
@@ -270,7 +264,7 @@ export default function Layout() {
               <ul className="space-y-2 text-sm text-slate-500">
                 <li><Link to="/privacy" className="hover:text-slate-900 transition-colors">Privacy Policy</Link></li>
                 <li><Link to="/terms" className="hover:text-slate-900 transition-colors">Terms of Service</Link></li>
-                <li><Link to="/terms" className="hover:text-slate-900 transition-colors">PlaceCom Code of Conduct</Link></li>
+                <li><Link to="/terms" className="hover:text-slate-900 transition-colors">Placement Code of Conduct</Link></li>
                 <li><span className="text-slate-400 text-xs">Encrypted Resume Storage</span></li>
               </ul>
             </div>

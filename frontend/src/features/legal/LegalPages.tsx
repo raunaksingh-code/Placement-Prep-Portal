@@ -94,7 +94,7 @@ export function TermsOfServicePage() {
             <Building size={20} className="text-blue-600" /> 1. Confidentiality of Company JDs & Compensation Intel
           </h2>
           <div className="bg-amber-50 border border-amber-200 rounded-2xl p-5 text-sm text-amber-900 leading-relaxed">
-            <strong>Mandatory PlaceCom Compliance:</strong> Company Job Descriptions (JDs), selection processes, CTC package details, and interview experiences shared on Placement Mantra are provided in confidence for eligible students. 
+            <strong>Confidential Placement Material:</strong> Company Job Descriptions (JDs), selection processes, CTC package details, and interview experiences shared on Placement Mantra are provided in confidence for eligible students. 
             Redistributing, publishing, or sharing campus hiring details with external forums, social media, or unauthorized individuals is strictly prohibited and subject to institutional disciplinary action.
           </div>
         </section>

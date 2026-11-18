@@ -112,7 +112,7 @@ export default function AboutPage() {
             <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
               <ShieldCheck size={22} />
             </div>
-            <h3 className="font-bold text-slate-800 text-base">PlaceCom & Corporate Intel</h3>
+            <h3 className="font-bold text-slate-800 text-base">Corporate Intelligence & JDs</h3>
             <p className="text-sm text-slate-500 leading-relaxed">
               Secure institutional repository of verified company Job Descriptions, selection patterns, authentic senior interview transcripts, and timed mock tests.
             </p>
