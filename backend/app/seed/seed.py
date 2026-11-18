@@ -233,9 +233,18 @@ def seed_companies(db):
 
 
 def seed():
-    ensure_schema()
+    import os
+    force_seed = os.getenv("FORCE_SEED", "").lower() in ("1", "true", "yes")
+
     db = SessionLocal()
     try:
+        if not force_seed:
+            existing = db.query(Question.id).first()
+            if existing:
+                print("Database already seeded. Skipping full seed to speed up startup.")
+                return
+
+        ensure_schema()
         topics_data = load_json("topics.json")
 
         for order, (slug, name, topic_slugs) in enumerate(SUBJECTS):
