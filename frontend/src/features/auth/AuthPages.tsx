@@ -97,8 +97,20 @@ function AuthShell({ title, children, isModal }: { title: string; children: Reac
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-8">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center px-4 py-8 relative overflow-hidden bg-slate-50/40">
+      {/* Background Watermark */}
+      <div 
+        aria-hidden="true" 
+        className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden select-none"
+      >
+        <img
+          src="/logo-symbol.png"
+          alt=""
+          className="w-[50vw] max-w-[500px] opacity-[0.035] object-contain rotate-[-12deg]"
+        />
+      </div>
+
+      <div className="w-full max-w-md relative z-10">
         <div className="flex justify-center mb-4">
           <img src="/logo.png" alt="Placement Mantra" className="h-20 w-auto object-contain" />
         </div>

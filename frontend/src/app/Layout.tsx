@@ -70,8 +70,20 @@ export default function Layout() {
     .toUpperCase()
 
   return (
-    <div className="min-h-screen bg-white">
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
+    <div className="min-h-screen bg-white relative">
+      {/* Background Watermark of Official Logo */}
+      <div 
+        aria-hidden="true" 
+        className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden select-none"
+      >
+        <img
+          src="/logo-symbol.png"
+          alt=""
+          className="w-[45vw] max-w-[650px] opacity-[0.03] object-contain rotate-[-12deg]"
+        />
+      </div>
+
+      <header className="bg-white/95 backdrop-blur-md border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-[95rem] mx-auto px-4 h-[72px] flex items-center justify-between gap-6">
           <div className="flex items-center gap-6 xl:gap-10 shrink-0">
             <Link to="/" className="flex items-center gap-2.5 group">
@@ -195,7 +207,7 @@ export default function Layout() {
           </div>
         </div>
       </header>
-      <main className="max-w-[85rem] mx-auto px-4 py-8 relative">
+      <main className="max-w-[85rem] mx-auto px-4 py-8 relative z-10">
         {showLoginModal && (
            <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
              <div className="bg-white rounded-3xl w-full max-w-md p-6 relative shadow-2xl">
