@@ -49,11 +49,14 @@ export default function AboutPage() {
               <Award size={18} className="text-emerald-400" /> The Vision Behind the Platform
             </h3>
             <p>
-              Hi, I'm Raunak. Having experienced the rigorous preparation required for business school campus placements firsthand, 
-              I noticed a persistent gap: most preparation portals cater heavily to generic software engineering roles, leaving MBA and management graduates without structured, business-centric placement tools.
+              <strong>Placement Mantra was founded by Raunak Singh</strong>, an MBA candidate at Great Lakes Institute of Management, to empower students and business school aspirants with institutional-grade corporate recruitment intelligence, comprehensive domain preparation, and cutting-edge AI interview coaching.
             </p>
             <p>
-              I architected <strong>Placement Mantra</strong> to solve this exact problem. The platform brings together rigorous business domain prep (Consulting, Finance, Marketing, Operations, and Analytics), company hiring patterns, authentic interview experiences, and a Gemini-powered AI Career Coach tuned exclusively for management interviews.
+              Having experienced the rigorous preparation required for business school campus placements firsthand, 
+              Raunak noticed a persistent gap: most preparation portals cater heavily to generic software engineering roles, leaving MBA and management graduates without structured, business-centric placement tools.
+            </p>
+            <p>
+              He architected <strong>Placement Mantra</strong> to solve this exact problem. The platform brings together rigorous business domain prep (Consulting, Finance, Marketing, Operations, and Analytics), company hiring patterns, authentic interview experiences, and a Gemini-powered AI Career Coach tuned exclusively for management interviews.
             </p>
 
             {/* Quick Contact Buttons */}
