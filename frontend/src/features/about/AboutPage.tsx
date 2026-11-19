@@ -6,6 +6,9 @@ export default function AboutPage() {
     <div className="max-w-5xl mx-auto py-10 px-4 sm:px-6 space-y-12">
       {/* Hero */}
       <div className="text-center max-w-3xl mx-auto">
+        <div className="flex justify-center mb-6">
+          <img src="/logo.png" alt="Placement Mantra" className="h-24 sm:h-28 w-auto object-contain drop-shadow-sm" />
+        </div>
         <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold tracking-wide uppercase border border-emerald-200/60 mb-4">
           About Placement Mantra
         </span>

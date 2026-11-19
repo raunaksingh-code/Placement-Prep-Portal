@@ -82,12 +82,9 @@ function AuthShell({ title, children, isModal }: { title: string; children: Reac
     return (
       <div className="w-full">
         <div className="flex justify-center mb-3">
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-green-600 text-white shadow-lg">
-            <GraduationCap size={24} strokeWidth={2.25} />
-          </span>
+          <img src="/logo.png" alt="Placement Mantra" className="h-16 w-auto object-contain" />
         </div>
-        <h1 className="text-2xl font-bold text-center text-slate-900 mb-1">Placement Mantra</h1>
-        <p className="text-center text-slate-500 mb-6">{title}</p>
+        <p className="text-center text-slate-500 mb-6 text-sm">{title}</p>
         <div>{children}</div>
         <div className="mt-6 pt-4 border-t border-slate-100 text-center text-xs text-slate-400">
           By signing in, you agree to our{' '}
@@ -102,13 +99,10 @@ function AuthShell({ title, children, isModal }: { title: string; children: Reac
   return (
     <div className="min-h-screen flex items-center justify-center px-4 py-8">
       <div className="w-full max-w-md">
-        <div className="flex justify-center mb-3">
-          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-600 to-green-600 text-white shadow-lg shadow-emerald-500/30">
-            <GraduationCap size={24} strokeWidth={2.25} />
-          </span>
+        <div className="flex justify-center mb-4">
+          <img src="/logo.png" alt="Placement Mantra" className="h-20 w-auto object-contain" />
         </div>
-        <h1 className="text-2xl font-bold text-center text-emerald-700 mb-1">Placement Mantra</h1>
-        <p className="text-center text-slate-500 mb-6">{title}</p>
+        <p className="text-center text-slate-500 mb-6 text-sm">{title}</p>
         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">{children}</div>
         <div className="mt-6 text-center text-xs text-slate-400">
           By continuing, you agree to our{' '}

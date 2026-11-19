@@ -74,11 +74,11 @@ export default function Layout() {
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-[95rem] mx-auto px-4 h-[72px] flex items-center justify-between gap-6">
           <div className="flex items-center gap-6 xl:gap-10 shrink-0">
-            <Link to="/" className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-green-600 text-white">
-                <GraduationCap size={20} strokeWidth={2.5} />
+            <Link to="/" className="flex items-center gap-2.5 group">
+              <img src="/logo-symbol.png" alt="Placement Mantra" className="h-10 w-auto object-contain transition-transform group-hover:scale-105" />
+              <span className="font-extrabold text-xl sm:text-2xl text-slate-900 tracking-tight">
+                Placement<span className="text-emerald-500">Mantra</span>
               </span>
-              <span className="font-extrabold text-xl text-slate-900 tracking-tight">Placement<span className="text-emerald-500">Mantra</span></span>
             </Link>
             
             <nav className="hidden lg:flex items-center gap-1.5 text-[15px] font-medium">
@@ -214,12 +214,10 @@ export default function Layout() {
         <div className="max-w-[85rem] mx-auto px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-10">
             <div className="md:col-span-2 space-y-3">
-              <div className="flex items-center gap-2 font-bold text-lg text-slate-900">
-                <div className="p-1.5 bg-emerald-500 text-white rounded-lg">
-                  <GraduationCap size={20} />
-                </div>
-                <span>Placement Mantra</span>
-              </div>
+              <Link to="/" className="inline-flex items-center gap-2.5 font-bold text-xl text-slate-900 group">
+                <img src="/logo-symbol.png" alt="Placement Mantra" className="h-9 w-auto object-contain transition-transform group-hover:scale-105" />
+                <span>Placement <span className="text-emerald-600">Mantra</span></span>
+              </Link>
               <p className="text-slate-500 text-sm max-w-md leading-relaxed">
                 Campus placement readiness, corporate recruitment intelligence, and AI-powered interview preparation designed for MBA graduates and business professionals.
               </p>
