@@ -86,8 +86,8 @@ export default function HomePage() {
       icon: MessagesSquare,
       gradient: 'from-pink-500 to-rose-600',
       title: 'Interview Question Bank',
-      blurb: 'Real questions asked, filtered by company, role and round.',
-      stat: questionCount ? `${questionCount} questions` : '',
+      blurb: 'Real questions asked across PGDM 1 & PGDM 2, filtered by module, company, role and round.',
+      stat: questionCount ? `${questionCount.toLocaleString()} questions · PGDM 1 & 2` : '',
     },
     {
       to: '/progress',

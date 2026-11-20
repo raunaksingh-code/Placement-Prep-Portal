@@ -36,6 +36,7 @@ class InterviewQuestionOut(BaseModel):
     company_slug: str
     company_name: str
     role: str
+    module: str = "PGDM 2"
     round_name: str
     category: str
     text: str
@@ -77,3 +78,4 @@ class QuestionBankPage(BaseModel):
     companies: list[str] = []
     rounds: list[str] = []
     categories: list[str] = []
+    modules: list[str] = []

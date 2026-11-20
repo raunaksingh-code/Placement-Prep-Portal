@@ -181,6 +181,7 @@ def seed_companies(db):
     extract_dir = SEED_DIR / "jd_extract"
     jd_file = extract_dir / "job_descriptions.json"
     qb_file = extract_dir / "question_bank.json"
+    qb_pgdm1_file = extract_dir / "question_bank_pgdm1.json"
     if not jd_file.exists():
         print("  ! jd_extract missing - run `python -m app.seed.extract_jd` first")
         return
@@ -206,7 +207,8 @@ def seed_companies(db):
         db.commit()
         print(f"Seeded {len(jds)} job descriptions")
 
-    if qb_file.exists() and not db.query(InterviewQuestion).count():
+    # Seed PGDM 2 questions
+    if qb_file.exists() and not db.query(InterviewQuestion).filter(InterviewQuestion.module == "PGDM 2").count():
         bank = json.loads(qb_file.read_text(encoding="utf-8"))
         total = 0
         for entry in bank:
@@ -218,6 +220,7 @@ def seed_companies(db):
                         InterviewQuestion(
                             company_id=company.id,
                             role=entry["role"],
+                            module="PGDM 2",
                             round_name=rnd["round"],
                             category=q["category"],
                             text=q["text"],
@@ -229,7 +232,34 @@ def seed_companies(db):
                     order += 1
                     total += 1
         db.commit()
-        print(f"Seeded {total} interview questions")
+        print(f"Seeded {total} interview questions for PGDM 2")
+
+    # Seed PGDM 1 questions
+    if qb_pgdm1_file.exists() and not db.query(InterviewQuestion).filter(InterviewQuestion.module == "PGDM 1").count():
+        bank1 = json.loads(qb_pgdm1_file.read_text(encoding="utf-8"))
+        total1 = 0
+        for entry in bank1:
+            company = get_or_create_company(db, entry["company_slug"], entry["company"], cache)
+            order = 0
+            for rnd in entry["rounds"]:
+                for q in rnd["questions"]:
+                    db.add(
+                        InterviewQuestion(
+                            company_id=company.id,
+                            role=entry["role"],
+                            module="PGDM 1",
+                            round_name=rnd["round"],
+                            category=q["category"],
+                            text=q["text"],
+                            starred=q.get("starred", False),
+                            is_note=q.get("is_note", False),
+                            order=order,
+                        )
+                    )
+                    order += 1
+                    total1 += 1
+        db.commit()
+        print(f"Seeded {total1} interview questions for PGDM 1")
 
 
 def seed():
@@ -241,7 +271,9 @@ def seed():
         if not force_seed:
             existing = db.query(Question.id).first()
             if existing:
-                print("Database already seeded. Skipping full seed to speed up startup.")
+                print("Database already seeded. Checking for missing company/question modules...")
+                seed_companies(db)
+                seed_guides(db)
                 return
 
         ensure_schema()

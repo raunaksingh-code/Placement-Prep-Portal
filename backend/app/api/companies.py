@@ -19,7 +19,17 @@ from app.seed.category_map import CATEGORY_TOPICS, DEFAULT_TOPICS
 
 router = APIRouter(prefix="/api", tags=["companies"], dependencies=[Depends(get_current_user)])
 
-ROUND_ORDER = ["L1 Interview", "L2 Interview", "L3 Interview", "HR Round", "Leadership Round"]
+ROUND_ORDER = [
+    "Aptitude Test",
+    "Writing Assessment",
+    "Group Discussion",
+    "L1 Interview",
+    "L2 Interview",
+    "L3 Interview",
+    "L4 Interview",
+    "HR Round",
+    "Leadership Round",
+]
 
 
 def _question_out(q: InterviewQuestion) -> InterviewQuestionOut:
@@ -28,6 +38,7 @@ def _question_out(q: InterviewQuestion) -> InterviewQuestionOut:
         company_slug=q.company.slug,
         company_name=q.company.name,
         role=q.role,
+        module=q.module or "PGDM 2",
         round_name=q.round_name,
         category=q.category,
         text=q.text,
@@ -51,11 +62,17 @@ def _jd_summary(jd: JobDescription) -> JDSummary:
 @router.get("/companies", response_model=list[CompanySummary])
 def list_companies(
     q: str | None = Query(None, description="Filter by company name"),
+    module: str | None = Query(None, description="Filter by question bank module"),
     db: Session = Depends(get_db),
 ):
+    q_str = q if isinstance(q, str) else (q.default if hasattr(q, "default") and isinstance(q.default, str) else None)
+    module_str = module if isinstance(module, str) else (module.default if hasattr(module, "default") and isinstance(module.default, str) else None)
+
     query = db.query(Company)
-    if q:
-        query = query.filter(Company.name.ilike(f"%{q}%"))
+    if q_str:
+        query = query.filter(Company.name.ilike(f"%{q_str}%"))
+    if module_str:
+        query = query.join(InterviewQuestion).filter(InterviewQuestion.module == module_str).distinct()
     companies = query.order_by(Company.name).all()
 
     jd_counts = dict(
@@ -63,17 +80,19 @@ def list_companies(
         .group_by(JobDescription.company_id)
         .all()
     )
-    q_counts = dict(
-        db.query(InterviewQuestion.company_id, func.count(InterviewQuestion.id))
-        .group_by(InterviewQuestion.company_id)
-        .all()
-    )
+    q_query = db.query(InterviewQuestion.company_id, func.count(InterviewQuestion.id))
+    if module_str:
+        q_query = q_query.filter(InterviewQuestion.module == module_str)
+    q_counts = dict(q_query.group_by(InterviewQuestion.company_id).all())
+
     roles_by_company: dict[int, list[str]] = {}
     for company_id, role in db.query(JobDescription.company_id, JobDescription.role).all():
         roles_by_company.setdefault(company_id, []).append(role)
-    for company_id, role in (
-        db.query(InterviewQuestion.company_id, InterviewQuestion.role).distinct().all()
-    ):
+
+    iq_query = db.query(InterviewQuestion.company_id, InterviewQuestion.role)
+    if module_str:
+        iq_query = iq_query.filter(InterviewQuestion.module == module_str)
+    for company_id, role in iq_query.distinct().all():
         existing = roles_by_company.setdefault(company_id, [])
         if role not in existing:
             existing.append(role)
@@ -239,6 +258,7 @@ def jd_detail(slug: str, db: Session = Depends(get_db)):
 
 @router.get("/question-bank", response_model=QuestionBankPage)
 def question_bank(
+    module: str | None = None,
     company: str | None = None,
     round_name: str | None = None,
     category: str | None = None,
@@ -250,6 +270,8 @@ def question_bank(
     db: Session = Depends(get_db),
 ):
     query = db.query(InterviewQuestion).options(joinedload(InterviewQuestion.company)).join(Company)
+    if module:
+        query = query.filter(InterviewQuestion.module == module)
     if company:
         query = query.filter(Company.slug == company)
     if round_name:
@@ -264,16 +286,27 @@ def question_bank(
         query = query.filter(InterviewQuestion.text.ilike(f"%{q}%"))
 
     total = query.count()
+    limit_val = limit.default if hasattr(limit, "default") else int(limit)
+    offset_val = offset.default if hasattr(offset, "default") else int(offset)
     items = (
         query.order_by(Company.name, InterviewQuestion.role, InterviewQuestion.order)
-        .offset(offset)
-        .limit(limit)
+        .offset(offset_val)
+        .limit(limit_val)
         .all()
     )
 
-    companies = [r[0] for r in db.query(Company.name).join(InterviewQuestion).distinct().all()]
-    rounds = [r[0] for r in db.query(InterviewQuestion.round_name).distinct().all()]
-    categories = [r[0] for r in db.query(InterviewQuestion.category).distinct().all()]
+    comp_query = db.query(Company.name).join(InterviewQuestion)
+    rnd_query = db.query(InterviewQuestion.round_name)
+    cat_query = db.query(InterviewQuestion.category)
+    if module:
+        comp_query = comp_query.filter(InterviewQuestion.module == module)
+        rnd_query = rnd_query.filter(InterviewQuestion.module == module)
+        cat_query = cat_query.filter(InterviewQuestion.module == module)
+
+    companies = [r[0] for r in comp_query.distinct().all()]
+    rounds = [r[0] for r in rnd_query.distinct().all()]
+    categories = [r[0] for r in cat_query.distinct().all()]
+    all_modules = [r[0] for r in db.query(InterviewQuestion.module).distinct().order_by(InterviewQuestion.module).all()]
 
     return QuestionBankPage(
         total=total,
@@ -281,4 +314,5 @@ def question_bank(
         companies=sorted(companies),
         rounds=sorted(rounds, key=lambda r: ROUND_ORDER.index(r) if r in ROUND_ORDER else 99),
         categories=sorted(categories),
+        modules=all_modules or ["PGDM 1", "PGDM 2"],
     )

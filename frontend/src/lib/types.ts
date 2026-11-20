@@ -250,6 +250,7 @@ export interface InterviewQuestion {
   company_slug: string
   company_name: string
   role: string
+  module?: string
   round_name: string
   category: string
   text: string
@@ -288,6 +289,7 @@ export interface QuestionBankPage {
   companies: string[]
   rounds: string[]
   categories: string[]
+  modules?: string[]
 }
 
 export interface GuideSummary {

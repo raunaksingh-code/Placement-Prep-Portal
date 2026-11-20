@@ -40,6 +40,7 @@ class InterviewQuestion(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     company_id: Mapped[int] = mapped_column(ForeignKey("companies.id"), index=True)
     role: Mapped[str] = mapped_column(String, index=True)
+    module: Mapped[str] = mapped_column(String, default="PGDM 2", server_default="PGDM 2", index=True)
     round_name: Mapped[str] = mapped_column(String, index=True)
     category: Mapped[str] = mapped_column(String, index=True)
     text: Mapped[str] = mapped_column(Text)
